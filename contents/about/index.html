@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+
+  <title>OpenVDB - About</title>
+
+  <link rel="stylesheet" href="../style.css" type="text/css" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <link rel="apple-touch-icon" href="../images/iosicon.png" />
+
+  <script type="text/javascript"
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js">
+    </script>
+
+  <script src="../common.js"></script>
+
+  <script type="text/javascript" src="../fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+  <script type="text/javascript" src="../fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+  <link rel="stylesheet" type="text/css"
+    href="../fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+
+  <script type="text/javascript">
+     $(document).ready(function() {
+      $("a.pop").fancybox({
+        'overlayShow'   : false,
+        'transitionIn'  : 'elastic',
+        'transitionOut' : 'elastic'
+      });
+    });
+  </script>
+
+  <script src="./details.js"></script>
+
+
+</head>
+
+
+<body>
+
+  <div id="main">
+
+    <div id="header">
+
+      <div id="navigation">
+        <span></span>
+        <div id="navigation-anchor"></div>
+
+        <div id="navigation-bar">
+          <a href="../">Home</a>
+          <a class="on" href="./">About</a>
+          <a href="../forum/">Forum</a>
+          <a href="../documentation/">Documentation</a>
+          <a href="../license/">License</a>
+          <a href="../download/">Download</a>
+        </div>
+      </div>
+
+      <div id="banner" class="headintheclouds"> <div id="openvdb"> </div> </div>
+
+    </div>
+
+
+    <div id="page">
+
+      <div id="content">
+
+        <h1> About OpenVDB</h1>
+        <hr/>
+
+        <div class="section">
+          <p>OpenVDB is an Academy Award-winning C++ library comprising a hierarchical data
+          structure and a suite of tools for the efficient manipulation of sparse, time-varying,
+          volumetric data discretized on three-dimensional grids. It is based on VDB, which was
+          developed by Ken Museth at DreamWorks Animation, and it offers an effectively infinite
+          3D index space, compact storage, fast data access, and a collection of algorithms
+          specifically optimized for the data structure for common tasks such as filtering, CSG,
+          compositing, numerical simulation, sampling, and voxelization from other geometric
+          representations. The technical details of VDB are described in the paper
+          <a href="http://www.museth.org/Ken/Publications.html">
+          "VDB: High-Resolution Sparse Volumes with Dynamic Topology"</a>.</p>
+
+          <p>OpenVDB was developed at DreamWorks Animation primarily by
+          <ul class="bulleted">
+            <li>Ken Museth</li>
+            <li>Peter Cucka</li>
+            <li>Mihai Ald&eacute;n</li>
+            <li>David Hill</li>
+          </ul>
+          </p>
+
+
+          <h2> Features and Tools </h2>
+
+          <div class="feature">
+            <h3>Efficient Data Structure</h3>
+            <p>OpenVDB represents high-resolution sparse volumes compactly both in memory and on
+            disk, via a novel hierarchical data structure that offers an effectively infinite 3D
+            index space and via a custom, lossless codec for fast file I/O.</p>
+            <button id="vdb-folder-btn">more</button>
+
+          </div>
+
+
+          <div class="feature-right">
+            <h3>Fast Voxel Access</h3>
+            <p>OpenVDB features fast (constant-time) random and sequential access to voxels. This is
+            the result of a new, CPU-like caching scheme and compact, hierarchical bit mask
+            iterators.</p>
+          </div>
+        </div> <!-- end section -->
+
+        <div id="vdb-folder" class="folder">
+
+            <button class="btn-close">x close</button>
+
+            <div id="pages">
+              <button id="page1" class="btn-page"> 1 </button>
+              <button id="page2" class="btn-page"> 2 </button>
+              <button id="page3" class="btn-page"> 3 </button>
+            </div>
+
+        </div> <!-- end section -->
+
+        <div class="section">
+
+          <div class="feature">
+            <h3>Conversion Tools</h3>
+            <p>OpenVDB volumes can be generated robustly and efficiently from polygonal meshes or
+            particles, and can be converted to adaptive meshes, point clouds, signed distance fields
+            or fog volumes.</p>
+
+            <a rel="group1" class="pop" href="../images/example_convert.jpg">
+                <img alt="img" src="../images/example_convert_thumb.jpg" /></a>
+            <a rel="group1" class="pop" href="../images/example_liquid.jpg">
+                <img alt="img" src="../images/example_liquid_thumb.jpg" /></a>
+
+            <button id="conversion-folder-btn">more</button>
+
+          </div>
+
+          <div class="feature-right">
+            <h3>Level Set Tools</h3>
+            <p>OpenVDB includes a large selection of level set operators, including multithreaded
+            advection, smoothing, filtering, surface tracking, offsetting,
+            resampling, rendering and near-real-time Boolean operations.</p>
+            <a rel="group2" class="pop" href="../images/example_advection.jpg">
+                <img alt="img" src="../images/example_advection_thumb.jpg" /></a>
+            <a rel="group2" class="pop" href="../images/example_csg.jpg">
+                <img alt="img" src="../images/example_csg_thumb.jpg" /></a>
+          </div>
+
+        </div> <!-- end section -->
+
+        <div id="conversion-folder" class="folder">
+
+            <button class="btn-close">x close</button>
+
+            <div id="pages">
+              <button id="conversion-page1" class="btn-page"> 1 </button>
+              <button id="conversion-page2" class="btn-page"> 2 </button>
+              <button id="conversion-page3" class="btn-page"> 3 </button>
+              <button id="conversion-page4" class="btn-page"> 4 </button>
+              <button id="conversion-page5" class="btn-page"> 5 </button>
+              <button id="conversion-page6" class="btn-page"> 6 </button>
+            </div>
+
+        </div> <!-- end section -->
+
+
+        <div class="section">
+
+          <div class="feature">
+            <h3>Filters</h3>
+            <p>OpenVDB&rsquo;s suite of filters for smoothing and applying noise to volumes forms
+            the basis for DreamWorks Animation&rsquo;s feature film cloud modeling toolset.</p>
+            <a rel="group7" class="pop" href="../images/example_filter.jpg">
+                <img alt="img" src="../images/example_filter_thumb.jpg" /></a>
+
+          </div>
+
+          <div class="feature-right">
+            <h3>Morphological Operations</h3>
+            <p>OpenVDB features fast morphological operations like dilation and erosion,
+            which are essential when dealing with dynamic volumes, for example during level set
+            interface tracking.</p>
+            <a rel="group3" class="pop" href="../images/example_morphological.jpg">
+                <img alt="img" src="../images/example_morphological_thumb.jpg" /></a>
+          </div>
+
+          <div class="feature">
+            <h3>Topological Operations</h3>
+            <p>OpenVDB&rsquo;s fast topological operations (union, intersection and difference)
+            are the foundation for many of its sparse algorithms, in particular ones for masked
+            filtering and meshing.</p>
+          </div>
+
+
+          <div class="feature-right">
+            <h3>Geometric Transforms</h3>
+            <p>OpenVDB includes tools for advection of level sets or point clouds through vector
+            fields, with the option to constrain points to surfaces, and tools to reshape, resample
+            and segment volumes, highlighted by fast, seamless volumetric fracturing.</p>
+            <a rel="group5" class="pop" href="../images/example_fracture1.jpg">
+                <img alt="img" src="../images/example_fracture1_thumb.jpg" /></a>
+            <a rel="group5" class="pop" href="../images/example_fracture2.jpg">
+                <img alt="img" src="../images/example_fracture2_thumb.jpg" /></a>
+          </div>
+
+          <div class="feature">
+            <h3>Mathematical Transforms</h3>
+            <p>OpenVDB supports scalar- and vector-valued volumes and provides
+            vector calculus and related operations such as gradient, Laplacian,
+            closest-point transform and vector field curl and divergence.</p>
+            <a rel="group4" class="pop" href="../images/example_analyze.jpg">
+                <img alt="img" src="../images/example_analyze_thumb.jpg" /></a>
+            <a rel="group4" class="pop" href="../images/example_vector.jpg">
+                <img alt="img" src="../images/example_vector_thumb.jpg" /></a>
+          </div>
+
+          <div class="feature-right">
+            <h3>Rendering Support</h3>
+            <p>OpenVDB includes a standalone OpenGL volume visualizer as well as
+            a simple, fast command-line ray tracer that takes advantage of accelerated
+            ray traversal methods.</p>
+            <a rel="group6" class="pop" href="../images/example_gl.jpg">
+                <img alt="img" src="../images/example_gl_thumb.jpg" /></a>
+          </div>
+
+          <div class="feature">
+            <h3>Compositing Tools</h3>
+            <p>OpenVDB provides a variety of efficient tools for procedurally combining volumes.</p>
+          </div>
+
+          <div class="feature-right">
+            <h3>Python Support</h3>
+            <p>OpenVDB includes a Python module with functions for basic manipulation
+            of volumes.</p>
+          </div>
+
+        </div> <!-- end section -->
+
+        <div class="wide-section">
+          <div id="houdini-cloudfx"> </div>
+
+          <div class="sidebar">
+
+            <div id="sidebar-cloudfx">
+              <h3>Houdini Cloud FX</h3>
+              <p>The new Cloud FX tools offer an artist-friendly way of building, sculpting and
+              rendering cloud formations. This workflow utilizes sparse volume sculpting tools
+              created as part of the OpenVDB open source initiative. The integration of these tools
+              is the result of a direct collaboration between DreamWorks Animation and Side Effects
+              Software.</p>
+            </div>
+          </div> <!-- sidebar -->
+
+        </div>
+
+
+
+        <div class="section">
+
+          <h2>Additional Contributors</h2>
+
+          <div class="feature">
+            <h3>Side Effects Software</h3>
+            <p><ul class="bulleted">
+              <li>Neil Dickson</li>
+              <li>Halfdan Ingvarsson</li>
+              <li>Jeff Lait</li>
+              <li>Edward Lam</li>
+              <li>John Lynch</li>
+              <li>Adrian Saldanha</li>
+            </ul></p>
+          </div>
+
+
+          <div class="feature-right">
+            <h3>Pixar Animation Studios</h3>
+            <p><ul class="bulleted">
+              <li>Julian Fong</li>
+            </ul></p>
+            <h3>Solid Angle</h3>
+            <p><ul class="bulleted">
+              <li>Mike Farnsworth</li>
+              <li>Marcos Fajardo</li>
+
+            </ul></p>
+
+          </div>
+
+          <div class="feature">
+            <h3>Digital Domain</h3>
+            <p><ul class="bulleted">
+              <li>John Johansson</li>
+              <li>Fredrik Salomonsson</li>
+            </ul></p>
+          </div>
+
+          <div class="feature-right">
+            <h3>Double Negative</h3>
+            <p><ul class="bulleted">
+              <li>Nick Avramoussis</li>
+            </ul></p>
+          </div>
+
+          <div class="feature">
+            <h3>Rainmaker Entertainment</h3>
+            <p><ul class="bulleted">
+              <li>Nicholas Yue</li>
+            </ul></p>
+          </div>
+
+          <div class="feature-right">
+            <h3>Industrial Light & Magic</h3>
+            <p><ul class="bulleted">
+              <li>Dan Bailey</li>
+              <li>Rick Hankins</li>
+            </ul></p>
+          </div>
+
+
+          </div> <!-- end section -->
+
+        <div class="section">
+
+        <h2>Special Thanks</h2>
+
+          <div class="feature">
+            <h3>DreamWorks Animation</h3>
+            <p><ul class="bulleted">
+              <li>Jeff Budsberg</li>
+              <li>Brett Miller</li>
+              <li>Koen Vroeijenstijn</li>
+            </ul></p>
+          </div>
+
+
+
+        </div> <!-- end section -->
+
+
+        <div class="endofpage"> </div>
+
+      </div> <!-- end content -->
+
+      <div class="sidebar" id="sidebar2">
+
+        <div id="info-pane"></div>
+
+      </div> <!-- sidebar -->
+
+    </div> <!-- end page -->
+
+    <div id="footer"><p></p></div>
+
+  </div>
+</body>
+
+</html>

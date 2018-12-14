@@ -1,0 +1,350 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+    <title>OpenVDB - Download</title>
+
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <link rel="apple-touch-icon" href="../images/iosicon.png" />
+
+    <script type="text/javascript"
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js">
+      </script>
+
+    <script src="../common.js"></script>
+    <script src="../jquery-ui-1.9.2.custom.min.js"></script>
+
+    <style>
+        .ui-helper-hidden { display:none }
+        .ui-helper-hidden-accessible { border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px }
+        .ui-helper-reset { margin:0;padding:0;border:0;outline:0;line-height:1.3;text-decoration:none;font-size:100%;list-style:none }
+        .ui-helper-clearfix:before,.ui-helper-clearfix:after { content:"";display:table }
+        .ui-helper-clearfix:after { clear:both }
+        .ui-helper-clearfix { zoom:1 }
+        .ui-helper-zfix { width:100%;height:100%;top:0;left:0;position:absolute;opacity:0;filter:Alpha(Opacity=0) }
+        .ui-state-disabled { cursor:default!important }
+        .ui-icon { display:block;text-indent:-99999px;overflow:hidden;background-repeat:no-repeat }
+        .ui-widget-overlay { position:absolute;top:0;left:0;width:100%;height:100% }
+        .ui-dialog { position:absolute;top:0;left:0;padding:.2em;width:300px;overflow:hidden }
+        .ui-dialog .ui-dialog-titlebar { visibility:hidden; }
+        .ui-dialog .ui-dialog-title { visibility:hidden; }
+        .ui-dialog .ui-dialog-titlebar-close { visibility:hidden; }
+        .ui-dialog .ui-dialog-titlebar-close span { display:none;margin:1px }
+        .ui-dialog .ui-dialog-titlebar-close:hover,.ui-dialog .ui-dialog-titlebar-close:focus { padding:0 }
+        .ui-dialog .ui-dialog-content { position:relative;border:0;padding:.5em .5em;background:none;overflow:auto;zoom:1 }
+        .ui-draggable .ui-dialog-titlebar { cursor:move }
+        .ui-widget-content {
+            border: 1px solid #ddd;
+            background: #eee;
+            color: #333;
+            font-family: monospace;
+        }
+    </style>
+
+    <script>
+    $(document).ready(function() {
+        // Set properties of floating dialog windows.
+        $("div.dialog").dialog({
+            autoOpen: false, // initially closed
+            width: "auto",
+            height: 75,
+            resizable: false,
+        });
+
+        $(".dialog-btn").click(
+            function(event) {
+                // Find the dialog with the same ID as the clicked button.
+                var dlg = $("div#" + event.target.id);
+                if (dlg) {
+                    dlg.dialog({
+                        position: { my: "right top", at: "right bottom", of: event.target}
+                    });
+                    // Toggle visibility of the dialog window.
+                    if (dlg.dialog("isOpen")) {
+                        dlg.dialog("close");
+                    } else {
+                        dlg.dialog("open");
+                    }
+                }
+                event.preventDefault();
+            });
+    });
+    </script>
+</head>
+
+
+<body>
+
+  <div id="main">
+
+    <div id="header">
+
+      <div id="navigation">
+        <span></span>
+        <div id="navigation-anchor"></div>
+        <div id="navigation-bar">         <a href="../">Home</a>
+          <a href="../about/">About</a>
+          <a href="../forum/">Forum</a>
+          <a href="../documentation/">Documentation</a>
+          <a href="../license/">License</a>
+          <a class="on" href="./">Download</a>
+        </div>
+      </div>
+
+      <div id="banner" class="liquid"> <div id="openvdb"> </div> </div>
+
+    </div>
+
+
+    <div id="page">
+
+      <div id="content">
+
+        <h1>Download</h1>
+        <hr/>
+
+        <div class="section">
+          <h2>Core library</h2>
+          <p>This release has been tested only on RedHat Linux and Mac&nbsp;OS&nbsp;X&nbsp;10.12.
+          See the enclosed <tt>INSTALL</tt> file for details on requirements.
+          <p>
+          <table width=95%>
+            <tr>
+              <td align="left"><a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/openvdb_library/5.2.0/openvdb_library-5.2.0.zip">OpenVDB 5.2.0 Library zip</a> - <i>Aug 13 2018</i></td>
+              <td align="right">
+                  <button class="dialog-btn" id="sha_library">SHA256</button>
+                  <div class="dialog" id="sha_library">
+ee660dfd4b60d11e775a20d9dbd455513dcbead7f26cea1088506ac8550c86a6                      <!-- SHA256 -->
+                  </div>
+              </td>
+            </tr>
+          </table>
+          </p>
+        </div> <!-- end section -->
+
+
+        <div class="section">
+          <h2>GitHub</h2>
+          <p>The <a href="https://github.com/AcademySoftwareFoundation/openvdb" target="_blank">
+          <i>openvdb</i> repository</a> on GitHub hosts development versions of OpenVDB
+          with the latest features and bug fixes, as well as the generally more stable
+          <a href="https://github.com/AcademySoftwareFoundation/openvdb/releases" target="_blank">
+          production releases</a>.</p>
+        </div> <!-- end section -->
+
+
+        <div class="section">
+
+          <h2>Houdini toolkit</h2>
+          <p>Many, but not all, of the tools in this distribution are included in
+          recent versions of Houdini.
+          Source code is provided here primarily for educational purposes.
+          Houdini version 15.0 or later is required.</p>
+          <p>Note: <i>Houdini&nbsp;16.0 ships with
+          <a href="https://github.com/AcademySoftwareFoundation/openvdb/releases/tag/v3.3.0" target="_blank">OpenVDB&nbsp;3.3.0</a>,
+          which is a custom version of OpenVDB&nbsp;4 that is ABI-compatible with OpenVDB&nbsp;3.
+          To use OpenVDB with Houdini&nbsp;16.0, be sure to enable the <tt>abi=3</tt> option
+          when building both the core library and the Houdini toolkit.  For Houdini&nbsp;16.5,
+          use <tt>abi=4</tt> instead.</i>
+          <p>
+          <table width=95%>
+            <tr>
+              <td align="left"><a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/openvdb_houdini/5.2.0/openvdb_houdini-5.2.0.zip">OpenVDB 5.2.0 Houdini zip</a> - <i>Aug 13 2018</i></td>
+              <td align="right">
+                  <button class="dialog-btn" id="sha_houdini">SHA256</button>
+                  <div class="dialog" id="sha_houdini">
+67b091e0bd6fe7fa1a1b0068d418083b333b1bf0fd68403d96819bd61aeadb35                      <!-- SHA256 -->
+                  </div>
+              </td>
+            </tr>
+          </table>
+          </p>
+
+          <p>This Houdini hip file demonstrates many of the nodes in the toolkit
+          and illustrates fundamental concepts such as OpenVDB tree structures, tiles and voxels,
+          narrow-band level sets and fog volumes. More importantly, it presents recommended
+          workflows for common tasks like particle surfacing, polygon conversion, fracturing,
+          filtering, resampling, etc.
+        </br> </br> <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/houdini_examples.hip/1.0.0/houdini_examples.hip-1.0.0.zip">Houdini Examples zip</a>
+          <i> - Jun 1 2017</i></p>
+        </div> <!-- end section -->
+
+
+        <div class="section">
+
+          <h2>OpenVDB Points project</h2>
+          <p>The OpenVDB Points project, developed at <a href="http://www.dneg.com/" target="_blank">Double Negative</a>
+          in collaboration with DreamWorks Animation, extends the OpenVDB data structure
+          and file format with the ability to efficiently store point attribute data.
+          Point positions and associated attributes are spatially segmented and stored in
+          a custom grid, allowing for fast random access.  Quantization of attribute data
+          is also natively supported.
+          </p>
+        </div> <!-- end section -->
+
+
+        <div class="section">
+
+          <h2>Maya toolkit</h2>
+          <p>This preliminary distribution comprises a small number of Maya
+          nodes, primarily for conversion of geometry to and from OpenVDB
+          volumes and for visualization of volumes.
+          <p>Maya&nbsp;2016 or later is required.</p>
+          <p>
+          <table width=95%>
+            <tr>
+              <td align="left"><a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/openvdb_maya/5.2.0/openvdb_maya-5.2.0.zip">OpenVDB 5.2.0 Maya zip</a> - <i>Aug 13 2018</i></td>
+              <td align="right">
+                  <button class="dialog-btn" id="sha_maya">SHA256</button>
+                  <div class="dialog" id="sha_maya">
+cd501398a78709be417331fb0133109a791009673b76db080d5eb71dc4df21be                      <!-- SHA256 -->
+                  </div>
+              </td>
+            </tr>
+            <tr><td>&nbsp;</td></tr>
+            <tr>
+              <td align="left">
+                <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/maya_examples/1.0.0/maya_examples-1.0.0.zip">Maya Examples zip</a><i> - Aug 8 2016</i>
+              </td>
+            </tr>
+          </table>
+          </p>
+        </div> <!-- end section -->
+
+        <div class="section">
+          <h2>Sample models</h2>
+          <p>These binary OpenVDB files contain volumetric representations of familiar computer
+          graphics models.  They can be viewed with the Houdini tools or with the
+          <tt>vdb_view</tt> tool included in the OpenVDB library distribution. The original
+          polygonal meshes for several of these models are available from
+          <a href="http://www.nasa.gov/multimedia/3d_resources/3d-models-gallery-collection_archive_1.html" target="_blank"> NASA 3D
+            Resources </a> and the <a href="http://graphics.stanford.edu/data/3Dscanrep/"
+              target="_blank">Stanford 3D Scanning Repository</a>.</p>
+
+            <br>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/armadillo.vdb/1.0.0/armadillo.vdb-1.0.0.zip" class="img-button" id="img-armadillo">
+                <span><h3>armadillo.vdb</h3> <p>Voxel resolution </br> 1276&times;1519&times;116</p>
+                <p>File size 34 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/buddha.vdb/1.0.0/buddha.vdb-1.0.0.zip" class="img-button" id="img-buddha">
+                <span><h3>buddha.vdb</h3> <p>Voxel resolution </br> 541&times;1309&times;541</p>
+                <p>File size 27 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/bunny.vdb/1.0.0/bunny.vdb-1.0.0.zip" class="img-button" id="img-bunny">
+                <span><h3>bunny.vdb</h3> <p>Voxel resolution </br> 628&times;621&times;489</p>
+                <p>File size 11 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/bunny_cloud.vdb/1.0.0/bunny_cloud.vdb-1.0.0.zip" class="img-button" id="img-bunny_cloud">
+                <span><h3>bunny_cloud.vdb</h3> <p>Voxel resolution </br> 577&times;572&times;438</p>
+                <p>File size 74 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/crawler.vdb/1.0.0/crawler.vdb-1.0.0.zip" class="img-button" id="img-crawler">
+                <span><h3>crawler.vdb</h3> <p>Voxel resolution </br> 2619&times;511&times;2149</p>
+                <p>File size 64 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/cube.vdb/1.0.0/cube.vdb-1.0.0.zip" class="img-button" id="img-box">
+                <span><h3>cube.vdb</h3> <p>Voxel resolution </br> 225&times;225&times;225</p>
+                <p>File size 1 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/dragon.vdb/1.0.0/dragon.vdb-1.0.0.zip" class="img-button" id="img-dragon">
+                <span><h3>dragon.vdb</h3> <p>Voxel resolution </br> 2023&times;911&times;1347</p>
+                <p>File size 45 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/emu.vdb/1.0.0/emu.vdb-1.0.0.zip" class="img-button" id="img-emu">
+                <span><h3>emu.vdb</h3> <p>Voxel resolution </br> 1481&times;2609&times;1843</p>
+                <p>File size 128 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/explosion.vdb/1.0.0/explosion.vdb-1.0.0.zip" class="img-button" id="img-explosion">
+                <span><h3>explosion.vdb</h3> <p>Voxel resolution </br> 201&times;272&times;230</p>
+                <p>File size 72 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/fire.vdb/1.0.0/fire.vdb-1.0.0.zip" class="img-button" id="img-fire">
+                <span><h3>fire.vdb</h3> <p>Voxel resolution </br> 161&times;364&times;153</p>
+                <p>File size 23 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/icosahedron.vdb/1.0.0/icosahedron.vdb-1.0.0.zip" class="img-button" id="img-icosahedron">
+                <span><h3>icosahedron.vdb</h3> <p>Voxel resolution </br> 143&times;149&times;165</p>
+                <p>File size 1 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/iss.vdb/1.0.0/iss.vdb-1.0.0.zip" class="img-button" id="img-iss">
+                <span><h3>iss.vdb</h3> <p>Voxel resolution </br> 4561&times;617&times;2999</p>
+                <p>File size 34 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/smoke1.vdb/1.0.0/smoke1.vdb-1.0.0.zip" class="img-button" id="img-smoke1">
+                <span><h3>smoke1.vdb</h3> <p>Voxel resolution </br> 111&times;222&times;112</p>
+                <p>File size 2 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/smoke2.vdb/1.0.0/smoke2.vdb-1.0.0.zip" class="img-button" id="img-smoke2">
+                <span><h3>smoke2.vdb</h3> <p>Voxel resolution </br> 191&times;610&times;178</p>
+                <p>File size 28 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/space.vdb/1.0.0/space.vdb-1.0.0.zip" class="img-button" id="img-space">
+                <span><h3>space.vdb</h3> <p>Voxel resolution </br> 32844&times;24702&times;9156</p>
+                <p>File size 242 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/sphere.vdb/1.0.0/sphere.vdb-1.0.0.zip" class="img-button" id="img-sphere">
+                <span><h3>sphere.vdb</h3> <p>Voxel resolution </br> 125&times;125&times;125</p>
+                <p>File size 1 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/torus.vdb/1.0.0/torus.vdb-1.0.0.zip" class="img-button" id="img-torus">
+                <span><h3>torus.vdb</h3> <p>Voxel resolution </br> 299&times;299&times;103</p>
+                <p>File size 4 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/torus_knot.vdb/1.0.0/torus_knot.vdb-1.0.0.zip" class="img-button" id="img-helix">
+                <span><h3>torus_knot.vdb</h3> <p>Voxel resolution </br> 1090&times;1119&times;577</p>
+                <p>File size 17 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/utahteapot.vdb/1.0.0/utahteapot.vdb-1.0.0.zip" class="img-button" id="img-utahteapot">
+                <span><h3>utahteapot.vdb</h3> <p>Voxel resolution </br> 981&times;463&times;617</p>
+                <p>File size 12 MB </p> </span></a>
+
+            <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/venusstatue.vdb/1.0.0/venusstatue.vdb-1.0.0.zip" class="img-button" id="img-venusstatue">
+                <span><h3>venusstatue.vdb</h3> <p>Voxel resolution </br> 336&times;1150&times;338</p>
+                <p>File size 20 MB </p> </span></a>
+
+          <br><br>
+
+          <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/boat_points.vdb/1.0.0/boat_points.vdb-1.0.0.zip" class="img-button" id="img-boat_points">
+              <span><h3>boat_points.vdb</h3> <p>Voxel resolution </br> 211&times;63&times;381</p>
+                  <p>File size 330 MB </p> </span></a>
+
+          <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/bunny_points.vdb/1.0.0/bunny_points.vdb-1.0.0.zip" class="img-button" id="img-bunny_points">
+              <span><h4><br>bunny_points.vdb</h4> <p>Voxel resolution </br> 310&times;307&times;241</p>
+                  <p>File size 307 MB </p> </span></a>
+
+          <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/sphere_points.vdb/1.0.0/sphere_points.vdb-1.0.0.zip" class="img-button" id="img-sphere_points">
+              <span><h4><br>sphere_points.vdb</h4> <p>Voxel resolution </br> 17&times;17&times;17</p>
+                  <p>File size 53 KB </p> </span></a>
+
+          <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/models/waterfall_points.vdb/1.0.0/waterfall_points.vdb-1.0.0.zip" class="img-button" id="img-waterfall_points">
+              <span><h5><br>waterfall_points.vdb</h5> <p>Voxel resolution </br> 611&times;670&times;637</p>
+                  <p>File size 132 MB </p> </span></a>
+
+
+        </div> <!-- end section -->
+
+
+        <div class="endofpage"> </div>
+
+
+      </div> <!-- end content -->
+
+      <div class="sidebar">
+
+        <div id="info-pane"></div>
+
+
+      </div> <!-- sidebar -->
+
+    </div> <!-- end page -->
+
+    <div id="footer"><p></p></div>
+
+  </div>
+</body>
+
+</html>
