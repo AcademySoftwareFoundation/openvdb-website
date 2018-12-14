@@ -1,0 +1,700 @@
+
+/* ////////////////////////////////////////
+ * Reset stylesheet to reduce browser
+ * inconsistencies
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* ////////////////////////////////////////
+ * General Layout and Font Settings
+ */
+
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  background-color: #e1e4e6;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 36px;
+  line-height: 54px;
+  color: #000000;
+  font-weight: normal;
+  margin-top: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 34px;
+  color: #000000;
+  font-weight: normal;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 32px;
+  color: #000000;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+p {
+  line-height: 22px;
+  margin-top: 20px;
+  padding: 0px;
+}
+
+a {
+  vertical-align:baseline;
+  text-decoration: none;
+  background:transparent;
+  color:#2877e2;
+}
+
+
+#main {
+  width: 980px;
+  margin: auto;
+}
+
+
+/* ////////////////////////////////////////
+ * Header Settings
+ */
+
+#navigation {
+  display: inline;
+  float: left;
+  height: 60px;
+  width: 980px;
+  background:transparent url(images/vdbsymbol.png) left top no-repeat;
+  background-position: 5px 5px;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+}
+
+
+#navigation span {
+  display: block;
+  height: 52px;
+}
+
+
+#navigation-bar {
+  display: inline;
+  float: right;
+  text-align: right;
+  z-index: 100;
+  width: 980px;
+  background:transparent url(images/vdb.png) left top no-repeat;
+  background-position: 5px 2px;
+  background-color: rgba(225, 228, 230, 0.9);
+  border-bottom: 1px solid #d1d1d1;
+}
+
+
+#navigation-bar a {
+  font-size: 20px;
+  text-decoration: none;
+  background:transparent;
+  color:#909192;
+  margin-left: 6px;
+  margin-right: 10px;
+  line-height: 26px;
+}
+
+
+#navigation-bar a.on {
+  color:#000000;
+}
+
+
+.anchor {
+  position: fixed;
+  top: 0;
+}
+
+
+#subnavigation {
+  display: inline;
+  float: left;
+  margin-top: 5px;
+  margin-left: 70px;
+}
+
+#subnavigation a {
+  font-size: 16px;
+  text-decoration: none;
+  background:transparent;
+  color:#909192;
+  margin-right: 12px;
+  line-height: 36px;
+}
+
+#subnavigation a.on {
+  color:#000000;
+}
+
+#navigation a:hover {
+  color:#000000;
+}
+
+
+#navigation a:hover {
+  color:#000000;
+}
+
+#banner {
+  display: inline;
+  float: left;
+  width: 980px;
+  height: 350px;
+  padding: 0px;
+  margin-top: 18px;
+}
+
+#banner.headintheclouds {
+  background:transparent url(images/headintheclouds.jpg) center top no-repeat;
+}
+
+#banner.doom {
+  background:transparent url(images/doom.jpg) center top no-repeat;
+}
+
+#banner.firestorm {
+  background:transparent url(images/firestorm.jpg) center top no-repeat;
+}
+
+#banner.ice {
+  background:transparent url(images/ice1.jpg) center top no-repeat;
+}
+
+#banner.sandman {
+  background:transparent url(images/sandman.jpg) center top no-repeat;
+}
+
+#banner.liquid {
+  background:transparent url(images/liquids1.jpg) center top no-repeat;
+}
+
+
+/* ////////////////////////////////////////
+ * Page Settings
+ */
+
+#page {
+  display: inline;
+  float: left;
+  width: 980px;
+  background-color: #efefef;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+#content {
+  display: inline;
+  float: left;
+  width: 740px;
+  min-height: 1450px;
+  margin: 0;
+  background-color: #fdfdfd;
+}
+
+#content hr {
+  float: left;
+  border: none;
+  margin: 0px;
+  background-color: #d8281c;
+  width: 600px;
+  margin-left: 70px;
+  height: 3px;
+}
+
+#content h1 {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.endofpage {
+  display: inline;
+  float: left;
+  width: 600px;
+  height: 100px;
+}
+
+
+.section {
+  display: inline;
+  float: left;
+  width: 600px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.sidebar {
+  display: inline;
+  float: left;
+  width: 220px;
+}
+
+.sidebar p {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 10px;
+  padding: 0px;
+  color: #404040;
+}
+
+
+
+/* ////////////////////////////////////////
+ * Sidebar banners
+ */
+
+
+#sidebar-integration {
+  display: inline;
+  float: left;
+  margin-top: 91px;
+  margin-left: 20px;
+  width: 200px;
+}
+
+#sidebar-integration h3 {
+  margin-top: 2px;
+  height: 22px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  color: #565353;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+#sidebar-integration h4 {
+  margin-top: 45px;
+}
+
+#sidebar-integration h4.houdini {
+  margin-top: 30px;
+  height: 40px;
+  background:transparent url(images/houdini.png) center top no-repeat;
+}
+
+#sidebar-integration h4.renderman {
+  height: 95px;
+  background:transparent url(images/renderman.png) center top no-repeat;
+}
+
+#sidebar-integration h4.arnold {
+  height: 54px;
+  background:transparent url(images/arnold.png) center top no-repeat;
+}
+
+#sidebar-integration h4.realflow {
+  height: 30px;
+  background:transparent url(images/realflow.png) center top no-repeat;
+}
+
+#sidebar-integration h4.clarisse {
+  height: 38px;
+  background:transparent url(images/clarisse.png) center top no-repeat;
+}
+
+#sidebar-integration h4.guerilla {
+  height: 21px;
+  background:transparent url(images/guerilla.png) center top no-repeat;
+}
+
+#sidebar-integration h4.maxwell {
+  height: 31px;
+  background:transparent url(images/maxwell.png) center top no-repeat;
+}
+
+#sidebar-integration h4.modo {
+  height: 50px;
+  background:transparent url(images/modo.png) center top no-repeat;
+}
+
+#sidebar-integration h4.vray {
+  height: 59px;
+  background:transparent url(images/vray.png) center top no-repeat;
+}
+
+#sidebar-integration h4.octane {
+  height: 39px;
+  background:transparent url(images/octane.png) center top no-repeat;
+}
+
+#sidebar-integration h4.vfx {
+  height: 26px;
+  background:transparent url(images/vfx.png) center top no-repeat;
+}
+
+#sidebar-integration h4.delight {
+  height: 42px;
+  background:transparent url(images/delight.png) center top no-repeat;
+}
+
+#sidebar-contact {
+  display: inline;
+  float: left;
+  margin-top: 50px;
+  margin-left: 20px;
+  width: 200px;
+}
+
+#sidebar-contact h3 {
+  margin-top: 2px;
+  height: 22px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  color: #565353;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+
+
+#sidebar-cloudfx {
+  display: inline;
+  float: left;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 0px;
+  margin-left: 25px;
+  width: 200px;
+}
+
+#sidebar-cloudfx h3 {
+  margin-top: 0px;
+}
+
+#sidebar-cloudfx p {
+  margin-top: 0px;
+}
+
+/* ////////////////////////////////////////
+ * Footer Settings
+ */
+
+
+#footer {
+  display: inline;
+  float: left;
+  width: 980px;
+  height: 100px;
+  margin-top: 30px;
+  background:transparent url(images/aswf.png) center top no-repeat;
+}
+
+#footer p {
+  font-size: 10px;
+  line-height: 40px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#footer p:before {
+  content: "Copyright 2018 OpenVDB a Series of LF Projects, LLC. All rights reserved.";
+  display: inline;
+}
+
+
+/* ////////////////////////////////////////
+ * About Page
+ */
+
+.bulleted {
+  font-size: 14px;
+  line-height: 20px;
+  font-style: italic;
+  padding-left: 20px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+.feature {
+  display: inline;
+  float: left;
+  width: 270px;
+  margin-right: 60px;
+}
+
+.feature p {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 0px;
+  padding: 0px;
+  color: #404040;
+}
+
+.feature-right {
+  display: inline;
+  float: left;
+  width: 270px;
+  margin-right: 0px;
+}
+
+.feature-right p {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 0px;
+  padding: 0px;
+  color: #404040;
+}
+
+
+#houdini-cloudfx {
+  display: inline;
+  float: left;
+  margin: 0px;
+  background:transparent url(images/cloudfx.jpg) left top no-repeat;
+  height: 320px;
+  width: 740px;
+}
+
+
+
+/* ////////////////////////////////////////
+ * News Page
+ */
+
+
+.news_item {
+  display: inline;
+  float: left;
+  margin-bottom: 20px;
+  width: 600px;
+}
+
+.news_item h3 {
+  float: left;
+  width: 600px;
+  font-size: 12px;
+  margin-top: 10px;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.news_item p {
+  width: 500px;
+}
+
+.news_item ul {
+  margin-left: 15px;
+}
+
+.news_item li {
+  margin-top: 5px;
+}
+
+
+
+/* ////////////////////////////////////////
+ * Download images
+ */
+
+.img-button {
+ display: inline-block;
+ float: left;
+ margin: 10px;
+ margin-left: 0px;
+ margin-top: 0px;
+ width: 136px;
+ height: 112px;
+ border: 1px solid #d1d1d1;
+ text-align: center;
+}
+
+.img-button p {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.img-button h3 {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.img-button h4 {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.img-button h5 {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.img-button span {
+  display: none;
+  width: 136px;
+  height: 112px;
+  background-color: rgba(2, 3, 6, 0.7);
+}
+
+.img-button:hover span {
+  display: block;
+}
+
+
+#img-armadillo { background:transparent url(images/armadillo.jpg) center top no-repeat; }
+#img-boat_points { background:transparent url(images/boat_points.jpg) center top no-repeat; }
+#img-box { background:transparent url(images/box.jpg) center top no-repeat; }
+#img-buddha { background:transparent url(images/buddha.jpg) center top no-repeat; }
+#img-bunny { background:transparent url(images/bunny.jpg) center top no-repeat; }
+#img-bunny_cloud { background:transparent url(images/bunny_cloud.jpg) center top no-repeat; }
+#img-bunny_points { background:transparent url(images/bunny_points.jpg) center top no-repeat; }
+#img-crawler { background:transparent url(images/crawler.jpg) center top no-repeat; }
+#img-dragon { background:transparent url(images/dragon.jpg) center top no-repeat; }
+#img-emu { background:transparent url(images/emu.jpg) center top no-repeat; }
+#img-explosion { background:transparent url(images/explosion.jpg) center top no-repeat; }
+#img-fire { background:transparent url(images/fire.jpg) center top no-repeat; }
+#img-helix { background:transparent url(images/helix.jpg) center top no-repeat; }
+#img-icosahedron { background:transparent url(images/icosahedron.jpg) center top no-repeat; }
+#img-iss { background:transparent url(images/iss.jpg) center top no-repeat; }
+#img-smoke1 { background:transparent url(images/smoke1.jpg) center top no-repeat; }
+#img-smoke2 { background:transparent url(images/smoke2.jpg) center top no-repeat; }
+#img-space { background:transparent url(images/space.jpg) center top no-repeat; }
+#img-sphere { background:transparent url(images/sphere.jpg) center top no-repeat; }
+#img-sphere_points { background:transparent url(images/sphere_points.jpg) center top no-repeat; }
+#img-torus { background:transparent url(images/torus.jpg) center top no-repeat; }
+#img-utahteapot { background:transparent url(images/utahteapot.jpg) center top no-repeat; }
+#img-venusstatue { background:transparent url(images/venusstatue.jpg) center top no-repeat; }
+#img-waterfall_points { background:transparent url(images/waterfall_points.jpg) center top no-repeat; }
+
+
+/* ////////////////////////////////////////
+ * Folders
+ */
+
+.wide-section {
+  display: inline;
+  float: left;
+  width: 980px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 0;
+  color: #404040;
+  border-bottom:1px solid #444;
+}
+
+.btn-close {
+  color: #ffffff;
+  margin-left: 8px;
+  margin-top: 3px;
+  border: none;
+}
+
+#pages {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
+.btn-page {
+  color: #ffffff;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 3px;
+  border: 1px solid #666666;
+  background-color: rgba(b, b, b, 0.4);
+}
+
+.folder {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 740px;
+  margin: 0px;
+  height: 0px;
+  background-color: #262626;
+  position:relative
+}
+
+#vdb-folder {
+  background:transparent url(images/datastructure.png) left top no-repeat;
+  background-color: #262626;
+}
+
+#conversion-folder {
+  background:transparent url(images/converters.png) left top no-repeat;
+  background-color: #262626;
+}
+
+iframe {
+ display: inline;
+ float: left;
+ min-height: 1500px;
+ width: 980px;
+ border: 0px;
+ box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+
+

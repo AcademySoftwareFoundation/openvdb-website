@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+  <title>OpenVDB</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  <link rel="icon" type="image/png" href="./images/favicon.png" />
+  <link rel="apple-touch-icon" href="./images/iosicon.png" />
+
+  <script type="text/javascript"
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js">
+    </script>
+
+  <script src="common.js"></script>
+
+
+  <!-- Camera Image Slider -->
+  <link rel='stylesheet' id='camera-css'  href='./camera/camera.css' type='text/css' media='all'>
+
+    <script type='text/javascript' src='./camera/jquery.min.js'></script>
+    <script type='text/javascript' src='./camera/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='./camera/jquery.easing.1.3.js'></script>
+    <script type='text/javascript' src='./camera/camera.min.js'></script>
+
+    <script>
+      jQuery(function(){
+        jQuery('#slideshow').camera({
+          height: '350px',
+          thumbnails: false,
+          hover: false,
+          navigation: false,
+          pagination: false,
+          loader: 'none',
+          loaderPadding: 0,
+          loaderOpacity: 0.5,
+          playPause: false
+        });
+      });
+    </script>
+
+</head>
+
+<body>
+  <div id="main">
+
+    <div id="header">
+
+      <div id="navigation">
+        <span></span>
+        <div id="navigation-anchor"></div>
+        <div id="navigation-bar">
+          <a class="on" href="./">Home</a>
+          <a href="./about/">About</a>
+          <a href="./forum/">Forum</a>
+          <a href="./documentation/">Documentation</a>
+          <a href="./license/">License</a>
+          <a href="./download/">Download</a>
+        </div>
+      </div>
+
+
+      <div id="banner">
+        <div class="camera_wrap" id="slideshow">
+          <div data-src="./images/water2.jpg"> </div>
+          <div data-src="./images/clouds1.jpg"> </div>
+          <div data-src="./images/water1.jpg"> </div>
+          <div data-src="./images/dustcloud2.jpg"> </div>
+          <div data-src="./images/clouds2.jpg"> </div>
+          <div data-src="./images/dustcloud1.jpg"> </div>
+          <div data-src="./images/clouds3.jpg"> </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div id="page">
+
+
+      <div id="content">
+
+        <h1>Welcome</h1>
+        <hr/>
+        <div class="section">
+          <p>OpenVDB is an Academy Award-winning open-source C++ library comprising a novel
+          hierarchical data structure and a suite of tools for the efficient storage and
+          manipulation of sparse volumetric data discretized on three-dimensional grids.
+          It was developed by <a href="http://www.dreamworksanimation.com/" target="_blank">
+          DreamWorks Animation</a> for use in volumetric applications typically encountered
+          in feature film production and is now maintained by the
+          <a href="https://www.aswf.io" target="_blank">Academy Software Foundation (ASWF)</a>.</p>
+
+          <h2>News</h2>
+
+          <div class="news_item">
+            <h3>October 23, 2018</h3>
+            <p>OpenVDB is the first project to be hosted by the recently launched
+            <a href="https://www.aswf.io" target="_blank">Academy Software Foundation</a>.
+            The ASWF will maintain and further develop the project with oversight provided
+            by a Technical Steering Committee (TSC).
+            Developers interested in learning more or contributing to OpenVDB can sign up
+            to join the mailing list at
+            <a href="http://www.aswf.io/community" target="_blank">www.aswf.io/community</a>.</p>
+            <p>Note that the OpenVDB GitHub repository is now hosted by the ASWF
+            at <a href="https://github.com/AcademySoftwareFoundation/openvdb"
+                target="_blank">github.com/AcademySoftwareFoundation/openvdb</a>.
+            Links to the old repository at <a href="https://github.com/dreamworksanimation/openvdb"
+                target="_blank">dreamworksanimation/openvdb</a> will automatically
+            redirect, but consider updating your local clones with a command like
+            &ldquo;<tt>git remote set-url origin https://github.com/AcademySoftwareFoundation/openvdb.git</tt>&rdquo;.</p>
+          </div>
+
+          <div class="news_item">
+            <h3>August 13, 2018</h3>
+            <p>OpenVDB 5.2.0 is now available to
+               <a href="./download/" target="_blank">download</a>.</p>
+            <p>Highlights of this release:
+            <ul>
+                <li>new tools to advect points stored in point data grids
+                    and to sample volumes onto point data grids</li>
+                <li>improvements to the point scattering and sphere packing tools</li>
+                <li>improvements and bug fixes to the Houdini toolkit, including to the
+                    Advect&nbsp;Points, Metadata, Resample, Sample&nbsp;Points, Scatter,
+                    To&nbsp;Spheres, and Transform&nbsp;SOPs.</li>
+            </ul>
+            <p>See the <a href="./documentation/doxygen/changes.html#v5_2_0_changes"
+               target="_blank">release notes</a> for a complete list of changes.</p>
+          </div>
+
+          <div class="news_item">
+            <h3>April 10, 2018</h3>
+            <p>OpenVDB 5.1.0 is now available to
+               <a href="./download/" target="_blank">download</a>.</p>
+            <p>This release incorporates a number of improvements to the Houdini toolkit,
+               including conversion of most of the SOPs to
+               <a href="http://www.sidefx.com/docs/houdini/model/compile">compilable</a>&nbsp;SOPs
+               to facilitate parallel execution.
+            <p>See the <a href="./documentation/doxygen/changes.html#v5_1_0_changes"
+               target="_blank">release notes</a> for a complete list of changes.</p>
+          </div>
+
+          <div class="news_item">
+            <h3>November 6, 2017</h3>
+            <p>OpenVDB 5.0.0 is now available to
+               <a href="./download/" target="_blank">download</a>.</p>
+            <p>Highlights of this release:
+            <ul>
+                <li>new tools to create potential flow fields</li>
+                <li>new point data grid tools</li>
+                <li>better handling of metadata of unregistered types</li>
+                <li>simplified ABI selection.</li>
+            </ul>
+            <p>See the <a href="./documentation/doxygen/changes.html#v5_0_0_changes"
+               target="_blank">release notes</a> for more information.</p>
+          </div>
+
+          <div class="news_item">
+            <h3>July 28, 2017</h3>
+            <p>OpenVDB 4.0.2 is now available to
+               <a href="./download/" target="_blank">download</a>.</p>
+            <p>Highlights of this release:
+            <ul>
+                <li>help cards for Houdini nodes (in Houdini&nbsp;16)</li>
+                <li>a new tool for fast, threaded compositing of leaf-level voxels</li>
+                <li>a tool to clip grids against camera frustums</li>
+                <li>enhanced support for point data grids, including Mantra
+                    and <tt>vdb_view</tt> support</li>
+                <li>value type conversion options in the Houdini Convert&nbsp;node.</li>
+            </ul>
+            <p>See the <a href="./documentation/doxygen/changes.html#v4_0_2_changes"
+               target="_blank">release notes</a> for more information.</p>
+          </div>
+
+        </div> <!-- end section -->
+
+      </div> <!-- end content -->
+
+      <div class="sidebar">
+
+        <div id="info-pane"></div>
+
+      </div> <!-- sidebar -->
+
+    </div> <!-- end page -->
+
+    <div id="footer"><p></p></div>
+
+  </div>
+</body>
+
+</html>
