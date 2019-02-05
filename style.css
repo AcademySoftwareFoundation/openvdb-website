@@ -441,7 +441,7 @@ a {
 }
 
 #footer p:before {
-  content: "Copyright 2018 OpenVDB a Series of LF Projects, LLC. All rights reserved.";
+  content: "Copyright 2018 OpenVDB a Series of LF Projects, LLC. All rights reserved.<br>All documentation on this website made available under a <a rel='license' href='http://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 International License</a>";
   display: inline;
 }
 
@@ -696,5 +696,3 @@ iframe {
  border: 0px;
  box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
 }
-
-
