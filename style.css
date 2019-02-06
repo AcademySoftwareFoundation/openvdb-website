@@ -435,14 +435,15 @@ a {
 
 #footer p {
   font-size: 10px;
-  line-height: 40px;
-  margin-top: 50px;
+  line-height: 30px;
+  margin-top: 60px;
   text-align: center;
 }
 
 #footer p:before {
-  content: "Copyright OpenVDB a Series of LF Projects, LLC. All rights reserved. All documentation on this website made available under a Creative Commons Attribution 4.0 International License.";
+  content: "Copyright OpenVDB a Series of LF Projects, LLC. All rights reserved.\A All documentation on this website made available under a Creative Commons Attribution 4.0 International License.";
   display: inline;
+  white-space: pre;
 }
 
 
