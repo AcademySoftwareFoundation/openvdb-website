@@ -107,26 +107,6 @@
         <hr/>
 
         <div class="section">
-          <h2>Core library</h2>
-          <p>This release has been tested only on RedHat Linux and Mac&nbsp;OS&nbsp;X&nbsp;10.12.
-          See the enclosed <tt>INSTALL</tt> file for details on requirements.
-          <p>
-          <table width=95%>
-            <tr>
-              <td align="left"><a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/openvdb_library/5.2.0/openvdb_library-5.2.0.zip">OpenVDB 5.2.0 Library zip</a> - <i>Aug 13 2018</i></td>
-              <td align="right">
-                  <button class="dialog-btn" id="sha_library">SHA256</button>
-                  <div class="dialog" id="sha_library">
-ee660dfd4b60d11e775a20d9dbd455513dcbead7f26cea1088506ac8550c86a6                      <!-- SHA256 -->
-                  </div>
-              </td>
-            </tr>
-          </table>
-          </p>
-        </div> <!-- end section -->
-
-
-        <div class="section">
           <h2>GitHub</h2>
           <p>The <a href="https://github.com/AcademySoftwareFoundation/openvdb" target="_blank">
           <i>openvdb</i> repository</a> on GitHub hosts development versions of OpenVDB
@@ -137,89 +117,33 @@ ee660dfd4b60d11e775a20d9dbd455513dcbead7f26cea1088506ac8550c86a6                
 
 
         <div class="section">
-
           <h2>Houdini toolkit</h2>
-          <p>Many, but not all, of the tools in this distribution are included in
-          recent versions of Houdini.
-          Source code is provided here primarily for educational purposes.
-          Houdini version 15.0 or later is required.</p>
-          <p>Note: <i>Houdini&nbsp;16.0 ships with
-          <a href="https://github.com/AcademySoftwareFoundation/openvdb/releases/tag/v3.3.0" target="_blank">OpenVDB&nbsp;3.3.0</a>,
-          which is a custom version of OpenVDB&nbsp;4 that is ABI-compatible with OpenVDB&nbsp;3.
-          To use OpenVDB with Houdini&nbsp;16.0, be sure to enable the <tt>abi=3</tt> option
-          when building both the core library and the Houdini toolkit.  For Houdini&nbsp;16.5,
-          use <tt>abi=4</tt> instead.</i>
-          <p>
-          <table width=95%>
-            <tr>
-              <td align="left"><a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/openvdb_houdini/5.2.0/openvdb_houdini-5.2.0.zip">OpenVDB 5.2.0 Houdini zip</a> - <i>Aug 13 2018</i></td>
-              <td align="right">
-                  <button class="dialog-btn" id="sha_houdini">SHA256</button>
-                  <div class="dialog" id="sha_houdini">
-67b091e0bd6fe7fa1a1b0068d418083b333b1bf0fd68403d96819bd61aeadb35                      <!-- SHA256 -->
-                  </div>
-              </td>
-            </tr>
-          </table>
-          </p>
-
           <p>This Houdini hip file demonstrates many of the nodes in the toolkit
           and illustrates fundamental concepts such as OpenVDB tree structures, tiles and voxels,
           narrow-band level sets and fog volumes. More importantly, it presents recommended
           workflows for common tasks like particle surfacing, polygon conversion, fracturing,
           filtering, resampling, etc.
-        </br> </br> <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/houdini_examples.hip/1.0.0/houdini_examples.hip-1.0.0.zip">Houdini Examples zip</a>
-          <i> - Jun 1 2017</i></p>
+          <p><a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/houdini_examples.hip/1.0.0/houdini_examples.hip-1.0.0.zip">Houdini Examples zip</a>
+            <i> - Jun 1 2017</i></p>
         </div> <!-- end section -->
 
 
         <div class="section">
-
-          <h2>OpenVDB Points project</h2>
-          <p>The OpenVDB Points project, developed at <a href="http://www.dneg.com/" target="_blank">Double Negative</a>
-          in collaboration with DreamWorks Animation, extends the OpenVDB data structure
-          and file format with the ability to efficiently store point attribute data.
-          Point positions and associated attributes are spatially segmented and stored in
-          a custom grid, allowing for fast random access.  Quantization of attribute data
-          is also natively supported.
-          </p>
-        </div> <!-- end section -->
-
-
-        <div class="section">
-
           <h2>Maya toolkit</h2>
-          <p>This preliminary distribution comprises a small number of Maya
-          nodes, primarily for conversion of geometry to and from OpenVDB
-          volumes and for visualization of volumes.
-          <p>Maya&nbsp;2016 or later is required.</p>
-          <p>
-          <table width=95%>
-            <tr>
-              <td align="left"><a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/openvdb_maya/5.2.0/openvdb_maya-5.2.0.zip">OpenVDB 5.2.0 Maya zip</a> - <i>Aug 13 2018</i></td>
-              <td align="right">
-                  <button class="dialog-btn" id="sha_maya">SHA256</button>
-                  <div class="dialog" id="sha_maya">
-cd501398a78709be417331fb0133109a791009673b76db080d5eb71dc4df21be                      <!-- SHA256 -->
-                  </div>
-              </td>
-            </tr>
-            <tr><td>&nbsp;</td></tr>
-            <tr>
-              <td align="left">
-                <a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/maya_examples/1.0.0/maya_examples-1.0.0.zip">Maya Examples zip</a><i> - Aug 8 2016</i>
-              </td>
-            </tr>
-          </table>
-          </p>
+          <p>OpenVDB includes a small number of Maya nodes, primarily for conversion
+          of geometry to and from OpenVDB volumes and for visualization of volumes.
+          This archive contains several example scene files that demonstrate how to use the nodes.
+          <p><a href="https://nexus.aswf.io/content/repositories/releases/io/aswf/openvdb/maya_examples/1.0.0/maya_examples-1.0.0.zip">Maya Examples zip</a>
+            <i> - Aug 8 2016</i></p>
         </div> <!-- end section -->
 
         <div class="section">
           <h2>Sample models</h2>
           <p>These binary OpenVDB files contain volumetric representations of familiar computer
-          graphics models.  They can be viewed with the Houdini tools or with the
-          <tt>vdb_view</tt> tool included in the OpenVDB library distribution. The original
-          polygonal meshes for several of these models are available from
+          graphics models.
+          They can be viewed with the <tt>vdb_view</tt> command-line tool included in
+          the distribution or with the Houdini or Maya toolkits.
+          The original polygonal meshes for several of these models are available from
           <a href="http://www.nasa.gov/multimedia/3d_resources/3d-models-gallery-collection_archive_1.html" target="_blank"> NASA 3D
             Resources </a> and the <a href="http://graphics.stanford.edu/data/3Dscanrep/"
               target="_blank">Stanford 3D Scanning Repository</a>.</p>
