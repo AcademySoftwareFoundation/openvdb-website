@@ -86,38 +86,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p> <a name="v6_0_0_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 6.0.0</b> - <em>December 18, 2018</em></dd></dl>
+<dl class="section user"><dt></dt><dd><blockquote class="doxtable">
+<p>Some changes in this release (see <a class="el" href="changes.html#v6_0_0_ABI_changes">ABI changes</a> below) alter the grid&#160;ABI so that it is incompatible with earlier versions of the OpenVDB library, such as the ones built into Houdini up to and including Houdini&#160;17. To preserve ABI compatibility, when compiling OpenVDB or any dependent code define the macro <code>OPENVDB_ABI_VERSION_NUMBER=</code><em>N</em>, where, for example, <em>N</em> is 3 for Houdini&#160;15, 15.5 and&#160;16, 4 for Houdini&#160;16.5 and 5 for Houdini&#160;17.0. </p>
+</blockquote>
+</dd></dl>
 <dl class="section user"><dt></dt><dd>New features:<ul>
 <li>Added support to the <a class="el" href="ParticlesToLevelSet_8h.html">ParticlesToLevelSet</a> tool for fast rasterization of particles into boolean mask grids.</li>
 <li>Added convenience functions <a class="el" href="namespaceopenvdb_1_1v6__0_1_1tools.html#ae29bb93f486d96bd91cad919e623dab0">particlesToSdf</a>, <a class="el" href="namespaceopenvdb_1_1v6__0_1_1tools.html#adcddfc57ef94f93ff3806a45c26ca7d0">particleTrailsToSdf</a>, <a class="el" href="namespaceopenvdb_1_1v6__0_1_1tools.html#a9feb86e4311db3ba962b9d19eb5569be">particlesToMask</a> and <a class="el" href="namespaceopenvdb_1_1v6__0_1_1tools.html#af4039b2222a88a7e4ed8e3f47490eecb">particleTrailsToMask</a> for common particle rasterization use cases.</li>
-<li>Added batch copying functions <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1AttributeArray.html#a804afe3d283974f4b02806cee81bf79f">AttributeArray::copyValues()</a> <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1AttributeArray.html#a4e98d812d26d928bdb5a8951dfebce84">AttributeArray::copyValuesUnsafe()</a> that significantly out-performs the older <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1AttributeArray.html#a0555671fab4fde242f97f5eb0c7e3a9c">AttributeArray</a> method.</li>
+<li>Added batch copying functions <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1AttributeArray.html#a804afe3d283974f4b02806cee81bf79f">AttributeArray::copyValues</a> and <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1AttributeArray.html#a4e98d812d26d928bdb5a8951dfebce84">AttributeArray::copyValuesUnsafe</a> that significantly outperform the older <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1AttributeArray.html#a0555671fab4fde242f97f5eb0c7e3a9c">AttributeArray::set</a> method.</li>
 </ul>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>Improvements:<ul>
 <li>Improved the responsiveness of the <a class="el" href="MeshToVolume_8h.html">mesh to volume</a> converter to interrupt requests.</li>
 <li>Attempts to use a partially deserialized <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1AttributeArray.html">AttributeArray</a> now errors.</li>
 <li>Updated point deletion to use faster batch copying for ABI=6+.</li>
-<li>Methods relating to in-memory Blosc compression for <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1AttributeArray.html">AttributeArray</a> now do nothing and have been marked deprecated resulting in memory savings for ABI=6+.</li>
+<li>Methods relating to in-memory Blosc compression for <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1AttributeArray.html#aafe4fca9c7d87ad88cf10f66d4ae6366">AttributeArray</a> now do nothing and have been marked deprecated resulting in memory savings for ABI=6+.</li>
 </ul>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>Bug fixes:<ul>
-<li>Fixed various signed/unsigned casting issues when moving points in point data grids to resolve compiler warnings.</li>
+<li>Fixed various signed/unsigned casting issues to resolve compiler warnings when moving points in point data grids.</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt></dt><dd>ABI changes:<ul>
+<p><a class="anchor" id="v6_0_0_ABI_changes"></a></p><dl class="section user"><dt></dt><dd>ABI changes:<ul>
 <li>Added multiple new virtual functions to <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1AttributeArray.html">AttributeArray</a>.</li>
-<li>Changed the order and size of member variables in <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1AttributeArray.html">AttributeArray</a> and <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1TypedAttributeArray.html">TypedAttributeArray</a> classes.</li>
+<li>Changed the order and size of member variables in <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1AttributeArray.html">AttributeArray</a> and <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1TypedAttributeArray.html">TypedAttributeArray</a>.</li>
 </ul>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>API changes:<ul>
 <li>Removed a number of methods that were deprecated in version&#160;5.0.0 or earlier.</li>
-<li>Removed the experimental <a class="el" href="">ValueAccessor::newSetValue</a> method.</li>
+<li>Removed the experimental <b>ValueAccessor::newSetValue</b> method.</li>
+<li>Deprecated <a class="el" href="classopenvdb_1_1v6__0_1_1points_1_1AttributeArray.html#aafe4fca9c7d87ad88cf10f66d4ae6366">AttributeArray</a> methods relating to in-memory Blosc compression.</li>
 </ul>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>Houdini:<ul>
+<li>The Convert and To&#160;Polygons SOPs now correctly transfer vertex attributes when the output is a polygon soup.</li>
 <li>Added an option to the Visualize&#160;SOP to display leaf nodes as points.</li>
 <li>Renamed the Visualize&#160;SOP&rsquo;s <code>leafmode</code>, <code>internalmode</code>, <code>tilemode</code> and <code>voxelmode</code> parameters to <code>leafstyle</code>, <code>internalstyle</code>, etc. and converted them from ordinals to strings.</li>
 <li>Made various improvements to viewport rendering of point data grids.</li>
-<li>Updated ParmFactory to allow parameters to be marked as hidden, this is useful for multi-parms where it is not possible to mark them as obsolete.</li>
+<li>Added a <b>ParmFactory::setInvisible</b> method to allow parameters to be marked as hidden. This is useful for multi-parms, whose child parameters cannot be made obsolete.</li>
 <li>Removed the option to use in-memory Blosc compression from the Points&#160;Convert&#160;SOP as this feature has now been deprecated.</li>
 <li>Made various small changes for Houdini&#160;17 compatibility.</li>
 </ul>
