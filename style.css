@@ -441,7 +441,7 @@ a {
 }
 
 #footer p:before {
-  content: "Copyright OpenVDB a Series of LF Projects, LLC. All rights reserved.\A All documentation on this website made available under a Creative Commons Attribution 4.0 International License.";
+  content: "Copyright OpenVDB a Series of LF Projects, LLC and/or its contributors. \A All documentation on this website made available under a Creative Commons Attribution 4.0 International License.";
   display: inline;
   white-space: pre;
 }
