@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['frequently_20asked_20questions',['Frequently Asked Questions',['../faq.html',1,'index']]]
+  ['dependencies',['Dependencies',['../dependencies.html',1,'index']]],
+  ['deprecated_20list',['Deprecated List',['../deprecated.html',1,'']]]
 ];
