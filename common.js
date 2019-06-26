@@ -34,7 +34,7 @@ function insertInfoPane() {
         // contact info
         html += '<div id="sidebar-contact">';
         html += '<h3>Contacts</h3>';
-        html += '<p>TSC Chair: <a href="mailto:ken.museth@gmail.com">ken.museth@gmail.com</a> </br> Developers: </br><a href="mailto:openvdb@gmail.com">openvdb@gmail.com</a> </br> Discussion Forum:</br><a href="http://www.openvdb.org/forum/">openvdb-forum@googlegroups.com</a></p>';
+        html += '<p>TSC Chair: <a href="mailto:ken.museth@gmail.com">ken.museth@gmail.com</a> </br> Developers: </br><a href="mailto:openvdb@gmail.com">openvdb@gmail.com</a> </br> Discussion Forum:</br><a href="http://www.openvdb.org/forum/">openvdb-forum@googlegroups.com</a> </br> Private Security Alias: </br><a href="mailto:security@openvdb.org">security@openvdb.org</a></p>';
         html += '</div>';
 
         el.innerHTML = html;
