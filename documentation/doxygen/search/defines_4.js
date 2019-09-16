@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['use_5fhits',['USE_HITS',['../RayTracer_8h.html#afdd8a9f63fc84bda1998204d8bb3b3ea',1,'RayTracer.h']]]
+  ['pragma',['PRAGMA',['../Platform_8h.html#a0878c1f32c35d22b03416a8e53a1d78a',1,'Platform.h']]]
 ];
