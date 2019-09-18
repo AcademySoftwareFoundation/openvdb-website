@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vmask_5f',['VMASK_',['../PointDataGrid_8h.html#acc9b8d1e7cf8440093509526152fb82a',1,'VMASK_():&#160;PointDataGrid.h'],['../PointIndexGrid_8h.html#acc9b8d1e7cf8440093509526152fb82a',1,'VMASK_():&#160;PointIndexGrid.h']]]
+  ['use_5fhits',['USE_HITS',['../RayTracer_8h.html#afdd8a9f63fc84bda1998204d8bb3b3ea',1,'RayTracer.h']]]
 ];
