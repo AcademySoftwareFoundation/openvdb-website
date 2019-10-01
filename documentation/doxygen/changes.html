@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">6.2.0</span>
+   &#160;<span id="projectnumber">6.2.1</span>
    </div>
   </td>
  </tr>
@@ -85,7 +85,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p> <a name="v6_2_0_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 6.2.0</b> - <em>September 18, 2019</em></dd></dl>
+<div class="textblock"><p> <a name="v6_2_1_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 6.2.1</b> - <em>September 30, 2019</em></dd></dl>
+<dl class="section user"><dt></dt><dd>Bug fixes:<ul>
+<li>Fix a crash that arose from an inadvertent ABI change of an IO class with the 6.2.0 release. This crash occurs attempting to write out a VDB Points grid using an IO routine from a different version of the core library than the core library version in which the grid was authored and when one of these core library versions is 6.2.0.</li>
+</ul>
+</dd></dl>
+<p> <a name="v6_2_0_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 6.2.0</b> - <em>September 18, 2019</em></dd></dl>
 <dl class="section user"><dt></dt><dd>New features:<ul>
 <li>Added <a class="el" href="classopenvdb_1_1v6__2_1_1tools_1_1FindActiveValues.html">FindActiveValues</a>, which counts the active values in a tree that intersect a given bounding box.</li>
 <li>Added <a class="el" href="classopenvdb_1_1v6__2_1_1io_1_1DelayedLoadMetadata.html">DelayedLoadMetadata</a>, which stores mask offsets and compression sizes on write to accelerate delayed load reading.</li>
