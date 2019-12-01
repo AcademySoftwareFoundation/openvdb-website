@@ -29,6 +29,7 @@ function insertInfoPane() {
         html += '<a href="https://home.otoy.com/render/octane-render/" target="_blank"><h4 class="octane"><span></span></h4></a>';
         html += '<a href="http://www.3delight.com/" target="_blank"><h4 class="delight"><span></span></h4></a>';
         html += '<a href="http://www.vfxplatform.com/" target="_blank"><h4 class="vfx"><span></span></h4></a>';
+        html += '<a href="https://jangafx.com/" target="_blank"><h4 class="embergen"><span></span></h4></a>';
         html += '</div>';
 
         // contact info
