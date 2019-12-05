@@ -36,7 +36,7 @@ function insertInfoPane() {
         html += '<div id="sidebar-contact">';
         html += '<h3>Contacts</h3>';
         html += '<p>';
-        html += 'TSC Chair:</br><a href="mailto:ken.museth@wetafx.co.nz">ken.museth@wetafx.co.nz</a> </br>';
+        html += 'TSC Chair:</br><a href="mailto:ken.museth@gmail.com">ken.museth@gmail.com</a> </br>';
         html += 'TSC Members:</br><a href="mailto:openvdb-dev@lists.aswf.io">openvdb-dev@lists.aswf.io</a> </br>';
         html += 'Discussion Forum:</br><a href="http://www.openvdb.org/forum/">openvdb-forum@googlegroups.com</a> </br>';
         html += 'Security Issues:</br><a href="mailto:security@openvdb.org">security@openvdb.org</a>';
