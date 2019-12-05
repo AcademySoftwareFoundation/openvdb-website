@@ -28,15 +28,15 @@ function insertInfoPane() {
         html += '<a href="http://www.chaosgroup.com/" target="_blank"><h4 class="vray"><span></span></h4></a>';
         html += '<a href="https://home.otoy.com/render/octane-render/" target="_blank"><h4 class="octane"><span></span></h4></a>';
         html += '<a href="http://www.3delight.com/" target="_blank"><h4 class="delight"><span></span></h4></a>';
-        html += '<a href="http://www.vfxplatform.com/" target="_blank"><h4 class="vfx"><span></span></h4></a>';
         html += '<a href="https://jangafx.com/" target="_blank"><h4 class="embergen"><span></span></h4></a>';
+        html += '<a href="http://www.vfxplatform.com/" target="_blank"><h4 class="vfx"><span></span></h4></a>';
         html += '</div>';
 
         // contact info
         html += '<div id="sidebar-contact">';
         html += '<h3>Contacts</h3>';
         html += '<p>';
-        html += 'TSC Chair:</br><a href="mailto:ken.museth@wetafx.co.nz">ken.museth@wetafx.co.nz</a> </br>';
+        html += 'TSC Chair:</br><a href="mailto:ken.museth@gmail.com">ken.museth@gmail.com</a> </br>';
         html += 'TSC Members:</br><a href="mailto:openvdb-dev@lists.aswf.io">openvdb-dev@lists.aswf.io</a> </br>';
         html += 'Discussion Forum:</br><a href="http://www.openvdb.org/forum/">openvdb-forum@googlegroups.com</a> </br>';
         html += 'Security Issues:</br><a href="mailto:security@openvdb.org">security@openvdb.org</a>';
