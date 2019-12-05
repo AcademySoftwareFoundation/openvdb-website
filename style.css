@@ -382,6 +382,11 @@ a {
   background:transparent url(images/delight.png) center top no-repeat;
 }
 
+#sidebar-integration h4.embergen {
+  height: 38px;
+  background:transparent url(images/embergen.png) center top no-repeat;
+}
+
 #sidebar-contact {
   display: inline;
   float: left;
