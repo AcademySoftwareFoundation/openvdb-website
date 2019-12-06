@@ -11,6 +11,7 @@ var searchData=
   ['openvdb_5ffinish_5fthreadsafe_5fstatic_5faddress',['OPENVDB_FINISH_THREADSAFE_STATIC_ADDRESS',['../Types_8h.html#ae8027565fe483ff8ce9956b0c04de75c',1,'Types.h']]],
   ['openvdb_5ffinish_5fthreadsafe_5fstatic_5freference',['OPENVDB_FINISH_THREADSAFE_STATIC_REFERENCE',['../Types_8h.html#ac68bc3e353838aee46b122d1035467e8',1,'Types.h']]],
   ['openvdb_5ffinish_5fthreadsafe_5fstatic_5fwrite',['OPENVDB_FINISH_THREADSAFE_STATIC_WRITE',['../Types_8h.html#ac1bb06f94f61bbd95e69522ec6d184dd',1,'Types.h']]],
+  ['openvdb_5fhas_5fcxx11',['OPENVDB_HAS_CXX11',['../Platform_8h.html#ac3004d334cb9a9ac58f68c343220e571',1,'Platform.h']]],
   ['openvdb_5fhoudini_5fapi',['OPENVDB_HOUDINI_API',['../Platform_8h.html#a88b26daa45bbdd69d6bb12f9c7bfa3b2',1,'Platform.h']]],
   ['openvdb_5flibrary_5fabi_5fversion_5fstring',['OPENVDB_LIBRARY_ABI_VERSION_STRING',['../version_8h.html#a272bfcd1c61e4da085256e85e3af8dc8',1,'version.h']]],
   ['openvdb_5flibrary_5fmajor_5fversion_5fnumber',['OPENVDB_LIBRARY_MAJOR_VERSION_NUMBER',['../version_8h.html#ab04cca0a808617a2145460fc13d77534',1,'version.h']]],

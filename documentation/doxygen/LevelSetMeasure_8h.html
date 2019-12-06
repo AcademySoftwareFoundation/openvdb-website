@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">6.2.1</span>
+   &#160;<span id="projectnumber">7.0.0</span>
    </div>
   </td>
  </tr>
@@ -102,62 +102,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;<a class="el" href="ValueAccessor_8h_source.html">openvdb/tree/ValueAccessor.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="FiniteDifference_8h_source.html">openvdb/math/FiniteDifference.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="Operators_8h_source.html">openvdb/math/Operators.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="Stencils_8h_source.html">openvdb/math/Stencils.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="NullInterrupter_8h_source.html">openvdb/util/NullInterrupter.h</a>&gt;</code><br />
 <code>#include &lt;boost/math/constants/constants.hpp&gt;</code><br />
 <code>#include &lt;tbb/parallel_for.h&gt;</code><br />
 <code>#include &lt;tbb/parallel_sort.h&gt;</code><br />
+<code>#include &lt;tbb/parallel_invoke.h&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
 </div>
 <p><a href="LevelSetMeasure_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v6__2_1_1tools_1_1DiracDelta.html">DiracDelta&lt; RealT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smeared-out and continuous Dirac Delta function.  <a href="classopenvdb_1_1v6__2_1_1tools_1_1DiracDelta.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__0_1_1tools_1_1DiracDelta.html">DiracDelta&lt; RealT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smeared-out and continuous Dirac Delta function.  <a href="classopenvdb_1_1v7__0_1_1tools_1_1DiracDelta.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v6__2_1_1tools_1_1LevelSetMeasure.html">LevelSetMeasure&lt; GridT, InterruptT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multi-threaded computation of surface area, volume and average mean-curvature for narrow band level sets.  <a href="classopenvdb_1_1v6__2_1_1tools_1_1LevelSetMeasure.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__0_1_1tools_1_1LevelSetMeasure.html">LevelSetMeasure&lt; GridT, InterruptT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multi-threaded computation of surface area, volume and average mean-curvature for narrow band level sets.  <a href="classopenvdb_1_1v7__0_1_1tools_1_1LevelSetMeasure.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceopenvdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb.html">openvdb</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v6__2"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v6__2.html">openvdb::v6_2</a></td></tr>
+<tr class="memitem:namespaceopenvdb_1_1v7__0"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__0.html">openvdb::v7_0</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v6__2_1_1tools"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v6__2_1_1tools.html">openvdb::v6_2::tools</a></td></tr>
+<tr class="memitem:namespaceopenvdb_1_1v7__0_1_1tools"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__0_1_1tools.html">openvdb::v7_0::tools</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a09d9feb9a71c5306212e9955e31c3670"><td class="memTemplParams" colspan="2">template&lt;class GridType &gt; </td></tr>
-<tr class="memitem:a09d9feb9a71c5306212e9955e31c3670"><td class="memTemplItemLeft" align="right" valign="top">Real&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v6__2_1_1tools.html#a09d9feb9a71c5306212e9955e31c3670">levelSetArea</a> (const GridType &amp;grid, bool useWorldSpace=true)</td></tr>
-<tr class="memdesc:a09d9feb9a71c5306212e9955e31c3670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the surface area of a narrow-band level set.  <a href="namespaceopenvdb_1_1v6__2_1_1tools.html#a09d9feb9a71c5306212e9955e31c3670">More...</a><br /></td></tr>
-<tr class="separator:a09d9feb9a71c5306212e9955e31c3670"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01abe3ad8d497aab8ab6713921546a0a"><td class="memTemplParams" colspan="2">template&lt;class GridType &gt; </td></tr>
-<tr class="memitem:a01abe3ad8d497aab8ab6713921546a0a"><td class="memTemplItemLeft" align="right" valign="top">Real&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v6__2_1_1tools.html#a01abe3ad8d497aab8ab6713921546a0a">levelSetVolume</a> (const GridType &amp;grid, bool useWorldSpace=true)</td></tr>
-<tr class="memdesc:a01abe3ad8d497aab8ab6713921546a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the volume of a narrow-band level set surface.  <a href="namespaceopenvdb_1_1v6__2_1_1tools.html#a01abe3ad8d497aab8ab6713921546a0a">More...</a><br /></td></tr>
-<tr class="separator:a01abe3ad8d497aab8ab6713921546a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f7d4189227e5d4424f8f15c380f717f"><td class="memTemplParams" colspan="2">template&lt;class GridType &gt; </td></tr>
-<tr class="memitem:a4f7d4189227e5d4424f8f15c380f717f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v6__2_1_1tools.html#a4f7d4189227e5d4424f8f15c380f717f">levelSetMeasure</a> (const GridType &amp;grid, Real &amp;area, Real &amp;volume, bool useWorldSpace=true)</td></tr>
-<tr class="memdesc:a4f7d4189227e5d4424f8f15c380f717f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the surface area and volume of a narrow-band level set.  <a href="namespaceopenvdb_1_1v6__2_1_1tools.html#a4f7d4189227e5d4424f8f15c380f717f">More...</a><br /></td></tr>
-<tr class="separator:a4f7d4189227e5d4424f8f15c380f717f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07bcbe2cbd39cf5bc217f63bc3ddd3f0"><td class="memTemplParams" colspan="2">template&lt;class GridType &gt; </td></tr>
-<tr class="memitem:a07bcbe2cbd39cf5bc217f63bc3ddd3f0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v6__2_1_1tools.html#a07bcbe2cbd39cf5bc217f63bc3ddd3f0">levelSetMeasure</a> (const GridType &amp;grid, Real &amp;area, Real &amp;volume, Real &amp;avgCurvature, bool useWorldSpace=true)</td></tr>
-<tr class="memdesc:a07bcbe2cbd39cf5bc217f63bc3ddd3f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the surface area and volume of a narrow-band level set.  <a href="namespaceopenvdb_1_1v6__2_1_1tools.html#a07bcbe2cbd39cf5bc217f63bc3ddd3f0">More...</a><br /></td></tr>
-<tr class="separator:a07bcbe2cbd39cf5bc217f63bc3ddd3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5327189e565f51828e50913a6268757f"><td class="memTemplParams" colspan="2">template&lt;class GridT &gt; </td></tr>
-<tr class="memitem:a5327189e565f51828e50913a6268757f"><td class="memTemplItemLeft" align="right" valign="top">Real&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v6__2_1_1tools.html#a5327189e565f51828e50913a6268757f">levelSetArea</a> (const GridT &amp;grid, bool useWorldSpace)</td></tr>
-<tr class="separator:a5327189e565f51828e50913a6268757f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e32ff18d98256db6d1478fea2a99981"><td class="memTemplParams" colspan="2">template&lt;class GridT &gt; </td></tr>
-<tr class="memitem:a9e32ff18d98256db6d1478fea2a99981"><td class="memTemplItemLeft" align="right" valign="top">Real&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v6__2_1_1tools.html#a9e32ff18d98256db6d1478fea2a99981">levelSetVolume</a> (const GridT &amp;grid, bool useWorldSpace)</td></tr>
-<tr class="separator:a9e32ff18d98256db6d1478fea2a99981"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af78f8a2025033ca53930ec887c44c618"><td class="memTemplParams" colspan="2">template&lt;class GridT &gt; </td></tr>
-<tr class="memitem:af78f8a2025033ca53930ec887c44c618"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v6__2_1_1tools.html#af78f8a2025033ca53930ec887c44c618">levelSetMeasure</a> (const GridT &amp;grid, Real &amp;area, Real &amp;volume, bool useWorldSpace)</td></tr>
-<tr class="separator:af78f8a2025033ca53930ec887c44c618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac459deb7aeca5ed9c94241d77b4c8508"><td class="memTemplParams" colspan="2">template&lt;class GridT &gt; </td></tr>
-<tr class="memitem:ac459deb7aeca5ed9c94241d77b4c8508"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v6__2_1_1tools.html#ac459deb7aeca5ed9c94241d77b4c8508">levelSetMeasure</a> (const GridT &amp;grid, Real &amp;area, Real &amp;volume, Real &amp;avgCurvature, bool useWorldSpace)</td></tr>
-<tr class="separator:ac459deb7aeca5ed9c94241d77b4c8508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6da3e166244376832766b7a3b5424670"><td class="memTemplParams" colspan="2">template&lt;class GridType &gt; </td></tr>
+<tr class="memitem:a6da3e166244376832766b7a3b5424670"><td class="memTemplItemLeft" align="right" valign="top">Real&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__0_1_1tools.html#a6da3e166244376832766b7a3b5424670">levelSetArea</a> (const GridType &amp;grid, bool useWorldSpace=true)</td></tr>
+<tr class="memdesc:a6da3e166244376832766b7a3b5424670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the surface area of a narrow-band level set.  <a href="namespaceopenvdb_1_1v7__0_1_1tools.html#a6da3e166244376832766b7a3b5424670">More...</a><br /></td></tr>
+<tr class="separator:a6da3e166244376832766b7a3b5424670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469e71f01d279bfe73ada0c18274ecf2"><td class="memTemplParams" colspan="2">template&lt;class GridType &gt; </td></tr>
+<tr class="memitem:a469e71f01d279bfe73ada0c18274ecf2"><td class="memTemplItemLeft" align="right" valign="top">Real&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__0_1_1tools.html#a469e71f01d279bfe73ada0c18274ecf2">levelSetVolume</a> (const GridType &amp;grid, bool useWorldSpace=true)</td></tr>
+<tr class="memdesc:a469e71f01d279bfe73ada0c18274ecf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the volume of a narrow-band level set surface.  <a href="namespaceopenvdb_1_1v7__0_1_1tools.html#a469e71f01d279bfe73ada0c18274ecf2">More...</a><br /></td></tr>
+<tr class="separator:a469e71f01d279bfe73ada0c18274ecf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6ea4da2695cfe2e43e4a591ee6a0d2"><td class="memTemplParams" colspan="2">template&lt;class GridType &gt; </td></tr>
+<tr class="memitem:a3b6ea4da2695cfe2e43e4a591ee6a0d2"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__0_1_1tools.html#a3b6ea4da2695cfe2e43e4a591ee6a0d2">levelSetEulerCharacteristic</a> (const GridType &amp;grid)</td></tr>
+<tr class="memdesc:a3b6ea4da2695cfe2e43e4a591ee6a0d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Euler Characteristics of a narrow-band level set surface (possibly disconnected).  <a href="namespaceopenvdb_1_1v7__0_1_1tools.html#a3b6ea4da2695cfe2e43e4a591ee6a0d2">More...</a><br /></td></tr>
+<tr class="separator:a3b6ea4da2695cfe2e43e4a591ee6a0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a573b00cfea92cd9366a69419c33057b8"><td class="memTemplParams" colspan="2">template&lt;class GridType &gt; </td></tr>
+<tr class="memitem:a573b00cfea92cd9366a69419c33057b8"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__0_1_1tools.html#a573b00cfea92cd9366a69419c33057b8">levelSetGenus</a> (const GridType &amp;grid)</td></tr>
+<tr class="memdesc:a573b00cfea92cd9366a69419c33057b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the genus of a narrow-band level set surface.  <a href="namespaceopenvdb_1_1v7__0_1_1tools.html#a573b00cfea92cd9366a69419c33057b8">More...</a><br /></td></tr>
+<tr class="separator:a573b00cfea92cd9366a69419c33057b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32b9c8f98f4081a936a13b58c3236b8"><td class="memTemplParams" colspan="2">template&lt;class GridT &gt; </td></tr>
+<tr class="memitem:ad32b9c8f98f4081a936a13b58c3236b8"><td class="memTemplItemLeft" align="right" valign="top">Real&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__0_1_1tools.html#ad32b9c8f98f4081a936a13b58c3236b8">levelSetArea</a> (const GridT &amp;grid, bool useWorldUnits)</td></tr>
+<tr class="separator:ad32b9c8f98f4081a936a13b58c3236b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b4b633e52bef6830cfb177b17b5f443"><td class="memTemplParams" colspan="2">template&lt;class GridT &gt; </td></tr>
+<tr class="memitem:a8b4b633e52bef6830cfb177b17b5f443"><td class="memTemplItemLeft" align="right" valign="top">Real&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__0_1_1tools.html#a8b4b633e52bef6830cfb177b17b5f443">levelSetVolume</a> (const GridT &amp;grid, bool useWorldUnits)</td></tr>
+<tr class="separator:a8b4b633e52bef6830cfb177b17b5f443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a256bf4f0ca6a68864a062f426ccbd004"><td class="memTemplParams" colspan="2">template&lt;class GridT &gt; </td></tr>
+<tr class="memitem:a256bf4f0ca6a68864a062f426ccbd004"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__0_1_1tools.html#a256bf4f0ca6a68864a062f426ccbd004">levelSetEulerCharacteristic</a> (const GridT &amp;grid)</td></tr>
+<tr class="separator:a256bf4f0ca6a68864a062f426ccbd004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eec4ed04042e9369a2f151937fb88fe"><td class="memTemplParams" colspan="2">template&lt;class GridT &gt; </td></tr>
+<tr class="memitem:a7eec4ed04042e9369a2f151937fb88fe"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__0_1_1tools.html#a7eec4ed04042e9369a2f151937fb88fe">levelSetGenus</a> (const GridT &amp;grid)</td></tr>
+<tr class="separator:a7eec4ed04042e9369a2f151937fb88fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af47fdd89243c68920c12525689bc8c4d"><td class="memTemplParams" colspan="2">template&lt;class GridT &gt; </td></tr>
+<tr class="memitem:af47fdd89243c68920c12525689bc8c4d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#acad6915d4aac81665b540218e8b1e06c">OPENVDB_DEPRECATED</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__0_1_1tools.html#af47fdd89243c68920c12525689bc8c4d">levelSetMeasure</a> (const GridT &amp;grid, Real &amp;area, Real &amp;volume, Real &amp;avgCurvature, bool useWorldUnits=true)</td></tr>
+<tr class="separator:af47fdd89243c68920c12525689bc8c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Ken Museth </dd></dl>
