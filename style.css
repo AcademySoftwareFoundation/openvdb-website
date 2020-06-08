@@ -372,11 +372,6 @@ a {
   background:transparent url(images/octane.png) center top no-repeat;
 }
 
-#sidebar-integration h4.vfx {
-  height: 26px;
-  background:transparent url(images/vfx.png) center top no-repeat;
-}
-
 #sidebar-integration h4.delight {
   height: 42px;
   background:transparent url(images/delight.png) center top no-repeat;
@@ -385,6 +380,16 @@ a {
 #sidebar-integration h4.embergen {
   height: 38px;
   background:transparent url(images/embergen.png) center top no-repeat;
+}
+
+#sidebar-integration h4.blender {
+  height: 45px;
+  background:transparent url(images/blender.png) center top no-repeat;
+}
+
+#sidebar-integration h4.vfx {
+  height: 26px;
+  background:transparent url(images/vfx.png) center top no-repeat;
 }
 
 #sidebar-contact {
