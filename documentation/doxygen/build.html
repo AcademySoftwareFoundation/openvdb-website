@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">7.0.0</span>
+   &#160;<span id="projectnumber">7.1.0</span>
    </div>
   </td>
  </tr>
@@ -219,6 +219,8 @@ Building Against Houdini/Maya</h2>
 <tr>
 <td>Houdini </td><td>17.5 </td><td>5 </td></tr>
 <tr>
+<td>Houdini </td><td>18.0 </td><td>6 </td></tr>
+<tr>
 <td>Maya </td><td>2017 </td><td>Any </td></tr>
 <tr>
 <td>Maya </td><td>2018 </td><td>Any </td></tr>
@@ -234,7 +236,7 @@ Building Against Houdini</h2>
 <tr>
 <td>CMake </td><td>Cross-platform family of tools designed to help build software </td><td>All </td></tr>
 <tr>
-<td>C++11 Compiler </td><td>Matching Houdini compiler and version </td><td>All </td></tr>
+<td>C++14 Compiler </td><td>Matching Houdini compiler and version </td><td>All </td></tr>
 <tr>
 <td>Boost </td><td>Components: system, iostreams, python, thread </td><td>All </td></tr>
 <tr>
@@ -248,7 +250,7 @@ Building Against Houdini</h2>
 <tr>
 <td>NumPy </td><td>Scientific computing with Python </td><td>Optional (Python) </td></tr>
 </table>
-<p>At a minimum, boost, a matching C++11 compiler and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software. Note that as Blosc is provided as part of the Houdini installation <code>USE_BLOSC</code> should be left <code>ON</code>.</p>
+<p>At a minimum, boost, a matching C++14 compiler and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software. Note that as Blosc is provided as part of the Houdini installation <code>USE_BLOSC</code> should be left <code>ON</code>.</p>
 <p>With the necessary dependencies installed, create and enter a directory for cmake to write to. It's generally useful to create this in the location you've extracted the OpenVDB repository. It will house CMake's generated build files.</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;mkdir build</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cd build</div></div><!-- fragment --><p>Now you can call CMake by providing the absolute or relative path to the root of the OpenVDB source tree along with the following options:</p>
 <p>Required:</p>
@@ -280,7 +282,7 @@ Building Against Maya</h2>
 <tr>
 <td>CMake </td><td>Cross-platform family of tools designed to help build software </td><td>All </td></tr>
 <tr>
-<td>C++11 Compiler </td><td>Matching Houdini compiler and version </td><td>All </td></tr>
+<td>C++14 Compiler </td><td>Matching Houdini compiler and version </td><td>All </td></tr>
 <tr>
 <td>Boost </td><td>Components: system, iostreams, python, thread </td><td>All </td></tr>
 <tr>
@@ -303,7 +305,7 @@ Building Against Maya</h2>
 <td>NumPy </td><td>Scientific computing with Python </td><td>Optional (Python) </td></tr>
 </table>
 <p>See <a class="el" href="build.html#buildBloscSupport">blosc support</a></p>
-<p>At a minimum, boost, a matching C++11 compiler, IlmBase, ZLIB, blosc and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software.</p>
+<p>At a minimum, boost, a matching C++14 compiler, IlmBase, ZLIB, blosc and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software.</p>
 <p>With the necessary dependencies installed, create and enter a directory for cmake to write to. It's generally useful to create this in the location you've extracted the OpenVDB repository. It will house CMake's generated build files.</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;mkdir build</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cd build</div></div><!-- fragment --><p>Now you can call CMake by providing the absolute or relative path to the root of the OpenVDB source tree along with the following options:</p>
 <p>Required:</p>
@@ -460,11 +462,6 @@ Building With Make</h1>
 <p class="endtd"></p>
 </td></tr>
 <tr>
-<td><code>GLFW_MAJOR_VERSION</code></td><td><p class="starttd">the major version number of the GLFW library<br />
- (header filenames changed between GLFW 2 and 3, so this must be specified explicitly)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
 <td><code>LOG4CPLUS_INCL_DIR</code></td><td><p class="starttd">the parent directory of the <code>log4cplus/</code> header directory<br />
  (leave blank if log4cplus is not available)</p>
 <p class="endtd"></p>
@@ -517,14 +514,14 @@ Building With Make</h1>
 <p class="endtd"></p>
 </td></tr>
 <tr>
-<td><code>PYTHON_WRAP_ALL_GRID_TYPES</code></td><td><p class="starttd">if set to "<code>no</code>", expose only <a class="el" href="namespaceopenvdb_1_1v7__0.html#a2ae45d4df056c7d0d936a496fec925ee">FloatGrid</a>, <a class="el" href="namespaceopenvdb_1_1v7__0.html#a44c7484144fab7fb2c436e938e2d87ce">BoolGrid</a> and <a class="el" href="namespaceopenvdb_1_1v7__0.html#a77ff1a3a38ec99a56b4d99a15a2970bf">Vec3SGrid</a> in Python, otherwise expose (most of) the standard grid types defined in <a class="el" href="openvdb_8h.html">openvdb.h</a>.</p>
+<td><code>PYTHON_WRAP_ALL_GRID_TYPES</code></td><td><p class="starttd">if set to "<code>no</code>", expose only <a class="el" href="namespaceopenvdb_1_1v7__1.html#a2ae45d4df056c7d0d936a496fec925ee">FloatGrid</a>, <a class="el" href="namespaceopenvdb_1_1v7__1.html#a44c7484144fab7fb2c436e938e2d87ce">BoolGrid</a> and <a class="el" href="namespaceopenvdb_1_1v7__1.html#a77ff1a3a38ec99a56b4d99a15a2970bf">Vec3SGrid</a> in Python, otherwise expose (most of) the standard grid types defined in <a class="el" href="openvdb_8h.html">openvdb.h</a>.</p>
 <p class="endtd"></p>
 </td></tr>
 <tr>
 <td><code>DOXYGEN</code></td><td>the path to the Doxygen executable (leave blank if Doxygen is unavailable) </td></tr>
 </table>
 <p>Note that if you plan to build the Houdini OpenVDB tools, you must build the OpenVDB library and the Houdini tools against compatible versions of the Boost, OpenEXR and TBB libraries. Until Houdini&#160;16.5, all three were included in the HDK, so by default several of the variables above reference the Houdini environment variables <code>$HDSO</code>, <code>$HFS</code> and <code>$HT</code> (source the <code>houdini_setup</code> script provided with your Houdini installation to set those environment variables). You must provide your own installation of Boost.</p>
-<p>Also note that certain new features in OpenVDB (see the <a class="el" href="changes.html">Release Notes</a> for details) necessitated changes to the ABI of the <a class="el" href="classopenvdb_1_1v7__0_1_1Grid.html">Grid</a> class, rendering it incompatible with earlier versions of the library, such as the ones built into Houdini. Passing grids between native VDB nodes in a scene graph and nodes built against the new ABI will lead to crashes, so to use OpenVDB with Houdini&#160;17.5 set <code>abi=5</code> to compile with the incompatible features disabled.</p>
+<p>Also note that certain new features in OpenVDB (see the <a class="el" href="changes.html">Release Notes</a> for details) necessitated changes to the ABI of the <a class="el" href="classopenvdb_1_1v7__1_1_1Grid.html">Grid</a> class, rendering it incompatible with earlier versions of the library, such as the ones built into Houdini. Passing grids between native VDB nodes in a scene graph and nodes built against the new ABI will lead to crashes, so to use OpenVDB with Houdini&#160;17.5 set <code>abi=5</code> to compile with the incompatible features disabled.</p>
 <p>To build the OpenVDB Python module, you will need local installations of Python, Boost.Python, and optionally NumPy. Houdini ships with Python&#160;2 but not with the <code>libboost_python</code> library or with NumPy or with the Boost.Python headers, so both Boost.Python and NumPy have to be built separately. Point the variables <code>$(BOOST_PYTHON_LIB_DIR)</code>, <code>$(BOOST_PYTHON_LIB)</code> and <code>$(NUMPY_INCL_DIR)</code> to your local installations of those libraries. </p>
 <p class="endli"></p>
 </li>

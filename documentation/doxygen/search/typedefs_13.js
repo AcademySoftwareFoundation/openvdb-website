@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['uchartreeacc',['UCharTreeAcc',['../structopenvdb_1_1v7__0_1_1tools_1_1mesh__to__volume__internal_1_1VoxelizationData.html#a020edf1f83c45d900513235fc8c0dd73',1,'openvdb::v7_0::tools::mesh_to_volume_internal::VoxelizationData']]],
-  ['uchartreetype',['UCharTreeType',['../structopenvdb_1_1v7__0_1_1tools_1_1mesh__to__volume__internal_1_1VoxelizationData.html#a6d166e3d96cf119ea79ea7927f4ddc59',1,'openvdb::v7_0::tools::mesh_to_volume_internal::VoxelizationData']]],
-  ['uint32pointpartitioner',['UInt32PointPartitioner',['../namespaceopenvdb_1_1v7__0_1_1tools.html#a52bc789f19484fd8102225765173f548',1,'openvdb::v7_0::tools']]],
-  ['uint32tree',['UInt32Tree',['../namespaceopenvdb_1_1v7__0.html#a34fc83e0284e6ec14206d1dc1fc9e862',1,'openvdb::v7_0']]],
-  ['uniontype',['UnionType',['../classopenvdb_1_1v7__0_1_1tree_1_1InternalNode.html#a2bccf19ee074e170944b394221e62e7f',1,'openvdb::v7_0::tree::InternalNode']]],
-  ['uniqueptr',['UniquePtr',['../classopenvdb_1_1v7__0_1_1points_1_1AttributeHandle.html#ae460d469fdae1ca0e42b390d6288d1e9',1,'openvdb::v7_0::points::AttributeHandle']]],
-  ['unitaryandtranslationmap',['UnitaryAndTranslationMap',['../namespaceopenvdb_1_1v7__0_1_1math.html#a59a6b3113c1e0f4a9805590d70894b3c',1,'openvdb::v7_0::math']]],
-  ['unsafeaccessor',['UnsafeAccessor',['../classopenvdb_1_1v7__0_1_1Grid.html#a1043fbe34c59f5b3d01648da38474b3a',1,'openvdb::v7_0::Grid']]]
+  ['uchartreeacc',['UCharTreeAcc',['../structopenvdb_1_1v7__1_1_1tools_1_1mesh__to__volume__internal_1_1VoxelizationData.html#a020edf1f83c45d900513235fc8c0dd73',1,'openvdb::v7_1::tools::mesh_to_volume_internal::VoxelizationData']]],
+  ['uchartreetype',['UCharTreeType',['../structopenvdb_1_1v7__1_1_1tools_1_1mesh__to__volume__internal_1_1VoxelizationData.html#a6d166e3d96cf119ea79ea7927f4ddc59',1,'openvdb::v7_1::tools::mesh_to_volume_internal::VoxelizationData']]],
+  ['uint32pointpartitioner',['UInt32PointPartitioner',['../namespaceopenvdb_1_1v7__1_1_1tools.html#a52bc789f19484fd8102225765173f548',1,'openvdb::v7_1::tools']]],
+  ['uint32tree',['UInt32Tree',['../namespaceopenvdb_1_1v7__1.html#a34fc83e0284e6ec14206d1dc1fc9e862',1,'openvdb::v7_1']]],
+  ['uniontype',['UnionType',['../classopenvdb_1_1v7__1_1_1tree_1_1InternalNode.html#a2bccf19ee074e170944b394221e62e7f',1,'openvdb::v7_1::tree::InternalNode']]],
+  ['unique',['Unique',['../structopenvdb_1_1v7__1_1_1TypeList.html#ac825fea19b43689ad99fcbc75547bc82',1,'openvdb::v7_1::TypeList']]],
+  ['uniqueptr',['UniquePtr',['../classopenvdb_1_1v7__1_1_1points_1_1AttributeHandle.html#ae460d469fdae1ca0e42b390d6288d1e9',1,'openvdb::v7_1::points::AttributeHandle::UniquePtr()'],['../classopenvdb_1_1v7__1_1_1points_1_1StringMetaCache.html#a239e7f378d830274d5c39da460cc07e9',1,'openvdb::v7_1::points::StringMetaCache::UniquePtr()'],['../classopenvdb_1_1v7__1_1_1points_1_1StringMetaInserter.html#ac1b73e212b9b95882fac24cfc71a00ec',1,'openvdb::v7_1::points::StringMetaInserter::UniquePtr()'],['../classopenvdb_1_1v7__1_1_1points_1_1StringAttributeHandle.html#a224051ec4c1458cdd222c7908a18d0b6',1,'openvdb::v7_1::points::StringAttributeHandle::UniquePtr()'],['../classopenvdb_1_1v7__1_1_1points_1_1StringAttributeWriteHandle.html#ab16226956aab548a3ef3e54981f168ee',1,'openvdb::v7_1::points::StringAttributeWriteHandle::UniquePtr()'],['../classopenvdb_1_1v7__1_1_1points_1_1GroupHandle.html#a57b4be157b07a61dd2236638e5288d88',1,'openvdb::v7_1::points::GroupHandle::UniquePtr()'],['../classopenvdb_1_1v7__1_1_1points_1_1GroupWriteHandle.html#ab3c623f2db84a71a75f76a28e469a6f5',1,'openvdb::v7_1::points::GroupWriteHandle::UniquePtr()'],['../classopenvdb_1_1v7__1_1_1points_1_1AttributeSet.html#ad3e4a163b94a845b01bdf7f81fd8481a',1,'openvdb::v7_1::points::AttributeSet::UniquePtr()']]],
+  ['unitaryandtranslationmap',['UnitaryAndTranslationMap',['../namespaceopenvdb_1_1v7__1_1_1math.html#a59a6b3113c1e0f4a9805590d70894b3c',1,'openvdb::v7_1::math']]],
+  ['unsafeaccessor',['UnsafeAccessor',['../classopenvdb_1_1v7__1_1_1Grid.html#a1043fbe34c59f5b3d01648da38474b3a',1,'openvdb::v7_1::Grid']]]
 ];

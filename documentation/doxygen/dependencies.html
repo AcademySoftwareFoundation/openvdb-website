@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">7.0.0</span>
+   &#160;<span id="projectnumber">7.1.0</span>
    </div>
   </td>
  </tr>
@@ -110,7 +110,7 @@ OpenVDB Components</h1>
 <tr>
 <th>Component </th><th>Requirements </th><th>Optional  </th></tr>
 <tr>
-<td>OpenVDB Core Library </td><td>CMake, C++11 compiler, IlmBase::Half, TBB::tbb, ZLIB, Boost::system, Boost::iostream </td><td>Blosc, Log4cplus, OpenEXR::IlmImf </td></tr>
+<td>OpenVDB Core Library </td><td>CMake, C++14 compiler, IlmBase::Half, TBB::tbb, ZLIB, Boost::system, Boost::iostream </td><td>Blosc, Log4cplus, OpenEXR::IlmImf </td></tr>
 <tr>
 <td>OpenVDB Print </td><td>Core Library dependencies </td><td>- </td></tr>
 <tr>
@@ -118,7 +118,7 @@ OpenVDB Components</h1>
 <tr>
 <td>OpenVDB Render </td><td>Core Library dependencies, OpenEXR, IlmBase </td><td>- </td></tr>
 <tr>
-<td>OpenVDB View </td><td>Core Library dependencies, OpenGL, GLFW3, Boost::thread </td><td>- </td></tr>
+<td>OpenVDB View </td><td>Core Library dependencies, OpenGL, GLFW3, GLEW** </td><td>- </td></tr>
 <tr>
 <td>OpenVDB Python </td><td>Core Library dependencies, Python, Boost::python </td><td>Boost::numpy*, NumPy </td></tr>
 <tr>
@@ -128,6 +128,7 @@ OpenVDB Components</h1>
 </table>
 <ul>
 <li><b>*</b> Boost::numpy is required for NumPy support with Boost from version 1.65 onwards.</li>
+<li><b>**</b> GLEW is only required for building the vdb_view binary on Windows.</li>
 </ul>
 <h2><a class="anchor" id="depDependencyTable"></a>
 Dependency Table</h2>
@@ -153,15 +154,15 @@ Dependency Table</h2>
 <tr>
 <td>ZLIB </td><td>1.2.7 </td><td>Latest </td><td>Compression library for disk serialization compression </td><td>Y </td><td>Y </td><td><a href="https://www.zlib.net">https://www.zlib.net</a> </td></tr>
 <tr>
-<td>Boost </td><td>1.61 </td><td>1.61 </td><td>Components: system, iostreams, python, thread, numpy </td><td>Y </td><td>Y </td><td><a href="https://www.boost.org">https://www.boost.org</a> </td></tr>
+<td>Boost </td><td>1.61 </td><td>1.61 </td><td>Components: system, iostreams, python, numpy </td><td>Y </td><td>Y </td><td><a href="https://www.boost.org">https://www.boost.org</a> </td></tr>
 <tr>
 <td>Python </td><td>2.7 </td><td>2.7 </td><td>The python interpreter and libraries for C++/python bindings </td><td>Y </td><td>Y </td><td><a href="https://www.python.org">https://www.python.org</a> </td></tr>
 <tr>
-<td>NumPy </td><td>1.12.1 </td><td>1.9.2 </td><td>Scientific computing with Python </td><td>Y </td><td>Y </td><td><a href="http://www.numpy.org">http://www.numpy.org</a> </td></tr>
+<td>NumPy </td><td>1.12.1 </td><td>1.12.1 </td><td>Scientific computing with Python </td><td>Y </td><td>Y </td><td><a href="http://www.numpy.org">http://www.numpy.org</a> </td></tr>
 <tr>
 <td>CppUnit </td><td>1.10 </td><td>Latest </td><td>A unit testing framework module for C++ </td><td>N </td><td>Y </td><td><a href="https://freedesktop.org/wiki/Software/cppunit">https://freedesktop.org/wiki/Software/cppunit</a> </td></tr>
 <tr>
-<td>Blosc </td><td>1.5* </td><td>1.5* </td><td>Recommended dependency for improved disk compression </td><td>N </td><td>N** </td><td><a href="https://github.com/Blosc/c-blosc/releases">https://github.com/Blosc/c-blosc/releases</a> </td></tr>
+<td>Blosc </td><td>1.5 </td><td>1.5 </td><td>Recommended dependency for improved disk compression </td><td>N </td><td>N* </td><td><a href="https://github.com/Blosc/c-blosc/releases">https://github.com/Blosc/c-blosc/releases</a> </td></tr>
 <tr>
 <td>Log4cplus </td><td>1.1.2 </td><td>Latest </td><td>An optional dependency for improved OpenVDB Logging </td><td>Y </td><td>Y </td><td><a href="https://github.com/log4cplus/log4cplus">https://github.com/log4cplus/log4cplus</a> </td></tr>
 <tr>
@@ -169,16 +170,17 @@ Dependency Table</h2>
 <tr>
 <td>OpenGL </td><td>3.2 </td><td>Latest </td><td>Environment for developing portable graphics applications </td><td>Y </td><td>Y </td><td><a href="https://www.opengl.org">https://www.opengl.org</a> </td></tr>
 <tr>
+<td>GLEW </td><td>1.0.0 </td><td>Latest </td><td>A cross-platform OpenGL extension loading library. </td><td>Y </td><td>Y </td><td><a href="http://glew.sourceforge.net">http://glew.sourceforge.net</a> </td></tr>
+<tr>
 <td>Doxygen </td><td>1.8.8 </td><td>1.8.11 </td><td>Documentation generation from C++ </td><td>Y </td><td>Y </td><td><a href="http://www.doxygen.nl">http://www.doxygen.nl</a> </td></tr>
 </table>
 <ul>
-<li><b>*</b> Blosc <a href="https://jira.aswf.io/browse/OVDB-78">unit Test failures with 1.14 and compilation errors with 1.16</a></li>
-<li><b>**</b> Blosc 1.16 is only available through Homebrew and currently requires <a class="el" href="dependencies.html#depManInstall">manual</a> installation for 1.5.</li>
+<li><b>*</b> Blosc 1.16 is only available through Homebrew and currently requires <a class="el" href="dependencies.html#depManInstall">manual</a> installation for 1.5.</li>
 </ul>
 <h2><a class="anchor" id="depKnownIssues"></a>
 Known Issues</h2>
 <ul>
-<li><b>GLFW:</b> Crash with GLFW 3.2.1 when used with EGL on Linux. OpenVDB View may segfault on closure. Whilst this <a href="https://github.com/glfw/glfw/issues/1146">has been fixed in the GLFW repository</a>, there is no new release.</li>
+<li><b>GLFW:</b> Crash with GLFW 3.2.1 when used with EGL on Linux. OpenVDB View may segfault on closure. Fixed in GLFW 3.3</li>
 <li><b>Boost</b> 1.65/1.66/1.67 + <b>Python3</b> + <b>NumPy:</b> Known issue on UNIX systems which can cause the below python runtime error. Consider updating to Boost 1.68 if you require both Python3 and NumPy support:</li>
 </ul>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;RuntimeError: FATAL: module compiled as little endian, but detected different endianness at runtime.</div></div><!-- fragment --><h1><a class="anchor" id="depInstallingDependencies"></a>
@@ -187,7 +189,7 @@ Installing Dependencies</h1>
 <h2><a class="anchor" id="depUsingAptGet"></a>
 Using UNIX apt-get</h2>
 <p><b>Note:</b> Blosc and CppUnit are unavailable using apt-get. See the other package manager methods or the <a class="el" href="dependencies.html#depManInstall">manual installation</a> options.</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;#!/bin/bash</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;apt-get install cmake                   # CMake</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;apt-get install libilmbase-dev          # IlmBase</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;apt-get install libopenexr-dev          # OpenEXR</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;apt-get install libtbb-dev              # TBB</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;apt-get install zlibc                   # zlib</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;apt-get install libboost-system-dev     # Boost::system</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;apt-get install libboost-iostreams-dev  # Boost::iostream</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;apt-get install libboost-python-dev     # Boost::python</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;apt-get install libboost-thread-dev     # Boost::thread</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;apt-get install libboost-numpy-dev      # Boost::numpy</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;apt-get install python-dev              # Python</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;apt-get install python-numpy            # NumPy</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;apt-get install liblog4cplus-dev        # Log4cplus</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;apt-get install libglfw3-dev            # GLFW</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;apt-get install doxygen                 # doxygen</div></div><!-- fragment --><h2><a class="anchor" id="depUsingHomebrew"></a>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;#!/bin/bash</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;apt-get install cmake                   # CMake</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;apt-get install libilmbase-dev          # IlmBase</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;apt-get install libopenexr-dev          # OpenEXR</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;apt-get install libtbb-dev              # TBB</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;apt-get install zlibc                   # zlib</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;apt-get install libboost-system-dev     # Boost::system</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;apt-get install libboost-iostreams-dev  # Boost::iostream</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;apt-get install libboost-python-dev     # Boost::python</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;apt-get install libboost-numpy-dev      # Boost::numpy</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;apt-get install python-dev              # Python</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;apt-get install python-numpy            # NumPy</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;apt-get install liblog4cplus-dev        # Log4cplus</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;apt-get install libglfw3-dev            # GLFW</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;apt-get install doxygen                 # doxygen</div></div><!-- fragment --><h2><a class="anchor" id="depUsingHomebrew"></a>
 Using Homebrew</h2>
 <p><a href="https://brew.sh/">Homebrew</a> is a package manager for UNIX systems and is an alternative to apt-get or manual installation from source.</p>
 <p><b>Note:</b> Homebrew installs blosc 1.16 by default with no option for previous versions. OpenVDB recommends Blosc version 1.5 as there are known issues with using later versions of blosc. See the <a class="el" href="dependencies.html#depManInstall">manual installation</a> options.</p>
