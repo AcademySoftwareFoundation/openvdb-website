@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">7.1.0</span>
+   &#160;<span id="projectnumber">7.2.0</span>
    </div>
   </td>
  </tr>
@@ -142,7 +142,7 @@ What does "VDB" stand for?</h1>
 <p>Over the years VDB has been interpreted to mean different things, none of which are very descriptive: "Voxel Data Base", "Volumetric Data Blocks", "Volumetric Dynamic B+tree", etc. In early presentations of VDB we even used a different name, "DB+Grid", which was abandoned to emphasize its distinction from similarly named, but different, existing sparse data structures like DT-Grid or DB-Grid. The simple truth is that "VDB" is just a name. :-)</p>
 <h1><a class="anchor" id="sAccessor"></a>
 Why are there no coordinate-based access methods on the grid?</h1>
-<p>It might surprise you that the <b>Grid</b> class doesn&rsquo;t directly provide access to voxels via their (<em>i</em>,&amp;nbsp<em>j</em>,&amp;nbsp<em>k</em>) coordinates. Instead, the recommended procedure is to ask the grid for a "value accessor", which is an accelerator object that performs bottom-up tree traversal using cached information from previous traversals. Caching greatly improves performance, but it is inherently not thread-safe. However, a single grid may have multiple value accessors, so each thread can safely be assigned its own value accessor. Uncached&mdash;and therefore slower, but thread-safe&mdash;random access is possible through a grid&rsquo;s tree, for example with a call like <code>grid.tree().getValue(ijk)</code>.</p>
+<p>It might surprise you that the <b>Grid</b> class doesn&rsquo;t directly provide access to voxels via their (<em>i</em>,&amp;nbsp <em>j</em>,&amp;nbsp <em>k</em>) coordinates. Instead, the recommended procedure is to ask the grid for a "value accessor", which is an accelerator object that performs bottom-up tree traversal using cached information from previous traversals. Caching greatly improves performance, but it is inherently not thread-safe. However, a single grid may have multiple value accessors, so each thread can safely be assigned its own value accessor. Uncached&mdash;and therefore slower, but thread-safe&mdash;random access is possible through a grid&rsquo;s tree, for example with a call like <code>grid.tree().getValue(ijk)</code>.</p>
 <h1><a class="anchor" id="sValue"></a>
 How and where does OpenVDB store values?</h1>
 <p>OpenVDB stores voxel data in a tree with a fixed maximum height (chosen at compile time), with a root node that has a dynamic branching factor, with internal nodes that have fixed branching factors, and with leaf nodes of fixed dimensions. Values can be stored in nodes at all levels of the tree. Values stored in leaf nodes correspond to individual voxels; all other values correspond to "tiles" (see below).</p>

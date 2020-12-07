@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['opflavor',['OpFlavor',['../classhoudini__utils_1_1OpFactory.html#a6e84165d24ecfee4c04f70a87eefb485',1,'houdini_utils::OpFactory']]]
+  ['nearestneighbors',['NearestNeighbors',['../namespaceopenvdb_1_1v7__2_1_1tools.html#a31d3cd59d1264144ae21e5250166cfc2',1,'openvdb::v7_2::tools']]],
+  ['nodetype',['NodeType',['../structopenvdb_1_1v7__2_1_1ax_1_1ast_1_1Node.html#acac9cbaeea226ed297804c012dc12b16',1,'openvdb::v7_2::ax::ast::Node']]]
 ];

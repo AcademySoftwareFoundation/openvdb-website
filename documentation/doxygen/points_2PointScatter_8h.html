@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">7.1.0</span>
+   &#160;<span id="projectnumber">7.2.0</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_280f52b45faa7feb3f4c229d1d8418c8.html">openvdb</a></li><li class="navelem"><a class="el" href="dir_faade268a5bfef3fc3cf3c3ec1fe7f19.html">points</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_280f52b45faa7feb3f4c229d1d8418c8.html">openvdb</a></li><li class="navelem"><a class="el" href="dir_5862e09d5e9b1231151ba919eed3a485.html">openvdb</a></li><li class="navelem"><a class="el" href="dir_c9229911bfd1cba3327f6b216c5f36b0.html">points</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -102,7 +102,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;thread&gt;</code><br />
 <code>#include &lt;random&gt;</code><br />
 <code>#include &lt;<a class="el" href="openvdb_8h_source.html">openvdb/openvdb.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="Types_8h_source.html">openvdb/Types.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="openvdb_2Types_8h_source.html">openvdb/Types.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="LeafManager_8h_source.html">openvdb/tree/LeafManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="Prune_8h_source.html">openvdb/tools/Prune.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="NullInterrupter_8h_source.html">openvdb/util/NullInterrupter.h</a>&gt;</code><br />
@@ -118,35 +118,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceopenvdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb.html">openvdb</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v7__1"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__1.html">openvdb::v7_1</a></td></tr>
+<tr class="memitem:namespaceopenvdb_1_1v7__2"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__2.html">openvdb::v7_2</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v7__1_1_1points"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__1_1_1points.html">openvdb::v7_1::points</a></td></tr>
+<tr class="memitem:namespaceopenvdb_1_1v7__2_1_1points"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__2_1_1points.html">openvdb::v7_2::points</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v7__1_1_1points_1_1point__scatter__internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__1_1_1points_1_1point__scatter__internal.html">openvdb::v7_1::points::point_scatter_internal</a></td></tr>
+<tr class="memitem:namespaceopenvdb_1_1v7__2_1_1points_1_1point__scatter__internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__2_1_1points_1_1point__scatter__internal.html">openvdb::v7_2::points::point_scatter_internal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:abc4c70eaf37048c67356fd7189b15d95"><td class="memTemplParams" colspan="2">template&lt;typename GridT , typename RandGenT  = std::mt19937, typename PositionArrayT  = TypedAttributeArray&lt;Vec3f, NullCodec&gt;, typename PointDataGridT  = Grid&lt;        typename points::TreeConverter&lt;typename GridT::TreeType&gt;::Type&gt;, typename InterrupterT  = util::NullInterrupter&gt; </td></tr>
-<tr class="memitem:abc4c70eaf37048c67356fd7189b15d95"><td class="memTemplItemLeft" align="right" valign="top">PointDataGridT::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__1_1_1points.html#abc4c70eaf37048c67356fd7189b15d95">uniformPointScatter</a> (const GridT &amp;grid, const Index64 count, const unsigned int seed=0, const float spread=1.0f, InterrupterT *interrupter=nullptr)</td></tr>
-<tr class="memdesc:abc4c70eaf37048c67356fd7189b15d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">The free functions depend on the following class:  <a href="namespaceopenvdb_1_1v7__1_1_1points.html#abc4c70eaf37048c67356fd7189b15d95">More...</a><br /></td></tr>
+<tr class="memitem:abc4c70eaf37048c67356fd7189b15d95"><td class="memTemplItemLeft" align="right" valign="top">PointDataGridT::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__2_1_1points.html#abc4c70eaf37048c67356fd7189b15d95">uniformPointScatter</a> (const GridT &amp;grid, const Index64 count, const unsigned int seed=0, const float spread=1.0f, InterrupterT *interrupter=nullptr)</td></tr>
+<tr class="memdesc:abc4c70eaf37048c67356fd7189b15d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">The free functions depend on the following class:  <a href="namespaceopenvdb_1_1v7__2_1_1points.html#abc4c70eaf37048c67356fd7189b15d95">More...</a><br /></td></tr>
 <tr class="separator:abc4c70eaf37048c67356fd7189b15d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a35fc7cff4396e3c0fed48af7150c30"><td class="memTemplParams" colspan="2">template&lt;typename GridT , typename RandGenT  = std::mt19937, typename PositionArrayT  = TypedAttributeArray&lt;Vec3f, NullCodec&gt;, typename PointDataGridT  = Grid&lt;        typename points::TreeConverter&lt;typename GridT::TreeType&gt;::Type&gt;, typename InterrupterT  = util::NullInterrupter&gt; </td></tr>
-<tr class="memitem:a2a35fc7cff4396e3c0fed48af7150c30"><td class="memTemplItemLeft" align="right" valign="top">PointDataGridT::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__1_1_1points.html#a2a35fc7cff4396e3c0fed48af7150c30">denseUniformPointScatter</a> (const GridT &amp;grid, const float pointsPerVoxel, const unsigned int seed=0, const float spread=1.0f, InterrupterT *interrupter=nullptr)</td></tr>
-<tr class="memdesc:a2a35fc7cff4396e3c0fed48af7150c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uniformly scatter a fixed number of points per active voxel. If the pointsPerVoxel value provided is a fractional value, each voxel calculates a delta value of how likely it is to contain an extra point.  <a href="namespaceopenvdb_1_1v7__1_1_1points.html#a2a35fc7cff4396e3c0fed48af7150c30">More...</a><br /></td></tr>
+<tr class="memitem:a2a35fc7cff4396e3c0fed48af7150c30"><td class="memTemplItemLeft" align="right" valign="top">PointDataGridT::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__2_1_1points.html#a2a35fc7cff4396e3c0fed48af7150c30">denseUniformPointScatter</a> (const GridT &amp;grid, const float pointsPerVoxel, const unsigned int seed=0, const float spread=1.0f, InterrupterT *interrupter=nullptr)</td></tr>
+<tr class="memdesc:a2a35fc7cff4396e3c0fed48af7150c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uniformly scatter a fixed number of points per active voxel. If the pointsPerVoxel value provided is a fractional value, each voxel calculates a delta value of how likely it is to contain an extra point.  <a href="namespaceopenvdb_1_1v7__2_1_1points.html#a2a35fc7cff4396e3c0fed48af7150c30">More...</a><br /></td></tr>
 <tr class="separator:a2a35fc7cff4396e3c0fed48af7150c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea55ad121ac7274e8a5bb844253c695d"><td class="memTemplParams" colspan="2">template&lt;typename GridT , typename RandGenT  = std::mt19937, typename PositionArrayT  = TypedAttributeArray&lt;Vec3f, NullCodec&gt;, typename PointDataGridT  = Grid&lt;        typename points::TreeConverter&lt;typename GridT::TreeType&gt;::Type&gt;, typename InterrupterT  = util::NullInterrupter&gt; </td></tr>
-<tr class="memitem:aea55ad121ac7274e8a5bb844253c695d"><td class="memTemplItemLeft" align="right" valign="top">PointDataGridT::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__1_1_1points.html#aea55ad121ac7274e8a5bb844253c695d">nonUniformPointScatter</a> (const GridT &amp;grid, const float pointsPerVoxel, const unsigned int seed=0, const float spread=1.0f, InterrupterT *interrupter=nullptr)</td></tr>
-<tr class="memdesc:aea55ad121ac7274e8a5bb844253c695d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non uniformly scatter points per active voxel. The pointsPerVoxel value is used to weight each grids cell value to compute a fixed number of points for every active voxel. If the computed result is a fractional value, each voxel calculates a delta value of how likely it is to contain an extra point.  <a href="namespaceopenvdb_1_1v7__1_1_1points.html#aea55ad121ac7274e8a5bb844253c695d">More...</a><br /></td></tr>
+<tr class="memitem:aea55ad121ac7274e8a5bb844253c695d"><td class="memTemplItemLeft" align="right" valign="top">PointDataGridT::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__2_1_1points.html#aea55ad121ac7274e8a5bb844253c695d">nonUniformPointScatter</a> (const GridT &amp;grid, const float pointsPerVoxel, const unsigned int seed=0, const float spread=1.0f, InterrupterT *interrupter=nullptr)</td></tr>
+<tr class="memdesc:aea55ad121ac7274e8a5bb844253c695d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non uniformly scatter points per active voxel. The pointsPerVoxel value is used to weight each grids cell value to compute a fixed number of points for every active voxel. If the computed result is a fractional value, each voxel calculates a delta value of how likely it is to contain an extra point.  <a href="namespaceopenvdb_1_1v7__2_1_1points.html#aea55ad121ac7274e8a5bb844253c695d">More...</a><br /></td></tr>
 <tr class="separator:aea55ad121ac7274e8a5bb844253c695d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b082fc9859153374e889e97996ca105"><td class="memTemplParams" colspan="2">template&lt;typename PointDataGridT , typename GridT &gt; </td></tr>
-<tr class="memitem:a5b082fc9859153374e889e97996ca105"><td class="memTemplItemLeft" align="right" valign="top">PointDataGridT::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__1_1_1points_1_1point__scatter__internal.html#a5b082fc9859153374e889e97996ca105">initialisePointTopology</a> (const GridT &amp;grid)</td></tr>
-<tr class="memdesc:a5b082fc9859153374e889e97996ca105"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialise the topology of a PointDataGrid and ensure everything is voxelized  <a href="namespaceopenvdb_1_1v7__1_1_1points_1_1point__scatter__internal.html#a5b082fc9859153374e889e97996ca105">More...</a><br /></td></tr>
-<tr class="separator:a5b082fc9859153374e889e97996ca105"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab75a95e394ea586eacfde6363912cdd4"><td class="memTemplParams" colspan="2">template&lt;typename PositionType , typename CodecT , typename RandGenT , typename LeafNodeT &gt; </td></tr>
-<tr class="memitem:ab75a95e394ea586eacfde6363912cdd4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__1_1_1points_1_1point__scatter__internal.html#ab75a95e394ea586eacfde6363912cdd4">generatePositions</a> (LeafNodeT &amp;leaf, const AttributeSet::Descriptor::Ptr &amp;descriptor, const Index64 &amp;count, const float spread, RandGenT &amp;rand01)</td></tr>
-<tr class="memdesc:ab75a95e394ea586eacfde6363912cdd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate random point positions for a leaf node.  <a href="namespaceopenvdb_1_1v7__1_1_1points_1_1point__scatter__internal.html#ab75a95e394ea586eacfde6363912cdd4">More...</a><br /></td></tr>
-<tr class="separator:ab75a95e394ea586eacfde6363912cdd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fbfce80e32fff12d7ccfa89c6223fae"><td class="memTemplParams" colspan="2">template&lt;typename PointDataGridT , typename GridT &gt; </td></tr>
+<tr class="memitem:a0fbfce80e32fff12d7ccfa89c6223fae"><td class="memTemplItemLeft" align="right" valign="top">PointDataGridT::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__2_1_1points_1_1point__scatter__internal.html#a0fbfce80e32fff12d7ccfa89c6223fae">initialisePointTopology</a> (const GridT &amp;grid)</td></tr>
+<tr class="memdesc:a0fbfce80e32fff12d7ccfa89c6223fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialise the topology of a PointDataGrid and ensure everything is voxelized  <a href="namespaceopenvdb_1_1v7__2_1_1points_1_1point__scatter__internal.html#a0fbfce80e32fff12d7ccfa89c6223fae">More...</a><br /></td></tr>
+<tr class="separator:a0fbfce80e32fff12d7ccfa89c6223fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a531e17c45b269b738fc2ddf29c812ffe"><td class="memTemplParams" colspan="2">template&lt;typename PositionType , typename CodecT , typename RandGenT , typename LeafNodeT &gt; </td></tr>
+<tr class="memitem:a531e17c45b269b738fc2ddf29c812ffe"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__2_1_1points_1_1point__scatter__internal.html#a531e17c45b269b738fc2ddf29c812ffe">generatePositions</a> (LeafNodeT &amp;leaf, const AttributeSet::Descriptor::Ptr &amp;descriptor, const Index64 &amp;count, const float spread, RandGenT &amp;rand01)</td></tr>
+<tr class="memdesc:a531e17c45b269b738fc2ddf29c812ffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate random point positions for a leaf node.  <a href="namespaceopenvdb_1_1v7__2_1_1points_1_1point__scatter__internal.html#a531e17c45b269b738fc2ddf29c812ffe">More...</a><br /></td></tr>
+<tr class="separator:a531e17c45b269b738fc2ddf29c812ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Various point scattering methods for generating VDB Points. </p>

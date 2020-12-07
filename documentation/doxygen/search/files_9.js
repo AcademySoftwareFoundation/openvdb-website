@@ -16,5 +16,6 @@ var searchData=
   ['levelsetsphere_2eh',['LevelSetSphere.h',['../LevelSetSphere_8h.html',1,'']]],
   ['levelsettracker_2eh',['LevelSetTracker.h',['../LevelSetTracker_8h.html',1,'']]],
   ['levelsetutil_2eh',['LevelSetUtil.h',['../LevelSetUtil_8h.html',1,'']]],
+  ['logger_2eh',['Logger.h',['../Logger_8h.html',1,'']]],
   ['logging_2eh',['logging.h',['../logging_8h.html',1,'']]]
 ];

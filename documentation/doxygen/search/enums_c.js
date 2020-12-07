@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rotationorder',['RotationOrder',['../namespaceopenvdb_1_1v7__1_1_1math.html#af3d74c777e523f2725cdf87c15a4b5bc',1,'openvdb::v7_1::math']]]
+  ['point_5fcompression_5ftype',['POINT_COMPRESSION_TYPE',['../namespaceopenvdb__houdini.html#aece1227e4d664f266d80b3a6972be4d3',1,'openvdb_houdini']]]
 ];

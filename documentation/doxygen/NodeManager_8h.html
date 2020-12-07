@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">7.1.0</span>
+   &#160;<span id="projectnumber">7.2.0</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_280f52b45faa7feb3f4c229d1d8418c8.html">openvdb</a></li><li class="navelem"><a class="el" href="dir_35cc96985f5d6ca3a09cf75d35f6f031.html">tree</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_280f52b45faa7feb3f4c229d1d8418c8.html">openvdb</a></li><li class="navelem"><a class="el" href="dir_5862e09d5e9b1231151ba919eed3a485.html">openvdb</a></li><li class="navelem"><a class="el" href="dir_743a3d2d25c0a54b71ee8e9cf4fb62cd.html">tree</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>NodeManager produces linear arrays of all tree nodes allowing for efficient threading and bottom-up processing.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="Types_8h_source.html">openvdb/Types.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="openvdb_2Types_8h_source.html">openvdb/Types.h</a>&gt;</code><br />
 <code>#include &lt;tbb/parallel_for.h&gt;</code><br />
 <code>#include &lt;tbb/parallel_reduce.h&gt;</code><br />
 <code>#include &lt;deque&gt;</code><br />
@@ -106,36 +106,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__1_1_1tree_1_1NodeManager.html">NodeManager&lt; TreeOrLeafManagerT, _LEVELS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">To facilitate threading over the nodes of a tree, cache node pointers in linear arrays, one for each level of the tree.  <a href="classopenvdb_1_1v7__1_1_1tree_1_1NodeManager.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__2_1_1tree_1_1NodeManager.html">NodeManager&lt; TreeOrLeafManagerT, _LEVELS &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">To facilitate threading over the nodes of a tree, cache node pointers in linear arrays, one for each level of the tree.  <a href="classopenvdb_1_1v7__2_1_1tree_1_1NodeManager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__1_1_1tree_1_1NodeList.html">NodeList&lt; NodeT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class caches tree nodes of a specific type in a linear array.  <a href="classopenvdb_1_1v7__1_1_1tree_1_1NodeList.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__2_1_1tree_1_1DynamicNodeManager.html">DynamicNodeManager&lt; TreeOrLeafManagerT, _LEVELS &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__1_1_1tree_1_1NodeList_1_1NodeRange.html">NodeList&lt; NodeT &gt;::NodeRange</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v7__2_1_1tree_1_1NodeFilter.html">NodeFilter</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__1_1_1tree_1_1NodeList_1_1NodeRange_1_1Iterator.html">NodeList&lt; NodeT &gt;::NodeRange::Iterator</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__2_1_1tree_1_1NodeList.html">NodeList&lt; NodeT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class caches tree nodes of a specific type in a linear array.  <a href="classopenvdb_1_1v7__2_1_1tree_1_1NodeList.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__1_1_1tree_1_1NodeManagerLink.html">NodeManagerLink&lt; NodeT, LEVEL &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is a link in a chain that each caches tree nodes of a specific type in a linear array.  <a href="classopenvdb_1_1v7__1_1_1tree_1_1NodeManagerLink.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__2_1_1tree_1_1NodeList_1_1NodeRange.html">NodeList&lt; NodeT &gt;::NodeRange</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__1_1_1tree_1_1NodeManager.html">NodeManager&lt; TreeOrLeafManagerT, _LEVELS &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">To facilitate threading over the nodes of a tree, cache node pointers in linear arrays, one for each level of the tree.  <a href="classopenvdb_1_1v7__1_1_1tree_1_1NodeManager.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__2_1_1tree_1_1NodeList_1_1NodeRange_1_1Iterator.html">NodeList&lt; NodeT &gt;::NodeRange::Iterator</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__2_1_1tree_1_1NodeManagerLink.html">NodeManagerLink&lt; NodeT, LEVEL &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is a link in a chain that each caches tree nodes of a specific type in a linear array.  <a href="classopenvdb_1_1v7__2_1_1tree_1_1NodeManagerLink.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__2_1_1tree_1_1NodeManager.html">NodeManager&lt; TreeOrLeafManagerT, _LEVELS &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">To facilitate threading over the nodes of a tree, cache node pointers in linear arrays, one for each level of the tree.  <a href="classopenvdb_1_1v7__2_1_1tree_1_1NodeManager.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v7__2_1_1tree_1_1ForeachFilterOp.html">ForeachFilterOp&lt; OpT &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v7__2_1_1tree_1_1ReduceFilterOp.html">ReduceFilterOp&lt; OpT &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__2_1_1tree_1_1DynamicNodeManagerLink.html">DynamicNodeManagerLink&lt; NodeT, LEVEL &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is a link in a chain that each caches tree nodes of a specific type in a linear array.  <a href="classopenvdb_1_1v7__2_1_1tree_1_1DynamicNodeManagerLink.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v7__2_1_1tree_1_1DynamicNodeManager.html">DynamicNodeManager&lt; TreeOrLeafManagerT, _LEVELS &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceopenvdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb.html">openvdb</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v7__1"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__1.html">openvdb::v7_1</a></td></tr>
+<tr class="memitem:namespaceopenvdb_1_1v7__2"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__2.html">openvdb::v7_2</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v7__1_1_1tree"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__1_1_1tree.html">openvdb::v7_1::tree</a></td></tr>
+<tr class="memitem:namespaceopenvdb_1_1v7__2_1_1tree"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v7__2_1_1tree.html">openvdb::v7_2::tree</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>NodeManager produces linear arrays of all tree nodes allowing for efficient threading and bottom-up processing. </p>
-<dl class="section author"><dt>Author</dt><dd>Ken Museth</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>A NodeManager can be constructed from a Tree or LeafManager. The latter is slightly more efficient since the cached leaf nodes will be reused. </dd></dl>
+<dl class="section author"><dt>Authors</dt><dd>Ken Museth, Dan Bailey</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>A NodeManager can be constructed from a Tree or LeafManager. </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

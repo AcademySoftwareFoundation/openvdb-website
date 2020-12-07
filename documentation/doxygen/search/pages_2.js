@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['dependencies',['Dependencies',['../dependencies.html',1,'index']]],
-  ['deprecated_20list',['Deprecated List',['../deprecated.html',1,'']]]
+  ['coding_20style',['Coding Style',['../codingStyle.html',1,'index']]]
 ];
