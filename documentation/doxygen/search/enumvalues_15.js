@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['x_5faxis',['X_AXIS',['../classopenvdb_1_1v7__1_1_1tools_1_1mesh__to__volume__internal_1_1SweepExteriorSign.html#ae3996976d8ffb3e58d88f58227473f8ea93ed1386222f87948b972889ad82cd33',1,'openvdb::v7_1::tools::mesh_to_volume_internal::SweepExteriorSign::X_AXIS()'],['../namespaceopenvdb_1_1v7__1_1_1math.html#ae3996976d8ffb3e58d88f58227473f8ea93ed1386222f87948b972889ad82cd33',1,'openvdb::v7_1::math::X_AXIS()']]],
-  ['xedge',['XEDGE',['../namespaceopenvdb_1_1v7__1_1_1tools_1_1volume__to__mesh__internal.html#aa0ead9a390ae1a2e9537f8ea60f4f355af72c109e6eab4311581c088211f39127',1,'openvdb::v7_1::tools::volume_to_mesh_internal']]],
-  ['xyz_5frotation',['XYZ_ROTATION',['../namespaceopenvdb_1_1v7__1_1_1math.html#af3d74c777e523f2725cdf87c15a4b5bca7f81155656307a44e79263603809ef36',1,'openvdb::v7_1::math']]],
-  ['xzx_5frotation',['XZX_ROTATION',['../namespaceopenvdb_1_1v7__1_1_1math.html#af3d74c777e523f2725cdf87c15a4b5bca717ae584f16837c35a3a783354641b98',1,'openvdb::v7_1::math']]],
-  ['xzy_5frotation',['XZY_ROTATION',['../namespaceopenvdb_1_1v7__1_1_1math.html#af3d74c777e523f2725cdf87c15a4b5bcadb575a82763a65e7b9ab5d4a9ec0b448',1,'openvdb::v7_1::math']]]
+  ['warn',['Warn',['../namespaceopenvdb_1_1v7__2_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5a56525ae64d370c0b448ac0d60710ef17',1,'openvdb::v7_2::logging']]],
+  ['weno5_5fbias',['WENO5_BIAS',['../namespaceopenvdb_1_1v7__2_1_1math.html#a9b59f0a0c54e6e3759f1418d40585656a5ded6cffcebae303db0b13b531a3d06d',1,'openvdb::v7_2::math']]],
+  ['while',['WHILE',['../namespaceopenvdb_1_1v7__2_1_1ax_1_1ast_1_1tokens.html#a8434b185a1aa4cd94b590ad90983672ca3278fd035226215822c903790a1eee73',1,'openvdb::v7_2::ax::ast::tokens::WHILE()'],['../axparser_8h.html#a4fb17c3afc02be01e847b79146e4a6e6a3278fd035226215822c903790a1eee73',1,'WHILE():&#160;axparser.h']]],
+  ['writememcompress',['WRITEMEMCOMPRESS',['../classopenvdb_1_1v7__2_1_1points_1_1AttributeArray.html#a197900dd4db8e53dfc5a21afdf388a3ba8749df24a7697b53dabe6a172d8e8ab3',1,'openvdb::v7_2::points::AttributeArray']]],
+  ['writepaged',['WRITEPAGED',['../classopenvdb_1_1v7__2_1_1points_1_1AttributeArray.html#a197900dd4db8e53dfc5a21afdf388a3ba7bf9692867128691df64db2551b309cf',1,'openvdb::v7_2::points::AttributeArray']]],
+  ['writestrided',['WRITESTRIDED',['../classopenvdb_1_1v7__2_1_1points_1_1AttributeArray.html#a197900dd4db8e53dfc5a21afdf388a3ba3c6f9351909fce2f3c6ab81ca36ff16e',1,'openvdb::v7_2::points::AttributeArray']]],
+  ['writeuniform',['WRITEUNIFORM',['../classopenvdb_1_1v7__2_1_1points_1_1AttributeArray.html#a197900dd4db8e53dfc5a21afdf388a3ba5d9be351a591ac4554605488a8c84b0a',1,'openvdb::v7_2::points::AttributeArray']]]
 ];

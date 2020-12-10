@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">7.1.0</span>
+   &#160;<span id="projectnumber">7.2.0</span>
    </div>
   </td>
  </tr>
@@ -77,7 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="index.html">OpenVDB</a></li>  </ul>
+<li class="navelem"><a class="el" href="index.html">OpenVDB</a></li><li class="navelem"><a class="el" href="openvdbax.html">OpenVDB AX</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,6 +93,7 @@ Contents</h1>
 <li><a class="el" href="build.html#buildDependencies">Locating Dependencies</a></li>
 <li><a class="el" href="build.html#buildMixingDepInstalls">Mixing Dependency Installations</a></li>
 <li><a class="el" href="build.html#buildBloscSupport">Blosc Support</a></li>
+<li><a class="el" href="build.html#buildZLibSupport">ZLIB Support</a></li>
 <li><a class="el" href="build.html#buildVCPKG">Building Dependencies using VCPKG</a></li>
 </ul>
 </li>
@@ -108,14 +109,13 @@ Contents</h1>
 </ul>
 </li>
 <li><a class="el" href="build.html#buildUsingOpenVDB">Building With OpenVDB</a></li>
-<li><a class="el" href="build.html#buildUsingMake">Building With Make</a></li>
 <li><a class="el" href="build.html#buildTroubleshooting">Troubleshooting</a></li>
 </ul>
 <hr/>
 <h1><a class="anchor" id="buildIntroduction"></a>
 Introduction</h1>
-<p><a href="https://cmake.org/">CMake</a> is a cross-platform family of tools designed to help build software. CMake doesn't <em>actually</em> build the project but instead generates the files required for your toolchain, for example makefiles that serve as input to <a href="https://www.gnu.org/software/make/">GNU Make</a>. Makefiles have historically been included in the OpenVDB distribution and until recently were the preferred means of building OpenVDB on UNIX platforms (see <a class="el" href="build.html#buildUsingMake">Building With Make</a> below). But CMake support ensures a high level of flexibility and pre-compile verification to the build process, making it much easier to control and customize the installation process for a wider range of platforms.</p>
-<p>CMake also makes it easier to automatically find and handle dependencies. As OpenVDB has a number of required and optional dependencies, it's recommended that new users to the software use the CMake build system over the Makefiles. If you're completely new to CMake, you may find it useful to read over the brief <a href="https://cmake.org/runningcmake/">introduction to CMake</a> and the CMake structure section below. However the <a class="el" href="build.html#buildGuide">build guide</a> runs through the build process step by step.</p>
+<p><a href="https://cmake.org/">CMake</a> is a cross-platform family of tools designed to help build software. CMake doesn't <em>actually</em> build the project but instead generates the files required for your toolchain, for example makefiles that serve as input to <a href="https://www.gnu.org/software/make/">GNU Make</a>. CMake support ensures a high level of flexibility and pre-compile verification to the build process, making it much easier to control and customize the installation process for a wider range of platforms.</p>
+<p>CMake also makes it easier to automatically find and handle dependencies. If you're completely new to CMake, you may find it useful to read over the brief <a href="https://cmake.org/runningcmake/">introduction to CMake</a> and the CMake structure section below. However the <a class="el" href="build.html#buildGuide">build guide</a> runs through the build process step by step.</p>
 <h1><a class="anchor" id="buildCmakeStructure"></a>
 CMake Structure</h1>
 <p>CMake will configure a set of build files which represent the commands and dependencies for the OpenVDB components you wish to install. Finding and handling these dependencies on different platforms comprises the majority of the complexity involved in writing CMake. In general, software which uses CMake is expected to provide their own configuration files which dependent software will locate and use. Not all of OpenVDB's dependencies provide CMake support and therefore do not deploy with CMake configurations that OpenVDB can use. OpenVDB provides a set of <code>FindModules</code> in the <code>cmake</code> folder for finding these various dependencies e.g. <code>FindBlosc.cmake</code>. These are designed such that they can theoretically be used by any project that needs to locate the given library and are invoked by the <code>find_package()</code> call. For more information on FindModules and locating packages with CMake, see the following CMake documentation:</p>
@@ -159,12 +159,15 @@ Mixing Dependency Installations</h2>
 <p>In summary try to stick to a single installation workflow and, if in doubt, provide direct include/lib paths to isolated software locations.</p>
 <h2><a class="anchor" id="buildBloscSupport"></a>
 Blosc Support</h2>
-<p>Blosc is one of the optional dependencies of all OpenVDB components. It is the only dependency which is enabled by default. The documented build steps below treat blosc as a required dependency. There are two reasons for this:</p>
+<p>Blosc is an optional dependency of all OpenVDB components. The documented build steps below treat blosc as a required dependency. There are two reasons for this:</p>
 <ul>
 <li>Blosc produces significantly smaller <code>.vdb</code> files</li>
 <li>If Blosc is disabled, you will not be able to read or use any <code>.vdb</code> files that were created using blosc compression. This includes OpenVDB files from Houdini.</li>
 </ul>
-<p>You can disable Blosc using <code>-D USE_BLOSC=OFF</code>.</p>
+<h2><a class="anchor" id="buildZLibSupport"></a>
+ZLIB Support</h2>
+<p>ZLIB is an optional dependency of all OpenVDB components. The documented build steps below treat ZLib as a required dependency.</p>
+<p>You can disable ZLib using <code>-D USE_ZLIB=OFF</code> if Blosc is also disabled using <code>-D USE_BLOSC=OFF</code>.</p>
 <h2><a class="anchor" id="buildVCPKG"></a>
 Building Dependencies using VCPKG</h2>
 <p>It is recommended to set the VCPKG_DEFAULT_TRIPLET=x64-windows environment variable to use 64-bit libraries by default as even on a 64-bit Windows OS, VCPKG builds and installs 32-bit libraries by default.</p>
@@ -193,6 +196,14 @@ OpenVDB Components</h1>
 <tr>
 <td>OpenVDB Maya Plugin </td><td>The Maya OpenVDB Nodes </td><td>OPENVDB_BUILD_MAYA_PLUGIN </td><td>OFF </td></tr>
 <tr>
+<td>OpenVDB AX Library </td><td>The OpenVDB AX library </td><td>OPENVDB_BUILD_AX </td><td>OFF </td></tr>
+<tr>
+<td>OpenVDB AX Binary </td><td>Command line binary for running OpenVDB AX code </td><td>OPENVDB_BUILD_AX_BINARIES </td><td>OFF </td></tr>
+<tr>
+<td>OpenVDB AX Grammar </td><td>Allows for re-generation of AX grammar, typically not required </td><td>OPENVDB_BUILD_AX_GRAMMAR </td><td>OFF </td></tr>
+<tr>
+<td>OpenVDB AX Unit Tests </td><td>OpenVDB AX's Unit Test suite </td><td>OPENVDB_BUILD_AX_UNITTESTS </td><td>OFF </td></tr>
+<tr>
 <td>Documentation </td><td>The OpenVDB doxygen documentation </td><td>OPENVDB_BUILD_DOCS </td><td>OFF </td></tr>
 </table>
 <h1><a class="anchor" id="buildGuide"></a>
@@ -207,7 +218,7 @@ Build Types</h2>
 </ul>
 <p>Each option provides various benefits. Apart from the support for either the Houdini or Maya OpenVDB plugins, the latter two options can make it easier for new users to install the range of OpenVDB dependencies without having to worry about using a package manager or manually installing for source. You'll still be able to build and use all components of OpenVDB with these methods. However depending on the DCC (Digital Content Creation) software's version, you may find that some features of the Core library are restricted to ensure compatibility. For more information of building OpenVDB against a Houdini or Maya installation, see <a class="el" href="build.html#buildBuildHouMaya">here</a>.</p>
 <p>Developers may wish to build a standalone version of OpenVDB to take advantage of newer dependencies and newer library features. See <a class="el" href="build.html#buildBuildStandalone">here</a> for more information.</p>
-<p><b>Note:</b> Blosc is treated as a required dependency in these install instructions. See the <a class="el" href="build.html#buildBloscSupport">blosc support</a> section for more information.</p>
+<p><b>Note:</b> Blosc and ZLib are treated as required dependencies in these install instructions. See the <a class="el" href="build.html#buildBloscSupport">blosc support</a> and <a class="el" href="build.html#buildZLibSupport">zlib support</a> sections for more information.</p>
 <h2><a class="anchor" id="buildBuildHouMaya"></a>
 Building Against Houdini/Maya</h2>
 <p>Building against a DCC reduces the list of dependencies you need to provide. You should not mix between Houdini and Maya libraries and should not attempt to build the Maya plugin using Houdini libraries and vice-versa. Additionally, it's a good idea to read the above section on <a class="el" href="build.html#buildMixingDepInstalls">mixing dependency installations</a>.</p>
@@ -240,7 +251,9 @@ Building Against Houdini</h2>
 <tr>
 <td>Boost </td><td>Components: system, iostreams, python, thread </td><td>All </td></tr>
 <tr>
-<td>CppUnit </td><td>A unit testing framework module for C++ </td><td>Unit Tests </td></tr>
+<td>GoogleTest </td><td>A unit testing framework module for C++ </td><td>Unit Tests </td></tr>
+<tr>
+<td>CppUnit </td><td>A unit testing framework module for C++ </td><td>Unit Tests (AX) </td></tr>
 <tr>
 <td>GLFW </td><td>Simple API for OpenGL development </td><td>OpenVDB View </td></tr>
 <tr>
@@ -249,8 +262,10 @@ Building Against Houdini</h2>
 <td>Log4cplus </td><td>An optional dependency for improved OpenVDB Logging </td><td>Optional (All) </td></tr>
 <tr>
 <td>NumPy </td><td>Scientific computing with Python </td><td>Optional (Python) </td></tr>
+<tr>
+<td>LLVM </td><td>Target-independent code generation </td><td>OpenVDB AX </td></tr>
 </table>
-<p>At a minimum, boost, a matching C++14 compiler and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software. Note that as Blosc is provided as part of the Houdini installation <code>USE_BLOSC</code> should be left <code>ON</code>.</p>
+<p>At a minimum, boost, a matching C++14 compiler and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software. Note that as Blosc and ZLib are provided as part of the Houdini installation <code>USE_BLOSC</code> and <code>USE_ZLIB</code> should be left <code>ON</code>.</p>
 <p>With the necessary dependencies installed, create and enter a directory for cmake to write to. It's generally useful to create this in the location you've extracted the OpenVDB repository. It will house CMake's generated build files.</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;mkdir build</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cd build</div></div><!-- fragment --><p>Now you can call CMake by providing the absolute or relative path to the root of the OpenVDB source tree along with the following options:</p>
 <p>Required:</p>
@@ -292,7 +307,9 @@ Building Against Maya</h2>
 <tr>
 <td>Blosc </td><td>Recommended dependency for improved disk compression </td><td>All* </td></tr>
 <tr>
-<td>CppUnit </td><td>A unit testing framework module for C++ </td><td>Unit Tests </td></tr>
+<td>GoogleTest </td><td>A unit testing framework module for C++ </td><td>Unit Tests </td></tr>
+<tr>
+<td>CppUnit </td><td>A unit testing framework module for C++ </td><td>Unit Tests (AX) </td></tr>
 <tr>
 <td>GLFW </td><td>Simple API for OpenGL development </td><td>OpenVDB View </td></tr>
 <tr>
@@ -303,6 +320,8 @@ Building Against Maya</h2>
 <td>Log4cplus </td><td>An optional dependency for improved OpenVDB Logging </td><td>Optional (All) </td></tr>
 <tr>
 <td>NumPy </td><td>Scientific computing with Python </td><td>Optional (Python) </td></tr>
+<tr>
+<td>LLVM </td><td>Target-independent code generation </td><td>OpenVDB AX </td></tr>
 </table>
 <p>See <a class="el" href="build.html#buildBloscSupport">blosc support</a></p>
 <p>At a minimum, boost, a matching C++14 compiler, IlmBase, ZLIB, blosc and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software.</p>
@@ -341,221 +360,8 @@ Building With OpenVDB</h1>
 <p>The following assumes that OpenVDB was installed with <code>OPENVDB_BUILD_CORE=ON</code> and <code>OPENVDB_INSTALL_CMAKE_MODULES=ON</code>. Don't worry if you didn't specify these options directly, they both default to <code>ON</code>. This ensures that OpenVDB has installed the required CMake modules that your application will need to use.</p>
 <p><b>Note:</b> Typically, projects provide a <b>Config-file</b> rather than a <b>Find-module</b> for downstream use. OpenVDB currently provides a <b>Find-module</b>. This may change in the future. Further information <a href="https://cmake.org/cmake/help/latest/manual/cmake-packages.7.html#using-packages">here</a>.</p>
 <p>You can add the below CMake snippet to your main <code>CMakeLists.txt</code> to bring in OpenVDB as a dependency:</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake_minimum_required(VERSION 3.3)</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;list(APPEND CMAKE_MODULE_PATH &quot;/location/of/openvdb/install/lib/cmake/OpenVDB&quot;)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;find_package(OpenVDB REQUIRED)</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;target_link_libraries(myapp OpenVDB::openvdb)</div></div><!-- fragment --><p><code>myapp</code> in the above is a CMake target, usually created with <code>add_library()</code> or <code>add_executable()</code>. You can optionally provide <code>CMAKE_MODULE_PATH</code> as a <code>-D</code> argument to the cmake command line instead of specifying it in your <code>CMakeLists.txt</code>.</p>
-<p>Note that the <code>FindOpenVDB.cmake</code> module relies on the other <code>FindModules</code> provided in the OpenVDB installation to find it's own dependencies. This may require you to provide additional dependency locations for OpenVDB's dependencies. See <a class="el" href="build.html#buildDependencies">Locating Dependencies</a> or the below troubleshooting for more information.</p>
-<h1><a class="anchor" id="buildUsingMake"></a>
-Building With Make</h1>
-<p>Makefiles are provided for those not wishing to use the CMake build system. However, Make support is now deprecated and will be removed in a future release, so one should not expect the Makefiles to provide the same level of functionality as the CMake build system.</p>
-<p>To build the core library, ensure that you have <a href="https://www.gnu.org/software/make/">GNU Make</a> version 4.1 or later, then proceed as follows:</p>
-<ol>
-<li>
-<p class="startli">Set values appropriate to your environment for the following variables at the top of <code>openvdb/Makefile</code>: </p><table class="doxtable">
-<tr>
-<td><code>INSTALL_DIR</code></td><td><p class="starttd">the directory into which to install libraries, executables and header files (e.g., <code>/usr/local</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>BOOST_INCL_DIR</code></td><td><p class="starttd">the parent directory of the <code>boost/</code> header directory (e.g., <code>/usr/include</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>BOOST_LIB_DIR</code></td><td><p class="starttd">the directory containing <code>libboost_iostreams</code>, etc.</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>BOOST_LIB</code></td><td><p class="starttd">linker flags for <code>libboost_iostreams</code> and <code>libboost_system</code></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>BOOST_THREAD_LIB</code></td><td><p class="starttd">linker flags for <code>libboost_thread</code></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>ILMBASE_INCL_DIR</code></td><td><p class="starttd">the parent directory of the <code>OpenEXR/</code> header directory (which contains <code>half.h</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>ILMBASE_LIB_DIR</code></td><td><p class="starttd">the directory containing <code>libHalf.so</code> and/or <code>libHalf.a</code></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>ILMBASE_LIB</code></td><td><p class="starttd">linker flags for <code>libIlmThread</code>, <code>libIex</code> and <code>libImath</code></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>HALF_LIB</code></td><td><p class="starttd">linker flag(s) for the Half library (e.g., <code>-lHalf</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>EXR_INCL_DIR</code></td><td><p class="starttd">the parent directory of the <code>OpenEXR/</code> header directory<br />
- </p>
-<p>Note: some OpenEXR headers incorrectly include other OpenEXR headers with, e.g., <code>#include &lt;ImfName.h&gt;</code> instead of <code>#include "ImfName.h"</code>. When compiling with Clang, set <code>EXR_INCL_DIR</code> to the parent directory of the <code>OpenEXR/</code> directory and <code>ILMBASE_INCL_DIR</code> to the <code>OpenEXR/</code> directory itself to avoid errors.</p>
-<p></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>EXR_LIB_DIR</code></td><td><p class="starttd">the directory containing <code>libIlmImf</code></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>EXR_LIB</code></td><td><p class="starttd">linker flags for <code>libIlmImf</code></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>TBB_INCL_DIR</code></td><td><p class="starttd">the parent directory of the <code>tbb/</code> header directory</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>TBB_LIB_DIR</code></td><td><p class="starttd">the directory containing <code>libtbb</code></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>TBB_LIB</code></td><td><p class="starttd">linker flag(s) for the TBB library (e.g., <code>-ltbb</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>BLOSC_INCL_DIR</code></td><td><p class="starttd">the parent directory of the <code>blosc.h</code> header</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>BLOSC_LIB_DIR</code></td><td><p class="starttd">the directory containing <code>libblosc</code></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>BLOSC_LIB</code></td><td><p class="starttd">linker flags for <code>libblosc</code></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>CONCURRENT_MALLOC_LIB_DIR</code></td><td><p class="starttd">a directory containing a scalable, concurrent malloc replacement library such as jemalloc or TBB malloc<br />
- (leave blank if no such library is available, but be aware that using standard malloc in concurrent code incurs a significant performance penalty)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>CONCURRENT_MALLOC_LIB</code></td><td><p class="starttd">linker flag(s) for the malloc replacement library<br />
-(e.g., <code>-ltbbmalloc_proxy -ltbbmalloc</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>CPPUNIT_INCL_DIR</code></td><td><p class="starttd">the parent directory of the <code>cppunit/</code> header directory<br />
- (leave blank if CppUnit is not available)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>CPPUNIT_LIB_DIR</code></td><td><p class="starttd">the directory containing <code>libcppunit.so</code> or <code>libcppunit.a</code></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>CPPUNIT_LIB</code></td><td><p class="starttd">linker flag(s) for the CppUnit library (e.g., <code>-lcppunit</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>GLFW_INCL_DIR</code></td><td><p class="starttd">the directory containing <code>glfw.h</code><br />
- (leave blank if GLFW is not available; GLFW is needed only for the command-line viewer tool)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>GLFW_LIB_DIR</code></td><td><p class="starttd">the directory containing <code>libglfw</code></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>GLFW_LIB</code></td><td><p class="starttd">linker flags for the GLFW library (e.g., <code>-lglfw</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>LOG4CPLUS_INCL_DIR</code></td><td><p class="starttd">the parent directory of the <code>log4cplus/</code> header directory<br />
- (leave blank if log4cplus is not available)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>LOG4CPLUS_LIB_DIR</code></td><td><p class="starttd">directory containing <code>liblog4cplus.so</code> or <code>liblog4cplus.a</code></p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>LOG4CPLUS_LIB</code></td><td><p class="starttd">linker flags for the log4cplus library (e.g., <code>-llog4cplus</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>PYTHON_VERSION</code></td><td><p class="starttd">the version of Python (e.g.,&#160;2.7) for which to build the OpenVDB module (leave blank if Python is unavailable)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>PYTHON_INCL_DIR</code></td><td><p class="starttd">the directory containing the <code>Python.h</code> header file<br />
-(on macOS, this is usually <code>/System/Library/Frameworks/Python.framework/Versions/$(PYTHON_VERSION)/Headers</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>PYCONFIG_INCL_DIR</code></td><td><p class="starttd">the directory containing the <code>pyconfig.h</code> header file (usually but not always the same as <code>PYTHON_INCL_DIR</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>PYTHON_LIB_DIR</code></td><td><p class="starttd">the directory containing the Python library<br />
- (on macOS, this is usually <code>/System/Library/Frameworks/Python.framework/Versions/$(PYTHON_VERSION)/lib</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>PYTHON_LIB</code></td><td><p class="starttd">linker flags for the Python library (e.g., <code>-lpython2.7</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>BOOST_PYTHON_LIB_DIR</code></td><td><p class="starttd">the directory containing the Boost.Python library</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>BOOST_PYTHON_LIB</code></td><td><p class="starttd">linker flags for the Boost.Python library (e.g., <code>-lboost_python-mt</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>NUMPY_INCL_DIR</code></td><td><p class="starttd">the directory containing the NumPy <code>arrayobject.h</code> header file (leave blank if NumPy is unavailable)<br />
-(on macOS, this is usually <code>/System/Library/Frameworks/Python.framework/Versions/$(PYTHON_VERSION)/Extras/lib/python/numpy/core/include/numpy</code>)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>EPYDOC</code></td><td><p class="starttd">the path to the Epydoc executable (leave blank if Epydoc is unavailable)</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>PYTHON_WRAP_ALL_GRID_TYPES</code></td><td><p class="starttd">if set to "<code>no</code>", expose only <a class="el" href="namespaceopenvdb_1_1v7__1.html#a2ae45d4df056c7d0d936a496fec925ee">FloatGrid</a>, <a class="el" href="namespaceopenvdb_1_1v7__1.html#a44c7484144fab7fb2c436e938e2d87ce">BoolGrid</a> and <a class="el" href="namespaceopenvdb_1_1v7__1.html#a77ff1a3a38ec99a56b4d99a15a2970bf">Vec3SGrid</a> in Python, otherwise expose (most of) the standard grid types defined in <a class="el" href="openvdb_8h.html">openvdb.h</a>.</p>
-<p class="endtd"></p>
-</td></tr>
-<tr>
-<td><code>DOXYGEN</code></td><td>the path to the Doxygen executable (leave blank if Doxygen is unavailable) </td></tr>
-</table>
-<p>Note that if you plan to build the Houdini OpenVDB tools, you must build the OpenVDB library and the Houdini tools against compatible versions of the Boost, OpenEXR and TBB libraries. Until Houdini&#160;16.5, all three were included in the HDK, so by default several of the variables above reference the Houdini environment variables <code>$HDSO</code>, <code>$HFS</code> and <code>$HT</code> (source the <code>houdini_setup</code> script provided with your Houdini installation to set those environment variables). You must provide your own installation of Boost.</p>
-<p>Also note that certain new features in OpenVDB (see the <a class="el" href="changes.html">Release Notes</a> for details) necessitated changes to the ABI of the <a class="el" href="classopenvdb_1_1v7__1_1_1Grid.html">Grid</a> class, rendering it incompatible with earlier versions of the library, such as the ones built into Houdini. Passing grids between native VDB nodes in a scene graph and nodes built against the new ABI will lead to crashes, so to use OpenVDB with Houdini&#160;17.5 set <code>abi=5</code> to compile with the incompatible features disabled.</p>
-<p>To build the OpenVDB Python module, you will need local installations of Python, Boost.Python, and optionally NumPy. Houdini ships with Python&#160;2 but not with the <code>libboost_python</code> library or with NumPy or with the Boost.Python headers, so both Boost.Python and NumPy have to be built separately. Point the variables <code>$(BOOST_PYTHON_LIB_DIR)</code>, <code>$(BOOST_PYTHON_LIB)</code> and <code>$(NUMPY_INCL_DIR)</code> to your local installations of those libraries. </p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli">From the top-level <code>openvdb/</code> directory, type "<code>make</code>" (or "<code>make -s</code>" for less verbose output) to locally build the library and commands. The Makefile supports parallel builds (e.g. "<code>make -j 8</code>").</p>
-<p>A default local build generates the following libraries and executables (but see the Makefile for additional targets and build options): </p><table class="doxtable">
-<tr>
-<td><code>openvdb/libopenvdb.so.<em>X.Y.Z</em></code></td><td>the OpenVDB library </td></tr>
-<tr>
-<td><code>openvdb/libopenvdb.so</code></td><td>symlink to <code>libopenvdb.so.<em>X.Y.Z</em></code> </td></tr>
-<tr>
-<td><code>openvdb/pyopenvdb.so</code></td><td>the OpenVDB Python module (if Python and Boost.Python are available) </td></tr>
-<tr>
-<td><code>openvdb/vdb_print</code></td><td>command-line tool that prints info about OpenVDB <code>.vdb</code> files </td></tr>
-<tr>
-<td><code>openvdb/vdb_render</code></td><td>command-line tool that ray-traces OpenVDB volumes </td></tr>
-<tr>
-<td><code>openvdb/vdb_test</code></td><td>unit test runner for <code>libopenvdb</code> (if CppUnit is available) </td></tr>
-</table>
-<p>From the <code>openvdb/</code> directory, type "<code>make test</code>" to run the unit tests and verify that the library is working correctly. (Alternatively, once the library has been installed, run the unit test executable directly with "<code>./vdb_test</code>", or "<code>./vdb_test -v</code>" for more verbose output.) Type "<code>make pytest</code>" to run the Python module unit tests. </p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli">From the <code>openvdb/</code> directory, type "<code>make doc</code>" (or "<code>make -s doc</code>") to generate HTML library documentation, then open the file <code>openvdb/doc/html/index.html</code> in a browser. Type "<code>make pydoc</code>" (or "<code>make -s pydoc</code>") to generate HTML Python module documentation, then open <code>openvdb/doc/html/python/index.html</code> in a browser. </p>
-<p class="endli"></p>
-</li>
-<li>
-<p class="startli">Optionally (if OpenGL and GLFW are available), from the top-level <code>openvdb/</code> directory, type "<code>make vdb_view</code>" (or "<code>make -s vdb_view</code>") to locally build the OpenVDB viewer tool. Then type "<code>./vdb_view</code>" for usage information. </p>
-<p class="endli"></p>
-</li>
-<li>
-From the <code>openvdb/</code> directory, type "<code>make install</code>" (or "<code>make -s install</code>") to copy generated files into the directory tree rooted at <code>$(INSTALL_DIR)</code>.  </li>
-</ol>
-<p>To build the Houdini and Maya plugins the process is similar, but see the Makefiles in the <code>openvdb_</code><code>houdini/</code> and <code>openvdb_</code><code>maya/</code> directories for additional requirements </p><hr/>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake_minimum_required(VERSION 3.12)</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;list(APPEND CMAKE_MODULE_PATH &quot;/location/of/openvdb/install/lib/cmake/OpenVDB&quot;)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;find_package(OpenVDB REQUIRED)</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;target_link_libraries(myapp OpenVDB::openvdb)</div></div><!-- fragment --><p><code>myapp</code> in the above is a CMake target, usually created with <code>add_library()</code> or <code>add_executable()</code>. You can optionally provide <code>CMAKE_MODULE_PATH</code> as a <code>-D</code> argument to the cmake command line instead of specifying it in your <code>CMakeLists.txt</code>.</p>
+<p>Note that the <code>FindOpenVDB.cmake</code> module relies on the other <code>FindModules</code> provided in the OpenVDB installation to find it's own dependencies. This may require you to provide additional dependency locations for OpenVDB's dependencies. See <a class="el" href="build.html#buildDependencies">Locating Dependencies</a> or the below troubleshooting for more information. </p><hr/>
 <h1><a class="anchor" id="buildTroubleshooting"></a>
 Troubleshooting</h1>
 <p>If after reading this guide you're unable to find your specific issue below, please get in touch with the OpenVDB TSC.</p>

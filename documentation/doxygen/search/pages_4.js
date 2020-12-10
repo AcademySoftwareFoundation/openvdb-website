@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['houdini_20cookbook',['Houdini Cookbook',['../houdini.html',1,'index']]]
+  ['frequently_20asked_20questions',['Frequently Asked Questions',['../faq.html',1,'index']]]
 ];
