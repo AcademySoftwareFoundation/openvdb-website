@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">7.2.0</span>
+   &#160;<span id="projectnumber">8.0.0</span>
    </div>
   </td>
  </tr>
@@ -226,11 +226,9 @@ Building Against Houdini/Maya</h2>
 <tr>
 <th>DCC </th><th>Supported Version </th><th>OpenVDB ABI  </th></tr>
 <tr>
-<td>Houdini </td><td>17.0 </td><td>5 </td></tr>
-<tr>
-<td>Houdini </td><td>17.5 </td><td>5 </td></tr>
-<tr>
 <td>Houdini </td><td>18.0 </td><td>6 </td></tr>
+<tr>
+<td>Houdini </td><td>18.5 </td><td>7 </td></tr>
 <tr>
 <td>Maya </td><td>2017 </td><td>Any </td></tr>
 <tr>
@@ -380,11 +378,6 @@ CMake warnings/errors in FindBoost.cmake</h2>
 <p>There are a variety of potential warnings and errors that may arise from the version compatibility of Boost and CMake. These are related to how both Boost and CMake have historically been kept in sync. A common warning and error combination is:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;CMake Warning at ...  Imported targets not available for Boost version XXXXXX</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;...</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;Target &quot;...&quot; links to target &quot;Boost::XXX&quot; but the target</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;was not found.  Perhaps a find_package() call is missing for an IMPORTED</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;target, or an ALIAS target is missing?</div></div><!-- fragment --><p>OpenVDB uses <a href="https://cmake.org/cmake/help/latest/command/add_library.html#imported-libraries">imported targets</a> for all its dependencies. For imported Boost compatibility, the following versions of CMake are required:</p>
 <ul>
-<li>Boost 1.63 requires CMake 3.7 or newer.</li>
-<li>Boost 1.64 requires CMake 3.8 or newer.</li>
-<li>Boost 1.65 and 1.65.1 require CMake 3.9.3 or newer.</li>
-<li>Boost 1.66 requires CMake 3.11 or newer.</li>
-<li>Boost 1.67 requires CMake 3.12 or newer.</li>
 <li>Boost 1.68, 1.69 require CMake 3.13 or newer.</li>
 <li>Boost 1.70 requires CMake 3.14 or newer.</li>
 </ul>
