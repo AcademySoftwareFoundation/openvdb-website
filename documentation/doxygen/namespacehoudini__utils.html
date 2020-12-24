@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">7.2.1</span>
+   &#160;<span id="projectnumber">8.0.0</span>
    </div>
   </td>
  </tr>
@@ -92,15 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">houdini_utils Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Utilities to collect a chain of adjacent nodes of a particular type so that they can be cooked in a single step.  
-<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhoudini__utils_1_1OP__EvalScope.html">OP_EvalScope</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructing an <a class="el" href="classhoudini__utils_1_1OP__EvalScope.html" title="Constructing an OP_EvalScope object allows one to temporarily (for the duration of the current scope)...">OP_EvalScope</a> object allows one to temporarily (for the duration of the current scope) set the evaluation context and time for a node other than the one that is currently being cooked.  <a href="classhoudini__utils_1_1OP__EvalScope.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhoudini__utils_1_1OpFactory.html">OpFactory</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to simplify operator registration.  <a href="classhoudini__utils_1_1OpFactory.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,10 +120,6 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3dabf395df115ec662bf20e706fb7249"><td class="memTemplParams" colspan="2">template&lt;typename NodeType &gt; </td></tr>
-<tr class="memitem:a3dabf395df115ec662bf20e706fb7249"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#acad6915d4aac81665b540218e8b1e06c">OPENVDB_DEPRECATED</a> std::vector&lt; NodeType * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacehoudini__utils.html#a3dabf395df115ec662bf20e706fb7249">getNodeChain</a> (OP_Context &amp;context, NodeType *startNode, bool addInterest=true)</td></tr>
-<tr class="memdesc:a3dabf395df115ec662bf20e706fb7249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a list of adjacent, uncooked nodes of the given <code>NodeType</code>, starting from <em>startNode</em> and traversing the network upstream along input 0 connections.  <a href="#a3dabf395df115ec662bf20e706fb7249">More...</a><br /></td></tr>
-<tr class="separator:a3dabf395df115ec662bf20e706fb7249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8985860de6cf4fd8a10b84b52e2dc6c9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacehoudini__utils.html#ac91f82cf7db299afee3c31730a2541c3">SpareDataMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehoudini__utils.html#a8985860de6cf4fd8a10b84b52e2dc6c9">getOperatorSpareData</a> (const OP_Operator &amp;)</td></tr>
 <tr class="memdesc:a8985860de6cf4fd8a10b84b52e2dc6c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the spare data associated with the given operator.  <a href="#a8985860de6cf4fd8a10b84b52e2dc6c9">More...</a><br /></td></tr>
 <tr class="separator:a8985860de6cf4fd8a10b84b52e2dc6c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,11 +140,7 @@ Variables</h2></td></tr>
 <tr class="memitem:afefd9db59dd2c1bc68e438920f3339ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#a88b26daa45bbdd69d6bb12f9c7bfa3b2">OPENVDB_HOUDINI_API</a> const PRM_ChoiceList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehoudini__utils.html#afefd9db59dd2c1bc68e438920f3339ba">PrimGroupMenu</a></td></tr>
 <tr class="separator:afefd9db59dd2c1bc68e438920f3339ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Utilities to collect a chain of adjacent nodes of a particular type so that they can be cooked in a single step. </p>
-<dl class="section author"><dt>Author</dt><dd>FX R&amp;D Simulation team</dd></dl>
-<p>For example, adjacent xform SOPs could be collapsed by composing their transformation matrices into a single matrix. </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
+<h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a7405599cf60afda318350a6502900e0d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -212,50 +198,6 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacehoudini__utils.html#a8985860de6cf4fd8a10b84b52e2dc6c9">getOperatorSpareData</a>, <a class="el" href="classhoudini__utils_1_1OpFactory.html#a4584098b9e39047d0fd8d1023c1b9ea4">OpFactory::addSpareData</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a3dabf395df115ec662bf20e706fb7249"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="Platform_8h.html#acad6915d4aac81665b540218e8b1e06c">OPENVDB_DEPRECATED</a> std::vector&lt;NodeType*&gt; houdini_utils::getNodeChain </td>
-          <td>(</td>
-          <td class="paramtype">OP_Context &amp;&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">NodeType *&#160;</td>
-          <td class="paramname"><em>startNode</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>addInterest</em> = <code>true</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return a list of adjacent, uncooked nodes of the given <code>NodeType</code>, starting from <em>startNode</em> and traversing the network upstream along input 0 connections. </p>
-<p>The list is ordered from the topmost node to <em>startNode</em>. </p><dl class="section note"><dt>Note</dt><dd>Lock the inputs of the topmost node before cooking the chain. </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>This functionality has been marked as deprecated as OpenVDB is no longer using this due to changes relating to verbification. Please get in touch with the Technical Steering Committee if you <em>are</em> still relying on this code and would like it to remain in the <a class="el" href="namespacehoudini__utils.html" title="Utilities to collect a chain of adjacent nodes of a particular type so that they can be cooked in a s...">houdini_utils</a> library. </dd></dl>
 
 </div>
 </div>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">7.2.1</span>
+   &#160;<span id="projectnumber">8.0.0</span>
    </div>
   </td>
  </tr>
@@ -101,8 +101,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Macros</h2></td></tr>
 <tr class="memitem:a0878c1f32c35d22b03416a8e53a1d78a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Platform_8h.html#a0878c1f32c35d22b03416a8e53a1d78a">PRAGMA</a>(x)&#160;&#160;&#160;_Pragma(#x)</td></tr>
 <tr class="separator:a0878c1f32c35d22b03416a8e53a1d78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acad6915d4aac81665b540218e8b1e06c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Platform_8h.html#acad6915d4aac81665b540218e8b1e06c">OPENVDB_DEPRECATED</a>&#160;&#160;&#160;__attribute__ ((deprecated))</td></tr>
-<tr class="separator:acad6915d4aac81665b540218e8b1e06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0059a19e8b0edca86629ef0f74e5b41a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Platform_8h.html#a0059a19e8b0edca86629ef0f74e5b41a">OPENVDB_CHECK_GCC</a>(MAJOR,  MINOR)&#160;&#160;&#160;0</td></tr>
 <tr class="memdesc:a0059a19e8b0edca86629ef0f74e5b41a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro for determining if GCC version is &gt;= than X.Y.  <a href="#a0059a19e8b0edca86629ef0f74e5b41a">More...</a><br /></td></tr>
 <tr class="separator:a0059a19e8b0edca86629ef0f74e5b41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,19 +206,6 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Macro for determining if GCC version is &gt;= than X.Y. </p>
-
-</div>
-</div>
-<a class="anchor" id="acad6915d4aac81665b540218e8b1e06c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define OPENVDB_DEPRECATED&#160;&#160;&#160;__attribute__ ((deprecated))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Use OPENVDB_DEPRECATED to mark functions as deprecated. It should be placed right before the signature of the function, e.g., "OPENVDB_DEPRECATED void functionName();". </p>
 
 </div>
 </div>
@@ -334,7 +319,7 @@ Macros</h2></td></tr>
 
 <p>Bracket code with OPENVDB_NO_DEPRECATION_WARNING_BEGIN/_END, to inhibit warnings about deprecated code. </p>
 <dl class="section note"><dt>Note</dt><dd>Use this sparingly. Remove references to deprecated code if at all possible.</dd></dl>
-<p>Example: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;OPENVDB_DEPRECATED void myDeprecatedFunction() {}</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    OPENVDB_NO_DEPRECATION_WARNING_BEGIN</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    myDeprecatedFunction();</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    OPENVDB_NO_DEPRECATION_WARNING_END</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div></div><!-- fragment --> 
+<p>Example: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;[[deprecated]] void myDeprecatedFunction() {}</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    OPENVDB_NO_DEPRECATION_WARNING_BEGIN</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    myDeprecatedFunction();</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    OPENVDB_NO_DEPRECATION_WARNING_END</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div></div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="a0c70c8f354f37e782bf75458027eaeca"></a>
