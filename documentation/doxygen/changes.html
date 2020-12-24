@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">7.2.0</span>
+   &#160;<span id="projectnumber">7.2.1</span>
    </div>
   </td>
  </tr>
@@ -85,7 +85,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p> <a name="v7_2_0_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 7.2.0</b> - <em>December 9, 2020</em></dd></dl>
+<div class="textblock"><p> <a name="v7_2_1_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 7.2.1</b> - <em>December 23, 2020</em></dd></dl>
+<dl class="section user"><dt></dt><dd>Bug fixes:<ul>
+<li>Fixed a determinism bug in <a class="el" href="classopenvdb_1_1v7__2_1_1tree_1_1NodeManager.html">NodeManager</a> when using non-thread-safe functor members.</li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>Build:<ul>
+<li>Added a missing header include to resolve an undefined size_t build error on GCC10.</li>
+</ul>
+</dd></dl>
+<p> <a name="v7_2_0_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 7.2.0</b> - <em>December 9, 2020</em></dd></dl>
 <dl class="section user"><dt></dt><dd>New features:<ul>
 <li>Added <a class="el" href="classopenvdb_1_1v7__2_1_1tree_1_1DynamicNodeManager.html">DynamicNodeManager</a> that lazily caches the nodes at each level of the tree to allow for efficient threading of topology-changing top-down workflows.</li>
 <li>Added <a class="el" href="namespaceopenvdb_1_1v7__2_1_1tools.html#aa2bd678647ee7c097628900599ecd911">CsgUnionOp</a>, <a class="el" href="namespaceopenvdb_1_1v7__2_1_1tools.html#a15acb14744ad597506ab2c876df1e3c0">CsgIntersectionOp</a> and <a class="el" href="structopenvdb_1_1v7__2_1_1tools_1_1CsgDifferenceOp.html">CsgDifferenceOp</a> that use a parallel breadth-first algorithm to accelerate CSG union, intersection and difference operations.</li>
