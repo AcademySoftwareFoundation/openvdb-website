@@ -699,11 +699,27 @@ button {
   background-color: #262626;
 }
 
-iframe {
+.forum {
  display: inline;
  float: left;
  min-height: 1500px;
  width: 980px;
  border: 0px;
  box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+
+.video-container {
+  position:relative;
+  padding-bottom:56.25%;
+  margin-top:20px;
+  height:0;
+  overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
 }
