@@ -25,11 +25,12 @@ function insertInfoPane() {
         html += '<a href="http://www.guerillarender.com/" target="_blank"><h4 class="guerilla"><span></span></h4></a>';
         html += '<a href="http://www.maxwellrender.com/" target="_blank"><h4 class="maxwell"><span></span></h4></a>';
         html += '<a href="https://www.thefoundry.co.uk/products/modo/" target="_blank"><h4 class="modo"><span></span></h4></a>';
-        html += '<a href="http://www.chaosgroup.com/" target="_blank"><h4 class="vray"><span></span></h4></a>';
+        html += '<a href="https://www.chaosgroup.com/3d-rendering-software" target="_blank"><h4 class="vray"><span></span></h4></a>';
         html += '<a href="https://home.otoy.com/render/octane-render/" target="_blank"><h4 class="octane"><span></span></h4></a>';
         html += '<a href="http://www.3delight.com/" target="_blank"><h4 class="delight"><span></span></h4></a>';
         html += '<a href="https://jangafx.com/" target="_blank"><h4 class="embergen"><span></span></h4></a>';
         html += '<a href="http://www.blender.org/" target="_blank"><h4 class="blender"><span></span></h4></a>';
+        html += '<a href="https://www.chaosgroup.com/fluid-dynamics-software" target="_blank"><h4 class="phoenix"><span></span></h4></a>';
         html += '<a href="http://www.vfxplatform.com/" target="_blank"><h4 class="vfx"><span></span></h4></a>';
         html += '</div>';
 
