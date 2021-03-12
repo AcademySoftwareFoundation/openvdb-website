@@ -387,6 +387,11 @@ a {
   background:transparent url(images/blender.png) center top no-repeat;
 }
 
+#sidebar-integration h4.phoenix {
+  height: 59px;
+  background:transparent url(images/phoenix.png) center top no-repeat;
+}
+
 #sidebar-integration h4.vfx {
   height: 26px;
   background:transparent url(images/vfx.png) center top no-repeat;
