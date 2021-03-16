@@ -363,7 +363,7 @@ a {
 }
 
 #sidebar-integration h4.vray {
-  height: 59px;
+  height: 61px;
   background:transparent url(images/vray.png) center top no-repeat;
 }
 
@@ -388,8 +388,13 @@ a {
 }
 
 #sidebar-integration h4.phoenix {
-  height: 59px;
+  height: 50px;
   background:transparent url(images/phoenix.png) center top no-repeat;
+}
+
+#sidebar-integration h4.corona {
+  height: 38px;
+  background:transparent url(images/corona.png) center top no-repeat;
 }
 
 #sidebar-integration h4.vfx {
