@@ -31,6 +31,7 @@ function insertInfoPane() {
         html += '<a href="https://jangafx.com/" target="_blank"><h4 class="embergen"><span></span></h4></a>';
         html += '<a href="http://www.blender.org/" target="_blank"><h4 class="blender"><span></span></h4></a>';
         html += '<a href="https://www.chaosgroup.com/fluid-dynamics-software" target="_blank"><h4 class="phoenix"><span></span></h4></a>';
+        html += '<a href="https://corona-renderer.com" target="_blank"><h4 class="corona"><span></span></h4></a>';
         html += '<a href="http://www.vfxplatform.com/" target="_blank"><h4 class="vfx"><span></span></h4></a>';
         html += '</div>';
 
