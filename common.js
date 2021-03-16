@@ -32,6 +32,10 @@ function insertInfoPane() {
         html += '<a href="http://www.blender.org/" target="_blank"><h4 class="blender"><span></span></h4></a>';
         html += '<a href="https://www.chaosgroup.com/fluid-dynamics-software" target="_blank"><h4 class="phoenix"><span></span></h4></a>';
         html += '<a href="https://corona-renderer.com" target="_blank"><h4 class="corona"><span></span></h4></a>';
+        html += '<a href="https://www.afterworks.com/FumeFX.asp" target="_blank"><h4 class="fumefx"><span></span></h4></a>';
+        html += '<a href="https://www.keyshot.com" target="_blank"><h4 class="keyshot"><span></span></h4></a>';
+        html += '<a href="https://docs.lightwave3d.com/lw2020/reference/simulation/openvdb" target="_blank"><h4 class="lightwave"><span></span></h4></a>';
+        html += '<a href="https://www.cebas.com/?pid=productinfo&prd_id=187" target="_blank"><h4 class="thinkingparticles"><span></span></h4></a>';
         html += '<a href="http://www.vfxplatform.com/" target="_blank"><h4 class="vfx"><span></span></h4></a>';
         html += '</div>';
 

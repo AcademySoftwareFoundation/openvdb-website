@@ -397,6 +397,26 @@ a {
   background:transparent url(images/corona.png) center top no-repeat;
 }
 
+#sidebar-integration h4.fumefx {
+  height: 45px;
+  background:transparent url(images/fumefx.png) center top no-repeat;
+}
+
+#sidebar-integration h4.keyshot {
+  height: 45px;
+  background:transparent url(images/keyshot.png) center top no-repeat;
+}
+
+#sidebar-integration h4.lightwave {
+  height: 38px;
+  background:transparent url(images/lightwave.png) center top no-repeat;
+}
+
+#sidebar-integration h4.thinkingparticles {
+  height: 65px;
+  background:transparent url(images/thinkingparticles.png) center top no-repeat;
+}
+
 #sidebar-integration h4.vfx {
   height: 26px;
   background:transparent url(images/vfx.png) center top no-repeat;
