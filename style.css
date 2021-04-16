@@ -226,6 +226,18 @@ a {
   background:transparent url(images/liquids1.jpg) center top no-repeat;
 }
 
+#banner.starwars1 {
+  background:transparent url(images/starwars1.jpg) center top no-repeat;
+}
+
+#banner.starwars2 {
+  background:transparent url(images/starwars2.jpg) center top no-repeat;
+}
+
+#banner.starwars3 {
+  background:transparent url(images/starwars3.jpg) center top no-repeat;
+}
+
 
 /* ////////////////////////////////////////
  * Page Settings
