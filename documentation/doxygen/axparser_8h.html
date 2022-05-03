@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>OpenVDB: axparser.h File Reference</title>
+<title>OpenVDB: openvdb_ax/grammar/generated/axparser.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">8.0.1</span>
+   &#160;<span id="projectnumber">9.0.1</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b5a99191d79160345fea4068dd59b89.html">openvdb_ax</a></li><li class="navelem"><a class="el" href="dir_cae5b229f742550e00edd472eaaf99f1.html">openvdb_ax</a></li><li class="navelem"><a class="el" href="dir_54fdff56a9cd0f56be6ab6cf06ec1471.html">grammar</a></li><li class="navelem"><a class="el" href="dir_b7fb09059a3f8df0f5cd116c39f87d4f.html">generated</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_cae5b229f742550e00edd472eaaf99f1.html">openvdb_ax</a></li><li class="navelem"><a class="el" href="dir_54fdff56a9cd0f56be6ab6cf06ec1471.html">grammar</a></li><li class="navelem"><a class="el" href="dir_b7fb09059a3f8df0f5cd116c39f87d4f.html">generated</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -125,6 +125,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:ab692111768661c852f4744d64ffc912d"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="axparser_8h.html#a4fb17c3afc02be01e847b79146e4a6e6">axtokentype</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="axparser_8h.html#ab692111768661c852f4744d64ffc912d">axtoken_kind_t</a></td></tr>
+<tr class="separator:ab692111768661c852f4744d64ffc912d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae85f660207b6caef611d0ef8faf8030"><td class="memItemLeft" align="right" valign="top">typedef union <a class="el" href="unionAXSTYPE.html">AXSTYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="axparser_8h.html#aae85f660207b6caef611d0ef8faf8030">AXSTYPE</a></td></tr>
 <tr class="separator:aae85f660207b6caef611d0ef8faf8030"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f1e2eb6245238548dc8f43188ccd2ef"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structAXLTYPE.html">AXLTYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="axparser_8h.html#a5f1e2eb6245238548dc8f43188ccd2ef">AXLTYPE</a></td></tr>
@@ -133,6 +135,11 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a4fb17c3afc02be01e847b79146e4a6e6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="axparser_8h.html#a4fb17c3afc02be01e847b79146e4a6e6">axtokentype</a> { <br />
+&#160;&#160;<a class="el" href="axparser_8h.html#a4fb17c3afc02be01e847b79146e4a6e6aeb1e7cda753209274254a9a0e90e7b32">AXEMPTY</a> = -2, 
+<a class="el" href="axparser_8h.html#a4fb17c3afc02be01e847b79146e4a6e6a0f1f47b3d5e160ba4e42d4c7aab9bec1">AXEOF</a> = 0, 
+<a class="el" href="axparser_8h.html#a4fb17c3afc02be01e847b79146e4a6e6ad7668399091f8f29af9af6cbd4f53c28">AXerror</a> = 256, 
+<a class="el" href="axparser_8h.html#a4fb17c3afc02be01e847b79146e4a6e6a6a9718082c1c9b51876815f7b87c7562">AXUNDEF</a> = 257, 
+<br />
 &#160;&#160;<a class="el" href="axparser_8h.html#a4fb17c3afc02be01e847b79146e4a6e6aa82764c3079aea4e60c80e45befbb839">TRUE</a> = 258, 
 <a class="el" href="axparser_8h.html#a4fb17c3afc02be01e847b79146e4a6e6aa1e095cc966dbecf6a0d8aad75348d1a">FALSE</a> = 259, 
 <a class="el" href="axparser_8h.html#a4fb17c3afc02be01e847b79146e4a6e6a55eebe3c7e08b49cd5969442f4f8c4ce">SEMICOLON</a> = 260, 
@@ -366,6 +373,18 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab692111768661c852f4744d64ffc912d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="axparser_8h.html#a4fb17c3afc02be01e847b79146e4a6e6">axtokentype</a> <a class="el" href="axparser_8h.html#ab692111768661c852f4744d64ffc912d">axtoken_kind_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="a4fb17c3afc02be01e847b79146e4a6e6"></a>
 <div class="memitem">
@@ -377,7 +396,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a4fb17c3afc02be01e847b79146e4a6e6aa82764c3079aea4e60c80e45befbb839"></a>TRUE&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a4fb17c3afc02be01e847b79146e4a6e6aeb1e7cda753209274254a9a0e90e7b32"></a>AXEMPTY&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4fb17c3afc02be01e847b79146e4a6e6a0f1f47b3d5e160ba4e42d4c7aab9bec1"></a>AXEOF&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4fb17c3afc02be01e847b79146e4a6e6ad7668399091f8f29af9af6cbd4f53c28"></a>AXerror&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4fb17c3afc02be01e847b79146e4a6e6a6a9718082c1c9b51876815f7b87c7562"></a>AXUNDEF&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a4fb17c3afc02be01e847b79146e4a6e6aa82764c3079aea4e60c80e45befbb839"></a>TRUE&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a4fb17c3afc02be01e847b79146e4a6e6aa1e095cc966dbecf6a0d8aad75348d1a"></a>FALSE&#160;</td><td class="fielddoc">
 </td></tr>
