@@ -83,7 +83,7 @@
           <a href="http://www.museth.org/Ken/Publications.html">
           "VDB: High-Resolution Sparse Volumes with Dynamic Topology"</a>.</p>
 
-          <p>OpenVDB was developed at DreamWorks Animation primarily by
+          <p>OpenVDB was originally developed at DreamWorks Animation primarily by
           <ul class="bulleted">
             <li>Ken Museth</li>
             <li>Peter Cucka</li>
@@ -92,6 +92,44 @@
           </ul>
           </p>
 
+          <p>The library was first Open Sourced by the team at DreamWorks in August 2012 with an
+          emphasis on efficient Level Set representations and tools. It has since seen many
+          additions which have broadened its scope and feature set. Some more recent notable
+          additions include:</p>
+
+          <p>
+          <ul class="bulleted">
+            <li><b>OpenVDB Points:</b> spatially-organized points into OpenVDB topology for fast
+            access and greater opportunity for data compression - Contributed by DNEG (2016)</li>
+            <li><b>OpenVDB AX:</b> A domain specific language for OpenVDB, providing a fast, highly
+            parallalisable and portable solutions for custom manipulation - Contributed by DNEG (2018)</li>
+            <li><b>NanoVDB:</b> A standalone static-topology implementation of OpenVDB, offering
+            support for GPUs - Contributed by NVIDIA (2020)</li>
+          </ul>
+          </p>
+
+          <p>OpenVDB was the first open source project to transition its governance in August 2018
+          from DreamWorks to a newly formed organization called the
+          <a href="https://www.aswf.io/">Academy Software Foundation (ASWF)</a>.
+          The ASWF was created to host, mediate and support Open Source software across the motion
+          picture industry. OpenVDB in particular has consistently benefited from being Open
+          Source with collaboration across many studios and communities. Its continued development
+          is ensured by the OpenVDB Technical Steering Committee (TSC)</p>
+
+          <p>OpenVDB TSC Members
+          <ul class="bulleted">
+            <li>Ken Museth (Chair)</li>
+            <li>Nicholas Avramoussis</li>
+            <li>Dan Bailey</li>
+            <li>Jeff Lait</li>
+            <li>Andre Pradhana</li>
+            <li>Richard Jones</li>
+          </ul>
+          </p>
+        </div>
+
+
+        <div class="section">
 
           <h2> Features and Tools </h2>
 
@@ -101,9 +139,7 @@
             disk, via a novel hierarchical data structure that offers an effectively infinite 3D
             index space and via a custom, lossless codec for fast file I/O.</p>
             <button id="vdb-folder-btn">more</button>
-
           </div>
-
 
           <div class="feature-right">
             <h3>Fast Voxel Access</h3>
@@ -114,15 +150,12 @@
         </div> <!-- end section -->
 
         <div id="vdb-folder" class="folder">
-
             <button class="btn-close">x close</button>
-
             <div id="pages">
               <button id="page1" class="btn-page"> 1 </button>
               <button id="page2" class="btn-page"> 2 </button>
               <button id="page3" class="btn-page"> 3 </button>
             </div>
-
         </div> <!-- end section -->
 
         <div class="section">
@@ -139,7 +172,6 @@
                 <img alt="img" src="../images/example_liquid_thumb.jpg" /></a>
 
             <button id="conversion-folder-btn">more</button>
-
           </div>
 
           <div class="feature-right">
@@ -156,9 +188,7 @@
         </div> <!-- end section -->
 
         <div id="conversion-folder" class="folder">
-
             <button class="btn-close">x close</button>
-
             <div id="pages">
               <button id="conversion-page1" class="btn-page"> 1 </button>
               <button id="conversion-page2" class="btn-page"> 2 </button>
@@ -167,7 +197,6 @@
               <button id="conversion-page5" class="btn-page"> 5 </button>
               <button id="conversion-page6" class="btn-page"> 6 </button>
             </div>
-
         </div> <!-- end section -->
 
 
@@ -179,7 +208,6 @@
             the basis for DreamWorks Animation&rsquo;s feature film cloud modeling toolset.</p>
             <a rel="group7" class="pop" href="../images/example_filter.jpg">
                 <img alt="img" src="../images/example_filter_thumb.jpg" /></a>
-
           </div>
 
           <div class="feature-right">
@@ -197,7 +225,6 @@
             are the foundation for many of its sparse algorithms, in particular ones for masked
             filtering and meshing.</p>
           </div>
-
 
           <div class="feature-right">
             <h3>Geometric Transforms</h3>
@@ -241,19 +268,52 @@
             of volumes.</p>
           </div>
 
+          <div class="feature">
+            <h3>Point Clouds and Tools</h3>
+            <p>OpenVDB can natively store point data within its hierarchy using PointDataGrids.
+            These grids can store the points with attributes directly in the VDB Grid. Points are
+            spatially-organized into VDB voxels to provide faster access and a greater opportunity
+            for data compression compared with linear point arrays.
+            </p>
+          </div>
+
+          <div class="feature-right">
+            <h3>AX: Domain Specific Language</h3>
+            <p>OpenVDB AX is a DSL which can be built alongside OpenVDB. It is an expression
+            language where expressions are JIT-compiled and used with a tailored multi-threaded
+            execution framework, specifically designed for VDB. AX promises high performance
+            and custom manipulation for VDB based kernels.
+            </p>
+          </div>
+
         </div> <!-- end section -->
 
-        <div class="feature">
-          <div id="houdini-cloudfx"> </div>
-            <div id="sidebar-cloudfx">
-              <h3>Houdini Cloud FX</h3>
-              <p>The new Cloud FX tools offer an artist-friendly way of building, sculpting and
-              rendering cloud formations. This workflow utilizes sparse volume sculpting tools
-              created as part of the OpenVDB open source initiative. The integration of these tools
-              is the result of a direct collaboration between DreamWorks Animation and Side Effects
-              Software.</p>
-            </div>
-        </div>
+        <div class="section">
+
+          <div class="feature-across">
+            <h3>NanoVDB</h3>
+            <p>NanoVDB is a mini-version of OpenVDB library, both in terms of functionality and scope.
+            A stand-alone C++11 implementation of NanoVDB is available in NanoVDB.h and a C99 equivalent
+            in PNanoVDB.h. NanoVDB offers one major advantage over OpenVDB, namely support for
+            GPUs. It provides a standalone static-topology implementation of the well-known sparse
+            volumetric VDB data structure, whilst still allowing grid values to be modified. It has proven
+            especially useful for real-time applications like rendering and simulation with static volumes.
+            </p>
+          </div>
+
+          <div class="feature-across">
+            <h3>Houdini Cloud FX</h3>
+            <p>The new Cloud FX tools offer an artist-friendly way of building, sculpting and
+            rendering cloud formations. This workflow utilizes sparse volume sculpting tools
+            created as part of the OpenVDB open source initiative. The integration of these tools
+            is the result of a direct collaboration between DreamWorks Animation and Side Effects
+            Software.</p>
+            <br>
+          </div>
+
+        </div> <!-- end section -->
+
+        <div id="houdini-cloudfx"> </div>
 
         <div class="section">
 
@@ -264,7 +324,6 @@
             <p><ul class="bulleted">
               <li>Neil Dickson</li>
               <li>Halfdan Ingvarsson</li>
-              <li>Jeff Lait</li>
               <li>Edward Lam</li>
               <li>John Lynch</li>
               <li>Adrian Saldanha</li>
@@ -295,23 +354,15 @@
           </div>
 
           <div class="feature-right">
-            <h3>Double Negative</h3>
-            <p><ul class="bulleted">
-              <li>Nick Avramoussis</li>
-            </ul></p>
-          </div>
-
-          <div class="feature">
             <h3>Rainmaker Entertainment</h3>
             <p><ul class="bulleted">
               <li>Nicholas Yue</li>
             </ul></p>
           </div>
 
-          <div class="feature-right">
+          <div class="feature">
             <h3>Industrial Light & Magic</h3>
             <p><ul class="bulleted">
-              <li>Dan Bailey</li>
               <li>Rick Hankins</li>
             </ul></p>
           </div>
