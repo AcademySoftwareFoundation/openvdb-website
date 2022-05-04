@@ -544,6 +544,19 @@ ul {
   color: #404040;
 }
 
+.feature-across {
+  display: inline;
+  width: 270px;
+  margin-right: 60px;
+}
+
+.feature-across p {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 0px;
+  padding: 0px;
+  color: #404040;
+}
 
 #houdini-cloudfx {
   display: inline;
