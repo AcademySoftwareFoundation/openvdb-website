@@ -6,5 +6,6 @@ var searchData=
   ['upper_5foff_5fmin',['upper_off_min',['../structpnanovdb__grid__type__constants__t.html#a1469a9980b98524e1ed8a89af0308812',1,'pnanovdb_grid_type_constants_t']]],
   ['upper_5foff_5fstddev',['upper_off_stddev',['../structpnanovdb__grid__type__constants__t.html#af252f48996aa0320ae94b2f785123609',1,'pnanovdb_grid_type_constants_t']]],
   ['upper_5foff_5ftable',['upper_off_table',['../structpnanovdb__grid__type__constants__t.html#a49554b7cdaf6e871073edccf380c2c23',1,'pnanovdb_grid_type_constants_t']]],
-  ['upper_5fsize',['upper_size',['../structpnanovdb__grid__type__constants__t.html#a84c2b24b78023308a0dcd739cc10852e',1,'pnanovdb_grid_type_constants_t']]]
+  ['upper_5fsize',['upper_size',['../structpnanovdb__grid__type__constants__t.html#a84c2b24b78023308a0dcd739cc10852e',1,'pnanovdb_grid_type_constants_t']]],
+  ['useradius',['useRadius',['../structopenvdb_1_1v9__1_1_1points_1_1FrustumRasterizerSettings.html#a2196931253855f86b5dc76a8fad7a62c',1,'openvdb::v9_1::points::FrustumRasterizerSettings']]]
 ];
