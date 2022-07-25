@@ -90,7 +90,7 @@ var searchData=
   ['floatgrid',['FloatGrid',['../namespaceopenvdb_1_1v9__1.html#a2ae45d4df056c7d0d936a496fec925ee',1,'openvdb::v9_1::FloatGrid()'],['../namespacenanovdb.html#a2ae45d4df056c7d0d936a496fec925ee',1,'nanovdb::FloatGrid()']]],
   ['floatingpointtofixedpoint',['floatingPointToFixedPoint',['../namespaceopenvdb_1_1v9__1_1_1points.html#a08a9435a548ffbc336a88f04360a019b',1,'openvdb::v9_1::points::floatingPointToFixedPoint(const FloatT s)'],['../namespaceopenvdb_1_1v9__1_1_1points.html#ae4a1c03ff0b5290043177b2e17a3cf1f',1,'openvdb::v9_1::points::floatingPointToFixedPoint(const math::Vec3&lt; FloatT &gt; &amp;v)']]],
   ['floatmetadata',['FloatMetadata',['../namespaceopenvdb_1_1v9__1.html#a2070a667d3bbc262fb41fddcb1f327ad',1,'openvdb::v9_1']]],
-  ['floattoint32',['floatToInt32',['../namespaceopenvdb_1_1v9__1_1_1math.html#a1b03eec759387dd22ef9371decdf9acb',1,'openvdb::v9_1::math']]],
+  ['floattoint32',['floatToInt32',['../namespaceopenvdb_1_1v9__1_1_1math.html#a2079d374e1c0b5f355eb54e603f17265',1,'openvdb::v9_1::math']]],
   ['floattraits',['FloatTraits',['../structnanovdb_1_1FloatTraits.html',1,'nanovdb']]],
   ['floattraits_3c_20bool_2c_201_20_3e',['FloatTraits&lt; bool, 1 &gt;',['../structnanovdb_1_1FloatTraits_3_01bool_00_011_01_4.html',1,'nanovdb']]],
   ['floattraits_3c_20buildt_20_3e',['FloatTraits&lt; BuildT &gt;',['../structnanovdb_1_1FloatTraits.html',1,'nanovdb']]],

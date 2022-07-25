@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.0</span>
+   &#160;<span id="projectnumber">9.1.1</span>
    </div>
   </td>
  </tr>
@@ -108,6 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;random&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
@@ -332,10 +333,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a1201d61ad02a4026a3269ed5d0862332"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:a1201d61ad02a4026a3269ed5d0862332"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v9__1_1_1math.html#a1201d61ad02a4026a3269ed5d0862332">isRelOrApproxEqual</a> (const bool &amp;a, const bool &amp;b, const bool &amp;, const bool &amp;)</td></tr>
 <tr class="separator:a1201d61ad02a4026a3269ed5d0862332"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b03eec759387dd22ef9371decdf9acb"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v9__1_1_1math.html#a1b03eec759387dd22ef9371decdf9acb">floatToInt32</a> (const float aFloatValue)</td></tr>
-<tr class="separator:a1b03eec759387dd22ef9371decdf9acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d639beb57b5d65d5283060f5d84221c"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v9__1_1_1math.html#a2d639beb57b5d65d5283060f5d84221c">doubleToInt64</a> (const double aDoubleValue)</td></tr>
-<tr class="separator:a2d639beb57b5d65d5283060f5d84221c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2079d374e1c0b5f355eb54e603f17265"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v9__1_1_1math.html#a2079d374e1c0b5f355eb54e603f17265">floatToInt32</a> (const float f)</td></tr>
+<tr class="separator:a2079d374e1c0b5f355eb54e603f17265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49865a166743179db1c283cdb85d90d"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v9__1_1_1math.html#ae49865a166743179db1c283cdb85d90d">doubleToInt64</a> (const double d)</td></tr>
+<tr class="separator:ae49865a166743179db1c283cdb85d90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0665d01f96a1a3b4cfc321eb6c515347"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v9__1_1_1math.html#a0665d01f96a1a3b4cfc321eb6c515347">isUlpsEqual</a> (const double aLeft, const double aRight, const int64_t aUnitsInLastPlace)</td></tr>
 <tr class="separator:a0665d01f96a1a3b4cfc321eb6c515347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a347566769b94983b62b874ecef09b62a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v9__1_1_1math.html#a347566769b94983b62b874ecef09b62a">isUlpsEqual</a> (const float aLeft, const float aRight, const int32_t aUnitsInLastPlace)</td></tr>

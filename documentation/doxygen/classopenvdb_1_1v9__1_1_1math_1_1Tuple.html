@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.0</span>
+   &#160;<span id="projectnumber">9.1.1</span>
    </div>
   </td>
  </tr>
@@ -116,6 +116,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acd1c8953121142aed4cca66cd5500920"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v9__1_1_1math_1_1Tuple.html#acd1c8953121142aed4cca66cd5500920">Tuple</a> (<a class="el" href="classopenvdb_1_1v9__1_1_1math_1_1Tuple.html">Tuple</a>&lt; src_size, src_valtype &gt; const &amp;src)</td></tr>
 <tr class="memdesc:acd1c8953121142aed4cca66cd5500920"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structopenvdb_1_1v9__1_1_1math_1_1Conversion.html" title="Dummy class for tag dispatch of conversion constructors. ">Conversion</a> constructor.  <a href="#acd1c8953121142aed4cca66cd5500920">More...</a><br /></td></tr>
 <tr class="separator:acd1c8953121142aed4cca66cd5500920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa556733802ecd8fe6dca9f21d4307521"><td class="memTemplParams" colspan="2">template&lt;typename IdxT , typename std::enable_if&lt; std::is_integral&lt; IdxT &gt;::value, bool &gt;::type  = true&gt; </td></tr>
+<tr class="memitem:aa556733802ecd8fe6dca9f21d4307521"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v9__1_1_1math_1_1Tuple.html#aa556733802ecd8fe6dca9f21d4307521">operator[]</a> (IdxT i) const </td></tr>
+<tr class="separator:aa556733802ecd8fe6dca9f21d4307521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8276f3c6c23d28d8b193c10aa78497c7"><td class="memTemplParams" colspan="2">template&lt;typename IdxT , typename std::enable_if&lt; std::is_integral&lt; IdxT &gt;::value, bool &gt;::type  = true&gt; </td></tr>
+<tr class="memitem:a8276f3c6c23d28d8b193c10aa78497c7"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v9__1_1_1math_1_1Tuple.html#a8276f3c6c23d28d8b193c10aa78497c7">operator[]</a> (IdxT i)</td></tr>
+<tr class="separator:a8276f3c6c23d28d8b193c10aa78497c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b36789e9ecc47ad57fc55d85015651d"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v9__1_1_1math_1_1Tuple.html#a8b36789e9ecc47ad57fc55d85015651d">operator[]</a> (int i) const </td></tr>
 <tr class="separator:a8b36789e9ecc47ad57fc55d85015651d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0534e977fc9fee424b3ef94f27a9ed61"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v9__1_1_1math_1_1Tuple.html#a0534e977fc9fee424b3ef94f27a9ed61">operator[]</a> (int i)</td></tr>
@@ -139,7 +145,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aec59a91554c568eaf28cae204d961bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if all elements are exactly zero.  <a href="#aec59a91554c568eaf28cae204d961bc2">More...</a><br /></td></tr>
 <tr class="separator:aec59a91554c568eaf28cae204d961bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Compatibility</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>These are mostly for backwards compability with functions that take old-style Vs (which are just arrays). </p>
+<tr><td colspan="2"><div class="groupText"><p>These are mostly for backwards compatibility with functions that take old-style Vs (which are just arrays). </p>
 </div></td></tr>
 <tr class="memitem:a415373fb8c9e4f2d3d53e29284587444"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
 <tr class="memitem:a415373fb8c9e4f2d3d53e29284587444"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v9__1_1_1math_1_1Tuple.html#a415373fb8c9e4f2d3d53e29284587444">toV</a> (S *v) const </td></tr>
@@ -392,6 +398,54 @@ class openvdb::v9_1::math::Tuple&lt; SIZE, T &gt;</h3>
 </div><div class="memdoc">
 
 <p>True if all elements are exactly zero. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa556733802ecd8fe6dca9f21d4307521"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T operator[] </td>
+          <td>(</td>
+          <td class="paramtype">IdxT&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8276f3c6c23d28d8b193c10aa78497c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; operator[] </td>
+          <td>(</td>
+          <td class="paramtype">IdxT&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

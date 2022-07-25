@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.0</span>
+   &#160;<span id="projectnumber">9.1.1</span>
    </div>
   </td>
  </tr>
@@ -85,7 +85,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p> <a name="v9_1_0_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 9.1.0</b> - <em>June 9, 2022</em></dd></dl>
+<div class="textblock"><p> <a name="v9_1_1_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 9.1.1</b> - <em>In development</em></dd></dl>
+<dl class="section user"><dt></dt><dd>Bug Fixes:<ul>
+<li>Fixed an issue with tools::topologyToLevelSet which would previously ignore active tiles in the input topology. [Reported by Tobias Rittig]</li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt></dt><dd><b>Version 9.1.0</b> - <em>June 9, 2022</em></dd></dl>
 <dl class="section user"><dt></dt><dd>Bug Fixes:<ul>
 <li>Minor fix to move assignment operator in <a class="el" href="HostBuffer_8h.html" title="HostBuffer - a buffer that contains a shared or private bump pool to either externally or internally ...">nanovdb/util/HostBuffer.h</a>. This could potentially be a problem on Windows debug builds (unconfirmed).</li>
 <li>Minor fix to range in <a class="el" href="LevelSetSphere_8h.html" title="Generate a narrow-band level set of sphere. ">openvdb/tools/LevelSetSphere.h</a>. This could result in data races for multi-threaded execution (unconfirmed) [Reported by Tommy Hinks]</li>
