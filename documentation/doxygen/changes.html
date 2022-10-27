@@ -85,12 +85,86 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p> <a name="v9_1_1_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 9.1.1</b> - <em>In development</em></dd></dl>
-<dl class="section user"><dt></dt><dd>Bug Fixes:<ul>
-<li>Fixed an issue with tools::topologyToLevelSet which would previously ignore active tiles in the input topology. [Reported by Tobias Rittig]</li>
+<div class="textblock"><p> <a name="v10_0_0_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 10.0.0</b> - <em>October 27, 2022</em></dd></dl>
+<dl class="section user"><dt></dt><dd><blockquote class="doxtable">
+<p>This version introduces ABI changes relative to older major releases, so to preserve ABI compatibility it might be necessary to define the macro <code>OPENVDB_ABI_VERSION_NUMBER=</code><em>N</em>. </p>
+</blockquote>
+</dd></dl>
+<dl class="section user"><dt></dt><dd><blockquote class="doxtable">
+<p>Introducing OpenVDBLink, which provides a <a href="https://www.wolfram.com/mathematica/">Mathematica</a> interface to <a href="https://openvdb.org">OpenVDB</a>. </p>
+</blockquote>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>New Features:<ul>
+<li>Introducing OpenVDBLink, which provides a Mathematica interface to OpenVDB. This link ports over access to various grid containers including level sets, fog volumes, vector grids, integer grids, Boolean grids, and mask grids. Construction, modification, combinations, visualisations, queries, import, export, etc. can be achieved over grids too. Any Mathematica 3D region that's ConstantRegionQ and BoundedRegionQ can be represented as a level set grid, providing a more seamless integration with OpenVDB.</li>
+<li>Introducing a new command-line tool, dubbed vdb_tool, that can combine any number of the of high-level tools available in openvdb/tools. For instance, it can convert a sequence of polygon meshes and particles to level sets, perform a large number of operations on these level set surfaces and export them as adaptive polyon meshes.</li>
+<li>Added <a class="el" href="namespacenanovdb.html#ad24384a4bda82649992fd5faf8fbbea4">nanovdb::IndexGrid</a> that allows for arbitrary voxel values and even multiple channels to be associated with NanoVDB grids. They are more flexible and memory efficient than regular grids at a small cost of random-access performance. IndexGrids are constructed with the new <a class="el" href="classnanovdb_1_1IndexGridBuilder.html" title="Allows for the construction of NanoVDB grids without any dependency. ">nanovdb::IndexGridBuilder</a> and accessed with the new <a class="el" href="classnanovdb_1_1ChannelAccessor.html" title="Class to access values in channels at a specific voxel location. ">nanovdb::ChannelAccessor</a>.</li>
+<li>Added iterators to all tree node classes for visiting inactive, active, or all values and child nodes.</li>
+<li><a class="el" href="NanoVDB_8h.html" title="Implements a light-weight self-contained VDB data-structure in a single file! In other words...">NanoVDB.h</a> now includes standalone implementations of reading and writing uncompressed nanovdb grids buffers.</li>
+<li>Added Stats::getExtrema, which computes the min/max values of all voxels in a NanoVDB grid that intersects with a user-defined bounding-box.</li>
+<li>Added nanovdb::Mask::countOn(int) which is essential to the new <a class="el" href="namespacenanovdb.html#ad24384a4bda82649992fd5faf8fbbea4">nanovdb::IndexGrid</a>.</li>
+<li>Added RootNode::probeChild and InternalNode::probeChild.</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt></dt><dd><b>Version 9.1.0</b> - <em>June 9, 2022</em></dd></dl>
+<dl class="section user"><dt></dt><dd>Improvements:<ul>
+<li>Significantly improved the performance of all ValueAccessor methods which access LeafNode value buffer data. This improvement applies to any type which is delay load compatible (all default types except for bool and mask grids) and improves the performance of many OpenVDB tools.</li>
+<li>Major updates to the command line interface of the vdb_ax binary, exposing more controls such as tile streaming, value iterator types and attribute bindings.</li>
+<li>Improved the performance of volumeToMesh by 10-15%.</li>
+<li>Added a new much improved <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">nanovdb::NodeManager</a>, that is both faster and more memory efficient, and that works on both the CPU and GPU. Note, it uses an handle for allocation (just like <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">nanovdb::Grid</a>) and replaces the old nanovdb::LeafManager which is now deprecated.</li>
+<li>NanoToOpenVDB is extended to work with grids templated on Fp4, Fp8, Fp16, FpN, bool and ValueMask.</li>
+<li>Rename RootNode::findTile to RootNode::probeTile and made it public.</li>
+<li>Made Mask::getWord return both an const and non-const reference.</li>
+<li>Improved unit-tests to use explicit 32B alignment (see aligment bug-fix below).</li>
+<li><a class="el" href="PNanoVDB_8h.html" title="This file is a portable (e.g. pointer-less) C99/GLSL/HLSL port of NanoVDB.h, which is compatible with...">PNanoVDB.h</a> (a C99 port of <a class="el" href="NanoVDB_8h.html" title="Implements a light-weight self-contained VDB data-structure in a single file! In other words...">NanoVDB.h</a>) has been updated.</li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>Bug Fixes:<ul>
+<li>Fixed an issue with tools::topologyToLevelSet which would previously ignore active tiles in the input topology. [Reported by Tobias Rittig]</li>
+<li>Fixed a bug with ValueAccessor::addLeaf and ValueAccessor::addTile which wouldn't add the provided leaf nodes to the underlying tree. This bug did NOT affect the specialized accessors which are used by the default tree configuration. [Contributed by Andrey Zakirov]</li>
+<li>Fixed a bug where ValueAccessor::probeNode&lt;NodeT&gt; and ValueAccessor:probeConstNode&lt;NodeT&gt; would return a nullptr if the NodeT type was not explicitly being cached by the accessor but the node existed in the tree.</li>
+<li>Fixed a bug on Windows where math::Abs could truncate 64bit integer values. [Contributed by Edward Lam]</li>
+<li>Fixed an occurance of undefined behaviour with math::floatToInt32 and math::doubleToInt64. [Reported by Vojtěch Bubník]</li>
+<li>Fixed bugs in the sum merge that produced incorrect merged grids when deep-copying the input nodes or when non-zero background grids were being used.</li>
+<li>Fixed a bug in FastSweeping where voxels/tiles are left with min/max float values.</li>
+<li>Fixed a bug in <a class="el" href="Tuple_8h.html">math/Tuple.h</a> that prevented compilation with VS2017.</li>
+<li>Fixed a bug in <a class="el" href="classnanovdb_1_1HostBuffer.html" title="This is a buffer that contains a shared or private pool to either externally or internally managed ho...">nanovdb::HostBuffer</a> that could produce crashes due to misaligned CPU memory allocations.</li>
+<li>Fixed bug related to uninitialized memory in <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">nanovdb::Grid</a> which could confuse CRC32 checksum validation.</li>
+<li>Fixed bugs related to the use of intrinsic functions for fast bit-counting in nanovdb.</li>
+<li>Fixed a potential security vulnerability in <a class="el" href="NanoVDB_8h.html" title="Implements a light-weight self-contained VDB data-structure in a single file! In other words...">NanoVDB.h</a> related to buffer overflow exploits.</li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>ABI changes:<ul>
+<li>ABI change to openvdb::RootNode, which now has a new member that defines the origin of the node. For now this origin is set to a default value of (0,0,0), but in the near future we will allow for offsets to improve access performance and reduce the memory footprints.</li>
+<li>Removed deprecated virtual methods from AttributeArray.</li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>API changes:<ul>
+<li>Removed PagedArray::push_back().</li>
+<li>Removed Tree visitor methods from Tree, RootNode, InternalNode and LeafNode classes - visit(), visit2(), visitActiveBBox().</li>
+<li>Removed LeafManager::getNodes().</li>
+<li>Removed tools::dilateVoxels() and tools::erodeVoxels() in favor of <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a7eeeface33ebfe532fc9a4675e79afec" title="Topologically dilate all active values (i.e. both voxels and tiles) in a tree using one of three near...">tools::dilateActiveValues()</a> and <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a6872c2dd6da764c5600bd8ad2a126060" title="Topologically erode all active values (i.e. both voxels and tiles) in a tree using one of three neare...">tools::erodeActiveValues()</a>.</li>
+<li>Removed tools::FindActiveValues::any() and tools::FindActiveValues::none().</li>
+<li>StringGrid and StringTrees have been removed.</li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>Houdini:<ul>
+<li>Add convex hull activation for VDB Activate SOP (requires 19.5).</li>
+<li>Improved SDF activation to use dynamic node manager.</li>
+<li>Fixed a bug in VDB Visualize SOP where color values that exceed the range wrap around instead of being clamped.</li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>Build:<ul>
+<li>Added OPENVDB_USE_DELAYED_LOAD flag that enables delayed loading and defaults to on.</li>
+<li>Add a placeholder to inject the specific revision and URL used to build OpenVDB, useful for 3rd party build scripts to publish their exact versions.</li>
+<li>Fixed an issue where OPENVDB_AX_DLL was not being defined on shared library builds of AX, resulting in symbols not being exported. [Reported by Ray Molenkamp]</li>
+<li>Fixed an issue where setting Tbb_INCLUDE_DIR could cause CMake failures.</li>
+<li>Updated FindTBB.cmake to support newer library ABI suffixing in TBB 2021.5.</li>
+<li>Updated FindBlosc.cmake to better handle cases where blosc is built with external sources.</li>
+<li>Resolved LLVM deprecation warnings in AX and added support for LLVM 14.</li>
+<li>On Windows (MSVC), OpenVDB is now built with extra compiler options to ensure stricter C++ conformance: /permissive- /Zc:throwingNew /Zc:inline.</li>
+<li>On Windows (MSVC), the _USE_MATH_DEFINES macro is no longer defined when including &lt;<a class="el" href="Platform_8h.html">openvdb/Platform.h</a>&gt; (or any dependent headers). If you were relying on this in your own project for M_PI, M_PI_2, etc. you can add -D_USE_MATH_DEFINES to your own project compiler options. See <a href="https://docs.microsoft.com/en-us/cpp/c-runtime-library/math-constants">this page</a> for more info.</li>
+</ul>
+</dd></dl>
+<p> <a name="v9_1_0_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 9.1.0</b> - <em>June 9, 2022</em></dd></dl>
 <dl class="section user"><dt></dt><dd>Bug Fixes:<ul>
 <li>Minor fix to move assignment operator in <a class="el" href="HostBuffer_8h.html" title="HostBuffer - a buffer that contains a shared or private bump pool to either externally or internally ...">nanovdb/util/HostBuffer.h</a>. This could potentially be a problem on Windows debug builds (unconfirmed).</li>
 <li>Minor fix to range in <a class="el" href="LevelSetSphere_8h.html" title="Generate a narrow-band level set of sphere. ">openvdb/tools/LevelSetSphere.h</a>. This could result in data races for multi-threaded execution (unconfirmed) [Reported by Tommy Hinks]</li>
