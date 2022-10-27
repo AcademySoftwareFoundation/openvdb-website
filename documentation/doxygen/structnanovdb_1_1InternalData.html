@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -92,6 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structnanovdb_1_1InternalData-members.html">List of all members</a>  </div>
@@ -135,6 +136,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a32bac66a7a2011bd9eedb3049db3a3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ebe6a1ca68eefca20cec076c2eb92e0"><td class="memItemLeft" align="right" valign="top">const ChildT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a5ebe6a1ca68eefca20cec076c2eb92e0">getChild</a> (uint32_t n) const </td></tr>
 <tr class="separator:a5ebe6a1ca68eefca20cec076c2eb92e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae399d8cb1270588fb67487574bead2fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#ae399d8cb1270588fb67487574bead2fd">getValue</a> (uint32_t n) const </td></tr>
+<tr class="separator:ae399d8cb1270588fb67487574bead2fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad5dd56c491b3b1e4d7f2a20b7d3af71"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#aad5dd56c491b3b1e4d7f2a20b7d3af71">isActive</a> (uint32_t n) const </td></tr>
+<tr class="separator:aad5dd56c491b3b1e4d7f2a20b7d3af71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec374a144dd607b281b304c89b7cd99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#acec374a144dd607b281b304c89b7cd99">isChild</a> (uint32_t n) const </td></tr>
+<tr class="separator:acec374a144dd607b281b304c89b7cd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a000298b28e29ef44df2686dc2f384d4f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a000298b28e29ef44df2686dc2f384d4f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a000298b28e29ef44df2686dc2f384d4f">setOrigin</a> (const T &amp;ijk)</td></tr>
 <tr class="separator:a000298b28e29ef44df2686dc2f384d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,6 +170,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aef059b9e6b0c16fcb4de69132af4f571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27db55a8ba4931a39a4c4cb89d6f34d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a27db55a8ba4931a39a4c4cb89d6f34d1">~InternalData</a> ()=delete</td></tr>
 <tr class="separator:a27db55a8ba4931a39a4c4cb89d6f34d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a885bc3eda95d14f11aa2a9ad0e521582"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a885bc3eda95d14f11aa2a9ad0e521582">padding</a> ()</td></tr>
+<tr class="memdesc:a885bc3eda95d14f11aa2a9ad0e521582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return padding of this class in bytes, due to aliasing and 32B alignment.  <a href="#a885bc3eda95d14f11aa2a9ad0e521582">More...</a><br /></td></tr>
+<tr class="separator:a885bc3eda95d14f11aa2a9ad0e521582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdbf948e7b299b032f08cc4591b5d974"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#abdbf948e7b299b032f08cc4591b5d974">memUsage</a> ()</td></tr>
+<tr class="separator:abdbf948e7b299b032f08cc4591b5d974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -450,6 +465,101 @@ struct nanovdb::InternalData&lt; ChildT, LOG2DIM &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="ae399d8cb1270588fb67487574bead2fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a> getValue </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aad5dd56c491b3b1e4d7f2a20b7d3af71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isActive </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acec374a144dd607b281b304c89b7cd99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isChild </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abdbf948e7b299b032f08cc4591b5d974"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint64_t memUsage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aef059b9e6b0c16fcb4de69132af4f571"></a>
 <div class="memitem">
 <div class="memproto">
@@ -471,6 +581,32 @@ struct nanovdb::InternalData&lt; ChildT, LOG2DIM &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a885bc3eda95d14f11aa2a9ad0e521582"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr uint32_t padding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return padding of this class in bytes, due to aliasing and 32B alignment. </p>
+<dl class="section note"><dt>Note</dt><dd>The extra bytes are not necessarily at the end, but can come from aliasing of individual data members. </dd></dl>
 
 </div>
 </div>

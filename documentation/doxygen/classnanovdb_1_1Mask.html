@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classnanovdb_1_1Mask-members.html">List of all members</a>  </div>
@@ -108,10 +109,25 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask_1_1Iterator.html">Iterator</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a7ffd1976cb1d25ef8d0ff161250abcae"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a7ffd1976cb1d25ef8d0ff161250abcae">OnIterator</a> = <a class="el" href="classnanovdb_1_1Mask_1_1Iterator.html">Iterator</a>&lt; true &gt;</td></tr>
+<tr class="separator:a7ffd1976cb1d25ef8d0ff161250abcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e0cc028946958d94d8eea7e1e8fa39"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a53e0cc028946958d94d8eea7e1e8fa39">OffIterator</a> = <a class="el" href="classnanovdb_1_1Mask_1_1Iterator.html">Iterator</a>&lt; false &gt;</td></tr>
+<tr class="separator:a53e0cc028946958d94d8eea7e1e8fa39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a50f634d25480a3a7b1a2aea8e78ccf39"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a50f634d25480a3a7b1a2aea8e78ccf39">countOn</a> () const </td></tr>
+<tr class="memdesc:a50f634d25480a3a7b1a2aea8e78ccf39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the total number of set bits in this <a class="el" href="classnanovdb_1_1Mask.html" title="Bit-mask to encode active states and facilitate sequential iterators and a fast codec for I/O compres...">Mask</a>.  <a href="#a50f634d25480a3a7b1a2aea8e78ccf39">More...</a><br /></td></tr>
 <tr class="separator:a50f634d25480a3a7b1a2aea8e78ccf39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb1188ab7bddae91b90c6706819ee7d6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#acb1188ab7bddae91b90c6706819ee7d6">countOn</a> (uint32_t i) const </td></tr>
+<tr class="memdesc:acb1188ab7bddae91b90c6706819ee7d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of lower set bits in mask up to but excluding the i'th bit.  <a href="#acb1188ab7bddae91b90c6706819ee7d6">More...</a><br /></td></tr>
+<tr class="separator:acb1188ab7bddae91b90c6706819ee7d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc82ea0ec957e4305fc7351e9f5a689"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Mask.html#a7ffd1976cb1d25ef8d0ff161250abcae">OnIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a7bc82ea0ec957e4305fc7351e9f5a689">beginOn</a> () const </td></tr>
+<tr class="separator:a7bc82ea0ec957e4305fc7351e9f5a689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78214e355b1da718a6cde1836c39e958"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Mask.html#a53e0cc028946958d94d8eea7e1e8fa39">OffIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a78214e355b1da718a6cde1836c39e958">beginOff</a> () const </td></tr>
+<tr class="separator:a78214e355b1da718a6cde1836c39e958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff640d0586d34d3bf48359de39a4771c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#aff640d0586d34d3bf48359de39a4771c">Mask</a> ()</td></tr>
 <tr class="memdesc:aff640d0586d34d3bf48359de39a4771c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize all bits to zero.  <a href="#aff640d0586d34d3bf48359de39a4771c">More...</a><br /></td></tr>
 <tr class="separator:aff640d0586d34d3bf48359de39a4771c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,10 +136,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a73c4b9f0cff37d9e10f69becedb69b14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a73c4b9f0cff37d9e10f69becedb69b14">Mask</a> (const <a class="el" href="classnanovdb_1_1Mask.html">Mask</a> &amp;other)</td></tr>
 <tr class="memdesc:a73c4b9f0cff37d9e10f69becedb69b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <a href="#a73c4b9f0cff37d9e10f69becedb69b14">More...</a><br /></td></tr>
 <tr class="separator:a73c4b9f0cff37d9e10f69becedb69b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12efa3819a6f13bd498bf847adc59ffb"><td class="memTemplParams" colspan="2">template&lt;typename WordT &gt; </td></tr>
-<tr class="memitem:a12efa3819a6f13bd498bf847adc59ffb"><td class="memTemplItemLeft" align="right" valign="top">WordT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a12efa3819a6f13bd498bf847adc59ffb">getWord</a> (int n) const </td></tr>
-<tr class="memdesc:a12efa3819a6f13bd498bf847adc59ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <em>n</em>th word of the bit mask, for a word of arbitrary size.  <a href="#a12efa3819a6f13bd498bf847adc59ffb">More...</a><br /></td></tr>
-<tr class="separator:a12efa3819a6f13bd498bf847adc59ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a843eaadff8e02a6597a450c398f8c5e7"><td class="memTemplParams" colspan="2">template&lt;typename WordT &gt; </td></tr>
+<tr class="memitem:a843eaadff8e02a6597a450c398f8c5e7"><td class="memTemplItemLeft" align="right" valign="top">const WordT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a843eaadff8e02a6597a450c398f8c5e7">getWord</a> (int n) const </td></tr>
+<tr class="memdesc:a843eaadff8e02a6597a450c398f8c5e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const reference to the <em>n</em>th word of the bit mask, for a word of arbitrary size.  <a href="#a843eaadff8e02a6597a450c398f8c5e7">More...</a><br /></td></tr>
+<tr class="separator:a843eaadff8e02a6597a450c398f8c5e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96d318a329216c20e79a366d8dac2f4d"><td class="memTemplParams" colspan="2">template&lt;typename WordT &gt; </td></tr>
+<tr class="memitem:a96d318a329216c20e79a366d8dac2f4d"><td class="memTemplItemLeft" align="right" valign="top">WordT &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a96d318a329216c20e79a366d8dac2f4d">getWord</a> (int n)</td></tr>
+<tr class="memdesc:a96d318a329216c20e79a366d8dac2f4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the <em>n</em>th word of the bit mask, for a word of arbitrary size.  <a href="#a96d318a329216c20e79a366d8dac2f4d">More...</a><br /></td></tr>
+<tr class="separator:a96d318a329216c20e79a366d8dac2f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae845c27c88920ea4839e68b8b1844544"><td class="memTemplParams" colspan="2">template&lt;typename MaskT &gt; </td></tr>
 <tr class="memitem:ae845c27c88920ea4839e68b8b1844544"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Mask.html">Mask</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#ae845c27c88920ea4839e68b8b1844544">operator=</a> (const MaskT &amp;other)</td></tr>
 <tr class="memdesc:ae845c27c88920ea4839e68b8b1844544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator that works with openvdb::util::NodeMask.  <a href="#ae845c27c88920ea4839e68b8b1844544">More...</a><br /></td></tr>
@@ -132,21 +152,26 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a83b5030006c2f5efaf5d753d1f1ee178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e2efbc94bdc28fcd13acbca8e967f33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a3e2efbc94bdc28fcd13acbca8e967f33">operator!=</a> (const <a class="el" href="classnanovdb_1_1Mask.html">Mask</a> &amp;other) const </td></tr>
 <tr class="separator:a3e2efbc94bdc28fcd13acbca8e967f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f7fc06de0eef9f6ef4fff7fce914195"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Mask_1_1Iterator.html">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a5f7fc06de0eef9f6ef4fff7fce914195">beginOn</a> () const </td></tr>
-<tr class="separator:a5f7fc06de0eef9f6ef4fff7fce914195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d9b61312ba388553b6e287a1ad87fc1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a7d9b61312ba388553b6e287a1ad87fc1">isOn</a> (uint32_t n) const </td></tr>
 <tr class="memdesc:a7d9b61312ba388553b6e287a1ad87fc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the given bit is set.  <a href="#a7d9b61312ba388553b6e287a1ad87fc1">More...</a><br /></td></tr>
 <tr class="separator:a7d9b61312ba388553b6e287a1ad87fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d4eb978f9c7375c3cd60bd796a6dd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#ab7d4eb978f9c7375c3cd60bd796a6dd1">isOff</a> (uint32_t n) const </td></tr>
+<tr class="memdesc:ab7d4eb978f9c7375c3cd60bd796a6dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the given bit is NOT set.  <a href="#ab7d4eb978f9c7375c3cd60bd796a6dd1">More...</a><br /></td></tr>
+<tr class="separator:ab7d4eb978f9c7375c3cd60bd796a6dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad640481f5aa58f0a441d079c0b0db242"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#ad640481f5aa58f0a441d079c0b0db242">isOn</a> () const </td></tr>
+<tr class="memdesc:ad640481f5aa58f0a441d079c0b0db242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if all the bits are set in this <a class="el" href="classnanovdb_1_1Mask.html" title="Bit-mask to encode active states and facilitate sequential iterators and a fast codec for I/O compres...">Mask</a>.  <a href="#ad640481f5aa58f0a441d079c0b0db242">More...</a><br /></td></tr>
 <tr class="separator:ad640481f5aa58f0a441d079c0b0db242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad087dfc3726786e34d6ee1a745482c4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#ad087dfc3726786e34d6ee1a745482c4a">isOff</a> () const </td></tr>
+<tr class="memdesc:ad087dfc3726786e34d6ee1a745482c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if none of the bits are set in this <a class="el" href="classnanovdb_1_1Mask.html" title="Bit-mask to encode active states and facilitate sequential iterators and a fast codec for I/O compres...">Mask</a>.  <a href="#ad087dfc3726786e34d6ee1a745482c4a">More...</a><br /></td></tr>
 <tr class="separator:ad087dfc3726786e34d6ee1a745482c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff84494d48ad03860ac4878346fbdddb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#aff84494d48ad03860ac4878346fbdddb">setOn</a> (uint32_t n)</td></tr>
-<tr class="memdesc:aff84494d48ad03860ac4878346fbdddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the given bit on.  <a href="#aff84494d48ad03860ac4878346fbdddb">More...</a><br /></td></tr>
+<tr class="memdesc:aff84494d48ad03860ac4878346fbdddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the specified bit on.  <a href="#aff84494d48ad03860ac4878346fbdddb">More...</a><br /></td></tr>
 <tr class="separator:aff84494d48ad03860ac4878346fbdddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71f1e790d4b119c6e01334798c4981a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a71f1e790d4b119c6e01334798c4981a8">setOff</a> (uint32_t n)</td></tr>
+<tr class="memdesc:a71f1e790d4b119c6e01334798c4981a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the specified bit off.  <a href="#a71f1e790d4b119c6e01334798c4981a8">More...</a><br /></td></tr>
 <tr class="separator:a71f1e790d4b119c6e01334798c4981a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ef465ffa5ac4fac871ed8617a4a0799"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a1ef465ffa5ac4fac871ed8617a4a0799">set</a> (uint32_t n, bool On)</td></tr>
+<tr class="memdesc:a1ef465ffa5ac4fac871ed8617a4a0799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the specified bit on or off.  <a href="#a1ef465ffa5ac4fac871ed8617a4a0799">More...</a><br /></td></tr>
 <tr class="separator:a1ef465ffa5ac4fac871ed8617a4a0799"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a08bd62f6d96a28aefa66c60cd095e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a4a08bd62f6d96a28aefa66c60cd095e8">setOn</a> ()</td></tr>
 <tr class="memdesc:a4a08bd62f6d96a28aefa66c60cd095e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all bits on.  <a href="#a4a08bd62f6d96a28aefa66c60cd095e8">More...</a><br /></td></tr>
@@ -162,6 +187,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad277193b2dca0bab1e0ad24d45407dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d85d9aaeab071b0960b43fce23cdc59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a4d85d9aaeab071b0960b43fce23cdc59">toggle</a> (uint32_t n)</td></tr>
 <tr class="separator:a4d85d9aaeab071b0960b43fce23cdc59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a125fede927cecc871c320b091b31ef94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Mask.html">Mask</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a125fede927cecc871c320b091b31ef94">operator&amp;=</a> (const <a class="el" href="classnanovdb_1_1Mask.html">Mask</a> &amp;other)</td></tr>
+<tr class="memdesc:a125fede927cecc871c320b091b31ef94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise intersection.  <a href="#a125fede927cecc871c320b091b31ef94">More...</a><br /></td></tr>
+<tr class="separator:a125fede927cecc871c320b091b31ef94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63150594f19e4a3877b80f59808674f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Mask.html">Mask</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a63150594f19e4a3877b80f59808674f4">operator|=</a> (const <a class="el" href="classnanovdb_1_1Mask.html">Mask</a> &amp;other)</td></tr>
+<tr class="memdesc:a63150594f19e4a3877b80f59808674f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise union.  <a href="#a63150594f19e4a3877b80f59808674f4">More...</a><br /></td></tr>
+<tr class="separator:a63150594f19e4a3877b80f59808674f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62853165554b4d2f0dfe2f4ed791773a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Mask.html">Mask</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a62853165554b4d2f0dfe2f4ed791773a">operator-=</a> (const <a class="el" href="classnanovdb_1_1Mask.html">Mask</a> &amp;other)</td></tr>
+<tr class="memdesc:a62853165554b4d2f0dfe2f4ed791773a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise difference.  <a href="#a62853165554b4d2f0dfe2f4ed791773a">More...</a><br /></td></tr>
+<tr class="separator:a62853165554b4d2f0dfe2f4ed791773a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa80203bce830f78e510b60ead592b1b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Mask.html">Mask</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#aa80203bce830f78e510b60ead592b1b9">operator^=</a> (const <a class="el" href="classnanovdb_1_1Mask.html">Mask</a> &amp;other)</td></tr>
+<tr class="memdesc:aa80203bce830f78e510b60ead592b1b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bitwise XOR.  <a href="#aa80203bce830f78e510b60ead592b1b9">More...</a><br /></td></tr>
+<tr class="separator:aa80203bce830f78e510b60ead592b1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -180,7 +217,32 @@ Static Public Member Functions</h2></td></tr>
 class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
 
 <p>Bit-mask to encode active states and facilitate sequential iterators and a fast codec for I/O compression. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a53e0cc028946958d94d8eea7e1e8fa39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classnanovdb_1_1Mask.html#a53e0cc028946958d94d8eea7e1e8fa39">OffIterator</a> =  <a class="el" href="classnanovdb_1_1Mask_1_1Iterator.html">Iterator</a>&lt;false&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7ffd1976cb1d25ef8d0ff161250abcae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classnanovdb_1_1Mask.html#a7ffd1976cb1d25ef8d0ff161250abcae">OnIterator</a> =  <a class="el" href="classnanovdb_1_1Mask_1_1Iterator.html">Iterator</a>&lt;true&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aff640d0586d34d3bf48359de39a4771c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -257,7 +319,7 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a5f7fc06de0eef9f6ef4fff7fce914195"></a>
+<a class="anchor" id="a78214e355b1da718a6cde1836c39e958"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -265,7 +327,30 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnanovdb_1_1Mask_1_1Iterator.html">Iterator</a> beginOn </td>
+          <td class="memname"><a class="el" href="classnanovdb_1_1Mask.html#a53e0cc028946958d94d8eea7e1e8fa39">OffIterator</a> beginOff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7bc82ea0ec957e4305fc7351e9f5a689"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1Mask.html#a7ffd1976cb1d25ef8d0ff161250abcae">OnIterator</a> beginOn </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -326,9 +411,11 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
 </table>
 </div><div class="memdoc">
 
+<p>Return the total number of set bits in this <a class="el" href="classnanovdb_1_1Mask.html" title="Bit-mask to encode active states and facilitate sequential iterators and a fast codec for I/O compres...">Mask</a>. </p>
+
 </div>
 </div>
-<a class="anchor" id="a12efa3819a6f13bd498bf847adc59ffb"></a>
+<a class="anchor" id="acb1188ab7bddae91b90c6706819ee7d6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -336,7 +423,33 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">WordT getWord </td>
+          <td class="memname">uint32_t countOn </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the number of lower set bits in mask up to but excluding the i'th bit. </p>
+
+</div>
+</div>
+<a class="anchor" id="a843eaadff8e02a6597a450c398f8c5e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const WordT&amp; getWord </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
@@ -350,7 +463,59 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Return the <em>n</em>th word of the bit mask, for a word of arbitrary size. </p>
+<p>Return a const reference to the <em>n</em>th word of the bit mask, for a word of arbitrary size. </p>
+
+</div>
+</div>
+<a class="anchor" id="a96d318a329216c20e79a366d8dac2f4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WordT&amp; getWord </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a reference to the <em>n</em>th word of the bit mask, for a word of arbitrary size. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab7d4eb978f9c7375c3cd60bd796a6dd1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isOff </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return true if the given bit is NOT set. </p>
 
 </div>
 </div>
@@ -374,6 +539,8 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Return true if none of the bits are set in this <a class="el" href="classnanovdb_1_1Mask.html" title="Bit-mask to encode active states and facilitate sequential iterators and a fast codec for I/O compres...">Mask</a>. </p>
 
 </div>
 </div>
@@ -424,6 +591,8 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
 </table>
 </div><div class="memdoc">
 
+<p>Return true if all the bits are set in this <a class="el" href="classnanovdb_1_1Mask.html" title="Bit-mask to encode active states and facilitate sequential iterators and a fast codec for I/O compres...">Mask</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="a44872b3c78bf4e21b2c0c5a3ab6c75cb"></a>
@@ -472,6 +641,58 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a125fede927cecc871c320b091b31ef94"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1Mask.html">Mask</a>&amp; operator&amp;= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1Mask.html">Mask</a>&lt; LOG2DIM &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bitwise intersection. </p>
+
+</div>
+</div>
+<a class="anchor" id="a62853165554b4d2f0dfe2f4ed791773a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1Mask.html">Mask</a>&amp; operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1Mask.html">Mask</a>&lt; LOG2DIM &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bitwise difference. </p>
 
 </div>
 </div>
@@ -525,6 +746,58 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="aa80203bce830f78e510b60ead592b1b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1Mask.html">Mask</a>&amp; operator^= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1Mask.html">Mask</a>&lt; LOG2DIM &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bitwise XOR. </p>
+
+</div>
+</div>
+<a class="anchor" id="a63150594f19e4a3877b80f59808674f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1Mask.html">Mask</a>&amp; operator|= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1Mask.html">Mask</a>&lt; LOG2DIM &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bitwise union. </p>
+
+</div>
+</div>
 <a class="anchor" id="a1ef465ffa5ac4fac871ed8617a4a0799"></a>
 <div class="memitem">
 <div class="memproto">
@@ -556,6 +829,8 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Set the specified bit on or off. </p>
 
 </div>
 </div>
@@ -607,6 +882,8 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
 </table>
 </div><div class="memdoc">
 
+<p>Set the specified bit off. </p>
+
 </div>
 </div>
 <a class="anchor" id="aa1aeb8ff27de4c8cdc9a2168038c62aa"></a>
@@ -656,7 +933,7 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Set the given bit on. </p>
+<p>Set the specified bit on. </p>
 
 </div>
 </div>

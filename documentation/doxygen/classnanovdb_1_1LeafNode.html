@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -115,6 +115,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafNode_1_1ChildNodeType.html">ChildNodeType</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode_1_1ValueIterator.html">ValueIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all values in a leaf node, i.e. both active and inactive values.  <a href="classnanovdb_1_1LeafNode_1_1ValueIterator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode_1_1ValueOffIterator.html">ValueOffIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all inactive values in a leaf node.  <a href="classnanovdb_1_1LeafNode_1_1ValueOffIterator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode_1_1ValueOnIterator.html">ValueOnIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all active values in a leaf node.  <a href="classnanovdb_1_1LeafNode_1_1ValueOnIterator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -133,9 +142,18 @@ Public Types</h2></td></tr>
 <tr class="memitem:ab32d67c9d63bd4daa237f2b632af7822"><td class="memTemplParams" colspan="2">template&lt;uint32_t LOG2&gt; </td></tr>
 <tr class="memitem:ab32d67c9d63bd4daa237f2b632af7822"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#ab32d67c9d63bd4daa237f2b632af7822">MaskType</a> = MaskT&lt; LOG2 &gt;</td></tr>
 <tr class="separator:ab32d67c9d63bd4daa237f2b632af7822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8349448993f238f8d62b78e286982a1d"><td class="memTemplParams" colspan="2">template&lt;bool ON&gt; </td></tr>
+<tr class="memitem:a8349448993f238f8d62b78e286982a1d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#a8349448993f238f8d62b78e286982a1d">MaskIterT</a> = typename <a class="el" href="classnanovdb_1_1Mask.html">Mask</a>&lt; Log2Dim &gt;::template Iterator&lt; ON &gt;</td></tr>
+<tr class="separator:a8349448993f238f8d62b78e286982a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a0bc6cc9db980be3184388664c53b8da7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1LeafNode_1_1ValueOnIterator.html">ValueOnIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#a0bc6cc9db980be3184388664c53b8da7">beginValueOn</a> () const </td></tr>
+<tr class="separator:a0bc6cc9db980be3184388664c53b8da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85831cbf72a470f24d5c400c67d57ef8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1LeafNode_1_1ValueOffIterator.html">ValueOffIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#a85831cbf72a470f24d5c400c67d57ef8">beginValueOff</a> () const </td></tr>
+<tr class="separator:a85831cbf72a470f24d5c400c67d57ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0e6dbf08c61168e04e7705ecf0e1bb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1LeafNode_1_1ValueIterator.html">ValueIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#ac0e6dbf08c61168e04e7705ecf0e1bb6">beginValue</a> () const </td></tr>
+<tr class="separator:ac0e6dbf08c61168e04e7705ecf0e1bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad556f5d8e92f60515ab3863f93fd5f78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1LeafNode.html#a373b3f3e30430a4a4b966d4acd8f1790">DataType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#ad556f5d8e92f60515ab3863f93fd5f78">data</a> ()</td></tr>
 <tr class="separator:ad556f5d8e92f60515ab3863f93fd5f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1399421880a013f5daeb1d65dfa71ea"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1LeafNode.html#a373b3f3e30430a4a4b966d4acd8f1790">DataType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#ab1399421880a013f5daeb1d65dfa71ea">data</a> () const </td></tr>
@@ -171,6 +189,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9112eb5d358c00d4aee526e03d12438a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt; CoordT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#a9112eb5d358c00d4aee526e03d12438a">bbox</a> () const </td></tr>
 <tr class="memdesc:a9112eb5d358c00d4aee526e03d12438a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the bounding box in index space of active values in this leaf node.  <a href="#a9112eb5d358c00d4aee526e03d12438a">More...</a><br /></td></tr>
 <tr class="separator:a9112eb5d358c00d4aee526e03d12438a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af25c7a8864229307a3f0523a45328c9b"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#af25c7a8864229307a3f0523a45328c9b">memUsage</a> ()</td></tr>
+<tr class="memdesc:af25c7a8864229307a3f0523a45328c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">return memory usage in bytes for the class  <a href="#af25c7a8864229307a3f0523a45328c9b">More...</a><br /></td></tr>
+<tr class="separator:af25c7a8864229307a3f0523a45328c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac72b4d4d0d78cee7fa710404505517fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#ac72b4d4d0d78cee7fa710404505517fb">LeafNode</a> ()=delete</td></tr>
 <tr class="memdesc:ac72b4d4d0d78cee7fa710404505517fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class cannot be constructed or deleted.  <a href="#ac72b4d4d0d78cee7fa710404505517fb">More...</a><br /></td></tr>
 <tr class="separator:ac72b4d4d0d78cee7fa710404505517fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,14 +223,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a22761609071413dcce0632885c820e87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#a22761609071413dcce0632885c820e87">isActive</a> () const </td></tr>
 <tr class="memdesc:a22761609071413dcce0632885c820e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if any of the voxel value are active in this leaf node.  <a href="#a22761609071413dcce0632885c820e87">More...</a><br /></td></tr>
 <tr class="separator:a22761609071413dcce0632885c820e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf725e5e3b79e74ceb7cb146b3b3b4a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#acf725e5e3b79e74ceb7cb146b3b3b4a4">hasBBox</a> () const </td></tr>
+<tr class="separator:acf725e5e3b79e74ceb7cb146b3b3b4a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d4559d0714d7df55d480e09e827558a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#a7d4559d0714d7df55d480e09e827558a">probeValue</a> (const CoordT &amp;ijk, <a class="el" href="classnanovdb_1_1LeafNode.html#ad8350602bc48a2a148145cc887695a37">ValueType</a> &amp;v) const </td></tr>
 <tr class="memdesc:a7d4559d0714d7df55d480e09e827558a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the voxel value at the given coordinate is active and updates <code>v</code> with the value.  <a href="#a7d4559d0714d7df55d480e09e827558a">More...</a><br /></td></tr>
 <tr class="separator:a7d4559d0714d7df55d480e09e827558a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a199c7919159243007eb14c6837c281"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1LeafNode.html">LeafNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#a7a199c7919159243007eb14c6837c281">probeLeaf</a> (const CoordT &amp;) const </td></tr>
 <tr class="separator:a7a199c7919159243007eb14c6837c281"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40e159c5e7fb08908cd0bde6c0b4bb97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#a40e159c5e7fb08908cd0bde6c0b4bb97">updateBBox</a> ()</td></tr>
-<tr class="memdesc:a40e159c5e7fb08908cd0bde6c0b4bb97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the local bounding box of active voxels in this node.  <a href="#a40e159c5e7fb08908cd0bde6c0b4bb97">More...</a><br /></td></tr>
-<tr class="separator:a40e159c5e7fb08908cd0bde6c0b4bb97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96a5de66c9b0dde524255c9a44b02e99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#a96a5de66c9b0dde524255c9a44b02e99">updateBBox</a> ()</td></tr>
+<tr class="memdesc:a96a5de66c9b0dde524255c9a44b02e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the local bounding box of active voxels in this node. Return true if bbox was updated.  <a href="#a96a5de66c9b0dde524255c9a44b02e99">More...</a><br /></td></tr>
+<tr class="separator:a96a5de66c9b0dde524255c9a44b02e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -221,9 +244,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ab5a3542592d90848b0e057c5dfc4cc47"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#ab5a3542592d90848b0e057c5dfc4cc47">voxelCount</a> ()</td></tr>
 <tr class="memdesc:ab5a3542592d90848b0e057c5dfc4cc47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the total number of voxels (e.g. values) encoded in this leaf node.  <a href="#ab5a3542592d90848b0e057c5dfc4cc47">More...</a><br /></td></tr>
 <tr class="separator:ab5a3542592d90848b0e057c5dfc4cc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdbf948e7b299b032f08cc4591b5d974"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#abdbf948e7b299b032f08cc4591b5d974">memUsage</a> ()</td></tr>
-<tr class="memdesc:abdbf948e7b299b032f08cc4591b5d974"><td class="mdescLeft">&#160;</td><td class="mdescRight">return memory usage in bytes for the class  <a href="#abdbf948e7b299b032f08cc4591b5d974">More...</a><br /></td></tr>
-<tr class="separator:abdbf948e7b299b032f08cc4591b5d974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add56a1bd7235606dbc42ed8b49fa296e"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#add56a1bd7235606dbc42ed8b49fa296e">padding</a> ()</td></tr>
+<tr class="separator:add56a1bd7235606dbc42ed8b49fa296e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bb885bd7b3a807a30dc3e86d43d1fcd"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafNode.html#a8bb885bd7b3a807a30dc3e86d43d1fcd">CoordToOffset</a> (const CoordT &amp;ijk)</td></tr>
 <tr class="memdesc:a8bb885bd7b3a807a30dc3e86d43d1fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the linear offset corresponding to the given coordinate.  <a href="#a8bb885bd7b3a807a30dc3e86d43d1fcd">More...</a><br /></td></tr>
 <tr class="separator:a8bb885bd7b3a807a30dc3e86d43d1fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -376,6 +398,18 @@ class nanovdb::LeafNode&lt; BuildT, CoordT, MaskT, Log2Dim &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="a8349448993f238f8d62b78e286982a1d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classnanovdb_1_1LeafNode.html#a8349448993f238f8d62b78e286982a1d">MaskIterT</a> =  typename <a class="el" href="classnanovdb_1_1Mask.html">Mask</a>&lt;Log2Dim&gt;::template Iterator&lt;ON&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ab32d67c9d63bd4daa237f2b632af7822"></a>
 <div class="memitem">
 <div class="memproto">
@@ -521,6 +555,75 @@ class nanovdb::LeafNode&lt; BuildT, CoordT, MaskT, Log2Dim &gt;</h3>
 </div><div class="memdoc">
 
 <p>Return the bounding box in index space of active values in this leaf node. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac0e6dbf08c61168e04e7705ecf0e1bb6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1LeafNode_1_1ValueIterator.html">ValueIterator</a> beginValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a85831cbf72a470f24d5c400c67d57ef8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1LeafNode_1_1ValueOffIterator.html">ValueOffIterator</a> beginValueOff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0bc6cc9db980be3184388664c53b8da7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1LeafNode_1_1ValueOnIterator.html">ValueOnIterator</a> beginValueOn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -696,6 +799,29 @@ class nanovdb::LeafNode&lt; BuildT, CoordT, MaskT, Log2Dim &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="acf725e5e3b79e74ceb7cb146b3b3b4a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasBBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad5b27e03445806f7d9d591f03ebfa185"></a>
 <div class="memitem">
 <div class="memproto">
@@ -822,7 +948,7 @@ class nanovdb::LeafNode&lt; BuildT, CoordT, MaskT, Log2Dim &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="abdbf948e7b299b032f08cc4591b5d974"></a>
+<a class="anchor" id="af25c7a8864229307a3f0523a45328c9b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -830,7 +956,7 @@ class nanovdb::LeafNode&lt; BuildT, CoordT, MaskT, Log2Dim &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static uint64_t memUsage </td>
+          <td class="memname">uint64_t memUsage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -838,7 +964,7 @@ class nanovdb::LeafNode&lt; BuildT, CoordT, MaskT, Log2Dim &gt;</h3>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -966,6 +1092,29 @@ class nanovdb::LeafNode&lt; BuildT, CoordT, MaskT, Log2Dim &gt;</h3>
 </div><div class="memdoc">
 
 <p>Return the origin in index space of this leaf node. </p>
+
+</div>
+</div>
+<a class="anchor" id="add56a1bd7235606dbc42ed8b49fa296e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint32_t padding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1162,7 +1311,7 @@ class nanovdb::LeafNode&lt; BuildT, CoordT, MaskT, Log2Dim &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a40e159c5e7fb08908cd0bde6c0b4bb97"></a>
+<a class="anchor" id="a96a5de66c9b0dde524255c9a44b02e99"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1170,7 +1319,7 @@ class nanovdb::LeafNode&lt; BuildT, CoordT, MaskT, Log2Dim &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void updateBBox </td>
+          <td class="memname">bool updateBBox </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1183,9 +1332,9 @@ class nanovdb::LeafNode&lt; BuildT, CoordT, MaskT, Log2Dim &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Updates the local bounding box of active voxels in this node. </p>
+<p>Updates the local bounding box of active voxels in this node. Return true if bbox was updated. </p>
 <dl class="section warning"><dt>Warning</dt><dd>It assumes that the origin and value mask have already been set.</dd></dl>
-<p>This method is based on few (intrinsic) bit operations and hence is relatively fast. However, it should only only be called of either the value mask has changed or if the active bounding box is still undefined. e.g. during constrution of this node. </p>
+<p>This method is based on few (intrinsic) bit operations and hence is relatively fast. However, it should only only be called of either the value mask has changed or if the active bounding box is still undefined. e.g. during construction of this node. </p>
 
 </div>
 </div>

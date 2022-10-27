@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -91,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structnanovdb_1_1LeafData-members.html">List of all members</a>  </div>
@@ -151,6 +152,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a85de39be6e7d411102e1d1f0be6b0268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b22632bc456a6c08317e3b85a515439"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafData.html#a2b22632bc456a6c08317e3b85a515439">~LeafData</a> ()=delete</td></tr>
 <tr class="separator:a2b22632bc456a6c08317e3b85a515439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a885bc3eda95d14f11aa2a9ad0e521582"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafData.html#a885bc3eda95d14f11aa2a9ad0e521582">padding</a> ()</td></tr>
+<tr class="memdesc:a885bc3eda95d14f11aa2a9ad0e521582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return padding of this class in bytes, due to aliasing and 32B alignment.  <a href="#a885bc3eda95d14f11aa2a9ad0e521582">More...</a><br /></td></tr>
+<tr class="separator:a885bc3eda95d14f11aa2a9ad0e521582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdbf948e7b299b032f08cc4591b5d974"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafData.html#abdbf948e7b299b032f08cc4591b5d974">memUsage</a> ()</td></tr>
+<tr class="separator:abdbf948e7b299b032f08cc4591b5d974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -423,6 +432,29 @@ struct nanovdb::LeafData&lt; ValueT, CoordT, MaskT, LOG2DIM &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="abdbf948e7b299b032f08cc4591b5d974"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint64_t memUsage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a85de39be6e7d411102e1d1f0be6b0268"></a>
 <div class="memitem">
 <div class="memproto">
@@ -444,6 +476,32 @@ struct nanovdb::LeafData&lt; ValueT, CoordT, MaskT, LOG2DIM &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a885bc3eda95d14f11aa2a9ad0e521582"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr uint32_t padding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return padding of this class in bytes, due to aliasing and 32B alignment. </p>
+<dl class="section note"><dt>Note</dt><dd>The extra bytes are not necessarily at the end, but can come from aliasing of individual data members. </dd></dl>
 
 </div>
 </div>

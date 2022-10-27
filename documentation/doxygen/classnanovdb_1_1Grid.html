@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -149,6 +149,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7410a55f8cc2fff5a43e4b50e80a31b5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#a7410a55f8cc2fff5a43e4b50e80a31b5">gridCount</a> () const </td></tr>
 <tr class="memdesc:a7410a55f8cc2fff5a43e4b50e80a31b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return total number of grids in the buffer.  <a href="#a7410a55f8cc2fff5a43e4b50e80a31b5">More...</a><br /></td></tr>
 <tr class="separator:a7410a55f8cc2fff5a43e4b50e80a31b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf10ed33df9905643ea7aadebee2f95"><td class="memTemplParams" colspan="2">template&lt;typename T  = BuildType&gt; </td></tr>
+<tr class="memitem:a8cf10ed33df9905643ea7aadebee2f95"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt; <a class="el" href="structnanovdb_1_1is__same.html">is_same</a>&lt; T, <a class="el" href="classnanovdb_1_1ValueIndex.html">ValueIndex</a> &gt;::<a class="el" href="GridBuilder_8h.html#a0bd8e8b76a16eb8c0d32d42313755c8e">value</a>, uint64_t &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#a8cf10ed33df9905643ea7aadebee2f95">valueCount</a> () const </td></tr>
+<tr class="memdesc:a8cf10ed33df9905643ea7aadebee2f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the total number of values indexed by this IndexGrid.  <a href="#a8cf10ed33df9905643ea7aadebee2f95">More...</a><br /></td></tr>
+<tr class="separator:a8cf10ed33df9905643ea7aadebee2f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86621db4d1f486e9590128ff8c87c5ed"><td class="memItemLeft" align="right" valign="top">const TreeT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#a86621db4d1f486e9590128ff8c87c5ed">tree</a> () const </td></tr>
 <tr class="memdesc:a86621db4d1f486e9590128ff8c87c5ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const reference to the tree.  <a href="#a86621db4d1f486e9590128ff8c87c5ed">More...</a><br /></td></tr>
 <tr class="separator:a86621db4d1f486e9590128ff8c87c5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -228,6 +232,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5ee43d08f23320d58c94639c211d4022"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88d0587f63a0e0884475a9ccd0893109"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#a88d0587f63a0e0884475a9ccd0893109">isPointIndex</a> () const </td></tr>
 <tr class="separator:a88d0587f63a0e0884475a9ccd0893109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912e2d5abe2be1bc9ba8dbb8ed4475e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#a912e2d5abe2be1bc9ba8dbb8ed4475e4">isGridIndex</a> () const </td></tr>
+<tr class="separator:a912e2d5abe2be1bc9ba8dbb8ed4475e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66d1a320b45e81fba92ca470313323f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#a66d1a320b45e81fba92ca470313323f2">isPointData</a> () const </td></tr>
 <tr class="separator:a66d1a320b45e81fba92ca470313323f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09533cf22ad427de1b0c59b8be4b0cfc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#a09533cf22ad427de1b0c59b8be4b0cfc">isMask</a> () const </td></tr>
@@ -266,17 +272,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a479432127ee77145cc19d6a2d1590821"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#a479432127ee77145cc19d6a2d1590821">isEmpty</a> () const </td></tr>
 <tr class="memdesc:a479432127ee77145cc19d6a2d1590821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if this grid is empty, i.e. contains no values or nodes.  <a href="#a479432127ee77145cc19d6a2d1590821">More...</a><br /></td></tr>
 <tr class="separator:a479432127ee77145cc19d6a2d1590821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71267eab956fab2c9b34d704479a8ba9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#a71267eab956fab2c9b34d704479a8ba9">blindDataCount</a> () const </td></tr>
-<tr class="memdesc:a71267eab956fab2c9b34d704479a8ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the count of blind-data encoded in this grid.  <a href="#a71267eab956fab2c9b34d704479a8ba9">More...</a><br /></td></tr>
-<tr class="separator:a71267eab956fab2c9b34d704479a8ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ddfd46e9a9fa3330dac023bca964e39"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#a5ddfd46e9a9fa3330dac023bca964e39">blindDataCount</a> () const </td></tr>
+<tr class="memdesc:a5ddfd46e9a9fa3330dac023bca964e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the count of blind-data encoded in this grid.  <a href="#a5ddfd46e9a9fa3330dac023bca964e39">More...</a><br /></td></tr>
+<tr class="separator:a5ddfd46e9a9fa3330dac023bca964e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add279f527fdca98f6e1b22d956427af9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#add279f527fdca98f6e1b22d956427af9">findBlindDataForSemantic</a> (<a class="el" href="namespacenanovdb.html#ad302dde29b8cf276217e7db12f56e1ea">GridBlindDataSemantic</a> semantic) const </td></tr>
 <tr class="memdesc:add279f527fdca98f6e1b22d956427af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the index of the blind data with specified semantic if found, otherwise -1.  <a href="#add279f527fdca98f6e1b22d956427af9">More...</a><br /></td></tr>
 <tr class="separator:add279f527fdca98f6e1b22d956427af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ad87b078695729450847ee48c49f829"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#a3ad87b078695729450847ee48c49f829">blindData</a> (uint32_t n) const </td></tr>
 <tr class="memdesc:a3ad87b078695729450847ee48c49f829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const pointer to the blindData at the specified linear offset.  <a href="#a3ad87b078695729450847ee48c49f829">More...</a><br /></td></tr>
 <tr class="separator:a3ad87b078695729450847ee48c49f829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bc6b66357fd66198905c1b283a5c01c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#a1bc6b66357fd66198905c1b283a5c01c">blindMetaData</a> (int n) const </td></tr>
-<tr class="separator:a1bc6b66357fd66198905c1b283a5c01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d74e48e328eeaf51507a588619e9d4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html#ae0d74e48e328eeaf51507a588619e9d4">blindMetaData</a> (uint32_t n) const </td></tr>
+<tr class="separator:ae0d74e48e328eeaf51507a588619e9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -334,9 +340,6 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a86b8d24abb957c4002315acfcb7346f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5230c1b89770a59cc29a74354910d4e"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridData.html#ac5230c1b89770a59cc29a74354910d4e">treePtr</a> () const </td></tr>
 <tr class="separator:ac5230c1b89770a59cc29a74354910d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8bb6596ad2c077f42a940c2a1b2e1f4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridData.html#ac8bb6596ad2c077f42a940c2a1b2e1f4">blindMetaData</a> (uint32_t n) const </td></tr>
-<tr class="memdesc:ac8bb6596ad2c077f42a940c2a1b2e1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the blindMetaData at the specified linear offset.  <a href="#ac8bb6596ad2c077f42a940c2a1b2e1f4">More...</a><br /></td></tr>
-<tr class="separator:ac8bb6596ad2c077f42a940c2a1b2e1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -370,6 +373,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ae60d14baa2e4c08bb4dfcd1e9b8673ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35a5215b4b0105abd2c9dd4c386b2a3d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridData.html#a35a5215b4b0105abd2c9dd4c386b2a3d">mBlindMetadataCount</a></td></tr>
 <tr class="separator:a35a5215b4b0105abd2c9dd4c386b2a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f3ad7fd5fb6d233f18c7d348c466c4"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridData.html#a48f3ad7fd5fb6d233f18c7d348c466c4">mData0</a></td></tr>
+<tr class="separator:a48f3ad7fd5fb6d233f18c7d348c466c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab68e24febf39a1550142fadc4baf6f8"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridData.html#aab68e24febf39a1550142fadc4baf6f8">mData1</a></td></tr>
+<tr class="separator:aab68e24febf39a1550142fadc4baf6f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73123d98d8c771e1ac1dfac72876e95"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridData.html#ab73123d98d8c771e1ac1dfac72876e95">mData2</a></td></tr>
+<tr class="separator:ab73123d98d8c771e1ac1dfac72876e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -571,7 +580,7 @@ class nanovdb::Grid&lt; TreeT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a71267eab956fab2c9b34d704479a8ba9"></a>
+<a class="anchor" id="a5ddfd46e9a9fa3330dac023bca964e39"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -579,7 +588,7 @@ class nanovdb::Grid&lt; TreeT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int blindDataCount </td>
+          <td class="memname">uint32_t blindDataCount </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -596,7 +605,7 @@ class nanovdb::Grid&lt; TreeT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a1bc6b66357fd66198905c1b283a5c01c"></a>
+<a class="anchor" id="ae0d74e48e328eeaf51507a588619e9d4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -606,7 +615,7 @@ class nanovdb::Grid&lt; TreeT &gt;</h3>
         <tr>
           <td class="memname">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a>&amp; blindMetaData </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -1252,6 +1261,29 @@ class nanovdb::Grid&lt; TreeT &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="a912e2d5abe2be1bc9ba8dbb8ed4475e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isGridIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a3871c12599d41f1a64a4b33cfaccb01c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1611,6 +1643,32 @@ class nanovdb::Grid&lt; TreeT &gt;</h3>
 </div><div class="memdoc">
 
 <p>Return a non-const reference to the tree. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8cf10ed33df9905643ea7aadebee2f95"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt;<a class="el" href="structnanovdb_1_1is__same.html">is_same</a>&lt;T, <a class="el" href="classnanovdb_1_1ValueIndex.html">ValueIndex</a>&gt;::<a class="el" href="GridBuilder_8h.html#a0bd8e8b76a16eb8c0d32d42313755c8e">value</a>, uint64_t&gt;::type valueCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the total number of values indexed by this IndexGrid. </p>
+<dl class="section note"><dt>Note</dt><dd>This method is only defined for IndexGrid = NanoGrid&lt;ValueIndex&gt; </dd></dl>
 
 </div>
 </div>

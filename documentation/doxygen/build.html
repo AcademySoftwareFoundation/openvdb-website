@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -237,13 +237,9 @@ Building Against Houdini/Maya</h2>
 <tr>
 <th>DCC </th><th>Supported Version </th><th>OpenVDB ABI  </th></tr>
 <tr>
-<td>Houdini </td><td>18.0 </td><td>6 </td></tr>
-<tr>
-<td>Houdini </td><td>18.5 </td><td>7 </td></tr>
-<tr>
 <td>Houdini </td><td>19.0 </td><td>8 </td></tr>
 <tr>
-<td>Maya </td><td>2017 </td><td>Any </td></tr>
+<td>Houdini </td><td>19.5 </td><td>9 </td></tr>
 <tr>
 <td>Maya </td><td>2018 </td><td>Any </td></tr>
 <tr>
@@ -258,7 +254,7 @@ Building Against Houdini</h2>
 <tr>
 <td>CMake </td><td>Cross-platform family of tools designed to help build software </td><td>All </td></tr>
 <tr>
-<td>C++14 Compiler </td><td>Matching Houdini compiler and version </td><td>All </td></tr>
+<td>C++17 Compiler </td><td>Matching Houdini compiler and version </td><td>All </td></tr>
 <tr>
 <td>Boost </td><td>Components: iostreams, python, thread </td><td>All </td></tr>
 <tr>
@@ -276,7 +272,7 @@ Building Against Houdini</h2>
 <tr>
 <td>LLVM </td><td>Target-independent code generation </td><td>OpenVDB AX </td></tr>
 </table>
-<p>At a minimum, boost, a matching C++14 compiler and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software. Note that as Blosc and ZLib are provided as part of the Houdini installation <code>USE_BLOSC</code> and <code>USE_ZLIB</code> should be left <code>ON</code>.</p>
+<p>At a minimum, boost, a matching C++17 compiler and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software. Note that as Blosc and ZLib are provided as part of the Houdini installation <code>USE_BLOSC</code> and <code>USE_ZLIB</code> should be left <code>ON</code>.</p>
 <p>With the necessary dependencies installed, create and enter a directory for cmake to write to. It's generally useful to create this in the location you've extracted the OpenVDB repository. It will house CMake's generated build files.</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;mkdir build</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cd build</div></div><!-- fragment --><p>Now you can call CMake by providing the absolute or relative path to the root of the OpenVDB source tree along with the following options:</p>
 <p>Required:</p>
@@ -308,7 +304,7 @@ Building Against Maya</h2>
 <tr>
 <td>CMake </td><td>Cross-platform family of tools designed to help build software </td><td>All </td></tr>
 <tr>
-<td>C++14 Compiler </td><td>Matching Houdini compiler and version </td><td>All </td></tr>
+<td>C++17 Compiler </td><td>Matching Houdini compiler and version </td><td>All </td></tr>
 <tr>
 <td>Boost </td><td>Components: iostreams, python, thread </td><td>All </td></tr>
 <tr>
@@ -335,7 +331,7 @@ Building Against Maya</h2>
 <td>LLVM </td><td>Target-independent code generation </td><td>OpenVDB AX </td></tr>
 </table>
 <p>See <a class="el" href="build.html#buildBloscSupport">blosc support</a></p>
-<p>At a minimum, boost, a matching C++14 compiler, ZLIB, blosc and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software.</p>
+<p>At a minimum, boost, a matching C++17 compiler, ZLIB, blosc and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software.</p>
 <p>With the necessary dependencies installed, create and enter a directory for cmake to write to. It's generally useful to create this in the location you've extracted the OpenVDB repository. It will house CMake's generated build files.</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;mkdir build</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cd build</div></div><!-- fragment --><p>Now you can call CMake by providing the absolute or relative path to the root of the OpenVDB source tree along with the following options:</p>
 <p>Required:</p>
@@ -371,7 +367,7 @@ Building With OpenVDB</h1>
 <p>The following assumes that OpenVDB was installed with <code>OPENVDB_BUILD_CORE=ON</code> and <code>OPENVDB_INSTALL_CMAKE_MODULES=ON</code>. Don't worry if you didn't specify these options directly, they both default to <code>ON</code>. This ensures that OpenVDB has installed the required CMake modules that your application will need to use.</p>
 <p><b>Note:</b> Typically, projects provide a <b>Config-file</b> rather than a <b>Find-module</b> for downstream use. OpenVDB currently provides a <b>Find-module</b>. This may change in the future. Further information <a href="https://cmake.org/cmake/help/latest/manual/cmake-packages.7.html#using-packages">here</a>.</p>
 <p>You can add the below CMake snippet to your main <code>CMakeLists.txt</code> to bring in OpenVDB as a dependency:</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake_minimum_required(VERSION 3.15)</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;list(APPEND CMAKE_MODULE_PATH &quot;/location/of/openvdb/install/lib/cmake/OpenVDB&quot;)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;find_package(OpenVDB REQUIRED)</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;target_link_libraries(myapp OpenVDB::openvdb)</div></div><!-- fragment --><p><code>myapp</code> in the above is a CMake target, usually created with <code>add_library()</code> or <code>add_executable()</code>. You can optionally provide <code>CMAKE_MODULE_PATH</code> as a <code>-D</code> argument to the cmake command line instead of specifying it in your <code>CMakeLists.txt</code>.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake_minimum_required(VERSION 3.18)</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;list(APPEND CMAKE_MODULE_PATH &quot;/location/of/openvdb/install/lib/cmake/OpenVDB&quot;)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;find_package(OpenVDB REQUIRED)</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;target_link_libraries(myapp OpenVDB::openvdb)</div></div><!-- fragment --><p><code>myapp</code> in the above is a CMake target, usually created with <code>add_library()</code> or <code>add_executable()</code>. You can optionally provide <code>CMAKE_MODULE_PATH</code> as a <code>-D</code> argument to the cmake command line instead of specifying it in your <code>CMakeLists.txt</code>.</p>
 <p>Note that the <code>FindOpenVDB.cmake</code> module relies on the other <code>FindModules</code> provided in the OpenVDB installation to find it's own dependencies. This may require you to provide additional dependency locations for OpenVDB's dependencies. See <a class="el" href="build.html#buildDependencies">Locating Dependencies</a> or the below troubleshooting for more information. </p><hr/>
 <h1><a class="anchor" id="buildTroubleshooting"></a>
 Troubleshooting</h1>

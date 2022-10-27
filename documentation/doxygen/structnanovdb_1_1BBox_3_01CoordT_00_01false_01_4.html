@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -92,6 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structnanovdb_1_1BBox_3_01CoordT_00_01false_01_4-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -140,7 +141,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a533d954a40cb04f5f26f824471ab50b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BBox_3_01CoordT_00_01false_01_4.html#a533d954a40cb04f5f26f824471ab50b9">isInside</a> (const CoordT &amp;p) const </td></tr>
 <tr class="separator:a533d954a40cb04f5f26f824471ab50b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af084c9a5eb33cdbb6d541b7c4a09ccd7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BBox_3_01CoordT_00_01false_01_4.html#af084c9a5eb33cdbb6d541b7c4a09ccd7">isInside</a> (const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a> &amp;b) const </td></tr>
+<tr class="memdesc:af084c9a5eb33cdbb6d541b7c4a09ccd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the given bounding box is inside this bounding box.  <a href="#af084c9a5eb33cdbb6d541b7c4a09ccd7">More...</a><br /></td></tr>
 <tr class="separator:af084c9a5eb33cdbb6d541b7c4a09ccd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac252691646567e6f2971df5425b44d22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BBox_3_01CoordT_00_01false_01_4.html#ac252691646567e6f2971df5425b44d22">hasOverlap</a> (const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a> &amp;b) const </td></tr>
+<tr class="memdesc:ac252691646567e6f2971df5425b44d22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the given bounding box overlaps with this bounding box.  <a href="#ac252691646567e6f2971df5425b44d22">More...</a><br /></td></tr>
+<tr class="separator:ac252691646567e6f2971df5425b44d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38f29c4c354dcae7bc30b83c07e0f5f1"><td class="memTemplParams" colspan="2">template&lt;typename RealT &gt; </td></tr>
 <tr class="memitem:a38f29c4c354dcae7bc30b83c07e0f5f1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt; <a class="el" href="classnanovdb_1_1Vec3.html">Vec3</a>&lt; RealT &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BBox_3_01CoordT_00_01false_01_4.html#a38f29c4c354dcae7bc30b83c07e0f5f1">asReal</a> () const </td></tr>
 <tr class="separator:a38f29c4c354dcae7bc30b83c07e0f5f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,8 +172,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d635a333af57896ee0ab3fdaf3a3958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd5ef84d5f2ed7398caa3311076f0eb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BaseBBox.html#acd5ef84d5f2ed7398caa3311076f0eb5">expand</a> (const CoordT &amp;xyz)</td></tr>
 <tr class="separator:acd5ef84d5f2ed7398caa3311076f0eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab3050d649739a78b5a6c94104bcb68c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BaseBBox.html#aab3050d649739a78b5a6c94104bcb68c">intersect</a> (const <a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a> &amp;bbox)</td></tr>
+<tr class="memdesc:aab3050d649739a78b5a6c94104bcb68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intersect this bounding box with the given bounding box.  <a href="#aab3050d649739a78b5a6c94104bcb68c">More...</a><br /></td></tr>
+<tr class="separator:aab3050d649739a78b5a6c94104bcb68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad01a7b0fb4da99745b4e87a155b74b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BaseBBox.html#aad01a7b0fb4da99745b4e87a155b74b7">isInside</a> (const CoordT &amp;xyz)</td></tr>
 <tr class="separator:aad01a7b0fb4da99745b4e87a155b74b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:acab708008a9fa7ce89a7481dd976babe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BBox_3_01CoordT_00_01false_01_4.html#acab708008a9fa7ce89a7481dd976babe">createCube</a> (const CoordT &amp;<a class="el" href="structnanovdb_1_1BaseBBox.html#abe5f9c24f1823e29efde292b59f5802d">min</a>, typename CoordT::ValueType <a class="el" href="structnanovdb_1_1BBox_3_01CoordT_00_01false_01_4.html#a1c618825a759e2f2e7dbc9e1528ec7af">dim</a>)</td></tr>
+<tr class="separator:acab708008a9fa7ce89a7481dd976babe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -334,6 +347,40 @@ struct nanovdb::BBox&lt; CoordT, false &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="acab708008a9fa7ce89a7481dd976babe"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structnanovdb_1_1BBox.html">BBox</a> createCube </td>
+          <td>(</td>
+          <td class="paramtype">const CoordT &amp;&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename CoordT::ValueType&#160;</td>
+          <td class="paramname"><em>dim</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a1c618825a759e2f2e7dbc9e1528ec7af"></a>
 <div class="memitem">
 <div class="memproto">
@@ -432,6 +479,58 @@ struct nanovdb::BBox&lt; CoordT, false &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="ac252691646567e6f2971df5425b44d22"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasOverlap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt; CoordT, false &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return <code>true</code> if the given bounding box overlaps with this bounding box. </p>
+
+</div>
+</div>
+<a class="anchor" id="aab3050d649739a78b5a6c94104bcb68c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a>&amp; intersect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a>&lt; CoordT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bbox</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Intersect this bounding box with the given bounding box. </p>
+
+</div>
+</div>
 <a class="anchor" id="aec7ec8e2a0c5b3a353264e1b0f681061"></a>
 <div class="memitem">
 <div class="memproto">
@@ -524,6 +623,8 @@ struct nanovdb::BBox&lt; CoordT, false &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Return <code>true</code> if the given bounding box is inside this bounding box. </p>
 
 </div>
 </div>

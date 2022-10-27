@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -91,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structnanovdb_1_1BBox_3_01Vec3T_00_01true_01_4-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -150,8 +151,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d635a333af57896ee0ab3fdaf3a3958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd5ef84d5f2ed7398caa3311076f0eb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BaseBBox.html#acd5ef84d5f2ed7398caa3311076f0eb5">expand</a> (const Vec3T &amp;xyz)</td></tr>
 <tr class="separator:acd5ef84d5f2ed7398caa3311076f0eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab3050d649739a78b5a6c94104bcb68c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BaseBBox.html#aab3050d649739a78b5a6c94104bcb68c">intersect</a> (const <a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a> &amp;bbox)</td></tr>
+<tr class="memdesc:aab3050d649739a78b5a6c94104bcb68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intersect this bounding box with the given bounding box.  <a href="#aab3050d649739a78b5a6c94104bcb68c">More...</a><br /></td></tr>
+<tr class="separator:aab3050d649739a78b5a6c94104bcb68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad01a7b0fb4da99745b4e87a155b74b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BaseBBox.html#aad01a7b0fb4da99745b4e87a155b74b7">isInside</a> (const Vec3T &amp;xyz)</td></tr>
 <tr class="separator:aad01a7b0fb4da99745b4e87a155b74b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:af671c74f83db67f350a9bc10969ac7b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BBox_3_01Vec3T_00_01true_01_4.html#af671c74f83db67f350a9bc10969ac7b7">createCube</a> (const <a class="el" href="classnanovdb_1_1Coord.html">Coord</a> &amp;<a class="el" href="structnanovdb_1_1BaseBBox.html#abe5f9c24f1823e29efde292b59f5802d">min</a>, typename <a class="el" href="classnanovdb_1_1Coord.html#af47670d20d7fb55761a70e3a9868d993">Coord::ValueType</a> <a class="el" href="structnanovdb_1_1BBox_3_01Vec3T_00_01true_01_4.html#ad711e61399272aa1287285a23c26fbb1">dim</a>)</td></tr>
+<tr class="separator:af671c74f83db67f350a9bc10969ac7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -318,6 +327,40 @@ struct nanovdb::BBox&lt; Vec3T, true &gt;</h3>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af671c74f83db67f350a9bc10969ac7b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structnanovdb_1_1BBox.html">BBox</a> createCube </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1Coord.html">Coord</a> &amp;&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename <a class="el" href="classnanovdb_1_1Coord.html#af47670d20d7fb55761a70e3a9868d993">Coord::ValueType</a>&#160;</td>
+          <td class="paramname"><em>dim</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad711e61399272aa1287285a23c26fbb1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -385,6 +428,32 @@ struct nanovdb::BBox&lt; Vec3T, true &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aab3050d649739a78b5a6c94104bcb68c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a>&amp; intersect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a>&lt; Vec3T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bbox</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Intersect this bounding box with the given bounding box. </p>
 
 </div>
 </div>

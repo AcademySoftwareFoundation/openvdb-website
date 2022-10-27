@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -106,8 +106,10 @@ Macros</h2></td></tr>
 <tr class="memitem:ac3004d334cb9a9ac58f68c343220e571"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Platform_8h.html#ac3004d334cb9a9ac58f68c343220e571">OPENVDB_HAS_CXX11</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memdesc:ac3004d334cb9a9ac58f68c343220e571"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenVDB now requires C++11.  <a href="#ac3004d334cb9a9ac58f68c343220e571">More...</a><br /></td></tr>
 <tr class="separator:ac3004d334cb9a9ac58f68c343220e571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75f69f6aab6d38a8269686d79b268b29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Platform_8h.html#a75f69f6aab6d38a8269686d79b268b29">OPENVDB_UBSAN_SUPPRESS</a>(X)</td></tr>
+<tr class="memdesc:a75f69f6aab6d38a8269686d79b268b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">SIMD Intrinsic Headers.  <a href="#a75f69f6aab6d38a8269686d79b268b29">More...</a><br /></td></tr>
+<tr class="separator:a75f69f6aab6d38a8269686d79b268b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8dadf7b858eb1987194e570f80bff79"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Platform_8h.html#ac8dadf7b858eb1987194e570f80bff79">OPENVDB_NO_UNREACHABLE_CODE_WARNING_BEGIN</a></td></tr>
-<tr class="memdesc:ac8dadf7b858eb1987194e570f80bff79"><td class="mdescLeft">&#160;</td><td class="mdescRight">SIMD Intrinsic Headers.  <a href="#ac8dadf7b858eb1987194e570f80bff79">More...</a><br /></td></tr>
 <tr class="separator:ac8dadf7b858eb1987194e570f80bff79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4a2916120921a779c15e6182c8d8118"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Platform_8h.html#aa4a2916120921a779c15e6182c8d8118">OPENVDB_NO_UNREACHABLE_CODE_WARNING_END</a></td></tr>
 <tr class="separator:aa4a2916120921a779c15e6182c8d8118"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -418,9 +420,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>SIMD Intrinsic Headers. </p>
-<p>Windows defines Bracket code with OPENVDB_NO_UNREACHABLE_CODE_WARNING_BEGIN/_END, as in the following example, to inhibit ICC remarks about unreachable code: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;template&lt;typename NodeType&gt;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;void processNode(NodeType&amp; node)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    OPENVDB_NO_UNREACHABLE_CODE_WARNING_BEGIN</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    if (NodeType::LEVEL == 0) return; // ignore leaf nodes</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    int i = 0;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    ...</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    OPENVDB_NO_UNREACHABLE_CODE_WARNING_END</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div></div><!-- fragment --><p> In the above, <code>NodeType::LEVEL == 0</code> is a compile-time constant expression, so for some template instantiations, the line below it is unreachable. </p>
+<p>Bracket code with OPENVDB_NO_UNREACHABLE_CODE_WARNING_BEGIN/_END, as in the following example, to inhibit ICC remarks about unreachable code: </p><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;template&lt;typename NodeType&gt;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;void processNode(NodeType&amp; node)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    OPENVDB_NO_UNREACHABLE_CODE_WARNING_BEGIN</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    if (NodeType::LEVEL == 0) return; // ignore leaf nodes</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    int i = 0;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    ...</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    OPENVDB_NO_UNREACHABLE_CODE_WARNING_END</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div></div><!-- fragment --><p> In the above, <code>NodeType::LEVEL == 0</code> is a compile-time constant expression, so for some template instantiations, the line below it is unreachable. </p>
 
 </div>
 </div>
@@ -626,6 +626,25 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a75f69f6aab6d38a8269686d79b268b29"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENVDB_UBSAN_SUPPRESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">X</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SIMD Intrinsic Headers. </p>
+<p>Windows defines Macros to suppress undefined behaviour sanitizer warnings. Should be used sparingly, primarily to suppress issues in upstream dependencies. </p>
 
 </div>
 </div>

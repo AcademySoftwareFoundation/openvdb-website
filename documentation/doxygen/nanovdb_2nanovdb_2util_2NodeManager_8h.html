@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -96,23 +96,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="NanoVDB_8h_source.html">../NanoVDB.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="Invoke_8h_source.html">Invoke.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="HostBuffer_8h_source.html">HostBuffer.h</a>&quot;</code><br />
 </div>
 <p><a href="nanovdb_2nanovdb_2util_2NodeManager_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager&lt; GridT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">NodeNanager maintains separate linear arrays of the three nodes types.  <a href="classnanovdb_1_1NodeManager.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager&lt; BuildT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> allows for sequential access to nodes.  <a href="classnanovdb_1_1NodeManager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafManager.html">LeafManager&lt; GridT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">LeafNanager maintains a linear array of leaf nodes.  <a href="classnanovdb_1_1LeafManager.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html">NodeManagerHandle&lt; BufferT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html" title="NodeManagerHandle manages the memory of a NodeManager. ">NodeManagerHandle</a> manages the memory of a <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a>.  <a href="classnanovdb_1_1NodeManagerHandle.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager&lt; GridT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">NodeNanager maintains separate linear arrays of the three nodes types.  <a href="classnanovdb_1_1NodeManager.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1NodeManagerData.html">NodeManagerData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1LeafManager.html">LeafManager&lt; GridT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">LeafNanager maintains a linear array of leaf nodes.  <a href="classnanovdb_1_1LeafManager.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html">NodeManagerHandle&lt; BufferT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html" title="NodeManagerHandle manages the memory of a NodeManager. ">NodeManagerHandle</a> manages the memory of a <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a>.  <a href="classnanovdb_1_1NodeManagerHandle.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager&lt; BuildT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> allows for sequential access to nodes.  <a href="classnanovdb_1_1NodeManager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -122,14 +124,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a813f520825869cc3c5f2700f9ae3fc42"><td class="memTemplParams" colspan="2">template&lt;typename GridT &gt; </td></tr>
-<tr class="memitem:a813f520825869cc3c5f2700f9ae3fc42"><td class="memTemplItemLeft" align="right" valign="top">NodeManager&lt; GridT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a813f520825869cc3c5f2700f9ae3fc42">createNodeMgr</a> (GridT &amp;grid)</td></tr>
-<tr class="memdesc:a813f520825869cc3c5f2700f9ae3fc42"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeNanager maintains separate linear arrays of the three nodes types. ">NodeManager</a> from a grid. Move semantics is used.  <a href="namespacenanovdb.html#a813f520825869cc3c5f2700f9ae3fc42">More...</a><br /></td></tr>
-<tr class="separator:a813f520825869cc3c5f2700f9ae3fc42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a0c04d8ec5e1a358d15affe4542346f"><td class="memTemplParams" colspan="2">template&lt;typename GridT &gt; </td></tr>
-<tr class="memitem:a1a0c04d8ec5e1a358d15affe4542346f"><td class="memTemplItemLeft" align="right" valign="top">LeafManager&lt; GridT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a1a0c04d8ec5e1a358d15affe4542346f">createLeafMgr</a> (GridT &amp;grid)</td></tr>
-<tr class="memdesc:a1a0c04d8ec5e1a358d15affe4542346f"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a <a class="el" href="classnanovdb_1_1LeafManager.html" title="LeafNanager maintains a linear array of leaf nodes. ">LeafManager</a> from a grid. Move semantics is used.  <a href="namespacenanovdb.html#a1a0c04d8ec5e1a358d15affe4542346f">More...</a><br /></td></tr>
-<tr class="separator:a1a0c04d8ec5e1a358d15affe4542346f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefce754e1e7397fb6d1a75c1eec1054b"><td class="memTemplParams" colspan="2">template&lt;typename BuildT , typename BufferT  = HostBuffer&gt; </td></tr>
+<tr class="memitem:aefce754e1e7397fb6d1a75c1eec1054b"><td class="memTemplItemLeft" align="right" valign="top">NodeManagerHandle&lt; BufferT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#aefce754e1e7397fb6d1a75c1eec1054b">createNodeManager</a> (const NanoGrid&lt; BuildT &gt; &amp;grid, const BufferT &amp;buffer=BufferT())</td></tr>
+<tr class="memdesc:aefce754e1e7397fb6d1a75c1eec1054b"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief Construct a <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> and return its handle  <a href="namespacenanovdb.html#aefce754e1e7397fb6d1a75c1eec1054b">More...</a><br /></td></tr>
+<tr class="separator:aefce754e1e7397fb6d1a75c1eec1054b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

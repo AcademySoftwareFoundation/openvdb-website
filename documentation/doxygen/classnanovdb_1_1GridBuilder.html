@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Allows for the construction of NanoVDB grids without any dependecy.  
+<p>Allows for the construction of NanoVDB grids without any dependency.  
  <a href="classnanovdb_1_1GridBuilder.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="GridBuilder_8h_source.html">nanovdb/util/GridBuilder.h</a>&gt;</code></p>
@@ -118,10 +118,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e05f8cd66bf705fa038bbaaa112eb1f"><td class="memItemLeft" align="right" valign="top">ValueAccessor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridBuilder.html#a8e05f8cd66bf705fa038bbaaa112eb1f">getAccessor</a> ()</td></tr>
 <tr class="separator:a8e05f8cd66bf705fa038bbaaa112eb1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acae466a4d863f2df2168bfd8822805dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridBuilder.html#acae466a4d863f2df2168bfd8822805dd">sdfToLevelSet</a> ()</td></tr>
-<tr class="memdesc:acae466a4d863f2df2168bfd8822805dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs multi-threaded bottum-up signed-distance flood-filling and changes GridClass to LevelSet.  <a href="#acae466a4d863f2df2168bfd8822805dd">More...</a><br /></td></tr>
+<tr class="memdesc:acae466a4d863f2df2168bfd8822805dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs multi-threaded bottom-up signed-distance flood-filling and changes GridClass to LevelSet.  <a href="#acae466a4d863f2df2168bfd8822805dd">More...</a><br /></td></tr>
 <tr class="separator:acae466a4d863f2df2168bfd8822805dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedf53bf8680b3da76bcee63315f5aa1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridBuilder.html#aedf53bf8680b3da76bcee63315f5aa1d">sdfToFog</a> ()</td></tr>
-<tr class="memdesc:aedf53bf8680b3da76bcee63315f5aa1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs multi-threaded bottum-up signed-distance flood-filling followed by level-set -&gt; FOG volume conversion. It also changes the GridClass to FogVolume.  <a href="#aedf53bf8680b3da76bcee63315f5aa1d">More...</a><br /></td></tr>
+<tr class="memdesc:aedf53bf8680b3da76bcee63315f5aa1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs multi-threaded bottom-up signed-distance flood-filling followed by level-set -&gt; FOG volume conversion. It also changes the GridClass to FogVolume.  <a href="#aedf53bf8680b3da76bcee63315f5aa1d">More...</a><br /></td></tr>
 <tr class="separator:aedf53bf8680b3da76bcee63315f5aa1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa58f768aa43bfe1333f293095715f046"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridBuilder.html#aa58f768aa43bfe1333f293095715f046">setVerbose</a> (int mode=1)</td></tr>
 <tr class="separator:aa58f768aa43bfe1333f293095715f046"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,7 +150,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><h3>template&lt;typename ValueT, typename BuildT = ValueT, typename StatsT = Stats&lt;ValueT&gt;&gt;<br />
 class nanovdb::GridBuilder&lt; ValueT, BuildT, StatsT &gt;</h3>
 
-<p>Allows for the construction of NanoVDB grids without any dependecy. </p>
+<p>Allows for the construction of NanoVDB grids without any dependency. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2e99aee632b9046057a218d0dcf94384"></a>
 <div class="memitem">
@@ -349,7 +349,7 @@ class nanovdb::GridBuilder&lt; ValueT, BuildT, StatsT &gt;</h3>
 </div><div class="memdoc">
 
 <p>Sets grids values in domain of the <em>bbox</em> to those returned by the specified <em>func</em> with the expected signature [](const <a class="el" href="classnanovdb_1_1Coord.html" title="Signed (i, j, k) 32-bit integer coordinate class, similar to openvdb::math::Coord. ">Coord</a>&amp;)-&gt;ValueT. </p>
-<dl class="section note"><dt>Note</dt><dd>If <em>func</em> returns a value equal to the brackground value (specified in the constructor) at a specific voxel coordinate, then the active state of that coordinate is left off! Else the value value is set and the active state is on. This is done to allow for sparse grids to be generated.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If <em>func</em> returns a value equal to the background value (specified in the constructor) at a specific voxel coordinate, then the active state of that coordinate is left off! Else the value value is set and the active state is on. This is done to allow for sparse grids to be generated.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">func</td><td>Functor used to evaluate the grid values in the <em>bbox</em> </td></tr>
@@ -382,8 +382,8 @@ class nanovdb::GridBuilder&lt; ValueT, BuildT, StatsT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Performs multi-threaded bottum-up signed-distance flood-filling followed by level-set -&gt; FOG volume conversion. It also changes the GridClass to FogVolume. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Only call this method once this <a class="el" href="classnanovdb_1_1GridBuilder.html" title="Allows for the construction of NanoVDB grids without any dependecy. ">GridBuilder</a> contains a valid signed distance field </dd></dl>
+<p>Performs multi-threaded bottom-up signed-distance flood-filling followed by level-set -&gt; FOG volume conversion. It also changes the GridClass to FogVolume. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Only call this method once this <a class="el" href="classnanovdb_1_1GridBuilder.html" title="Allows for the construction of NanoVDB grids without any dependency. ">GridBuilder</a> contains a valid signed distance field </dd></dl>
 
 </div>
 </div>
@@ -400,8 +400,8 @@ class nanovdb::GridBuilder&lt; ValueT, BuildT, StatsT &gt;</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Performs multi-threaded bottum-up signed-distance flood-filling and changes GridClass to LevelSet. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Only call this method once this <a class="el" href="classnanovdb_1_1GridBuilder.html" title="Allows for the construction of NanoVDB grids without any dependecy. ">GridBuilder</a> contains a valid signed distance field </dd></dl>
+<p>Performs multi-threaded bottom-up signed-distance flood-filling and changes GridClass to LevelSet. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Only call this method once this <a class="el" href="classnanovdb_1_1GridBuilder.html" title="Allows for the construction of NanoVDB grids without any dependency. ">GridBuilder</a> contains a valid signed distance field </dd></dl>
 
 </div>
 </div>

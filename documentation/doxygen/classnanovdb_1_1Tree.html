@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -177,9 +177,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a96a9b9032b2eec85384a96ad8b436555"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Tree.html#a96a9b9032b2eec85384a96ad8b436555">activeVoxelCount</a> () const </td></tr>
 <tr class="memdesc:a96a9b9032b2eec85384a96ad8b436555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the total number of active voxels in this tree.  <a href="#a96a9b9032b2eec85384a96ad8b436555">More...</a><br /></td></tr>
 <tr class="separator:a96a9b9032b2eec85384a96ad8b436555"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf0bde4e5cc0cc73c84594449fcf8683"><td class="memItemLeft" align="right" valign="top">const uint32_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Tree.html#acf0bde4e5cc0cc73c84594449fcf8683">activeTileCount</a> (uint32_t n) const </td></tr>
-<tr class="memdesc:acf0bde4e5cc0cc73c84594449fcf8683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the total number of active tiles at the specified level of the tree.  <a href="#acf0bde4e5cc0cc73c84594449fcf8683">More...</a><br /></td></tr>
-<tr class="separator:acf0bde4e5cc0cc73c84594449fcf8683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac015937b7e1e71ab77c27f063e62306"><td class="memItemLeft" align="right" valign="top">const uint32_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Tree.html#aac015937b7e1e71ab77c27f063e62306">activeTileCount</a> (uint32_t level) const </td></tr>
+<tr class="memdesc:aac015937b7e1e71ab77c27f063e62306"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the total number of active tiles at the specified level of the tree.  <a href="#aac015937b7e1e71ab77c27f063e62306">More...</a><br /></td></tr>
+<tr class="separator:aac015937b7e1e71ab77c27f063e62306"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b195ef56616a379ec6671c403128d1a"><td class="memTemplParams" colspan="2">template&lt;typename NodeT &gt; </td></tr>
 <tr class="memitem:a8b195ef56616a379ec6671c403128d1a"><td class="memTemplItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Tree.html#a8b195ef56616a379ec6671c403128d1a">nodeCount</a> () const </td></tr>
 <tr class="separator:a8b195ef56616a379ec6671c403128d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,6 +201,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adc5d06543df0efd1e69d56fd75f9bd81"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1NodeTrait.html">NodeTrait</a>&lt; RootT, LEVEL &gt;::type *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Tree.html#adc5d06543df0efd1e69d56fd75f9bd81">getFirstNode</a> () const </td></tr>
 <tr class="memdesc:adc5d06543df0efd1e69d56fd75f9bd81"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a const pointer to the first node of the specified level  <a href="#adc5d06543df0efd1e69d56fd75f9bd81">More...</a><br /></td></tr>
 <tr class="separator:adc5d06543df0efd1e69d56fd75f9bd81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdc2d65472cd5c1fff87ea94c3603a50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Tree.html#a49a3e471741666bcbef85da105f05a9c">LeafNodeType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Tree.html#afdc2d65472cd5c1fff87ea94c3603a50">getFirstLeaf</a> ()</td></tr>
+<tr class="memdesc:afdc2d65472cd5c1fff87ea94c3603a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specializations of getFirstNode.  <a href="#afdc2d65472cd5c1fff87ea94c3603a50">More...</a><br /></td></tr>
+<tr class="separator:afdc2d65472cd5c1fff87ea94c3603a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5dc0eeca45b8fa03528d48d9db38003"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1Tree.html#a49a3e471741666bcbef85da105f05a9c">LeafNodeType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Tree.html#ab5dc0eeca45b8fa03528d48d9db38003">getFirstLeaf</a> () const </td></tr>
+<tr class="separator:ab5dc0eeca45b8fa03528d48d9db38003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34a98ce037062b86bab0c05f2dd6d988"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1NodeTrait.html">NodeTrait</a>&lt; RootT, 1 &gt;::type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Tree.html#a34a98ce037062b86bab0c05f2dd6d988">getFirstLower</a> ()</td></tr>
+<tr class="separator:a34a98ce037062b86bab0c05f2dd6d988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad483a2741d70f03aaab8c85f5ae85586"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1NodeTrait.html">NodeTrait</a>&lt; RootT, 1 &gt;::type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Tree.html#ad483a2741d70f03aaab8c85f5ae85586">getFirstLower</a> () const </td></tr>
+<tr class="separator:ad483a2741d70f03aaab8c85f5ae85586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6285a1a327d456a52c6ed2b668702afc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1NodeTrait.html">NodeTrait</a>&lt; RootT, 2 &gt;::type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Tree.html#a6285a1a327d456a52c6ed2b668702afc">getFirstUpper</a> ()</td></tr>
+<tr class="separator:a6285a1a327d456a52c6ed2b668702afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f9af13317ccf12e84cc8ff6e60dc45"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1NodeTrait.html">NodeTrait</a>&lt; RootT, 2 &gt;::type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Tree.html#a63f9af13317ccf12e84cc8ff6e60dc45">getFirstUpper</a> () const </td></tr>
+<tr class="separator:a63f9af13317ccf12e84cc8ff6e60dc45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -442,7 +455,7 @@ class nanovdb::Tree&lt; RootT &gt;</h3>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="acf0bde4e5cc0cc73c84594449fcf8683"></a>
+<a class="anchor" id="aac015937b7e1e71ab77c27f063e62306"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -453,7 +466,7 @@ class nanovdb::Tree&lt; RootT &gt;</h3>
           <td class="memname">const uint32_t&amp; activeTileCount </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -465,7 +478,7 @@ class nanovdb::Tree&lt; RootT &gt;</h3>
 </div><div class="memdoc">
 
 <p>Return the total number of active tiles at the specified level of the tree. </p>
-<p>n = 0 corresponds to leaf level tiles. </p>
+<p>level = 1,2,3 corresponds to active tile count in lower internal nodes, upper internal nodes, and the root level. Note active values at the leaf level are referred to as active voxels (see activeVoxelCount defined above). </p>
 
 </div>
 </div>
@@ -641,6 +654,100 @@ class nanovdb::Tree&lt; RootT &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="afdc2d65472cd5c1fff87ea94c3603a50"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1Tree.html#a49a3e471741666bcbef85da105f05a9c">LeafNodeType</a>* getFirstLeaf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Template specializations of getFirstNode. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab5dc0eeca45b8fa03528d48d9db38003"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classnanovdb_1_1Tree.html#a49a3e471741666bcbef85da105f05a9c">LeafNodeType</a>* getFirstLeaf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a34a98ce037062b86bab0c05f2dd6d988"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1NodeTrait.html">NodeTrait</a>&lt;RootT, 1&gt;::type* getFirstLower </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad483a2741d70f03aaab8c85f5ae85586"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structnanovdb_1_1NodeTrait.html">NodeTrait</a>&lt;RootT, 1&gt;::type* getFirstLower </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8b0d51977c6812800d0395fc792c04ac"></a>
 <div class="memitem">
 <div class="memproto">
@@ -742,6 +849,52 @@ class nanovdb::Tree&lt; RootT &gt;</h3>
 
 <p>return a const pointer to the first node of the specified level </p>
 <dl class="section warning"><dt>Warning</dt><dd>Note it may return NULL if no nodes exist </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6285a1a327d456a52c6ed2b668702afc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1NodeTrait.html">NodeTrait</a>&lt;RootT, 2&gt;::type* getFirstUpper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a63f9af13317ccf12e84cc8ff6e60dc45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structnanovdb_1_1NodeTrait.html">NodeTrait</a>&lt;RootT, 2&gt;::type* getFirstUpper </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -172,6 +172,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a981ec126856d97e370e97bc55ee769c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06018a9fa784a4baa3caaa57023447bb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#a06018a9fa784a4baa3caaa57023447bb">KeyToCoord</a> (const <a class="el" href="structnanovdb_1_1RootData.html#a5699e4397038afcbc1e0d7828c9e71d2">KeyT</a> &amp;key)</td></tr>
 <tr class="separator:a06018a9fa784a4baa3caaa57023447bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a885bc3eda95d14f11aa2a9ad0e521582"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#a885bc3eda95d14f11aa2a9ad0e521582">padding</a> ()</td></tr>
+<tr class="memdesc:a885bc3eda95d14f11aa2a9ad0e521582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return padding of this class in bytes, due to aliasing and 32B alignment.  <a href="#a885bc3eda95d14f11aa2a9ad0e521582">More...</a><br /></td></tr>
+<tr class="separator:a885bc3eda95d14f11aa2a9ad0e521582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -527,6 +530,32 @@ struct nanovdb::RootData&lt; ChildT &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a885bc3eda95d14f11aa2a9ad0e521582"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr uint32_t padding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return padding of this class in bytes, due to aliasing and 32B alignment. </p>
+<dl class="section note"><dt>Note</dt><dd>The extra bytes are not necessarily at the end, but can come from aliasing of individual data members. </dd></dl>
 
 </div>
 </div>

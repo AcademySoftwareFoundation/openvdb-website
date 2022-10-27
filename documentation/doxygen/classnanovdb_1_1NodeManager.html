@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>OpenVDB: NodeManager&lt; GridT &gt; Class Template Reference</title>
+<title>OpenVDB: NodeManager&lt; BuildT &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -90,111 +90,116 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classnanovdb_1_1NodeManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">NodeManager&lt; GridT &gt; Class Template Reference</div>  </div>
+<div class="title">NodeManager&lt; BuildT &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>NodeNanager maintains separate linear arrays of the three nodes types.  
+<p><a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> allows for sequential access to nodes.  
  <a href="classnanovdb_1_1NodeManager.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="nanovdb_2nanovdb_2util_2NodeManager_8h_source.html">nanovdb/util/NodeManager.h</a>&gt;</code></p>
+
+<p>Inherits <a class="el" href="structnanovdb_1_1NodeManagerData.html">NodeManagerData</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a02671839e383b7762e09828711d58ea8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a02671839e383b7762e09828711d58ea8">NodeManager</a> ()</td></tr>
-<tr class="memdesc:a02671839e383b7762e09828711d58ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor.  <a href="#a02671839e383b7762e09828711d58ea8">More...</a><br /></td></tr>
-<tr class="separator:a02671839e383b7762e09828711d58ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3e8b7da33c49a1c0a066901c7f4ffe9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#ab3e8b7da33c49a1c0a066901c7f4ffe9">NodeManager</a> (GridT &amp;<a class="el" href="classnanovdb_1_1NodeManager.html#a1fdc3a2e153dd6a4074ce749f1c9b039">grid</a>)</td></tr>
-<tr class="memdesc:ab3e8b7da33c49a1c0a066901c7f4ffe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construction from a grid.  <a href="#ab3e8b7da33c49a1c0a066901c7f4ffe9">More...</a><br /></td></tr>
-<tr class="separator:ab3e8b7da33c49a1c0a066901c7f4ffe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ddbb7c3121758a49ef6a68caac84f72"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a3ddbb7c3121758a49ef6a68caac84f72">NodeManager</a> (const <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a> &amp;)=delete</td></tr>
-<tr class="memdesc:a3ddbb7c3121758a49ef6a68caac84f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow copy construction.  <a href="#a3ddbb7c3121758a49ef6a68caac84f72">More...</a><br /></td></tr>
 <tr class="separator:a3ddbb7c3121758a49ef6a68caac84f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af56d91c486eedcbeac613c5dade20a51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#af56d91c486eedcbeac613c5dade20a51">NodeManager</a> (<a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a> &amp;&amp;)</td></tr>
-<tr class="memdesc:af56d91c486eedcbeac613c5dade20a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor.  <a href="#af56d91c486eedcbeac613c5dade20a51">More...</a><br /></td></tr>
-<tr class="separator:af56d91c486eedcbeac613c5dade20a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6df896b142eb8999456c7bc1e7073214"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a6df896b142eb8999456c7bc1e7073214">~NodeManager</a> ()</td></tr>
-<tr class="memdesc:a6df896b142eb8999456c7bc1e7073214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a6df896b142eb8999456c7bc1e7073214">More...</a><br /></td></tr>
-<tr class="separator:a6df896b142eb8999456c7bc1e7073214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a438099dffacf0848473ab95146e3f193"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a438099dffacf0848473ab95146e3f193">NodeManager</a> (<a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a438099dffacf0848473ab95146e3f193"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a899f21a862ffbc607d2213425a2fe7c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a899f21a862ffbc607d2213425a2fe7c8">operator=</a> (const <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a> &amp;)=delete</td></tr>
-<tr class="memdesc:a899f21a862ffbc607d2213425a2fe7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow copy assignment operator.  <a href="#a899f21a862ffbc607d2213425a2fe7c8">More...</a><br /></td></tr>
 <tr class="separator:a899f21a862ffbc607d2213425a2fe7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eb98c19fc25382e4104ed6886f7cea4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a5eb98c19fc25382e4104ed6886f7cea4">operator=</a> (<a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a> &amp;&amp;)</td></tr>
-<tr class="memdesc:a5eb98c19fc25382e4104ed6886f7cea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator.  <a href="#a5eb98c19fc25382e4104ed6886f7cea4">More...</a><br /></td></tr>
-<tr class="separator:a5eb98c19fc25382e4104ed6886f7cea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6e61de369e994009e36f344f99c15ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#ac6e61de369e994009e36f344f99c15ad">empty</a> () const </td></tr>
-<tr class="memdesc:ac6e61de369e994009e36f344f99c15ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true of this instance is uninitialized.  <a href="#ac6e61de369e994009e36f344f99c15ad">More...</a><br /></td></tr>
-<tr class="separator:ac6e61de369e994009e36f344f99c15ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5aca2ade65de662ce2bef5b16bf0152"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#af5aca2ade65de662ce2bef5b16bf0152">memUsage</a> () const </td></tr>
-<tr class="memdesc:af5aca2ade65de662ce2bef5b16bf0152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the memory footprint in bytes of this instance.  <a href="#af5aca2ade65de662ce2bef5b16bf0152">More...</a><br /></td></tr>
-<tr class="separator:af5aca2ade65de662ce2bef5b16bf0152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fdc3a2e153dd6a4074ce749f1c9b039"><td class="memItemLeft" align="right" valign="top">GridT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a1fdc3a2e153dd6a4074ce749f1c9b039">grid</a> ()</td></tr>
-<tr class="memdesc:a1fdc3a2e153dd6a4074ce749f1c9b039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the grid, or NULL if it is uninitialized.  <a href="#a1fdc3a2e153dd6a4074ce749f1c9b039">More...</a><br /></td></tr>
-<tr class="separator:a1fdc3a2e153dd6a4074ce749f1c9b039"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac849e1938c168e3377893e5c8e2821fe"><td class="memItemLeft" align="right" valign="top">TreeT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#ac849e1938c168e3377893e5c8e2821fe">tree</a> ()</td></tr>
-<tr class="memdesc:ac849e1938c168e3377893e5c8e2821fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the tree, or NULL if it is uninitialized.  <a href="#ac849e1938c168e3377893e5c8e2821fe">More...</a><br /></td></tr>
-<tr class="separator:ac849e1938c168e3377893e5c8e2821fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2deb404f98061841420c7d4fb2a38221"><td class="memItemLeft" align="right" valign="top">RootT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a2deb404f98061841420c7d4fb2a38221">root</a> ()</td></tr>
-<tr class="memdesc:a2deb404f98061841420c7d4fb2a38221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the root, or NULL if it is uninitialized.  <a href="#a2deb404f98061841420c7d4fb2a38221">More...</a><br /></td></tr>
-<tr class="separator:a2deb404f98061841420c7d4fb2a38221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3680a52872003d02081f7568ea97b670"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a3680a52872003d02081f7568ea97b670">operator=</a> (<a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a3680a52872003d02081f7568ea97b670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6057d8c3dfe5ffe9ea2fb84436d890e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a6057d8c3dfe5ffe9ea2fb84436d890e3">~NodeManager</a> ()=delete</td></tr>
+<tr class="separator:a6057d8c3dfe5ffe9ea2fb84436d890e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792fef1281c0bcc191b5bf4330f5eeb3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a792fef1281c0bcc191b5bf4330f5eeb3">isLinear</a> () const </td></tr>
+<tr class="memdesc:a792fef1281c0bcc191b5bf4330f5eeb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if the nodes have both fixed size and are arranged breadth-first in memory. This allows for direct and memory-efficient linear access to nodes.  <a href="#a792fef1281c0bcc191b5bf4330f5eeb3">More...</a><br /></td></tr>
+<tr class="separator:a792fef1281c0bcc191b5bf4330f5eeb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9b947c3acec47f5399bd8cf214c2c79"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#af9b947c3acec47f5399bd8cf214c2c79">memUsage</a> () const </td></tr>
+<tr class="memdesc:af9b947c3acec47f5399bd8cf214c2c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the memory footprint in bytes of this instance.  <a href="#af9b947c3acec47f5399bd8cf214c2c79">More...</a><br /></td></tr>
+<tr class="separator:af9b947c3acec47f5399bd8cf214c2c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7076c1fc898a404bc7c70a6633ce618e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Grid.html">GridT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a7076c1fc898a404bc7c70a6633ce618e">grid</a> ()</td></tr>
+<tr class="memdesc:a7076c1fc898a404bc7c70a6633ce618e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the grid.  <a href="#a7076c1fc898a404bc7c70a6633ce618e">More...</a><br /></td></tr>
+<tr class="separator:a7076c1fc898a404bc7c70a6633ce618e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ed2c1f6ada573a8cef388792bf0af3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1Grid.html">GridT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a73ed2c1f6ada573a8cef388792bf0af3">grid</a> () const </td></tr>
+<tr class="separator:a73ed2c1f6ada573a8cef388792bf0af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f998377a65b926eb0626296ec5208b3"><td class="memItemLeft" align="right" valign="top">TreeT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a4f998377a65b926eb0626296ec5208b3">tree</a> ()</td></tr>
+<tr class="memdesc:a4f998377a65b926eb0626296ec5208b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the tree.  <a href="#a4f998377a65b926eb0626296ec5208b3">More...</a><br /></td></tr>
+<tr class="separator:a4f998377a65b926eb0626296ec5208b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86621db4d1f486e9590128ff8c87c5ed"><td class="memItemLeft" align="right" valign="top">const TreeT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a86621db4d1f486e9590128ff8c87c5ed">tree</a> () const </td></tr>
+<tr class="separator:a86621db4d1f486e9590128ff8c87c5ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae065c754b6022f285060077d9b89001e"><td class="memItemLeft" align="right" valign="top">RootT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#ae065c754b6022f285060077d9b89001e">root</a> ()</td></tr>
+<tr class="memdesc:ae065c754b6022f285060077d9b89001e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the root.  <a href="#ae065c754b6022f285060077d9b89001e">More...</a><br /></td></tr>
+<tr class="separator:ae065c754b6022f285060077d9b89001e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf63e41a40d8738033567d54434a6559"><td class="memItemLeft" align="right" valign="top">const RootT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#acf63e41a40d8738033567d54434a6559">root</a> () const </td></tr>
+<tr class="separator:acf63e41a40d8738033567d54434a6559"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af70f2bddc40004e2ad145f83cab9ff7a"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#af70f2bddc40004e2ad145f83cab9ff7a">nodeCount</a> (int level) const </td></tr>
 <tr class="memdesc:af70f2bddc40004e2ad145f83cab9ff7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of tree nodes at the specified level.  <a href="#af70f2bddc40004e2ad145f83cab9ff7a">More...</a><br /></td></tr>
 <tr class="separator:af70f2bddc40004e2ad145f83cab9ff7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0015bb0de9fe23db9df7c4848e187cc3"><td class="memItemLeft" align="right" valign="top">Node0 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a0015bb0de9fe23db9df7c4848e187cc3">leaf</a> (uint32_t i) const </td></tr>
-<tr class="memdesc:a0015bb0de9fe23db9df7c4848e187cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i'th leaf node.  <a href="#a0015bb0de9fe23db9df7c4848e187cc3">More...</a><br /></td></tr>
-<tr class="separator:a0015bb0de9fe23db9df7c4848e187cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10c751a1ad1c71d62fbdcb1318137d4b"><td class="memItemLeft" align="right" valign="top">Node1 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a10c751a1ad1c71d62fbdcb1318137d4b">lower</a> (uint32_t i) const </td></tr>
-<tr class="memdesc:a10c751a1ad1c71d62fbdcb1318137d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i'th lower internal node.  <a href="#a10c751a1ad1c71d62fbdcb1318137d4b">More...</a><br /></td></tr>
-<tr class="separator:a10c751a1ad1c71d62fbdcb1318137d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a203111f96f60ef50a7d72590ff1383e7"><td class="memItemLeft" align="right" valign="top">Node2 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a203111f96f60ef50a7d72590ff1383e7">upper</a> (uint32_t i) const </td></tr>
-<tr class="memdesc:a203111f96f60ef50a7d72590ff1383e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i'th upper internal node.  <a href="#a203111f96f60ef50a7d72590ff1383e7">More...</a><br /></td></tr>
-<tr class="separator:a203111f96f60ef50a7d72590ff1383e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08c6e9f41cb52278149c5408dbab4e63"><td class="memTemplParams" colspan="2">template&lt;int LEVEL&gt; </td></tr>
+<tr class="memitem:a08c6e9f41cb52278149c5408dbab4e63"><td class="memTemplItemLeft" align="right" valign="top">const NodeT&lt; LEVEL &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a08c6e9f41cb52278149c5408dbab4e63">node</a> (uint32_t i) const </td></tr>
+<tr class="memdesc:a08c6e9f41cb52278149c5408dbab4e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i'th leaf node with respect to breadth-first ordering.  <a href="#a08c6e9f41cb52278149c5408dbab4e63">More...</a><br /></td></tr>
+<tr class="separator:a08c6e9f41cb52278149c5408dbab4e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1d3598d47545618af94bf4f8c0db339"><td class="memTemplParams" colspan="2">template&lt;int LEVEL&gt; </td></tr>
+<tr class="memitem:ab1d3598d47545618af94bf4f8c0db339"><td class="memTemplItemLeft" align="right" valign="top">NodeT&lt; LEVEL &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#ab1d3598d47545618af94bf4f8c0db339">node</a> (uint32_t i)</td></tr>
+<tr class="memdesc:ab1d3598d47545618af94bf4f8c0db339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i'th node with respect to breadth-first ordering.  <a href="#ab1d3598d47545618af94bf4f8c0db339">More...</a><br /></td></tr>
+<tr class="separator:ab1d3598d47545618af94bf4f8c0db339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad528dfec925ac34ed1cdc59fde076b3f"><td class="memItemLeft" align="right" valign="top">const Node0 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#ad528dfec925ac34ed1cdc59fde076b3f">leaf</a> (uint32_t i) const </td></tr>
+<tr class="memdesc:ad528dfec925ac34ed1cdc59fde076b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i'th leaf node with respect to breadth-first ordering.  <a href="#ad528dfec925ac34ed1cdc59fde076b3f">More...</a><br /></td></tr>
+<tr class="separator:ad528dfec925ac34ed1cdc59fde076b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59294505ead2f61414694675ef7d9ed5"><td class="memItemLeft" align="right" valign="top">Node0 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a59294505ead2f61414694675ef7d9ed5">leaf</a> (uint32_t i)</td></tr>
+<tr class="separator:a59294505ead2f61414694675ef7d9ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa839ca3630f25b7bbeed518b1c7718de"><td class="memItemLeft" align="right" valign="top">const Node1 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#aa839ca3630f25b7bbeed518b1c7718de">lower</a> (uint32_t i) const </td></tr>
+<tr class="memdesc:aa839ca3630f25b7bbeed518b1c7718de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i'th lower internal node with respect to breadth-first ordering.  <a href="#aa839ca3630f25b7bbeed518b1c7718de">More...</a><br /></td></tr>
+<tr class="separator:aa839ca3630f25b7bbeed518b1c7718de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2f0c8b7a3795ecac3737c6cc257cdbd"><td class="memItemLeft" align="right" valign="top">Node1 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#ae2f0c8b7a3795ecac3737c6cc257cdbd">lower</a> (uint32_t i)</td></tr>
+<tr class="separator:ae2f0c8b7a3795ecac3737c6cc257cdbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad52381901dd6c92f008ed5b858e9e882"><td class="memItemLeft" align="right" valign="top">const Node2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#ad52381901dd6c92f008ed5b858e9e882">upper</a> (uint32_t i) const </td></tr>
+<tr class="memdesc:ad52381901dd6c92f008ed5b858e9e882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the i'th upper internal node with respect to breadth-first ordering.  <a href="#ad52381901dd6c92f008ed5b858e9e882">More...</a><br /></td></tr>
+<tr class="separator:ad52381901dd6c92f008ed5b858e9e882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8403a924b5cc941cb049931882876eb"><td class="memItemLeft" align="right" valign="top">Node2 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#ad8403a924b5cc941cb049931882876eb">upper</a> (uint32_t i)</td></tr>
+<tr class="separator:ad8403a924b5cc941cb049931882876eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a7fd3d782af34d3f4c39addd450fa8d74"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a7fd3d782af34d3f4c39addd450fa8d74">isLinear</a> (const <a class="el" href="classnanovdb_1_1Grid.html">GridT</a> &amp;<a class="el" href="classnanovdb_1_1NodeManager.html#a7076c1fc898a404bc7c70a6633ce618e">grid</a>)</td></tr>
+<tr class="memdesc:a7fd3d782af34d3f4c39addd450fa8d74"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if the nodes have both fixed size and are arranged breadth-first in memory. This allows for direct and memory-efficient linear access to nodes.  <a href="#a7fd3d782af34d3f4c39addd450fa8d74">More...</a><br /></td></tr>
+<tr class="separator:a7fd3d782af34d3f4c39addd450fa8d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0d2b89e458682872bdb347da5b2c4a"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManager.html#a1b0d2b89e458682872bdb347da5b2c4a">memUsage</a> (const <a class="el" href="classnanovdb_1_1Grid.html">GridT</a> &amp;<a class="el" href="classnanovdb_1_1NodeManager.html#a7076c1fc898a404bc7c70a6633ce618e">grid</a>)</td></tr>
+<tr class="memdesc:a1b0d2b89e458682872bdb347da5b2c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the memory footprint in bytes of the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> derived from the specified grid.  <a href="#a1b0d2b89e458682872bdb347da5b2c4a">More...</a><br /></td></tr>
+<tr class="separator:a1b0d2b89e458682872bdb347da5b2c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4d9c3cc33722f025c3a6c3929774e203"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1NodeManagerData.html#a4d9c3cc33722f025c3a6c3929774e203">mMagic</a></td></tr>
+<tr class="separator:a4d9c3cc33722f025c3a6c3929774e203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c125b18ee2cabfae295d1d0fa97ee6b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1NodeManagerData.html#a7c125b18ee2cabfae295d1d0fa97ee6b">mGrid</a></td></tr>
+<tr class="separator:a7c125b18ee2cabfae295d1d0fa97ee6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43f12a061d96013c24d38c717a6609e4"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a133dd83ac541fdea57805e1e39ab2a1a"><td class="memItemLeft" >&#160;&#160;&#160;int64_t *&#160;&#160;&#160;<a class="el" href="structnanovdb_1_1NodeManagerData.html#a133dd83ac541fdea57805e1e39ab2a1a">mPtr</a> [3]</td></tr>
+<tr class="separator:a133dd83ac541fdea57805e1e39ab2a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281fc0a764c21078e8eb9eb3e551d23f"><td class="memItemLeft" >&#160;&#160;&#160;int64_t&#160;&#160;&#160;<a class="el" href="structnanovdb_1_1NodeManagerData.html#a281fc0a764c21078e8eb9eb3e551d23f">mOff</a> [3]</td></tr>
+<tr class="separator:a281fc0a764c21078e8eb9eb3e551d23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43f12a061d96013c24d38c717a6609e4"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a43f12a061d96013c24d38c717a6609e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8457a4942de658b7f2a5ee6036b543e2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1NodeManagerData.html#a8457a4942de658b7f2a5ee6036b543e2">mLinear</a></td></tr>
+<tr class="separator:a8457a4942de658b7f2a5ee6036b543e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a233b3dc433dec00ccc86680a086bc400"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1NodeManagerData.html#a233b3dc433dec00ccc86680a086bc400">mPadding</a> [7]</td></tr>
+<tr class="separator:a233b3dc433dec00ccc86680a086bc400"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename GridT&gt;<br />
-class nanovdb::NodeManager&lt; GridT &gt;</h3>
+<div class="textblock"><h3>template&lt;typename BuildT&gt;<br />
+class nanovdb::NodeManager&lt; BuildT &gt;</h3>
 
-<p>NodeNanager maintains separate linear arrays of the three nodes types. </p>
-<p>This host class allows for sequential access to nodes in a NanoVDB tree.</p>
-<p>Nodes are stored breadth first to allow for sequential access of nodes at a particular level. </p>
+<p><a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> allows for sequential access to nodes. </p>
+<p>This class allows for sequential access to nodes in a NanoVDB tree.</p>
+<p>Nodes are always arranged breadth first during sequential access of nodes at a particular level. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a02671839e383b7762e09828711d58ea8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Empty constructor. </p>
-
-</div>
-</div>
-<a class="anchor" id="ab3e8b7da33c49a1c0a066901c7f4ffe9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a> </td>
-          <td>(</td>
-          <td class="paramtype">GridT &amp;&#160;</td>
-          <td class="paramname"><em>grid</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construction from a grid. </p>
-
-</div>
-</div>
 <a class="anchor" id="a3ddbb7c3121758a49ef6a68caac84f72"></a>
 <div class="memitem">
 <div class="memproto">
@@ -205,7 +210,7 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; GridT &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; BuildT &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -217,29 +222,33 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Disallow copy construction. </p>
-
 </div>
 </div>
-<a class="anchor" id="af56d91c486eedcbeac613c5dade20a51"></a>
+<a class="anchor" id="a438099dffacf0848473ab95146e3f193"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; GridT &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; BuildT &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Move constructor. </p>
-
 </div>
 </div>
-<a class="anchor" id="a6df896b142eb8999456c7bc1e7073214"></a>
+<a class="anchor" id="a6057d8c3dfe5ffe9ea2fb84436d890e3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -255,17 +264,15 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Destructor. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ac6e61de369e994009e36f344f99c15ad"></a>
+<a class="anchor" id="a7076c1fc898a404bc7c70a6633ce618e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -273,32 +280,7 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool empty </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return true of this instance is uninitialized. </p>
-
-</div>
-</div>
-<a class="anchor" id="a1fdc3a2e153dd6a4074ce749f1c9b039"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">GridT* grid </td>
+          <td class="memname"><a class="el" href="classnanovdb_1_1Grid.html">GridT</a>&amp; grid </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -311,11 +293,11 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Return a pointer to the grid, or NULL if it is uninitialized. </p>
+<p>Return a reference to the grid. </p>
 
 </div>
 </div>
-<a class="anchor" id="a0015bb0de9fe23db9df7c4848e187cc3"></a>
+<a class="anchor" id="a73ed2c1f6ada573a8cef388792bf0af3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -323,7 +305,81 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Node0* leaf </td>
+          <td class="memname">const <a class="el" href="classnanovdb_1_1Grid.html">GridT</a>&amp; grid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7fd3d782af34d3f4c39addd450fa8d74"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool isLinear </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1Grid.html">GridT</a> &amp;&#160;</td>
+          <td class="paramname"><em>grid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return true if the nodes have both fixed size and are arranged breadth-first in memory. This allows for direct and memory-efficient linear access to nodes. </p>
+
+</div>
+</div>
+<a class="anchor" id="a792fef1281c0bcc191b5bf4330f5eeb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isLinear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return true if the nodes have both fixed size and are arranged breadth-first in memory. This allows for direct and memory-efficient linear access to nodes. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad528dfec925ac34ed1cdc59fde076b3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Node0&amp; leaf </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -337,12 +393,11 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Return the i'th leaf node. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Never call this method is the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeNanager maintains separate linear arrays of the three nodes types. ">NodeManager</a> is un-initialized </dd></dl>
+<p>Return the i'th leaf node with respect to breadth-first ordering. </p>
 
 </div>
 </div>
-<a class="anchor" id="a10c751a1ad1c71d62fbdcb1318137d4b"></a>
+<a class="anchor" id="a59294505ead2f61414694675ef7d9ed5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -350,7 +405,31 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Node1* lower </td>
+          <td class="memname">Node0&amp; leaf </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa839ca3630f25b7bbeed518b1c7718de"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Node1&amp; lower </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -364,12 +443,11 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Return the i'th lower internal node. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Never call this method is the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeNanager maintains separate linear arrays of the three nodes types. ">NodeManager</a> is un-initialized </dd></dl>
+<p>Return the i'th lower internal node with respect to breadth-first ordering. </p>
 
 </div>
 </div>
-<a class="anchor" id="af5aca2ade65de662ce2bef5b16bf0152"></a>
+<a class="anchor" id="ae2f0c8b7a3795ecac3737c6cc257cdbd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -377,7 +455,57 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">size_t memUsage </td>
+          <td class="memname">Node1&amp; lower </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1b0d2b89e458682872bdb347da5b2c4a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint64_t memUsage </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1Grid.html">GridT</a> &amp;&#160;</td>
+          <td class="paramname"><em>grid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the memory footprint in bytes of the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> derived from the specified grid. </p>
+
+</div>
+</div>
+<a class="anchor" id="af9b947c3acec47f5399bd8cf214c2c79"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t memUsage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -391,6 +519,58 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
 </div><div class="memdoc">
 
 <p>Return the memory footprint in bytes of this instance. </p>
+
+</div>
+</div>
+<a class="anchor" id="a08c6e9f41cb52278149c5408dbab4e63"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const NodeT&lt;LEVEL&gt;&amp; node </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the i'th leaf node with respect to breadth-first ordering. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab1d3598d47545618af94bf4f8c0db339"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NodeT&lt;LEVEL&gt;&amp; node </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the i'th node with respect to breadth-first ordering. </p>
 
 </div>
 </div>
@@ -417,6 +597,7 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
 </div><div class="memdoc">
 
 <p>Return the number of tree nodes at the specified level. </p>
+<p>0 is leaf, 1 is lower internal, and 2 is upper internal level </p>
 
 </div>
 </div>
@@ -430,7 +611,7 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; GridT &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; BuildT &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -442,29 +623,9 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Disallow copy assignment operator. </p>
-
 </div>
 </div>
-<a class="anchor" id="a5eb98c19fc25382e4104ed6886f7cea4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; GridT &gt; &amp; operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; GridT &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Move assignment operator. </p>
-
-</div>
-</div>
-<a class="anchor" id="a2deb404f98061841420c7d4fb2a38221"></a>
+<a class="anchor" id="a3680a52872003d02081f7568ea97b670"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -472,7 +633,31 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">RootT* root </td>
+          <td class="memname"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; BuildT &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae065c754b6022f285060077d9b89001e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RootT&amp; root </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -485,11 +670,11 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Return a pointer to the root, or NULL if it is uninitialized. </p>
+<p>Return a reference to the root. </p>
 
 </div>
 </div>
-<a class="anchor" id="ac849e1938c168e3377893e5c8e2821fe"></a>
+<a class="anchor" id="acf63e41a40d8738033567d54434a6559"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -497,7 +682,30 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TreeT* tree </td>
+          <td class="memname">const RootT&amp; root </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4f998377a65b926eb0626296ec5208b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TreeT&amp; tree </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -510,11 +718,11 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Return a pointer to the tree, or NULL if it is uninitialized. </p>
+<p>Return a reference to the tree. </p>
 
 </div>
 </div>
-<a class="anchor" id="a203111f96f60ef50a7d72590ff1383e7"></a>
+<a class="anchor" id="a86621db4d1f486e9590128ff8c87c5ed"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -522,7 +730,30 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Node2* upper </td>
+          <td class="memname">const TreeT&amp; tree </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad52381901dd6c92f008ed5b858e9e882"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Node2&amp; upper </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -536,8 +767,31 @@ class nanovdb::NodeManager&lt; GridT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Return the i'th upper internal node. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Never call this method is the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeNanager maintains separate linear arrays of the three nodes types. ">NodeManager</a> is un-initialized </dd></dl>
+<p>Return the i'th upper internal node with respect to breadth-first ordering. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad8403a924b5cc941cb049931882876eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Node2&amp; upper </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

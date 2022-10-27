@@ -2,6 +2,7 @@ var searchData=
 [
   ['pnanovdb_5fgrid_5fclass_5fend',['PNANOVDB_GRID_CLASS_END',['../PNanoVDB_8h.html#ada3c1f596ab29ad672e87174d0bd5caf',1,'PNanoVDB.h']]],
   ['pnanovdb_5fgrid_5fclass_5ffog_5fvolume',['PNANOVDB_GRID_CLASS_FOG_VOLUME',['../PNanoVDB_8h.html#aeccdfa8019089c243089f09dd56064ab',1,'PNanoVDB.h']]],
+  ['pnanovdb_5fgrid_5fclass_5findex_5fgrid',['PNANOVDB_GRID_CLASS_INDEX_GRID',['../PNanoVDB_8h.html#a2cbc497a20283aaca9cca107faf4a72c',1,'PNanoVDB.h']]],
   ['pnanovdb_5fgrid_5fclass_5flevel_5fset',['PNANOVDB_GRID_CLASS_LEVEL_SET',['../PNanoVDB_8h.html#a6548de00401f6fb0121ed87cc008e5ec',1,'PNanoVDB.h']]],
   ['pnanovdb_5fgrid_5fclass_5fpoint_5fdata',['PNANOVDB_GRID_CLASS_POINT_DATA',['../PNanoVDB_8h.html#ab6efc5ee3b40ccffe7169f17506403f9',1,'PNanoVDB.h']]],
   ['pnanovdb_5fgrid_5fclass_5fpoint_5findex',['PNANOVDB_GRID_CLASS_POINT_INDEX',['../PNanoVDB_8h.html#a6db15d3cf8ead0a8a4be518f63610662',1,'PNanoVDB.h']]],
@@ -41,6 +42,7 @@ var searchData=
   ['pnanovdb_5fgrid_5ftype_5ffp8',['PNANOVDB_GRID_TYPE_FP8',['../PNanoVDB_8h.html#ad381669a5c42a818b46eb4837faa6fc3',1,'PNanoVDB.h']]],
   ['pnanovdb_5fgrid_5ftype_5ffpn',['PNANOVDB_GRID_TYPE_FPN',['../PNanoVDB_8h.html#a65edc7af8e5c29065bd145a651f602f8',1,'PNanoVDB.h']]],
   ['pnanovdb_5fgrid_5ftype_5fhalf',['PNANOVDB_GRID_TYPE_HALF',['../PNanoVDB_8h.html#aea39318cd3c912b696e648b47528f424',1,'PNanoVDB.h']]],
+  ['pnanovdb_5fgrid_5ftype_5findex',['PNANOVDB_GRID_TYPE_INDEX',['../PNanoVDB_8h.html#a21237d784a10b51fee0293fbbd5b7fdf',1,'PNanoVDB.h']]],
   ['pnanovdb_5fgrid_5ftype_5fint16',['PNANOVDB_GRID_TYPE_INT16',['../PNanoVDB_8h.html#a9b0b4d4920fe586a919c0b12dd11565a',1,'PNanoVDB.h']]],
   ['pnanovdb_5fgrid_5ftype_5fint32',['PNANOVDB_GRID_TYPE_INT32',['../PNanoVDB_8h.html#ab99fcfef4113af49fb1fd32e721e9413',1,'PNanoVDB.h']]],
   ['pnanovdb_5fgrid_5ftype_5fint64',['PNANOVDB_GRID_TYPE_INT64',['../PNanoVDB_8h.html#aca137fd6d1b6a861f8f8077de17c331a',1,'PNanoVDB.h']]],
@@ -70,6 +72,7 @@ var searchData=
   ['pnanovdb_5fleaf_5ftable_5fneg_5foff_5fquantum',['PNANOVDB_LEAF_TABLE_NEG_OFF_QUANTUM',['../PNanoVDB_8h.html#a7f7e41bd3ee18d226fbbeb15135a0d70',1,'PNanoVDB.h']]],
   ['pnanovdb_5fleaf_5ftype_5fdefault',['PNANOVDB_LEAF_TYPE_DEFAULT',['../PNanoVDB_8h.html#ac4a38c5cba91acf80254eda1716bd67b',1,'PNanoVDB.h']]],
   ['pnanovdb_5fleaf_5ftype_5ffp',['PNANOVDB_LEAF_TYPE_FP',['../PNanoVDB_8h.html#a63d8d7f2ed478bad41a098b0a5b09b04',1,'PNanoVDB.h']]],
+  ['pnanovdb_5fleaf_5ftype_5findex',['PNANOVDB_LEAF_TYPE_INDEX',['../PNanoVDB_8h.html#aa66d69a9a0b24ff49257333839d072f3',1,'PNanoVDB.h']]],
   ['pnanovdb_5fleaf_5ftype_5flite',['PNANOVDB_LEAF_TYPE_LITE',['../PNanoVDB_8h.html#a16df8a737f38e7c012f73bc0133ee73c',1,'PNanoVDB.h']]],
   ['pnanovdb_5flower_5fbase_5fsize',['PNANOVDB_LOWER_BASE_SIZE',['../PNanoVDB_8h.html#a8fee477a957b1a1d441c04fafea06b49',1,'PNanoVDB.h']]],
   ['pnanovdb_5flower_5foff_5fbbox_5fmax',['PNANOVDB_LOWER_OFF_BBOX_MAX',['../PNanoVDB_8h.html#a9e9a281a75a24e5bd6a717899676afbd',1,'PNanoVDB.h']]],

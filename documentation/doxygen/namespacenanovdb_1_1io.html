@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -134,6 +134,22 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a72d469cc177bd21961801c8fd1197beb"><td class="memTemplParams" colspan="2">template&lt;typename StreamT &gt; </td></tr>
+<tr class="memitem:a72d469cc177bd21961801c8fd1197beb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a72d469cc177bd21961801c8fd1197beb">writeUncompressedGrid</a> (StreamT &amp;os, const void *buffer)</td></tr>
+<tr class="memdesc:a72d469cc177bd21961801c8fd1197beb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a standalone alternative to <a class="el" href="namespacenanovdb_1_1io.html#a23a82ea6fffc5138a93519144990bdca" title="Write a single grid to file (over-writing existing content of the file) ">io::writeGrid</a>(...,<a class="el" href="namespacenanovdb_1_1io.html#ae42f8cdb9215c4db646cf1021c45648aab50339a10e1de285ac99d4c3990b8693">Codec::NONE</a>) defined in <a class="el" href="IO_8h.html" title="Implements I/O for NanoVDB grids. Features optional BLOSC and ZIP file compression, support for multiple grids per file as well as multiple grid types. ">util/IO.h</a> Unlike the latter this function has no dependencies at all, not even <a class="el" href="NanoVDB_8h.html" title="Implements a light-weight self-contained VDB data-structure in a single file! In other words...">NanoVDB.h</a>, so it also works if client code only includes <a class="el" href="PNanoVDB_8h.html" title="This file is a portable (e.g. pointer-less) C99/GLSL/HLSL port of NanoVDB.h, which is compatible with...">PNanoVDB.h</a>!  <a href="#a72d469cc177bd21961801c8fd1197beb">More...</a><br /></td></tr>
+<tr class="separator:a72d469cc177bd21961801c8fd1197beb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae39477ec8228589a141dd8bff8c5f41"><td class="memTemplParams" colspan="2">template&lt;typename GridHandleT , template&lt; typename... &gt; class VecT&gt; </td></tr>
+<tr class="memitem:aae39477ec8228589a141dd8bff8c5f41"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#aae39477ec8228589a141dd8bff8c5f41">writeUncompressedGrids</a> (const char *fileName, const VecT&lt; GridHandleT &gt; &amp;handles)</td></tr>
+<tr class="memdesc:aae39477ec8228589a141dd8bff8c5f41"><td class="mdescLeft">&#160;</td><td class="mdescRight">write multiple NanoVDB grids to a single file, without compression.  <a href="#aae39477ec8228589a141dd8bff8c5f41">More...</a><br /></td></tr>
+<tr class="separator:aae39477ec8228589a141dd8bff8c5f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a187259416df09781e807ed3fb0a72a5a"><td class="memTemplParams" colspan="2">template&lt;typename GridHandleT , typename StreamT , template&lt; typename... &gt; class VecT&gt; </td></tr>
+<tr class="memitem:a187259416df09781e807ed3fb0a72a5a"><td class="memTemplItemLeft" align="right" valign="top">VecT&lt; GridHandleT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a187259416df09781e807ed3fb0a72a5a">readUncompressedGrids</a> (StreamT &amp;is, const typename GridHandleT::BufferType &amp;buffer=typename GridHandleT::BufferType())</td></tr>
+<tr class="memdesc:a187259416df09781e807ed3fb0a72a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">read all uncompressed grids from a stream and return their handles.  <a href="#a187259416df09781e807ed3fb0a72a5a">More...</a><br /></td></tr>
+<tr class="separator:a187259416df09781e807ed3fb0a72a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a7f55872a7a723a587b677b6b3c6dfa"><td class="memTemplParams" colspan="2">template&lt;typename GridHandleT , template&lt; typename... &gt; class VecT&gt; </td></tr>
+<tr class="memitem:a5a7f55872a7a723a587b677b6b3c6dfa"><td class="memTemplItemLeft" align="right" valign="top">VecT&lt; GridHandleT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a5a7f55872a7a723a587b677b6b3c6dfa">readUncompressedGrids</a> (const char *fileName, const typename GridHandleT::BufferType &amp;buffer=typename GridHandleT::BufferType())</td></tr>
+<tr class="memdesc:a5a7f55872a7a723a587b677b6b3c6dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a multiple un-compressed NanoVDB grids from a file and return them as a vector.  <a href="#a5a7f55872a7a723a587b677b6b3c6dfa">More...</a><br /></td></tr>
+<tr class="separator:a5a7f55872a7a723a587b677b6b3c6dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a156a653e24ca2ff73e1de28bf7d06bb8"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a156a653e24ca2ff73e1de28bf7d06bb8">toStr</a> (<a class="el" href="namespacenanovdb_1_1io.html#ae42f8cdb9215c4db646cf1021c45648a">Codec</a> codec)</td></tr>
 <tr class="separator:a156a653e24ca2ff73e1de28bf7d06bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a823b736a665c7befa71cbf99ec662009"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a823b736a665c7befa71cbf99ec662009">stringHash</a> (const char *cstr)</td></tr>
@@ -632,6 +648,69 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a187259416df09781e807ed3fb0a72a5a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VecT&lt;GridHandleT&gt; nanovdb::io::readUncompressedGrids </td>
+          <td>(</td>
+          <td class="paramtype">StreamT &amp;&#160;</td>
+          <td class="paramname"><em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename GridHandleT::BufferType &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em> = <code>typename&#160;GridHandleT::BufferType()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>read all uncompressed grids from a stream and return their handles. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if stream does not contain a single uncompressed valid NanoVDB grid</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>StreamT class must support: "bool read(char*, size_t)" and "void skip(uint32_t)" </p>
+
+</div>
+</div>
+<a class="anchor" id="a5a7f55872a7a723a587b677b6b3c6dfa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VecT&lt;GridHandleT&gt; nanovdb::io::readUncompressedGrids </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename GridHandleT::BufferType &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em> = <code>typename&#160;GridHandleT::BufferType()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read a multiple un-compressed NanoVDB grids from a file and return them as a vector. </p>
+
+</div>
+</div>
 <a class="anchor" id="a8a62940918d1c5f4b0f1e0402d48b986"></a>
 <div class="memitem">
 <div class="memproto">
@@ -933,6 +1012,71 @@ Functions</h2></td></tr>
 
 <p>Writes multiple grids to stream (starting at its current position) </p>
 <dl class="section note"><dt>Note</dt><dd>This method can be used to append multiple grids to an existing stream </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a72d469cc177bd21961801c8fd1197beb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nanovdb::io::writeUncompressedGrid </td>
+          <td>(</td>
+          <td class="paramtype">StreamT &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This is a standalone alternative to <a class="el" href="namespacenanovdb_1_1io.html#a23a82ea6fffc5138a93519144990bdca" title="Write a single grid to file (over-writing existing content of the file) ">io::writeGrid</a>(...,<a class="el" href="namespacenanovdb_1_1io.html#ae42f8cdb9215c4db646cf1021c45648aab50339a10e1de285ac99d4c3990b8693">Codec::NONE</a>) defined in <a class="el" href="IO_8h.html" title="Implements I/O for NanoVDB grids. Features optional BLOSC and ZIP file compression, support for multiple grids per file as well as multiple grid types. ">util/IO.h</a> Unlike the latter this function has no dependencies at all, not even <a class="el" href="NanoVDB_8h.html" title="Implements a light-weight self-contained VDB data-structure in a single file! In other words...">NanoVDB.h</a>, so it also works if client code only includes <a class="el" href="PNanoVDB_8h.html" title="This file is a portable (e.g. pointer-less) C99/GLSL/HLSL port of NanoVDB.h, which is compatible with...">PNanoVDB.h</a>! </p>
+<p>Writes a raw NanoVDB buffer, possibly with multiple grids, to a stream WITHOUT compression. It follows all the conventions in <a class="el" href="IO_8h.html" title="Implements I/O for NanoVDB grids. Features optional BLOSC and ZIP file compression, support for multiple grids per file as well as multiple grid types. ">util/IO.h</a> so the stream can be read by all existing client code of NanoVDB.</p>
+<dl class="section note"><dt>Note</dt><dd>This method will always write uncompressed grids to the stream, i.e. Blosc or ZIP compression is never applied! This is a fundamental limitation and feature of this standalone function.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if buffer does not point to a valid NanoVDB grid.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This is pretty ugly code that involves lots of pointer and bit manipulations - not for the faint of heart :) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aae39477ec8228589a141dd8bff8c5f41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nanovdb::io::writeUncompressedGrids </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const VecT&lt; GridHandleT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>handles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>write multiple NanoVDB grids to a single file, without compression. </p>
 
 </div>
 </div>

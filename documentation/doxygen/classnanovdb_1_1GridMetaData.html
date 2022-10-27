@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -141,12 +141,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaf06616a8eada460060364bdd38642ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71267eab956fab2c9b34d704479a8ba9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a71267eab956fab2c9b34d704479a8ba9">blindDataCount</a> () const </td></tr>
 <tr class="separator:a71267eab956fab2c9b34d704479a8ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bc6b66357fd66198905c1b283a5c01c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a1bc6b66357fd66198905c1b283a5c01c">blindMetaData</a> (int n) const </td></tr>
-<tr class="separator:a1bc6b66357fd66198905c1b283a5c01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d74e48e328eeaf51507a588619e9d4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ae0d74e48e328eeaf51507a588619e9d4">blindMetaData</a> (uint32_t n) const </td></tr>
+<tr class="separator:ae0d74e48e328eeaf51507a588619e9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96a9b9032b2eec85384a96ad8b436555"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a96a9b9032b2eec85384a96ad8b436555">activeVoxelCount</a> () const </td></tr>
 <tr class="separator:a96a9b9032b2eec85384a96ad8b436555"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e5e1338a4b7cfbeb6f0ed134fbb7070"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a2e5e1338a4b7cfbeb6f0ed134fbb7070">activeTileCount</a> (uint32_t n) const </td></tr>
-<tr class="separator:a2e5e1338a4b7cfbeb6f0ed134fbb7070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac015937b7e1e71ab77c27f063e62306"><td class="memItemLeft" align="right" valign="top">const uint32_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#aac015937b7e1e71ab77c27f063e62306">activeTileCount</a> (uint32_t level) const </td></tr>
+<tr class="separator:aac015937b7e1e71ab77c27f063e62306"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cbf02520b0d9d379ac8ef5959d63915"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a6cbf02520b0d9d379ac8ef5959d63915">nodeCount</a> (uint32_t level) const </td></tr>
 <tr class="separator:a6cbf02520b0d9d379ac8ef5959d63915"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0880c82c125789d4d13e79d87408c5b0"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a0880c82c125789d4d13e79d87408c5b0">checksum</a> () const </td></tr>
@@ -159,7 +159,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is a convenient class that allows for access to grid meta-data that are independent of the value type of a grid. That is, this class can be used to get information about a grid without actually knowing its ValueType. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a2e5e1338a4b7cfbeb6f0ed134fbb7070"></a>
+<a class="anchor" id="aac015937b7e1e71ab77c27f063e62306"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -167,10 +167,10 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t activeTileCount </td>
+          <td class="memname">const uint32_t&amp; activeTileCount </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -229,7 +229,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1bc6b66357fd66198905c1b283a5c01c"></a>
+<a class="anchor" id="ae0d74e48e328eeaf51507a588619e9d4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -239,7 +239,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a>&amp; blindMetaData </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td> const</td>
         </tr>

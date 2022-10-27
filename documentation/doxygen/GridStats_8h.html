@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -162,6 +162,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ab19a49c8f2b6595a2d8c95d42c031d28"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#ab19a49c8f2b6595a2d8c95d42c031d28">gridStats</a> (NanoGrid&lt; BuildT &gt; &amp;grid, StatsMode mode=StatsMode::Default)</td></tr>
 <tr class="memdesc:ab19a49c8f2b6595a2d8c95d42c031d28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-computes the min/max, stats and bbox information for an existing NanoVDB <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">Grid</a>.  <a href="namespacenanovdb.html#ab19a49c8f2b6595a2d8c95d42c031d28">More...</a><br /></td></tr>
 <tr class="separator:ab19a49c8f2b6595a2d8c95d42c031d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a757390e837f413ece96bec94744e3c3b"><td class="memTemplParams" colspan="2">template&lt;typename BuildT &gt; </td></tr>
+<tr class="memitem:a757390e837f413ece96bec94744e3c3b"><td class="memTemplItemLeft" align="right" valign="top">Extrema&lt; typename NanoGrid&lt; BuildT &gt;::ValueType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a757390e837f413ece96bec94744e3c3b">getExtrema</a> (const NanoGrid&lt; BuildT &gt; &amp;grid, const CoordBBox &amp;bbox)</td></tr>
+<tr class="memdesc:a757390e837f413ece96bec94744e3c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the extrema of all the values in a grid that intersects the specified bounding box.  <a href="namespacenanovdb.html#a757390e837f413ece96bec94744e3c3b">More...</a><br /></td></tr>
+<tr class="separator:a757390e837f413ece96bec94744e3c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Re-computes min/max/avg/var/bbox information for each node in a pre-existing NanoVDB grid. </p>

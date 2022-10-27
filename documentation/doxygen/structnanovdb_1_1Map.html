@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">9.1.1</span>
+   &#160;<span id="projectnumber">10.0.0</span>
    </div>
   </td>
  </tr>
@@ -104,9 +104,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a5112fd1551c269f547c633fa40c90aae"><td class="memTemplParams" colspan="2">template&lt;typename Mat3T , typename Vec3T &gt; </td></tr>
+<tr class="memitem:a5112fd1551c269f547c633fa40c90aae"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1Map.html#a5112fd1551c269f547c633fa40c90aae">set</a> (const Mat3T &amp;mat, const Mat3T &amp;invMat, const Vec3T &amp;translate, double taper)</td></tr>
+<tr class="memdesc:a5112fd1551c269f547c633fa40c90aae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the member data.  <a href="#a5112fd1551c269f547c633fa40c90aae">More...</a><br /></td></tr>
+<tr class="separator:a5112fd1551c269f547c633fa40c90aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d92e1eee91b1974e0cf6537104d178e"><td class="memTemplParams" colspan="2">template&lt;typename Mat4T &gt; </td></tr>
 <tr class="memitem:a8d92e1eee91b1974e0cf6537104d178e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1Map.html#a8d92e1eee91b1974e0cf6537104d178e">set</a> (const Mat4T &amp;mat, const Mat4T &amp;invMat, double taper)</td></tr>
+<tr class="memdesc:a8d92e1eee91b1974e0cf6537104d178e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the member data.  <a href="#a8d92e1eee91b1974e0cf6537104d178e">More...</a><br /></td></tr>
 <tr class="separator:a8d92e1eee91b1974e0cf6537104d178e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac08f4137e1ce3b8c43df875d53abebe4"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T &gt; </td></tr>
+<tr class="memitem:ac08f4137e1ce3b8c43df875d53abebe4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1Map.html#ac08f4137e1ce3b8c43df875d53abebe4">set</a> (double scale, const Vec3T &amp;translation, double taper)</td></tr>
+<tr class="separator:ac08f4137e1ce3b8c43df875d53abebe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07d4d02e26ed85d44caae1470059538d"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T &gt; </td></tr>
 <tr class="memitem:a07d4d02e26ed85d44caae1470059538d"><td class="memTemplItemLeft" align="right" valign="top">Vec3T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1Map.html#a07d4d02e26ed85d44caae1470059538d">applyMap</a> (const Vec3T &amp;xyz) const </td></tr>
 <tr class="separator:a07d4d02e26ed85d44caae1470059538d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -400,9 +408,60 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5112fd1551c269f547c633fa40c90aae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set </td>
+          <td>(</td>
+          <td class="paramtype">const Mat3T &amp;&#160;</td>
+          <td class="paramname"><em>mat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Mat3T &amp;&#160;</td>
+          <td class="paramname"><em>invMat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Vec3T &amp;&#160;</td>
+          <td class="paramname"><em>translate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>taper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the member data. </p>
+
+</div>
+</div>
 <a class="anchor" id="a8d92e1eee91b1974e0cf6537104d178e"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void set </td>
@@ -428,6 +487,54 @@ Public Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the member data. </p>
+<dl class="section note"><dt>Note</dt><dd>The last (4th) row of invMat is actually ignored. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac08f4137e1ce3b8c43df875d53abebe4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Vec3T &amp;&#160;</td>
+          <td class="paramname"><em>translation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>taper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
