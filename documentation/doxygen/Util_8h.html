@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>OpenVDB: openvdb/util/Util.h File Reference</title>
+<title>OpenVDB: openvdb_ax/test/util.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,66 +83,133 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_5862e09d5e9b1231151ba919eed3a485.html">openvdb</a></li><li class="navelem"><a class="el" href="dir_9485b52641b597ad512eaa093eb24b49.html">util</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_cae5b229f742550e00edd472eaaf99f1.html">openvdb_ax</a></li><li class="navelem"><a class="el" href="dir_407ea0c61babebaaa69d67a6ca712e33.html">test</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Util.h File Reference</div>  </div>
+<div class="title">util.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="openvdb_2Types_8h_source.html">openvdb/Types.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="Tree_8h_source.html">openvdb/tree/Tree.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="ValueTransformer_8h_source.html">openvdb/tools/ValueTransformer.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="Prune_8h_source.html">openvdb/tools/Prune.h</a>&gt;</code><br />
+
+<p>Test utilities.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;<a class="el" href="AST_8h_source.html">openvdb_ax/ast/AST.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="PrintTree_8h_source.html">openvdb_ax/ast/PrintTree.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="Parse_8h_source.html">openvdb_ax/ast/Parse.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="Tokens_8h_source.html">openvdb_ax/ast/Tokens.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="Logger_8h_source.html">openvdb_ax/compiler/Logger.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="openvdb_2Types_8h_source.html">openvdb/Types.h</a>&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
 </div>
-<p><a href="Util_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="util_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1util_1_1LeafTopologyIntOp.html">LeafTopologyIntOp&lt; TreeType1, TreeType2 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for use with <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#ada1c7e219f36d148510ce22d7599171b">tools::foreach()</a> to compute the boolean intersection between the value masks of corresponding leaf nodes in two trees.  <a href="classopenvdb_1_1v10__0_1_1util_1_1LeafTopologyIntOp.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1util_1_1LeafTopologyDiffOp.html">LeafTopologyDiffOp&lt; TreeType1, TreeType2 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functor for use with <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#ada1c7e219f36d148510ce22d7599171b">tools::foreach()</a> to compute the boolean difference between the value masks of corresponding leaf nodes in two trees.  <a href="classopenvdb_1_1v10__0_1_1util_1_1LeafTopologyDiffOp.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespaceopenvdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb.html">openvdb</a></td></tr>
+<tr class="memitem:namespaceunittest__util"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceunittest__util.html">unittest_util</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v10__0"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html">openvdb::v10_0</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v10__0_1_1util"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1util.html">openvdb::v10_0::util</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aebfa802ca271283aa4d87fc2f85191ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#aebfa802ca271283aa4d87fc2f85191ad">ERROR_MSG</a>(Msg,  Code)&#160;&#160;&#160;Msg + std::string(&quot;: \&quot;&quot;) + Code + std::string(&quot;\&quot;&quot;)</td></tr>
+<tr class="separator:aebfa802ca271283aa4d87fc2f85191ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d186eeb06ac8e4d906af8b73f87c92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a11d186eeb06ac8e4d906af8b73f87c92">TEST_SYNTAX_PASSES</a>(Tests)</td></tr>
+<tr class="separator:a11d186eeb06ac8e4d906af8b73f87c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6348be2aec4f22bd0e243ac68ba6c95"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#ae6348be2aec4f22bd0e243ac68ba6c95">TEST_SYNTAX_FAILS</a>(Tests)</td></tr>
+<tr class="separator:ae6348be2aec4f22bd0e243ac68ba6c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a84f5ff86b835efcb5126a15c65154a3b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceunittest__util.html#a84f5ff86b835efcb5126a15c65154a3b">CodeTests</a> = std::vector&lt; std::pair&lt; std::string, openvdb::ax::ast::Node::Ptr &gt;&gt;</td></tr>
+<tr class="separator:a84f5ff86b835efcb5126a15c65154a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81b46cc20608e8f132dc5f94a48281db"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceunittest__util.html#a81b46cc20608e8f132dc5f94a48281db">ConfigMap</a> = std::map&lt; std::string, std::map&lt; std::string, std::string &gt;&gt;</td></tr>
+<tr class="separator:a81b46cc20608e8f132dc5f94a48281db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a878d9c62499d8ed02a597b91ce29a7ab"><td class="memItemLeft" align="right" valign="top">Coord&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1util.html#a878d9c62499d8ed02a597b91ce29a7ab">nearestCoord</a> (const Vec3d &amp;voxelCoord)</td></tr>
-<tr class="memdesc:a878d9c62499d8ed02a597b91ce29a7ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <em>voxelCoord</em> rounded to the closest integer coordinates.  <a href="namespaceopenvdb_1_1v10__0_1_1util.html#a878d9c62499d8ed02a597b91ce29a7ab">More...</a><br /></td></tr>
-<tr class="separator:a878d9c62499d8ed02a597b91ce29a7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b8b92c76fadcca083a9a8670da8be7b"><td class="memTemplParams" colspan="2">template&lt;class TreeType1 , class TreeType2 &gt; </td></tr>
-<tr class="memitem:a8b8b92c76fadcca083a9a8670da8be7b"><td class="memTemplItemLeft" align="right" valign="top">TreeType1::template ValueConverter&lt; bool &gt;::Type::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1util.html#a8b8b92c76fadcca083a9a8670da8be7b">leafTopologyIntersection</a> (const TreeType1 &amp;lhs, const TreeType2 &amp;rhs, bool threaded=true)</td></tr>
-<tr class="memdesc:a8b8b92c76fadcca083a9a8670da8be7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a boolean intersection between two leaf nodes' topology masks.  <a href="namespaceopenvdb_1_1v10__0_1_1util.html#a8b8b92c76fadcca083a9a8670da8be7b">More...</a><br /></td></tr>
-<tr class="separator:a8b8b92c76fadcca083a9a8670da8be7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa893f1030cd3146a6070e534c6ab83c6"><td class="memTemplParams" colspan="2">template&lt;class TreeType1 , class TreeType2 &gt; </td></tr>
-<tr class="memitem:aa893f1030cd3146a6070e534c6ab83c6"><td class="memTemplItemLeft" align="right" valign="top">TreeType1::template ValueConverter&lt; bool &gt;::Type::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1util.html#aa893f1030cd3146a6070e534c6ab83c6">leafTopologyDifference</a> (const TreeType1 &amp;lhs, const TreeType2 &amp;rhs, bool threaded=true)</td></tr>
-<tr class="memdesc:aa893f1030cd3146a6070e534c6ab83c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a boolean difference between two leaf nodes' topology masks.  <a href="namespaceopenvdb_1_1v10__0_1_1util.html#aa893f1030cd3146a6070e534c6ab83c6">More...</a><br /></td></tr>
-<tr class="separator:aa893f1030cd3146a6070e534c6ab83c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a64406e5329e76b683c1af3b539095e35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> const Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1util.html#a64406e5329e76b683c1af3b539095e35">INVALID_IDX</a></td></tr>
-<tr class="separator:a64406e5329e76b683c1af3b539095e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04f6be1271dd40cd85a3b5a4d845c340"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> const Coord&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1util.html#a04f6be1271dd40cd85a3b5a4d845c340">COORD_OFFSETS</a> [26]</td></tr>
-<tr class="memdesc:a04f6be1271dd40cd85a3b5a4d845c340"><td class="mdescLeft">&#160;</td><td class="mdescRight">coordinate offset table for neighboring voxels  <a href="namespaceopenvdb_1_1v10__0_1_1util.html#a04f6be1271dd40cd85a3b5a4d845c340">More...</a><br /></td></tr>
-<tr class="separator:a04f6be1271dd40cd85a3b5a4d845c340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a150ba1f0ead28d5b0511176d47db740d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceunittest__util.html#a150ba1f0ead28d5b0511176d47db740d">replace</a> (std::string &amp;str, const std::string &amp;oldStr, const std::string &amp;newStr)</td></tr>
+<tr class="separator:a150ba1f0ead28d5b0511176d47db740d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b9d27a2fb1aa654e0c46101913edd1c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceunittest__util.html#a7b9d27a2fb1aa654e0c46101913edd1c">compareLinearTrees</a> (const std::vector&lt; const openvdb::ax::ast::Node * &gt; &amp;a, const std::vector&lt; const openvdb::ax::ast::Node * &gt; &amp;b, const bool allowEmpty=false)</td></tr>
+<tr class="separator:a7b9d27a2fb1aa654e0c46101913edd1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54c526e8c5d3754472bdd7b6a314fe34"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceunittest__util.html#a54c526e8c5d3754472bdd7b6a314fe34">nameSequence</a> (const std::string &amp;base, const size_t number)</td></tr>
+<tr class="separator:a54c526e8c5d3754472bdd7b6a314fe34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Test utilities. </p>
+<dl class="section author"><dt>Author</dt><dd>Nick Avramoussis </dd></dl>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="aebfa802ca271283aa4d87fc2f85191ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERROR_MSG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Msg, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Code&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;Msg + std::string(&quot;: \&quot;&quot;) + Code + std::string(&quot;\&quot;&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae6348be2aec4f22bd0e243ac68ba6c95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEST_SYNTAX_FAILS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Tests</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">    openvdb::ax::Logger logger([](<span class="keyword">const</span> std::string&amp;) {});\</div><div class="line">    for (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; test : Tests) { \</div><div class="line">        logger.clear();\</div><div class="line">        const std::string&amp; code = test.first; \</div><div class="line">        openvdb::ax::ast::Tree::ConstPtr tree = <a class="code" href="namespaceopenvdb_1_1v10__0_1_1ax_1_1ast.html#a7249f26d15aed36e1a6142759a48bd76">openvdb::ax::ast::parse</a>(code.c_str(), logger);\</div><div class="line">        CPPUNIT_ASSERT_MESSAGE(<a class="code" href="util_8h.html#aebfa802ca271283aa4d87fc2f85191ad">ERROR_MSG</a>(<span class="stringliteral">&quot;Expected parsing error&quot;</span>, code), !tree &amp;&amp; logger.hasError()); \</div><div class="line">    } \</div><div class="line">} \</div><div class="ttc" id="namespaceopenvdb_1_1v10__0_1_1ax_1_1ast_html_a7249f26d15aed36e1a6142759a48bd76"><div class="ttname"><a href="namespaceopenvdb_1_1v10__0_1_1ax_1_1ast.html#a7249f26d15aed36e1a6142759a48bd76">openvdb::v10_0::ax::ast::parse</a></div><div class="ttdeci">OPENVDB_AX_API openvdb::ax::ast::Tree::ConstPtr parse(const char *code, ax::Logger &amp;logger)</div><div class="ttdoc">Construct an abstract syntax tree from a code snippet. </div></div>
+<div class="ttc" id="util_8h_html_aebfa802ca271283aa4d87fc2f85191ad"><div class="ttname"><a href="util_8h.html#aebfa802ca271283aa4d87fc2f85191ad">ERROR_MSG</a></div><div class="ttdeci">#define ERROR_MSG(Msg, Code)</div><div class="ttdef"><b>Definition:</b> util.h:28</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a11d186eeb06ac8e4d906af8b73f87c92"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEST_SYNTAX_PASSES</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">Tests</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{ \</div><div class="line">    openvdb::ax::Logger logger;\</div><div class="line">    for (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; test : Tests) { \</div><div class="line">        logger.clear();\</div><div class="line">        const std::string&amp; code = test.first; \</div><div class="line">        openvdb::ax::ast::Tree::ConstPtr tree = <a class="code" href="namespaceopenvdb_1_1v10__0_1_1ax_1_1ast.html#a7249f26d15aed36e1a6142759a48bd76">openvdb::ax::ast::parse</a>(code.c_str(), logger);\</div><div class="line">        std::stringstream str; \</div><div class="line">        CPPUNIT_ASSERT_MESSAGE(<a class="code" href="util_8h.html#aebfa802ca271283aa4d87fc2f85191ad">ERROR_MSG</a>(<span class="stringliteral">&quot;Unexpected parsing error(s)\n&quot;</span>, str.str()), tree &amp;&amp; !logger.hasError()); \</div><div class="line">    } \</div><div class="line">} \</div><div class="ttc" id="namespaceopenvdb_1_1v10__0_1_1ax_1_1ast_html_a7249f26d15aed36e1a6142759a48bd76"><div class="ttname"><a href="namespaceopenvdb_1_1v10__0_1_1ax_1_1ast.html#a7249f26d15aed36e1a6142759a48bd76">openvdb::v10_0::ax::ast::parse</a></div><div class="ttdeci">OPENVDB_AX_API openvdb::ax::ast::Tree::ConstPtr parse(const char *code, ax::Logger &amp;logger)</div><div class="ttdoc">Construct an abstract syntax tree from a code snippet. </div></div>
+<div class="ttc" id="util_8h_html_aebfa802ca271283aa4d87fc2f85191ad"><div class="ttname"><a href="util_8h.html#aebfa802ca271283aa4d87fc2f85191ad">ERROR_MSG</a></div><div class="ttdeci">#define ERROR_MSG(Msg, Code)</div><div class="ttdef"><b>Definition:</b> util.h:28</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
