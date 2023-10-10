@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.0.1</span>
+   &#160;<span id="projectnumber">10.0.2</span>
    </div>
   </td>
  </tr>
@@ -523,6 +523,11 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:a2623bf4797b966b29fbe45c87e60481c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mesh to volume conversion flags.  <a href="namespaceopenvdb_1_1v10__0_1_1tools.html#a2623bf4797b966b29fbe45c87e60481c">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:a2623bf4797b966b29fbe45c87e60481c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9f5e36eb8e66aa36883fc3ef727e687"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#af9f5e36eb8e66aa36883fc3ef727e687">InteriorTestStrategy</a> { <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#af9f5e36eb8e66aa36883fc3ef727e687a4db3075e87b5663df255817c35275e4d">EVAL_EVERY_VOXEL</a> = 0, 
+<a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#af9f5e36eb8e66aa36883fc3ef727e687aa02d9d741becb09d7aaeb8f32bdb2338">EVAL_EVERY_TILE</a> = 1
+ }<tr class="memdesc:af9f5e36eb8e66aa36883fc3ef727e687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Different staregies how to determine sign of an SDF when using interior test.  <a href="namespaceopenvdb_1_1v10__0_1_1tools.html#af9f5e36eb8e66aa36883fc3ef727e687">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:af9f5e36eb8e66aa36883fc3ef727e687"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31d3cd59d1264144ae21e5250166cfc2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a31d3cd59d1264144ae21e5250166cfc2">NearestNeighbors</a> { <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a31d3cd59d1264144ae21e5250166cfc2a8b7234ad92f6feba2725d890a38fdd59">NN_FACE</a> = 6, 
 <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a31d3cd59d1264144ae21e5250166cfc2a6d84698cb77f59ae061433cbb1313bbf">NN_FACE_EDGE</a> = 18, 
 <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a31d3cd59d1264144ae21e5250166cfc2a2cbda8f22b738858b06cb668117278ee">NN_FACE_EDGE_VERTEX</a> = 26
@@ -535,21 +540,21 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:ac7a17ca003c7f18f411cab4e8b4f6e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Different policies when dilating trees with active tiles.  <a href="namespaceopenvdb_1_1v10__0_1_1tools.html#ac7a17ca003c7f18f411cab4e8b4f6e74">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ac7a17ca003c7f18f411cab4e8b4f6e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa85e8d66aa325c34334bcaa049300dcd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#aa85e8d66aa325c34334bcaa049300dcdaa911a2c909b228a84da11c9e7ec8d6f4">POLYFLAG_EXTERIOR</a> = 0x1, 
-<a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#aa85e8d66aa325c34334bcaa049300dcda6162751648b85f251927667c2b51ca67">POLYFLAG_FRACTURE_SEAM</a> = 0x2, 
-<a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#aa85e8d66aa325c34334bcaa049300dcdacbee21124fa14157f6c0c992c4728c7b">POLYFLAG_SUBDIVIDED</a> = 0x4
- }<tr class="memdesc:aa85e8d66aa325c34334bcaa049300dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polygon flags, used for reference based meshing.  <a href="namespaceopenvdb_1_1v10__0_1_1tools.html#aa85e8d66aa325c34334bcaa049300dcd">More...</a><br /></td></tr>
+<tr class="memitem:a0efc1b13f14c790dd3d59de11e12bc6d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a0efc1b13f14c790dd3d59de11e12bc6daa911a2c909b228a84da11c9e7ec8d6f4">POLYFLAG_EXTERIOR</a> = 0x1, 
+<a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a0efc1b13f14c790dd3d59de11e12bc6da6162751648b85f251927667c2b51ca67">POLYFLAG_FRACTURE_SEAM</a> = 0x2, 
+<a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a0efc1b13f14c790dd3d59de11e12bc6dacbee21124fa14157f6c0c992c4728c7b">POLYFLAG_SUBDIVIDED</a> = 0x4
+ }<tr class="memdesc:a0efc1b13f14c790dd3d59de11e12bc6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polygon flags, used for reference based meshing.  <a href="namespaceopenvdb_1_1v10__0_1_1tools.html#a0efc1b13f14c790dd3d59de11e12bc6d">More...</a><br /></td></tr>
 </td></tr>
-<tr class="separator:aa85e8d66aa325c34334bcaa049300dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a0efc1b13f14c790dd3d59de11e12bc6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:afbad51b90ae8354757fa735b4d2058b0"><td class="memTemplParams" colspan="2">template&lt;typename GridOrTree &gt; </td></tr>
-<tr class="memitem:afbad51b90ae8354757fa735b4d2058b0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#afbad51b90ae8354757fa735b4d2058b0">activate</a> (GridOrTree &amp;, const typename GridOrTree::ValueType &amp;<a class="el" href="GridBuilder_8h.html#a0bd8e8b76a16eb8c0d32d42313755c8e">value</a>, const typename GridOrTree::ValueType &amp;tolerance=<a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt; typename GridOrTree::ValueType &gt;(), const bool threaded=true)</td></tr>
+<tr class="memitem:afbad51b90ae8354757fa735b4d2058b0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#afbad51b90ae8354757fa735b4d2058b0">activate</a> (GridOrTree &amp;, const typename GridOrTree::ValueType &amp;<a class="el" href="GridBuilder_8h.html#a0bd8e8b76a16eb8c0d32d42313755c8e">value</a>, const typename GridOrTree::ValueType &amp;tolerance=<a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt; typename GridOrTree::ValueType &gt;(), const bool threaded=true)</td></tr>
 <tr class="memdesc:afbad51b90ae8354757fa735b4d2058b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark as active any inactive tiles or voxels in the given grid or tree whose values are equal to <em>value</em> (optionally to within the given <em>tolerance</em>).  <a href="#afbad51b90ae8354757fa735b4d2058b0">More...</a><br /></td></tr>
 <tr class="separator:afbad51b90ae8354757fa735b4d2058b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95818e0902bf2d721182aea060c98a39"><td class="memTemplParams" colspan="2">template&lt;typename GridOrTree &gt; </td></tr>
-<tr class="memitem:a95818e0902bf2d721182aea060c98a39"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a95818e0902bf2d721182aea060c98a39">deactivate</a> (GridOrTree &amp;, const typename GridOrTree::ValueType &amp;<a class="el" href="GridBuilder_8h.html#a0bd8e8b76a16eb8c0d32d42313755c8e">value</a>, const typename GridOrTree::ValueType &amp;tolerance=<a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt; typename GridOrTree::ValueType &gt;(), const bool threaded=true)</td></tr>
+<tr class="memitem:a95818e0902bf2d721182aea060c98a39"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a95818e0902bf2d721182aea060c98a39">deactivate</a> (GridOrTree &amp;, const typename GridOrTree::ValueType &amp;<a class="el" href="GridBuilder_8h.html#a0bd8e8b76a16eb8c0d32d42313755c8e">value</a>, const typename GridOrTree::ValueType &amp;tolerance=<a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt; typename GridOrTree::ValueType &gt;(), const bool threaded=true)</td></tr>
 <tr class="memdesc:a95818e0902bf2d721182aea060c98a39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark as inactive any active tiles or voxels in the given grid or tree whose values are equal to <em>value</em> (optionally to within the given <em>tolerance</em>).  <a href="#a95818e0902bf2d721182aea060c98a39">More...</a><br /></td></tr>
 <tr class="separator:a95818e0902bf2d721182aea060c98a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad795f2f3910144753a5e03d12f4703de"><td class="memTemplParams" colspan="2">template&lt;typename TreeOrLeafManagerT &gt; </td></tr>
@@ -1013,13 +1018,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a5d5182249f0ff2cd4584ec24b09300a0"><td class="memTemplItemLeft" align="right" valign="top">GridType::template ValueConverter&lt; bool &gt;::Type::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a5d5182249f0ff2cd4584ec24b09300a0">interiorMask</a> (const GridType &amp;grid, const double isovalue=0.0)</td></tr>
 <tr class="memdesc:a5d5182249f0ff2cd4584ec24b09300a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an input grid of any type, return a new, boolean grid whose active voxel topology matches the input grid's or, if the input grid is a level set, matches the input grid's interior.  <a href="#a5d5182249f0ff2cd4584ec24b09300a0">More...</a><br /></td></tr>
 <tr class="separator:a5d5182249f0ff2cd4584ec24b09300a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12727083ecf3b9561ff954517144d7a8"><td class="memTemplParams" colspan="2">template&lt;typename GridType , typename MeshDataAdapter &gt; </td></tr>
-<tr class="memitem:a12727083ecf3b9561ff954517144d7a8"><td class="memTemplItemLeft" align="right" valign="top">GridType::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a12727083ecf3b9561ff954517144d7a8">meshToVolume</a> (const <a class="el" href="interfaceMeshDataAdapter.html">MeshDataAdapter</a> &amp;mesh, const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1Transform.html">math::Transform</a> &amp;transform, float exteriorBandWidth=3.0f, float interiorBandWidth=3.0f, int flags=0, typename GridType::template ValueConverter&lt; Int32 &gt;::Type *polygonIndexGrid=nullptr)</td></tr>
-<tr class="separator:a12727083ecf3b9561ff954517144d7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdc876198b66dd8a91b21835f1f25342"><td class="memTemplParams" colspan="2">template&lt;typename GridType , typename MeshDataAdapter , typename Interrupter &gt; </td></tr>
-<tr class="memitem:afdc876198b66dd8a91b21835f1f25342"><td class="memTemplItemLeft" align="right" valign="top">GridType::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#afdc876198b66dd8a91b21835f1f25342">meshToVolume</a> (Interrupter &amp;interrupter, const <a class="el" href="interfaceMeshDataAdapter.html">MeshDataAdapter</a> &amp;mesh, const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1Transform.html">math::Transform</a> &amp;transform, float exteriorBandWidth=3.0f, float interiorBandWidth=3.0f, int flags=0, typename GridType::template ValueConverter&lt; Int32 &gt;::Type *polygonIndexGrid=nullptr)</td></tr>
-<tr class="memdesc:afdc876198b66dd8a91b21835f1f25342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert polygonal meshes that consist of quads and/or triangles into signed or unsigned distance field volumes.  <a href="#afdc876198b66dd8a91b21835f1f25342">More...</a><br /></td></tr>
-<tr class="separator:afdc876198b66dd8a91b21835f1f25342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a981f3d490ed2b917883704da916b6994"><td class="memTemplParams" colspan="2">template&lt;typename GridType , typename MeshDataAdapter , typename InteriorTest  = std::nullptr_t&gt; </td></tr>
+<tr class="memitem:a981f3d490ed2b917883704da916b6994"><td class="memTemplItemLeft" align="right" valign="top">GridType::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a981f3d490ed2b917883704da916b6994">meshToVolume</a> (const <a class="el" href="interfaceMeshDataAdapter.html">MeshDataAdapter</a> &amp;mesh, const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1Transform.html">math::Transform</a> &amp;transform, float exteriorBandWidth=3.0f, float interiorBandWidth=3.0f, int flags=0, typename GridType::template ValueConverter&lt; Int32 &gt;::Type *polygonIndexGrid=nullptr, InteriorTest interiorTest=nullptr, InteriorTestStrategy interiorTestStrat=EVAL_EVERY_VOXEL)</td></tr>
+<tr class="separator:a981f3d490ed2b917883704da916b6994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae80be33cafa4de12384b7386b1a87fb4"><td class="memTemplParams" colspan="2">template&lt;typename GridType , typename MeshDataAdapter , typename Interrupter , typename InteriorTest  = std::nullptr_t&gt; </td></tr>
+<tr class="memitem:ae80be33cafa4de12384b7386b1a87fb4"><td class="memTemplItemLeft" align="right" valign="top">GridType::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#ae80be33cafa4de12384b7386b1a87fb4">meshToVolume</a> (Interrupter &amp;interrupter, const <a class="el" href="interfaceMeshDataAdapter.html">MeshDataAdapter</a> &amp;mesh, const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1Transform.html">math::Transform</a> &amp;transform, float exteriorBandWidth=3.0f, float interiorBandWidth=3.0f, int flags=0, typename GridType::template ValueConverter&lt; Int32 &gt;::Type *polygonIndexGrid=nullptr, InteriorTest interiorTest=nullptr, InteriorTestStrategy interiorTestStrategy=EVAL_EVERY_VOXEL)</td></tr>
+<tr class="memdesc:ae80be33cafa4de12384b7386b1a87fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert polygonal meshes that consist of quads and/or triangles into signed or unsigned distance field volumes.  <a href="#ae80be33cafa4de12384b7386b1a87fb4">More...</a><br /></td></tr>
+<tr class="separator:ae80be33cafa4de12384b7386b1a87fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49d6517666da8e1ec1175651ebf12f32"><td class="memTemplParams" colspan="2">template&lt;typename GridType &gt; </td></tr>
 <tr class="memitem:a49d6517666da8e1ec1175651ebf12f32"><td class="memTemplItemLeft" align="right" valign="top">GridType::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a49d6517666da8e1ec1175651ebf12f32">meshToLevelSet</a> (const openvdb::math::Transform &amp;xform, const std::vector&lt; Vec3s &gt; &amp;points, const std::vector&lt; <a class="el" href="namespaceopenvdb_1_1v10__0.html#ab407b3d357305019c37259d8f5d7f1a7">Vec3I</a> &gt; &amp;triangles, float halfWidth=float(<a class="el" href="namespaceopenvdb_1_1v10__0.html#a04f60dd7b4a065a54f873613ff8df50f">LEVEL_SET_HALF_WIDTH</a>))</td></tr>
 <tr class="memdesc:a49d6517666da8e1ec1175651ebf12f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a triangle mesh to a level set volume.  <a href="#a49d6517666da8e1ec1175651ebf12f32">More...</a><br /></td></tr>
@@ -1068,6 +1073,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a5c971c289dca66c2e8500e01aac41bdf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a5c971c289dca66c2e8500e01aac41bdf">traceExteriorBoundaries</a> (FloatTreeT &amp;tree)</td></tr>
 <tr class="memdesc:a5c971c289dca66c2e8500e01aac41bdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Traces the exterior voxel boundary of closed objects in the input volume <em>tree</em>. Exterior voxels are marked with a negative sign, voxels with a value below <code>0.75</code> are left unchanged and act as the boundary layer.  <a href="#a5c971c289dca66c2e8500e01aac41bdf">More...</a><br /></td></tr>
 <tr class="separator:a5c971c289dca66c2e8500e01aac41bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad789d0eeb90bf0bf532d4448958a5524"><td class="memTemplParams" colspan="2">template&lt;typename T , Index Log2Dim, typename InteriorTest &gt; </td></tr>
+<tr class="memitem:ad789d0eeb90bf0bf532d4448958a5524"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#ad789d0eeb90bf0bf532d4448958a5524">floodFillLeafNode</a> (<a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1LeafNode.html">tree::LeafNode</a>&lt; T, Log2Dim &gt; &amp;leafNode, const InteriorTest &amp;interiorTest)</td></tr>
+<tr class="separator:ad789d0eeb90bf0bf532d4448958a5524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d2d0d177c3c59d2757f62dde5b580b"><td class="memTemplParams" colspan="2">template&lt;typename FloatTreeT , typename InteriorTest &gt; </td></tr>
+<tr class="memitem:ad2d2d0d177c3c59d2757f62dde5b580b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#ad2d2d0d177c3c59d2757f62dde5b580b">evaluateInteriorTest</a> (FloatTreeT &amp;tree, InteriorTest interiorTest, <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#af9f5e36eb8e66aa36883fc3ef727e687">InteriorTestStrategy</a> interiorTestStrategy)</td></tr>
+<tr class="memdesc:ad2d2d0d177c3c59d2757f62dde5b580b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the sign of voxel values of <code>tree</code> based on the <code>interiorTest</code>  <a href="#ad2d2d0d177c3c59d2757f62dde5b580b">More...</a><br /></td></tr>
+<tr class="separator:ad2d2d0d177c3c59d2757f62dde5b580b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac70d0361c0d001577b308befa482579b"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#ac70d0361c0d001577b308befa482579b">operator&lt;&lt;</a> (std::ostream &amp;ostr, const <a class="el" href="structopenvdb_1_1v10__0_1_1tools_1_1MeshToVoxelEdgeData_1_1EdgeData.html">MeshToVoxelEdgeData::EdgeData</a> &amp;rhs)</td></tr>
 <tr class="separator:ac70d0361c0d001577b308befa482579b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e8162eff634b819446978acc066dda1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structopenvdb_1_1v10__0_1_1tools_1_1MeshToVoxelEdgeData_1_1EdgeData.html">MeshToVoxelEdgeData::EdgeData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a2e8162eff634b819446978acc066dda1">Abs</a> (const <a class="el" href="structopenvdb_1_1v10__0_1_1tools_1_1MeshToVoxelEdgeData_1_1EdgeData.html">MeshToVoxelEdgeData::EdgeData</a> &amp;x)</td></tr>
@@ -1149,15 +1161,15 @@ Functions</h2></td></tr>
 <tr class="memdesc:a248e7393549aaba7fcb758f85d6c4e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Potential on the domain using the Neumann boundary conditions on solid boundaries.  <a href="#a248e7393549aaba7fcb758f85d6c4e0d">More...</a><br /></td></tr>
 <tr class="separator:a248e7393549aaba7fcb758f85d6c4e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acec6a2371219a981e94291a793ba0685"><td class="memTemplParams" colspan="2">template&lt;typename Vec3GridT &gt; </td></tr>
-<tr class="memitem:acec6a2371219a981e94291a793ba0685"><td class="memTemplItemLeft" align="right" valign="top">Vec3GridT::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#acec6a2371219a981e94291a793ba0685">computePotentialFlow</a> (const typename <a class="el" href="structopenvdb_1_1v10__0_1_1tools_1_1VectorToScalarGrid.html">VectorToScalarGrid</a>&lt; Vec3GridT &gt;::Type &amp;potential, const Vec3GridT &amp;neumann, const typename Vec3GridT::ValueType backgroundVelocity=<a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt; typename Vec3GridT::TreeType::ValueType &gt;())</td></tr>
+<tr class="memitem:acec6a2371219a981e94291a793ba0685"><td class="memTemplItemLeft" align="right" valign="top">Vec3GridT::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#acec6a2371219a981e94291a793ba0685">computePotentialFlow</a> (const typename <a class="el" href="structopenvdb_1_1v10__0_1_1tools_1_1VectorToScalarGrid.html">VectorToScalarGrid</a>&lt; Vec3GridT &gt;::Type &amp;potential, const Vec3GridT &amp;neumann, const typename Vec3GridT::ValueType backgroundVelocity=<a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt; typename Vec3GridT::TreeType::ValueType &gt;())</td></tr>
 <tr class="memdesc:acec6a2371219a981e94291a793ba0685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a vector Flow Field comprising the gradient of the potential with Neumann boundary conditions applied.  <a href="#acec6a2371219a981e94291a793ba0685">More...</a><br /></td></tr>
 <tr class="separator:acec6a2371219a981e94291a793ba0685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8057e1165c928a37703f90eb9496083c"><td class="memTemplParams" colspan="2">template&lt;typename TreeT &gt; </td></tr>
-<tr class="memitem:a8057e1165c928a37703f90eb9496083c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a8057e1165c928a37703f90eb9496083c">prune</a> (TreeT &amp;tree, typename TreeT::ValueType tolerance=<a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt; typename TreeT::ValueType &gt;(), bool threaded=true, size_t grainSize=1)</td></tr>
+<tr class="memitem:a8057e1165c928a37703f90eb9496083c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#a8057e1165c928a37703f90eb9496083c">prune</a> (TreeT &amp;tree, typename TreeT::ValueType tolerance=<a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt; typename TreeT::ValueType &gt;(), bool threaded=true, size_t grainSize=1)</td></tr>
 <tr class="memdesc:a8057e1165c928a37703f90eb9496083c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce the memory footprint of a <em>tree</em> by replacing with tiles any nodes whose values are all the same (optionally to within a tolerance) and have the same active state.  <a href="#a8057e1165c928a37703f90eb9496083c">More...</a><br /></td></tr>
 <tr class="separator:a8057e1165c928a37703f90eb9496083c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8ffdc3cdd984ae9e4c0742406cfdaee"><td class="memTemplParams" colspan="2">template&lt;typename TreeT &gt; </td></tr>
-<tr class="memitem:ab8ffdc3cdd984ae9e4c0742406cfdaee"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#ab8ffdc3cdd984ae9e4c0742406cfdaee">pruneTiles</a> (TreeT &amp;tree, typename TreeT::ValueType tolerance=<a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt; typename TreeT::ValueType &gt;(), bool threaded=true, size_t grainSize=1)</td></tr>
+<tr class="memitem:ab8ffdc3cdd984ae9e4c0742406cfdaee"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#ab8ffdc3cdd984ae9e4c0742406cfdaee">pruneTiles</a> (TreeT &amp;tree, typename TreeT::ValueType tolerance=<a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt; typename TreeT::ValueType &gt;(), bool threaded=true, size_t grainSize=1)</td></tr>
 <tr class="memdesc:ab8ffdc3cdd984ae9e4c0742406cfdaee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce the memory footprint of a <em>tree</em> by replacing with tiles any non-leaf nodes whose values are all the same (optionally to within a tolerance) and have the same active state.  <a href="#ab8ffdc3cdd984ae9e4c0742406cfdaee">More...</a><br /></td></tr>
 <tr class="separator:ab8ffdc3cdd984ae9e4c0742406cfdaee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae81e76930df0c635a4e175887352257e"><td class="memTemplParams" colspan="2">template&lt;typename TreeT &gt; </td></tr>
@@ -1385,7 +1397,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a class="anchor" id="aa85e8d66aa325c34334bcaa049300dcd"></a>
+<a class="anchor" id="a0efc1b13f14c790dd3d59de11e12bc6d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1397,11 +1409,11 @@ Functions</h2></td></tr>
 
 <p>Polygon flags, used for reference based meshing. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aa85e8d66aa325c34334bcaa049300dcdaa911a2c909b228a84da11c9e7ec8d6f4"></a>POLYFLAG_EXTERIOR&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a0efc1b13f14c790dd3d59de11e12bc6daa911a2c909b228a84da11c9e7ec8d6f4"></a>POLYFLAG_EXTERIOR&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="aa85e8d66aa325c34334bcaa049300dcda6162751648b85f251927667c2b51ca67"></a>POLYFLAG_FRACTURE_SEAM&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a0efc1b13f14c790dd3d59de11e12bc6da6162751648b85f251927667c2b51ca67"></a>POLYFLAG_FRACTURE_SEAM&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="aa85e8d66aa325c34334bcaa049300dcdacbee21124fa14157f6c0c992c4728c7b"></a>POLYFLAG_SUBDIVIDED&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="a0efc1b13f14c790dd3d59de11e12bc6dacbee21124fa14157f6c0c992c4728c7b"></a>POLYFLAG_SUBDIVIDED&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
@@ -1462,6 +1474,28 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a6416fa916f48d91455ce7bad5b0a33bfa245516447de3b999aeb0a36124ca6b70"></a>SWEEP_GREATER_THAN_ISOVALUE&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a6416fa916f48d91455ce7bad5b0a33bfa38b255d809f149cd5ae87b46c45905e6"></a>SWEEP_LESS_THAN_ISOVALUE&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="af9f5e36eb8e66aa36883fc3ef727e687"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#af9f5e36eb8e66aa36883fc3ef727e687">InteriorTestStrategy</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Different staregies how to determine sign of an SDF when using interior test. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="af9f5e36eb8e66aa36883fc3ef727e687a4db3075e87b5663df255817c35275e4d"></a>EVAL_EVERY_VOXEL&#160;</td><td class="fielddoc">
+<p>Evaluates interior test at every voxel. This is usefull when we rebuild already existing SDF where evaluating previous grid is cheap </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af9f5e36eb8e66aa36883fc3ef727e687aa02d9d741becb09d7aaeb8f32bdb2338"></a>EVAL_EVERY_TILE&#160;</td><td class="fielddoc">
+<p>Evaluates interior test at least once per tile and flood fills within the tile. </p>
 </td></tr>
 </table>
 
@@ -1680,7 +1714,7 @@ If <em>threaded</em> is false, the join method is never called.</dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const typename GridOrTree::ValueType &amp;&#160;</td>
-          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt;typename&#160;GridOrTree::ValueType&gt;()</code>, </td>
+          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt;typename&#160;GridOrTree::ValueType&gt;()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2530,7 +2564,7 @@ If a LeafManager is used the cached leaf nodes are reused, resulting in slightly
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const typename Vec3GridT::ValueType&#160;</td>
-          <td class="paramname"><em>backgroundVelocity</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt;typename&#160;Vec3GridT::TreeType::ValueType&gt;()</code>&#160;</td>
+          <td class="paramname"><em>backgroundVelocity</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt;typename&#160;Vec3GridT::TreeType::ValueType&gt;()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -4494,7 +4528,7 @@ cancelled tiles only pruned if pruning is also enabled. </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const typename GridOrTree::ValueType &amp;&#160;</td>
-          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt;typename&#160;GridOrTree::ValueType&gt;()</code>, </td>
+          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt;typename&#160;GridOrTree::ValueType&gt;()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -4850,6 +4884,46 @@ cancelled tiles only pruned if pruning is also enabled. </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="ad2d2d0d177c3c59d2757f62dde5b580b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void openvdb::v10_0::tools::evaluateInteriorTest </td>
+          <td>(</td>
+          <td class="paramtype">FloatTreeT &amp;&#160;</td>
+          <td class="paramname"><em>tree</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InteriorTest&#160;</td>
+          <td class="paramname"><em>interiorTest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#af9f5e36eb8e66aa36883fc3ef727e687">InteriorTestStrategy</a>&#160;</td>
+          <td class="paramname"><em>interiorTestStrategy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the sign of voxel values of <code>tree</code> based on the <code>interiorTest</code> </p>
+<p>Inside is set to positive and outside to negative. This is in reverse to the usual level set convention, but <code>meshToVolume</code> uses the opposite convention at certain point.</p>
+<p>InteriorTest has to be a function <code>Coord -&gt; bool</code> which evaluates true inside of the mesh and false outside.</p>
+<p>Furthermore, InteriorTest does not have to be thread-safe, but it has to be copy constructible and evaluating different coppy has to be thread-safe.</p>
+<p>Example of a interior test</p>
+<p>auto acc = tree-&gt;getAccessor();</p>
+<p>auto test = [acc = grid.getConstAccessor()](const Cood&amp; coord) -&gt; bool { return acc-&gt;get(coord) &lt;= 0 ? true : false; } </p>
 
 </div>
 </div>
@@ -5294,6 +5368,32 @@ To simply copy the all the data from a <a class="el" href="classopenvdb_1_1v10__
 <p>Given a set of tangent elements, <code>points</code> with corresponding <code>normals</code>, this method returns the intersection point of all tangent elements. </p>
 <dl class="section note"><dt>Note</dt><dd>Used to extract surfaces with sharp edges and corners from volume data, see the following paper for details: "Feature Sensitive Surface
         Extraction from Volume Data, Kobbelt et al. 2001". </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad789d0eeb90bf0bf532d4448958a5524"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void openvdb::v10_0::tools::floodFillLeafNode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1LeafNode.html">tree::LeafNode</a>&lt; T, Log2Dim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>leafNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const InteriorTest &amp;&#160;</td>
+          <td class="paramname"><em>interiorTest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -7472,7 +7572,7 @@ To simply copy the all the data from a <a class="el" href="classopenvdb_1_1v10__
 
 </div>
 </div>
-<a class="anchor" id="a12727083ecf3b9561ff954517144d7a8"></a>
+<a class="anchor" id="a981f3d490ed2b917883704da916b6994"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -7510,7 +7610,19 @@ To simply copy the all the data from a <a class="el" href="classopenvdb_1_1v10__
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">typename GridType::template ValueConverter&lt; <a class="el" href="namespaceopenvdb_1_1v10__0.html#ac524bdfeb5d781872485d9321c881920">Int32</a> &gt;::Type *&#160;</td>
-          <td class="paramname"><em>polygonIndexGrid</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>polygonIndexGrid</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InteriorTest&#160;</td>
+          <td class="paramname"><em>interiorTest</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#af9f5e36eb8e66aa36883fc3ef727e687">InteriorTestStrategy</a>&#160;</td>
+          <td class="paramname"><em>interiorTestStrat</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#af9f5e36eb8e66aa36883fc3ef727e687a4db3075e87b5663df255817c35275e4d">EVAL_EVERY_VOXEL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7522,7 +7634,7 @@ To simply copy the all the data from a <a class="el" href="classopenvdb_1_1v10__
 
 </div>
 </div>
-<a class="anchor" id="afdc876198b66dd8a91b21835f1f25342"></a>
+<a class="anchor" id="ae80be33cafa4de12384b7386b1a87fb4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -7566,7 +7678,19 @@ To simply copy the all the data from a <a class="el" href="classopenvdb_1_1v10__
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">typename GridType::template ValueConverter&lt; <a class="el" href="namespaceopenvdb_1_1v10__0.html#ac524bdfeb5d781872485d9321c881920">Int32</a> &gt;::Type *&#160;</td>
-          <td class="paramname"><em>polygonIndexGrid</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>polygonIndexGrid</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InteriorTest&#160;</td>
+          <td class="paramname"><em>interiorTest</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#af9f5e36eb8e66aa36883fc3ef727e687">InteriorTestStrategy</a>&#160;</td>
+          <td class="paramname"><em>interiorTestStrategy</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html#af9f5e36eb8e66aa36883fc3ef727e687a4db3075e87b5663df255817c35275e4d">EVAL_EVERY_VOXEL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7586,6 +7710,8 @@ To simply copy the all the data from a <a class="el" href="classopenvdb_1_1v10__
     <tr><td class="paramname">interiorBandWidth</td><td>interior narrow band width in voxel units (set this value to <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools_1_1composite.html#a0d52013d494b75dcbf4cdca27e4781d7">std::numeric_limits&lt;float&gt;::max()</a> to fill interior regions with distance values) </td></tr>
     <tr><td class="paramname">flags</td><td>optional conversion flags defined in <code>MeshToVolumeFlags</code> </td></tr>
     <tr><td class="paramname">polygonIndexGrid</td><td>optional grid output that will contain the closest-polygon index for each voxel in the active narrow band region </td></tr>
+    <tr><td class="paramname">interiorTest</td><td>function <code>Coord -&gt; Bool</code> that evaluates to true inside of the mesh and false outside, for more see evaluatInteriorTest </td></tr>
+    <tr><td class="paramname">interiorTestStrat</td><td>determines how the interiorTest is used, see InteriorTestStrategy </td></tr>
   </table>
   </dd>
 </dl>
@@ -8217,7 +8343,7 @@ Vector-valued operators like <a class="el" href="structopenvdb_1_1v10__0_1_1math
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">typename TreeT::ValueType&#160;</td>
-          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt;typename&#160;TreeT::ValueType&gt;()</code>, </td>
+          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt;typename&#160;TreeT::ValueType&gt;()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -8470,7 +8596,7 @@ Vector-valued operators like <a class="el" href="structopenvdb_1_1v10__0_1_1math
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">typename TreeT::ValueType&#160;</td>
-          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt;typename&#160;TreeT::ValueType&gt;()</code>, </td>
+          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt;typename&#160;TreeT::ValueType&gt;()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -9782,7 +9908,7 @@ Vector-valued operators like <a class="el" href="structopenvdb_1_1v10__0_1_1math
   </table>
   </dd>
 </dl>
-<dl class="section user"><dt>Example:</dt><dd>Populate a scalar floating-point grid with the lengths of the vectors from all active voxels of a vector-valued input grid. <div class="fragment"><div class="line"><span class="keyword">struct </span>Local {</div><div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> op(</div><div class="line">        <span class="keyword">const</span> <a class="code" href="classopenvdb_1_1v10__0_1_1Grid.html#a7ccc223c434beb0d880d1675bd716b12">Vec3fGrid::ValueOnCIter</a>&amp; iter,</div><div class="line">        FloatGrid::ValueAccessor&amp; accessor)</div><div class="line">    {</div><div class="line">        <span class="keywordflow">if</span> (iter.isVoxelValue()) { <span class="comment">// set a single voxel</span></div><div class="line">            accessor.setValue(iter.getCoord(), iter-&gt;length());</div><div class="line">        } <span class="keywordflow">else</span> { <span class="comment">// fill an entire tile</span></div><div class="line">            <a class="code" href="namespacenanovdb.html#a8afc96c92541921d1a0a3ec2c2d6b783">CoordBBox</a> bbox;</div><div class="line">            iter.getBoundingBox(bbox);</div><div class="line">            accessor.getTree()-&gt;fill(bbox, iter-&gt;length());</div><div class="line">        }</div><div class="line">    }</div><div class="line">};</div><div class="line"><a class="code" href="namespaceopenvdb_1_1v10__0.html#a58332e5bdbbdb5a926507027db318e5b">Vec3fGrid</a> inGrid = ...;</div><div class="line"><a class="code" href="namespaceopenvdb_1_1v10__0.html#a2ae45d4df056c7d0d936a496fec925ee">FloatGrid</a> outGrid;</div><div class="line"><a class="code" href="namespaceopenvdb_1_1v10__0_1_1tools.html#ae870e81ce652b9c057d92dbe4b4b9811">tools::transformValues</a>(inGrid.cbeginValueOn(), outGrid, Local::op);</div></div><!-- fragment --></dd></dl>
+<dl class="section user"><dt>Example:</dt><dd>Populate a scalar floating-point grid with the lengths of the vectors from all active voxels of a vector-valued input grid. <div class="fragment"><div class="line"><span class="keyword">struct </span>Local {</div><div class="line">    <span class="keyword">static</span> <span class="keywordtype">void</span> op(</div><div class="line">        <span class="keyword">const</span> <a class="code" href="classopenvdb_1_1v10__0_1_1Grid.html#a7ccc223c434beb0d880d1675bd716b12">Vec3fGrid::ValueOnCIter</a>&amp; iter,</div><div class="line">        <a class="code" href="namespaceopenvdb_1_1v10__0_1_1tree.html#a9bffaa36c0bfe91d3ac486db84d76410">FloatGrid::ValueAccessor</a>&amp; accessor)</div><div class="line">    {</div><div class="line">        <span class="keywordflow">if</span> (iter.isVoxelValue()) { <span class="comment">// set a single voxel</span></div><div class="line">            accessor.setValue(iter.getCoord(), iter-&gt;length());</div><div class="line">        } <span class="keywordflow">else</span> { <span class="comment">// fill an entire tile</span></div><div class="line">            <a class="code" href="namespacenanovdb.html#a8afc96c92541921d1a0a3ec2c2d6b783">CoordBBox</a> bbox;</div><div class="line">            iter.getBoundingBox(bbox);</div><div class="line">            accessor.getTree()-&gt;fill(bbox, iter-&gt;length());</div><div class="line">        }</div><div class="line">    }</div><div class="line">};</div><div class="line"><a class="code" href="namespaceopenvdb_1_1v10__0.html#a58332e5bdbbdb5a926507027db318e5b">Vec3fGrid</a> inGrid = ...;</div><div class="line"><a class="code" href="namespaceopenvdb_1_1v10__0.html#a2ae45d4df056c7d0d936a496fec925ee">FloatGrid</a> outGrid;</div><div class="line"><a class="code" href="namespaceopenvdb_1_1v10__0_1_1tools.html#ae870e81ce652b9c057d92dbe4b4b9811">tools::transformValues</a>(inGrid.cbeginValueOn(), outGrid, Local::op);</div></div><!-- fragment --></dd></dl>
 <dl class="section note"><dt>Note</dt><dd>For more complex operations that require finer control over threading, consider using <code>tbb::parallel_for()</code> or <code>tbb::parallel_reduce()</code> in conjunction with a <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1IteratorRange.html">tree::IteratorRange</a> that wraps a grid or tree iterator. </dd></dl>
 
 </div>

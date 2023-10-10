@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.0.1</span>
+   &#160;<span id="projectnumber">10.0.2</span>
    </div>
   </td>
  </tr>
@@ -114,6 +114,8 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceopenvdb_1_1v10__0_1_1math"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html">math</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespaceopenvdb_1_1v10__0_1_1points"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points.html">points</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceopenvdb_1_1v10__0_1_1string"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1string.html">string</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespaceopenvdb_1_1v10__0_1_1tools"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tools.html">tools</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,6 +213,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1HasMultiPassIO_3_01tree_1_1Tree_3_01RootNodeType_01_4_01_4.html">HasMultiPassIO&lt; tree::Tree&lt; RootNodeType &gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1index__sequence.html">index_sequence</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-implementation of C++17's <a class="el" href="structopenvdb_1_1v10__0_1_1index__sequence.html" title="Re-implementation of C++17&#39;s index_sequence and the helper alias make_index_sequence. This was introduced to fix an issue with clang&#39;s builtin implementation which treats template specializations of builtin templates differently when a subsequent parameter is dependent. The result is a resolution failure during partial specialization selection. For example, the following will fail to specialize: ">index_sequence</a> and the helper alias make_index_sequence. This was introduced to fix an issue with clang's builtin implementation which treats template specializations of builtin templates differently when a subsequent parameter is dependent. The result is a resolution failure during partial specialization selection. For example, the following will fail to specialize:  <a href="structopenvdb_1_1v10__0_1_1index__sequence.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1IndexError.html">IndexError</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1IoError.html">IoError</a></td></tr>
@@ -286,6 +291,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TreeAdapter_3_01tree_1_1ValueAccessor_3_01__TreeType_01_4_01_4.html">TreeAdapter&lt; tree::ValueAccessor&lt; _TreeType &gt; &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partial specialization for ValueAccessor types.  <a href="structopenvdb_1_1v10__0_1_1TreeAdapter_3_01tree_1_1ValueAccessor_3_01__TreeType_01_4_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TupleList.html">TupleList</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A trivial wrapper around a std::tuple but with compatible <a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html" title="A list of types (not necessarily unique) ">TypeList</a> methods. Importantly can be instatiated from a <a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html" title="A list of types (not necessarily unique) ">TypeList</a> and implements a similar ::foreach interface.  <a href="structopenvdb_1_1v10__0_1_1TupleList.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TupleList_3_4.html">TupleList&lt;&gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specilization of an empty <a class="el" href="structopenvdb_1_1v10__0_1_1TupleList.html" title="A trivial wrapper around a std::tuple but with compatible TypeList methods. Importantly can be instat...">TupleList</a>. Required due to constructor selection.  <a href="structopenvdb_1_1v10__0_1_1TupleList_3_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1TypedMetadata.html">TypedMetadata</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Templated metadata class to hold specific types.  <a href="classopenvdb_1_1v10__0_1_1TypedMetadata.html#details">More...</a><br /></td></tr>
@@ -523,6 +534,9 @@ Typedefs</h2></td></tr>
 <tr class="separator:afcdd46e3c391ea8febd5fa6017b9f19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3145a673dc4b53bb3f4dc04a1038150e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#a3145a673dc4b53bb3f4dc04a1038150e">PointDataIndex64</a> = <a class="el" href="structopenvdb_1_1v10__0_1_1PointIndex.html">PointIndex</a>&lt; <a class="el" href="namespaceopenvdb_1_1v10__0.html#ac69cfd22ec6d99378ea1e829dc42781e">Index64</a>, 1 &gt;</td></tr>
 <tr class="separator:a3145a673dc4b53bb3f4dc04a1038150e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64bb796a5880d027cddd2f6a2f43224c"><td class="memTemplParams" colspan="2">template&lt;std::size_t N&gt; </td></tr>
+<tr class="memitem:a64bb796a5880d027cddd2f6a2f43224c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#a64bb796a5880d027cddd2f6a2f43224c">make_index_sequence</a> = std::decay_t&lt; decltype(<a class="el" href="namespaceopenvdb_1_1v10__0.html#a340fceaaae7673c7ecec2fae95368cad">make_index_sequence_impl</a>&lt; N &gt;())&gt;</td></tr>
+<tr class="separator:a64bb796a5880d027cddd2f6a2f43224c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3907786c2430dbab9f198bfd5b31ff7c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#a3907786c2430dbab9f198bfd5b31ff7c">NamePair</a> = std::pair&lt; <a class="el" href="namespaceopenvdb_1_1v10__0.html#a019c188253c90cf2d0b1d6bf710190f4">Name</a>, <a class="el" href="namespaceopenvdb_1_1v10__0.html#a019c188253c90cf2d0b1d6bf710190f4">Name</a> &gt;</td></tr>
 <tr class="separator:a3907786c2430dbab9f198bfd5b31ff7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a019c188253c90cf2d0b1d6bf710190f4"><td class="memItemLeft" align="right" valign="top">typedef std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#a019c188253c90cf2d0b1d6bf710190f4">Name</a></td></tr>
@@ -680,6 +694,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ae14b6cb2bd476baeec29760ed4e2eedf"><td class="memItemLeft" align="right" valign="top">OPENVDB_IMPORT void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#ae14b6cb2bd476baeec29760ed4e2eedf">uninitialize</a> ()</td></tr>
 <tr class="memdesc:ae14b6cb2bd476baeec29760ed4e2eedf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global deregistration of native <a class="el" href="classopenvdb_1_1v10__0_1_1Grid.html" title="Container class that associates a tree with a transform and metadata. ">Grid</a>, Transform, <a class="el" href="classopenvdb_1_1v10__0_1_1Metadata.html" title="Base class for storing metadata information in a grid. ">Metadata</a> and Point attribute types.  <a href="#ae14b6cb2bd476baeec29760ed4e2eedf">More...</a><br /></td></tr>
 <tr class="separator:ae14b6cb2bd476baeec29760ed4e2eedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d4158294056e181ec071cb04b13082"><td class="memTemplParams" colspan="2">template&lt;size_t Start, size_t End, typename OpT &gt; </td></tr>
+<tr class="memitem:ac9d4158294056e181ec071cb04b13082"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#ac9d4158294056e181ec071cb04b13082">foreachIndex</a> (OpT op)</td></tr>
+<tr class="separator:ac9d4158294056e181ec071cb04b13082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3319cf7fe22b47ebe2ec123f229b1689"><td class="memTemplParams" colspan="2">template&lt;size_t Start, size_t End, typename OpT , typename RetT &gt; </td></tr>
+<tr class="memitem:a3319cf7fe22b47ebe2ec123f229b1689"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> RetT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#a3319cf7fe22b47ebe2ec123f229b1689">evalFirstIndex</a> (OpT op, const RetT def=RetT())</td></tr>
+<tr class="separator:a3319cf7fe22b47ebe2ec123f229b1689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa44452d921c9e631ff0ad71e911a015"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
 <tr class="memitem:aaa44452d921c9e631ff0ad71e911a015"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceopenvdb_1_1v10__0.html#ad71c1f3b8d46b57fd328d48cee283c1f">SharedPtr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#aaa44452d921c9e631ff0ad71e911a015">ConstPtrCast</a> (const <a class="el" href="namespaceopenvdb_1_1v10__0.html#ad71c1f3b8d46b57fd328d48cee283c1f">SharedPtr</a>&lt; U &gt; &amp;ptr)</td></tr>
 <tr class="memdesc:aaa44452d921c9e631ff0ad71e911a015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new shared pointer that points to the same object as the given pointer but with possibly different <code>const</code>-ness.  <a href="#aaa44452d921c9e631ff0ad71e911a015">More...</a><br /></td></tr>
@@ -692,6 +712,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac37a5f5bb4b01c0902bf79382584db66"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceopenvdb_1_1v10__0.html#ad71c1f3b8d46b57fd328d48cee283c1f">SharedPtr</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#ac37a5f5bb4b01c0902bf79382584db66">StaticPtrCast</a> (const <a class="el" href="namespaceopenvdb_1_1v10__0.html#ad71c1f3b8d46b57fd328d48cee283c1f">SharedPtr</a>&lt; U &gt; &amp;ptr)</td></tr>
 <tr class="memdesc:ac37a5f5bb4b01c0902bf79382584db66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new shared pointer that points to the same object as the given pointer after a <code>static_cast</code>.  <a href="#ac37a5f5bb4b01c0902bf79382584db66">More...</a><br /></td></tr>
 <tr class="separator:ac37a5f5bb4b01c0902bf79382584db66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a340fceaaae7673c7ecec2fae95368cad"><td class="memTemplParams" colspan="2">template&lt;std::size_t N, std::size_t... Is&gt; </td></tr>
+<tr class="memitem:a340fceaaae7673c7ecec2fae95368cad"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#a340fceaaae7673c7ecec2fae95368cad">make_index_sequence_impl</a> ()</td></tr>
+<tr class="separator:a340fceaaae7673c7ecec2fae95368cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef036b95078a8b84519af009ace33353"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aef036b95078a8b84519af009ace33353"><td class="memTemplItemLeft" align="right" valign="top">const char *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#aef036b95078a8b84519af009ace33353">typeNameAsString</a> ()</td></tr>
 <tr class="separator:aef036b95078a8b84519af009ace33353"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -819,18 +842,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a7e9054f39dc08442b4f5feaa771862d0"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:a7e9054f39dc08442b4f5feaa771862d0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#abaf7f913bf1752b9157259ffa32704ca">math::Mat4d</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#a7e9054f39dc08442b4f5feaa771862d0">zeroVal&lt; math::Mat4d &gt;</a> ()</td></tr>
 <tr class="separator:a7e9054f39dc08442b4f5feaa771862d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a579236d56cbb62895f34b2ae02c4d479"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a579236d56cbb62895f34b2ae02c4d479"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a> ()</td></tr>
-<tr class="memdesc:a579236d56cbb62895f34b2ae02c4d479"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value of type T that corresponds to zero.  <a href="#a579236d56cbb62895f34b2ae02c4d479">More...</a><br /></td></tr>
-<tr class="separator:a579236d56cbb62895f34b2ae02c4d479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af92f06c688f52131f64924bb97b22c85"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af92f06c688f52131f64924bb97b22c85"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a> ()</td></tr>
+<tr class="memdesc:af92f06c688f52131f64924bb97b22c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value of type T that corresponds to zero.  <a href="#af92f06c688f52131f64924bb97b22c85">More...</a><br /></td></tr>
+<tr class="separator:af92f06c688f52131f64924bb97b22c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a463a368556d8fc106ef9263c8608d036"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:a463a368556d8fc106ef9263c8608d036"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#a463a368556d8fc106ef9263c8608d036">zeroVal&lt; std::string &gt;</a> ()</td></tr>
 <tr class="memdesc:a463a368556d8fc106ef9263c8608d036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <code>std::string</code> value that corresponds to zero.  <a href="#a463a368556d8fc106ef9263c8608d036">More...</a><br /></td></tr>
 <tr class="separator:a463a368556d8fc106ef9263c8608d036"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb64e571996b18485ba30f6c58d1875b"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr class="memitem:adb64e571996b18485ba30f6c58d1875b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#adb64e571996b18485ba30f6c58d1875b">zeroVal&lt; bool &gt;</a> ()</td></tr>
-<tr class="memdesc:adb64e571996b18485ba30f6c58d1875b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <code>bool</code> value that corresponds to zero.  <a href="#adb64e571996b18485ba30f6c58d1875b">More...</a><br /></td></tr>
-<tr class="separator:adb64e571996b18485ba30f6c58d1875b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb3abd30662dcb70d1393f081abc7c0"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:abbb3abd30662dcb70d1393f081abc7c0"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#abbb3abd30662dcb70d1393f081abc7c0">zeroVal&lt; bool &gt;</a> ()</td></tr>
+<tr class="memdesc:abbb3abd30662dcb70d1393f081abc7c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <code>bool</code> value that corresponds to zero.  <a href="#abbb3abd30662dcb70d1393f081abc7c0">More...</a><br /></td></tr>
+<tr class="separator:abbb3abd30662dcb70d1393f081abc7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeae6ec2c61c476f53ea3942cfc7a9286"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:aeae6ec2c61c476f53ea3942cfc7a9286"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#ae5d4fcba2b5d70080b3938b662e2914b">math::Quats</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0.html#aeae6ec2c61c476f53ea3942cfc7a9286">zeroVal&lt; math::Quats &gt;</a> ()</td></tr>
 <tr class="separator:aeae6ec2c61c476f53ea3942cfc7a9286"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1422,6 +1445,18 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="namespaceopenvdb_1_1v10__0.html#a4bbc98416ee3b28b2356119ce3e5309c">IntegerTreeTypes</a> =  <a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#aa4956ebc40a180cb8f4d5ea0b5552e4d">IntegerGridTypes::Transform</a>&lt;<a class="el" href="namespaceopenvdb_1_1v10__0_1_1internal.html#a39a57656b51636e9e045119ecd189d4f">internal::ToTreeType</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a64bb796a5880d027cddd2f6a2f43224c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceopenvdb_1_1v10__0.html#a64bb796a5880d027cddd2f6a2f43224c">make_index_sequence</a> =  std::decay_t&lt;decltype(<a class="el" href="namespaceopenvdb_1_1v10__0.html#a340fceaaae7673c7ecec2fae95368cad">make_index_sequence_impl</a>&lt;N&gt;())&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2762,6 +2797,32 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a3319cf7fe22b47ebe2ec123f229b1689"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> RetT openvdb::v10_0::evalFirstIndex </td>
+          <td>(</td>
+          <td class="paramtype">OpT&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const RetT&#160;</td>
+          <td class="paramname"><em>def</em> = <code>RetT()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad89e229b7a8bc69ecd52dec66b4d1d7c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2831,6 +2892,22 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the first grid in the given map whose name is <em>name</em>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac9d4158294056e181ec071cb04b13082"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> auto openvdb::v10_0::foreachIndex </td>
+          <td>(</td>
+          <td class="paramtype">OpT&#160;</td>
+          <td class="paramname"><em>op</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -3001,6 +3078,21 @@ Variables</h2></td></tr>
 
 <p>Global registration of native <a class="el" href="classopenvdb_1_1v10__0_1_1Grid.html" title="Container class that associates a tree with a transform and metadata. ">Grid</a>, Transform, <a class="el" href="classopenvdb_1_1v10__0_1_1Metadata.html" title="Base class for storing metadata information in a grid. ">Metadata</a> and Point attribute types. Also initializes blosc (if enabled). </p>
 <p>Calling this methods registers factory callbacks for the set of native grid, transform, metadata and point attribute types that OpenVDB supports by default. For most types, calling openvdb::initialize is only required for serialization support. However, openvdb::initialize must be called for PointDataGrid attribute usage as these callbacks are used in various tools. </p><dl class="section note"><dt>Note</dt><dd>This method is thread safe - it can be concurrently called multiple times, early exiting if it has already been called so long as <a class="el" href="namespaceopenvdb_1_1v10__0.html#ae14b6cb2bd476baeec29760ed4e2eedf" title="Global deregistration of native Grid, Transform, Metadata and Point attribute types. ">openvdb::uninitialize()</a> has not been called. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a340fceaaae7673c7ecec2fae95368cad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto openvdb::v10_0::make_index_sequence_impl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -3969,7 +4061,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a579236d56cbb62895f34b2ae02c4d479"></a>
+<a class="anchor" id="af92f06c688f52131f64924bb97b22c85"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3977,7 +4069,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T openvdb::v10_0::zeroVal </td>
+          <td class="memname">constexpr T openvdb::v10_0::zeroVal </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -3991,7 +4083,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the value of type T that corresponds to zero. </p>
-<dl class="section note"><dt>Note</dt><dd>A <a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479" title="Return the value of type T that corresponds to zero. ">zeroVal&lt;T&gt;()</a> specialization must be defined for each <code>ValueType</code> T that cannot be constructed using the form <code>T(0)</code>. For example, <code>std::string(0)</code> treats 0 as <code>nullptr</code> and throws a <code>std::logic_error</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>A <a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85" title="Return the value of type T that corresponds to zero. ">zeroVal&lt;T&gt;()</a> specialization must be defined for each <code>ValueType</code> T that cannot be constructed using the form <code>T(0)</code>. For example, <code>std::string(0)</code> treats 0 as <code>nullptr</code> and throws a <code>std::logic_error</code>. </dd></dl>
 
 </div>
 </div>
@@ -4003,7 +4095,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structopenvdb_1_1v10__0_1_1ax_1_1codegen_1_1String.html">ax::codegen::String</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="structopenvdb_1_1v10__0_1_1ax_1_1codegen_1_1String.html">ax::codegen::String</a> &gt; </td>
+          <td class="memname"><a class="el" href="structopenvdb_1_1v10__0_1_1ax_1_1codegen_1_1String.html">ax::codegen::String</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="structopenvdb_1_1v10__0_1_1ax_1_1codegen_1_1String.html">ax::codegen::String</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -4018,7 +4110,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adb64e571996b18485ba30f6c58d1875b"></a>
+<a class="anchor" id="abbb3abd30662dcb70d1393f081abc7c0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -4026,7 +4118,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">openvdb::v10_0::zeroVal</a>&lt; bool &gt; </td>
+          <td class="memname">constexpr bool <a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">openvdb::v10_0::zeroVal</a>&lt; bool &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -4051,7 +4143,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#a29742c92282b86aa2885165d7464ac3a">math::Mat3d</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#a29742c92282b86aa2885165d7464ac3a">math::Mat3d</a> &gt; </td>
+          <td class="memname"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#a29742c92282b86aa2885165d7464ac3a">math::Mat3d</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#a29742c92282b86aa2885165d7464ac3a">math::Mat3d</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -4074,7 +4166,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#a85b140686e0a81e6b7e47e021428005e">math::Mat3s</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#a85b140686e0a81e6b7e47e021428005e">math::Mat3s</a> &gt; </td>
+          <td class="memname"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#a85b140686e0a81e6b7e47e021428005e">math::Mat3s</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#a85b140686e0a81e6b7e47e021428005e">math::Mat3s</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -4097,7 +4189,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#abaf7f913bf1752b9157259ffa32704ca">math::Mat4d</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#abaf7f913bf1752b9157259ffa32704ca">math::Mat4d</a> &gt; </td>
+          <td class="memname"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#abaf7f913bf1752b9157259ffa32704ca">math::Mat4d</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#abaf7f913bf1752b9157259ffa32704ca">math::Mat4d</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -4120,7 +4212,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#a1e0cebbadc8b83a7e703d21de5539beb">math::Mat4s</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#a1e0cebbadc8b83a7e703d21de5539beb">math::Mat4s</a> &gt; </td>
+          <td class="memname"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#a1e0cebbadc8b83a7e703d21de5539beb">math::Mat4s</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#a1e0cebbadc8b83a7e703d21de5539beb">math::Mat4s</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -4143,7 +4235,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#acf69cf7c7e5473d4533bd7c513a57580">math::Quatd</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#acf69cf7c7e5473d4533bd7c513a57580">math::Quatd</a> &gt; </td>
+          <td class="memname"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#acf69cf7c7e5473d4533bd7c513a57580">math::Quatd</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#acf69cf7c7e5473d4533bd7c513a57580">math::Quatd</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -4166,7 +4258,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#ae5d4fcba2b5d70080b3938b662e2914b">math::Quats</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#ae5d4fcba2b5d70080b3938b662e2914b">math::Quats</a> &gt; </td>
+          <td class="memname"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#ae5d4fcba2b5d70080b3938b662e2914b">math::Quats</a> <a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">openvdb::v10_0::zeroVal</a>&lt; <a class="el" href="namespaceopenvdb_1_1v10__0_1_1math.html#ae5d4fcba2b5d70080b3938b662e2914b">math::Quats</a> &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -4189,7 +4281,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string <a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">openvdb::v10_0::zeroVal</a>&lt; std::string &gt; </td>
+          <td class="memname">std::string <a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">openvdb::v10_0::zeroVal</a>&lt; std::string &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

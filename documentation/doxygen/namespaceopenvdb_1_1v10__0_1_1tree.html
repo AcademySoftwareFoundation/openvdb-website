@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.0.1</span>
+   &#160;<span id="projectnumber">10.0.2</span>
    </div>
   </td>
  </tr>
@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">openvdb::v10_0::tree Namespace Reference</div>  </div>
@@ -105,13 +106,6 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1CacheItem.html">CacheItem</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1CacheItem_3_01TreeCacheT_00_01NodeVecT_00_01false_00_01true_01_4.html">CacheItem&lt; TreeCacheT, NodeVecT, false, true &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1CacheItem_3_01TreeCacheT_00_01NodeVecT_00_01true_00_01false_01_4.html">CacheItem&lt; TreeCacheT, NodeVecT, true, false &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tail of a compile-time list of cached node pointers, ordered from <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1LeafNode.html" title="Templated block class to hold specific data types and a fixed number of values determined by Log2Dim...">LeafNode</a> to <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1RootNode.html">RootNode</a>.  <a href="classopenvdb_1_1v10__0_1_1tree_1_1CacheItem_3_01TreeCacheT_00_01NodeVecT_00_01true_00_01false_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1tree_1_1CombineOpAdapter.html">CombineOpAdapter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to adapt a three-argument (a, b, result) CombineOp functor into a single-argument functor that accepts a <a class="el" href="classopenvdb_1_1v10__0_1_1CombineArgs.html" title="This struct collects both input and output arguments to &quot;grid combiner&quot; functors used with the tree::...">CombineArgs</a> struct.  <a href="structopenvdb_1_1v10__0_1_1tree_1_1CombineOpAdapter.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -300,38 +294,51 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1TreeValueIteratorBase.html">TreeValueIteratorBase</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for tree-traversal iterators over tile and voxel values.  <a href="classopenvdb_1_1v10__0_1_1tree_1_1TreeValueIteratorBase.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor0.html">ValueAccessor0</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a> with no mutex and no node caching.  <a href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor0.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor1.html">ValueAccessor1</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value accessor with one level of node caching.  <a href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor1.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor2.html">ValueAccessor2</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value accessor with two levels of node caching.  <a href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor2.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor3.html">ValueAccessor3</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value accessor with three levels of node caching.  <a href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor3.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor_3_01TreeType_00_01IsSafe_00_010_00_01tbb_1_1null__mutex_01_4.html">ValueAccessor&lt; TreeType, IsSafe, 0, tbb::null_mutex &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of the <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a> with no mutex and no cache levels.  <a href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor_3_01TreeType_00_01IsSafe_00_010_00_01tbb_1_1null__mutex_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor_3_01TreeType_00_01IsSafe_00_011_00_01tbb_1_1null__mutex_01_4.html">ValueAccessor&lt; TreeType, IsSafe, 1, tbb::null_mutex &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of the <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a> with no mutex and one cache level.  <a href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor_3_01TreeType_00_01IsSafe_00_011_00_01tbb_1_1null__mutex_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor_3_01TreeType_00_01IsSafe_00_012_00_01tbb_1_1null__mutex_01_4.html">ValueAccessor&lt; TreeType, IsSafe, 2, tbb::null_mutex &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of the <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a> with no mutex and two cache levels.  <a href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor_3_01TreeType_00_01IsSafe_00_012_00_01tbb_1_1null__mutex_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor_3_01TreeType_00_01IsSafe_00_013_00_01tbb_1_1null__mutex_01_4.html">ValueAccessor&lt; TreeType, IsSafe, 3, tbb::null_mutex &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of the <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a> with no mutex and three cache levels.  <a href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor_3_01TreeType_00_01IsSafe_00_013_00_01tbb_1_1null__mutex_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html">ValueAccessorBase</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This base class for ValueAccessors manages registration of an accessor with a tree so that the tree can automatically clear the accessor whenever one of its nodes is deleted.  <a href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorRW.html">ValueAccessorRW</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This accessor is thread-safe (at the cost of speed) for both reading and writing to a tree. That is, multiple threads may safely access a single, shared <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorRW.html" title="This accessor is thread-safe (at the cost of speed) for both reading and writing to a tree...">ValueAccessorRW</a>.  <a href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorRW.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Value Accessor Implementation and API methods. The majoirty of the API matches the API of a compatible OpenVDB <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html">Tree</a> Node.  <a href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorLeafBuffer.html">ValueAccessorLeafBuffer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A small class that contains a cached pointer to a <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1LeafNode.html" title="Templated block class to hold specific data types and a fixed number of values determined by Log2Dim...">LeafNode</a> data buffer which is derived from by the internal Value Accessor Implementation. This allows for the empty base class optimization to be performed in the case where a <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1LeafNode.html" title="Templated block class to hold specific data types and a fixed number of values determined by Log2Dim...">LeafNode</a> does not store a contiguous index-able buffer. From C++20 we can instead switch to [[no_unique_address]].  <a href="structopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorLeafBuffer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorLeafBuffer_3_01TreeTypeT_00_01IntegerSequence_00741773d190eb0eb35a97259e40ef6ee0.html">ValueAccessorLeafBuffer&lt; TreeTypeT, IntegerSequence,           typename std::enable_if&lt;                                                  !value_accessor_internal::EnableLeafBuffer&lt; TreeTypeT, IntegerSequence &gt;::value           &gt;::type &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization for the case where a Leaf Buffer cannot be cached.  <a href="structopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorLeafBuffer_3_01TreeTypeT_00_01IntegerSequence_00741773d190eb0eb35a97259e40ef6ee0.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorLock.html">ValueAccessorLock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A small class that contains a Mutex which is derived from by the internal Value Accessor Implementation. This allows for the empty base class optimization to be performed in the case where a Mutex/Lock is not in use. From C++20 we can instead switch to [[no_unique_address]].  <a href="structopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorLock.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorLock_3_01void_01_4.html">ValueAccessorLock&lt; void &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization for the case where no Mutex is in use. See above.  <a href="structopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorLock_3_01void_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a9bffaa36c0bfe91d3ac486db84d76410"><td class="memTemplParams" colspan="2">template&lt;typename TreeType , bool IsSafe = true, size_t CacheLevels = std::max(Index(1),TreeType::DEPTH)-1, typename MutexType  = void&gt; </td></tr>
+<tr class="memitem:a9bffaa36c0bfe91d3ac486db84d76410"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#a9bffaa36c0bfe91d3ac486db84d76410">ValueAccessor</a> = <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl</a>&lt; TreeType, IsSafe, MutexType, <a class="el" href="namespaceopenvdb_1_1v10__0.html#a64bb796a5880d027cddd2f6a2f43224c">openvdb::make_index_sequence</a>&lt; CacheLevels &gt;&gt;</td></tr>
+<tr class="memdesc:a9bffaa36c0bfe91d3ac486db84d76410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default alias for a ValueAccessor. This is simply a helper alias for the generic definition but takes a single Index specifying the number of nodes to cache. This is expanded into an index sequence (required for backward compatibility).  <a href="#a9bffaa36c0bfe91d3ac486db84d76410">More...</a><br /></td></tr>
+<tr class="separator:a9bffaa36c0bfe91d3ac486db84d76410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91391009e65d76543e7e542bc18b395f"><td class="memTemplParams" colspan="2">template&lt;typename TreeType , bool IsSafe&gt; </td></tr>
+<tr class="memitem:a91391009e65d76543e7e542bc18b395f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#a91391009e65d76543e7e542bc18b395f">ValueAccessor0</a> = <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl</a>&lt; TreeType, IsSafe, void, <a class="el" href="structopenvdb_1_1v10__0_1_1index__sequence.html">openvdb::index_sequence</a>&lt;&gt;&gt;</td></tr>
+<tr class="memdesc:a91391009e65d76543e7e542bc18b395f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper alias for a ValueAccessor which doesn't cache any Internal or Leaf nodes.  <a href="#a91391009e65d76543e7e542bc18b395f">More...</a><br /></td></tr>
+<tr class="separator:a91391009e65d76543e7e542bc18b395f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfc6cb02d8dbeef5695e7e10b98768ec"><td class="memTemplParams" colspan="2">template&lt;typename TreeType , bool IsSafe, size_t L0 = 0&gt; </td></tr>
+<tr class="memitem:acfc6cb02d8dbeef5695e7e10b98768ec"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#acfc6cb02d8dbeef5695e7e10b98768ec">ValueAccessor1</a> = <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl</a>&lt; TreeType, IsSafe, void, <a class="el" href="structopenvdb_1_1v10__0_1_1index__sequence.html">openvdb::index_sequence</a>&lt; L0 &gt;&gt;</td></tr>
+<tr class="memdesc:acfc6cb02d8dbeef5695e7e10b98768ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper alias for a ValueAccessor which caches a single node level. By default, the node level is 0, which corresponds to the lowest node level, typically LeafNodes.  <a href="#acfc6cb02d8dbeef5695e7e10b98768ec">More...</a><br /></td></tr>
+<tr class="separator:acfc6cb02d8dbeef5695e7e10b98768ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d86ca6794e2fa6a7a71a358ca8eeda0"><td class="memTemplParams" colspan="2">template&lt;typename TreeType , bool IsSafe, size_t L0 = 0, size_t L1 = 1&gt; </td></tr>
+<tr class="memitem:a1d86ca6794e2fa6a7a71a358ca8eeda0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#a1d86ca6794e2fa6a7a71a358ca8eeda0">ValueAccessor2</a> = <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl</a>&lt; TreeType, IsSafe, void, <a class="el" href="structopenvdb_1_1v10__0_1_1index__sequence.html">openvdb::index_sequence</a>&lt; L0, L1 &gt;&gt;</td></tr>
+<tr class="memdesc:a1d86ca6794e2fa6a7a71a358ca8eeda0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper alias for a ValueAccessor which caches two node levels. By default the two lowest node levels are selected (0, 1) which typically correspond to an <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1InternalNode.html">InternalNode</a> and its child LeafNodes. This instantiation will only be valid for TreeTypes which have at least two levels of nodes (excluding the Root node).  <a href="#a1d86ca6794e2fa6a7a71a358ca8eeda0">More...</a><br /></td></tr>
+<tr class="separator:a1d86ca6794e2fa6a7a71a358ca8eeda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc1d265463c2153d920dcefb872ed705"><td class="memTemplParams" colspan="2">template&lt;typename TreeType , bool IsSafe, size_t L0 = 0, size_t L1 = 1, size_t L2 = 2&gt; </td></tr>
+<tr class="memitem:afc1d265463c2153d920dcefb872ed705"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#afc1d265463c2153d920dcefb872ed705">ValueAccessor3</a> = <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl</a>&lt; TreeType, IsSafe, void, <a class="el" href="structopenvdb_1_1v10__0_1_1index__sequence.html">openvdb::index_sequence</a>&lt; L0, L1, L2 &gt;&gt;</td></tr>
+<tr class="memdesc:afc1d265463c2153d920dcefb872ed705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper alias for a ValueAccessor which caches three node levels. By default the three lowest node levels are selected (0, 1, 2) which typically correspond to two InternalNodes followed by the bottom LeafNodes. This instantiation will only be valid for TreeTypes which have at least three levels of nodes (excluding the Root node).  <a href="#afc1d265463c2153d920dcefb872ed705">More...</a><br /></td></tr>
+<tr class="separator:afc1d265463c2153d920dcefb872ed705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac968581579c1f235f8f0a22a68d7fe9b"><td class="memTemplParams" colspan="2">template&lt;typename TreeType , bool IsSafe = true, size_t CacheLevels = std::max(Index(1),TreeType::DEPTH)-1&gt; </td></tr>
+<tr class="memitem:ac968581579c1f235f8f0a22a68d7fe9b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#ac968581579c1f235f8f0a22a68d7fe9b">ValueAccessorRW</a> = <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl</a>&lt; TreeType, IsSafe, tbb::spin_mutex, <a class="el" href="namespaceopenvdb_1_1v10__0.html#a64bb796a5880d027cddd2f6a2f43224c">openvdb::make_index_sequence</a>&lt; CacheLevels &gt;&gt;</td></tr>
+<tr class="memdesc:ac968581579c1f235f8f0a22a68d7fe9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper alias for a ValueAccesor which spin locks every API call.  <a href="#ac968581579c1f235f8f0a22a68d7fe9b">More...</a><br /></td></tr>
+<tr class="separator:ac968581579c1f235f8f0a22a68d7fe9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -339,6 +346,100 @@ Functions</h2></td></tr>
 <tr class="memitem:ac52c249ff5e52860f54d4e17b1254a4f"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#ac52c249ff5e52860f54d4e17b1254a4f">operator&lt;&lt;</a> (std::ostream &amp;os, const typename <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1LeafNode.html">LeafNode</a>&lt; T, Log2Dim &gt;::Buffer &amp;buf)</td></tr>
 <tr class="separator:ac52c249ff5e52860f54d4e17b1254a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a9bffaa36c0bfe91d3ac486db84d76410"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#a9bffaa36c0bfe91d3ac486db84d76410">ValueAccessor</a> =  <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl</a>&lt;TreeType, IsSafe, MutexType, <a class="el" href="namespaceopenvdb_1_1v10__0.html#a64bb796a5880d027cddd2f6a2f43224c">openvdb::make_index_sequence</a>&lt;CacheLevels&gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default alias for a ValueAccessor. This is simply a helper alias for the generic definition but takes a single Index specifying the number of nodes to cache. This is expanded into an index sequence (required for backward compatibility). </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TreeType</td><td>The tree type </td></tr>
+    <tr><td class="paramname">IsSafe</td><td>Whether this accessor registers itself to the tree. See the base class definition for more information on this parameter. </td></tr>
+    <tr><td class="paramname">CacheLevels</td><td>The number of node levels to cache <em>excluding</em> the Root node. The Root node is implicitly always included, even if this value is zero. </td></tr>
+    <tr><td class="paramname">MutexType</td><td>An optional std compatible mutex to use which ensures every call to the ValueAccessor API is thread safe. If void (the default) no locking takes place. In general it's not advised to mutex lock ValueAccessor methods (instead consider creating a accessor per thread). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a91391009e65d76543e7e542bc18b395f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#a91391009e65d76543e7e542bc18b395f">ValueAccessor0</a> =  <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl</a>&lt;TreeType, IsSafe, void, <a class="el" href="structopenvdb_1_1v10__0_1_1index__sequence.html">openvdb::index_sequence</a>&lt;&gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper alias for a ValueAccessor which doesn't cache any Internal or Leaf nodes. </p>
+
+</div>
+</div>
+<a class="anchor" id="acfc6cb02d8dbeef5695e7e10b98768ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#acfc6cb02d8dbeef5695e7e10b98768ec">ValueAccessor1</a> =  <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl</a>&lt;TreeType, IsSafe, void, <a class="el" href="structopenvdb_1_1v10__0_1_1index__sequence.html">openvdb::index_sequence</a>&lt;L0&gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper alias for a ValueAccessor which caches a single node level. By default, the node level is 0, which corresponds to the lowest node level, typically LeafNodes. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1d86ca6794e2fa6a7a71a358ca8eeda0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#a1d86ca6794e2fa6a7a71a358ca8eeda0">ValueAccessor2</a> =  <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl</a>&lt;TreeType, IsSafe, void, <a class="el" href="structopenvdb_1_1v10__0_1_1index__sequence.html">openvdb::index_sequence</a>&lt;L0, L1&gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper alias for a ValueAccessor which caches two node levels. By default the two lowest node levels are selected (0, 1) which typically correspond to an <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1InternalNode.html">InternalNode</a> and its child LeafNodes. This instantiation will only be valid for TreeTypes which have at least two levels of nodes (excluding the Root node). </p>
+
+</div>
+</div>
+<a class="anchor" id="afc1d265463c2153d920dcefb872ed705"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#afc1d265463c2153d920dcefb872ed705">ValueAccessor3</a> =  <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl</a>&lt;TreeType, IsSafe, void, <a class="el" href="structopenvdb_1_1v10__0_1_1index__sequence.html">openvdb::index_sequence</a>&lt;L0, L1, L2&gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper alias for a ValueAccessor which caches three node levels. By default the three lowest node levels are selected (0, 1, 2) which typically correspond to two InternalNodes followed by the bottom LeafNodes. This instantiation will only be valid for TreeTypes which have at least three levels of nodes (excluding the Root node). </p>
+
+</div>
+</div>
+<a class="anchor" id="ac968581579c1f235f8f0a22a68d7fe9b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#ac968581579c1f235f8f0a22a68d7fe9b">ValueAccessorRW</a> =  <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl</a>&lt;TreeType, IsSafe, tbb::spin_mutex, <a class="el" href="namespaceopenvdb_1_1v10__0.html#a64bb796a5880d027cddd2f6a2f43224c">openvdb::make_index_sequence</a>&lt;CacheLevels&gt;&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper alias for a ValueAccesor which spin locks every API call. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ac52c249ff5e52860f54d4e17b1254a4f"></a>
 <div class="memitem">

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.0.1</span>
+   &#160;<span id="projectnumber">10.0.2</span>
    </div>
   </td>
  </tr>
@@ -101,8 +101,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e175e3f2470f07e680f4425be179a78"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1IteratorRange.html#a2e175e3f2470f07e680f4425be179a78">IteratorRange</a> (const IterT &amp;iter, size_t grainSize=8)</td></tr>
+<tr class="memdesc:a2e175e3f2470f07e680f4425be179a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from iterator and grain size.  <a href="#a2e175e3f2470f07e680f4425be179a78">More...</a><br /></td></tr>
 <tr class="separator:a2e175e3f2470f07e680f4425be179a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecb920bf1f1dfb371b6a4eb10df59cba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1IteratorRange.html#aecb920bf1f1dfb371b6a4eb10df59cba">IteratorRange</a> (<a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1IteratorRange.html">IteratorRange</a> &amp;other, tbb::split)</td></tr>
+<tr class="memdesc:aecb920bf1f1dfb371b6a4eb10df59cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split constructor used by tbb (should rarely be called directly)  <a href="#aecb920bf1f1dfb371b6a4eb10df59cba">More...</a><br /></td></tr>
 <tr class="separator:aecb920bf1f1dfb371b6a4eb10df59cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ff2fe797a9bf5ecbd4099f6fbcd8577"><td class="memItemLeft" align="right" valign="top">const IterT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1IteratorRange.html#a4ff2fe797a9bf5ecbd4099f6fbcd8577">iterator</a> () const </td></tr>
 <tr class="memdesc:a4ff2fe797a9bf5ecbd4099f6fbcd8577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to this range's iterator.  <a href="#a4ff2fe797a9bf5ecbd4099f6fbcd8577">More...</a><br /></td></tr>
@@ -116,9 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aec7ec8e2a0c5b3a353264e1b0f681061"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1IteratorRange.html#aec7ec8e2a0c5b3a353264e1b0f681061">is_divisible</a> () const </td></tr>
 <tr class="memdesc:aec7ec8e2a0c5b3a353264e1b0f681061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if this range is splittable (i.e., if the iterator can be advanced more than mGrainSize times).  <a href="#aec7ec8e2a0c5b3a353264e1b0f681061">More...</a><br /></td></tr>
 <tr class="separator:aec7ec8e2a0c5b3a353264e1b0f681061"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4db50e522b7d0ff0d42eaf06abc3206"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1IteratorRange.html#af4db50e522b7d0ff0d42eaf06abc3206">increment</a> (<a class="el" href="namespaceopenvdb_1_1v10__0.html#a1a68fb76e3d6897fa878760b6bcbda7a">Index</a> n=1)</td></tr>
-<tr class="memdesc:af4db50e522b7d0ff0d42eaf06abc3206"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advance the iterator <em>n</em> times.  <a href="#af4db50e522b7d0ff0d42eaf06abc3206">More...</a><br /></td></tr>
-<tr class="separator:af4db50e522b7d0ff0d42eaf06abc3206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac10173bb67a904b1b0f451c7fe022c88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1IteratorRange.html#ac10173bb67a904b1b0f451c7fe022c88">increment</a> (size_t n=1)</td></tr>
+<tr class="memdesc:ac10173bb67a904b1b0f451c7fe022c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advance the iterator <em>n</em> times.  <a href="#ac10173bb67a904b1b0f451c7fe022c88">More...</a><br /></td></tr>
+<tr class="separator:ac10173bb67a904b1b0f451c7fe022c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a838a2b1e48837a88318d9781d9cf9a66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1IteratorRange.html">IteratorRange</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1IteratorRange.html#a838a2b1e48837a88318d9781d9cf9a66">operator++</a> ()</td></tr>
 <tr class="memdesc:a838a2b1e48837a88318d9781d9cf9a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advance the iterator to the next item.  <a href="#a838a2b1e48837a88318d9781d9cf9a66">More...</a><br /></td></tr>
 <tr class="separator:a838a2b1e48837a88318d9781d9cf9a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,6 +166,15 @@ class openvdb::v10_0::tree::IteratorRange&lt; IterT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
+<p>Constructor from iterator and grain size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">iter</td><td>Iterator from which the range is constructed </td></tr>
+    <tr><td class="paramname">grainSize</td><td>Grain size which controls the granularity of range splitting </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="aecb920bf1f1dfb371b6a4eb10df59cba"></a>
@@ -198,6 +209,15 @@ class openvdb::v10_0::tree::IteratorRange&lt; IterT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
+<p>Split constructor used by tbb (should rarely be called directly) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1IteratorRange.html">IteratorRange</a> to be split </td></tr>
+    <tr><td class="paramname">tbb::split</td><td>Dummy class used to create a unique signature for this constructor </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -224,7 +244,7 @@ class openvdb::v10_0::tree::IteratorRange&lt; IterT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="af4db50e522b7d0ff0d42eaf06abc3206"></a>
+<a class="anchor" id="ac10173bb67a904b1b0f451c7fe022c88"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -234,7 +254,7 @@ class openvdb::v10_0::tree::IteratorRange&lt; IterT &gt;</h3>
         <tr>
           <td class="memname">void increment </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceopenvdb_1_1v10__0.html#a1a68fb76e3d6897fa878760b6bcbda7a">Index</a>&#160;</td>
+          <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>n</em> = <code>1</code></td><td>)</td>
           <td></td>
         </tr>
@@ -297,7 +317,7 @@ class openvdb::v10_0::tree::IteratorRange&lt; IterT &gt;</h3>
 </div><div class="memdoc">
 
 <p>Return a reference to this range's iterator. </p>
-<dl class="section note"><dt>Note</dt><dd>The reference is const, because the iterator should not be incremented directly. Use this range object's <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1IteratorRange.html#af4db50e522b7d0ff0d42eaf06abc3206" title="Advance the iterator n times. ">increment()</a> instead. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The reference is const, because the iterator should not be incremented directly. Use this range object's <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1IteratorRange.html#ac10173bb67a904b1b0f451c7fe022c88" title="Advance the iterator n times. ">increment()</a> instead. </dd></dl>
 
 </div>
 </div>

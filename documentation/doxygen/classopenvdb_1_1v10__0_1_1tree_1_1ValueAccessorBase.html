@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.0.1</span>
+   &#160;<span id="projectnumber">10.0.2</span>
    </div>
   </td>
  </tr>
@@ -106,37 +106,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="ValueAccessor_8h_source.html">openvdb/tree/ValueAccessor.h</a>&gt;</code></p>
 
-<p>Inherited by <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor0.html">ValueAccessor0&lt; TreeType, IsSafe &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor1.html">ValueAccessor1&lt; TreeType, IsSafe &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor2.html">ValueAccessor2&lt; TreeType, IsSafe &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor3.html">ValueAccessor3&lt; TreeType, IsSafe &gt;</a>, and <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor&lt; TreeType, IsSafe, TreeType::DEPTH-1, tbb::spin_mutex &gt;</a>.</p>
+<p>Inherited by <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html">ValueAccessorImpl&lt; TreeType &gt;</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6b76e06e2b45f60501ab02c1ad771df0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#a6b76e06e2b45f60501ab02c1ad771df0">ValueAccessorBase</a> (TreeType &amp;<a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#a51e807b7c7a3ef45dbe459d62a3b715b">tree</a>)</td></tr>
+<tr class="memdesc:a6b76e06e2b45f60501ab02c1ad771df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a tree. Should rarely be invoked directly, the drived implementation class calls this. Remains public for backwards compatibility.  <a href="#a6b76e06e2b45f60501ab02c1ad771df0">More...</a><br /></td></tr>
 <tr class="separator:a6b76e06e2b45f60501ab02c1ad771df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53dd0929b984e8ffe91f68cd064904ff"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#a53dd0929b984e8ffe91f68cd064904ff">~ValueAccessorBase</a> ()</td></tr>
 <tr class="separator:a53dd0929b984e8ffe91f68cd064904ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a356f19169f7ac91f39136cfa11f21dcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#a356f19169f7ac91f39136cfa11f21dcb">ValueAccessorBase</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html">ValueAccessorBase</a> &amp;other)</td></tr>
+<tr class="memdesc:a356f19169f7ac91f39136cfa11f21dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor - if IsSafe, then the copy also registers itself against the tree it is accessing.  <a href="#a356f19169f7ac91f39136cfa11f21dcb">More...</a><br /></td></tr>
+<tr class="separator:a356f19169f7ac91f39136cfa11f21dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60087b50dd40da857cba105a9fb5e312"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html">ValueAccessorBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#a60087b50dd40da857cba105a9fb5e312">operator=</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html">ValueAccessorBase</a> &amp;other)</td></tr>
+<tr class="separator:a60087b50dd40da857cba105a9fb5e312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b1734bdff67bbb51f405bb905567ea8"><td class="memItemLeft" align="right" valign="top">TreeType *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#a6b1734bdff67bbb51f405bb905567ea8">getTree</a> () const </td></tr>
 <tr class="memdesc:a6b1734bdff67bbb51f405bb905567ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the tree associated with this accessor.  <a href="#a6b1734bdff67bbb51f405bb905567ea8">More...</a><br /></td></tr>
 <tr class="separator:a6b1734bdff67bbb51f405bb905567ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51e807b7c7a3ef45dbe459d62a3b715b"><td class="memItemLeft" align="right" valign="top">TreeType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#a51e807b7c7a3ef45dbe459d62a3b715b">tree</a> () const </td></tr>
 <tr class="memdesc:a51e807b7c7a3ef45dbe459d62a3b715b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the tree associated with this accessor.  <a href="#a51e807b7c7a3ef45dbe459d62a3b715b">More...</a><br /></td></tr>
 <tr class="separator:a51e807b7c7a3ef45dbe459d62a3b715b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a356f19169f7ac91f39136cfa11f21dcb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#a356f19169f7ac91f39136cfa11f21dcb">ValueAccessorBase</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html">ValueAccessorBase</a> &amp;other)</td></tr>
-<tr class="separator:a356f19169f7ac91f39136cfa11f21dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60087b50dd40da857cba105a9fb5e312"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html">ValueAccessorBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#a60087b50dd40da857cba105a9fb5e312">operator=</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html">ValueAccessorBase</a> &amp;other)</td></tr>
-<tr class="separator:a60087b50dd40da857cba105a9fb5e312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eeb94d22b8366d1b68d0614384802fe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#a5eeb94d22b8366d1b68d0614384802fe">clear</a> ()=0</td></tr>
+<tr class="memdesc:a5eeb94d22b8366d1b68d0614384802fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pure virtual method, clears the derived accessor.  <a href="#a5eeb94d22b8366d1b68d0614384802fe">More...</a><br /></td></tr>
 <tr class="separator:a5eeb94d22b8366d1b68d0614384802fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af069e2e79372f93966b8cdaf405e7e9c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#af069e2e79372f93966b8cdaf405e7e9c">isSafe</a> ()</td></tr>
-<tr class="memdesc:af069e2e79372f93966b8cdaf405e7e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if this accessor is safe, i.e. registered by the tree from which it is constructed. Un-registered accessors can in rare cases be faster because it avoids the (small) overhead of registration, but they are unsafe if the tree is modified. So unless you're an expert it is highly recommended to set IsSafe = true (which is the default).  <a href="#af069e2e79372f93966b8cdaf405e7e9c">More...</a><br /></td></tr>
-<tr class="separator:af069e2e79372f93966b8cdaf405e7e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c91259346fbc10d430aa8c4965425e8"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#a2c91259346fbc10d430aa8c4965425e8">isSafe</a> ()</td></tr>
+<tr class="memdesc:a2c91259346fbc10d430aa8c4965425e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if this accessor is safe, i.e. registered by the tree from which it is constructed. Un-registered accessors can in rare cases be faster because it avoids the (small) overhead of registration, but they are unsafe if the tree is modified. So unless you're an expert it is highly recommended to set IsSafe = true (which is the default).  <a href="#a2c91259346fbc10d430aa8c4965425e8">More...</a><br /></td></tr>
+<tr class="separator:a2c91259346fbc10d430aa8c4965425e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:aed029134efd058169d0a0d3cae1c6f32"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#aed029134efd058169d0a0d3cae1c6f32">IsConstTree</a> = std::is_const&lt;TreeType&gt;::<a class="el" href="GridBuilder_8h.html#a0bd8e8b76a16eb8c0d32d42313755c8e">value</a></td></tr>
-<tr class="separator:aed029134efd058169d0a0d3cae1c6f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a656db13e6883d6b0f237827997a7f1da"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorBase.html#a656db13e6883d6b0f237827997a7f1da">IsConstTree</a> = std::is_const&lt;TreeType&gt;::<a class="el" href="GridBuilder_8h.html#a0bd8e8b76a16eb8c0d32d42313755c8e">value</a></td></tr>
+<tr class="memdesc:a656db13e6883d6b0f237827997a7f1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this accessor is operating on a const tree type.  <a href="#a656db13e6883d6b0f237827997a7f1da">More...</a><br /></td></tr>
+<tr class="separator:a656db13e6883d6b0f237827997a7f1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -181,6 +185,8 @@ class openvdb::v10_0::tree::ValueAccessorBase&lt; TreeType, IsSafe &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Construct from a tree. Should rarely be invoked directly, the drived implementation class calls this. Remains public for backwards compatibility. </p>
 
 </div>
 </div>
@@ -229,6 +235,8 @@ class openvdb::v10_0::tree::ValueAccessorBase&lt; TreeType, IsSafe &gt;</h3>
 </table>
 </div><div class="memdoc">
 
+<p>Copy constructor - if IsSafe, then the copy also registers itself against the tree it is accessing. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -253,7 +261,9 @@ class openvdb::v10_0::tree::ValueAccessorBase&lt; TreeType, IsSafe &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor3.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor3&lt; _TreeType, IsSafe, L0, L1, L2 &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor3.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor3&lt; TreeType, IsSafe &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor2.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor2&lt; _TreeType, IsSafe, L0, L1 &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor2.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor2&lt; TreeType, IsSafe &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor1.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor1&lt; _TreeType, IsSafe, L0 &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor1.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor1&lt; TreeType, IsSafe &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor0.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor0&lt; _TreeType, IsSafe &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor0.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor0&lt; TreeType, IsSafe &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor&lt; _TreeType, IsSafe, CacheLevels, MutexType &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor&lt; TreeT &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor&lt; TreeType, IsSafe, TreeType::DEPTH-1, tbb::spin_mutex &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor&lt; const TreeType, IsSafe &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor&lt; const TreeType &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor&lt; const TreeT, false &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor&lt; const TreeT &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor&lt; IntTreeT &gt;</a>, and <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html#aee7cb2065b88d21ac4ad05bc997ecf82">ValueAccessor&lt; TreeType &gt;</a>.</p>
+<p>Pure virtual method, clears the derived accessor. </p>
+
+<p>Implemented in <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#a107032a7d93961962b3ce5e342aec7bb">ValueAccessorImpl&lt; _TreeType, IsSafe, MutexT, IntegerSequence &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#a107032a7d93961962b3ce5e342aec7bb">ValueAccessorImpl&lt; TreeT &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#a107032a7d93961962b3ce5e342aec7bb">ValueAccessorImpl&lt; const TreeType, IsSafe &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#a107032a7d93961962b3ce5e342aec7bb">ValueAccessorImpl&lt; const TreeType &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#a107032a7d93961962b3ce5e342aec7bb">ValueAccessorImpl&lt; const TreeT, false &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#a107032a7d93961962b3ce5e342aec7bb">ValueAccessorImpl&lt; const TreeT &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#a107032a7d93961962b3ce5e342aec7bb">ValueAccessorImpl&lt; IntTreeT &gt;</a>, and <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#a107032a7d93961962b3ce5e342aec7bb">ValueAccessorImpl&lt; TreeType &gt;</a>.</p>
 
 </div>
 </div>
@@ -283,7 +293,7 @@ class openvdb::v10_0::tree::ValueAccessorBase&lt; TreeType, IsSafe &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="af069e2e79372f93966b8cdaf405e7e9c"></a>
+<a class="anchor" id="a2c91259346fbc10d430aa8c4965425e8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -291,7 +301,7 @@ class openvdb::v10_0::tree::ValueAccessorBase&lt; TreeType, IsSafe &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool isSafe </td>
+          <td class="memname">static constexpr bool isSafe </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -353,6 +363,8 @@ class openvdb::v10_0::tree::ValueAccessorBase&lt; TreeType, IsSafe &gt;</h3>
 </table>
 </div><div class="memdoc">
 
+<p>Reimplemented in <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#afef5a70245370beeec13b3f6bb566531">ValueAccessorImpl&lt; _TreeType, IsSafe, MutexT, IntegerSequence &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#afef5a70245370beeec13b3f6bb566531">ValueAccessorImpl&lt; TreeT &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#afef5a70245370beeec13b3f6bb566531">ValueAccessorImpl&lt; const TreeType, IsSafe &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#afef5a70245370beeec13b3f6bb566531">ValueAccessorImpl&lt; const TreeType &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#afef5a70245370beeec13b3f6bb566531">ValueAccessorImpl&lt; const TreeT, false &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#afef5a70245370beeec13b3f6bb566531">ValueAccessorImpl&lt; const TreeT &gt;</a>, <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#afef5a70245370beeec13b3f6bb566531">ValueAccessorImpl&lt; IntTreeT &gt;</a>, and <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#afef5a70245370beeec13b3f6bb566531">ValueAccessorImpl&lt; TreeType &gt;</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a51e807b7c7a3ef45dbe459d62a3b715b"></a>
@@ -402,7 +414,7 @@ class openvdb::v10_0::tree::ValueAccessorBase&lt; TreeType, IsSafe &gt;</h3>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="aed029134efd058169d0a0d3cae1c6f32"></a>
+<a class="anchor" id="a656db13e6883d6b0f237827997a7f1da"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -410,7 +422,7 @@ class openvdb::v10_0::tree::ValueAccessorBase&lt; TreeType, IsSafe &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const bool IsConstTree = std::is_const&lt;TreeType&gt;::<a class="el" href="GridBuilder_8h.html#a0bd8e8b76a16eb8c0d32d42313755c8e">value</a></td>
+          <td class="memname">constexpr bool IsConstTree = std::is_const&lt;TreeType&gt;::<a class="el" href="GridBuilder_8h.html#a0bd8e8b76a16eb8c0d32d42313755c8e">value</a></td>
         </tr>
       </table>
   </td>
@@ -419,6 +431,8 @@ class openvdb::v10_0::tree::ValueAccessorBase&lt; TreeType, IsSafe &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns true if this accessor is operating on a const tree type. </p>
 
 </div>
 </div>

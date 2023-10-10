@@ -36,7 +36,7 @@ var searchData=
   ['points',['points',['../namespaceopenvdb_1_1v10__0_1_1points.html',1,'openvdb::v10_0']]],
   ['poisson',['poisson',['../namespaceopenvdb_1_1v10__0_1_1tools_1_1poisson.html',1,'openvdb::v10_0::tools']]],
   ['scheme',['Scheme',['../namespaceopenvdb_1_1v10__0_1_1tools_1_1Scheme.html',1,'openvdb::v10_0::tools']]],
-  ['statistics_5finternal',['statistics_internal',['../namespaceopenvdb_1_1v10__0_1_1points_1_1statistics__internal.html',1,'openvdb::v10_0::points']]],
+  ['string',['string',['../namespaceopenvdb_1_1v10__0_1_1string.html',1,'openvdb::v10_0']]],
   ['tokens',['tokens',['../namespaceopenvdb_1_1v10__0_1_1ax_1_1ast_1_1tokens.html',1,'openvdb::v10_0::ax::ast']]],
   ['tools',['tools',['../namespaceopenvdb_1_1v10__0_1_1tools.html',1,'openvdb::v10_0']]],
   ['transfer_5finternal',['transfer_internal',['../namespaceopenvdb_1_1v10__0_1_1points_1_1transfer__internal.html',1,'openvdb::v10_0::points']]],

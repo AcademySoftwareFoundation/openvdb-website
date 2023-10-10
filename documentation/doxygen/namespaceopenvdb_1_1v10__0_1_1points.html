@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.0.1</span>
+   &#160;<span id="projectnumber">10.0.2</span>
    </div>
   </td>
  </tr>
@@ -114,8 +114,6 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceopenvdb_1_1v10__0_1_1points_1_1point__move__internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points_1_1point__move__internal.html">point_move_internal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespaceopenvdb_1_1v10__0_1_1points_1_1point__rasterize__internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points_1_1point__rasterize__internal.html">point_rasterize_internal</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v10__0_1_1points_1_1statistics__internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points_1_1statistics__internal.html">statistics_internal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespaceopenvdb_1_1v10__0_1_1points_1_1transfer__internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points_1_1transfer__internal.html">transfer_internal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -454,12 +452,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ab5ce5ef333b529b92e4acb1bddeec93c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points.html#ab5ce5ef333b529b92e4acb1bddeec93c">setGroupByFilter</a> (PointDataTreeT &amp;tree, const <a class="el" href="namespaceopenvdb_1_1v10__0.html#a019c188253c90cf2d0b1d6bf710190f4">Name</a> &amp;group, const FilterT &amp;filter)</td></tr>
 <tr class="memdesc:ab5ce5ef333b529b92e4acb1bddeec93c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets group membership based on a provided filter.  <a href="#ab5ce5ef333b529b92e4acb1bddeec93c">More...</a><br /></td></tr>
 <tr class="separator:ab5ce5ef333b529b92e4acb1bddeec93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a630ad019fee99cc74bb048d047212218"><td class="memTemplParams" colspan="2">template&lt;typename PointDataTreeT &gt; </td></tr>
-<tr class="memitem:a630ad019fee99cc74bb048d047212218"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points.html#a630ad019fee99cc74bb048d047212218">setGroupByRandomTarget</a> (PointDataTreeT &amp;tree, const <a class="el" href="namespaceopenvdb_1_1v10__0.html#a019c188253c90cf2d0b1d6bf710190f4">Name</a> &amp;group, const <a class="el" href="namespaceopenvdb_1_1v10__0.html#ac69cfd22ec6d99378ea1e829dc42781e">Index64</a> targetPoints, const unsigned int seed=0)</td></tr>
-<tr class="separator:a630ad019fee99cc74bb048d047212218"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac775f2efb51fe765dc1e54e4f33f85cf"><td class="memTemplParams" colspan="2">template&lt;typename PointDataTreeT &gt; </td></tr>
-<tr class="memitem:ac775f2efb51fe765dc1e54e4f33f85cf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points.html#ac775f2efb51fe765dc1e54e4f33f85cf">setGroupByRandomPercentage</a> (PointDataTreeT &amp;tree, const <a class="el" href="namespaceopenvdb_1_1v10__0.html#a019c188253c90cf2d0b1d6bf710190f4">Name</a> &amp;group, const float percentage=10.0f, const unsigned int seed=0)</td></tr>
-<tr class="separator:ac775f2efb51fe765dc1e54e4f33f85cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b55bc8e90ae04b25f2e09e5f88253e5"><td class="memTemplParams" colspan="2">template&lt;typename PointDataTreeT , typename MaskTreeT  = typename PointDataTreeT::template ValueConverter&lt;bool&gt;::Type, typename FilterT  = NullFilter&gt; </td></tr>
 <tr class="memitem:a2b55bc8e90ae04b25f2e09e5f88253e5"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_base_of&lt; <a class="el" href="namespaceopenvdb_1_1v10__0.html#acbcb5f84dd5976c2bb8d02c10017d060">TreeBase</a>, PointDataTreeT &gt;::<a class="el" href="GridBuilder_8h.html#a0bd8e8b76a16eb8c0d32d42313755c8e">value</a> &amp;&amp;std::is_same&lt; typename MaskTreeT::ValueType, bool &gt;::<a class="el" href="GridBuilder_8h.html#a0bd8e8b76a16eb8c0d32d42313755c8e">value</a>, typename MaskTreeT::Ptr &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points.html#a2b55bc8e90ae04b25f2e09e5f88253e5">convertPointsToMask</a> (const PointDataTreeT &amp;tree, const FilterT &amp;filter=<a class="el" href="classopenvdb_1_1v10__0_1_1points_1_1NullFilter.html">NullFilter</a>(), bool threaded=true)</td></tr>
 <tr class="memdesc:a2b55bc8e90ae04b25f2e09e5f88253e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract a Mask Tree from a Point Data Tree.  <a href="#a2b55bc8e90ae04b25f2e09e5f88253e5">More...</a><br /></td></tr>
@@ -516,6 +508,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a43f917f566a11a07b496f369adc7d6a4"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points.html#a43f917f566a11a07b496f369adc7d6a4">rasterizeTrilinear</a> (const PointDataTreeT &amp;points, const std::string &amp;attribute, const FilterT &amp;filter=<a class="el" href="classopenvdb_1_1v10__0_1_1points_1_1NullFilter.html">NullFilter</a>())</td></tr>
 <tr class="memdesc:a43f917f566a11a07b496f369adc7d6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform weighted trilinear rasterization of all points within a voxel. This method takes and returns a tree i.e. ignores grid transformations.  <a href="#a43f917f566a11a07b496f369adc7d6a4">More...</a><br /></td></tr>
 <tr class="separator:a43f917f566a11a07b496f369adc7d6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7a04c3490272095b334a6859f9a0fb"><td class="memTemplParams" colspan="2">template&lt;typename PointDataGridT &gt; </td></tr>
+<tr class="memitem:a0c7a04c3490272095b334a6859f9a0fb"><td class="memTemplItemLeft" align="right" valign="top">PointDataGridT::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points.html#a0c7a04c3490272095b334a6859f9a0fb">replicate</a> (const PointDataGridT &amp;source, const <a class="el" href="namespaceopenvdb_1_1v10__0.html#a1a68fb76e3d6897fa878760b6bcbda7a">Index</a> multiplier, const std::vector&lt; std::string &gt; &amp;attributes, const std::string &amp;scaleAttribute=&quot;&quot;, const std::string &amp;replicationIndex=&quot;&quot;)</td></tr>
+<tr class="memdesc:a0c7a04c3490272095b334a6859f9a0fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replicates points provided in a source grid into a new grid, transfering and creating attributes found in a provided attribute vector. If an attribute doesn't exist, it is ignored. Position is always replicated, leaving the new points exactly over the top of the source points.  <a href="#a0c7a04c3490272095b334a6859f9a0fb">More...</a><br /></td></tr>
+<tr class="separator:a0c7a04c3490272095b334a6859f9a0fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8631d1e7a9cecd8986fe740f4d64e688"><td class="memTemplParams" colspan="2">template&lt;typename PointDataGridT &gt; </td></tr>
+<tr class="memitem:a8631d1e7a9cecd8986fe740f4d64e688"><td class="memTemplItemLeft" align="right" valign="top">PointDataGridT::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points.html#a8631d1e7a9cecd8986fe740f4d64e688">replicate</a> (const PointDataGridT &amp;source, const <a class="el" href="namespaceopenvdb_1_1v10__0.html#a1a68fb76e3d6897fa878760b6bcbda7a">Index</a> multiplier, const std::string &amp;scaleAttribute=&quot;&quot;, const std::string &amp;replicationIndex=&quot;&quot;)</td></tr>
+<tr class="memdesc:a8631d1e7a9cecd8986fe740f4d64e688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replicates points provided in a source grid into a new grid, transfering and creating all attributes from the source grid. Position is always replicated, leaving the new points exactly over the top of the source points.  <a href="#a8631d1e7a9cecd8986fe740f4d64e688">More...</a><br /></td></tr>
+<tr class="separator:a8631d1e7a9cecd8986fe740f4d64e688"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7b556e743b5d3b8b336c75252264d96"><td class="memTemplParams" colspan="2">template&lt;typename PointDataGridT , typename SourceGridT , typename FilterT  = NullFilter, typename InterrupterT  = util::NullInterrupter&gt; </td></tr>
 <tr class="memitem:ae7b556e743b5d3b8b336c75252264d96"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points.html#ae7b556e743b5d3b8b336c75252264d96">pointSample</a> (PointDataGridT &amp;points, const SourceGridT &amp;sourceGrid, const <a class="el" href="namespaceopenvdb_1_1v10__0.html#a019c188253c90cf2d0b1d6bf710190f4">Name</a> &amp;targetAttribute=&quot;&quot;, const FilterT &amp;filter=<a class="el" href="classopenvdb_1_1v10__0_1_1points_1_1NullFilter.html">NullFilter</a>(), InterrupterT *const interrupter=nullptr)</td></tr>
 <tr class="memdesc:ae7b556e743b5d3b8b336c75252264d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs closest point sampling from a VDB grid onto a VDB Points attribute.  <a href="#ae7b556e743b5d3b8b336c75252264d96">More...</a><br /></td></tr>
@@ -572,6 +572,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ad115cf471d7feb23dec86b68073d54c9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points.html#ad115cf471d7feb23dec86b68073d54c9">rasterize</a> (const PointDataTreeOrGridT &amp;points, TransferT &amp;transfer, const FilterT &amp;filter=<a class="el" href="classopenvdb_1_1v10__0_1_1points_1_1NullFilter.html">NullFilter</a>(), InterrupterT *interrupter=nullptr)</td></tr>
 <tr class="memdesc:ad115cf471d7feb23dec86b68073d54c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform potentially complex rasterization from a user defined transfer scheme.  <a href="#ad115cf471d7feb23dec86b68073d54c9">More...</a><br /></td></tr>
 <tr class="separator:ad115cf471d7feb23dec86b68073d54c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630ad019fee99cc74bb048d047212218"><td class="memTemplParams" colspan="2">template&lt;typename PointDataTreeT &gt; </td></tr>
+<tr class="memitem:a630ad019fee99cc74bb048d047212218"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points.html#a630ad019fee99cc74bb048d047212218">setGroupByRandomTarget</a> (PointDataTreeT &amp;tree, const <a class="el" href="namespaceopenvdb_1_1v10__0.html#a019c188253c90cf2d0b1d6bf710190f4">Name</a> &amp;group, const <a class="el" href="namespaceopenvdb_1_1v10__0.html#ac69cfd22ec6d99378ea1e829dc42781e">Index64</a> targetPoints, const unsigned int seed=0)</td></tr>
+<tr class="separator:a630ad019fee99cc74bb048d047212218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac775f2efb51fe765dc1e54e4f33f85cf"><td class="memTemplParams" colspan="2">template&lt;typename PointDataTreeT &gt; </td></tr>
+<tr class="memitem:ac775f2efb51fe765dc1e54e4f33f85cf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1points.html#ac775f2efb51fe765dc1e54e4f33f85cf">setGroupByRandomPercentage</a> (PointDataTreeT &amp;tree, const <a class="el" href="namespaceopenvdb_1_1v10__0.html#a019c188253c90cf2d0b1d6bf710190f4">Name</a> &amp;group, const float percentage=10.0f, const unsigned int seed=0)</td></tr>
+<tr class="separator:ac775f2efb51fe765dc1e54e4f33f85cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a8954944cf980f1f874a6510497568338"></a>
@@ -725,7 +731,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Evaluates the total value of a point attribute. </p>
-<p>Performs parallel reduction by summing all values. The reduction arithmetic and return value precision evaluates to: <a class="el" href="structopenvdb_1_1v10__0_1_1PromoteType.html#af1df57fa72e33748fb29c44bbaefdffa">PromoteType&lt;ValueT&gt;::Highest</a> which, for POD and VDB math types, is ValueT at its highest bit precision. If the PointDataGrid is empty or the filter evalutes to empty, <a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479" title="Return the value of type T that corresponds to zero. ">zeroVal&lt;ValueT&gt;()</a> is returned. </p><dl class="section note"><dt>Note</dt><dd>The <a class="el" href="structopenvdb_1_1v10__0_1_1PromoteType.html" title="Promotion classes which provide an interface for elevating and demoting a scalar or VDB type to a hig...">PromoteType</a> of the attribute must be copy constructible, support the same type + operator. This method will throw if ValueT does not match the given attribute. The function is deterministic. </dd></dl>
+<p>Performs parallel reduction by summing all values. The reduction arithmetic and return value precision evaluates to: <a class="el" href="structopenvdb_1_1v10__0_1_1PromoteType.html#af1df57fa72e33748fb29c44bbaefdffa">PromoteType&lt;ValueT&gt;::Highest</a> which, for POD and VDB math types, is ValueT at its highest bit precision. If the PointDataGrid is empty or the filter evalutes to empty, <a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85" title="Return the value of type T that corresponds to zero. ">zeroVal&lt;ValueT&gt;()</a> is returned. </p><dl class="section note"><dt>Note</dt><dd>The <a class="el" href="structopenvdb_1_1v10__0_1_1PromoteType.html" title="Promotion classes which provide an interface for elevating and demoting a scalar or VDB type to a hig...">PromoteType</a> of the attribute must be copy constructible, support the same type + operator. This method will throw if ValueT does not match the given attribute. The function is deterministic. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>if "P" is provided, the result is undefined. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2445,7 +2451,7 @@ A <code>PointIndexGrid</code> to the points must be supplied to perform this ope
 </div><div class="memdoc">
 
 <p>Evaluates the average value of a point attribute. </p>
-<p>Performs parallel reduction by cumulative moving average. The reduction arithmetic and return value precision evaluates to: <a class="el" href="structopenvdb_1_1v10__0_1_1ConvertElementType.html#a801364d20664a6d2df467fcc266ed7c8">ConvertElementType&lt;ValueT, double&gt;::Type</a> which, for POD and VDB math types, is ValueT at double precision. If the PointDataGrid is empty or the filter evalutes to empty, <a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479" title="Return the value of type T that corresponds to zero. ">zeroVal&lt;ValueT&gt;()</a> is returned. </p><dl class="section note"><dt>Note</dt><dd>The <a class="el" href="structopenvdb_1_1v10__0_1_1ConvertElementType.html" title="Conversion classes for changing the underlying type of VDB types. ">ConvertElementType</a> of the attribute must be copy constructible, support the same type + - * operators and * / operators from a double. This method will throw if ValueT does not match the given attribute. The function is deterministic. </dd></dl>
+<p>Performs parallel reduction by cumulative moving average. The reduction arithmetic and return value precision evaluates to: <a class="el" href="structopenvdb_1_1v10__0_1_1ConvertElementType.html#a801364d20664a6d2df467fcc266ed7c8">ConvertElementType&lt;ValueT, double&gt;::Type</a> which, for POD and VDB math types, is ValueT at double precision. If the PointDataGrid is empty or the filter evalutes to empty, <a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85" title="Return the value of type T that corresponds to zero. ">zeroVal&lt;ValueT&gt;()</a> is returned. </p><dl class="section note"><dt>Note</dt><dd>The <a class="el" href="structopenvdb_1_1v10__0_1_1ConvertElementType.html" title="Conversion classes for changing the underlying type of VDB types. ">ConvertElementType</a> of the attribute must be copy constructible, support the same type + - * operators and * / operators from a double. This method will throw if ValueT does not match the given attribute. The function is deterministic. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>if "P" is provided, the result is undefined. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2550,7 +2556,7 @@ A <code>PointIndexGrid</code> to the points must be supplied to perform this ope
 </div><div class="memdoc">
 
 <p>Evaluates the minimum and maximum values of a point attribute. </p>
-<p>Performs parallel reduction by comparing values using their less than and greater than operators. If the PointDataGrid is empty or the filter evalutes to empty, <a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479" title="Return the value of type T that corresponds to zero. ">zeroVal&lt;ValueT&gt;()</a> is returned for both values. </p><dl class="section note"><dt>Note</dt><dd>The ValueT of the attribute must be copy constructible. This method will throw if the templated ValueT does not match the given attribute. For vectors and matrices, this results in per component comparisons. See evalExtents for magnitudes or more custom control. </dd></dl>
+<p>Performs parallel reduction by comparing values using their less than and greater than operators. If the PointDataGrid is empty or the filter evalutes to empty, <a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85" title="Return the value of type T that corresponds to zero. ">zeroVal&lt;ValueT&gt;()</a> is returned for both values. </p><dl class="section note"><dt>Note</dt><dd>The ValueT of the attribute must be copy constructible. This method will throw if the templated ValueT does not match the given attribute. For vectors and matrices, this results in per component comparisons. See evalExtents for magnitudes or more custom control. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>if "P" is provided, the result is undefined. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -4339,6 +4345,113 @@ A <code>PointIndexGrid</code> to the points must be supplied to perform this ope
 <dl class="section note"><dt>Note</dt><dd>Number of oldNames must match the number of newNames.</dd>
 <dd>
 Duplicate names and renaming group attributes are not allowed. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0c7a04c3490272095b334a6859f9a0fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PointDataGridT::Ptr replicate </td>
+          <td>(</td>
+          <td class="paramtype">const PointDataGridT &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespaceopenvdb_1_1v10__0.html#a1a68fb76e3d6897fa878760b6bcbda7a">Index</a>&#160;</td>
+          <td class="paramname"><em>multiplier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>attributes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>scaleAttribute</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>replicationIndex</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replicates points provided in a source grid into a new grid, transfering and creating attributes found in a provided attribute vector. If an attribute doesn't exist, it is ignored. Position is always replicated, leaving the new points exactly over the top of the source points. </p>
+<dl class="section note"><dt>Note</dt><dd>The position attribute must exist </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>The source grid to replicate points from </td></tr>
+    <tr><td class="paramname">multiplier</td><td>The base number of points to replicate per point </td></tr>
+    <tr><td class="paramname">attributes</td><td>Attributes to transfer to the new grid </td></tr>
+    <tr><td class="paramname">scaleAttribute</td><td>A scale float attribute which multiplies the base multiplier to vary the point count per point. </td></tr>
+    <tr><td class="paramname">replicationIndex</td><td>When provided, creates a replication attribute of the given name which holds the replication index. This can be subsequently used to modify the replicated points as a post process. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8631d1e7a9cecd8986fe740f4d64e688"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PointDataGridT::Ptr replicate </td>
+          <td>(</td>
+          <td class="paramtype">const PointDataGridT &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespaceopenvdb_1_1v10__0.html#a1a68fb76e3d6897fa878760b6bcbda7a">Index</a>&#160;</td>
+          <td class="paramname"><em>multiplier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>scaleAttribute</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>replicationIndex</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replicates points provided in a source grid into a new grid, transfering and creating all attributes from the source grid. Position is always replicated, leaving the new points exactly over the top of the source points. </p>
+<dl class="section note"><dt>Note</dt><dd>The position attribute must exist </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>The source grid to replicate points from </td></tr>
+    <tr><td class="paramname">multiplier</td><td>The base number of points to replicate per point </td></tr>
+    <tr><td class="paramname">scaleAttribute</td><td>A scale float attribute which multiplies the base multiplier to vary the point count per point. </td></tr>
+    <tr><td class="paramname">replicationIndex</td><td>When provided, creates a replication attribute of the given name which holds the replication index. This can be subsequently used to modify the replicated points as a post process. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

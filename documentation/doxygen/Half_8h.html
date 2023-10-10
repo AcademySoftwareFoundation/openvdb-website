@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.0.1</span>
+   &#160;<span id="projectnumber">10.0.2</span>
    </div>
   </td>
  </tr>
@@ -91,6 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Half.h File Reference</div>  </div>
@@ -99,14 +100,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><code>#include &lt;<a class="el" href="Platform_8h_source.html">openvdb/Platform.h</a>&gt;</code><br />
 <code>#include &lt;openvdb/version.h&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
 </div>
 <p><a href="Half_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionopenvdb_1_1v10__0_1_1math_1_1internal_1_1imath__half__uif.html">imath_half_uif</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">a type for both C-only programs and C++ to use the same utilities  <a href="unionopenvdb_1_1v10__0_1_1math_1_1internal_1_1imath__half__uif.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1internal_1_1half.html">half</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionopenvdb_1_1v10__0_1_1math_1_1internal_1_1half_1_1uif.html">half::uif</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstd_1_1numeric__limits_3_01openvdb_1_1math_1_1internal_1_1half_01_4.html">numeric_limits&lt; openvdb::math::internal::half &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -119,40 +126,65 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespaceopenvdb_1_1v10__0_1_1math_1_1internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html">openvdb::v10_0::math::internal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacestd"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html">std</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a6cb440be2fe914c23181beee004446b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#a6cb440be2fe914c23181beee004446b0">VDB_HALF_MIN</a>&#160;&#160;&#160;5.96046448e-08</td></tr>
-<tr class="separator:a6cb440be2fe914c23181beee004446b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e9d88a54bcf343ebdece9711e6bf70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#a78e9d88a54bcf343ebdece9711e6bf70">IMATH_HALF_NO_LOOKUP_TABLE</a></td></tr>
+<tr class="separator:a78e9d88a54bcf343ebdece9711e6bf70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad9bd971f305c5ae8b61a5ccc703dabb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#aad9bd971f305c5ae8b61a5ccc703dabb">VDBB_HALF_DENORM_MIN</a>&#160;&#160;&#160;5.96046448e-08</td></tr>
+<tr class="memdesc:aad9bd971f305c5ae8b61a5ccc703dabb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smallest positive denormalized half.  <a href="#aad9bd971f305c5ae8b61a5ccc703dabb">More...</a><br /></td></tr>
+<tr class="separator:aad9bd971f305c5ae8b61a5ccc703dabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6434f3c1f1a7d61051a11d5d63e6c026"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#a6434f3c1f1a7d61051a11d5d63e6c026">VDB_HALF_NRM_MIN</a>&#160;&#160;&#160;6.10351562e-05</td></tr>
+<tr class="memdesc:a6434f3c1f1a7d61051a11d5d63e6c026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smallest positive normalized half.  <a href="#a6434f3c1f1a7d61051a11d5d63e6c026">More...</a><br /></td></tr>
 <tr class="separator:a6434f3c1f1a7d61051a11d5d63e6c026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb440be2fe914c23181beee004446b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#a6cb440be2fe914c23181beee004446b0">VDB_HALF_MIN</a>&#160;&#160;&#160;6.10351562e-05f</td></tr>
+<tr class="memdesc:a6cb440be2fe914c23181beee004446b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smallest positive normalized half.  <a href="#a6cb440be2fe914c23181beee004446b0">More...</a><br /></td></tr>
+<tr class="separator:a6cb440be2fe914c23181beee004446b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12109d0a04de04b6a9fa5d4d71505e3b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#a12109d0a04de04b6a9fa5d4d71505e3b">VDB_HALF_MAX</a>&#160;&#160;&#160;65504.0</td></tr>
+<tr class="memdesc:a12109d0a04de04b6a9fa5d4d71505e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largest positive half.  <a href="#a12109d0a04de04b6a9fa5d4d71505e3b">More...</a><br /></td></tr>
 <tr class="separator:a12109d0a04de04b6a9fa5d4d71505e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab829ca4cdadecf0abf5f4585f065283e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#ab829ca4cdadecf0abf5f4585f065283e">VDB_HALF_EPSILON</a>&#160;&#160;&#160;0.00097656</td></tr>
+<tr class="memdesc:ab829ca4cdadecf0abf5f4585f065283e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Smallest positive e for which <code>half(1.0 + e) != half(1.0)</code>  <a href="#ab829ca4cdadecf0abf5f4585f065283e">More...</a><br /></td></tr>
 <tr class="separator:ab829ca4cdadecf0abf5f4585f065283e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace1176eea441f8ded55f7383eec35f6f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#ace1176eea441f8ded55f7383eec35f6f">VDB_HALF_MANT_DIG</a>&#160;&#160;&#160;11</td></tr>
+<tr class="memdesc:ace1176eea441f8ded55f7383eec35f6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of digits in mantissa (significand + hidden leading 1)  <a href="#ace1176eea441f8ded55f7383eec35f6f">More...</a><br /></td></tr>
 <tr class="separator:ace1176eea441f8ded55f7383eec35f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a3efa8ea0176dcef0f7b9138338f337"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#a6a3efa8ea0176dcef0f7b9138338f337">VDB_HALF_DIG</a>&#160;&#160;&#160;3</td></tr>
 <tr class="separator:a6a3efa8ea0176dcef0f7b9138338f337"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a008b5ce140070218111dd91cd20c7f6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#a008b5ce140070218111dd91cd20c7f6a">VDB_HALF_DECIMAL_DIG</a>&#160;&#160;&#160;5</td></tr>
 <tr class="separator:a008b5ce140070218111dd91cd20c7f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab399ae7beba45bba48fe89c5d90add3b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#ab399ae7beba45bba48fe89c5d90add3b">VDB_HALF_RADIX</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:ab399ae7beba45bba48fe89c5d90add3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base of the exponent.  <a href="#ab399ae7beba45bba48fe89c5d90add3b">More...</a><br /></td></tr>
 <tr class="separator:ab399ae7beba45bba48fe89c5d90add3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2136c2d5faf6c6f0d798a2f39074d364"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#a2136c2d5faf6c6f0d798a2f39074d364">VDB_HALF_MIN_EXP</a>&#160;&#160;&#160;-13</td></tr>
-<tr class="separator:a2136c2d5faf6c6f0d798a2f39074d364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69fc8e8fe0b81f9ec2021101ff170b27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#a69fc8e8fe0b81f9ec2021101ff170b27">VDBB_HALF_DENORM_MIN_EXP</a>&#160;&#160;&#160;-13</td></tr>
+<tr class="separator:a69fc8e8fe0b81f9ec2021101ff170b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2a99437b22c67be39fcf40ef8eb61b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#ab2a99437b22c67be39fcf40ef8eb61b8">VDB_HALF_MAX_EXP</a>&#160;&#160;&#160;16</td></tr>
 <tr class="separator:ab2a99437b22c67be39fcf40ef8eb61b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a5f71d605c1f5ec08ba83d0931226d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#a0a5f71d605c1f5ec08ba83d0931226d5">VDB_HALF_MIN_10_EXP</a>&#160;&#160;&#160;-4</td></tr>
-<tr class="separator:a0a5f71d605c1f5ec08ba83d0931226d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72d304ed26e0076c7ca6e9beed52a2f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#a72d304ed26e0076c7ca6e9beed52a2f2">VDBB_HALF_DENORM_MIN_10_EXP</a>&#160;&#160;&#160;-4</td></tr>
+<tr class="separator:a72d304ed26e0076c7ca6e9beed52a2f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a400bf15484040c8b11bdd6662764685e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Half_8h.html#a400bf15484040c8b11bdd6662764685e">VDB_HALF_MAX_10_EXP</a>&#160;&#160;&#160;4</td></tr>
 <tr class="separator:a400bf15484040c8b11bdd6662764685e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a1f468d831922c984ef7484099361887f"><td class="memItemLeft" align="right" valign="top">typedef union <a class="el" href="unionopenvdb_1_1v10__0_1_1math_1_1internal_1_1imath__half__uif.html">openvdb::v10_0::math::internal::imath_half_uif</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a1f468d831922c984ef7484099361887f">imath_half_uif_t</a></td></tr>
+<tr class="memdesc:a1f468d831922c984ef7484099361887f"><td class="mdescLeft">&#160;</td><td class="mdescRight">a type for both C-only programs and C++ to use the same utilities  <a href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a1f468d831922c984ef7484099361887f">More...</a><br /></td></tr>
+<tr class="separator:a1f468d831922c984ef7484099361887f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a7c1f2cebb5360e2c75f8e72ebb0bb1"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a0a7c1f2cebb5360e2c75f8e72ebb0bb1">imath_half_bits_t</a></td></tr>
+<tr class="memdesc:a0a7c1f2cebb5360e2c75f8e72ebb0bb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">a type for both C-only programs and C++ to use the same utilities  <a href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a0a7c1f2cebb5360e2c75f8e72ebb0bb1">More...</a><br /></td></tr>
+<tr class="separator:a0a7c1f2cebb5360e2c75f8e72ebb0bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c73f179185e8199f16aa5ccbfdb7e75"><td class="memItemLeft" align="right" valign="top">typedef imath_half_bits_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a9c73f179185e8199f16aa5ccbfdb7e75">half</a></td></tr>
+<tr class="memdesc:a9c73f179185e8199f16aa5ccbfdb7e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">if we're in a C-only context, alias the half bits type to half  <a href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a9c73f179185e8199f16aa5ccbfdb7e75">More...</a><br /></td></tr>
+<tr class="separator:a9c73f179185e8199f16aa5ccbfdb7e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0e2942c9adcd1ae8282ae480d96f32a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a0e2942c9adcd1ae8282ae480d96f32a1">operator&lt;&lt;</a> (std::ostream &amp;os, half h)</td></tr>
-<tr class="separator:a0e2942c9adcd1ae8282ae480d96f32a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bd2fddd7f722dc71789eae319691330"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a8bd2fddd7f722dc71789eae319691330">operator&gt;&gt;</a> (std::istream &amp;is, half &amp;h)</td></tr>
-<tr class="separator:a8bd2fddd7f722dc71789eae319691330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f6065efa8fbdd7a2e96e16f6f106c31"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a8f6065efa8fbdd7a2e96e16f6f106c31">imath_half_to_float</a> (imath_half_bits_t h)</td></tr>
+<tr class="separator:a8f6065efa8fbdd7a2e96e16f6f106c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1ab95c22b3da344954e182f1c49d10"><td class="memItemLeft" align="right" valign="top">static imath_half_bits_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#abc1ab95c22b3da344954e182f1c49d10">imath_float_to_half</a> (float f)</td></tr>
+<tr class="separator:abc1ab95c22b3da344954e182f1c49d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32a4298dddf142acd01402a57f39dc68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a32a4298dddf142acd01402a57f39dc68">printBits</a> (std::ostream &amp;os, half h)</td></tr>
 <tr class="separator:a32a4298dddf142acd01402a57f39dc68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6d597159e721c205add844e2effaace"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#ae6d597159e721c205add844e2effaace">printBits</a> (std::ostream &amp;os, float f)</td></tr>
@@ -161,8 +193,26 @@ Functions</h2></td></tr>
 <tr class="separator:a4152b253603e0ee4d433ba87489653fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96fd926ec7b4f0242b370885f2d3d8ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a96fd926ec7b4f0242b370885f2d3d8ef">printBits</a> (char c[35], float f)</td></tr>
 <tr class="separator:a96fd926ec7b4f0242b370885f2d3d8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e2942c9adcd1ae8282ae480d96f32a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a0e2942c9adcd1ae8282ae480d96f32a1">operator&lt;&lt;</a> (std::ostream &amp;os, half h)</td></tr>
+<tr class="memdesc:a0e2942c9adcd1ae8282ae480d96f32a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output h to os, formatted as a float.  <a href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a0e2942c9adcd1ae8282ae480d96f32a1">More...</a><br /></td></tr>
+<tr class="separator:a0e2942c9adcd1ae8282ae480d96f32a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bd2fddd7f722dc71789eae319691330"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a8bd2fddd7f722dc71789eae319691330">operator&gt;&gt;</a> (std::istream &amp;is, half &amp;h)</td></tr>
+<tr class="memdesc:a8bd2fddd7f722dc71789eae319691330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input h from is.  <a href="namespaceopenvdb_1_1v10__0_1_1math_1_1internal.html#a8bd2fddd7f722dc71789eae319691330">More...</a><br /></td></tr>
+<tr class="separator:a8bd2fddd7f722dc71789eae319691330"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a78e9d88a54bcf343ebdece9711e6bf70"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IMATH_HALF_NO_LOOKUP_TABLE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a008b5ce140070218111dd91cd20c7f6a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -172,6 +222,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Number of base-10 digits that are necessary to uniquely represent all distinct values:</p>
+<p><code>ceil(HALF_MANT_DIG * log10(2) + 1) =&gt; 4.31... -&gt; 5</code> </p>
 
 </div>
 </div>
@@ -184,6 +236,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Number of base 10 digits that can be represented without change:</p>
+<p><code>floor( (HALF_MANT_DIG - 1) * log10(2) ) =&gt; 3.01... -&gt; 3</code> </p>
 
 </div>
 </div>
@@ -197,6 +251,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Smallest positive e for which <code>half(1.0 + e) != half(1.0)</code> </p>
+
 </div>
 </div>
 <a class="anchor" id="ace1176eea441f8ded55f7383eec35f6f"></a>
@@ -208,6 +264,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Number of digits in mantissa (significand + hidden leading 1) </p>
 
 </div>
 </div>
@@ -221,6 +279,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Largest positive half. </p>
+
 </div>
 </div>
 <a class="anchor" id="a400bf15484040c8b11bdd6662764685e"></a>
@@ -232,6 +292,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Maximum positive integer such that 10 raised to that power is a normalized half </p>
 
 </div>
 </div>
@@ -244,6 +305,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Maximum positive integer such that <code>HALF_RADIX</code> raised to the power of one less than that integer is a normalized half </p>
 
 </div>
 </div>
@@ -252,34 +314,12 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define VDB_HALF_MIN&#160;&#160;&#160;5.96046448e-08</td>
+          <td class="memname">#define VDB_HALF_MIN&#160;&#160;&#160;6.10351562e-05f</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="a0a5f71d605c1f5ec08ba83d0931226d5"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VDB_HALF_MIN_10_EXP&#160;&#160;&#160;-4</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a2136c2d5faf6c6f0d798a2f39074d364"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define VDB_HALF_MIN_EXP&#160;&#160;&#160;-13</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Smallest positive normalized half. </p>
 
 </div>
 </div>
@@ -293,6 +333,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Smallest positive normalized half. </p>
+
 </div>
 </div>
 <a class="anchor" id="ab399ae7beba45bba48fe89c5d90add3b"></a>
@@ -304,6 +346,48 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Base of the exponent. </p>
+
+</div>
+</div>
+<a class="anchor" id="aad9bd971f305c5ae8b61a5ccc703dabb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VDBB_HALF_DENORM_MIN&#160;&#160;&#160;5.96046448e-08</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Smallest positive denormalized half. </p>
+
+</div>
+</div>
+<a class="anchor" id="a72d304ed26e0076c7ca6e9beed52a2f2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VDBB_HALF_DENORM_MIN_10_EXP&#160;&#160;&#160;-4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Minimum positive integer such that 10 raised to that power is a normalized half </p>
+
+</div>
+</div>
+<a class="anchor" id="a69fc8e8fe0b81f9ec2021101ff170b27"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VDBB_HALF_DENORM_MIN_EXP&#160;&#160;&#160;-13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Minimum negative integer such that <code>HALF_RADIX</code> raised to the power of one less than that integer is a normalized half </p>
 
 </div>
 </div>

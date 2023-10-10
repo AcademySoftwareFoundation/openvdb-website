@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.0.1</span>
+   &#160;<span id="projectnumber">10.0.2</span>
    </div>
   </td>
  </tr>
@@ -97,7 +97,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classopenvdb_1_1v10__0_1_1tree_1_1Tree-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Tree&lt; _RootNodeType &gt; Class Template Reference</div>  </div>
@@ -335,7 +334,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a39a2211a02fb606e611d3ff5bbd6f50c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a39a2211a02fb606e611d3ff5bbd6f50c">voxelizeActiveTiles</a> (bool threaded=true)</td></tr>
 <tr class="memdesc:a39a2211a02fb606e611d3ff5bbd6f50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Densify active tiles, i.e., replace them with leaf-level active voxels.  <a href="#a39a2211a02fb606e611d3ff5bbd6f50c">More...</a><br /></td></tr>
 <tr class="separator:a39a2211a02fb606e611d3ff5bbd6f50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a462c7056adc55d8da2cc5828934ff859"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a462c7056adc55d8da2cc5828934ff859">prune</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a9575d20614e2fac00e43c5fd4fd6f32b">ValueType</a> &amp;tolerance=<a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt; <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a9575d20614e2fac00e43c5fd4fd6f32b">ValueType</a> &gt;())</td></tr>
+<tr class="memitem:a462c7056adc55d8da2cc5828934ff859"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a462c7056adc55d8da2cc5828934ff859">prune</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a9575d20614e2fac00e43c5fd4fd6f32b">ValueType</a> &amp;tolerance=<a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt; <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a9575d20614e2fac00e43c5fd4fd6f32b">ValueType</a> &gt;())</td></tr>
 <tr class="memdesc:a462c7056adc55d8da2cc5828934ff859"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce the memory footprint of this tree by replacing with tiles any nodes whose values are all the same (optionally to within a tolerance) and have the same active state.  <a href="#a462c7056adc55d8da2cc5828934ff859">More...</a><br /></td></tr>
 <tr class="separator:a462c7056adc55d8da2cc5828934ff859"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c20c22e9a994a30c9640cbe1ec982bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a6c20c22e9a994a30c9640cbe1ec982bc">addLeaf</a> (<a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#ad69afaa4f94a67ce2f7d0b18b339291e">LeafNodeType</a> *leaf)</td></tr>
@@ -612,7 +611,7 @@ Protected Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7cb55df5cf1166cdd2873baa6259658f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a7cb55df5cf1166cdd2873baa6259658f">releaseAllAccessors</a> ()</td></tr>
-<tr class="memdesc:a7cb55df5cf1166cdd2873baa6259658f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify all registered accessors, by calling ValueAccessor::release(), that this tree is about to be deleted.  <a href="#a7cb55df5cf1166cdd2873baa6259658f">More...</a><br /></td></tr>
+<tr class="memdesc:a7cb55df5cf1166cdd2873baa6259658f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify all registered accessors, by calling <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#afef5a70245370beeec13b3f6bb566531" title="Release this accessor from the tree, set the tree to null and clear the accessor cache. After calling this method the accessor will be completely invalid. ">ValueAccessor::release()</a>, that this tree is about to be deleted.  <a href="#a7cb55df5cf1166cdd2873baa6259658f">More...</a><br /></td></tr>
 <tr class="separator:a7cb55df5cf1166cdd2873baa6259658f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -623,11 +622,6 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a3f395a4d4c40770f12f1ac8e08fdfbda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a134837ab866ef110faba3311e77acd2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a8d92c2a1286b08be885d1c1ceedfba74">ConstAccessorRegistry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a134837ab866ef110faba3311e77acd2b">mConstAccessorRegistry</a></td></tr>
 <tr class="separator:a134837ab866ef110faba3311e77acd2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a47c05ef413c0b166b44e95ba77e52066"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; const <a class="el" href="namespaceopenvdb_1_1v10__0.html#a019c188253c90cf2d0b1d6bf710190f4">Name</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a47c05ef413c0b166b44e95ba77e52066">sTreeTypeName</a></td></tr>
-<tr class="separator:a47c05ef413c0b166b44e95ba77e52066"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="afa1bfe3003db77ed8d1fa5ddac9da77d"></a>
@@ -2826,7 +2820,7 @@ Static Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return the minimum and maximum active values in this tree. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>"Switch to tools::minMax. Use threaded = false for serial execution" </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>"Switch to tools::minMax. Use threaded = false for serial execution" </dd></dl>
 
 </div>
 </div>
@@ -3872,7 +3866,7 @@ Static Protected Attributes</h2></td></tr>
           <td class="memname">void prune </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a9575d20614e2fac00e43c5fd4fd6f32b">ValueType</a> &amp;&#160;</td>
-          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt;<a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a9575d20614e2fac00e43c5fd4fd6f32b">ValueType</a>&gt;()</code></td><td>)</td>
+          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt;<a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a9575d20614e2fac00e43c5fd4fd6f32b">ValueType</a>&gt;()</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4162,7 +4156,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Notify all registered accessors, by calling ValueAccessor::release(), that this tree is about to be deleted. </p>
+<p>Notify all registered accessors, by calling <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessorImpl.html#afef5a70245370beeec13b3f6bb566531" title="Release this accessor from the tree, set the tree to null and clear the accessor cache. After calling this method the accessor will be completely invalid. ">ValueAccessor::release()</a>, that this tree is about to be deleted. </p>
 
 </div>
 </div>
@@ -5092,26 +5086,6 @@ If preserveTiles is true, any active tile in this topology will not be densified
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a47c05ef413c0b166b44e95ba77e52066"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt; const <a class="el" href="namespaceopenvdb_1_1v10__0.html#a019c188253c90cf2d0b1d6bf710190f4">Name</a> &gt; sTreeTypeName</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

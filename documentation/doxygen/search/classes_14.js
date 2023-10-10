@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['uif',['uif',['../unionopenvdb_1_1v10__0_1_1math_1_1internal_1_1half_1_1uif.html',1,'openvdb::v10_0::math::internal::half']]],
   ['uinttypetrait',['UIntTypeTrait',['../structopenvdb_1_1v10__0_1_1points_1_1attribute__traits_1_1UIntTypeTrait.html',1,'openvdb::v10_0::points::attribute_traits']]],
   ['uinttypetrait_3c_20false_2c_20math_3a_3avec3_3c_20t_20_3e_20_3e',['UIntTypeTrait&lt; false, math::Vec3&lt; T &gt; &gt;',['../structopenvdb_1_1v10__0_1_1points_1_1attribute__traits_1_1UIntTypeTrait_3_01false_00_01math_1_1Vec3_3_01T_01_4_01_4.html',1,'openvdb::v10_0::points::attribute_traits']]],
   ['uinttypetrait_3c_20false_2c_20t_20_3e',['UIntTypeTrait&lt; false, T &gt;',['../structopenvdb_1_1v10__0_1_1points_1_1attribute__traits_1_1UIntTypeTrait_3_01false_00_01T_01_4.html',1,'openvdb::v10_0::points::attribute_traits']]],

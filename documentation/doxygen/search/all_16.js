@@ -1,8 +1,8 @@
 var searchData=
 [
   ['using_20openvdb_20in_20python',['Using OpenVDB in Python',['../python.html',1,'index']]],
-  ['u',['U',['../classnanovdb_1_1Camera.html#ac573fe38de7aab9de491d75695d85e08',1,'nanovdb::Camera::U()'],['../classnanovdb_1_1Image.html#a7bd6db39c2e78c06f92a2eab87848962',1,'nanovdb::Image::u()']]],
-  ['uif',['uif',['../unionopenvdb_1_1v10__0_1_1math_1_1internal_1_1half_1_1uif.html',1,'openvdb::v10_0::math::internal::half']]],
+  ['u',['u',['../classnanovdb_1_1Image.html#a7bd6db39c2e78c06f92a2eab87848962',1,'nanovdb::Image::u()'],['../classnanovdb_1_1Camera.html#ac573fe38de7aab9de491d75695d85e08',1,'nanovdb::Camera::U()']]],
+  ['uif',['uif',['../classopenvdb_1_1v10__0_1_1math_1_1internal_1_1half.html#a5ae233af4335d77e9b7512b6a65d8e84',1,'openvdb::v10_0::math::internal::half']]],
   ['uint32',['UInt32',['../namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0ae7956ed7be1c5025a27ed3cb42a396bd',1,'nanovdb']]],
   ['uint32grid',['UInt32Grid',['../namespacenanovdb.html#a94e1a92c88ebc5f570edaaf87d7b478e',1,'nanovdb']]],
   ['uint32pointpartitioner',['UInt32PointPartitioner',['../namespaceopenvdb_1_1v10__0_1_1tools.html#a52bc789f19484fd8102225765173f548',1,'openvdb::v10_0::tools']]],
@@ -14,8 +14,8 @@ var searchData=
   ['uinttypetrait_3c_20true_2c_20t_20_3e',['UIntTypeTrait&lt; true, T &gt;',['../structopenvdb_1_1v10__0_1_1points_1_1attribute__traits_1_1UIntTypeTrait_3_01true_00_01T_01_4.html',1,'openvdb::v10_0::points::attribute_traits']]],
   ['uminus',['UMINUS',['../axparser_8h.html#a4fb17c3afc02be01e847b79146e4a6e6a1547315a0271bfc281fb75946da5f3d9',1,'axparser.h']]],
   ['unallocatedleafcount',['unallocatedLeafCount',['../classopenvdb_1_1v10__0_1_1tree_1_1TreeBase.html#a255785d58ceb9478d5a1a9b2c5669d42',1,'openvdb::v10_0::tree::TreeBase::unallocatedLeafCount()'],['../classopenvdb_1_1v10__0_1_1tree_1_1Tree.html#a30f392f579e3224da5ee99fb427fa55c',1,'openvdb::v10_0::tree::Tree::unallocatedLeafCount()']]],
-  ['unaryoperator',['UnaryOperator',['../structopenvdb_1_1v10__0_1_1ax_1_1ast_1_1UnaryOperator.html#a212d085394a25c91b9ba984ff93770ea',1,'openvdb::v10_0::ax::ast::UnaryOperator::UnaryOperator(Expression *expr, const tokens::OperatorToken op)'],['../structopenvdb_1_1v10__0_1_1ax_1_1ast_1_1UnaryOperator.html#a9c63ad931eaf39cb1d468633a4c050d7',1,'openvdb::v10_0::ax::ast::UnaryOperator::UnaryOperator(Expression *expr, const std::string &amp;op)'],['../structopenvdb_1_1v10__0_1_1ax_1_1ast_1_1UnaryOperator.html#a9ee51bcd448ee618e44182767a0bfec5',1,'openvdb::v10_0::ax::ast::UnaryOperator::UnaryOperator(const UnaryOperator &amp;other)']]],
   ['unaryoperator',['UnaryOperator',['../structopenvdb_1_1v10__0_1_1ax_1_1ast_1_1UnaryOperator.html',1,'openvdb::v10_0::ax::ast']]],
+  ['unaryoperator',['UnaryOperator',['../structopenvdb_1_1v10__0_1_1ax_1_1ast_1_1UnaryOperator.html#a212d085394a25c91b9ba984ff93770ea',1,'openvdb::v10_0::ax::ast::UnaryOperator::UnaryOperator(Expression *expr, const tokens::OperatorToken op)'],['../structopenvdb_1_1v10__0_1_1ax_1_1ast_1_1UnaryOperator.html#a9c63ad931eaf39cb1d468633a4c050d7',1,'openvdb::v10_0::ax::ast::UnaryOperator::UnaryOperator(Expression *expr, const std::string &amp;op)'],['../structopenvdb_1_1v10__0_1_1ax_1_1ast_1_1UnaryOperator.html#a9ee51bcd448ee618e44182767a0bfec5',1,'openvdb::v10_0::ax::ast::UnaryOperator::UnaryOperator(const UnaryOperator &amp;other)']]],
   ['unaryoperatornode',['UnaryOperatorNode',['../structopenvdb_1_1v10__0_1_1ax_1_1ast_1_1Node.html#acac9cbaeea226ed297804c012dc12b16a5eb95c2e659ce03204e6c0b0b0c87740',1,'openvdb::v10_0::ax::ast::Node']]],
   ['uncompressedbytes',['uncompressedBytes',['../classopenvdb_1_1v10__0_1_1compression_1_1Page.html#a643b82f7ce76a02d02a84a42afbedd22',1,'openvdb::v10_0::compression::Page']]],
   ['uniformpointscatter',['UniformPointScatter',['../classopenvdb_1_1v10__0_1_1tools_1_1UniformPointScatter.html',1,'openvdb::v10_0::tools']]],
@@ -86,6 +86,6 @@ var searchData=
   ['ut_5fvdbutils_2eh',['UT_VDBUtils.h',['../UT__VDBUtils_8h.html',1,'']]],
   ['util',['Util',['../structopenvdb_1_1v10__0_1_1points_1_1AttributeSet_1_1Util.html',1,'openvdb::v10_0::points::AttributeSet']]],
   ['util_2eh',['Util.h',['../Util_8h.html',1,'(Global Namespace)'],['../util_8h.html',1,'(Global Namespace)']]],
-  ['utils_2eh',['Utils.h',['../openvdb__ax_2openvdb__ax_2codegen_2Utils_8h.html',1,'']]],
-  ['utils_2eh',['Utils.h',['../openvdb__houdini_2openvdb__houdini_2Utils_8h.html',1,'']]]
+  ['utils_2eh',['Utils.h',['../openvdb__houdini_2openvdb__houdini_2Utils_8h.html',1,'']]],
+  ['utils_2eh',['Utils.h',['../openvdb__ax_2openvdb__ax_2codegen_2Utils_8h.html',1,'']]]
 ];

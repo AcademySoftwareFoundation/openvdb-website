@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.0.1</span>
+   &#160;<span id="projectnumber">10.0.2</span>
    </div>
   </td>
  </tr>
@@ -108,6 +108,8 @@ Public Types</h2></td></tr>
 <tr class="memitem:ae2a2a78c6013b4e10319e59f74dbb1d9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#ae2a2a78c6013b4e10319e59f74dbb1d9">Self</a> = <a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html">TypeList</a></td></tr>
 <tr class="memdesc:ae2a2a78c6013b4e10319e59f74dbb1d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of this list.  <a href="#ae2a2a78c6013b4e10319e59f74dbb1d9">More...</a><br /></td></tr>
 <tr class="separator:ae2a2a78c6013b4e10319e59f74dbb1d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f5a41fea44934d44d19a413b85988c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#a81f5a41fea44934d44d19a413b85988c">AsTupleList</a> = <a class="el" href="structopenvdb_1_1v10__0_1_1TupleList.html">TupleList</a>&lt; Ts... &gt;</td></tr>
+<tr class="separator:a81f5a41fea44934d44d19a413b85988c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f55ce34931bdb590d0456449b32bee9"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
 <tr class="memitem:a5f55ce34931bdb590d0456449b32bee9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#a5f55ce34931bdb590d0456449b32bee9">Get</a> = typename typelist_internal::TSGetElementImpl&lt; <a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#ae2a2a78c6013b4e10319e59f74dbb1d9">Self</a>, N &gt;::type</td></tr>
 <tr class="memdesc:a5f55ce34931bdb590d0456449b32bee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access a particular element of this type list. If the index is out of range, typelist_internal::NullType is returned.  <a href="#a5f55ce34931bdb590d0456449b32bee9">More...</a><br /></td></tr>
@@ -145,18 +147,24 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af540fa849bad44d66a2740eec05f71e7"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class OpT&gt; </td></tr>
-<tr class="memitem:af540fa849bad44d66a2740eec05f71e7"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#af540fa849bad44d66a2740eec05f71e7">foreach</a> ()</td></tr>
-<tr class="memdesc:af540fa849bad44d66a2740eec05f71e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke a templated class operator on each type in this list. Use this method if you only need access to the type for static methods.  <a href="#af540fa849bad44d66a2740eec05f71e7">More...</a><br /></td></tr>
-<tr class="separator:af540fa849bad44d66a2740eec05f71e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66ce9a9d2845fa3f123fb10ee499e482"><td class="memTemplParams" colspan="2">template&lt;typename OpT &gt; </td></tr>
-<tr class="memitem:a66ce9a9d2845fa3f123fb10ee499e482"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#a66ce9a9d2845fa3f123fb10ee499e482">foreach</a> (OpT op)</td></tr>
-<tr class="memdesc:a66ce9a9d2845fa3f123fb10ee499e482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke a templated, unary functor on a value of each type in this list.  <a href="#a66ce9a9d2845fa3f123fb10ee499e482">More...</a><br /></td></tr>
-<tr class="separator:a66ce9a9d2845fa3f123fb10ee499e482"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa93e66fae18a233d46d0762a01fd3fb2"><td class="memTemplParams" colspan="2">template&lt;typename OpT , typename BaseT &gt; </td></tr>
-<tr class="memitem:aa93e66fae18a233d46d0762a01fd3fb2"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#aa93e66fae18a233d46d0762a01fd3fb2">apply</a> (OpT op, BaseT &amp;obj)</td></tr>
-<tr class="memdesc:aa93e66fae18a233d46d0762a01fd3fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke a templated, unary functor on a provide <code>obj</code> of type <code>BaseT</code> only if said object is an applicable (derived) type also contained in the current <code><a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html" title="A list of types (not necessarily unique) ">TypeList</a></code>.  <a href="#aa93e66fae18a233d46d0762a01fd3fb2">More...</a><br /></td></tr>
-<tr class="separator:aa93e66fae18a233d46d0762a01fd3fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d5da989be3483ce98701d303473d890"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class OpT&gt; </td></tr>
+<tr class="memitem:a3d5da989be3483ce98701d303473d890"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#a3d5da989be3483ce98701d303473d890">foreach</a> ()</td></tr>
+<tr class="memdesc:a3d5da989be3483ce98701d303473d890"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke a templated class operator on each type in this list. Use this method if you only need access to the type for static methods.  <a href="#a3d5da989be3483ce98701d303473d890">More...</a><br /></td></tr>
+<tr class="separator:a3d5da989be3483ce98701d303473d890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a98485a1d1351972f43d9c30a149c2b"><td class="memTemplParams" colspan="2">template&lt;typename OpT &gt; </td></tr>
+<tr class="memitem:a5a98485a1d1351972f43d9c30a149c2b"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#a5a98485a1d1351972f43d9c30a149c2b">foreach</a> (OpT op)</td></tr>
+<tr class="memdesc:a5a98485a1d1351972f43d9c30a149c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke a templated, unary functor on a value of each type in this list.  <a href="#a5a98485a1d1351972f43d9c30a149c2b">More...</a><br /></td></tr>
+<tr class="separator:a5a98485a1d1351972f43d9c30a149c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0d904bcba95089ac8cd09f42a17ac22"><td class="memTemplParams" colspan="2">template&lt;typename OpT &gt; </td></tr>
+<tr class="memitem:aa0d904bcba95089ac8cd09f42a17ac22"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#aa0d904bcba95089ac8cd09f42a17ac22">foreachIndex</a> (OpT op)</td></tr>
+<tr class="separator:aa0d904bcba95089ac8cd09f42a17ac22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa602021ed10dd84bb84e2705e73e545e"><td class="memTemplParams" colspan="2">template&lt;typename OpT , typename RetT &gt; </td></tr>
+<tr class="memitem:aa602021ed10dd84bb84e2705e73e545e"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> RetT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#aa602021ed10dd84bb84e2705e73e545e">foreachIndex</a> (OpT op, RetT def)</td></tr>
+<tr class="separator:aa602021ed10dd84bb84e2705e73e545e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab8af5dffff7645ba161134105a5fc43"><td class="memTemplParams" colspan="2">template&lt;typename OpT , typename BaseT &gt; </td></tr>
+<tr class="memitem:aab8af5dffff7645ba161134105a5fc43"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#aab8af5dffff7645ba161134105a5fc43">apply</a> (OpT op, BaseT &amp;obj)</td></tr>
+<tr class="memdesc:aab8af5dffff7645ba161134105a5fc43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke a templated, unary functor on a provide <code>obj</code> of type <code>BaseT</code> only if said object is an applicable (derived) type also contained in the current <code><a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html" title="A list of types (not necessarily unique) ">TypeList</a></code>.  <a href="#aab8af5dffff7645ba161134105a5fc43">More...</a><br /></td></tr>
+<tr class="separator:aab8af5dffff7645ba161134105a5fc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -191,6 +199,18 @@ struct openvdb::v10_0::TypeList&lt; Ts &gt;</h3>
 <p>Append types, or the members of another <a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html" title="A list of types (not necessarily unique) ">TypeList</a>, to this list. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Appending nested TypeList&lt;&gt; objects causes them to expand to their contained list of types.</dd></dl>
 <p>Example: </p><div class="fragment"><div class="line">{</div><div class="line">    <span class="keyword">using</span> IntTypes = <a class="code" href="structopenvdb_1_1v10__0_1_1TypeList.html">openvdb::TypeList&lt;Int16, Int32, Int64&gt;</a>;</div><div class="line">    <span class="keyword">using</span> RealTypes = <a class="code" href="structopenvdb_1_1v10__0_1_1TypeList.html">openvdb::TypeList&lt;float, double&gt;</a>;</div><div class="line">    <span class="keyword">using</span> NumericTypes = IntTypes::Append&lt;RealTypes&gt;;</div><div class="line">}</div><div class="line">{</div><div class="line">    <span class="keyword">using</span> IntTypes = <a class="code" href="structopenvdb_1_1v10__0_1_1TypeList.html">openvdb::TypeList&lt;Int16&gt;::Append</a>&lt;<a class="code" href="namespaceopenvdb_1_1v10__0.html#ac524bdfeb5d781872485d9321c881920">Int32</a>, <a class="code" href="namespaceopenvdb_1_1v10__0.html#a51b4c1b67123dbb4903672fa753e6dd1">Int64</a>&gt;;</div><div class="line">    <span class="keyword">using</span> NumericTypes = IntTypes::Append&lt;float&gt;::Append&lt;<span class="keywordtype">double</span>&gt;;</div><div class="line">}</div></div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="a81f5a41fea44934d44d19a413b85988c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structopenvdb_1_1v10__0_1_1TypeList.html#a81f5a41fea44934d44d19a413b85988c">AsTupleList</a> =  <a class="el" href="structopenvdb_1_1v10__0_1_1TupleList.html">TupleList</a>&lt;Ts...&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a class="anchor" id="a571d135b8b99dcfd5ccb6cc1cb196106"></a>
@@ -331,7 +351,7 @@ struct openvdb::v10_0::TypeList&lt; Ts &gt;</h3>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aa93e66fae18a233d46d0762a01fd3fb2"></a>
+<a class="anchor" id="aab8af5dffff7645ba161134105a5fc43"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -339,7 +359,7 @@ struct openvdb::v10_0::TypeList&lt; Ts &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool apply </td>
+          <td class="memname">static <a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> bool apply </td>
           <td>(</td>
           <td class="paramtype">OpT&#160;</td>
           <td class="paramname"><em>op</em>, </td>
@@ -368,7 +388,7 @@ struct openvdb::v10_0::TypeList&lt; Ts &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="af540fa849bad44d66a2740eec05f71e7"></a>
+<a class="anchor" id="a3d5da989be3483ce98701d303473d890"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -376,7 +396,7 @@ struct openvdb::v10_0::TypeList&lt; Ts &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void foreach </td>
+          <td class="memname">static <a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> void foreach </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -394,7 +414,7 @@ struct openvdb::v10_0::TypeList&lt; Ts &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a66ce9a9d2845fa3f123fb10ee499e482"></a>
+<a class="anchor" id="a5a98485a1d1351972f43d9c30a149c2b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -402,7 +422,7 @@ struct openvdb::v10_0::TypeList&lt; Ts &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void foreach </td>
+          <td class="memname">static <a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> void foreach </td>
           <td>(</td>
           <td class="paramtype">OpT&#160;</td>
           <td class="paramname"><em>op</em></td><td>)</td>
@@ -418,6 +438,64 @@ struct openvdb::v10_0::TypeList&lt; Ts &gt;</h3>
 
 <p>Invoke a templated, unary functor on a value of each type in this list. </p>
 <p>Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;typeinfo&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> ListT&gt;</div><div class="line"><span class="keywordtype">void</span> printTypeList()</div><div class="line">{</div><div class="line">    std::string sep;</div><div class="line">    <span class="keyword">auto</span> op = [&amp;](<span class="keyword">auto</span> x) {  <span class="comment">// C++14</span></div><div class="line">        std::cout &lt;&lt; sep &lt;&lt; <span class="keyword">typeid</span>(decltype(x)).name(); sep = <span class="stringliteral">&quot;, &quot;</span>; };</div><div class="line">    <a class="code" href="namespaceopenvdb_1_1v10__0_1_1points_1_1transfer__internal.html#a00e83bed47f8502b14f6a068af44824b">ListT::foreach</a>(op);</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">using</span> MyTypes = <a class="code" href="structopenvdb_1_1v10__0_1_1TypeList.html">openvdb::TypeList&lt;int, float, double&gt;</a>;</div><div class="line">printTypeList&lt;MyTypes&gt;(); <span class="comment">// &quot;i, f, d&quot; (exact output is compiler-dependent)</span></div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>The functor object is passed by value. Wrap it with <code>std::ref</code> to use the same object for each type. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa0d904bcba95089ac8cd09f42a17ac22"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> void foreachIndex </td>
+          <td>(</td>
+          <td class="paramtype">OpT&#160;</td>
+          <td class="paramname"><em>op</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa602021ed10dd84bb84e2705e73e545e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a> RetT foreachIndex </td>
+          <td>(</td>
+          <td class="paramtype">OpT&#160;</td>
+          <td class="paramname"><em>op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RetT&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

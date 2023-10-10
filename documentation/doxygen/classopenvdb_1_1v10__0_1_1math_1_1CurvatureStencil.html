@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.0.1</span>
+   &#160;<span id="projectnumber">10.0.2</span>
    </div>
   </td>
  </tr>
@@ -112,12 +112,10 @@ Public Types</h2></td></tr>
 <tr class="separator:ae83fe5f85ef3c031cd27e541cfe84341"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a736336446db9fff9182de2a0232a662e"><td class="memItemLeft" align="right" valign="top">typedef GridT::ValueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#a736336446db9fff9182de2a0232a662e">ValueType</a></td></tr>
 <tr class="separator:a736336446db9fff9182de2a0232a662e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe280da7072440c8fb03d73741169995"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">tree::ValueAccessor</a>&lt; const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#ae83fe5f85ef3c031cd27e541cfe84341">TreeType</a>, IsSafe &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#abe280da7072440c8fb03d73741169995">AccessorType</a></td></tr>
+<tr class="memitem:abe280da7072440c8fb03d73741169995"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#a9bffaa36c0bfe91d3ac486db84d76410">tree::ValueAccessor</a>&lt; const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#ae83fe5f85ef3c031cd27e541cfe84341">TreeType</a>, IsSafe &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#abe280da7072440c8fb03d73741169995">AccessorType</a></td></tr>
 <tr class="separator:abe280da7072440c8fb03d73741169995"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af04c83d3598f1d70089dbd305c16752c"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#a736336446db9fff9182de2a0232a662e">ValueType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#af04c83d3598f1d70089dbd305c16752c">BufferType</a></td></tr>
 <tr class="separator:af04c83d3598f1d70089dbd305c16752c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe5d3603dbb0f44bb3a9d23b1e127f18"><td class="memItemLeft" align="right" valign="top">typedef BufferType::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#abe5d3603dbb0f44bb3a9d23b1e127f18">IterType</a></td></tr>
-<tr class="separator:abe5d3603dbb0f44bb3a9d23b1e127f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -154,7 +152,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6786888a357f4a08d2e1e3f4ab206007"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#a6786888a357f4a08d2e1e3f4ab206007">moveTo</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1Coord.html">Coord</a> &amp;ijk, const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#a736336446db9fff9182de2a0232a662e">ValueType</a> &amp;centerValue)</td></tr>
 <tr class="memdesc:a6786888a357f4a08d2e1e3f4ab206007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the stencil buffer with the values of voxel (i, j, k) and its neighbors. The method also takes a value of the center element of the stencil, assuming it is already known.  <a href="#a6786888a357f4a08d2e1e3f4ab206007">More...</a><br /></td></tr>
 <tr class="separator:a6786888a357f4a08d2e1e3f4ab206007"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a283eb7116175c5c9b83f0eff6872c1df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#a283eb7116175c5c9b83f0eff6872c1df">moveTo</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#abe5d3603dbb0f44bb3a9d23b1e127f18">IterType</a> &amp;iter)</td></tr>
+<tr class="memitem:a283eb7116175c5c9b83f0eff6872c1df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#a283eb7116175c5c9b83f0eff6872c1df">moveTo</a> (const IterType &amp;iter)</td></tr>
 <tr class="memdesc:a283eb7116175c5c9b83f0eff6872c1df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the stencil buffer with the values of voxel (x, y, z) and its neighbors.  <a href="#a283eb7116175c5c9b83f0eff6872c1df">More...</a><br /></td></tr>
 <tr class="separator:a283eb7116175c5c9b83f0eff6872c1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a157f13aee986056540320e8a8caaeef1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#a157f13aee986056540320e8a8caaeef1">moveTo</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1Vec3.html">Vec3</a>&lt; RealType &gt; &amp;xyz)</td></tr>
@@ -190,10 +188,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a40f8d94cfaf70cd56092def745720dbc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#a736336446db9fff9182de2a0232a662e">ValueType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#a40f8d94cfaf70cd56092def745720dbc">getCenterValue</a> () const</td></tr>
 <tr class="memdesc:a40f8d94cfaf70cd56092def745720dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value at the center of the stencil.  <a href="#a40f8d94cfaf70cd56092def745720dbc">More...</a><br /></td></tr>
 <tr class="separator:a40f8d94cfaf70cd56092def745720dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b2c9891717a31845694db27546f0d5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#a4b2c9891717a31845694db27546f0d5a">intersects</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#a736336446db9fff9182de2a0232a662e">ValueType</a> &amp;isoValue=<a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt; <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#a736336446db9fff9182de2a0232a662e">ValueType</a> &gt;()) const</td></tr>
+<tr class="memitem:a4b2c9891717a31845694db27546f0d5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#a4b2c9891717a31845694db27546f0d5a">intersects</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#a736336446db9fff9182de2a0232a662e">ValueType</a> &amp;isoValue=<a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt; <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#a736336446db9fff9182de2a0232a662e">ValueType</a> &gt;()) const</td></tr>
 <tr class="memdesc:a4b2c9891717a31845694db27546f0d5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the center of the stencil intersects the iso-contour specified by the isoValue.  <a href="#a4b2c9891717a31845694db27546f0d5a">More...</a><br /></td></tr>
 <tr class="separator:a4b2c9891717a31845694db27546f0d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade274042f576880e86eb136176552f9f"><td class="memItemLeft" align="right" valign="top">std::bitset&lt; 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#ade274042f576880e86eb136176552f9f">intersectionMask</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#a736336446db9fff9182de2a0232a662e">ValueType</a> &amp;isoValue=<a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt; <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#a736336446db9fff9182de2a0232a662e">ValueType</a> &gt;()) const</td></tr>
+<tr class="memitem:ade274042f576880e86eb136176552f9f"><td class="memItemLeft" align="right" valign="top">std::bitset&lt; 6 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#ade274042f576880e86eb136176552f9f">intersectionMask</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#a736336446db9fff9182de2a0232a662e">ValueType</a> &amp;isoValue=<a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt; <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#a736336446db9fff9182de2a0232a662e">ValueType</a> &gt;()) const</td></tr>
 <tr class="memdesc:ade274042f576880e86eb136176552f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true a bit-mask where the 6 bits indicates if the center of the stencil intersects the iso-contour specified by the isoValue.  <a href="#ade274042f576880e86eb136176552f9f">More...</a><br /></td></tr>
 <tr class="separator:ade274042f576880e86eb136176552f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b2f1b64cb2d797bdf36630f3e7add6e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#af2d5d92dfd52e23c51ffaa35cf4dba4d">GridType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#a1b2f1b64cb2d797bdf36630f3e7add6e">grid</a> () const</td></tr>
@@ -234,7 +232,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">tree::ValueAccessor</a>&lt;const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#ae83fe5f85ef3c031cd27e541cfe84341">TreeType</a>, IsSafe&gt; <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#abe280da7072440c8fb03d73741169995">AccessorType</a></td>
+          <td class="memname">typedef <a class="el" href="namespaceopenvdb_1_1v10__0_1_1tree.html#a9bffaa36c0bfe91d3ac486db84d76410">tree::ValueAccessor</a>&lt;const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#ae83fe5f85ef3c031cd27e541cfe84341">TreeType</a>, IsSafe&gt; <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#abe280da7072440c8fb03d73741169995">AccessorType</a></td>
         </tr>
       </table>
   </td>
@@ -274,26 +272,6 @@ Friends</h2></td></tr>
           <td class="memname">typedef GridT <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1CurvatureStencil.html#af2d5d92dfd52e23c51ffaa35cf4dba4d">GridType</a></td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="abe5d3603dbb0f44bb3a9d23b1e127f18"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef BufferType::iterator <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#abe5d3603dbb0f44bb3a9d23b1e127f18">IterType</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -999,7 +977,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void moveTo </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classopenvdb_1_1v10__0_1_1math_1_1BaseStencil.html#abe5d3603dbb0f44bb3a9d23b1e127f18">IterType</a> &amp;&#160;</td>
+          <td class="paramtype">const IterType &amp;&#160;</td>
           <td class="paramname"><em>iter</em></td><td>)</td>
           <td></td>
         </tr>

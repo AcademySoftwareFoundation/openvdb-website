@@ -3,7 +3,7 @@ var searchData=
   ['r',['r',['../structopenvdb_1_1v10__0_1_1tools_1_1Film_1_1RGBA.html#a642b9bbe27cd5a9c63c52f1bd62ead58',1,'openvdb::v10_0::tools::Film::RGBA::r()'],['../structnanovdb_1_1Image_1_1ColorRGB.html#a4c5c6ceb8ed33456261fa907136e0c3a',1,'nanovdb::Image::ColorRGB::r()']]],
   ['radiusattribute',['radiusAttribute',['../structopenvdb_1_1v10__0_1_1points_1_1FrustumRasterizerSettings.html#ae95d8f197a28b3ef957a1bdbd8e96e7c',1,'openvdb::v10_0::points::FrustumRasterizerSettings']]],
   ['radiusscale',['radiusScale',['../structopenvdb_1_1v10__0_1_1points_1_1FrustumRasterizerSettings.html#a3a4034492a9d2712adc677c73a372b2c',1,'openvdb::v10_0::points::FrustumRasterizerSettings']]],
-  ['radix',['radix',['../classstd_1_1numeric__limits_3_01openvdb_1_1v10__0_1_1math_1_1half_01_4.html#addd2d818169288fbd6d762bb3e10871d',1,'std::numeric_limits&lt; openvdb::v10_0::math::half &gt;']]],
+  ['radix',['radix',['../classstd_1_1numeric__limits_3_01openvdb_1_1math_1_1internal_1_1half_01_4.html#a3eaafb558be7ef995d851f1cd7adedc9',1,'std::numeric_limits&lt; openvdb::math::internal::half &gt;']]],
   ['rank',['Rank',['../structnanovdb_1_1TensorTraits_3_01T_00_010_01_4.html#a180cb4ccfd4e01dd1d438a812e90cb75',1,'nanovdb::TensorTraits&lt; T, 0 &gt;::Rank()'],['../structnanovdb_1_1TensorTraits_3_01T_00_011_01_4.html#a180cb4ccfd4e01dd1d438a812e90cb75',1,'nanovdb::TensorTraits&lt; T, 1 &gt;::Rank()']]],
   ['reducetmp',['reducetmp',['../structopenvdb_1_1v10__0_1_1math_1_1pcg_1_1Vector_1_1DeterministicDotProductOp.html#a2c84dc413932c96285e8cb452dbf7615',1,'openvdb::v10_0::math::pcg::Vector::DeterministicDotProductOp']]],
   ['relativeerror',['relativeError',['../structopenvdb_1_1v10__0_1_1math_1_1pcg_1_1State.html#a7d9f74f0e442eb1bc448ad27678df9ed',1,'openvdb::v10_0::math::pcg::State']]],
@@ -19,5 +19,5 @@ var searchData=
   ['root_5fsize',['root_size',['../structpnanovdb__grid__type__constants__t.html#a23666518c6e634b2291d472afbd7ca1c',1,'pnanovdb_grid_type_constants_t']]],
   ['root_5ftile_5foff_5fvalue',['root_tile_off_value',['../structpnanovdb__grid__type__constants__t.html#a8f12fed1e6a5b5b376a08bace33441bd',1,'pnanovdb_grid_type_constants_t']]],
   ['root_5ftile_5fsize',['root_tile_size',['../structpnanovdb__grid__type__constants__t.html#a5864bb2e428597a64b7e352085b5d650',1,'pnanovdb_grid_type_constants_t']]],
-  ['round_5fstyle',['round_style',['../classstd_1_1numeric__limits_3_01openvdb_1_1v10__0_1_1math_1_1half_01_4.html#af191bb54d704751fc73d0a46f9ab5f79',1,'std::numeric_limits&lt; openvdb::v10_0::math::half &gt;']]]
+  ['round_5fstyle',['round_style',['../classstd_1_1numeric__limits_3_01openvdb_1_1math_1_1internal_1_1half_01_4.html#aea499c39d90a5b31c7545cd7becc6eba',1,'std::numeric_limits&lt; openvdb::math::internal::half &gt;']]]
 ];

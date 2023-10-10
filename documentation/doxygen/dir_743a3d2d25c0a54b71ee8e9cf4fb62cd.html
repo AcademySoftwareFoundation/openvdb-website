@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.0.1</span>
+   &#160;<span id="projectnumber">10.0.2</span>
    </div>
   </td>
  </tr>
@@ -123,6 +123,7 @@ Files</h2></td></tr>
 <tr class="memitem:TreeIterator_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TreeIterator_8h.html">TreeIterator.h</a> <a href="TreeIterator_8h_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ValueAccessor_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ValueAccessor_8h.html">ValueAccessor.h</a> <a href="ValueAccessor_8h_source.html">[code]</a></td></tr>
+<tr class="memdesc:ValueAccessor_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">ValueAccessors are designed to help accelerate accesses into the OpenVDB Tree structures by storing caches to Tree branches. When traversing a grid in a spatially coherent pattern (e.g., iterating over neighboring voxels), the same branches and nodes of the underlying tree can be hit. If you do this using the Tree/RootNode methods directly, traversal will occur at O(log(n)) (or O(n) depending on the hash map implementation) for every access. However, using a ValueAccessor allows for the Accessor to cache previously visited Nodes, providing possible subsequent access speeds of O(1) if the next access is close to a previously cached Node. Accessors are lightweight and can be configured to cache any number of arbitrary Tree levels. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

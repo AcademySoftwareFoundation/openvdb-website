@@ -9,6 +9,6 @@ var searchData=
   ['codec',['codec',['../structnanovdb_1_1io_1_1Header.html#a973248ff48d75b49cf46fbb1e35ef285',1,'nanovdb::io::Header::codec()'],['../structnanovdb_1_1io_1_1MetaData.html#a973248ff48d75b49cf46fbb1e35ef285',1,'nanovdb::io::MetaData::codec()']]],
   ['comma',['comma',['../unionAXSTYPE.html#abb44272d19bffabf6b7289f75b4943b7',1,'AXSTYPE']]],
   ['contains',['Contains',['../structopenvdb_1_1v10__0_1_1TypeList.html#a04bfc918b97b75e0b03290199ceb6380',1,'openvdb::v10_0::TypeList']]],
-  ['coord_5foffsets',['COORD_OFFSETS',['../namespaceopenvdb_1_1v10__0_1_1util.html#a04f6be1271dd40cd85a3b5a4d845c340',1,'openvdb::v10_0::util']]],
+  ['coord_5foffsets',['COORD_OFFSETS',['../namespaceopenvdb_1_1v10__0_1_1util.html#a3a04c0a95cc897b09029f24f0cf671d2',1,'openvdb::v10_0::util']]],
   ['count',['count',['../structnanovdb_1_1OpenToNanoVDB_1_1BlindMetaData.html#a951345011b75d2e8d9bfc18ca63510d2',1,'nanovdb::OpenToNanoVDB::BlindMetaData']]]
 ];

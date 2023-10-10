@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.0.1</span>
+   &#160;<span id="projectnumber">10.0.2</span>
    </div>
   </td>
  </tr>
@@ -380,7 +380,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a409633b422404c1c7df4e0ffdd02eac1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1RootNode.html#a409633b422404c1c7df4e0ffdd02eac1">clip</a> (const CoordBBox &amp;)</td></tr>
 <tr class="memdesc:a409633b422404c1c7df4e0ffdd02eac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all voxels that lie outside the given axis-aligned box to the background.  <a href="#a409633b422404c1c7df4e0ffdd02eac1">More...</a><br /></td></tr>
 <tr class="separator:a409633b422404c1c7df4e0ffdd02eac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a462c7056adc55d8da2cc5828934ff859"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1RootNode.html#a462c7056adc55d8da2cc5828934ff859">prune</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1RootNode.html#a89ab9062c358edc408d37deac2eb8538">ValueType</a> &amp;tolerance=<a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt; <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1RootNode.html#a89ab9062c358edc408d37deac2eb8538">ValueType</a> &gt;())</td></tr>
+<tr class="memitem:a462c7056adc55d8da2cc5828934ff859"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1RootNode.html#a462c7056adc55d8da2cc5828934ff859">prune</a> (const <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1RootNode.html#a89ab9062c358edc408d37deac2eb8538">ValueType</a> &amp;tolerance=<a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt; <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1RootNode.html#a89ab9062c358edc408d37deac2eb8538">ValueType</a> &gt;())</td></tr>
 <tr class="memdesc:a462c7056adc55d8da2cc5828934ff859"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce the memory footprint of this tree by replacing with tiles any nodes whose values are all the same (optionally to within a tolerance) and have the same active state.  <a href="#a462c7056adc55d8da2cc5828934ff859">More...</a><br /></td></tr>
 <tr class="separator:a462c7056adc55d8da2cc5828934ff859"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c20c22e9a994a30c9640cbe1ec982bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1RootNode.html#a6c20c22e9a994a30c9640cbe1ec982bc">addLeaf</a> (<a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1RootNode.html#a47b1764141687712562480c3cdd74c1b">LeafNodeType</a> *leaf)</td></tr>
@@ -2457,7 +2457,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Return the value of the voxel at the given coordinates and, if necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a>. </dd></dl>
+<p>Return the value of the voxel at the given coordinates and, if necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by ValueAccessor. </dd></dl>
 
 </div>
 </div>
@@ -2553,7 +2553,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return the tree depth (0 = root) at which the value of voxel (x, y, z) resides. If (x, y, z) isn't explicitly represented in the tree (i.e., it is implicitly a background voxel), return -1. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a>. </dd></dl>
+<p>Return the tree depth (0 = root) at which the value of voxel (x, y, z) resides. If (x, y, z) isn't explicitly represented in the tree (i.e., it is implicitly a background voxel), return -1. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by ValueAccessor. </dd></dl>
 
 </div>
 </div>
@@ -2815,7 +2815,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Return <code>true</code> if the voxel at the given coordinates is active and, if necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a>. </dd></dl>
+<p>Return <code>true</code> if the voxel at the given coordinates is active and, if necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by ValueAccessor. </dd></dl>
 
 </div>
 </div>
@@ -3004,7 +3004,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Apply a functor to the voxel at the given coordinates. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a>. </dd></dl>
+<p>Apply a functor to the voxel at the given coordinates. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by ValueAccessor. </dd></dl>
 
 </div>
 </div>
@@ -3045,7 +3045,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Apply a functor to the value of the voxel at the given coordinates and mark the voxel as active. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a>. </dd></dl>
+<p>Apply a functor to the value of the voxel at the given coordinates and mark the voxel as active. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by ValueAccessor. </dd></dl>
 
 </div>
 </div>
@@ -3788,7 +3788,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Return, in <em>value</em>, the value of the voxel at the given coordinates and, if necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section return"><dt>Returns</dt><dd><code>true</code> if the voxel at the given coordinates is active </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Used internally by <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Used internally by ValueAccessor. </dd></dl>
 
 </div>
 </div>
@@ -3803,7 +3803,7 @@ Friends</h2></td></tr>
           <td class="memname">void prune </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1RootNode.html#a89ab9062c358edc408d37deac2eb8538">ValueType</a> &amp;&#160;</td>
-          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#a579236d56cbb62895f34b2ae02c4d479">zeroVal</a>&lt;<a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1RootNode.html#a89ab9062c358edc408d37deac2eb8538">ValueType</a>&gt;()</code></td><td>)</td>
+          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="namespaceopenvdb_1_1v10__0.html#af92f06c688f52131f64924bb97b22c85">zeroVal</a>&lt;<a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1RootNode.html#a89ab9062c358edc408d37deac2eb8538">ValueType</a>&gt;()</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -4000,7 +4000,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the active state of the voxel at the given coordinates without changing its value. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a>. </dd></dl>
+<p>Set the active state of the voxel at the given coordinates without changing its value. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by ValueAccessor. </dd></dl>
 
 </div>
 </div>
@@ -4144,7 +4144,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Change the value of the voxel at the given coordinates and mark it as active. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a>. </dd></dl>
+<p>Change the value of the voxel at the given coordinates and mark it as active. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by ValueAccessor. </dd></dl>
 
 </div>
 </div>
@@ -4247,7 +4247,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Change the value of the voxel at the given coordinates and mark it as inactive. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a>. </dd></dl>
+<p>Change the value of the voxel at the given coordinates and mark it as inactive. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by ValueAccessor. </dd></dl>
 
 </div>
 </div>
@@ -4360,7 +4360,7 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the value of the voxel at the given coordinates without changing its active state. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by <a class="el" href="classopenvdb_1_1v10__0_1_1tree_1_1ValueAccessor.html">ValueAccessor</a>. </dd></dl>
+<p>Set the value of the voxel at the given coordinates without changing its active state. If necessary, update the accessor with pointers to the nodes along the path from the root node to the node containing the voxel. </p><dl class="section note"><dt>Note</dt><dd>Used internally by ValueAccessor. </dd></dl>
 
 </div>
 </div>
