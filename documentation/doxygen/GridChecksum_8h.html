@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -97,7 +98,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Computes a pair of 32bit checksums, og a Grid, by means of Cyclic Redundancy Check (CRC)  
+<p>Computes a pair of 32bit checksums, of a Grid, by means of Cyclic Redundancy Check (CRC)  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;array&gt;</code><br />
@@ -106,8 +107,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;numeric&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
-<code>#include &quot;<a class="el" href="NanoVDB_8h_source.html">../NanoVDB.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="GridHandle_8h_source.html">GridHandle.h</a>&quot;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;<a class="el" href="NanoVDB_8h_source.html">nanovdb/NanoVDB.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="ForEach_8h_source.html">ForEach.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="nanovdb_2nanovdb_2util_2NodeManager_8h_source.html">NodeManager.h</a>&quot;</code><br />
 </div>
@@ -115,17 +116,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1CRC32.html">CRC32</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that computes the Cyclic Redundancy Check (CRC)  <a href="classnanovdb_1_1CRC32.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridChecksum.html">GridChecksum</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that encapsulates two <a class="el" href="classnanovdb_1_1CRC32.html" title="Class that computes the Cyclic Redundancy Check (CRC) ">CRC32</a> checksums, one for the <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">Grid</a>, <a class="el" href="classnanovdb_1_1Tree.html" title="VDB Tree, which is a thin wrapper around a RootNode. ">Tree</a> and Root node meta data and one for the remaining grid nodes.  <a href="classnanovdb_1_1GridChecksum.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that encapsulates two CRC32 checksums, one for the <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">Grid</a>, <a class="el" href="classnanovdb_1_1Tree.html" title="VDB Tree, which is a thin wrapper around a RootNode. ">Tree</a> and Root node meta data and one for the remaining grid nodes.  <a href="classnanovdb_1_1GridChecksum.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacenanovdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html">nanovdb</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacenanovdb_1_1crc32"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1crc32.html">nanovdb::crc32</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ac985af7334e8b676dd1c0e57ea5b1c9d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GridChecksum_8h.html#ac985af7334e8b676dd1c0e57ea5b1c9d">NANOVDB_CRC32_LOG2_BLOCK_SIZE</a>&#160;&#160;&#160;12</td></tr>
+<tr class="separator:ac985af7334e8b676dd1c0e57ea5b1c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -143,31 +148,75 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4392a6096956fd071a270afb83959b61"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; </td></tr>
-<tr class="memitem:a4392a6096956fd071a270afb83959b61"><td class="memTemplItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a4392a6096956fd071a270afb83959b61">checksum</a> (const NanoGrid&lt; ValueT &gt; &amp;grid, ChecksumMode mode=ChecksumMode::Default)</td></tr>
-<tr class="memdesc:a4392a6096956fd071a270afb83959b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the (2 x <a class="el" href="classnanovdb_1_1CRC32.html" title="Class that computes the Cyclic Redundancy Check (CRC) ">CRC32</a>) checksum of the specified <em>grid</em>.  <a href="namespacenanovdb.html#a4392a6096956fd071a270afb83959b61">More...</a><br /></td></tr>
-<tr class="separator:a4392a6096956fd071a270afb83959b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50eab9ec8b51334409694740b51e1b3f"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; </td></tr>
-<tr class="memitem:a50eab9ec8b51334409694740b51e1b3f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a50eab9ec8b51334409694740b51e1b3f">validateChecksum</a> (const NanoGrid&lt; ValueT &gt; &amp;grid, ChecksumMode mode=ChecksumMode::Default)</td></tr>
-<tr class="memdesc:a50eab9ec8b51334409694740b51e1b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the checksum of the <em>grid</em> matches the expected value already encoded into the grid's meta data.  <a href="namespacenanovdb.html#a50eab9ec8b51334409694740b51e1b3f">More...</a><br /></td></tr>
-<tr class="separator:a50eab9ec8b51334409694740b51e1b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a941c55105a4a1836f3c2dae1320fe6b7"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; </td></tr>
-<tr class="memitem:a941c55105a4a1836f3c2dae1320fe6b7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a941c55105a4a1836f3c2dae1320fe6b7">updateChecksum</a> (NanoGrid&lt; ValueT &gt; &amp;grid, ChecksumMode mode=ChecksumMode::Default)</td></tr>
-<tr class="memdesc:a941c55105a4a1836f3c2dae1320fe6b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the checksum of a grid.  <a href="namespacenanovdb.html#a941c55105a4a1836f3c2dae1320fe6b7">More...</a><br /></td></tr>
-<tr class="separator:a941c55105a4a1836f3c2dae1320fe6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7268084f7e072b051a1e44327a4754d0"><td class="memItemLeft" align="right" valign="top">std::uint_fast32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a7268084f7e072b051a1e44327a4754d0">crc32</a> (const void *data, size_t size)</td></tr>
-<tr class="memdesc:a7268084f7e072b051a1e44327a4754d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classnanovdb_1_1CRC32.html" title="Class that computes the Cyclic Redundancy Check (CRC) ">CRC32</a> checksum of the raw <em>data</em> of <em>size</em>.  <a href="namespacenanovdb.html#a7268084f7e072b051a1e44327a4754d0">More...</a><br /></td></tr>
-<tr class="separator:a7268084f7e072b051a1e44327a4754d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44e4d363af0b3dfd45832dcb1156ad4f"><td class="memTemplParams" colspan="2">template&lt;typename IterT &gt; </td></tr>
-<tr class="memitem:a44e4d363af0b3dfd45832dcb1156ad4f"><td class="memTemplItemLeft" align="right" valign="top">std::uint_fast32_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a44e4d363af0b3dfd45832dcb1156ad4f">crc32</a> (IterT begin, IterT end)</td></tr>
-<tr class="memdesc:a44e4d363af0b3dfd45832dcb1156ad4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classnanovdb_1_1CRC32.html" title="Class that computes the Cyclic Redundancy Check (CRC) ">CRC32</a> checksum of the content pointed to be the iterator.  <a href="namespacenanovdb.html#a44e4d363af0b3dfd45832dcb1156ad4f">More...</a><br /></td></tr>
-<tr class="separator:a44e4d363af0b3dfd45832dcb1156ad4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8badb37e52fbdfa20406b62e305e858a"><td class="memTemplParams" colspan="2">template&lt;typename BuildT &gt; </td></tr>
+<tr class="memitem:a8badb37e52fbdfa20406b62e305e858a"><td class="memTemplItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a8badb37e52fbdfa20406b62e305e858a">checksum</a> (const NanoGrid&lt; BuildT &gt; &amp;grid, ChecksumMode mode=ChecksumMode::Default)</td></tr>
+<tr class="memdesc:a8badb37e52fbdfa20406b62e305e858a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the (2 x CRC32) checksum of the specified <em>grid</em>.  <a href="namespacenanovdb.html#a8badb37e52fbdfa20406b62e305e858a">More...</a><br /></td></tr>
+<tr class="separator:a8badb37e52fbdfa20406b62e305e858a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84ed73137f59bdda290a7ac8418631d9"><td class="memTemplParams" colspan="2">template&lt;typename BuildT &gt; </td></tr>
+<tr class="memitem:a84ed73137f59bdda290a7ac8418631d9"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a84ed73137f59bdda290a7ac8418631d9">validateChecksum</a> (const NanoGrid&lt; BuildT &gt; &amp;grid, ChecksumMode mode=ChecksumMode::Default)</td></tr>
+<tr class="memdesc:a84ed73137f59bdda290a7ac8418631d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the checksum of the <em>grid</em> matches the expected value already encoded into the grid's meta data.  <a href="namespacenanovdb.html#a84ed73137f59bdda290a7ac8418631d9">More...</a><br /></td></tr>
+<tr class="separator:a84ed73137f59bdda290a7ac8418631d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af05745a07974530ce37c646783abc27c"><td class="memTemplParams" colspan="2">template&lt;typename BuildT &gt; </td></tr>
+<tr class="memitem:af05745a07974530ce37c646783abc27c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#af05745a07974530ce37c646783abc27c">updateChecksum</a> (NanoGrid&lt; BuildT &gt; &amp;grid, ChecksumMode mode=ChecksumMode::Default)</td></tr>
+<tr class="memdesc:af05745a07974530ce37c646783abc27c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the checksum of a grid.  <a href="namespacenanovdb.html#af05745a07974530ce37c646783abc27c">More...</a><br /></td></tr>
+<tr class="separator:af05745a07974530ce37c646783abc27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8b82d3e174044392c79fabfc8ef52d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1crc32.html#ab8b82d3e174044392c79fabfc8ef52d3">initLut</a> (uint32_t lut[256], uint32_t n)</td></tr>
+<tr class="memdesc:ab8b82d3e174044392c79fabfc8ef52d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate single entry in look-up-table for CRC32 computations.  <a href="namespacenanovdb_1_1crc32.html#ab8b82d3e174044392c79fabfc8ef52d3">More...</a><br /></td></tr>
+<tr class="separator:ab8b82d3e174044392c79fabfc8ef52d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0509228620b3f9ebd1b48e64d5e0029b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1crc32.html#a0509228620b3f9ebd1b48e64d5e0029b">initLut</a> (uint32_t lut[256])</td></tr>
+<tr class="memdesc:a0509228620b3f9ebd1b48e64d5e0029b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate entire look-up-table for CRC32 computations.  <a href="namespacenanovdb_1_1crc32.html#a0509228620b3f9ebd1b48e64d5e0029b">More...</a><br /></td></tr>
+<tr class="separator:a0509228620b3f9ebd1b48e64d5e0029b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a00ea9a7138d5642a0c259e5bbd89b7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; uint32_t[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1crc32.html#a1a00ea9a7138d5642a0c259e5bbd89b7">createLut</a> ()</td></tr>
+<tr class="memdesc:a1a00ea9a7138d5642a0c259e5bbd89b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and initiate entire look-up-table for CRC32 computations.  <a href="namespacenanovdb_1_1crc32.html#a1a00ea9a7138d5642a0c259e5bbd89b7">More...</a><br /></td></tr>
+<tr class="separator:a1a00ea9a7138d5642a0c259e5bbd89b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6fedc3a060f3dccc6da3f5da1cf5c2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1crc32.html#af6fedc3a060f3dccc6da3f5da1cf5c2a">checksum</a> (const void *data, size_t size, uint32_t crc=0)</td></tr>
+<tr class="memdesc:af6fedc3a060f3dccc6da3f5da1cf5c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute <a class="el" href="namespacenanovdb_1_1crc32.html">crc32</a> checksum of <code>data</code> of <code>size</code> bytes (without a lookup table))  <a href="namespacenanovdb_1_1crc32.html#af6fedc3a060f3dccc6da3f5da1cf5c2a">More...</a><br /></td></tr>
+<tr class="separator:af6fedc3a060f3dccc6da3f5da1cf5c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a19ac1dae003bcc8cb30522c6d3346e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1crc32.html#a3a19ac1dae003bcc8cb30522c6d3346e">checksum</a> (const void *begin, const void *end, uint32_t crc=0)</td></tr>
+<tr class="memdesc:a3a19ac1dae003bcc8cb30522c6d3346e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute <a class="el" href="namespacenanovdb_1_1crc32.html">crc32</a> checksum of data between <code>begin</code> and <code>end</code>.  <a href="namespacenanovdb_1_1crc32.html#a3a19ac1dae003bcc8cb30522c6d3346e">More...</a><br /></td></tr>
+<tr class="separator:a3a19ac1dae003bcc8cb30522c6d3346e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa66ff26f2c0a3ff700a49834989c5c9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1crc32.html#aa66ff26f2c0a3ff700a49834989c5c9c">checksum</a> (const void *data, size_t size, const uint32_t lut[256], uint32_t crc=0)</td></tr>
+<tr class="memdesc:aa66ff26f2c0a3ff700a49834989c5c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute <a class="el" href="namespacenanovdb_1_1crc32.html">crc32</a> checksum of <code>data</code> with <code>size</code> bytes using a lookup table.  <a href="namespacenanovdb_1_1crc32.html#aa66ff26f2c0a3ff700a49834989c5c9c">More...</a><br /></td></tr>
+<tr class="separator:aa66ff26f2c0a3ff700a49834989c5c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79a9d0242db0c259fda8a219daa0b5d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1crc32.html#a79a9d0242db0c259fda8a219daa0b5d3">checksum</a> (const void *begin, const void *end, const uint32_t lut[256], uint32_t crc=0)</td></tr>
+<tr class="memdesc:a79a9d0242db0c259fda8a219daa0b5d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute <a class="el" href="namespacenanovdb_1_1crc32.html">crc32</a> checksum of data between <code>begin</code> and <code>end</code> using a lookup table.  <a href="namespacenanovdb_1_1crc32.html#a79a9d0242db0c259fda8a219daa0b5d3">More...</a><br /></td></tr>
+<tr class="separator:a79a9d0242db0c259fda8a219daa0b5d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab33653b86e1d41c6281473cfe1b60796"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; </td></tr>
+<tr class="memitem:ab33653b86e1d41c6281473cfe1b60796"><td class="memTemplItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#ab33653b86e1d41c6281473cfe1b60796">checksum</a> (const NanoGrid&lt; ValueT &gt; &amp;grid, ChecksumMode mode)</td></tr>
+<tr class="separator:ab33653b86e1d41c6281473cfe1b60796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef3e757b297ea02a002d7f04fc97a2b"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; </td></tr>
+<tr class="memitem:adef3e757b297ea02a002d7f04fc97a2b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#adef3e757b297ea02a002d7f04fc97a2b">validateChecksum</a> (const NanoGrid&lt; ValueT &gt; &amp;grid, ChecksumMode mode)</td></tr>
+<tr class="separator:adef3e757b297ea02a002d7f04fc97a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e1d9c9b4d963b820fc3f33715364b34"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; </td></tr>
+<tr class="memitem:a5e1d9c9b4d963b820fc3f33715364b34"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a5e1d9c9b4d963b820fc3f33715364b34">updateChecksum</a> (NanoGrid&lt; ValueT &gt; &amp;grid, ChecksumMode mode)</td></tr>
+<tr class="separator:a5e1d9c9b4d963b820fc3f33715364b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad906da53930d10e6ed1b3c926b105de1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#ad906da53930d10e6ed1b3c926b105de1">updateChecksum</a> (GridData &amp;gridData, ChecksumMode mode)</td></tr>
+<tr class="separator:ad906da53930d10e6ed1b3c926b105de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3392733d60c97bbfa3150bc7f7bec8e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a3392733d60c97bbfa3150bc7f7bec8e9">updateChecksum</a> (GridData *data)</td></tr>
+<tr class="memdesc:a3392733d60c97bbfa3150bc7f7bec8e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Preserve the existing mode of the checksum and update it if it's not disabled.  <a href="namespacenanovdb.html#a3392733d60c97bbfa3150bc7f7bec8e9">More...</a><br /></td></tr>
+<tr class="separator:a3392733d60c97bbfa3150bc7f7bec8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67d324dd1e444aec4e84281fe51902d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a67d324dd1e444aec4e84281fe51902d2">updateGridCount</a> (GridData *data, uint32_t gridIndex, uint32_t gridCount)</td></tr>
+<tr class="memdesc:a67d324dd1e444aec4e84281fe51902d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the ground index and count, as well as the partial checksum if needed.  <a href="namespacenanovdb.html#a67d324dd1e444aec4e84281fe51902d2">More...</a><br /></td></tr>
+<tr class="separator:a67d324dd1e444aec4e84281fe51902d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Computes a pair of 32bit checksums, og a Grid, by means of Cyclic Redundancy Check (CRC) </p>
+<div class="textblock"><p>Computes a pair of 32bit checksums, of a Grid, by means of Cyclic Redundancy Check (CRC) </p>
 <dl class="section author"><dt>Author</dt><dd>Ken Museth</dd></dl>
 <p>A CRC32 is the 32 bit remainder, or residue, of binary division of a message, by a polynomial. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="ac985af7334e8b676dd1c0e57ea5b1c9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NANOVDB_CRC32_LOG2_BLOCK_SIZE&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

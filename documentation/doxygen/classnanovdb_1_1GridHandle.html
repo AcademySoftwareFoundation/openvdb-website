@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -97,12 +97,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>This class serves to manage a raw memory buffer of a NanoVDB <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">Grid</a>.  
+<p>This class serves to manage a buffer containing one or more NanoVDB Grids.  
  <a href="classnanovdb_1_1GridHandle.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="GridHandle_8h_source.html">nanovdb/util/GridHandle.h</a>&gt;</code></p>
-
-<p>Inherits <a class="el" href="classnanovdb_1_1GridHandleBase.html">GridHandleBase</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -111,90 +109,145 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1013b9dfd8799ddc04b0b1cb88aff894"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a1013b9dfd8799ddc04b0b1cb88aff894">GridHandle</a> (BufferT &amp;&amp;<a class="el" href="classnanovdb_1_1GridHandle.html#a3444b061326e662594b7ffb72999b28e">buffer</a>)</td></tr>
-<tr class="memdesc:a1013b9dfd8799ddc04b0b1cb88aff894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor from a buffer.  <a href="#a1013b9dfd8799ddc04b0b1cb88aff894">More...</a><br /></td></tr>
-<tr class="separator:a1013b9dfd8799ddc04b0b1cb88aff894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc14689d7fc4a9b9432b899211a309ec"><td class="memTemplParams" colspan="2">template&lt;typename T  = BufferT, typename enable_if&lt; BufferTraits&lt; T &gt;::hasDeviceDual, int &gt;::type  = 0&gt; </td></tr>
+<tr class="memitem:adc14689d7fc4a9b9432b899211a309ec"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#adc14689d7fc4a9b9432b899211a309ec">GridHandle</a> (T &amp;&amp;<a class="el" href="classnanovdb_1_1GridHandle.html#a3444b061326e662594b7ffb72999b28e">buffer</a>)</td></tr>
+<tr class="memdesc:adc14689d7fc4a9b9432b899211a309ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor from a host buffer.  <a href="#adc14689d7fc4a9b9432b899211a309ec">More...</a><br /></td></tr>
+<tr class="separator:adc14689d7fc4a9b9432b899211a309ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc14689d7fc4a9b9432b899211a309ec"><td class="memTemplParams" colspan="2">template&lt;typename T  = BufferT, typename disable_if&lt; BufferTraits&lt; T &gt;::hasDeviceDual, int &gt;::type  = 0&gt; </td></tr>
+<tr class="memitem:adc14689d7fc4a9b9432b899211a309ec"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#adc14689d7fc4a9b9432b899211a309ec">GridHandle</a> (T &amp;&amp;<a class="el" href="classnanovdb_1_1GridHandle.html#a3444b061326e662594b7ffb72999b28e">buffer</a>)</td></tr>
+<tr class="memdesc:adc14689d7fc4a9b9432b899211a309ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor from a dual host-device buffer.  <a href="#adc14689d7fc4a9b9432b899211a309ec">More...</a><br /></td></tr>
+<tr class="separator:adc14689d7fc4a9b9432b899211a309ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaae13e5113d0e32d6f758ca748652f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#afaae13e5113d0e32d6f758ca748652f9">GridHandle</a> ()=default</td></tr>
-<tr class="memdesc:afaae13e5113d0e32d6f758ca748652f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty ctor.  <a href="#afaae13e5113d0e32d6f758ca748652f9">More...</a><br /></td></tr>
+<tr class="memdesc:afaae13e5113d0e32d6f758ca748652f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>.  <a href="#afaae13e5113d0e32d6f758ca748652f9">More...</a><br /></td></tr>
 <tr class="separator:afaae13e5113d0e32d6f758ca748652f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bc536fa3086174cdac78304c0df0130"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a3bc536fa3086174cdac78304c0df0130">GridHandle</a> (const <a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> &amp;)=delete</td></tr>
 <tr class="memdesc:a3bc536fa3086174cdac78304c0df0130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow copy-construction.  <a href="#a3bc536fa3086174cdac78304c0df0130">More...</a><br /></td></tr>
 <tr class="separator:a3bc536fa3086174cdac78304c0df0130"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a838e184a2851ad71ee5b238b776016ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a838e184a2851ad71ee5b238b776016ab">GridHandle</a> (<a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="memdesc:a838e184a2851ad71ee5b238b776016ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move copy-constructor.  <a href="#a838e184a2851ad71ee5b238b776016ab">More...</a><br /></td></tr>
+<tr class="separator:a838e184a2851ad71ee5b238b776016ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20897c5c8bd47f5d4005989bead0e55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#ad20897c5c8bd47f5d4005989bead0e55">reset</a> ()</td></tr>
+<tr class="memdesc:ad20897c5c8bd47f5d4005989bead0e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> to an empty handle  <a href="#ad20897c5c8bd47f5d4005989bead0e55">More...</a><br /></td></tr>
+<tr class="separator:ad20897c5c8bd47f5d4005989bead0e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca54a602de1a636273fd50e465408a1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#aca54a602de1a636273fd50e465408a1a">operator=</a> (const <a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> &amp;)=delete</td></tr>
 <tr class="memdesc:aca54a602de1a636273fd50e465408a1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow copy assignment operation.  <a href="#aca54a602de1a636273fd50e465408a1a">More...</a><br /></td></tr>
 <tr class="separator:aca54a602de1a636273fd50e465408a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ff456e710140620fe10d8cafcaacef7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a8ff456e710140620fe10d8cafcaacef7">operator=</a> (<a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> &amp;&amp;other) noexcept</td></tr>
 <tr class="memdesc:a8ff456e710140620fe10d8cafcaacef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move copy assignment operation.  <a href="#a8ff456e710140620fe10d8cafcaacef7">More...</a><br /></td></tr>
 <tr class="separator:a8ff456e710140620fe10d8cafcaacef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a838e184a2851ad71ee5b238b776016ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a838e184a2851ad71ee5b238b776016ab">GridHandle</a> (<a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> &amp;&amp;other) noexcept</td></tr>
-<tr class="memdesc:a838e184a2851ad71ee5b238b776016ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move copy-constructor.  <a href="#a838e184a2851ad71ee5b238b776016ab">More...</a><br /></td></tr>
-<tr class="separator:a838e184a2851ad71ee5b238b776016ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a034bbd7459e16bf33879bda50f1594c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a034bbd7459e16bf33879bda50f1594c1">~GridHandle</a> () override</td></tr>
-<tr class="memdesc:a034bbd7459e16bf33879bda50f1594c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="#a034bbd7459e16bf33879bda50f1594c1">More...</a><br /></td></tr>
-<tr class="separator:a034bbd7459e16bf33879bda50f1594c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad20897c5c8bd47f5d4005989bead0e55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#ad20897c5c8bd47f5d4005989bead0e55">reset</a> ()</td></tr>
-<tr class="memdesc:ad20897c5c8bd47f5d4005989bead0e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear the buffer  <a href="#ad20897c5c8bd47f5d4005989bead0e55">More...</a><br /></td></tr>
-<tr class="separator:ad20897c5c8bd47f5d4005989bead0e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed54a755b1add24894c1de8f5f159ba"><td class="memTemplParams" colspan="2">template&lt;typename OtherBufferT  = HostBuffer&gt; </td></tr>
+<tr class="memitem:aaed54a755b1add24894c1de8f5f159ba"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a>&lt; OtherBufferT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#aaed54a755b1add24894c1de8f5f159ba">copy</a> (const OtherBufferT &amp;<a class="el" href="classnanovdb_1_1GridHandle.html#a3444b061326e662594b7ffb72999b28e">buffer</a>=OtherBufferT()) const </td></tr>
+<tr class="memdesc:aaed54a755b1add24894c1de8f5f159ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a deep copy of the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>, possibly templated on a different buffer type.  <a href="#aaed54a755b1add24894c1de8f5f159ba">More...</a><br /></td></tr>
+<tr class="separator:aaed54a755b1add24894c1de8f5f159ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3444b061326e662594b7ffb72999b28e"><td class="memItemLeft" align="right" valign="top">BufferT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a3444b061326e662594b7ffb72999b28e">buffer</a> ()</td></tr>
 <tr class="memdesc:a3444b061326e662594b7ffb72999b28e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a reference to the buffer.  <a href="#a3444b061326e662594b7ffb72999b28e">More...</a><br /></td></tr>
 <tr class="separator:a3444b061326e662594b7ffb72999b28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1684d1a94834c06891ea11944c985f2a"><td class="memItemLeft" align="right" valign="top">const BufferT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a1684d1a94834c06891ea11944c985f2a">buffer</a> () const </td></tr>
 <tr class="memdesc:a1684d1a94834c06891ea11944c985f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const reference to the buffer.  <a href="#a1684d1a94834c06891ea11944c985f2a">More...</a><br /></td></tr>
 <tr class="separator:a1684d1a94834c06891ea11944c985f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ea9278dc7ceed2769e05b7f719731c4"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a2ea9278dc7ceed2769e05b7f719731c4">data</a> () override</td></tr>
-<tr class="memdesc:a2ea9278dc7ceed2769e05b7f719731c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a non-const pointer to the data.  <a href="#a2ea9278dc7ceed2769e05b7f719731c4">More...</a><br /></td></tr>
-<tr class="separator:a2ea9278dc7ceed2769e05b7f719731c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a067be5c59fccd665e2c9c44cfc46bccb"><td class="memItemLeft" align="right" valign="top">const uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a067be5c59fccd665e2c9c44cfc46bccb">data</a> () const  override</td></tr>
-<tr class="memdesc:a067be5c59fccd665e2c9c44cfc46bccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const pointer to the data.  <a href="#a067be5c59fccd665e2c9c44cfc46bccb">More...</a><br /></td></tr>
-<tr class="separator:a067be5c59fccd665e2c9c44cfc46bccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac71c806ee52fa7dbc43bbd5f2aa2dfbd"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#ac71c806ee52fa7dbc43bbd5f2aa2dfbd">size</a> () const  override</td></tr>
-<tr class="memdesc:ac71c806ee52fa7dbc43bbd5f2aa2dfbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size in bytes of the raw memory buffer managed by this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a>'s allocator.  <a href="#ac71c806ee52fa7dbc43bbd5f2aa2dfbd">More...</a><br /></td></tr>
-<tr class="separator:ac71c806ee52fa7dbc43bbd5f2aa2dfbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60b39dea1b717ca5dd8b24ad5ddf7e46"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; </td></tr>
-<tr class="memitem:a60b39dea1b717ca5dd8b24ad5ddf7e46"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a60b39dea1b717ca5dd8b24ad5ddf7e46">grid</a> (uint32_t n=0) const </td></tr>
-<tr class="memdesc:a60b39dea1b717ca5dd8b24ad5ddf7e46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const pointer to the <em>n'th</em> NanoVDB grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a>.  <a href="#a60b39dea1b717ca5dd8b24ad5ddf7e46">More...</a><br /></td></tr>
-<tr class="separator:a60b39dea1b717ca5dd8b24ad5ddf7e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a731c70d12750586b67c6cde637b650"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a6a731c70d12750586b67c6cde637b650">data</a> ()</td></tr>
+<tr class="memdesc:a6a731c70d12750586b67c6cde637b650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a non-const pointer to the data.  <a href="#a6a731c70d12750586b67c6cde637b650">More...</a><br /></td></tr>
+<tr class="separator:a6a731c70d12750586b67c6cde637b650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40fe50b14bf164129156972247acb8e4"><td class="memItemLeft" align="right" valign="top">const uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a40fe50b14bf164129156972247acb8e4">data</a> () const </td></tr>
+<tr class="memdesc:a40fe50b14bf164129156972247acb8e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const pointer to the data.  <a href="#a40fe50b14bf164129156972247acb8e4">More...</a><br /></td></tr>
+<tr class="separator:a40fe50b14bf164129156972247acb8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19d21737abd1bde5d1b98e5fb0c2aa5f"><td class="memTemplParams" colspan="2">template&lt;typename U  = BufferT&gt; </td></tr>
+<tr class="memitem:a19d21737abd1bde5d1b98e5fb0c2aa5f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, const uint8_t * &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a19d21737abd1bde5d1b98e5fb0c2aa5f">deviceData</a> () const </td></tr>
+<tr class="separator:a19d21737abd1bde5d1b98e5fb0c2aa5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e70a00ac012ecdbd5fd704f64d120f"><td class="memTemplParams" colspan="2">template&lt;typename U  = BufferT&gt; </td></tr>
+<tr class="memitem:a26e70a00ac012ecdbd5fd704f64d120f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, uint8_t * &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a26e70a00ac012ecdbd5fd704f64d120f">deviceData</a> ()</td></tr>
+<tr class="separator:a26e70a00ac012ecdbd5fd704f64d120f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b6868dbef44fc07f11d050eb59e5f7e"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a0b6868dbef44fc07f11d050eb59e5f7e">size</a> () const </td></tr>
+<tr class="memdesc:a0b6868dbef44fc07f11d050eb59e5f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size in bytes of the raw memory buffer managed by this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>.  <a href="#a0b6868dbef44fc07f11d050eb59e5f7e">More...</a><br /></td></tr>
+<tr class="separator:a0b6868dbef44fc07f11d050eb59e5f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa385aa18f5e42db5a415c25a90f4193d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#aa385aa18f5e42db5a415c25a90f4193d">operator bool</a> () const </td></tr>
+<tr class="memdesc:aa385aa18f5e42db5a415c25a90f4193d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if this handle contains any grids.  <a href="#aa385aa18f5e42db5a415c25a90f4193d">More...</a><br /></td></tr>
+<tr class="separator:aa385aa18f5e42db5a415c25a90f4193d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455e4da696d8326ccee9b3704aaa175f"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; </td></tr>
+<tr class="memitem:a455e4da696d8326ccee9b3704aaa175f"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a455e4da696d8326ccee9b3704aaa175f">grid</a> (uint32_t n=0) const </td></tr>
+<tr class="memdesc:a455e4da696d8326ccee9b3704aaa175f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const host pointer to the <em>n'th</em> NanoVDB grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>.  <a href="#a455e4da696d8326ccee9b3704aaa175f">More...</a><br /></td></tr>
+<tr class="separator:a455e4da696d8326ccee9b3704aaa175f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abad8117efab92afc830bb99cebb0a29d"><td class="memTemplParams" colspan="2">template&lt;typename ValueT &gt; </td></tr>
 <tr class="memitem:abad8117efab92afc830bb99cebb0a29d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#abad8117efab92afc830bb99cebb0a29d">grid</a> (uint32_t n=0)</td></tr>
-<tr class="memdesc:abad8117efab92afc830bb99cebb0a29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the <em>n'th</em> NanoVDB grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a>.  <a href="#abad8117efab92afc830bb99cebb0a29d">More...</a><br /></td></tr>
+<tr class="memdesc:abad8117efab92afc830bb99cebb0a29d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a host pointer to the <em>n'th</em> NanoVDB grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>.  <a href="#abad8117efab92afc830bb99cebb0a29d">More...</a><br /></td></tr>
 <tr class="separator:abad8117efab92afc830bb99cebb0a29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4346819dce4008a8129559c629027f9"><td class="memTemplParams" colspan="2">template&lt;typename ValueT , typename U  = BufferT&gt; </td></tr>
-<tr class="memitem:af4346819dce4008a8129559c629027f9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; * &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#af4346819dce4008a8129559c629027f9">deviceGrid</a> (uint32_t n=0) const </td></tr>
-<tr class="memdesc:af4346819dce4008a8129559c629027f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const pointer to the <em>n'th</em> grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> on the device, e.g. GPU.  <a href="#af4346819dce4008a8129559c629027f9">More...</a><br /></td></tr>
-<tr class="separator:af4346819dce4008a8129559c629027f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e0bcafdbfbf3756ebf504bfdbb3e166"><td class="memTemplParams" colspan="2">template&lt;typename ValueT , typename U  = BufferT&gt; </td></tr>
-<tr class="memitem:a4e0bcafdbfbf3756ebf504bfdbb3e166"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; * &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a4e0bcafdbfbf3756ebf504bfdbb3e166">deviceGrid</a> (uint32_t n=0)</td></tr>
-<tr class="memdesc:a4e0bcafdbfbf3756ebf504bfdbb3e166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const pointer to the <em>n'th</em> grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> on the device, e.g. GPU.  <a href="#a4e0bcafdbfbf3756ebf504bfdbb3e166">More...</a><br /></td></tr>
-<tr class="separator:a4e0bcafdbfbf3756ebf504bfdbb3e166"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bf8046dd98bdd6dddbba7f52dad8e7e"><td class="memTemplParams" colspan="2">template&lt;typename U  = BufferT&gt; </td></tr>
-<tr class="memitem:a5bf8046dd98bdd6dddbba7f52dad8e7e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a5bf8046dd98bdd6dddbba7f52dad8e7e">deviceUpload</a> (void *stream=nullptr, bool sync=true)</td></tr>
-<tr class="memdesc:a5bf8046dd98bdd6dddbba7f52dad8e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upload the grid to the device, e.g. from CPU to GPU.  <a href="#a5bf8046dd98bdd6dddbba7f52dad8e7e">More...</a><br /></td></tr>
-<tr class="separator:a5bf8046dd98bdd6dddbba7f52dad8e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d0f06ae566f425881a823f5377ae103"><td class="memTemplParams" colspan="2">template&lt;typename U  = BufferT&gt; </td></tr>
-<tr class="memitem:a5d0f06ae566f425881a823f5377ae103"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a5d0f06ae566f425881a823f5377ae103">deviceDownload</a> (void *stream=nullptr, bool sync=true)</td></tr>
-<tr class="memdesc:a5d0f06ae566f425881a823f5377ae103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Download the grid to from the device, e.g. from GPU to CPU.  <a href="#a5d0f06ae566f425881a823f5377ae103">More...</a><br /></td></tr>
-<tr class="separator:a5d0f06ae566f425881a823f5377ae103"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6e61de369e994009e36f344f99c15ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandleBase.html#ac6e61de369e994009e36f344f99c15ad">empty</a> () const </td></tr>
+<tr class="memitem:a980299dce2525b20e44ae21442a41198"><td class="memTemplParams" colspan="2">template&lt;typename ValueT , typename U  = BufferT&gt; </td></tr>
+<tr class="memitem:a980299dce2525b20e44ae21442a41198"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; * &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a980299dce2525b20e44ae21442a41198">deviceGrid</a> (uint32_t n=0) const </td></tr>
+<tr class="memdesc:a980299dce2525b20e44ae21442a41198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const pointer to the <em>n'th</em> grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> on the device, e.g. GPU.  <a href="#a980299dce2525b20e44ae21442a41198">More...</a><br /></td></tr>
+<tr class="separator:a980299dce2525b20e44ae21442a41198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b144e817c76d74cdc29d34b4d850c2"><td class="memTemplParams" colspan="2">template&lt;typename ValueT , typename U  = BufferT&gt; </td></tr>
+<tr class="memitem:ae5b144e817c76d74cdc29d34b4d850c2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; * &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#ae5b144e817c76d74cdc29d34b4d850c2">deviceGrid</a> (uint32_t n=0)</td></tr>
+<tr class="memdesc:ae5b144e817c76d74cdc29d34b4d850c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const pointer to the <em>n'th</em> grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> on the device, e.g. GPU.  <a href="#ae5b144e817c76d74cdc29d34b4d850c2">More...</a><br /></td></tr>
+<tr class="separator:ae5b144e817c76d74cdc29d34b4d850c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e499054ccf1aed54bf8ac6984cc5ca0"><td class="memTemplParams" colspan="2">template&lt;typename U  = BufferT&gt; </td></tr>
+<tr class="memitem:a2e499054ccf1aed54bf8ac6984cc5ca0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a2e499054ccf1aed54bf8ac6984cc5ca0">deviceUpload</a> (void *stream=nullptr, bool sync=true)</td></tr>
+<tr class="memdesc:a2e499054ccf1aed54bf8ac6984cc5ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upload the grid to the device, e.g. from CPU to GPU.  <a href="#a2e499054ccf1aed54bf8ac6984cc5ca0">More...</a><br /></td></tr>
+<tr class="separator:a2e499054ccf1aed54bf8ac6984cc5ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaf4adec9af7b7769bd626261aedbe10"><td class="memTemplParams" colspan="2">template&lt;typename U  = BufferT&gt; </td></tr>
+<tr class="memitem:abaf4adec9af7b7769bd626261aedbe10"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#abaf4adec9af7b7769bd626261aedbe10">deviceDownload</a> (void *stream=nullptr, bool sync=true)</td></tr>
+<tr class="memdesc:abaf4adec9af7b7769bd626261aedbe10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Download the grid to from the device, e.g. from GPU to CPU.  <a href="#abaf4adec9af7b7769bd626261aedbe10">More...</a><br /></td></tr>
+<tr class="separator:abaf4adec9af7b7769bd626261aedbe10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfa5d049a658f9bd4096405fa9f03097"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#acfa5d049a658f9bd4096405fa9f03097">isPadded</a> () const </td></tr>
+<tr class="memdesc:acfa5d049a658f9bd4096405fa9f03097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the buffer is this handle has any padding, i.e. if the buffer is larger than the combined size of all its grids.  <a href="#acfa5d049a658f9bd4096405fa9f03097">More...</a><br /></td></tr>
+<tr class="separator:acfa5d049a658f9bd4096405fa9f03097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7410a55f8cc2fff5a43e4b50e80a31b5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a7410a55f8cc2fff5a43e4b50e80a31b5">gridCount</a> () const </td></tr>
+<tr class="memdesc:a7410a55f8cc2fff5a43e4b50e80a31b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the total number of grids contained in this buffer.  <a href="#a7410a55f8cc2fff5a43e4b50e80a31b5">More...</a><br /></td></tr>
+<tr class="separator:a7410a55f8cc2fff5a43e4b50e80a31b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42edb0f747ab0231537af7e9513af667"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a42edb0f747ab0231537af7e9513af667">gridSize</a> (uint32_t n=0) const </td></tr>
+<tr class="memdesc:a42edb0f747ab0231537af7e9513af667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the grid size of the <em>n'th</em> grid in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>.  <a href="#a42edb0f747ab0231537af7e9513af667">More...</a><br /></td></tr>
+<tr class="separator:a42edb0f747ab0231537af7e9513af667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add8d7cff0d1c8cccac57cbaac3b74298"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0">GridType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#add8d7cff0d1c8cccac57cbaac3b74298">gridType</a> (uint32_t n=0) const </td></tr>
+<tr class="memdesc:add8d7cff0d1c8cccac57cbaac3b74298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the GridType of the <em>n'th</em> grid in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>.  <a href="#add8d7cff0d1c8cccac57cbaac3b74298">More...</a><br /></td></tr>
+<tr class="separator:add8d7cff0d1c8cccac57cbaac3b74298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab239f1dd10f7c09c2dab8d2792b5d709"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#ab239f1dd10f7c09c2dab8d2792b5d709">gridData</a> (uint32_t n=0) const </td></tr>
+<tr class="memdesc:ab239f1dd10f7c09c2dab8d2792b5d709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access to the <a class="el" href="structnanovdb_1_1GridData.html" title="Struct with all the member data of the Grid (useful during serialization of an openvdb grid) ...">GridData</a> of the n'th grid in the current handle.  <a href="#ab239f1dd10f7c09c2dab8d2792b5d709">More...</a><br /></td></tr>
+<tr class="separator:ab239f1dd10f7c09c2dab8d2792b5d709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4ccae59c88dab57e42f68e183da6e8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1GridMetaData.html">GridMetaData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a0c4ccae59c88dab57e42f68e183da6e8">gridMetaData</a> (uint32_t n=0) const </td></tr>
+<tr class="memdesc:a0c4ccae59c88dab57e42f68e183da6e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const point to the <em>n'th</em> grid meta data.  <a href="#a0c4ccae59c88dab57e42f68e183da6e8">More...</a><br /></td></tr>
+<tr class="separator:a0c4ccae59c88dab57e42f68e183da6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685fd68e7eb0c235645554a468f0a484"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a685fd68e7eb0c235645554a468f0a484">write</a> (std::ostream &amp;os, uint32_t n) const </td></tr>
+<tr class="memdesc:a685fd68e7eb0c235645554a468f0a484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a specific grid in this buffer to an output stream.  <a href="#a685fd68e7eb0c235645554a468f0a484">More...</a><br /></td></tr>
+<tr class="separator:a685fd68e7eb0c235645554a468f0a484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47bfbba234eeeea53f5291f5ba50960c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a47bfbba234eeeea53f5291f5ba50960c">write</a> (std::ostream &amp;os) const </td></tr>
+<tr class="memdesc:a47bfbba234eeeea53f5291f5ba50960c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the entire grid buffer to an output stream.  <a href="#a47bfbba234eeeea53f5291f5ba50960c">More...</a><br /></td></tr>
+<tr class="separator:a47bfbba234eeeea53f5291f5ba50960c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a953f05594dde33ab3c097fad5699363b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a953f05594dde33ab3c097fad5699363b">write</a> (const std::string &amp;fileName) const </td></tr>
+<tr class="memdesc:a953f05594dde33ab3c097fad5699363b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write this entire grid buffer to a file.  <a href="#a953f05594dde33ab3c097fad5699363b">More...</a><br /></td></tr>
+<tr class="separator:a953f05594dde33ab3c097fad5699363b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab86aa53304d27468389610cfff12afe4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#ab86aa53304d27468389610cfff12afe4">write</a> (const std::string &amp;fileName, uint32_t n) const </td></tr>
+<tr class="memdesc:ab86aa53304d27468389610cfff12afe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a specific grid to file.  <a href="#ab86aa53304d27468389610cfff12afe4">More...</a><br /></td></tr>
+<tr class="separator:ab86aa53304d27468389610cfff12afe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aede7b9718f389e31ce50690ff788fc12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#aede7b9718f389e31ce50690ff788fc12">read</a> (std::istream &amp;is, const BufferT &amp;pool=BufferT())</td></tr>
+<tr class="memdesc:aede7b9718f389e31ce50690ff788fc12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an entire raw grid buffer from an input stream.  <a href="#aede7b9718f389e31ce50690ff788fc12">More...</a><br /></td></tr>
+<tr class="separator:aede7b9718f389e31ce50690ff788fc12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42628edd9bde1b4cfac23e4d247d1561"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a42628edd9bde1b4cfac23e4d247d1561">read</a> (std::istream &amp;is, uint32_t n, const BufferT &amp;pool=BufferT())</td></tr>
+<tr class="memdesc:a42628edd9bde1b4cfac23e4d247d1561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a specific grid from an input stream containing a raw grid buffer.  <a href="#a42628edd9bde1b4cfac23e4d247d1561">More...</a><br /></td></tr>
+<tr class="separator:a42628edd9bde1b4cfac23e4d247d1561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1c725da9c29c96d194a120447980ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a3c1c725da9c29c96d194a120447980ec">read</a> (std::istream &amp;is, const std::string &amp;gridName, const BufferT &amp;pool=BufferT())</td></tr>
+<tr class="memdesc:a3c1c725da9c29c96d194a120447980ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a specific grid from an input stream containing a raw grid buffer.  <a href="#a3c1c725da9c29c96d194a120447980ec">More...</a><br /></td></tr>
+<tr class="separator:a3c1c725da9c29c96d194a120447980ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae612cbaf45aeba8b76288065804c9dbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#ae612cbaf45aeba8b76288065804c9dbb">read</a> (const std::string &amp;fileName, const BufferT &amp;pool=BufferT())</td></tr>
+<tr class="memdesc:ae612cbaf45aeba8b76288065804c9dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a raw grid buffer from a file.  <a href="#ae612cbaf45aeba8b76288065804c9dbb">More...</a><br /></td></tr>
+<tr class="separator:ae612cbaf45aeba8b76288065804c9dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dfafffae26e0026d92725c765469b85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a8dfafffae26e0026d92725c765469b85">read</a> (const std::string &amp;fileName, uint32_t n, const BufferT &amp;pool=BufferT())</td></tr>
+<tr class="memdesc:a8dfafffae26e0026d92725c765469b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a specific grid from a file containing a raw grid buffer.  <a href="#a8dfafffae26e0026d92725c765469b85">More...</a><br /></td></tr>
+<tr class="separator:a8dfafffae26e0026d92725c765469b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9dee3c050dab4072da9f4671cca88a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a5f9dee3c050dab4072da9f4671cca88a">read</a> (const std::string &amp;fileName, const std::string &amp;gridName, const BufferT &amp;pool=BufferT())</td></tr>
+<tr class="memdesc:a5f9dee3c050dab4072da9f4671cca88a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a specific grid from a file containing a raw grid buffer.  <a href="#a5f9dee3c050dab4072da9f4671cca88a">More...</a><br /></td></tr>
+<tr class="separator:a5f9dee3c050dab4072da9f4671cca88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ac6e61de369e994009e36f344f99c15ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#ac6e61de369e994009e36f344f99c15ad">empty</a> () const </td></tr>
 <tr class="memdesc:ac6e61de369e994009e36f344f99c15ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if this handle is empty, i.e. has no allocated memory.  <a href="#ac6e61de369e994009e36f344f99c15ad">More...</a><br /></td></tr>
 <tr class="separator:ac6e61de369e994009e36f344f99c15ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa385aa18f5e42db5a415c25a90f4193d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandleBase.html#aa385aa18f5e42db5a415c25a90f4193d">operator bool</a> () const </td></tr>
-<tr class="memdesc:aa385aa18f5e42db5a415c25a90f4193d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if this handle contains a grid.  <a href="#aa385aa18f5e42db5a415c25a90f4193d">More...</a><br /></td></tr>
-<tr class="separator:aa385aa18f5e42db5a415c25a90f4193d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe69d5e4910e2294f49a2574ca3d4db1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1GridMetaData.html">GridMetaData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandleBase.html#afe69d5e4910e2294f49a2574ca3d4db1">gridMetaData</a> () const </td></tr>
-<tr class="memdesc:afe69d5e4910e2294f49a2574ca3d4db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const point to the grid meta data (see definition above).  <a href="#afe69d5e4910e2294f49a2574ca3d4db1">More...</a><br /></td></tr>
-<tr class="separator:afe69d5e4910e2294f49a2574ca3d4db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0835c5e931765c4a10b918af59363569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0">GridType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandleBase.html#a0835c5e931765c4a10b918af59363569">gridType</a> () const </td></tr>
-<tr class="memdesc:a0835c5e931765c4a10b918af59363569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the GridType handled by this instance, and <a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0a87557f11575c0ad78e4e28abedc13b6e">GridType::End</a> if empty.  <a href="#a0835c5e931765c4a10b918af59363569">More...</a><br /></td></tr>
-<tr class="separator:a0835c5e931765c4a10b918af59363569"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7410a55f8cc2fff5a43e4b50e80a31b5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandleBase.html#a7410a55f8cc2fff5a43e4b50e80a31b5">gridCount</a> () const </td></tr>
-<tr class="memdesc:a7410a55f8cc2fff5a43e4b50e80a31b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of grids contained in this buffer.  <a href="#a7410a55f8cc2fff5a43e4b50e80a31b5">More...</a><br /></td></tr>
-<tr class="separator:a7410a55f8cc2fff5a43e4b50e80a31b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a479432127ee77145cc19d6a2d1590821"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html#a479432127ee77145cc19d6a2d1590821">isEmpty</a> () const </td></tr>
+<tr class="memdesc:a479432127ee77145cc19d6a2d1590821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if this handle is empty, i.e. has no allocated memory.  <a href="#a479432127ee77145cc19d6a2d1590821">More...</a><br /></td></tr>
+<tr class="separator:a479432127ee77145cc19d6a2d1590821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename BufferT = HostBuffer&gt;<br />
 class nanovdb::GridHandle&lt; BufferT &gt;</h3>
 
-<p>This class serves to manage a raw memory buffer of a NanoVDB <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">Grid</a>. </p>
+<p>This class serves to manage a buffer containing one or more NanoVDB Grids. </p>
 <dl class="section note"><dt>Note</dt><dd>It is important to note that this class does NOT depend on OpenVDB. </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="ab9394c0860a72744306b73a0f9cfe87c"></a>
@@ -210,29 +263,63 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a1013b9dfd8799ddc04b0b1cb88aff894"></a>
+<a class="anchor" id="adc14689d7fc4a9b9432b899211a309ec"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> </td>
           <td>(</td>
-          <td class="paramtype">BufferT &amp;&amp;&#160;</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
           <td class="paramname"><em>buffer</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Move constructor from a buffer. </p>
+<p>Move constructor from a host buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>buffer containing one or more NanoGrids that will be moved into this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Will</td><td>throw and error with the buffer does not contain a valid NanoGrid! </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adc14689d7fc4a9b9432b899211a309ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&amp;&#160;</td>
+          <td class="paramname"><em>buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Move constructor from a dual host-device buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>buffer containing one or more NanoGrids that will be moved into this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Will</td><td>throw and error with the buffer does not contain a valid NanoGrid! </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -257,7 +344,7 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Empty ctor. </p>
+<p>Constructs an empty <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>. </p>
 
 </div>
 </div>
@@ -313,31 +400,6 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a034bbd7459e16bf33879bda50f1594c1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">~<a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default destructor. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a3444b061326e662594b7ffb72999b28e"></a>
 <div class="memitem">
@@ -389,7 +451,46 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a2ea9278dc7ceed2769e05b7f719731c4"></a>
+<a class="anchor" id="aaed54a755b1add24894c1de8f5f159ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a>&lt; OtherBufferT &gt; copy </td>
+          <td>(</td>
+          <td class="paramtype">const OtherBufferT &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em> = <code>OtherBufferT()</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Performs a deep copy of the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>, possibly templated on a different buffer type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">OtherBufferT</td><td>Buffer type of the deep copy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>optional buffer used for allocation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new handle of the specified buffer type that contains a deep copy of the current handle </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6a731c70d12750586b67c6cde637b650"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -405,19 +506,17 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Returns a non-const pointer to the data. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> was not initialized </dd></dl>
-
-<p>Implements <a class="el" href="classnanovdb_1_1GridHandleBase.html#a756911e16f14d7d5c3611d4e8531dc79">GridHandleBase</a>.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> was not initialized </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a067be5c59fccd665e2c9c44cfc46bccb"></a>
+<a class="anchor" id="a40fe50b14bf164129156972247acb8e4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -433,19 +532,17 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Returns a const pointer to the data. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> was not initialized </dd></dl>
-
-<p>Implements <a class="el" href="classnanovdb_1_1GridHandleBase.html#af7bcfab4459003d9c8cf384090102630">GridHandleBase</a>.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> was not initialized </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a5d0f06ae566f425881a823f5377ae103"></a>
+<a class="anchor" id="a19d21737abd1bde5d1b98e5fb0c2aa5f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -453,7 +550,53 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, void&gt;::type deviceDownload </td>
+          <td class="memname"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, const uint8_t*&gt;::type deviceData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a26e70a00ac012ecdbd5fd704f64d120f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, uint8_t*&gt;::type deviceData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abaf4adec9af7b7769bd626261aedbe10"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, void&gt;::type deviceDownload </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>stream</em> = <code>nullptr</code>, </td>
@@ -482,7 +625,7 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="af4346819dce4008a8129559c629027f9"></a>
+<a class="anchor" id="a980299dce2525b20e44ae21442a41198"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -490,7 +633,7 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt;ValueT&gt;*&gt;::type deviceGrid </td>
+          <td class="memname"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; * &gt;::type deviceGrid </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>n</em> = <code>0</code></td><td>)</td>
@@ -504,12 +647,24 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Return a const pointer to the <em>n'th</em> grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> on the device, e.g. GPU. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> was not initialized, <em>n</em> is invalid or if the template parameter does not match the specified grid! </dd></dl>
+<p>Return a const pointer to the <em>n'th</em> grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> on the device, e.g. GPU. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueT</td><td>Value type of the grid point to be returned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Index of the (device) grid pointer to be returned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> has no device grid, <em>n</em> is invalid, or if the template parameter does not match the specified grid. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a4e0bcafdbfbf3756ebf504bfdbb3e166"></a>
+<a class="anchor" id="ae5b144e817c76d74cdc29d34b4d850c2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -517,7 +672,7 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt;ValueT&gt;*&gt;::type deviceGrid </td>
+          <td class="memname"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt;ValueT&gt;*&gt;::type deviceGrid </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>n</em> = <code>0</code></td><td>)</td>
@@ -531,12 +686,25 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Return a const pointer to the <em>n'th</em> grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> on the device, e.g. GPU. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> was not initialized, <em>n</em> is invalid or if the template parameter does not match the specified grid! </dd></dl>
+<p>Return a const pointer to the <em>n'th</em> grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> on the device, e.g. GPU. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueT</td><td>Value type of the grid point to be returned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Index if of the grid pointer to be returned </td></tr>
+    <tr><td class="paramname">verbose</td><td>if non-zero error messages will be printed in case something failed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> was not initialized, <em>n</em> is invalid, or if the template parameter does not match the specified grid. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a5bf8046dd98bdd6dddbba7f52dad8e7e"></a>
+<a class="anchor" id="a2e499054ccf1aed54bf8ac6984cc5ca0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -544,7 +712,7 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, void&gt;::type deviceUpload </td>
+          <td class="memname"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, void&gt;::type deviceUpload </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>stream</em> = <code>nullptr</code>, </td>
@@ -589,7 +757,7 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -598,7 +766,7 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a60b39dea1b717ca5dd8b24ad5ddf7e46"></a>
+<a class="anchor" id="a455e4da696d8326ccee9b3704aaa175f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -606,7 +774,7 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt;ValueT&gt;* grid </td>
+          <td class="memname">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; * grid </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>n</em> = <code>0</code></td><td>)</td>
@@ -620,8 +788,20 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a const pointer to the <em>n'th</em> NanoVDB grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a>. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> was not initialized, <em>n</em> is invalid or if the template parameter does not match the specified grid! </dd></dl>
+<p>Returns a const host pointer to the <em>n'th</em> NanoVDB grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueT</td><td>Value type of the grid point to be returned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Index of the (host) grid pointer to be returned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> no host grid, <em>n</em> is invalid or if the template parameter does not match the specified grid! </dd></dl>
 
 </div>
 </div>
@@ -647,8 +827,20 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a pointer to the <em>n'th</em> NanoVDB grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a>. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> was not initialized, <em>n</em> is invalid or if the template parameter does not match the specified grid! </dd></dl>
+<p>Returns a host pointer to the <em>n'th</em> NanoVDB grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueT</td><td>Value type of the grid point to be returned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Index of the (host) grid pointer to be returned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> no host grid, <em>n</em> is invalid or if the template parameter does not match the specified grid! </dd></dl>
 
 </div>
 </div>
@@ -668,16 +860,16 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return the number of grids contained in this buffer. </p>
+<p>Return the total number of grids contained in this buffer. </p>
 
 </div>
 </div>
-<a class="anchor" id="afe69d5e4910e2294f49a2574ca3d4db1"></a>
+<a class="anchor" id="ab239f1dd10f7c09c2dab8d2792b5d709"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -685,25 +877,98 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classnanovdb_1_1GridMetaData.html">GridMetaData</a>* gridMetaData </td>
+          <td class="memname">const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> * gridData </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em> = <code>0</code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a const point to the grid meta data (see definition above). </p>
-<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> was not initialized </dd></dl>
+<p>Access to the <a class="el" href="structnanovdb_1_1GridData.html" title="Struct with all the member data of the Grid (useful during serialization of an openvdb grid) ...">GridData</a> of the n'th grid in the current handle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>zero-based ID of the grid </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Const pointer to the n'th <a class="el" href="structnanovdb_1_1GridData.html" title="Struct with all the member data of the Grid (useful during serialization of an openvdb grid) ...">GridData</a> in the current handle </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a0835c5e931765c4a10b918af59363569"></a>
+<a class="anchor" id="a0c4ccae59c88dab57e42f68e183da6e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classnanovdb_1_1GridMetaData.html">GridMetaData</a> * gridMetaData </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a const point to the <em>n'th</em> grid meta data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>zero-based ID of the grid </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> was not initialized </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a42edb0f747ab0231537af7e9513af667"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t gridSize </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the grid size of the <em>n'th</em> grid in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>index of the grid (assumed to be less than <a class="el" href="classnanovdb_1_1GridHandle.html#a7410a55f8cc2fff5a43e4b50e80a31b5" title="Return the total number of grids contained in this buffer. ">gridCount()</a>) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the byte size of the specified grid </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="add8d7cff0d1c8cccac57cbaac3b74298"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -713,18 +978,77 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0">GridType</a> gridType </td>
           <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the GridType of the <em>n'th</em> grid in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>index of the grid (assumed to be less than <a class="el" href="classnanovdb_1_1GridHandle.html#a7410a55f8cc2fff5a43e4b50e80a31b5" title="Return the total number of grids contained in this buffer. ">gridCount()</a>) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the GridType of the specified grid </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a479432127ee77145cc19d6a2d1590821"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isEmpty </td>
+          <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the GridType handled by this instance, and <a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0a87557f11575c0ad78e4e28abedc13b6e">GridType::End</a> if empty. </p>
+<p>Return true if this handle is empty, i.e. has no allocated memory. </p>
+
+</div>
+</div>
+<a class="anchor" id="acfa5d049a658f9bd4096405fa9f03097"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isPadded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the buffer is this handle has any padding, i.e. if the buffer is larger than the combined size of all its grids. </p>
+<dl class="section return"><dt>Returns</dt><dd>true is the combined size of all grid is smaller than the buffer size </dd></dl>
 
 </div>
 </div>
@@ -744,12 +1068,12 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Return true if this handle contains a grid. </p>
+<p>Return true if this handle contains any grids. </p>
 
 </div>
 </div>
@@ -805,6 +1129,298 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="aede7b9718f389e31ce50690ff788fc12"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void read </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BufferT &amp;&#160;</td>
+          <td class="paramname"><em>pool</em> = <code>BufferT()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read an entire raw grid buffer from an input stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is</td><td>input stream containing a raw grid buffer </td></tr>
+    <tr><td class="paramname">pool</td><td>optional pool from which to allocate the new grid buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Will</td><td>throw a std::logic_error if the stream does not contain a valid raw grid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a42628edd9bde1b4cfac23e4d247d1561"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void read </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BufferT &amp;&#160;</td>
+          <td class="paramname"><em>pool</em> = <code>BufferT()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read a specific grid from an input stream containing a raw grid buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is</td><td>input stream containing a raw grid buffer </td></tr>
+    <tr><td class="paramname">n</td><td>zero-based index of the grid to be read </td></tr>
+    <tr><td class="paramname">pool</td><td>optional pool from which to allocate the new grid buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Will</td><td>throw a std::logic_error if the stream does not contain a valid raw grid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3c1c725da9c29c96d194a120447980ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void read </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>gridName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BufferT &amp;&#160;</td>
+          <td class="paramname"><em>pool</em> = <code>BufferT()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read a specific grid from an input stream containing a raw grid buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is</td><td>input stream containing a raw grid buffer </td></tr>
+    <tr><td class="paramname">gridName</td><td>string name of the grid to be read </td></tr>
+    <tr><td class="paramname">pool</td><td>optional pool from which to allocate the new grid buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Will</td><td>throw a std::logic_error if the stream does not contain a valid raw grid with the speficied name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae612cbaf45aeba8b76288065804c9dbb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void read </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BufferT &amp;&#160;</td>
+          <td class="paramname"><em>pool</em> = <code>BufferT()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read a raw grid buffer from a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>string name of the input file containing a raw grid buffer </td></tr>
+    <tr><td class="paramname">pool</td><td>optional pool from which to allocate the new grid buffe </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8dfafffae26e0026d92725c765469b85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void read </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BufferT &amp;&#160;</td>
+          <td class="paramname"><em>pool</em> = <code>BufferT()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read a specific grid from a file containing a raw grid buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>string name of the input file containing a raw grid buffer </td></tr>
+    <tr><td class="paramname">n</td><td>zero-based index of the grid to be read </td></tr>
+    <tr><td class="paramname">pool</td><td>optional pool from which to allocate the new grid buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Will</td><td>throw a std::ios_base::failure if the file does not exist and a std::logic_error if the files does not contain a valid raw grid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5f9dee3c050dab4072da9f4671cca88a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void read </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>gridName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BufferT &amp;&#160;</td>
+          <td class="paramname"><em>pool</em> = <code>BufferT()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Read a specific grid from a file containing a raw grid buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>string name of the input file containing a raw grid buffer </td></tr>
+    <tr><td class="paramname">gridName</td><td>string name of the grid to be read </td></tr>
+    <tr><td class="paramname">pool</td><td>optional pool from which to allocate the new grid buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Will</td><td>throw a std::ios_base::failure if the file does not exist and a std::logic_error if the files does not contain a valid raw grid withe the specified name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="ad20897c5c8bd47f5d4005989bead0e55"></a>
 <div class="memitem">
 <div class="memproto">
@@ -826,11 +1442,11 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>clear the buffer </p>
+<p>clear this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> to an empty handle </p>
 
 </div>
 </div>
-<a class="anchor" id="ac71c806ee52fa7dbc43bbd5f2aa2dfbd"></a>
+<a class="anchor" id="a0b6868dbef44fc07f11d050eb59e5f7e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -846,14 +1462,162 @@ class nanovdb::GridHandle&lt; BufferT &gt;</h3>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns the size in bytes of the raw memory buffer managed by this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a>'s allocator. </p>
+<p>Returns the size in bytes of the raw memory buffer managed by this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>. </p>
 
-<p>Implements <a class="el" href="classnanovdb_1_1GridHandleBase.html#a522d6aa9d9b3877fe528adf867d47341">GridHandleBase</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a685fd68e7eb0c235645554a468f0a484"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write a specific grid in this buffer to an output stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>output stream that the buffer will be written to </td></tr>
+    <tr><td class="paramname">n</td><td>zero-based index of the grid to be written to stream </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a47bfbba234eeeea53f5291f5ba50960c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write the entire grid buffer to an output stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>output stream that the buffer will be written to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a953f05594dde33ab3c097fad5699363b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write this entire grid buffer to a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>string name of the output file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab86aa53304d27468389610cfff12afe4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write a specific grid to file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>string name of the output file </td></tr>
+    <tr><td class="paramname">n</td><td>zero-based index of the grid to be written to file </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

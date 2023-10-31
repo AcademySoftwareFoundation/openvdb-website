@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['checkptr',['checkPtr',['../CudaDeviceBuffer_8h.html#aff2830fced928188855df8b9366e031f',1,'checkPtr():&#160;CudaDeviceBuffer.h'],['../HostBuffer_8h.html#aff2830fced928188855df8b9366e031f',1,'checkPtr():&#160;HostBuffer.h']]],
+  ['checkptr',['checkPtr',['../HostBuffer_8h.html#aff2830fced928188855df8b9366e031f',1,'HostBuffer.h']]],
   ['cnanovdb_5falignment_5fpadding',['CNANOVDB_ALIGNMENT_PADDING',['../CNanoVDB_8h.html#a8c55cbbc285bda0a4fa67c1c328e7e3e',1,'CNanoVDB.h']]],
   ['cnanovdb_5fdata_5falignment',['CNANOVDB_DATA_ALIGNMENT',['../CNanoVDB_8h.html#aa37d5ded20466779f1a10138545546bc',1,'CNanoVDB.h']]],
   ['cnanovdb_5fglobal',['CNANOVDB_GLOBAL',['../CNanoVDB_8h.html#a7f096c15911abf186f73c60507f88027',1,'CNanoVDB.h']]],
@@ -17,6 +17,5 @@ var searchData=
   ['create_5frootdata',['CREATE_ROOTDATA',['../CNanoVDB_8h.html#aff94f0347d1f83f3188f47eb80378840',1,'CNanoVDB.h']]],
   ['create_5fsample',['CREATE_SAMPLE',['../CSampleFromVoxels_8h.html#a32c37274211ce9ce06e746655d8bb833',1,'CSampleFromVoxels.h']]],
   ['create_5fstencil',['CREATE_STENCIL',['../CSampleFromVoxels_8h.html#af44e910a01a2e0dcdac8bab426ed3365',1,'CSampleFromVoxels.h']]],
-  ['create_5ftileentry',['CREATE_TILEENTRY',['../CNanoVDB_8h.html#a9e6f602fbea00a179a9c49ea97dfeebd',1,'CNanoVDB.h']]],
-  ['cudacheck',['cudaCheck',['../CudaDeviceBuffer_8h.html#a93e6bf7c8996268aa9a2740d6f1de76d',1,'CudaDeviceBuffer.h']]]
+  ['create_5ftileentry',['CREATE_TILEENTRY',['../CNanoVDB_8h.html#a9e6f602fbea00a179a9c49ea97dfeebd',1,'CNanoVDB.h']]]
 ];

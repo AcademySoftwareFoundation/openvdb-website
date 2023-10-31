@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>OpenVDB: CpuTimer&lt; Accuracy &gt; Class Template Reference</title>
+<title>OpenVDB: CpuTimer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -92,22 +92,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classnanovdb_1_1CpuTimer-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">CpuTimer&lt; Accuracy &gt; Class Template Reference</div>  </div>
+<div class="title">CpuTimer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="nanovdb_2nanovdb_2examples_2ex__util_2CpuTimer_8h_source.html">nanovdb/examples/ex_util/CpuTimer.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="nanovdb_2nanovdb_2util_2CpuTimer_8h_source.html">nanovdb/util/CpuTimer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a115479c65160f4641ecb264a54d046db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1CpuTimer.html#a115479c65160f4641ecb264a54d046db">CpuTimer</a> ()</td></tr>
+<tr class="memdesc:a115479c65160f4641ecb264a54d046db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a115479c65160f4641ecb264a54d046db">More...</a><br /></td></tr>
 <tr class="separator:a115479c65160f4641ecb264a54d046db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ae640a5c2933ccda9a6156c0a24d5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1CpuTimer.html#a91ae640a5c2933ccda9a6156c0a24d5e">CpuTimer</a> (const std::string &amp;msg, std::ostream &amp;os=std::cerr)</td></tr>
+<tr class="memdesc:a91ae640a5c2933ccda9a6156c0a24d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that starts the timer.  <a href="#a91ae640a5c2933ccda9a6156c0a24d5e">More...</a><br /></td></tr>
+<tr class="separator:a91ae640a5c2933ccda9a6156c0a24d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac90bb64677ce4aa235bfb6c1f5178177"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1CpuTimer.html#ac90bb64677ce4aa235bfb6c1f5178177">start</a> (const std::string &amp;msg, std::ostream &amp;os=std::cerr)</td></tr>
+<tr class="memdesc:ac90bb64677ce4aa235bfb6c1f5178177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the timer.  <a href="#ac90bb64677ce4aa235bfb6c1f5178177">More...</a><br /></td></tr>
 <tr class="separator:ac90bb64677ce4aa235bfb6c1f5178177"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dd611bdc13a8457246da48fa8492571"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1CpuTimer.html#a2dd611bdc13a8457246da48fa8492571">restart</a> (const std::string &amp;msg, std::ostream &amp;os=std::cerr)</td></tr>
-<tr class="separator:a2dd611bdc13a8457246da48fa8492571"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4255a70a19e14bd60ef9711e681c5c2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1CpuTimer.html#a4255a70a19e14bd60ef9711e681c5c2d">stop</a> (std::ostream &amp;os=std::cerr)</td></tr>
-<tr class="separator:a4255a70a19e14bd60ef9711e681c5c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6fad1492964bc13b1ac74190f357550"><td class="memTemplParams" colspan="2">template&lt;typename AccuracyT  = std::chrono::milliseconds&gt; </td></tr>
+<tr class="memitem:ab6fad1492964bc13b1ac74190f357550"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1CpuTimer.html#ab6fad1492964bc13b1ac74190f357550">elapsed</a> ()</td></tr>
+<tr class="memdesc:ab6fad1492964bc13b1ac74190f357550"><td class="mdescLeft">&#160;</td><td class="mdescRight">elapsed time (since start) in miliseconds  <a href="#ab6fad1492964bc13b1ac74190f357550">More...</a><br /></td></tr>
+<tr class="separator:ab6fad1492964bc13b1ac74190f357550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a0b6ea58c853e1943a3107e084a930"><td class="memTemplParams" colspan="2">template&lt;typename AccuracyT  = std::chrono::milliseconds&gt; </td></tr>
+<tr class="memitem:aa4a0b6ea58c853e1943a3107e084a930"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1CpuTimer.html#aa4a0b6ea58c853e1943a3107e084a930">stop</a> (std::ostream &amp;os=std::cerr)</td></tr>
+<tr class="memdesc:aa4a0b6ea58c853e1943a3107e084a930"><td class="mdescLeft">&#160;</td><td class="mdescRight">stop the timer  <a href="#aa4a0b6ea58c853e1943a3107e084a930">More...</a><br /></td></tr>
+<tr class="separator:aa4a0b6ea58c853e1943a3107e084a930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c898c94bf62ee7cb07a5170cc1875f2"><td class="memTemplParams" colspan="2">template&lt;typename AccuracyT  = std::chrono::milliseconds&gt; </td></tr>
+<tr class="memitem:a6c898c94bf62ee7cb07a5170cc1875f2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1CpuTimer.html#a6c898c94bf62ee7cb07a5170cc1875f2">restart</a> (const std::string &amp;msg, std::ostream &amp;os=std::cerr)</td></tr>
+<tr class="memdesc:a6c898c94bf62ee7cb07a5170cc1875f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">stop and start the timer  <a href="#a6c898c94bf62ee7cb07a5170cc1875f2">More...</a><br /></td></tr>
+<tr class="separator:a6c898c94bf62ee7cb07a5170cc1875f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a115479c65160f4641ecb264a54d046db"></a>
@@ -131,10 +144,80 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Default constructor. </p>
+
+</div>
+</div>
+<a class="anchor" id="a91ae640a5c2933ccda9a6156c0a24d5e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1CpuTimer.html">CpuTimer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em> = <code>std::cerr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor that starts the timer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>string message to be printed when timer is started </td></tr>
+    <tr><td class="paramname">os</td><td>output stream for the message above </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a2dd611bdc13a8457246da48fa8492571"></a>
+<a class="anchor" id="ab6fad1492964bc13b1ac74190f357550"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto elapsed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>elapsed time (since start) in miliseconds </p>
+
+</div>
+</div>
+<a class="anchor" id="a6c898c94bf62ee7cb07a5170cc1875f2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -165,6 +248,21 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>stop and start the timer </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">AccuracyT</td><td>Template parameter defining the accuracy of the reported times </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>string message to be printed when timer is started </td></tr>
+    <tr><td class="paramname">os</td><td>output stream for the message above </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -200,9 +298,18 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Start the timer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>string message to be printed when timer is started </td></tr>
+    <tr><td class="paramname">os</td><td>output stream for the message above </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a class="anchor" id="a4255a70a19e14bd60ef9711e681c5c2d"></a>
+<a class="anchor" id="aa4a0b6ea58c853e1943a3107e084a930"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -223,6 +330,20 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>stop the timer </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">AccuracyT</td><td>Template parameter defining the accuracy of the reported times </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>output stream for the message above </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

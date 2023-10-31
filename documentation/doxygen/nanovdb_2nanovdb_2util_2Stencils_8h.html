@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -95,7 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Stencils.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="NanoVDB_8h_source.html">../NanoVDB.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="NanoVDB_8h_source.html">nanovdb/NanoVDB.h</a>&gt;</code><br />
 </div>
 <p><a href="nanovdb_2nanovdb_2util_2Stencils_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -122,16 +122,16 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aacaaffba8084906e37c561435db4c22e"><td class="memTemplParams" colspan="2">template&lt;typename ValueType , typename RealT  = ValueType&gt; </td></tr>
-<tr class="memitem:aacaaffba8084906e37c561435db4c22e"><td class="memTemplItemLeft" align="right" valign="top">ValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#aacaaffba8084906e37c561435db4c22e">WENO5</a> (const ValueType &amp;v1, const ValueType &amp;v2, const ValueType &amp;v3, const ValueType &amp;v4, const ValueType &amp;v5, RealT scale2=1.0)</td></tr>
-<tr class="memdesc:aacaaffba8084906e37c561435db4c22e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of nominally fifth-order finite-difference WENO.  <a href="namespacenanovdb.html#aacaaffba8084906e37c561435db4c22e">More...</a><br /></td></tr>
-<tr class="separator:aacaaffba8084906e37c561435db4c22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d1d12cf92a71a332ec2bf1f07cfc45a"><td class="memTemplParams" colspan="2">template&lt;typename RealT &gt; </td></tr>
-<tr class="memitem:a6d1d12cf92a71a332ec2bf1f07cfc45a"><td class="memTemplItemLeft" align="right" valign="top">RealT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a6d1d12cf92a71a332ec2bf1f07cfc45a">GodunovsNormSqrd</a> (bool isOutside, RealT dP_xm, RealT dP_xp, RealT dP_ym, RealT dP_yp, RealT dP_zm, RealT dP_zp)</td></tr>
-<tr class="separator:a6d1d12cf92a71a332ec2bf1f07cfc45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3adcb582b7d0f70a6a42ae35005408f"><td class="memTemplParams" colspan="2">template&lt;typename RealT &gt; </td></tr>
-<tr class="memitem:ab3adcb582b7d0f70a6a42ae35005408f"><td class="memTemplItemLeft" align="right" valign="top">RealT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#ab3adcb582b7d0f70a6a42ae35005408f">GodunovsNormSqrd</a> (bool isOutside, const Vec3&lt; RealT &gt; &amp;gradient_m, const Vec3&lt; RealT &gt; &amp;gradient_p)</td></tr>
-<tr class="separator:ab3adcb582b7d0f70a6a42ae35005408f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21975d561e99f1ff38c44930c4695c36"><td class="memTemplParams" colspan="2">template&lt;typename ValueType , typename RealT  = ValueType&gt; </td></tr>
+<tr class="memitem:a21975d561e99f1ff38c44930c4695c36"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> ValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a21975d561e99f1ff38c44930c4695c36">WENO5</a> (const ValueType &amp;v1, const ValueType &amp;v2, const ValueType &amp;v3, const ValueType &amp;v4, const ValueType &amp;v5, RealT scale2=1.0)</td></tr>
+<tr class="memdesc:a21975d561e99f1ff38c44930c4695c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of nominally fifth-order finite-difference WENO.  <a href="namespacenanovdb.html#a21975d561e99f1ff38c44930c4695c36">More...</a><br /></td></tr>
+<tr class="separator:a21975d561e99f1ff38c44930c4695c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c1629c8d9a62dfa8d3ec4c970990ca9"><td class="memTemplParams" colspan="2">template&lt;typename RealT &gt; </td></tr>
+<tr class="memitem:a6c1629c8d9a62dfa8d3ec4c970990ca9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> RealT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a6c1629c8d9a62dfa8d3ec4c970990ca9">GodunovsNormSqrd</a> (bool isOutside, RealT dP_xm, RealT dP_xp, RealT dP_ym, RealT dP_yp, RealT dP_zm, RealT dP_zp)</td></tr>
+<tr class="separator:a6c1629c8d9a62dfa8d3ec4c970990ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9b43d233d15cf8636cb8d00dab0a405"><td class="memTemplParams" colspan="2">template&lt;typename RealT &gt; </td></tr>
+<tr class="memitem:af9b43d233d15cf8636cb8d00dab0a405"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> RealT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#af9b43d233d15cf8636cb8d00dab0a405">GodunovsNormSqrd</a> (bool isOutside, const Vec3&lt; RealT &gt; &amp;gradient_m, const Vec3&lt; RealT &gt; &amp;gradient_p)</td></tr>
+<tr class="separator:af9b43d233d15cf8636cb8d00dab0a405"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

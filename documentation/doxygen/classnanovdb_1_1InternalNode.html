@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -93,11 +93,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
-<a href="#pri-types">Private Types</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classnanovdb_1_1InternalNode-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -114,8 +111,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode_1_1ChildIterator.html">ChildIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits child nodes of this node only.  <a href="classnanovdb_1_1InternalNode_1_1ChildIterator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode_1_1ChildIter.html">ChildIter</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits child nodes of this node only.  <a href="classnanovdb_1_1InternalNode_1_1ChildIter.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode_1_1DenseIterator.html">DenseIterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all tile values and child nodes of this node.  <a href="classnanovdb_1_1InternalNode_1_1DenseIterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode_1_1ValueIterator.html">ValueIterator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all tile values in this node, i.e. both inactive and active tiles.  <a href="classnanovdb_1_1InternalNode_1_1ValueIterator.html#details">More...</a><br /></td></tr>
@@ -146,15 +146,39 @@ Public Types</h2></td></tr>
 <tr class="memitem:a74cc0cbab29e22d041a953321545627d"><td class="memTemplParams" colspan="2">template&lt;bool On&gt; </td></tr>
 <tr class="memitem:a74cc0cbab29e22d041a953321545627d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a74cc0cbab29e22d041a953321545627d">MaskIterT</a> = typename <a class="el" href="classnanovdb_1_1Mask.html">Mask</a>&lt; Log2Dim &gt;::template Iterator&lt; On &gt;</td></tr>
 <tr class="separator:a74cc0cbab29e22d041a953321545627d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0efa067a48784c368ae314e03794d4d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#ab0efa067a48784c368ae314e03794d4d">ChildIterator</a> = <a class="el" href="classnanovdb_1_1InternalNode_1_1ChildIter.html">ChildIter</a>&lt; <a class="el" href="classnanovdb_1_1InternalNode.html">InternalNode</a> &gt;</td></tr>
+<tr class="separator:ab0efa067a48784c368ae314e03794d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24eda1713d6e9340c8ad91163c63db79"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a24eda1713d6e9340c8ad91163c63db79">ConstChildIterator</a> = <a class="el" href="classnanovdb_1_1InternalNode_1_1ChildIter.html">ChildIter</a>&lt; const <a class="el" href="classnanovdb_1_1InternalNode.html">InternalNode</a> &gt;</td></tr>
+<tr class="separator:a24eda1713d6e9340c8ad91163c63db79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae36754228c14efeecf711a0cc6053096"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a> = typename ChildT::ValueType</td></tr>
+<tr class="separator:ae36754228c14efeecf711a0cc6053096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e24aedbccb6bc2dfff1702938468edc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a7e24aedbccb6bc2dfff1702938468edc">BuildT</a> = typename ChildT::BuildType</td></tr>
+<tr class="separator:a7e24aedbccb6bc2dfff1702938468edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b925a2a478794759774313d42b7fce0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a6b925a2a478794759774313d42b7fce0">StatsT</a> = typename ChildT::FloatType</td></tr>
+<tr class="separator:a6b925a2a478794759774313d42b7fce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02814723ac4ced8cacf10f521e324ba2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> = typename ChildT::CoordType</td></tr>
+<tr class="separator:a02814723ac4ced8cacf10f521e324ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7538d677b882683f02661701261319"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#acd7538d677b882683f02661701261319">MaskT</a> = typename ChildT::template <a class="el" href="classnanovdb_1_1InternalNode.html#adb5035b6e5f5b28b3b3cf98e7b2d866f">MaskType</a>&lt; <a class="el" href="classnanovdb_1_1InternalNode.html#ab419c3a40c543987a18fbb694f4d4659">LOG2DIM</a> &gt;</td></tr>
+<tr class="separator:acd7538d677b882683f02661701261319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac6d929becbcec9913bfdab8744845bd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode_1_1ChildIterator.html">ChildIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#ac6d929becbcec9913bfdab8744845bd3">beginChild</a> () const </td></tr>
-<tr class="separator:ac6d929becbcec9913bfdab8744845bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9686321bffec7c154d19ce696cd78bd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode.html#ab0efa067a48784c368ae314e03794d4d">ChildIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a9686321bffec7c154d19ce696cd78bd4">beginChild</a> ()</td></tr>
+<tr class="separator:a9686321bffec7c154d19ce696cd78bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa345db9f2af6449ac9f7e695e914b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode.html#a24eda1713d6e9340c8ad91163c63db79">ConstChildIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a2fa345db9f2af6449ac9f7e695e914b6">cbeginChild</a> () const </td></tr>
+<tr class="separator:a2fa345db9f2af6449ac9f7e695e914b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0e6dbf08c61168e04e7705ecf0e1bb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode_1_1ValueIterator.html">ValueIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#ac0e6dbf08c61168e04e7705ecf0e1bb6">beginValue</a> () const </td></tr>
 <tr class="separator:ac0e6dbf08c61168e04e7705ecf0e1bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a129b65524f075620ae676ba7bf808443"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode_1_1ValueIterator.html">ValueIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a129b65524f075620ae676ba7bf808443">cbeginValueAll</a> () const </td></tr>
+<tr class="separator:a129b65524f075620ae676ba7bf808443"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bc6cc9db980be3184388664c53b8da7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode_1_1ValueOnIterator.html">ValueOnIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a0bc6cc9db980be3184388664c53b8da7">beginValueOn</a> () const </td></tr>
 <tr class="separator:a0bc6cc9db980be3184388664c53b8da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad380919da5c834c19db40863622578bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode_1_1ValueOnIterator.html">ValueOnIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#ad380919da5c834c19db40863622578bb">cbeginValueOn</a> () const </td></tr>
+<tr class="separator:ad380919da5c834c19db40863622578bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b8f6971749d038dfb0c264a456a0c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode_1_1DenseIterator.html">DenseIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a07b8f6971749d038dfb0c264a456a0c0">beginDense</a> () const </td></tr>
+<tr class="separator:a07b8f6971749d038dfb0c264a456a0c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae117128461c39f7a26c3a3d681880830"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode_1_1DenseIterator.html">DenseIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#ae117128461c39f7a26c3a3d681880830">cbeginChildAll</a> () const </td></tr>
+<tr class="separator:ae117128461c39f7a26c3a3d681880830"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7fd20288f49def7c15962b8e4fe1f53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#ac7fd20288f49def7c15962b8e4fe1f53">InternalNode</a> ()=delete</td></tr>
 <tr class="memdesc:ac7fd20288f49def7c15962b8e4fe1f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class cannot be constructed or deleted.  <a href="#ac7fd20288f49def7c15962b8e4fe1f53">More...</a><br /></td></tr>
 <tr class="separator:ac7fd20288f49def7c15962b8e4fe1f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,9 +195,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ba8049308a65ddd3f3d2f55fb0fe90a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1InternalNode.html#adb5035b6e5f5b28b3b3cf98e7b2d866f">MaskType</a>&lt; <a class="el" href="classnanovdb_1_1InternalNode.html#ab419c3a40c543987a18fbb694f4d4659">LOG2DIM</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a3ba8049308a65ddd3f3d2f55fb0fe90a">valueMask</a> () const </td></tr>
 <tr class="memdesc:a3ba8049308a65ddd3f3d2f55fb0fe90a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const reference to the bit mask of active voxels in this internal node.  <a href="#a3ba8049308a65ddd3f3d2f55fb0fe90a">More...</a><br /></td></tr>
 <tr class="separator:a3ba8049308a65ddd3f3d2f55fb0fe90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5f9cff127df778729e981584937c0f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1InternalNode.html#adb5035b6e5f5b28b3b3cf98e7b2d866f">MaskType</a>&lt; <a class="el" href="classnanovdb_1_1InternalNode.html#ab419c3a40c543987a18fbb694f4d4659">LOG2DIM</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a9f5f9cff127df778729e981584937c0f">getValueMask</a> () const </td></tr>
+<tr class="separator:a9f5f9cff127df778729e981584937c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a302874d5681dce1897b965ce39d03a9c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1InternalNode.html#adb5035b6e5f5b28b3b3cf98e7b2d866f">MaskType</a>&lt; <a class="el" href="classnanovdb_1_1InternalNode.html#ab419c3a40c543987a18fbb694f4d4659">LOG2DIM</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a302874d5681dce1897b965ce39d03a9c">childMask</a> () const </td></tr>
 <tr class="memdesc:a302874d5681dce1897b965ce39d03a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const reference to the bit mask of child nodes in this internal node.  <a href="#a302874d5681dce1897b965ce39d03a9c">More...</a><br /></td></tr>
 <tr class="separator:a302874d5681dce1897b965ce39d03a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e06d6a18c1e4d5ff015eae7715b6068"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1InternalNode.html#adb5035b6e5f5b28b3b3cf98e7b2d866f">MaskType</a>&lt; <a class="el" href="classnanovdb_1_1InternalNode.html#ab419c3a40c543987a18fbb694f4d4659">LOG2DIM</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a4e06d6a18c1e4d5ff015eae7715b6068">getChildMask</a> () const </td></tr>
+<tr class="separator:a4e06d6a18c1e4d5ff015eae7715b6068"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a815eae6fe953145647e087bec1f819e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode.html#a4ac4cf2db2d08c45fd40ed861ca8792c">CoordType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a815eae6fe953145647e087bec1f819e4">origin</a> () const </td></tr>
 <tr class="memdesc:a815eae6fe953145647e087bec1f819e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the origin in index space of this leaf node.  <a href="#a815eae6fe953145647e087bec1f819e4">More...</a><br /></td></tr>
 <tr class="separator:a815eae6fe953145647e087bec1f819e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,6 +223,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5a3eaf7db1f5378598594ffd9cd4f3f9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt; <a class="el" href="classnanovdb_1_1InternalNode.html#a4ac4cf2db2d08c45fd40ed861ca8792c">CoordType</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a5a3eaf7db1f5378598594ffd9cd4f3f9">bbox</a> () const </td></tr>
 <tr class="memdesc:a5a3eaf7db1f5378598594ffd9cd4f3f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const reference to the bounding box in index space of active values in this internal node and any of its child nodes.  <a href="#a5a3eaf7db1f5378598594ffd9cd4f3f9">More...</a><br /></td></tr>
 <tr class="separator:a5a3eaf7db1f5378598594ffd9cd4f3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa7b69f7f7b6775e323e49ae8cd1decf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode.html#a7e71ba03041bfc22a475ebd7330a377c">ValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#afa7b69f7f7b6775e323e49ae8cd1decf">getFirstValue</a> () const </td></tr>
+<tr class="memdesc:afa7b69f7f7b6775e323e49ae8cd1decf"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the first entry in this node's table is a tile, return the tile's value. Otherwise, return the result of calling <a class="el" href="classnanovdb_1_1InternalNode.html#afa7b69f7f7b6775e323e49ae8cd1decf" title="If the first entry in this node&#39;s table is a tile, return the tile&#39;s value. Otherwise, return the result of calling getFirstValue() on the child. ">getFirstValue()</a> on the child.  <a href="#afa7b69f7f7b6775e323e49ae8cd1decf">More...</a><br /></td></tr>
+<tr class="separator:afa7b69f7f7b6775e323e49ae8cd1decf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c9e0265717fcf7de06ec780a0a6be1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode.html#a7e71ba03041bfc22a475ebd7330a377c">ValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a88c9e0265717fcf7de06ec780a0a6be1">getLastValue</a> () const </td></tr>
+<tr class="memdesc:a88c9e0265717fcf7de06ec780a0a6be1"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the last entry in this node's table is a tile, return the tile's value. Otherwise, return the result of calling <a class="el" href="classnanovdb_1_1InternalNode.html#a88c9e0265717fcf7de06ec780a0a6be1" title="If the last entry in this node&#39;s table is a tile, return the tile&#39;s value. Otherwise, return the result of calling getLastValue() on the child. ">getLastValue()</a> on the child.  <a href="#a88c9e0265717fcf7de06ec780a0a6be1">More...</a><br /></td></tr>
+<tr class="separator:a88c9e0265717fcf7de06ec780a0a6be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f88c3ac817681985a55ae7dba485bfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode.html#a7e71ba03041bfc22a475ebd7330a377c">ValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a9f88c3ac817681985a55ae7dba485bfb">getValue</a> (const <a class="el" href="classnanovdb_1_1InternalNode.html#a4ac4cf2db2d08c45fd40ed861ca8792c">CoordType</a> &amp;ijk) const </td></tr>
 <tr class="memdesc:a9f88c3ac817681985a55ae7dba485bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value of the given voxel.  <a href="#a9f88c3ac817681985a55ae7dba485bfb">More...</a><br /></td></tr>
 <tr class="separator:a9f88c3ac817681985a55ae7dba485bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,6 +239,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad30cd945d513228358255027c3d22d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12c2ac03fe4f3c6a7cc70f1f92a880df"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1InternalNode.html#aa36bfb6eebdaec98eee8aef47f14e442">LeafNodeType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a12c2ac03fe4f3c6a7cc70f1f92a880df">probeLeaf</a> (const <a class="el" href="classnanovdb_1_1InternalNode.html#a4ac4cf2db2d08c45fd40ed861ca8792c">CoordType</a> &amp;ijk) const </td></tr>
 <tr class="separator:a12c2ac03fe4f3c6a7cc70f1f92a880df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a483d973a8a5790a7fee1b0557e588d12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1InternalNode.html#a7a0ad5e69e042393df9a038754ed6e6a">ChildNodeType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a483d973a8a5790a7fee1b0557e588d12">probeChild</a> (const <a class="el" href="classnanovdb_1_1InternalNode.html#a4ac4cf2db2d08c45fd40ed861ca8792c">CoordType</a> &amp;ijk)</td></tr>
+<tr class="separator:a483d973a8a5790a7fee1b0557e588d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af59d376c68456c8595f0311f8351030c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1InternalNode.html#a7a0ad5e69e042393df9a038754ed6e6a">ChildNodeType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#af59d376c68456c8595f0311f8351030c">probeChild</a> (const <a class="el" href="classnanovdb_1_1InternalNode.html#a4ac4cf2db2d08c45fd40ed861ca8792c">CoordType</a> &amp;ijk) const </td></tr>
 <tr class="separator:af59d376c68456c8595f0311f8351030c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f284e4be3ac17c7aaa5cd6d697210ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a4f284e4be3ac17c7aaa5cd6d697210ad">localToGlobalCoord</a> (<a class="el" href="classnanovdb_1_1Coord.html">Coord</a> &amp;ijk) const </td></tr>
@@ -215,55 +251,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a22761609071413dcce0632885c820e87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a22761609071413dcce0632885c820e87">isActive</a> () const </td></tr>
 <tr class="memdesc:a22761609071413dcce0632885c820e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if this node or any of its child nodes contain active values.  <a href="#a22761609071413dcce0632885c820e87">More...</a><br /></td></tr>
 <tr class="separator:a22761609071413dcce0632885c820e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a3e764f20d610368ce079c1bbaa5f3fa3"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a3e764f20d610368ce079c1bbaa5f3fa3">dim</a> ()</td></tr>
-<tr class="memdesc:a3e764f20d610368ce079c1bbaa5f3fa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the dimension, in voxel units, of this internal node (typically 8*16 or 8*16*32)  <a href="#a3e764f20d610368ce079c1bbaa5f3fa3">More...</a><br /></td></tr>
-<tr class="separator:a3e764f20d610368ce079c1bbaa5f3fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44872b3c78bf4e21b2c0c5a3ab6c75cb"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a44872b3c78bf4e21b2c0c5a3ab6c75cb">memUsage</a> ()</td></tr>
-<tr class="memdesc:a44872b3c78bf4e21b2c0c5a3ab6c75cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return memory usage in bytes for the class.  <a href="#a44872b3c78bf4e21b2c0c5a3ab6c75cb">More...</a><br /></td></tr>
-<tr class="separator:a44872b3c78bf4e21b2c0c5a3ab6c75cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88e31ee1bf22485925a363374d016648"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a88e31ee1bf22485925a363374d016648">CoordToOffset</a> (const <a class="el" href="classnanovdb_1_1InternalNode.html#a4ac4cf2db2d08c45fd40ed861ca8792c">CoordType</a> &amp;ijk)</td></tr>
-<tr class="memdesc:a88e31ee1bf22485925a363374d016648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the linear offset corresponding to the given coordinate.  <a href="#a88e31ee1bf22485925a363374d016648">More...</a><br /></td></tr>
-<tr class="separator:a88e31ee1bf22485925a363374d016648"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b87ab73b4de723de6c5e5f51cc6d7c8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classnanovdb_1_1Coord.html">Coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a9b87ab73b4de723de6c5e5f51cc6d7c8">OffsetToLocalCoord</a> (uint32_t n)</td></tr>
-<tr class="separator:a9b87ab73b4de723de6c5e5f51cc6d7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a17e684702cf41406fe05663e7aa7c8a6"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a17e684702cf41406fe05663e7aa7c8a6">FIXED_SIZE</a> = DataType::FIXED_SIZE</td></tr>
-<tr class="separator:a17e684702cf41406fe05663e7aa7c8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab419c3a40c543987a18fbb694f4d4659"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#ab419c3a40c543987a18fbb694f4d4659">LOG2DIM</a> = Log2Dim</td></tr>
-<tr class="separator:ab419c3a40c543987a18fbb694f4d4659"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa72a6d930492726e6168d27dcec0f812"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#aa72a6d930492726e6168d27dcec0f812">TOTAL</a> = <a class="el" href="classnanovdb_1_1InternalNode.html#ab419c3a40c543987a18fbb694f4d4659">LOG2DIM</a> + ChildT::TOTAL</td></tr>
-<tr class="separator:aa72a6d930492726e6168d27dcec0f812"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63a6059ef67cec0e73613f908d3fdc4f"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a63a6059ef67cec0e73613f908d3fdc4f">DIM</a> = 1u &lt;&lt; TOTAL</td></tr>
-<tr class="separator:a63a6059ef67cec0e73613f908d3fdc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7dbb5bf2212e8504e70642de9cc4b05"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#ad7dbb5bf2212e8504e70642de9cc4b05">SIZE</a> = 1u &lt;&lt; (3 * LOG2DIM)</td></tr>
-<tr class="separator:ad7dbb5bf2212e8504e70642de9cc4b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4045051a29f7e4e748963718ff751063"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a4045051a29f7e4e748963718ff751063">MASK</a> = (1u &lt;&lt; TOTAL) - 1u</td></tr>
-<tr class="separator:a4045051a29f7e4e748963718ff751063"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cc95f2e521885dc623e75efb58c149b"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a4cc95f2e521885dc623e75efb58c149b">LEVEL</a> = 1 + ChildT::LEVEL</td></tr>
-<tr class="separator:a4cc95f2e521885dc623e75efb58c149b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed2887b172a44bff74e67a8316a5a331"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#aed2887b172a44bff74e67a8316a5a331">NUM_VALUES</a> = uint64_t(1) &lt;&lt; (3 * <a class="el" href="classnanovdb_1_1InternalNode.html#aa72a6d930492726e6168d27dcec0f812">TOTAL</a>)</td></tr>
-<tr class="separator:aed2887b172a44bff74e67a8316a5a331"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
-Private Types</h2></td></tr>
-<tr class="memitem:ae36754228c14efeecf711a0cc6053096"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a> = typename ChildT::ValueType</td></tr>
-<tr class="separator:ae36754228c14efeecf711a0cc6053096"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e24aedbccb6bc2dfff1702938468edc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a7e24aedbccb6bc2dfff1702938468edc">BuildT</a> = typename ChildT::BuildType</td></tr>
-<tr class="separator:a7e24aedbccb6bc2dfff1702938468edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b925a2a478794759774313d42b7fce0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a6b925a2a478794759774313d42b7fce0">StatsT</a> = typename ChildT::FloatType</td></tr>
-<tr class="separator:a6b925a2a478794759774313d42b7fce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02814723ac4ced8cacf10f521e324ba2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> = typename ChildT::CoordType</td></tr>
-<tr class="separator:a02814723ac4ced8cacf10f521e324ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd7538d677b882683f02661701261319"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#acd7538d677b882683f02661701261319">MaskT</a> = typename ChildT::template <a class="el" href="classnanovdb_1_1InternalNode.html#adb5035b6e5f5b28b3b3cf98e7b2d866f">MaskType</a>&lt; <a class="el" href="classnanovdb_1_1InternalNode.html#ab419c3a40c543987a18fbb694f4d4659">LOG2DIM</a> &gt;</td></tr>
-<tr class="separator:acd7538d677b882683f02661701261319"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
+<tr class="memitem:a2574c567bcd33b590d37e3eb69d2fd7f"><td class="memTemplParams" colspan="2">template&lt;typename OpT , typename... ArgsT&gt; </td></tr>
+<tr class="memitem:a2574c567bcd33b590d37e3eb69d2fd7f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a2574c567bcd33b590d37e3eb69d2fd7f">get</a> (const <a class="el" href="classnanovdb_1_1InternalNode.html#a4ac4cf2db2d08c45fd40ed861ca8792c">CoordType</a> &amp;ijk, ArgsT &amp;&amp;...args) const </td></tr>
+<tr class="separator:a2574c567bcd33b590d37e3eb69d2fd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12722836d66e7f875f5998ed609511cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a12722836d66e7f875f5998ed609511cd">setChild</a> (uint32_t n, const void *ptr)</td></tr>
 <tr class="separator:a12722836d66e7f875f5998ed609511cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a328aba0e0f8f01df8331e5de3d89f5da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a328aba0e0f8f01df8331e5de3d89f5da">setValue</a> (uint32_t n, const <a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a> &amp;v)</td></tr>
@@ -294,14 +284,28 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a531a4e4c8fd57a84d7862c9dc3030066"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a531a4e4c8fd57a84d7862c9dc3030066">setDev</a> (const <a class="el" href="structnanovdb_1_1InternalData.html#a6b925a2a478794759774313d42b7fce0">StatsT</a> &amp;v)</td></tr>
 <tr class="separator:a531a4e4c8fd57a84d7862c9dc3030066"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a3e764f20d610368ce079c1bbaa5f3fa3"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a3e764f20d610368ce079c1bbaa5f3fa3">dim</a> ()</td></tr>
+<tr class="memdesc:a3e764f20d610368ce079c1bbaa5f3fa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the dimension, in voxel units, of this internal node (typically 8*16 or 8*16*32)  <a href="#a3e764f20d610368ce079c1bbaa5f3fa3">More...</a><br /></td></tr>
+<tr class="separator:a3e764f20d610368ce079c1bbaa5f3fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44872b3c78bf4e21b2c0c5a3ab6c75cb"><td class="memItemLeft" align="right" valign="top">static size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a44872b3c78bf4e21b2c0c5a3ab6c75cb">memUsage</a> ()</td></tr>
+<tr class="memdesc:a44872b3c78bf4e21b2c0c5a3ab6c75cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return memory usage in bytes for the class.  <a href="#a44872b3c78bf4e21b2c0c5a3ab6c75cb">More...</a><br /></td></tr>
+<tr class="separator:a44872b3c78bf4e21b2c0c5a3ab6c75cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e31ee1bf22485925a363374d016648"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a88e31ee1bf22485925a363374d016648">CoordToOffset</a> (const <a class="el" href="classnanovdb_1_1InternalNode.html#a4ac4cf2db2d08c45fd40ed861ca8792c">CoordType</a> &amp;ijk)</td></tr>
+<tr class="memdesc:a88e31ee1bf22485925a363374d016648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the linear offset corresponding to the given coordinate.  <a href="#a88e31ee1bf22485925a363374d016648">More...</a><br /></td></tr>
+<tr class="separator:a88e31ee1bf22485925a363374d016648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b87ab73b4de723de6c5e5f51cc6d7c8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classnanovdb_1_1Coord.html">Coord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a9b87ab73b4de723de6c5e5f51cc6d7c8">OffsetToLocalCoord</a> (uint32_t n)</td></tr>
+<tr class="separator:a9b87ab73b4de723de6c5e5f51cc6d7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a885bc3eda95d14f11aa2a9ad0e521582"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a885bc3eda95d14f11aa2a9ad0e521582">padding</a> ()</td></tr>
 <tr class="memdesc:a885bc3eda95d14f11aa2a9ad0e521582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return padding of this class in bytes, due to aliasing and 32B alignment.  <a href="#a885bc3eda95d14f11aa2a9ad0e521582">More...</a><br /></td></tr>
 <tr class="separator:a885bc3eda95d14f11aa2a9ad0e521582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:adf7b0717992a78ca671b07fe8fd6390e"><td class="memTemplParams" colspan="2">template&lt;typename OpT , typename... ArgsT&gt; </td></tr>
+<tr class="memitem:adf7b0717992a78ca671b07fe8fd6390e"><td class="memTemplItemLeft" align="right" valign="top">decltype(OpT::set(std::declval&lt; <a class="el" href="classnanovdb_1_1InternalNode.html">InternalNode</a> &amp; &gt;(), std::declval&lt; uint32_t &gt;(), std::declval&lt; ArgsT &gt;()...))&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#adf7b0717992a78ca671b07fe8fd6390e">set</a> (const <a class="el" href="classnanovdb_1_1InternalNode.html#a4ac4cf2db2d08c45fd40ed861ca8792c">CoordType</a> &amp;ijk, ArgsT &amp;&amp;...args)</td></tr>
+<tr class="separator:adf7b0717992a78ca671b07fe8fd6390e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9faa36eb5cd3f18ef95203f1924b516f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt; <a class="el" href="structnanovdb_1_1InternalData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#a9faa36eb5cd3f18ef95203f1924b516f">mBBox</a></td></tr>
 <tr class="separator:a9faa36eb5cd3f18ef95203f1924b516f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3e2644dc8b717cc20da528c6de31cb3"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#af3e2644dc8b717cc20da528c6de31cb3">mFlags</a></td></tr>
@@ -321,6 +325,25 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ac09d07deab7d62f092e2d22b0fd2d8a2"><td class="memItemLeft" align="right" valign="top">Tile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1InternalData.html#ac09d07deab7d62f092e2d22b0fd2d8a2">mTable</a> [1u&lt;&lt; (3 *LOG2DIM)]</td></tr>
 <tr class="separator:ac09d07deab7d62f092e2d22b0fd2d8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a17e684702cf41406fe05663e7aa7c8a6"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a17e684702cf41406fe05663e7aa7c8a6">FIXED_SIZE</a> = DataType::FIXED_SIZE</td></tr>
+<tr class="separator:a17e684702cf41406fe05663e7aa7c8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab419c3a40c543987a18fbb694f4d4659"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#ab419c3a40c543987a18fbb694f4d4659">LOG2DIM</a> = Log2Dim</td></tr>
+<tr class="separator:ab419c3a40c543987a18fbb694f4d4659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa72a6d930492726e6168d27dcec0f812"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#aa72a6d930492726e6168d27dcec0f812">TOTAL</a> = <a class="el" href="classnanovdb_1_1InternalNode.html#ab419c3a40c543987a18fbb694f4d4659">LOG2DIM</a> + ChildT::TOTAL</td></tr>
+<tr class="separator:aa72a6d930492726e6168d27dcec0f812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63a6059ef67cec0e73613f908d3fdc4f"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a63a6059ef67cec0e73613f908d3fdc4f">DIM</a> = 1u &lt;&lt; TOTAL</td></tr>
+<tr class="separator:a63a6059ef67cec0e73613f908d3fdc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7dbb5bf2212e8504e70642de9cc4b05"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#ad7dbb5bf2212e8504e70642de9cc4b05">SIZE</a> = 1u &lt;&lt; (3 * LOG2DIM)</td></tr>
+<tr class="separator:ad7dbb5bf2212e8504e70642de9cc4b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4045051a29f7e4e748963718ff751063"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a4045051a29f7e4e748963718ff751063">MASK</a> = (1u &lt;&lt; TOTAL) - 1u</td></tr>
+<tr class="separator:a4045051a29f7e4e748963718ff751063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc95f2e521885dc623e75efb58c149b"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#a4cc95f2e521885dc623e75efb58c149b">LEVEL</a> = 1 + ChildT::LEVEL</td></tr>
+<tr class="separator:a4cc95f2e521885dc623e75efb58c149b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed2887b172a44bff74e67a8316a5a331"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1InternalNode.html#aed2887b172a44bff74e67a8316a5a331">NUM_VALUES</a> = uint64_t(1) &lt;&lt; (3 * <a class="el" href="classnanovdb_1_1InternalNode.html#aa72a6d930492726e6168d27dcec0f812">TOTAL</a>)</td></tr>
+<tr class="separator:aed2887b172a44bff74e67a8316a5a331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a403aee572e05c787c316dbf9f12a9235"><td class="memTemplParams" colspan="2">template&lt;typename , int , int , int &gt; </td></tr>
@@ -339,12 +362,44 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
 
 <p>Internal nodes of a VDB treedim(),. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a7e24aedbccb6bc2dfff1702938468edc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structnanovdb_1_1InternalData.html#a7e24aedbccb6bc2dfff1702938468edc">BuildT</a> =  typename ChildT::BuildType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a6f9ea345d45e56d587354f6a18c89679"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="classnanovdb_1_1InternalNode.html#a6f9ea345d45e56d587354f6a18c89679">BuildType</a> =  typename <a class="el" href="structnanovdb_1_1InternalData.html#a7e24aedbccb6bc2dfff1702938468edc">DataType::BuildT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab0efa067a48784c368ae314e03794d4d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classnanovdb_1_1InternalNode.html#ab0efa067a48784c368ae314e03794d4d">ChildIterator</a> =  <a class="el" href="classnanovdb_1_1InternalNode_1_1ChildIter.html">ChildIter</a>&lt;<a class="el" href="classnanovdb_1_1InternalNode.html">InternalNode</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -359,6 +414,38 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
           <td class="memname">using <a class="el" href="classnanovdb_1_1InternalNode.html#a7a0ad5e69e042393df9a038754ed6e6a">ChildNodeType</a> =  ChildT</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a24eda1713d6e9340c8ad91163c63db79"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classnanovdb_1_1InternalNode.html#a24eda1713d6e9340c8ad91163c63db79">ConstChildIterator</a> =  <a class="el" href="classnanovdb_1_1InternalNode_1_1ChildIter.html">ChildIter</a>&lt;const <a class="el" href="classnanovdb_1_1InternalNode.html">InternalNode</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a02814723ac4ced8cacf10f521e324ba2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structnanovdb_1_1InternalData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> =  typename ChildT::CoordType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -423,6 +510,26 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="acd7538d677b882683f02661701261319"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structnanovdb_1_1InternalData.html#acd7538d677b882683f02661701261319">MaskT</a> =  typename ChildT::template <a class="el" href="classnanovdb_1_1InternalNode.html#adb5035b6e5f5b28b3b3cf98e7b2d866f">MaskType</a>&lt;<a class="el" href="classnanovdb_1_1InternalNode.html#ab419c3a40c543987a18fbb694f4d4659">LOG2DIM</a>&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="adb5035b6e5f5b28b3b3cf98e7b2d866f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -431,6 +538,46 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
           <td class="memname">using <a class="el" href="classnanovdb_1_1InternalNode.html#adb5035b6e5f5b28b3b3cf98e7b2d866f">MaskType</a> =  typename ChildT::template <a class="el" href="classnanovdb_1_1InternalNode.html#adb5035b6e5f5b28b3b3cf98e7b2d866f">MaskType</a>&lt;LOG2&gt;</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6b925a2a478794759774313d42b7fce0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structnanovdb_1_1InternalData.html#a6b925a2a478794759774313d42b7fce0">StatsT</a> =  typename ChildT::FloatType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae36754228c14efeecf711a0cc6053096"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a> =  typename ChildT::ValueType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -571,7 +718,7 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="ac6d929becbcec9913bfdab8744845bd3"></a>
+<a class="anchor" id="a9686321bffec7c154d19ce696cd78bd4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -579,7 +726,30 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnanovdb_1_1InternalNode_1_1ChildIterator.html">ChildIterator</a> beginChild </td>
+          <td class="memname"><a class="el" href="classnanovdb_1_1InternalNode.html#ab0efa067a48784c368ae314e03794d4d">ChildIterator</a> beginChild </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a07b8f6971749d038dfb0c264a456a0c0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1InternalNode_1_1DenseIterator.html">DenseIterator</a> beginDense </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -626,6 +796,98 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classnanovdb_1_1InternalNode_1_1ValueOnIterator.html">ValueOnIterator</a> beginValueOn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2fa345db9f2af6449ac9f7e695e914b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1InternalNode.html#a24eda1713d6e9340c8ad91163c63db79">ConstChildIterator</a> cbeginChild </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae117128461c39f7a26c3a3d681880830"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1InternalNode_1_1DenseIterator.html">DenseIterator</a> cbeginChildAll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a129b65524f075620ae676ba7bf808443"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1InternalNode_1_1ValueIterator.html">ValueIterator</a> cbeginValueAll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad380919da5c834c19db40863622578bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1InternalNode_1_1ValueOnIterator.html">ValueOnIterator</a> cbeginValueOn </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -762,6 +1024,233 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="a2574c567bcd33b590d37e3eb69d2fd7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto get </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1InternalNode.html#a4ac4cf2db2d08c45fd40ed861ca8792c">CoordType</a> &amp;&#160;</td>
+          <td class="paramname"><em>ijk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgsT &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a32bac66a7a2011bd9eedb3049db3a3d5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ChildT* getChild </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a pointer to the child node at the specifed linear offset. </p>
+
+</div>
+</div>
+<a class="anchor" id="a5ebe6a1ca68eefca20cec076c2eb92e0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ChildT* getChild </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4e06d6a18c1e4d5ff015eae7715b6068"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classnanovdb_1_1InternalNode.html#adb5035b6e5f5b28b3b3cf98e7b2d866f">MaskType</a>&lt;<a class="el" href="classnanovdb_1_1InternalNode.html#ab419c3a40c543987a18fbb694f4d4659">LOG2DIM</a>&gt;&amp; getChildMask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afa7b69f7f7b6775e323e49ae8cd1decf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1InternalNode.html#a7e71ba03041bfc22a475ebd7330a377c">ValueType</a> getFirstValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If the first entry in this node's table is a tile, return the tile's value. Otherwise, return the result of calling <a class="el" href="classnanovdb_1_1InternalNode.html#afa7b69f7f7b6775e323e49ae8cd1decf" title="If the first entry in this node&#39;s table is a tile, return the tile&#39;s value. Otherwise, return the result of calling getFirstValue() on the child. ">getFirstValue()</a> on the child. </p>
+
+</div>
+</div>
+<a class="anchor" id="a88c9e0265717fcf7de06ec780a0a6be1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1InternalNode.html#a7e71ba03041bfc22a475ebd7330a377c">ValueType</a> getLastValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>If the last entry in this node's table is a tile, return the tile's value. Otherwise, return the result of calling <a class="el" href="classnanovdb_1_1InternalNode.html#a88c9e0265717fcf7de06ec780a0a6be1" title="If the last entry in this node&#39;s table is a tile, return the tile&#39;s value. Otherwise, return the result of calling getLastValue() on the child. ">getLastValue()</a> on the child. </p>
+
+</div>
+</div>
+<a class="anchor" id="a993b41dc9df49f233389f00cce704954"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a>&amp; getMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a48d89d46ffa49df8311eefe0ecd417f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a>&amp; getMin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae399d8cb1270588fb67487574bead2fd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a> getValue </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a9f88c3ac817681985a55ae7dba485bfb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -785,6 +1274,53 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
 </div><div class="memdoc">
 
 <p>Return the value of the given voxel. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9f5f9cff127df778729e981584937c0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classnanovdb_1_1InternalNode.html#adb5035b6e5f5b28b3b3cf98e7b2d866f">MaskType</a>&lt;<a class="el" href="classnanovdb_1_1InternalNode.html#ab419c3a40c543987a18fbb694f4d4659">LOG2DIM</a>&gt;&amp; getValueMask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aad5dd56c491b3b1e4d7f2a20b7d3af71"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isActive </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -834,6 +1370,30 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
 </div><div class="memdoc">
 
 <p>Return true if this node or any of its child nodes contain active values. </p>
+
+</div>
+</div>
+<a class="anchor" id="acec374a144dd607b281b304c89b7cd99"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isChild </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1036,6 +1596,56 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="a885bc3eda95d14f11aa2a9ad0e521582"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr uint32_t padding </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return padding of this class in bytes, due to aliasing and 32B alignment. </p>
+<dl class="section note"><dt>Note</dt><dd>The extra bytes are not necessarily at the end, but can come from aliasing of individual data members. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a483d973a8a5790a7fee1b0557e588d12"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1InternalNode.html#a7a0ad5e69e042393df9a038754ed6e6a">ChildNodeType</a>* probeChild </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1InternalNode.html#a4ac4cf2db2d08c45fd40ed861ca8792c">CoordType</a> &amp;&#160;</td>
+          <td class="paramname"><em>ijk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af59d376c68456c8595f0311f8351030c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1117,6 +1727,194 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
 </div><div class="memdoc">
 
 <p>return the state and updates the value of the specified voxel </p>
+
+</div>
+</div>
+<a class="anchor" id="ae32ce3e5a50e2ae76a30e7201240eeb5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAvg </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1InternalData.html#a6b925a2a478794759774313d42b7fce0">StatsT</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a12722836d66e7f875f5998ed609511cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setChild </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a531a4e4c8fd57a84d7862c9dc3030066"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setDev </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1InternalData.html#a6b925a2a478794759774313d42b7fce0">StatsT</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8d5035631bccabf1ee4d3a3601f3e2f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setMax </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5a75e0b31b0a75e4bf508b8c35160607"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setMin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a000298b28e29ef44df2686dc2f384d4f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setOrigin </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>ijk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a328aba0e0f8f01df8331e5de3d89f5da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setValue </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a> &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1357,6 +2155,186 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="a00b1c4cf4c222145ff8a3a7a16f8da45"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1InternalData.html#a6b925a2a478794759774313d42b7fce0">StatsT</a> mAverage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9faa36eb5cd3f18ef95203f1924b516f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt;<a class="el" href="structnanovdb_1_1InternalData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a>&gt; mBBox</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2da57845d294e485c7dfea716263c64e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1InternalData.html#acd7538d677b882683f02661701261319">MaskT</a> mChildMask</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af3e2644dc8b717cc20da528c6de31cb3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t mFlags</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab9171e6ced190a63f406f0c71cc60b8f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a> mMaximum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af024ddfbc251ee32b91093ea1ebeae56"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1InternalData.html#ae36754228c14efeecf711a0cc6053096">ValueT</a> mMinimum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a92cea95cd5b370fbf46b4d9a3f67bf1e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1InternalData.html#a6b925a2a478794759774313d42b7fce0">StatsT</a> mStdDevi</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac09d07deab7d62f092e2d22b0fd2d8a2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Tile mTable[1u&lt;&lt; (3 *LOG2DIM)]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aca343d6d3e571532d236beec2725eb59"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1InternalData.html#acd7538d677b882683f02661701261319">MaskT</a> mValueMask</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aed2887b172a44bff74e67a8316a5a331"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1371,6 +2349,26 @@ class nanovdb::InternalNode&lt; ChildT, Log2Dim &gt;</h3>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adf7b0717992a78ca671b07fe8fd6390e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">decltype(OpT::set(std::declval&lt;<a class="el" href="classnanovdb_1_1InternalNode.html">InternalNode</a>&amp;&gt;(), std::declval&lt;uint32_t&gt;(), std::declval&lt;ArgsT&gt;()...)) set(const <a class="el" href="classnanovdb_1_1InternalNode.html#a4ac4cf2db2d08c45fd40ed861ca8792c">CoordType</a> &amp;ijk, ArgsT &amp;&amp;...args)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

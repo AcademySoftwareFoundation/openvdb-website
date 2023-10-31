@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -133,7 +133,7 @@ Locating Dependencies</h2>
 </ul>
 <ul>
 <li><b>Inputs</b> - The following variables can be used to help drive the search path on first runs of CMake (i.e. these variables are not <a href="https://cmake.org/cmake/help/latest/command/set.html#set-cache-entry">cached</a>). They are listed in priority order. Note that the prefix is always capitalized.<ul>
-<li><b>Xxx_ROOT</b> - Preferred installation prefix. The given dependency is expected to follow a folder structure <code>Xxx_ROOT/include</code> and <code>Xxx_ROOT/lib</code> exist. Note that unlike the above, this is the case matching name of the find package .i.e. Blosc_ROOT, IlmBase_ROOT, TBB_ROOT etc.</li>
+<li><b>Xxx_ROOT</b> - Preferred installation prefix. The given dependency is expected to follow a folder structure <code>Xxx_ROOT/include</code> and <code>Xxx_ROOT/lib</code> exist. Note that unlike the above, this is the case matching name of the find package .i.e. Blosc_ROOT, TBB_ROOT etc.</li>
 <li><b>XXX_INCLUDEDIR</b> / <b>XXX_LIBRARYDIR</b> - Preferred include and library directories</li>
 <li><b>SYSTEM_LIBRARY_PATHS</b> - A list of paths appended to all include and lib searches.</li>
 <li><b>XXX_USE_STATIC_LIBS</b> - Only search for static libraries for the given dependency. If OFF, the shared library is prioritized, falling back to the static library. This is OFF by default.</li>
@@ -237,9 +237,9 @@ Building Against Houdini/Maya</h2>
 <tr>
 <th>DCC </th><th>Supported Version </th><th>OpenVDB ABI  </th></tr>
 <tr>
-<td>Houdini </td><td>19.0 </td><td>8 </td></tr>
-<tr>
 <td>Houdini </td><td>19.5 </td><td>9 </td></tr>
+<tr>
+<td>Houdini </td><td>20.0 </td><td>10 </td></tr>
 <tr>
 <td>Maya </td><td>2018 </td><td>Any </td></tr>
 <tr>
@@ -274,7 +274,7 @@ Building Against Houdini</h2>
 <tr>
 <td>LLVM </td><td>Target-independent code generation </td><td>OpenVDB AX </td></tr>
 </table>
-<p>At a minimum, boost, a matching C++17 compiler and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software. Note that as Blosc and ZLib are provided as part of the Houdini installation <code>USE_BLOSC</code> and <code>USE_ZLIB</code> should be left <code>ON</code>.</p>
+<p>At a minimum a matching C++17 compiler and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software. Note that as Blosc and ZLib are provided as part of the Houdini installation <code>USE_BLOSC</code> and <code>USE_ZLIB</code> should be left <code>ON</code>.</p>
 <p>With the necessary dependencies installed, create and enter a directory for cmake to write to. It's generally useful to create this in the location you've extracted the OpenVDB repository. It will house CMake's generated build files.</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;mkdir build</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cd build</div></div><!-- fragment --><p>Now you can call CMake by providing the absolute or relative path to the root of the OpenVDB source tree along with the following options:</p>
 <p>Required:</p>
@@ -324,7 +324,7 @@ Building Against Maya</h2>
 <tr>
 <td>OpenEXR </td><td>EXR serialization support </td><td>OpenVDB Render </td></tr>
 <tr>
-<td>IlmBase </td><td>Used half precision floating points and EXR serialization support </td><td>Optional (All) </td></tr>
+<td>Imath </td><td>Used half precision floating points and EXR serialization support </td><td>Optional (All) </td></tr>
 <tr>
 <td>Log4cplus </td><td>An optional dependency for improved OpenVDB Logging </td><td>Optional (All) </td></tr>
 <tr>
@@ -348,10 +348,9 @@ Building Against Maya</h2>
 <li><b></b> <a href="https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html">CMAKE_INSTALL_PREFIX</a> =<code>/path/to/install/dir</code> # The location you wish to install OpenVDB to. See the link for default values.</li>
 <li><b>OPENVDB_MAYA_INSTALL_PREFIX</b> =<code>/path/to/install/dir</code> # The location to install the Maya plugin to. Defaults to the value of <code>${CMAKE_INSTALL_PREFIX}/maya${Maya_VERSION}</code></li>
 <li><b>BOOST_ROOT</b> =<code>/path/to/boost/install</code> # Path to boost. May not be required, CMake may find it automatically</li>
-<li><b>IlmBase_ROOT</b> =<code>/path/to/ilmbase/install</code> # Path to ilmbase.</li>
 </ul>
 <p>For example on MacOS and where the build folder has been created inside the OpenVDB source root:</p>
-<div class="fragment"><div class="line">cmake -D BOOST_ROOT=/path/to/boost/install \</div><div class="line">      -D IlmBase_ROOT=/path/to/ilmbase/install \</div><div class="line">      -D Maya_ROOT=/Applications/Autodesk/maya2019/ \</div><div class="line">      -D USE_MAYA=ON \</div><div class="line">      ../</div></div><!-- fragment --><p>As the Maya plugin is disabled by default, you may also want to add <code>-D OPENVDB_BUILD_MAYA_PLUGIN=ON</code> to the command. The <a class="el" href="build.html#buildComponents">components</a> section shows which targets are enabled by default.</p>
+<div class="fragment"><div class="line">cmake -D BOOST_ROOT=/path/to/boost/install \</div><div class="line">      -D Maya_ROOT=/Applications/Autodesk/maya2019/ \</div><div class="line">      -D USE_MAYA=ON \</div><div class="line">      ../</div></div><!-- fragment --><p>As the Maya plugin is disabled by default, you may also want to add <code>-D OPENVDB_BUILD_MAYA_PLUGIN=ON</code> to the command. The <a class="el" href="build.html#buildComponents">components</a> section shows which targets are enabled by default.</p>
 <p>After the CMake build files have been successfully generated, run the build tool within the build directory to compile the project. On UNIX, you can typically incoke <code>make</code> directly: </p><div class="fragment"><div class="line">make -j4</div></div><!-- fragment --><p>Where the value of the <code>j</code> argument is the number of CPU threads to use for a multi-threaded build. On Windows, you can leverage CMake's build tool to invoke the selected builder (usually msbuild): </p><div class="fragment"><div class="line">cmake --build .</div></div><!-- fragment --><p>Finally, once a successful build has completed, you can install all files. </p><div class="fragment"><div class="line">cmake --build . --target install   # or simply `make install`</div></div><!-- fragment --><p><b>Note:</b> The Maya OpenVDB Visualize Node is <b>only</b> compatible with Legacy OpenGL support. You can enable this in Maya by navigating to <code>Windows-&gt;Settings/Preferences-&gt;Preferences-&gt;Display</code> and changing <code>Rendering Engine</code> to OpenGL - Legacy.</p>
 <p>See the <a class="el" href="build.html#buildTroubleshooting">troubleshooting</a> section for help with CMake and Make errors.</p>
 <h2><a class="anchor" id="buildBuildStandalone"></a>
@@ -391,8 +390,17 @@ CMake warnings/errors in FindBoost.cmake</h2>
 <p>There are a variety of potential warnings and errors that may arise from the version compatibility of Boost and CMake. These are related to how both Boost and CMake have historically been kept in sync. A common warning and error combination is:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;CMake Warning at ...  Imported targets not available for Boost version XXXXXX</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;...</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;Target &quot;...&quot; links to target &quot;Boost::XXX&quot; but the target</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;was not found.  Perhaps a find_package() call is missing for an IMPORTED</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;target, or an ALIAS target is missing?</div></div><!-- fragment --><p>OpenVDB uses <a href="https://cmake.org/cmake/help/latest/command/add_library.html#imported-libraries">imported targets</a> for all its dependencies. For imported Boost compatibility, the following versions of CMake are required:</p>
 <ul>
-<li>Boost 1.68, 1.69 require CMake 3.13 or newer.</li>
-<li>Boost 1.70 requires CMake 3.14 or newer.</li>
+<li>Boost 1.73 requires CMake 3.17.2 or newer.</li>
+<li>Boost 1.74 requires CMake 3.19 or newer.</li>
+<li>Boost 1.75 requires CMake 3.19.5 or newer.</li>
+<li>Boost 1.76 requires CMake 3.20.3 or newer.</li>
+<li>Boost 1.77 requires CMake 3.21.3 or newer.</li>
+<li>Boost 1.78 requires CMake 3.22.2 or newer.</li>
+<li>Boost 1.79 requires CMake 3.23.2 or newer.</li>
+<li>Boost 1.80 requires CMake 3.24.2 or newer.</li>
+<li>Boost 1.81 requires CMake 3.25.2 or newer.</li>
+<li>Boost 1.82 requires CMake 3.27.0 or newer.</li>
+<li>Boost 1.83 requires CMake 3.27.4 or newer.</li>
 </ul>
 <p>Use the above list to identify the version of CMake you require for your version of Boost. Note that this may be implemented into the OpenVDB CMake in the future.</p>
 <h2><a class="anchor" id="troubleshoot4"></a>

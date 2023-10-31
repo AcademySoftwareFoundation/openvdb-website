@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -134,6 +134,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2b22632bc456a6c08317e3b85a515439"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a815d6ad535d5756c32f86eb41f8ee010"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafFnBase.html#a815d6ad535d5756c32f86eb41f8ee010">init</a> (float min, float max, uint8_t <a class="el" href="structnanovdb_1_1LeafData_3_01FpN_00_01CoordT_00_01MaskT_00_01LOG2DIM_01_4.html#a559041bb9d4ec80e9229da6309720795">bitWidth</a>)</td></tr>
 <tr class="separator:a815d6ad535d5756c32f86eb41f8ee010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52991ea12190ad4df50cc29a237f9f29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafFnBase.html#a52991ea12190ad4df50cc29a237f9f29">setOn</a> (uint32_t offset)</td></tr>
+<tr class="separator:a52991ea12190ad4df50cc29a237f9f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a184b058b9668e90d5d2ea4ef328493a5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafFnBase.html#a184b058b9668e90d5d2ea4ef328493a5">getMin</a> () const </td></tr>
 <tr class="memdesc:a184b058b9668e90d5d2ea4ef328493a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the quantized minimum of the active values in this node  <a href="#a184b058b9668e90d5d2ea4ef328493a5">More...</a><br /></td></tr>
 <tr class="separator:a184b058b9668e90d5d2ea4ef328493a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +168,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:afa61912d856b76a17c2b9cb3ec02e744"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdbf948e7b299b032f08cc4591b5d974"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafFnBase.html#abdbf948e7b299b032f08cc4591b5d974">memUsage</a> ()</td></tr>
 <tr class="separator:abdbf948e7b299b032f08cc4591b5d974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30be51e25c9031cf90f4cad3ab4389e8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafFnBase.html#a30be51e25c9031cf90f4cad3ab4389e8">hasStats</a> ()</td></tr>
+<tr class="separator:a30be51e25c9031cf90f4cad3ab4389e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -482,6 +486,29 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a30be51e25c9031cf90f4cad3ab4389e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool hasStats </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a815d6ad535d5756c32f86eb41f8ee010"></a>
 <div class="memitem">
 <div class="memproto">
@@ -736,6 +763,30 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl class="section note"><dt>Note</dt><dd>min &lt;= X &lt;= max or 0 &lt;= (X-min)/(min-max) &lt;= 1 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a52991ea12190ad4df50cc29a237f9f29"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setOn </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

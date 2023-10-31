@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>OpenVDB: ChannelAccessor&lt; ChannelT &gt; Class Template Reference</title>
+<title>OpenVDB: ChannelAccessor&lt; ChannelT, IndexT &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classnanovdb_1_1ChannelAccessor-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ChannelAccessor&lt; ChannelT &gt; Class Template Reference</div>  </div>
+<div class="title">ChannelAccessor&lt; ChannelT, IndexT &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -109,41 +109,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Types</h2></td></tr>
 <tr class="memitem:adfb85fac51b10f2a9ef44eff19bb8f38"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#adfb85fac51b10f2a9ef44eff19bb8f38">ValueType</a> = ChannelT</td></tr>
 <tr class="separator:adfb85fac51b10f2a9ef44eff19bb8f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcb3ab2530fb0980e2643b7e05590d49"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#afcb3ab2530fb0980e2643b7e05590d49">TreeType</a> = <a class="el" href="namespacenanovdb.html#a8b2ce743deac24d5783b4c9c4ab2413c">IndexTree</a></td></tr>
-<tr class="separator:afcb3ab2530fb0980e2643b7e05590d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf2ba70eb4688afe6d74ddef4002988c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#aaf2ba70eb4688afe6d74ddef4002988c">AccessorType</a> = <a class="el" href="classnanovdb_1_1ChannelAccessor.html">ChannelAccessor</a>&lt; ChannelT &gt;</td></tr>
-<tr class="separator:aaf2ba70eb4688afe6d74ddef4002988c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c4b05eb6f7a44e93cba30fe7352750"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#a31c4b05eb6f7a44e93cba30fe7352750">TreeType</a> = <a class="el" href="namespacenanovdb.html#a7414dd62bd9510809baa893a7fe34f45">NanoTree</a>&lt; IndexT &gt;</td></tr>
+<tr class="separator:a31c4b05eb6f7a44e93cba30fe7352750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d99f25e4a1fcffe7b18659337bf9fa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#ae9d99f25e4a1fcffe7b18659337bf9fa">AccessorType</a> = <a class="el" href="classnanovdb_1_1ChannelAccessor.html">ChannelAccessor</a>&lt; ChannelT, IndexT &gt;</td></tr>
+<tr class="separator:ae9d99f25e4a1fcffe7b18659337bf9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ba8d2d96ddb3cc03c40182e5c31ab9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#af4ba8d2d96ddb3cc03c40182e5c31ab9">BuildType</a> = BuildT</td></tr>
+<tr class="separator:af4ba8d2d96ddb3cc03c40182e5c31ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39750f2bf2036947aaa0b8207d782886"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> = CoordT</td></tr>
 <tr class="separator:a39750f2bf2036947aaa0b8207d782886"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0707557dd973f8faf708880d3b777c5c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a0707557dd973f8faf708880d3b777c5c">NodeInfo</a> = typename <a class="el" href="classnanovdb_1_1ReadAccessor.html">ReadAccessor</a>&lt; ValueT,-1,-1,-1 &gt;::<a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a0707557dd973f8faf708880d3b777c5c">NodeInfo</a></td></tr>
-<tr class="separator:a0707557dd973f8faf708880d3b777c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaa9959254491d60aeb959f2d52c18e9a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#aaa9959254491d60aeb959f2d52c18e9a">ChannelAccessor</a> (const <a class="el" href="namespacenanovdb.html#ad24384a4bda82649992fd5faf8fbbea4">IndexGrid</a> &amp;<a class="el" href="classnanovdb_1_1ChannelAccessor.html#aef4f19351055451c843cdb69a949f14e">grid</a>, uint32_t channelID=0u)</td></tr>
-<tr class="memdesc:aaa9959254491d60aeb959f2d52c18e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ctor from an IndexGrid and an integer ID of an internal channel that is assumed to exist as blind data in the IndexGrid.  <a href="#aaa9959254491d60aeb959f2d52c18e9a">More...</a><br /></td></tr>
-<tr class="separator:aaa9959254491d60aeb959f2d52c18e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb29aa42524bd8c649abcfad66669543"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#abb29aa42524bd8c649abcfad66669543">ChannelAccessor</a> (const <a class="el" href="namespacenanovdb.html#ad24384a4bda82649992fd5faf8fbbea4">IndexGrid</a> &amp;<a class="el" href="classnanovdb_1_1ChannelAccessor.html#aef4f19351055451c843cdb69a949f14e">grid</a>, ChannelT *channelPtr)</td></tr>
-<tr class="memdesc:abb29aa42524bd8c649abcfad66669543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ctor from an IndexGrid and an external channel.  <a href="#abb29aa42524bd8c649abcfad66669543">More...</a><br /></td></tr>
-<tr class="separator:abb29aa42524bd8c649abcfad66669543"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef4f19351055451c843cdb69a949f14e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacenanovdb.html#ad24384a4bda82649992fd5faf8fbbea4">IndexGrid</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#aef4f19351055451c843cdb69a949f14e">grid</a> () const </td></tr>
-<tr class="memdesc:aef4f19351055451c843cdb69a949f14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const reference to the IndexGrid.  <a href="#aef4f19351055451c843cdb69a949f14e">More...</a><br /></td></tr>
-<tr class="separator:aef4f19351055451c843cdb69a949f14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a087cd9ea80e67676b406cfc230e8303c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacenanovdb.html#a8b2ce743deac24d5783b4c9c4ab2413c">IndexTree</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#a087cd9ea80e67676b406cfc230e8303c">tree</a> () const </td></tr>
-<tr class="memdesc:a087cd9ea80e67676b406cfc230e8303c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const reference to the tree of the IndexGrid.  <a href="#a087cd9ea80e67676b406cfc230e8303c">More...</a><br /></td></tr>
-<tr class="separator:a087cd9ea80e67676b406cfc230e8303c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7017a4c0382c33dfb8a4e8c97693ac8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacenanovdb.html#a61f9aaea546adec9b6d57ed2d699e6c5">Vec3R</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#ad7017a4c0382c33dfb8a4e8c97693ac8">voxelSize</a> () const </td></tr>
-<tr class="memdesc:ad7017a4c0382c33dfb8a4e8c97693ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a vector of the axial voxel sizes.  <a href="#ad7017a4c0382c33dfb8a4e8c97693ac8">More...</a><br /></td></tr>
-<tr class="separator:ad7017a4c0382c33dfb8a4e8c97693ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac42f77a614d5d08bb781842bfd667e47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#ac42f77a614d5d08bb781842bfd667e47">ChannelAccessor</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; IndexT &gt; &amp;<a class="el" href="classnanovdb_1_1ChannelAccessor.html#af9c473499bd7be9a25fb386518a17f9a">grid</a>, uint32_t channelID=0u)</td></tr>
+<tr class="memdesc:ac42f77a614d5d08bb781842bfd667e47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ctor from an IndexGrid and an integer ID of an internal channel that is assumed to exist as blind data in the IndexGrid.  <a href="#ac42f77a614d5d08bb781842bfd667e47">More...</a><br /></td></tr>
+<tr class="separator:ac42f77a614d5d08bb781842bfd667e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4bb43a62561224783e8c79143bd9ea4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#ad4bb43a62561224783e8c79143bd9ea4">ChannelAccessor</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; IndexT &gt; &amp;<a class="el" href="classnanovdb_1_1ChannelAccessor.html#af9c473499bd7be9a25fb386518a17f9a">grid</a>, ChannelT *channelPtr)</td></tr>
+<tr class="memdesc:ad4bb43a62561224783e8c79143bd9ea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ctor from an IndexGrid and an external channel.  <a href="#ad4bb43a62561224783e8c79143bd9ea4">More...</a><br /></td></tr>
+<tr class="separator:ad4bb43a62561224783e8c79143bd9ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa385aa18f5e42db5a415c25a90f4193d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#aa385aa18f5e42db5a415c25a90f4193d">operator bool</a> () const </td></tr>
+<tr class="memdesc:aa385aa18f5e42db5a415c25a90f4193d"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if this access was initialized correctly  <a href="#aa385aa18f5e42db5a415c25a90f4193d">More...</a><br /></td></tr>
+<tr class="separator:aa385aa18f5e42db5a415c25a90f4193d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c473499bd7be9a25fb386518a17f9a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; IndexT &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#af9c473499bd7be9a25fb386518a17f9a">grid</a> () const </td></tr>
+<tr class="memdesc:af9c473499bd7be9a25fb386518a17f9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const reference to the IndexGrid.  <a href="#af9c473499bd7be9a25fb386518a17f9a">More...</a><br /></td></tr>
+<tr class="separator:af9c473499bd7be9a25fb386518a17f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932dc28aa53e3961b2c4f8b3ff4c7242"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1ChannelAccessor.html#a31c4b05eb6f7a44e93cba30fe7352750">TreeType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#a932dc28aa53e3961b2c4f8b3ff4c7242">tree</a> () const </td></tr>
+<tr class="memdesc:a932dc28aa53e3961b2c4f8b3ff4c7242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const reference to the tree of the IndexGrid.  <a href="#a932dc28aa53e3961b2c4f8b3ff4c7242">More...</a><br /></td></tr>
+<tr class="separator:a932dc28aa53e3961b2c4f8b3ff4c7242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ecc6e5b9513cf5ac5b2eba0e5ca6ee8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacenanovdb.html#a98d94999010cb92dfb5f652c353d1d82">Vec3d</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#a4ecc6e5b9513cf5ac5b2eba0e5ca6ee8">voxelSize</a> () const </td></tr>
+<tr class="memdesc:a4ecc6e5b9513cf5ac5b2eba0e5ca6ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a vector of the axial voxel sizes.  <a href="#a4ecc6e5b9513cf5ac5b2eba0e5ca6ee8">More...</a><br /></td></tr>
+<tr class="separator:a4ecc6e5b9513cf5ac5b2eba0e5ca6ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9b69a4fee88a50a5bf10c328badae3b"><td class="memItemLeft" align="right" valign="top">const uint64_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#ae9b69a4fee88a50a5bf10c328badae3b">valueCount</a> () const </td></tr>
 <tr class="memdesc:ae9b69a4fee88a50a5bf10c328badae3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return total number of values indexed by the IndexGrid.  <a href="#ae9b69a4fee88a50a5bf10c328badae3b">More...</a><br /></td></tr>
 <tr class="separator:ae9b69a4fee88a50a5bf10c328badae3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae08471865084a8ccc7de4777d5fd8cb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#ae08471865084a8ccc7de4777d5fd8cb7">setChannel</a> (ChannelT *channelPtr)</td></tr>
-<tr class="memdesc:ae08471865084a8ccc7de4777d5fd8cb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change to an external channel.  <a href="#ae08471865084a8ccc7de4777d5fd8cb7">More...</a><br /></td></tr>
-<tr class="separator:ae08471865084a8ccc7de4777d5fd8cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98eaf2e889d52122a213204e20f3b48e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#a98eaf2e889d52122a213204e20f3b48e">setChannel</a> (uint32_t channelID)</td></tr>
-<tr class="memdesc:a98eaf2e889d52122a213204e20f3b48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change to an internal channel, assuming it exists as as blind data in the IndexGrid.  <a href="#a98eaf2e889d52122a213204e20f3b48e">More...</a><br /></td></tr>
-<tr class="separator:a98eaf2e889d52122a213204e20f3b48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af97bb8770509d5fb819a72d49ecbb31d"><td class="memItemLeft" align="right" valign="top">ChannelT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#af97bb8770509d5fb819a72d49ecbb31d">setChannel</a> (ChannelT *channelPtr)</td></tr>
+<tr class="memdesc:af97bb8770509d5fb819a72d49ecbb31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change to an external channel.  <a href="#af97bb8770509d5fb819a72d49ecbb31d">More...</a><br /></td></tr>
+<tr class="separator:af97bb8770509d5fb819a72d49ecbb31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ebee25983d4c8f950e8948a89960c49"><td class="memItemLeft" align="right" valign="top">ChannelT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#a7ebee25983d4c8f950e8948a89960c49">setChannel</a> (uint32_t channelID)</td></tr>
+<tr class="memdesc:a7ebee25983d4c8f950e8948a89960c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change to an internal channel, assuming it exists as as blind data in the IndexGrid.  <a href="#a7ebee25983d4c8f950e8948a89960c49">More...</a><br /></td></tr>
+<tr class="separator:a7ebee25983d4c8f950e8948a89960c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6103eb21150b521f15138441c9b2df7"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#ae6103eb21150b521f15138441c9b2df7">getIndex</a> (const <a class="el" href="classnanovdb_1_1Coord.html">Coord</a> &amp;ijk) const </td></tr>
 <tr class="memdesc:ae6103eb21150b521f15138441c9b2df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the linear offset into a channel that maps to the specified coordinate.  <a href="#ae6103eb21150b521f15138441c9b2df7">More...</a><br /></td></tr>
 <tr class="separator:ae6103eb21150b521f15138441c9b2df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,9 +159,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8bc77857942e4755a4132c00ece67a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a497d19192c8f4b1c0baed2a69780542a"><td class="memItemLeft" align="right" valign="top">ChannelT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#a497d19192c8f4b1c0baed2a69780542a">operator()</a> (int i, int j, int k) const </td></tr>
 <tr class="separator:a497d19192c8f4b1c0baed2a69780542a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af94072633c02e9ff6cbd07d545ff55c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#af94072633c02e9ff6cbd07d545ff55c3">probeValue</a> (const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;ijk, typename <a class="el" href="structnanovdb_1_1remove__const.html">remove_const</a>&lt; ChannelT &gt;::type &amp;v) const </td></tr>
-<tr class="memdesc:af94072633c02e9ff6cbd07d545ff55c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the state and updates the value of the specified voxel  <a href="#af94072633c02e9ff6cbd07d545ff55c3">More...</a><br /></td></tr>
-<tr class="separator:af94072633c02e9ff6cbd07d545ff55c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09236c89f31b942387dee449fd927986"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#a09236c89f31b942387dee449fd927986">probeValue</a> (const <a class="el" href="classnanovdb_1_1Coord.html">Coord</a> &amp;ijk, typename <a class="el" href="structnanovdb_1_1remove__const.html">remove_const</a>&lt; ChannelT &gt;::type &amp;v) const </td></tr>
+<tr class="memdesc:a09236c89f31b942387dee449fd927986"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the state and updates the value of the specified voxel  <a href="#a09236c89f31b942387dee449fd927986">More...</a><br /></td></tr>
+<tr class="separator:a09236c89f31b942387dee449fd927986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d33d72f211059ac10793e108abce1ae"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a4d33d72f211059ac10793e108abce1ae"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ChannelAccessor.html#a4d33d72f211059ac10793e108abce1ae">getValue</a> (const <a class="el" href="classnanovdb_1_1Coord.html">Coord</a> &amp;ijk, T *channelPtr) const </td></tr>
 <tr class="memdesc:a4d33d72f211059ac10793e108abce1ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the value from a specified channel that maps to the specified coordinate.  <a href="#a4d33d72f211059ac10793e108abce1ae">More...</a><br /></td></tr>
@@ -180,16 +183,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a12a48da7573a85cb8c8fa193126d5d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f88c3ac817681985a55ae7dba485bfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a72ced3f4f821016da17c4ecd262e8b03">ValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a9f88c3ac817681985a55ae7dba485bfb">getValue</a> (const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;ijk) const </td></tr>
 <tr class="separator:a9f88c3ac817681985a55ae7dba485bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c20f1d9c000b7d704994ad4254cd2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a72ced3f4f821016da17c4ecd262e8b03">ValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a19c20f1d9c000b7d704994ad4254cd2c">getValue</a> (int i, int j, int k) const </td></tr>
+<tr class="separator:a19c20f1d9c000b7d704994ad4254cd2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83478342da83e06ef4c2cc3bd66e012d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a72ced3f4f821016da17c4ecd262e8b03">ValueType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a83478342da83e06ef4c2cc3bd66e012d">operator()</a> (const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;ijk) const </td></tr>
 <tr class="separator:a83478342da83e06ef4c2cc3bd66e012d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60703e59767bfcd1ce472e9ab6020f02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a0707557dd973f8faf708880d3b777c5c">NodeInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a60703e59767bfcd1ce472e9ab6020f02">getNodeInfo</a> (const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;ijk) const </td></tr>
-<tr class="separator:a60703e59767bfcd1ce472e9ab6020f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac16ae5d94c0ae43f24c6c9cc35f553a5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#ac16ae5d94c0ae43f24c6c9cc35f553a5">getNodeInfo</a> (const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;ijk) const </td></tr>
+<tr class="separator:ac16ae5d94c0ae43f24c6c9cc35f553a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2935f48d08b0815dd038e311915e23b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a2935f48d08b0815dd038e311915e23b2">isActive</a> (const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;ijk) const </td></tr>
 <tr class="separator:a2935f48d08b0815dd038e311915e23b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad30cd945d513228358255027c3d22d63"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#ad30cd945d513228358255027c3d22d63">probeValue</a> (const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;ijk, <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a72ced3f4f821016da17c4ecd262e8b03">ValueType</a> &amp;v) const </td></tr>
 <tr class="separator:ad30cd945d513228358255027c3d22d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bcee7c96ecea1c382a8043985ff1d71"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1LeafNode.html">LeafT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a9bcee7c96ecea1c382a8043985ff1d71">probeLeaf</a> (const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;ijk) const </td></tr>
 <tr class="separator:a9bcee7c96ecea1c382a8043985ff1d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2574c567bcd33b590d37e3eb69d2fd7f"><td class="memTemplParams" colspan="2">template&lt;typename OpT , typename... ArgsT&gt; </td></tr>
+<tr class="memitem:a2574c567bcd33b590d37e3eb69d2fd7f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a2574c567bcd33b590d37e3eb69d2fd7f">get</a> (const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;ijk, ArgsT &amp;&amp;...args) const </td></tr>
+<tr class="separator:a2574c567bcd33b590d37e3eb69d2fd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728cf8b16f48df25087a46669f47c2af"><td class="memTemplParams" colspan="2">template&lt;typename OpT , typename... ArgsT&gt; </td></tr>
+<tr class="memitem:a728cf8b16f48df25087a46669f47c2af"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a728cf8b16f48df25087a46669f47c2af">set</a> (const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;ijk, ArgsT &amp;&amp;...args) const </td></tr>
+<tr class="separator:a728cf8b16f48df25087a46669f47c2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa1afad0ebf9bc04f256ef3b3ab996ea"><td class="memTemplParams" colspan="2">template&lt;typename RayT &gt; </td></tr>
 <tr class="memitem:afa1afad0ebf9bc04f256ef3b3ab996ea"><td class="memTemplItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#afa1afad0ebf9bc04f256ef3b3ab996ea">getDim</a> (const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;ijk, const RayT &amp;ray) const </td></tr>
 <tr class="separator:afa1afad0ebf9bc04f256ef3b3ab996ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,20 +211,40 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:aea7e2ecd5af159193cd1a3284d927779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename ChannelT&gt;<br />
-class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
+<div class="textblock"><h3>template&lt;typename ChannelT, typename IndexT = ValueIndex&gt;<br />
+class nanovdb::ChannelAccessor&lt; ChannelT, IndexT &gt;</h3>
 
 <p>Class to access values in channels at a specific voxel location. </p>
 <dl class="section note"><dt>Note</dt><dd>The ChannelT template parameter can be either const and non-const. </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="aaf2ba70eb4688afe6d74ddef4002988c"></a>
+<a class="anchor" id="ae9d99f25e4a1fcffe7b18659337bf9fa"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classnanovdb_1_1ChannelAccessor.html#aaf2ba70eb4688afe6d74ddef4002988c">AccessorType</a> =  <a class="el" href="classnanovdb_1_1ChannelAccessor.html">ChannelAccessor</a>&lt;ChannelT&gt;</td>
+          <td class="memname">using <a class="el" href="classnanovdb_1_1ChannelAccessor.html#ae9d99f25e4a1fcffe7b18659337bf9fa">AccessorType</a> =  <a class="el" href="classnanovdb_1_1ChannelAccessor.html">ChannelAccessor</a>&lt;ChannelT, IndexT&gt;</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af4ba8d2d96ddb3cc03c40182e5c31ab9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#af4ba8d2d96ddb3cc03c40182e5c31ab9">BuildType</a> =  BuildT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -238,32 +269,12 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a0707557dd973f8faf708880d3b777c5c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a0707557dd973f8faf708880d3b777c5c">NodeInfo</a> =  typename <a class="el" href="classnanovdb_1_1ReadAccessor.html">ReadAccessor</a>&lt;ValueT, -1, -1, -1&gt;::<a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a0707557dd973f8faf708880d3b777c5c">NodeInfo</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="afcb3ab2530fb0980e2643b7e05590d49"></a>
+<a class="anchor" id="a31c4b05eb6f7a44e93cba30fe7352750"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classnanovdb_1_1ChannelAccessor.html#afcb3ab2530fb0980e2643b7e05590d49">TreeType</a> =  <a class="el" href="namespacenanovdb.html#a8b2ce743deac24d5783b4c9c4ab2413c">IndexTree</a></td>
+          <td class="memname">using <a class="el" href="classnanovdb_1_1ChannelAccessor.html#a31c4b05eb6f7a44e93cba30fe7352750">TreeType</a> =  <a class="el" href="namespacenanovdb.html#a7414dd62bd9510809baa893a7fe34f45">NanoTree</a>&lt;IndexT&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -283,7 +294,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aaa9959254491d60aeb959f2d52c18e9a"></a>
+<a class="anchor" id="ac42f77a614d5d08bb781842bfd667e47"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -293,7 +304,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classnanovdb_1_1ChannelAccessor.html">ChannelAccessor</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacenanovdb.html#ad24384a4bda82649992fd5faf8fbbea4">IndexGrid</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; IndexT &gt; &amp;&#160;</td>
           <td class="paramname"><em>grid</em>, </td>
         </tr>
         <tr>
@@ -319,7 +330,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="abb29aa42524bd8c649abcfad66669543"></a>
+<a class="anchor" id="ad4bb43a62561224783e8c79143bd9ea4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -329,7 +340,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
         <tr>
           <td class="memname"><a class="el" href="classnanovdb_1_1ChannelAccessor.html">ChannelAccessor</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacenanovdb.html#ad24384a4bda82649992fd5faf8fbbea4">IndexGrid</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; IndexT &gt; &amp;&#160;</td>
           <td class="paramname"><em>grid</em>, </td>
         </tr>
         <tr>
@@ -378,6 +389,40 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
 </div><div class="memdoc">
 
 <p>Reset this access to its initial state, i.e. with an empty cache. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2574c567bcd33b590d37e3eb69d2fd7f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto get </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;&#160;</td>
+          <td class="paramname"><em>ijk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgsT &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -490,7 +535,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a60703e59767bfcd1ce472e9ab6020f02"></a>
+<a class="anchor" id="ac16ae5d94c0ae43f24c6c9cc35f553a5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -498,7 +543,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a0707557dd973f8faf708880d3b777c5c">NodeInfo</a> getNodeInfo </td>
+          <td class="memname">auto getNodeInfo </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;&#160;</td>
           <td class="paramname"><em>ijk</em></td><td>)</td>
@@ -527,6 +572,46 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
           <td class="paramtype">const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;&#160;</td>
           <td class="paramname"><em>ijk</em></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a19c20f1d9c000b7d704994ad4254cd2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a72ced3f4f821016da17c4ecd262e8b03">ValueType</a> getValue </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>k</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -601,7 +686,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="aef4f19351055451c843cdb69a949f14e"></a>
+<a class="anchor" id="af9c473499bd7be9a25fb386518a17f9a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -609,7 +694,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacenanovdb.html#ad24384a4bda82649992fd5faf8fbbea4">IndexGrid</a>&amp; grid </td>
+          <td class="memname">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt;IndexT&gt;&amp; grid </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -711,6 +796,31 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa385aa18f5e42db5a415c25a90f4193d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return true if this access was initialized correctly </p>
 
 </div>
 </div>
@@ -860,7 +970,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="af94072633c02e9ff6cbd07d545ff55c3"></a>
+<a class="anchor" id="a09236c89f31b942387dee449fd927986"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -870,7 +980,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
         <tr>
           <td class="memname">bool probeValue </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1Coord.html">Coord</a> &amp;&#160;</td>
           <td class="paramname"><em>ijk</em>, </td>
         </tr>
         <tr>
@@ -919,7 +1029,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="ae08471865084a8ccc7de4777d5fd8cb7"></a>
+<a class="anchor" id="a728cf8b16f48df25087a46669f47c2af"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -927,7 +1037,41 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void setChannel </td>
+          <td class="memname">auto set </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a39750f2bf2036947aaa0b8207d782886">CoordType</a> &amp;&#160;</td>
+          <td class="paramname"><em>ijk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgsT &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af97bb8770509d5fb819a72d49ecbb31d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ChannelT* setChannel </td>
           <td>(</td>
           <td class="paramtype">ChannelT *&#160;</td>
           <td class="paramname"><em>channelPtr</em></td><td>)</td>
@@ -942,10 +1086,11 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
 </div><div class="memdoc">
 
 <p>Change to an external channel. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to channel data </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a98eaf2e889d52122a213204e20f3b48e"></a>
+<a class="anchor" id="a7ebee25983d4c8f950e8948a89960c49"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -953,7 +1098,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void setChannel </td>
+          <td class="memname">ChannelT* setChannel </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>channelID</em></td><td>)</td>
@@ -968,10 +1113,11 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
 </div><div class="memdoc">
 
 <p>Change to an internal channel, assuming it exists as as blind data in the IndexGrid. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to channel data, which could be NULL if channelID is out of range or if ChannelT does not match the value type of the blind data </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a087cd9ea80e67676b406cfc230e8303c"></a>
+<a class="anchor" id="a932dc28aa53e3961b2c4f8b3ff4c7242"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -979,7 +1125,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacenanovdb.html#a8b2ce743deac24d5783b4c9c4ab2413c">IndexTree</a>&amp; tree </td>
+          <td class="memname">const <a class="el" href="classnanovdb_1_1ChannelAccessor.html#a31c4b05eb6f7a44e93cba30fe7352750">TreeType</a>&amp; tree </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1021,7 +1167,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="ad7017a4c0382c33dfb8a4e8c97693ac8"></a>
+<a class="anchor" id="a4ecc6e5b9513cf5ac5b2eba0e5ca6ee8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1029,7 +1175,7 @@ class nanovdb::ChannelAccessor&lt; ChannelT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacenanovdb.html#a61f9aaea546adec9b6d57ed2d699e6c5">Vec3R</a>&amp; voxelSize </td>
+          <td class="memname">const <a class="el" href="namespacenanovdb.html#a98d94999010cb92dfb5f652c353d1d82">Vec3d</a>&amp; voxelSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

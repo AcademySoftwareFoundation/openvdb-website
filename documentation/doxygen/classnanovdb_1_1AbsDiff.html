@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Compression oracle based on absolute difference.  
  <a href="classnanovdb_1_1AbsDiff.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="GridBuilder_8h_source.html">nanovdb/util/GridBuilder.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="CreateNanoGrid_8h_source.html">nanovdb/util/CreateNanoGrid.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -109,6 +109,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aea6c4607a74f459e51450adb357df039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05e00fabfde7d83fc94ea5e1ad95b756"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1AbsDiff.html#a05e00fabfde7d83fc94ea5e1ad95b756">~AbsDiff</a> ()=default</td></tr>
 <tr class="separator:a05e00fabfde7d83fc94ea5e1ad95b756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa385aa18f5e42db5a415c25a90f4193d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1AbsDiff.html#aa385aa18f5e42db5a415c25a90f4193d">operator bool</a> () const </td></tr>
+<tr class="separator:aa385aa18f5e42db5a415c25a90f4193d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae05b686f6d07038457d048b896c369da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1AbsDiff.html#ae05b686f6d07038457d048b896c369da">init</a> (<a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538">nanovdb::GridClass</a> gClass, float background)</td></tr>
+<tr class="separator:ae05b686f6d07038457d048b896c369da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af611b1adcbd834a6a393dffe9a2cd8da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1AbsDiff.html#af611b1adcbd834a6a393dffe9a2cd8da">setTolerance</a> (float tolerance)</td></tr>
 <tr class="separator:af611b1adcbd834a6a393dffe9a2cd8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab77f7f974ef4c968e712042998592dd4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1AbsDiff.html#ab77f7f974ef4c968e712042998592dd4">getTolerance</a> () const </td></tr>
@@ -202,6 +206,63 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">float getTolerance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae05b686f6d07038457d048b896c369da"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538">nanovdb::GridClass</a>&#160;</td>
+          <td class="paramname"><em>gClass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>background</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa385aa18f5e42db5a415c25a90f4193d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">operator bool </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

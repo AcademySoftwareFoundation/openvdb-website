@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -96,6 +96,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Template specialization of trait class use to remove const qualifier type from a type.  
+ <a href="structnanovdb_1_1remove__const_3_01const_01T_01_4.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="NanoVDB_8h_source.html">nanovdb/NanoVDB.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -103,7 +106,19 @@ Public Types</h2></td></tr>
 <tr class="memitem:a834c467da58ea1d81821952d3c473b64"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1remove__const_3_01const_01T_01_4.html#a834c467da58ea1d81821952d3c473b64">type</a> = T</td></tr>
 <tr class="separator:a834c467da58ea1d81821952d3c473b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+struct nanovdb::remove_const&lt; const T &gt;</h3>
+
+<p>Template specialization of trait class use to remove const qualifier type from a type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of the const type</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><a class="el" href="structnanovdb_1_1remove__pointer.html#a834c467da58ea1d81821952d3c473b64">remove_pointer&lt;const float&gt;::type</a> = float </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="a834c467da58ea1d81821952d3c473b64"></a>
 <div class="memitem">
 <div class="memproto">

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classnanovdb_1_1GridMetaData-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">GridMetaData Class Reference</div>  </div>
@@ -103,8 +104,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a9d1b83d766a42865b6434a23a153d3b8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9d1b83d766a42865b6434a23a153d3b8"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a9d1b83d766a42865b6434a23a153d3b8">GridMetaData</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; T &gt; &amp;grid)</td></tr>
+<tr class="separator:a9d1b83d766a42865b6434a23a153d3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ca1632c1112308658724696e9540a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ad0ca1632c1112308658724696e9540a4">GridMetaData</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData)</td></tr>
+<tr class="separator:ad0ca1632c1112308658724696e9540a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12ff15acc3e264af4794a8ed54610d01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a12ff15acc3e264af4794a8ed54610d01">safeCast</a> () const </td></tr>
+<tr class="memdesc:a12ff15acc3e264af4794a8ed54610d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if the <a class="el" href="structnanovdb_1_1RootData.html" title="Struct with all the member data of the RootNode (useful during serialization of an openvdb RootNode) ...">RootData</a> follows right after the <a class="el" href="structnanovdb_1_1TreeData.html">TreeData</a>. If so, this implies that it's safe to cast the grid from which this instance was constructed to a <a class="el" href="classnanovdb_1_1GridMetaData.html" title="This is a convenient class that allows for access to grid meta-data that are independent of the value...">GridMetaData</a>  <a href="#a12ff15acc3e264af4794a8ed54610d01">More...</a><br /></td></tr>
+<tr class="separator:a12ff15acc3e264af4794a8ed54610d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#aac1b70a2ed67ead038c4d3f5ac4d8a81">isValid</a> () const </td></tr>
 <tr class="separator:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259d44e4d6c5a6a29e462ee8932f3edb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0">GridType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a259d44e4d6c5a6a29e462ee8932f3edb">gridType</a> () const </td></tr>
+<tr class="separator:a259d44e4d6c5a6a29e462ee8932f3edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a699c8c71743c884aec021754933ead62"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538">GridClass</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a699c8c71743c884aec021754933ead62">gridClass</a> () const </td></tr>
+<tr class="separator:a699c8c71743c884aec021754933ead62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3871c12599d41f1a64a4b33cfaccb01c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a3871c12599d41f1a64a4b33cfaccb01c">isLevelSet</a> () const </td></tr>
+<tr class="separator:a3871c12599d41f1a64a4b33cfaccb01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f43d9ef07b4fe31f7198c7850d19d68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a0f43d9ef07b4fe31f7198c7850d19d68">isFogVolume</a> () const </td></tr>
+<tr class="separator:a0f43d9ef07b4fe31f7198c7850d19d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ee43d08f23320d58c94639c211d4022"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a5ee43d08f23320d58c94639c211d4022">isStaggered</a> () const </td></tr>
+<tr class="separator:a5ee43d08f23320d58c94639c211d4022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88d0587f63a0e0884475a9ccd0893109"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a88d0587f63a0e0884475a9ccd0893109">isPointIndex</a> () const </td></tr>
+<tr class="separator:a88d0587f63a0e0884475a9ccd0893109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912e2d5abe2be1bc9ba8dbb8ed4475e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a912e2d5abe2be1bc9ba8dbb8ed4475e4">isGridIndex</a> () const </td></tr>
+<tr class="separator:a912e2d5abe2be1bc9ba8dbb8ed4475e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66d1a320b45e81fba92ca470313323f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a66d1a320b45e81fba92ca470313323f2">isPointData</a> () const </td></tr>
+<tr class="separator:a66d1a320b45e81fba92ca470313323f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09533cf22ad427de1b0c59b8be4b0cfc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a09533cf22ad427de1b0c59b8be4b0cfc">isMask</a> () const </td></tr>
+<tr class="separator:a09533cf22ad427de1b0c59b8be4b0cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149513a42ebb9fdcdad12d028a585b18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a149513a42ebb9fdcdad12d028a585b18">isUnknown</a> () const </td></tr>
+<tr class="separator:a149513a42ebb9fdcdad12d028a585b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94a634a4b210a6ea05e146918ebb4e2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a94a634a4b210a6ea05e146918ebb4e2b">hasMinMax</a> () const </td></tr>
+<tr class="separator:a94a634a4b210a6ea05e146918ebb4e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf725e5e3b79e74ceb7cb146b3b3b4a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#acf725e5e3b79e74ceb7cb146b3b3b4a4">hasBBox</a> () const </td></tr>
+<tr class="separator:acf725e5e3b79e74ceb7cb146b3b3b4a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab94c770e4d55dd2f5a375a1e28dc5536"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ab94c770e4d55dd2f5a375a1e28dc5536">hasLongGridName</a> () const </td></tr>
+<tr class="separator:ab94c770e4d55dd2f5a375a1e28dc5536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a566a3789fbf3a92f0ce9715ee2c74e69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a566a3789fbf3a92f0ce9715ee2c74e69">hasAverage</a> () const </td></tr>
+<tr class="separator:a566a3789fbf3a92f0ce9715ee2c74e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab732a81273218294293dc81263926d4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ab732a81273218294293dc81263926d4d">hasStdDeviation</a> () const </td></tr>
+<tr class="separator:ab732a81273218294293dc81263926d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96b0b4c118a9593fbf775f5ef48ea067"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a96b0b4c118a9593fbf775f5ef48ea067">isBreadthFirst</a> () const </td></tr>
+<tr class="separator:a96b0b4c118a9593fbf775f5ef48ea067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56b024a603c2305a4fcff3180d1f6b2a"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a56b024a603c2305a4fcff3180d1f6b2a">gridSize</a> () const </td></tr>
 <tr class="separator:a56b024a603c2305a4fcff3180d1f6b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6757fa094fdcb558aafeaff758ace46c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a6757fa094fdcb558aafeaff758ace46c">gridIndex</a> () const </td></tr>
@@ -113,36 +154,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7410a55f8cc2fff5a43e4b50e80a31b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac60d5eb1e4b87e2b0a174b37b530b461"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ac60d5eb1e4b87e2b0a174b37b530b461">shortGridName</a> () const </td></tr>
 <tr class="separator:ac60d5eb1e4b87e2b0a174b37b530b461"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0835c5e931765c4a10b918af59363569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0">GridType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a0835c5e931765c4a10b918af59363569">gridType</a> () const </td></tr>
-<tr class="separator:a0835c5e931765c4a10b918af59363569"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29bbaa810f22f76b88b6374789a008ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538">GridClass</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a29bbaa810f22f76b88b6374789a008ef">gridClass</a> () const </td></tr>
-<tr class="separator:a29bbaa810f22f76b88b6374789a008ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3871c12599d41f1a64a4b33cfaccb01c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a3871c12599d41f1a64a4b33cfaccb01c">isLevelSet</a> () const </td></tr>
-<tr class="separator:a3871c12599d41f1a64a4b33cfaccb01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f43d9ef07b4fe31f7198c7850d19d68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a0f43d9ef07b4fe31f7198c7850d19d68">isFogVolume</a> () const </td></tr>
-<tr class="separator:a0f43d9ef07b4fe31f7198c7850d19d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88d0587f63a0e0884475a9ccd0893109"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a88d0587f63a0e0884475a9ccd0893109">isPointIndex</a> () const </td></tr>
-<tr class="separator:a88d0587f63a0e0884475a9ccd0893109"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66d1a320b45e81fba92ca470313323f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a66d1a320b45e81fba92ca470313323f2">isPointData</a> () const </td></tr>
-<tr class="separator:a66d1a320b45e81fba92ca470313323f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09533cf22ad427de1b0c59b8be4b0cfc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a09533cf22ad427de1b0c59b8be4b0cfc">isMask</a> () const </td></tr>
-<tr class="separator:a09533cf22ad427de1b0c59b8be4b0cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ee43d08f23320d58c94639c211d4022"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a5ee43d08f23320d58c94639c211d4022">isStaggered</a> () const </td></tr>
-<tr class="separator:a5ee43d08f23320d58c94639c211d4022"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a149513a42ebb9fdcdad12d028a585b18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a149513a42ebb9fdcdad12d028a585b18">isUnknown</a> () const </td></tr>
-<tr class="separator:a149513a42ebb9fdcdad12d028a585b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07c15aa873ef4d5fdfb4dc90b237d250"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1Map.html">Map</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a07c15aa873ef4d5fdfb4dc90b237d250">map</a> () const </td></tr>
 <tr class="separator:a07c15aa873ef4d5fdfb4dc90b237d250"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaf3684f695cc8e8ba2986392f67f2b5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt; <a class="el" href="namespacenanovdb.html#a61f9aaea546adec9b6d57ed2d699e6c5">Vec3R</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#afaf3684f695cc8e8ba2986392f67f2b5">worldBBox</a> () const </td></tr>
-<tr class="separator:afaf3684f695cc8e8ba2986392f67f2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8886c49541e724d942354e10b845806"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt; <a class="el" href="namespacenanovdb.html#a98d94999010cb92dfb5f652c353d1d82">Vec3d</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ad8886c49541e724d942354e10b845806">worldBBox</a> () const </td></tr>
+<tr class="separator:ad8886c49541e724d942354e10b845806"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b44733507fd4cef9dea7e7ddd04621b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt; <a class="el" href="classnanovdb_1_1Coord.html">Coord</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a3b44733507fd4cef9dea7e7ddd04621b">indexBBox</a> () const </td></tr>
 <tr class="separator:a3b44733507fd4cef9dea7e7ddd04621b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf06616a8eada460060364bdd38642ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenanovdb.html#a61f9aaea546adec9b6d57ed2d699e6c5">Vec3R</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#aaf06616a8eada460060364bdd38642ad">voxelSize</a> () const </td></tr>
-<tr class="separator:aaf06616a8eada460060364bdd38642ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe11d7ce015c713f29f88fb376e22d0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenanovdb.html#a98d94999010cb92dfb5f652c353d1d82">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#abe11d7ce015c713f29f88fb376e22d0f">voxelSize</a> () const </td></tr>
+<tr class="separator:abe11d7ce015c713f29f88fb376e22d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71267eab956fab2c9b34d704479a8ba9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a71267eab956fab2c9b34d704479a8ba9">blindDataCount</a> () const </td></tr>
 <tr class="separator:a71267eab956fab2c9b34d704479a8ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0d74e48e328eeaf51507a588619e9d4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ae0d74e48e328eeaf51507a588619e9d4">blindMetaData</a> (uint32_t n) const </td></tr>
-<tr class="separator:ae0d74e48e328eeaf51507a588619e9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96a9b9032b2eec85384a96ad8b436555"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a96a9b9032b2eec85384a96ad8b436555">activeVoxelCount</a> () const </td></tr>
 <tr class="separator:a96a9b9032b2eec85384a96ad8b436555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac015937b7e1e71ab77c27f063e62306"><td class="memItemLeft" align="right" valign="top">const uint32_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#aac015937b7e1e71ab77c27f063e62306">activeTileCount</a> (uint32_t level) const </td></tr>
@@ -151,14 +172,75 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6cbf02520b0d9d379ac8ef5959d63915"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0880c82c125789d4d13e79d87408c5b0"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a0880c82c125789d4d13e79d87408c5b0">checksum</a> () const </td></tr>
 <tr class="separator:a0880c82c125789d4d13e79d87408c5b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b0a6d351fe6365338a18ff053e77bbb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a7b0a6d351fe6365338a18ff053e77bbb">rootTableSize</a> () const </td></tr>
+<tr class="separator:a7b0a6d351fe6365338a18ff053e77bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a479432127ee77145cc19d6a2d1590821"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a479432127ee77145cc19d6a2d1590821">isEmpty</a> () const </td></tr>
 <tr class="separator:a479432127ee77145cc19d6a2d1590821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58d42d3098d09eeaf661f67c40a5d51e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Version.html">Version</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a58d42d3098d09eeaf661f67c40a5d51e">version</a> () const </td></tr>
 <tr class="separator:a58d42d3098d09eeaf661f67c40a5d51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a1063457aedaf90a9742b3f4913637c37"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a1063457aedaf90a9742b3f4913637c37">safeCast</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData)</td></tr>
+<tr class="memdesc:a1063457aedaf90a9742b3f4913637c37"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if it is safe to cast the grid to a pointer of type <a class="el" href="classnanovdb_1_1GridMetaData.html" title="This is a convenient class that allows for access to grid meta-data that are independent of the value...">GridMetaData</a>, i.e. construction can be avoided.  <a href="#a1063457aedaf90a9742b3f4913637c37">More...</a><br /></td></tr>
+<tr class="separator:a1063457aedaf90a9742b3f4913637c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a669014037cd5ff83ef5afa2a43c97506"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a669014037cd5ff83ef5afa2a43c97506"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a669014037cd5ff83ef5afa2a43c97506">safeCast</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; T &gt; &amp;grid)</td></tr>
+<tr class="memdesc:a669014037cd5ff83ef5afa2a43c97506"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if it is safe to cast the grid to a pointer of type <a class="el" href="classnanovdb_1_1GridMetaData.html" title="This is a convenient class that allows for access to grid meta-data that are independent of the value...">GridMetaData</a>, i.e. construction can be avoided.  <a href="#a669014037cd5ff83ef5afa2a43c97506">More...</a><br /></td></tr>
+<tr class="separator:a669014037cd5ff83ef5afa2a43c97506"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is a convenient class that allows for access to grid meta-data that are independent of the value type of a grid. That is, this class can be used to get information about a grid without actually knowing its ValueType. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a9d1b83d766a42865b6434a23a153d3b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1GridMetaData.html">GridMetaData</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>grid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad0ca1632c1112308658724696e9540a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1GridMetaData.html">GridMetaData</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *&#160;</td>
+          <td class="paramname"><em>gridData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aac015937b7e1e71ab77c27f063e62306"></a>
 <div class="memitem">
 <div class="memproto">
@@ -229,30 +311,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae0d74e48e328eeaf51507a588619e9d4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a>&amp; blindMetaData </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a0880c82c125789d4d13e79d87408c5b0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -276,7 +334,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a29bbaa810f22f76b88b6374789a008ef"></a>
+<a class="anchor" id="a699c8c71743c884aec021754933ead62"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -284,7 +342,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538">GridClass</a> gridClass </td>
+          <td class="memname">const <a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538">GridClass</a>&amp; gridClass </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -368,7 +426,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0835c5e931765c4a10b918af59363569"></a>
+<a class="anchor" id="a259d44e4d6c5a6a29e462ee8932f3edb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -376,7 +434,122 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0">GridType</a> gridType </td>
+          <td class="memname">const <a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0">GridType</a>&amp; gridType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a566a3789fbf3a92f0ce9715ee2c74e69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasAverage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acf725e5e3b79e74ceb7cb146b3b3b4a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasBBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab94c770e4d55dd2f5a375a1e28dc5536"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasLongGridName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a94a634a4b210a6ea05e146918ebb4e2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasMinMax </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab732a81273218294293dc81263926d4d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasStdDeviation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -400,6 +573,29 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt;<a class="el" href="classnanovdb_1_1Coord.html">Coord</a>&gt;&amp; indexBBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a96b0b4c118a9593fbf775f5ef48ea067"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isBreadthFirst </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -446,6 +642,29 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool isFogVolume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a912e2d5abe2be1bc9ba8dbb8ed4475e4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isGridIndex </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -668,6 +887,106 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7b0a6d351fe6365338a18ff053e77bbb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t rootTableSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a12ff15acc3e264af4794a8ed54610d01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool safeCast </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return true if the <a class="el" href="structnanovdb_1_1RootData.html" title="Struct with all the member data of the RootNode (useful during serialization of an openvdb RootNode) ...">RootData</a> follows right after the <a class="el" href="structnanovdb_1_1TreeData.html">TreeData</a>. If so, this implies that it's safe to cast the grid from which this instance was constructed to a <a class="el" href="classnanovdb_1_1GridMetaData.html" title="This is a convenient class that allows for access to grid meta-data that are independent of the value...">GridMetaData</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a1063457aedaf90a9742b3f4913637c37"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool safeCast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *&#160;</td>
+          <td class="paramname"><em>gridData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return true if it is safe to cast the grid to a pointer of type <a class="el" href="classnanovdb_1_1GridMetaData.html" title="This is a convenient class that allows for access to grid meta-data that are independent of the value...">GridMetaData</a>, i.e. construction can be avoided. </p>
+
+</div>
+</div>
+<a class="anchor" id="a669014037cd5ff83ef5afa2a43c97506"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool safeCast </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>grid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return true if it is safe to cast the grid to a pointer of type <a class="el" href="classnanovdb_1_1GridMetaData.html" title="This is a convenient class that allows for access to grid meta-data that are independent of the value...">GridMetaData</a>, i.e. construction can be avoided. </p>
+
+</div>
+</div>
 <a class="anchor" id="ac60d5eb1e4b87e2b0a174b37b530b461"></a>
 <div class="memitem">
 <div class="memproto">
@@ -714,7 +1033,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aaf06616a8eada460060364bdd38642ad"></a>
+<a class="anchor" id="abe11d7ce015c713f29f88fb376e22d0f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -722,7 +1041,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacenanovdb.html#a61f9aaea546adec9b6d57ed2d699e6c5">Vec3R</a> voxelSize </td>
+          <td class="memname"><a class="el" href="namespacenanovdb.html#a98d94999010cb92dfb5f652c353d1d82">Vec3d</a> voxelSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -737,7 +1056,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afaf3684f695cc8e8ba2986392f67f2b5"></a>
+<a class="anchor" id="ad8886c49541e724d942354e10b845806"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -745,7 +1064,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt;<a class="el" href="namespacenanovdb.html#a61f9aaea546adec9b6d57ed2d699e6c5">Vec3R</a>&gt;&amp; worldBBox </td>
+          <td class="memname">const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt;<a class="el" href="namespacenanovdb.html#a98d94999010cb92dfb5f652c353d1d82">Vec3d</a>&gt;&amp; worldBBox </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

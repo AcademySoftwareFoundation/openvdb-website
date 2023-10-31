@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>OpenVDB: is_same&lt; T1, T2 &gt; Struct Template Reference</title>
+<title>OpenVDB: is_same&lt; T0, T1, T &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -92,7 +92,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structnanovdb_1_1is__same-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">is_same&lt; T1, T2 &gt; Struct Template Reference</div>  </div>
+<div class="title">is_same&lt; T0, T1, T &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -103,14 +103,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a5b4ee4ae6cba6bb75200ba7af1910873"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1is__same.html#a5b4ee4ae6cba6bb75200ba7af1910873">value</a> = false</td></tr>
+<tr class="memitem:a5b4ee4ae6cba6bb75200ba7af1910873"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1is__same.html#a5b4ee4ae6cba6bb75200ba7af1910873">value</a> = <a class="el" href="structnanovdb_1_1is__same.html">is_same</a>&lt;T0, T1&gt;::value || <a class="el" href="structnanovdb_1_1is__same.html">is_same</a>&lt;T0, T...&gt;::value</td></tr>
 <tr class="separator:a5b4ee4ae6cba6bb75200ba7af1910873"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T1, typename T2&gt;<br />
-struct nanovdb::is_same&lt; T1, T2 &gt;</h3>
+<div class="textblock"><h3>template&lt;typename T0, typename T1, typename... T&gt;<br />
+struct nanovdb::is_same&lt; T0, T1, T &gt;</h3>
 
 <p>C++11 implementation of std::is_same. </p>
+<dl class="section note"><dt>Note</dt><dd>When more than two arguments are provided value = T0==T1 || T0==T2 || ... </dd></dl>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a5b4ee4ae6cba6bb75200ba7af1910873"></a>
 <div class="memitem">
@@ -120,7 +121,7 @@ struct nanovdb::is_same&lt; T1, T2 &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool value = false</td>
+          <td class="memname">constexpr bool value = <a class="el" href="structnanovdb_1_1is__same.html">is_same</a>&lt;T0, T1&gt;::value || <a class="el" href="structnanovdb_1_1is__same.html">is_same</a>&lt;T0, T...&gt;::value</td>
         </tr>
       </table>
   </td>

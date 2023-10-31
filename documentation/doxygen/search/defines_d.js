@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['test_5fsyntax_5ffails',['TEST_SYNTAX_FAILS',['../util_8h.html#ae6348be2aec4f22bd0e243ac68ba6c95',1,'util.h']]],
-  ['test_5fsyntax_5fpasses',['TEST_SYNTAX_PASSES',['../util_8h.html#a11d186eeb06ac8e4d906af8b73f87c92',1,'util.h']]]
+  ['use_5fhits',['USE_HITS',['../RayTracer_8h.html#afdd8a9f63fc84bda1998204d8bb3b3ea',1,'RayTracer.h']]],
+  ['use_5fsingle_5froot_5fkey',['USE_SINGLE_ROOT_KEY',['../CNanoVDB_8h.html#a14b215375bd9c0436ca73ed15de70981',1,'CNanoVDB.h']]]
 ];

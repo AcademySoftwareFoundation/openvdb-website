@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -94,10 +94,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"></a>
 Files</h2></td></tr>
-<tr class="memitem:CSampleFromVoxels_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CSampleFromVoxels_8h.html">CSampleFromVoxels.h</a> <a href="CSampleFromVoxels_8h_source.html">[code]</a></td></tr>
+<tr class="memitem:nanovdb_2nanovdb_2util_2CpuTimer_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nanovdb_2nanovdb_2util_2CpuTimer_8h.html">CpuTimer.h</a> <a href="nanovdb_2nanovdb_2util_2CpuTimer_8h_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:CudaDeviceBuffer_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CudaDeviceBuffer_8h.html">CudaDeviceBuffer.h</a> <a href="CudaDeviceBuffer_8h_source.html">[code]</a></td></tr>
-<tr class="memdesc:CudaDeviceBuffer_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a simple CUDA allocator! <br /></td></tr>
+<tr class="memitem:CreateNanoGrid_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CreateNanoGrid_8h.html">CreateNanoGrid.h</a> <a href="CreateNanoGrid_8h_source.html">[code]</a></td></tr>
+<tr class="memdesc:CreateNanoGrid_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert any grid to a nanovdb grid of the same type, e.g. float-&gt;float. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:CSampleFromVoxels_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CSampleFromVoxels_8h.html">CSampleFromVoxels.h</a> <a href="CSampleFromVoxels_8h_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:DitherLUT_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="DitherLUT_8h.html">DitherLUT.h</a> <a href="DitherLUT_8h_source.html">[code]</a></td></tr>
 <tr class="memdesc:DitherLUT_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines look up table to do dithering of 8^3 leaf nodes. <br /></td></tr>
@@ -106,13 +108,13 @@ Files</h2></td></tr>
 <tr class="memdesc:ForEach_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">A unified wrapper for tbb::parallel_for and a naive std::thread fallback. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:GridBuilder_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GridBuilder_8h.html">GridBuilder.h</a> <a href="GridBuilder_8h_source.html">[code]</a></td></tr>
-<tr class="memdesc:GridBuilder_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a NanoVDB grid from any volume or function. <br /></td></tr>
+<tr class="memdesc:GridBuilder_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file defines a minimum set of tree nodes and tools that can be used (instead of OpenVDB) to build nanovdb grids on the CPU. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:GridChecksum_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GridChecksum_8h.html">GridChecksum.h</a> <a href="GridChecksum_8h_source.html">[code]</a></td></tr>
-<tr class="memdesc:GridChecksum_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a pair of 32bit checksums, og a Grid, by means of Cyclic Redundancy Check (CRC) <br /></td></tr>
+<tr class="memdesc:GridChecksum_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a pair of 32bit checksums, of a Grid, by means of Cyclic Redundancy Check (CRC) <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:GridHandle_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GridHandle_8h.html">GridHandle.h</a> <a href="GridHandle_8h_source.html">[code]</a></td></tr>
-<tr class="memdesc:GridHandle_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines two classes, a GridRegister the defines the value type (e.g. Double, Float etc) of a NanoVDB grid, and a GridHandle and manages the memory of a NanoVDB grid. <br /></td></tr>
+<tr class="memdesc:GridHandle_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines GridHandle, which manages a host, and possibly a device, memory buffer containing one or more NanoVDB grids. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:GridStats_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GridStats_8h.html">GridStats.h</a> <a href="GridStats_8h_source.html">[code]</a></td></tr>
 <tr class="memdesc:GridStats_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-computes min/max/avg/var/bbox information for each node in a pre-existing NanoVDB grid. <br /></td></tr>
@@ -126,9 +128,6 @@ Files</h2></td></tr>
 <tr class="memitem:HostBuffer_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="HostBuffer_8h.html">HostBuffer.h</a> <a href="HostBuffer_8h_source.html">[code]</a></td></tr>
 <tr class="memdesc:HostBuffer_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">HostBuffer - a buffer that contains a shared or private bump pool to either externally or internally managed host memory. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:IndexGridBuilder_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="IndexGridBuilder_8h.html">IndexGridBuilder.h</a> <a href="IndexGridBuilder_8h_source.html">[code]</a></td></tr>
-<tr class="memdesc:IndexGridBuilder_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a NanoVDB IndexGrid from any existing NanoVDB grid. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:Invoke_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Invoke_8h.html">Invoke.h</a> <a href="Invoke_8h_source.html">[code]</a></td></tr>
 <tr class="memdesc:Invoke_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">A unified wrapper for tbb::parallel_invoke and a naive std::thread analog. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,7 +140,9 @@ Files</h2></td></tr>
 <tr class="memitem:nanovdb_2nanovdb_2util_2NodeManager_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nanovdb_2nanovdb_2util_2NodeManager_8h.html">NodeManager.h</a> <a href="nanovdb_2nanovdb_2util_2NodeManager_8h_source.html">[code]</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:OpenToNanoVDB_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="OpenToNanoVDB_8h.html">OpenToNanoVDB.h</a> <a href="OpenToNanoVDB_8h_source.html">[code]</a></td></tr>
-<tr class="memdesc:OpenToNanoVDB_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class will serialize an OpenVDB grid into a NanoVDB grid. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:PrefixSum_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="PrefixSum_8h.html">PrefixSum.h</a> <a href="PrefixSum_8h_source.html">[code]</a></td></tr>
+<tr class="memdesc:PrefixSum_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multi-threaded implementations of inclusive prefix sum. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:Primitives_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Primitives_8h.html">Primitives.h</a> <a href="Primitives_8h_source.html">[code]</a></td></tr>
 <tr class="memdesc:Primitives_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates volumetric primitives, e.g. sphere, torus etc, as NanoVDB grid. <br /></td></tr>

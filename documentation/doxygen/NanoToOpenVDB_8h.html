@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -125,7 +125,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structConvertTrait_3_01nanovdb_1_1ValueMask_01_4.html">ConvertTrait&lt; nanovdb::ValueMask &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NanoToOpenVDB.html">NanoToOpenVDB&lt; NanoBuildT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class will serialize an OpenVDB grid into a NanoVDB grid managed by a <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a>.  <a href="classnanovdb_1_1NanoToOpenVDB.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class will serialize an OpenVDB grid into a NanoVDB grid managed by a <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>.  <a href="classnanovdb_1_1NanoToOpenVDB.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -141,13 +141,13 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a70a1f358bddf885f98de81d6c67a5cc8"><td class="memTemplParams" colspan="2">template&lt;typename NanoBuildT &gt; </td></tr>
-<tr class="memitem:a70a1f358bddf885f98de81d6c67a5cc8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classopenvdb_1_1v10__1_1_1Grid.html">openvdb::Grid</a>&lt; typename openvdb::tree::Tree4&lt; typename <a class="el" href="structConvertTrait.html">ConvertTrait</a>&lt; NanoBuildT &gt;::Type &gt;::Type &gt;::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a70a1f358bddf885f98de81d6c67a5cc8">nanoToOpenVDB</a> (const NanoGrid&lt; NanoBuildT &gt; &amp;grid, int verbose=0)</td></tr>
+<tr class="memitem:a70a1f358bddf885f98de81d6c67a5cc8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classopenvdb_1_1v11__0_1_1Grid.html">openvdb::Grid</a>&lt; typename openvdb::tree::Tree4&lt; typename <a class="el" href="structConvertTrait.html">ConvertTrait</a>&lt; NanoBuildT &gt;::Type &gt;::Type &gt;::Ptr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a70a1f358bddf885f98de81d6c67a5cc8">nanoToOpenVDB</a> (const NanoGrid&lt; NanoBuildT &gt; &amp;grid, int verbose=0)</td></tr>
 <tr class="memdesc:a70a1f358bddf885f98de81d6c67a5cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward declaration of free-standing function that de-serializes a typed NanoVDB grid into an OpenVDB <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">Grid</a>.  <a href="namespacenanovdb.html#a70a1f358bddf885f98de81d6c67a5cc8">More...</a><br /></td></tr>
 <tr class="separator:a70a1f358bddf885f98de81d6c67a5cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa565b8cc3240db7b7aa3ef026c8528dc"><td class="memTemplParams" colspan="2">template&lt;typename BufferT &gt; </td></tr>
-<tr class="memitem:aa565b8cc3240db7b7aa3ef026c8528dc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classopenvdb_1_1v10__1_1_1GridBase.html#ad98d7556003ccc2ef810f87d97159de4">openvdb::GridBase::Ptr</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#aa565b8cc3240db7b7aa3ef026c8528dc">nanoToOpenVDB</a> (const GridHandle&lt; BufferT &gt; &amp;handle, int verbose=0)</td></tr>
-<tr class="memdesc:aa565b8cc3240db7b7aa3ef026c8528dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward declaration of free-standing function that de-serializes a NanoVDB <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> into an OpenVDB GridBase.  <a href="namespacenanovdb.html#aa565b8cc3240db7b7aa3ef026c8528dc">More...</a><br /></td></tr>
-<tr class="separator:aa565b8cc3240db7b7aa3ef026c8528dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa72b88b227b35581f56f4c58aaa6383a"><td class="memTemplParams" colspan="2">template&lt;typename BufferT &gt; </td></tr>
+<tr class="memitem:aa72b88b227b35581f56f4c58aaa6383a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classopenvdb_1_1v11__0_1_1GridBase.html#ad98d7556003ccc2ef810f87d97159de4">openvdb::GridBase::Ptr</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#aa72b88b227b35581f56f4c58aaa6383a">nanoToOpenVDB</a> (const GridHandle&lt; BufferT &gt; &amp;handle, int verbose=0, uint32_t n=0)</td></tr>
+<tr class="memdesc:aa72b88b227b35581f56f4c58aaa6383a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward declaration of free-standing function that de-serializes a NanoVDB <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> into an OpenVDB GridBase.  <a href="namespacenanovdb.html#aa72b88b227b35581f56f4c58aaa6383a">More...</a><br /></td></tr>
+<tr class="separator:aa72b88b227b35581f56f4c58aaa6383a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class will deserialize an NanoVDB grid into an OpenVDB grid. </p>

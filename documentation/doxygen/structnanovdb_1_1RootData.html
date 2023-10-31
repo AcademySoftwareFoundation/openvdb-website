@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -106,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p><code>#include &lt;<a class="el" href="NanoVDB_8h_source.html">nanovdb/NanoVDB.h</a>&gt;</code></p>
 
-<p>Inherited by <a class="el" href="classnanovdb_1_1RootNode.html">RootNode&lt; ChildT &gt;</a><code> [private]</code>.</p>
+<p>Inherited by <a class="el" href="classnanovdb_1_1RootNode.html">RootNode&lt; ChildT &gt;</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -134,6 +134,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4892a00d62ab86a81b520c512ac15bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c87376d789e6bbfd9ef72d7fed345c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1RootData_1_1Tile.html">Tile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#a5c87376d789e6bbfd9ef72d7fed345c4">tile</a> (uint32_t n)</td></tr>
 <tr class="separator:a5c87376d789e6bbfd9ef72d7fed345c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a2b974010bbbfde3d0c5ba06c2d6649"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1RootData_1_1Tile.html">Tile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#a5a2b974010bbbfde3d0c5ba06c2d6649">probeTile</a> (const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;ijk)</td></tr>
+<tr class="separator:a5a2b974010bbbfde3d0c5ba06c2d6649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75c6b660d6e5e4274bd39e6436e2160d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1RootData_1_1Tile.html">Tile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#a75c6b660d6e5e4274bd39e6436e2160d">probeTile</a> (const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;ijk) const </td></tr>
+<tr class="separator:a75c6b660d6e5e4274bd39e6436e2160d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a855200d5b238299978f0d496c2a59810"><td class="memItemLeft" align="right" valign="top">ChildT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#a855200d5b238299978f0d496c2a59810">getChild</a> (const <a class="el" href="structnanovdb_1_1RootData_1_1Tile.html">Tile</a> *<a class="el" href="structnanovdb_1_1RootData.html#a4892a00d62ab86a81b520c512ac15bc0">tile</a>)</td></tr>
 <tr class="memdesc:a855200d5b238299978f0d496c2a59810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the child node in the specified tile.  <a href="#a855200d5b238299978f0d496c2a59810">More...</a><br /></td></tr>
 <tr class="separator:a855200d5b238299978f0d496c2a59810"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -556,6 +560,54 @@ struct nanovdb::RootData&lt; ChildT &gt;</h3>
 
 <p>Return padding of this class in bytes, due to aliasing and 32B alignment. </p>
 <dl class="section note"><dt>Note</dt><dd>The extra bytes are not necessarily at the end, but can come from aliasing of individual data members. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5a2b974010bbbfde3d0c5ba06c2d6649"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1RootData_1_1Tile.html">Tile</a>* probeTile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;&#160;</td>
+          <td class="paramname"><em>ijk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a75c6b660d6e5e4274bd39e6436e2160d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structnanovdb_1_1RootData_1_1Tile.html">Tile</a>* probeTile </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;&#160;</td>
+          <td class="paramname"><em>ijk</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

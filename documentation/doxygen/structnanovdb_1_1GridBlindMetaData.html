@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -90,7 +90,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structnanovdb_1_1GridBlindMetaData-members.html">List of all members</a>  </div>
@@ -103,26 +102,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a339ddd871976179dc77c2080cc5491e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#a339ddd871976179dc77c2080cc5491e8">setBlindData</a> (void *ptr)</td></tr>
-<tr class="separator:a339ddd871976179dc77c2080cc5491e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7271f0d8f75a71a28537d257a85ca33"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae7271f0d8f75a71a28537d257a85ca33"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#ae7271f0d8f75a71a28537d257a85ca33">getBlindData</a> () const </td></tr>
-<tr class="separator:ae7271f0d8f75a71a28537d257a85ca33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a182800882c65fc345b65110677110519"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#a182800882c65fc345b65110677110519">memUsage</a> (uint64_t blindDataCount=0)</td></tr>
-<tr class="memdesc:a182800882c65fc345b65110677110519"><td class="mdescLeft">&#160;</td><td class="mdescRight">return memory usage in bytes for the class (note this computes for all blindMetaData structures.)  <a href="#a182800882c65fc345b65110677110519">More...</a><br /></td></tr>
-<tr class="separator:a182800882c65fc345b65110677110519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d0acd1aa7a9c60a029633100b7ab3f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#a0d0acd1aa7a9c60a029633100b7ab3f7">GridBlindMetaData</a> (const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> &amp;)=delete</td></tr>
+<tr class="separator:a0d0acd1aa7a9c60a029633100b7ab3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e9e1bbf2cf3d766e5ed619ee6a4258"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#a78e9e1bbf2cf3d766e5ed619ee6a4258">operator=</a> (const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> &amp;)=delete</td></tr>
+<tr class="separator:a78e9e1bbf2cf3d766e5ed619ee6a4258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad868a65249889945d3da3c3e03ba6e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#ad868a65249889945d3da3c3e03ba6e7b">setBlindData</a> (void *<a class="el" href="structnanovdb_1_1GridBlindMetaData.html#a2eb8e6d8ff1c43be20366aa1349a7feb">blindData</a>)</td></tr>
+<tr class="separator:ad868a65249889945d3da3c3e03ba6e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eb8e6d8ff1c43be20366aa1349a7feb"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#a2eb8e6d8ff1c43be20366aa1349a7feb">blindData</a> () const </td></tr>
+<tr class="separator:a2eb8e6d8ff1c43be20366aa1349a7feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae112e360e08af16b320c982d1abfff8b"><td class="memTemplParams" colspan="2">template&lt;typename BlindDataT &gt; </td></tr>
+<tr class="memitem:ae112e360e08af16b320c982d1abfff8b"><td class="memTemplItemLeft" align="right" valign="top">const BlindDataT *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#ae112e360e08af16b320c982d1abfff8b">getBlindData</a> () const </td></tr>
+<tr class="memdesc:ae112e360e08af16b320c982d1abfff8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const pointer to the blind data represented by this meta data.  <a href="#ae112e360e08af16b320c982d1abfff8b">More...</a><br /></td></tr>
+<tr class="separator:ae112e360e08af16b320c982d1abfff8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#aac1b70a2ed67ead038c4d3f5ac4d8a81">isValid</a> () const </td></tr>
+<tr class="memdesc:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if this meta data has a valid combination of semantic, class and value tags  <a href="#aac1b70a2ed67ead038c4d3f5ac4d8a81">More...</a><br /></td></tr>
+<tr class="separator:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac99f898457748a43a7732378003e8301"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#ac99f898457748a43a7732378003e8301">blindDataSize</a> () const </td></tr>
+<tr class="memdesc:ac99f898457748a43a7732378003e8301"><td class="mdescLeft">&#160;</td><td class="mdescRight">return size in bytes of the blind data represented by this blind meta data  <a href="#ac99f898457748a43a7732378003e8301">More...</a><br /></td></tr>
+<tr class="separator:ac99f898457748a43a7732378003e8301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a539cd4979ed5783a57d44d792d3a911b"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#a539cd4979ed5783a57d44d792d3a911b">mByteOffset</a></td></tr>
-<tr class="separator:a539cd4979ed5783a57d44d792d3a911b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab63c01ba123e6d08145f34766938acbe"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#ab63c01ba123e6d08145f34766938acbe">mElementCount</a></td></tr>
-<tr class="separator:ab63c01ba123e6d08145f34766938acbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0251ac0c51aa69a1a5f25044b269eae1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#a0251ac0c51aa69a1a5f25044b269eae1">mFlags</a></td></tr>
-<tr class="separator:a0251ac0c51aa69a1a5f25044b269eae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87f3c1b0bacb828b34a0bb9aac90cf7"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#ae87f3c1b0bacb828b34a0bb9aac90cf7">mDataOffset</a></td></tr>
+<tr class="separator:ae87f3c1b0bacb828b34a0bb9aac90cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceadc41225faa4b1752da913266479f5"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#aceadc41225faa4b1752da913266479f5">mValueCount</a></td></tr>
+<tr class="separator:aceadc41225faa4b1752da913266479f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63111c1e2aae1decaf0b26309ffdbd49"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#a63111c1e2aae1decaf0b26309ffdbd49">mValueSize</a></td></tr>
+<tr class="separator:a63111c1e2aae1decaf0b26309ffdbd49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ee11be9b9053899a58afcb752d359ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenanovdb.html#ad302dde29b8cf276217e7db12f56e1ea">GridBlindDataSemantic</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#a4ee11be9b9053899a58afcb752d359ba">mSemantic</a></td></tr>
 <tr class="separator:a4ee11be9b9053899a58afcb752d359ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8086c9fed28a7e17c3080e56a7a12cf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenanovdb.html#a88f2aa0b172a229831be2b4e1c70e757">GridBlindDataClass</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#a8086c9fed28a7e17c3080e56a7a12cf1">mDataClass</a></td></tr>
@@ -137,8 +143,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:aea60bcbc021e2fd021f5beda4be2aa2e"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#aea60bcbc021e2fd021f5beda4be2aa2e">MaxNameSize</a> = 256</td></tr>
 <tr class="separator:aea60bcbc021e2fd021f5beda4be2aa2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ae7271f0d8f75a71a28537d257a85ca33"></a>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a0d0acd1aa7a9c60a029633100b7ab3f7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -146,7 +152,32 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const T* getBlindData </td>
+          <td class="memname"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2eb8e6d8ff1c43be20366aa1349a7feb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const void* blindData </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -161,7 +192,7 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a182800882c65fc345b65110677110519"></a>
+<a class="anchor" id="ac99f898457748a43a7732378003e8301"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -169,25 +200,107 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static uint64_t memUsage </td>
+          <td class="memname">uint64_t blindDataSize </td>
           <td>(</td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>blindDataCount</em> = <code>0</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return size in bytes of the blind data represented by this blind meta data </p>
+<dl class="section note"><dt>Note</dt><dd>This size includes possible padding for 32 byte alignment. The actual amount of bind data is mValueCount * mValueSize </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae112e360e08af16b320c982d1abfff8b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const BlindDataT* getBlindData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a const pointer to the blind data represented by this meta data. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">BlindDataT</td><td>Expected value type of the blind data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns NULL if mGridType!=<a class="el" href="namespacenanovdb.html#a1ef31d1180f1de8222ad805471e625a4" title="Maps from a templated build type to a GridType enum. ">mapToGridType&lt;BlindDataT&gt;()</a>, else a const point of type BlindDataT. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Use mDataType=Unknown if BlindDataT is a custom data type unknown to NanoVDB. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aac1b70a2ed67ead038c4d3f5ac4d8a81"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return true if this meta data has a valid combination of semantic, class and value tags </p>
+
+</div>
+</div>
+<a class="anchor" id="a78e9e1bbf2cf3d766e5ed619ee6a4258"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>return memory usage in bytes for the class (note this computes for all blindMetaData structures.) </p>
-
 </div>
 </div>
-<a class="anchor" id="a339ddd871976179dc77c2080cc5491e8"></a>
+<a class="anchor" id="ad868a65249889945d3da3c3e03ba6e7b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -198,7 +311,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">void setBlindData </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td class="paramname"><em>blindData</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -232,18 +345,6 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a539cd4979ed5783a57d44d792d3a911b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int64_t mByteOffset</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a8086c9fed28a7e17c3080e56a7a12cf1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -256,36 +357,24 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae87f3c1b0bacb828b34a0bb9aac90cf7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t mDataOffset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a35aa694403f5ae28a8a73d1ef98fd14d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0">GridType</a> mDataType</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ab63c01ba123e6d08145f34766938acbe"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64_t mElementCount</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a0251ac0c51aa69a1a5f25044b269eae1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t mFlags</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -310,6 +399,30 @@ Static Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="namespacenanovdb.html#ad302dde29b8cf276217e7db12f56e1ea">GridBlindDataSemantic</a> mSemantic</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aceadc41225faa4b1752da913266479f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t mValueCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a63111c1e2aae1decaf0b26309ffdbd49"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t mValueSize</td>
         </tr>
       </table>
 </div><div class="memdoc">

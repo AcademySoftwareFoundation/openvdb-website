@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -105,6 +105,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5176c4ac13415a527e1d95b366cd136a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Version.html#a5176c4ac13415a527e1d95b366cd136a">Version</a> ()</td></tr>
 <tr class="separator:a5176c4ac13415a527e1d95b366cd136a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e6dc975231a662c7d706ac3c38cfb7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Version.html#a4e6dc975231a662c7d706ac3c38cfb7e">Version</a> (uint32_t data)</td></tr>
+<tr class="separator:a4e6dc975231a662c7d706ac3c38cfb7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a739b9b386b57fd044e706a298afc25de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Version.html#a739b9b386b57fd044e706a298afc25de">Version</a> (uint32_t major, uint32_t minor, uint32_t patch)</td></tr>
 <tr class="separator:a739b9b386b57fd044e706a298afc25de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20d7f445e2d35640341f18e4c9c52a7e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Version.html#a20d7f445e2d35640341f18e4c9c52a7e">operator==</a> (const <a class="el" href="classnanovdb_1_1Version.html">Version</a> &amp;rhs) const </td></tr>
@@ -125,6 +127,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a56b0b73d8f78bc4a67424de0a429d804"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b68f40e0cbdeee3a9c40fb92919490e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Version.html#a9b68f40e0cbdeee3a9c40fb92919490e">getPatch</a> () const </td></tr>
 <tr class="separator:a9b68f40e0cbdeee3a9c40fb92919490e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69eb832be17210dd9b329d5837b2e4e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Version.html#a69eb832be17210dd9b329d5837b2e4e2">isCompatible</a> () const </td></tr>
+<tr class="separator:a69eb832be17210dd9b329d5837b2e4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a6869c7a4a6b9776e0fe0dcbd29fa3f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Version.html#a9a6869c7a4a6b9776e0fe0dcbd29fa3f">age</a> () const </td></tr>
+<tr class="memdesc:a9a6869c7a4a6b9776e0fe0dcbd29fa3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the major version of this instance relative to NANOVDB_MAJOR_VERSION_NUMBER.  <a href="#a9a6869c7a4a6b9776e0fe0dcbd29fa3f">More...</a><br /></td></tr>
+<tr class="separator:a9a6869c7a4a6b9776e0fe0dcbd29fa3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89da6be964480b4c86334e4e337d3cf2"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Version.html#a89da6be964480b4c86334e4e337d3cf2">c_str</a> () const </td></tr>
 <tr class="separator:a89da6be964480b4c86334e4e337d3cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -143,6 +150,30 @@ Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classnanovdb_1_1Version.html">Version</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4e6dc975231a662c7d706ac3c38cfb7e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnanovdb_1_1Version.html">Version</a> </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -196,6 +227,32 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a9a6869c7a4a6b9776e0fe0dcbd29fa3f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int age </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check the major version of this instance relative to NANOVDB_MAJOR_VERSION_NUMBER. </p>
+<dl class="section return"><dt>Returns</dt><dd>return 0 if the major version equals NANOVDB_MAJOR_VERSION_NUMBER, else a negative age if it is older, i.e. smaller, and a positive age if it's newer, i.e.e larger. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a89da6be964480b4c86334e4e337d3cf2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -297,6 +354,29 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">uint32_t id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a69eb832be17210dd9b329d5837b2e4e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isCompatible </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

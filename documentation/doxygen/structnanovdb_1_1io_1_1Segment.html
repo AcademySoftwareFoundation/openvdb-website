@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -97,6 +97,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>This class defines all the data stored in segment of a file.  
+ <a href="structnanovdb_1_1io_1_1Segment.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="IO_8h_source.html">nanovdb/util/IO.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -115,12 +118,15 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5bca8ae02052fbbf5777e6804628ff12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1io_1_1Header.html">Header</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1io_1_1Segment.html#a5bca8ae02052fbbf5777e6804628ff12">header</a></td></tr>
-<tr class="separator:a5bca8ae02052fbbf5777e6804628ff12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a415e3f8f5052a54cb05b21ddf8d5d8c0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structnanovdb_1_1io_1_1GridMetaData.html">GridMetaData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1io_1_1Segment.html#a415e3f8f5052a54cb05b21ddf8d5d8c0">meta</a></td></tr>
-<tr class="separator:a415e3f8f5052a54cb05b21ddf8d5d8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6eafe1d77a35bf22a42f3dd414b6803"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1io_1_1FileHeader.html">FileHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1io_1_1Segment.html#ae6eafe1d77a35bf22a42f3dd414b6803">header</a></td></tr>
+<tr class="separator:ae6eafe1d77a35bf22a42f3dd414b6803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f38913b5d5d0ae3c06df31eaf62042"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structnanovdb_1_1io_1_1FileGridMetaData.html">FileGridMetaData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1io_1_1Segment.html#a41f38913b5d5d0ae3c06df31eaf62042">meta</a></td></tr>
+<tr class="separator:a41f38913b5d5d0ae3c06df31eaf62042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This class defines all the data stored in segment of a file. </p>
+<p>A segment consists of a <a class="el" href="structnanovdb_1_1io_1_1FileHeader.html" title="Data encoded at the head of each segment of a file or stream. ">FileHeader</a> followed by a list of <a class="el" href="structnanovdb_1_1io_1_1FileGridMetaData.html" title="This class defines the meta data stored for each grid in a segment. ">FileGridMetaData</a> each followed by grid names and then finally the grids themselves. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac0fd200a7be9d41b5157a128dc5a0d60"></a>
 <div class="memitem">
 <div class="memproto">
@@ -242,24 +248,24 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a5bca8ae02052fbbf5777e6804628ff12"></a>
+<a class="anchor" id="ae6eafe1d77a35bf22a42f3dd414b6803"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1io_1_1Header.html">Header</a> header</td>
+          <td class="memname"><a class="el" href="structnanovdb_1_1io_1_1FileHeader.html">FileHeader</a> header</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a class="anchor" id="a415e3f8f5052a54cb05b21ddf8d5d8c0"></a>
+<a class="anchor" id="a41f38913b5d5d0ae3c06df31eaf62042"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="structnanovdb_1_1io_1_1GridMetaData.html">GridMetaData</a>&gt; meta</td>
+          <td class="memname">std::vector&lt;<a class="el" href="structnanovdb_1_1io_1_1FileGridMetaData.html">FileGridMetaData</a>&gt; meta</td>
         </tr>
       </table>
 </div><div class="memdoc">

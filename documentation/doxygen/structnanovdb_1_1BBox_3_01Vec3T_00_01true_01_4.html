@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -118,6 +118,7 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2205847ebd03bb83b357d0f312c6f073"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BBox_3_01Vec3T_00_01true_01_4.html#a2205847ebd03bb83b357d0f312c6f073">BBox</a> ()</td></tr>
+<tr class="memdesc:a2205847ebd03bb83b357d0f312c6f073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default construction sets <a class="el" href="structnanovdb_1_1BBox.html">BBox</a> to an empty bbox.  <a href="#a2205847ebd03bb83b357d0f312c6f073">More...</a><br /></td></tr>
 <tr class="separator:a2205847ebd03bb83b357d0f312c6f073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8107479ef1bf61af08215328e6321d39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BBox_3_01Vec3T_00_01true_01_4.html#a8107479ef1bf61af08215328e6321d39">BBox</a> (const Vec3T &amp;<a class="el" href="structnanovdb_1_1BaseBBox.html#abe5f9c24f1823e29efde292b59f5802d">min</a>, const Vec3T &amp;<a class="el" href="structnanovdb_1_1BaseBBox.html#a9e6cf1099dcd1b06ec3732a3ac9b39de">max</a>)</td></tr>
 <tr class="separator:a8107479ef1bf61af08215328e6321d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,6 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afa74bcc3249d0979e991bcdd91423b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6e61de369e994009e36f344f99c15ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BBox_3_01Vec3T_00_01true_01_4.html#ac6e61de369e994009e36f344f99c15ad">empty</a> () const </td></tr>
 <tr class="separator:ac6e61de369e994009e36f344f99c15ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa385aa18f5e42db5a415c25a90f4193d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BBox_3_01Vec3T_00_01true_01_4.html#aa385aa18f5e42db5a415c25a90f4193d">operator bool</a> () const </td></tr>
+<tr class="separator:aa385aa18f5e42db5a415c25a90f4193d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad711e61399272aa1287285a23c26fbb1"><td class="memItemLeft" align="right" valign="top">Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BBox_3_01Vec3T_00_01true_01_4.html#ad711e61399272aa1287285a23c26fbb1">dim</a> () const </td></tr>
 <tr class="separator:ad711e61399272aa1287285a23c26fbb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7e785cf7880cca1af15a8eb8382cef7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BBox_3_01Vec3T_00_01true_01_4.html#ac7e785cf7880cca1af15a8eb8382cef7">isInside</a> (const Vec3T &amp;p) const </td></tr>
@@ -147,10 +150,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9e6cf1099dcd1b06ec3732a3ac9b39de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4cb1df7ed158de5d3f02f7d92ca8568"><td class="memItemLeft" align="right" valign="top">const Vec3T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BaseBBox.html#ad4cb1df7ed158de5d3f02f7d92ca8568">max</a> () const </td></tr>
 <tr class="separator:ad4cb1df7ed158de5d3f02f7d92ca8568"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d635a333af57896ee0ab3fdaf3a3958"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Coord.html">Coord</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BaseBBox.html#a9d635a333af57896ee0ab3fdaf3a3958">translate</a> (const Vec3T &amp;xyz)</td></tr>
-<tr class="separator:a9d635a333af57896ee0ab3fdaf3a3958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf96e517f010db9999fca8e64d71916e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BaseBBox.html#abf96e517f010db9999fca8e64d71916e">translate</a> (const Vec3T &amp;xyz)</td></tr>
+<tr class="separator:abf96e517f010db9999fca8e64d71916e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd5ef84d5f2ed7398caa3311076f0eb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BaseBBox.html#acd5ef84d5f2ed7398caa3311076f0eb5">expand</a> (const Vec3T &amp;xyz)</td></tr>
+<tr class="memdesc:acd5ef84d5f2ed7398caa3311076f0eb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand this bounding box to enclose point <code>xyz</code>.  <a href="#acd5ef84d5f2ed7398caa3311076f0eb5">More...</a><br /></td></tr>
 <tr class="separator:acd5ef84d5f2ed7398caa3311076f0eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af969e6e41397754a5f0f13dbaab964c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BaseBBox.html#af969e6e41397754a5f0f13dbaab964c4">expand</a> (const <a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a> &amp;bbox)</td></tr>
+<tr class="memdesc:af969e6e41397754a5f0f13dbaab964c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand this bounding box to enclose the given bounding box.  <a href="#af969e6e41397754a5f0f13dbaab964c4">More...</a><br /></td></tr>
+<tr class="separator:af969e6e41397754a5f0f13dbaab964c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab3050d649739a78b5a6c94104bcb68c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1BaseBBox.html#aab3050d649739a78b5a6c94104bcb68c">intersect</a> (const <a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a> &amp;bbox)</td></tr>
 <tr class="memdesc:aab3050d649739a78b5a6c94104bcb68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intersect this bounding box with the given bounding box.  <a href="#aab3050d649739a78b5a6c94104bcb68c">More...</a><br /></td></tr>
 <tr class="separator:aab3050d649739a78b5a6c94104bcb68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,6 +238,8 @@ struct nanovdb::BBox&lt; Vec3T, true &gt;</h3>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Default construction sets <a class="el" href="structnanovdb_1_1BBox.html">BBox</a> to an empty bbox. </p>
 
 </div>
 </div>
@@ -429,6 +438,34 @@ struct nanovdb::BBox&lt; Vec3T, true &gt;</h3>
 </table>
 </div><div class="memdoc">
 
+<p>Expand this bounding box to enclose point <code>xyz</code>. </p>
+
+</div>
+</div>
+<a class="anchor" id="af969e6e41397754a5f0f13dbaab964c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a>&amp; expand </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a>&lt; Vec3T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bbox</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expand this bounding box to enclose the given bounding box. </p>
+
 </div>
 </div>
 <a class="anchor" id="aab3050d649739a78b5a6c94104bcb68c"></a>
@@ -597,6 +634,29 @@ struct nanovdb::BBox&lt; Vec3T, true &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="aa385aa18f5e42db5a415c25a90f4193d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="adc81f9c055dd4835b1d8a4a71a1b9c07"></a>
 <div class="memitem">
 <div class="memproto">
@@ -693,7 +753,7 @@ struct nanovdb::BBox&lt; Vec3T, true &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a9d635a333af57896ee0ab3fdaf3a3958"></a>
+<a class="anchor" id="abf96e517f010db9999fca8e64d71916e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -701,7 +761,7 @@ struct nanovdb::BBox&lt; Vec3T, true &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnanovdb_1_1Coord.html">Coord</a>&amp; translate </td>
+          <td class="memname"><a class="el" href="structnanovdb_1_1BaseBBox.html">BaseBBox</a>&amp; translate </td>
           <td>(</td>
           <td class="paramtype">const Vec3T &amp;&#160;</td>
           <td class="paramname"><em>xyz</em></td><td>)</td>

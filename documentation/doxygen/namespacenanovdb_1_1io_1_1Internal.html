@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">10.1.0</span>
+   &#160;<span id="projectnumber">11.0.0</span>
    </div>
   </td>
  </tr>
@@ -95,17 +95,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html" title="Internal functions for compressed read/write of a NanoVDB GridHandle into a stream. ">Internal</a> functions for compressed read/write of a NanoVDB <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> into a stream.  
+<p><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html" title="Internal functions for compressed read/write of a NanoVDB GridHandle into a stream. ">Internal</a> functions for compressed read/write of a NanoVDB <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> into a stream.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:addcc98aa81ace419eba95ae6a99a7286"><td class="memTemplParams" colspan="2">template&lt;typename BufferT &gt; </td></tr>
-<tr class="memitem:addcc98aa81ace419eba95ae6a99a7286"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="namespacenanovdb_1_1io.html#a42f08a8c97a0f8a349fc762cd7b42640">fileSize_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html#addcc98aa81ace419eba95ae6a99a7286">write</a> (std::ostream &amp;os, const <a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a>&lt; BufferT &gt; &amp;handle, <a class="el" href="namespacenanovdb_1_1io.html#ae42f8cdb9215c4db646cf1021c45648a">Codec</a> codec)</td></tr>
-<tr class="separator:addcc98aa81ace419eba95ae6a99a7286"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4f2618edfbf4d1796f689b95fa9f2b0"><td class="memTemplParams" colspan="2">template&lt;typename BufferT &gt; </td></tr>
-<tr class="memitem:ac4f2618edfbf4d1796f689b95fa9f2b0"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html#ac4f2618edfbf4d1796f689b95fa9f2b0">read</a> (std::istream &amp;is, <a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a>&lt; BufferT &gt; &amp;handle, <a class="el" href="namespacenanovdb_1_1io.html#ae42f8cdb9215c4db646cf1021c45648a">Codec</a> codec)</td></tr>
-<tr class="separator:ac4f2618edfbf4d1796f689b95fa9f2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a109892d9b66d348f1620296ef5f02c88"><td class="memTemplParams" colspan="2">template&lt;typename BufferT &gt; </td></tr>
+<tr class="memitem:a109892d9b66d348f1620296ef5f02c88"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="namespacenanovdb_1_1io.html#a42f08a8c97a0f8a349fc762cd7b42640">fileSize_t</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html#a109892d9b66d348f1620296ef5f02c88">write</a> (std::ostream &amp;os, const <a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a>&lt; BufferT &gt; &amp;handle, <a class="el" href="namespacenanovdb_1_1io.html#ae42f8cdb9215c4db646cf1021c45648a">Codec</a> codec, uint32_t n)</td></tr>
+<tr class="separator:a109892d9b66d348f1620296ef5f02c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86f892341f16b3bcd7d073b571ede1b1"><td class="memTemplParams" colspan="2">template&lt;typename BufferT &gt; </td></tr>
+<tr class="memitem:a86f892341f16b3bcd7d073b571ede1b1"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html#a86f892341f16b3bcd7d073b571ede1b1">read</a> (std::istream &amp;is, BufferT &amp;buffer, <a class="el" href="namespacenanovdb_1_1io.html#ae42f8cdb9215c4db646cf1021c45648a">Codec</a> codec)</td></tr>
+<tr class="separator:a86f892341f16b3bcd7d073b571ede1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a144fd3e7fde84398a7859a18b286ad87"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html#a144fd3e7fde84398a7859a18b286ad87">read</a> (std::istream &amp;is, char *data, <a class="el" href="namespacenanovdb_1_1io.html#a42f08a8c97a0f8a349fc762cd7b42640">fileSize_t</a> size, <a class="el" href="namespacenanovdb_1_1io.html#ae42f8cdb9215c4db646cf1021c45648a">Codec</a> codec)</td></tr>
+<tr class="memdesc:a144fd3e7fde84398a7859a18b286ad87"><td class="mdescLeft">&#160;</td><td class="mdescRight">read compressed grid from stream  <a href="#a144fd3e7fde84398a7859a18b286ad87">More...</a><br /></td></tr>
+<tr class="separator:a144fd3e7fde84398a7859a18b286ad87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -113,10 +116,10 @@ Variables</h2></td></tr>
 <tr class="separator:af14ea714c058e7ae2186c5186f4cf0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html" title="Internal functions for compressed read/write of a NanoVDB GridHandle into a stream. ">Internal</a> functions for compressed read/write of a NanoVDB <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a raw memory buffer of a NanoVDB Grid. ">GridHandle</a> into a stream. </p>
+<div class="textblock"><p><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html" title="Internal functions for compressed read/write of a NanoVDB GridHandle into a stream. ">Internal</a> functions for compressed read/write of a NanoVDB <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> into a stream. </p>
 <dl class="section warning"><dt>Warning</dt><dd>These functions should never be called directly by client code </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ac4f2618edfbf4d1796f689b95fa9f2b0"></a>
+<a class="anchor" id="a86f892341f16b3bcd7d073b571ede1b1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -132,8 +135,8 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a>&lt; BufferT &gt; &amp;&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
+          <td class="paramtype">BufferT &amp;&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -156,7 +159,64 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="addcc98aa81ace419eba95ae6a99a7286"></a>
+<a class="anchor" id="a144fd3e7fde84398a7859a18b286ad87"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void read </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacenanovdb_1_1io.html#a42f08a8c97a0f8a349fc762cd7b42640">fileSize_t</a>&#160;</td>
+          <td class="paramname"><em>residual</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacenanovdb_1_1io.html#ae42f8cdb9215c4db646cf1021c45648a">Codec</a>&#160;</td>
+          <td class="paramname"><em>codec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>read compressed grid from stream </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is</td><td>input stream to read from </td></tr>
+    <tr><td class="paramname">data</td><td>data buffer to write into </td></tr>
+    <tr><td class="paramname">residual</td><td>expected size of uncompressed data </td></tr>
+    <tr><td class="paramname">codec</td><td>mode of compression </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a109892d9b66d348f1620296ef5f02c88"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -179,7 +239,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespacenanovdb_1_1io.html#ae42f8cdb9215c4db646cf1021c45648a">Codec</a>&#160;</td>
-          <td class="paramname"><em>codec</em>&#160;</td>
+          <td class="paramname"><em>codec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
