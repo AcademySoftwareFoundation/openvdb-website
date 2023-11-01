@@ -85,7 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p> <a name="v11_0_0_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 11.0.0</b> - <em>October 31, 2023</em></dd></dl>
+<div class="textblock"><p> <a name="v11_0_0_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 11.0.0</b> - <em>November 1, 2023</em></dd></dl>
 <dl class="section user"><dt></dt><dd><blockquote class="doxtable">
 <p>This version introduces ABI changes relative to older major releases, so to preserve ABI compatibility it might be necessary to define the macro <code>OPENVDB_ABI_VERSION_NUMBER=</code><em>N</em>. </p>
 </blockquote>
@@ -94,67 +94,77 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>OpenEXR 2 and Python 2 are no longer supported. </p>
 </blockquote>
 </dd></dl>
-<blockquote class="doxtable">
-<p>Boost is now an optional OpenVDB dependency. </p>
-</blockquote>
-<dl class="section user"><dt></dt><dd>OpenVDB: Improvements:<ul>
-<li>Removed last traces of Boost when <code>OPENVDB_USE_DELAYED_LOADING</code> is <code>OFF</code> <em>[Contributed&#160;by&#160;Brian&#160;McKinnon]</em></li>
+<dl class="section user"><dt></dt><dd>OpenVDB:<ul>
+<li>Improvements:<ul>
+<li>Removed use of <code>boost::any</code> in favor of <code>std::any</code>. <em>[Contributed&#160;by&#160;Brian&#160;McKinnon]</em></li>
+</ul>
+</li>
+<li>Bug Fixes:<ul>
+<li>Fix potential crash reading corrupt .vdb files with invalid blosc or zip chunks. <em>[Contributed&#160;by&#160;Matthias&#160;Ueberheide]</em></li>
+</ul>
+</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt></dt><dd>NanoVDB: API Changes:<ul>
-<li>Minor version changed from 4 to 6 (major version is unchanged since the ABI is preserved)</li>
-<li><code>nanovdb::Vec3R</code> is deprecated. Use <code><a class="el" href="namespacenanovdb.html#a98d94999010cb92dfb5f652c353d1d82">nanovdb::Vec3d</a></code> instead.</li>
-<li><code>nanoToOpenVDB</code> now accepts the index of the NanoVDB grid contained inside of a GridHandle to be converted to OpenVDB.</li>
-<li>DataTypes are now public in all node types.</li>
+<dl class="section user"><dt></dt><dd>NanoVDB:<ul>
+<li>Highlights:<ul>
+<li>Several new tools to generate and modify NanoVDB grids on the GPU.</li>
+<li>New file format that supports streaming of raw grid buffers.</li>
+</ul>
+</li>
+<li>New Features:<ul>
+<li>New memory efficient <code>GridClass::IndexGrid</code> that separates values from tree</li>
+<li>4 new GridTypes (<code>Index</code>, <code>OnIndex</code>, <code>IndexMask</code>, <code>OnIndexMask</code>) used by IndexGrid</li>
+<li>Added <code>createNanoGrid</code> that replaces older conversion methods in <code><a class="el" href="GridBuilder_8h.html" title="This file defines a minimum set of tree nodes and tools that can be used (instead of OpenVDB) to buil...">GridBuilder.h</a></code>, <code>IndexGridBuilder.h</code> and <code><a class="el" href="OpenToNanoVDB_8h.html">OpenToNanoVDB.h</a></code></li>
+<li>Added <code>cudaPointsToGrid</code> that constructs a point device grid from a list of points.</li>
+<li>Added <code>cudaVoxelsToGrid</code> that constructs a voxel device grid from a list of voxels.</li>
+<li>Added <code>cuda/CudaUtils.h</code> with several cuda utility functions.</li>
+<li>Added <code>GpuTimer</code> for timing of kernels in a specific cuda stream.</li>
+<li>Added <code>cudaIndexToGrid</code> that converts IndexGrids into regular Grids.</li>
+<li>Added <code>cudaSignedFloodFill</code> that performs signed-flood filling on the GPU.</li>
+<li>Added <code>cudaAddBlindData</code> that adds blind data to an existing grid on the GPU.</li>
+<li>Added <code>cudaGridChecksum</code> that computes checksums of device grids.</li>
+<li>Added <code>cudaGridHandle</code> that handles grids on the GPU.</li>
+<li>Added <code>cudaNodeManager</code> that constructs a NodeManager on the GPU.</li>
+<li>Added build type <code>Points</code> and <code>GridType::PointIndex</code> for point grids.</li>
+<li>Added <code>GridType::Vec3u16</code> and <code>GridType::Vec3u8</code> for compressed coordinates.</li>
+<li>Added <code><a class="el" href="PrefixSum_8h.html" title="Multi-threaded implementations of inclusive prefix sum. ">PrefixSum.h</a></code> for concurrent computation of prefix sum on the CPU.</li>
+</ul>
+</li>
+<li>API Changes:<ul>
+<li>Version 32.6.0 (ABI is unchanged).</li>
+<li>Transition from C++11 to C++17</li>
+<li>Vec3R is deprecated, please use Vec3d instead.</li>
+<li>nanoToOpenVDB now takes the index of a NanoVDB in a GridHandle.</li>
+<li>GridData, InternalData and LeafData are now public.</li>
 <li>GridMetaData can be copied.</li>
-<li>Major improvements to <code><a class="el" href="GridBuilder_8h.html" title="This file defines a minimum set of tree nodes and tools that can be used (instead of OpenVDB) to buil...">GridBuilder.h</a></code>, which allows users to construct grids with random access on the host</li>
-<li>The move constructor now requires the GridBuffer to actually contain a valid grid</li>
-<li>Moved <code>CudaDeviceBuffer.h</code> to <code>cuda/CudaDeviceBuffer.h</code></li>
-<li>Added <code><a class="el" href="namespacenanovdb.html#ae0dc28948268dd4181a956410ed5227b" title="Pi constant taken from Boost to match old behaviour. ">nanovdb::pi()</a></code> </li>
-<li>Introduced a new extendable API for acceleration of custom random-access get/set methods on ValueAccessor, e.g. <code>getValue(ijk)</code>, <code>isActive</code> (ijk), <code>probeValue(ijk, val)</code>.</li>
-<li>Added <code><a class="el" href="classnanovdb_1_1BitFlags.html">nanovdb::BitFlags</a></code>.</li>
-<li>Added <code>minComponentAtomic</code> and <code>maxComponentAtomic</code> methods on the GPU to <code>nanovdb::Vec2</code> and <code><a class="el" href="classnanovdb_1_1Vec3.html" title="A simple vector class with three components, similar to openvdb::math::Vec3. ">nanovdb::Vec3</a></code>. Added <code>expandAtomic</code> and <code>intersectAtomic</code> on <code><a class="el" href="structnanovdb_1_1BBox.html">nanovdb::BBox</a></code>, and <code>expandAtomic</code> in <code><a class="el" href="classnanovdb_1_1Coord.html" title="Signed (i, j, k) 32-bit integer coordinate class, similar to openvdb::math::Coord. ">nanovdb::Coord</a></code>.</li>
-<li>Added <code><a class="el" href="structnanovdb_1_1Map.html" title="Defines an affine transform and its inverse represented as a 3x3 matrix and a vec3 translation...">nanovdb::Map</a></code> constructors.</li>
-<li><code>Mask:: DenseIterator</code>, <code>Mask:: setOnAtomic</code>,<code>Mask:: setOffAtomic</code>.</li>
-<li>Improved and renamed device function that converts voxels into a grid - <code>nanovdb::cudaVoxelsToGrid</code> </li>
-</ul>
-</dd></dl>
-<dl class="section user"><dt></dt><dd>New Features:<ul>
-<li>Added a new grid class called IndexGrid in 4 flavors (Index, OnIndex, IndexMask, OnIndexMask).</li>
-<li>Several new ways to construct and modify NanoVDB grids on the GPU. See <code><a class="el" href="CreateNanoGrid_8h.html" title="Convert any grid to a nanovdb grid of the same type, e.g. float-&gt;float. ">CreateNanoGrid.h</a></code> and <code>CudaPointsToGrid.cuh</code>.</li>
-<li>New device function to convert points into a compact grid - nanovdb::cudaPointsToGrid</li>
-<li>Added <code>cuda/CudaUtils.h</code> and <code>cuda/GpuTimer.h</code> with cuda utility functions</li>
-<li>Added <code>cuda/CudaPointToGrids.cuh</code> that constructs device grids from points or voxels</li>
-<li>Added <code>cuda/CudaIndexToGrid.cuh</code> that converts IndexGrids and values into regular Grids</li>
-<li>Added <code>cuda/CudaSignedFloodFill.cuh</code> that performs signed-flood filing on SDF on the GPU</li>
-<li>Added <code>cuda/CudaAddBlindData.cuh</code> that adds blind data to an existing grid on the GPU</li>
-<li>Added <code>cuda/CudaGridChecksum.cuh</code> that computes <code>CRC32</code> checksums of grids on the GPU</li>
-<li>Added <code>cuda/CudaGridHandle.cuh</code> that handles grids on the GPU</li>
-<li>Added <code>cuda/CudaNodeManager.cuh</code> that constructs a NodeManager on the GPU</li>
-<li>Introduced new (dummy) build-type <code>nanovdb::Points</code> and <code><a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0ac6672402f95bb6a565b10c45206e7073">nanovdb::GridType::PointIndex</a></code> </li>
-<li>Introduced new types <code><a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0a58feb259a4420759cff617e92d459498">nanovdb::GridType::Vec3u16</a></code> and <code><a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0a1451f42309a1af14dd6f615503ea9744">nanovdb::GridType::Vec3u8</a></code> used for compressed representations of point coordinates as blind data</li>
-<li>Added <code><a class="el" href="PrefixSum_8h.html" title="Multi-threaded implementations of inclusive prefix sum. ">PrefixSum.h</a></code> for concurrent computation of prefix sum on the host</li>
-<li><code><a class="el" href="Primitives_8h.html" title="Generates volumetric primitives, e.g. sphere, torus etc, as NanoVDB grid. ">Primitives.h</a></code> can now create grids on the CPU with SDF, FOG, and point or torus</li>
-</ul>
-</dd></dl>
-<dl class="section user"><dt></dt><dd>Improvements:<ul>
-<li>Transition from <code>C++11</code> to <code>C++17</code> in <code><a class="el" href="NanoVDB_8h.html" title="Implements a light-weight self-contained VDB data-structure in a single file! In other words...">NanoVDB.h</a></code> and its tools</li>
-<li>Improve NanoVDB Build Traits.</li>
-<li><code><a class="el" href="CreateNanoGrid_8h.html" title="Convert any grid to a nanovdb grid of the same type, e.g. float-&gt;float. ">CreateNanoGrid.h</a></code> is replacing <code><a class="el" href="GridBuilder_8h.html" title="This file defines a minimum set of tree nodes and tools that can be used (instead of OpenVDB) to buil...">GridBuilder.h</a></code>, <code>IndexGridBuilder.h</code> and <code><a class="el" href="OpenToNanoVDB_8h.html">OpenToNanoVDB.h</a></code>.</li>
+<li>Improvements to <code><a class="el" href="GridBuilder_8h.html" title="This file defines a minimum set of tree nodes and tools that can be used (instead of OpenVDB) to buil...">GridBuilder.h</a></code> that allows construction of grids on CPU.</li>
+<li>GridHandle's move c-tor now requires the GridBuffer to contain a valid grid.</li>
+<li>Moved <code>CudaDeviceBuffer.h</code> to <code>cuda/CudaDeviceBuffer.h</code>.</li>
+<li>New API for acceleration of custom random-access with ValueAccessors.</li>
+<li>Added BitFlags class for convenient bit-mask operations.</li>
+<li>Added Vec2/3 min/maxComponentAtomic GPU methods.</li>
+<li>Added <code>BBox::expandAtomic</code> and <code>BBox::intersectAtomic</code>.</li>
+<li>Added <code>Coord::expandAtomic</code>.</li>
+<li>Added Map constructors.</li>
+<li>Added <code>Mask::DenseIterator</code>, <code>Mask::setOnAtomic</code>, and <code>Mask::setOffAtomic</code>.</li>
+<li><code>InternalNode::ChildIterator</code> is now const-correct.</li>
+<li>Added several new NanoVDB Build Traits.</li>
 <li>Syncing <code><a class="el" href="PNanoVDB_8h.html" title="This file is a portable (e.g. pointer-less) C99/GLSL/HLSL port of NanoVDB.h, which is compatible with...">PNanoVDB.h</a></code> with <code><a class="el" href="NanoVDB_8h.html" title="Implements a light-weight self-contained VDB data-structure in a single file! In other words...">NanoVDB.h</a></code>.</li>
+</ul>
+</li>
 </ul>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>Build:<ul>
 <li>Support for <code>OpenEXR 2.X</code> has been removed.</li>
-<li>Boost is no longer required if <code>OPENVDB_USE_DELAYED_LOADING</code> is <code>OFF</code></li>
 <li>Better support for building with external package configurations with <code>CMAKE_FIND_PACKAGE_PREFER_CONFIG=ON</code>.</li>
 </ul>
 </dd></dl>
-<p>Python:</p><ul>
+<dl class="section user"><dt></dt><dd>Python:<ul>
 <li>Removed Python 2 support. <em>[Contributed&#160;by&#160;Matthew&#160;Cong]</em></li>
 <li>Removed explicit bindings for Math types. <em>[Contributed&#160;by&#160;Matthew&#160;Cong]</em></li>
 <li>Improved type casting for TypedMetadata. <em>[Contributed&#160;by&#160;Matthew&#160;Cong]</em></li>
 </ul>
+</dd></dl>
 <p> <a name="v10_1_0_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 10.1.0</b> - <em>October 11, 2023</em></dd></dl>
 <dl class="section user"><dt></dt><dd>Highlights:<ul>
 <li>OpenVDB Python bindings are now implemented using pybind11 instead of Boost.Python. [Contributed by Matthew Cong]</li>
