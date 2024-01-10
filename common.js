@@ -37,6 +37,7 @@ function insertInfoPane() {
         html += '<a href="https://docs.lightwave3d.com/lw2020/reference/simulation/openvdb" target="_blank"><h4 class="lightwave"><span></span></h4></a>';
         html += '<a href="https://www.cebas.com/?pid=productinfo&prd_id=187" target="_blank"><h4 class="thinkingparticles"><span></span></h4></a>';
         html += '<a href="https://www.unrealengine.com" target="_blank"><h4 class="unreal"><span></span></h4></a>';
+        html += '<a href="https://www.autodesk.com/products/vred" target="_blank"><h4 class="vred"><span></span></h4></a>';
         html += '<a href="http://www.vfxplatform.com/" target="_blank"><h4 class="vfx"><span></span></h4></a>';
         html += '</div>';
 
