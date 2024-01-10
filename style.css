@@ -434,6 +434,11 @@ a {
   background:transparent url(images/unreal.png) center top no-repeat;
 }
 
+#sidebar-integration h4.vred {
+  height: 40px;
+  background:transparent url(images/vred.png) center top no-repeat;
+}
+
 #sidebar-integration h4.vfx {
   height: 26px;
   background:transparent url(images/vfx.png) center top no-repeat;
