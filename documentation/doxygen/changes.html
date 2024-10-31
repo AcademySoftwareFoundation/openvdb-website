@@ -94,11 +94,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>GCC 9 is no longer supported. </p>
 </blockquote>
 </dd></dl>
-<dl class="section user"><dt></dt><dd>OpenVDB: New features:<ul>
+<dl class="section user"><dt></dt><dd>OpenVDB:<ul>
+<li>New features:<ul>
 <li>Added tools::LevelSetFilter::fillet() method to round off concave edges to create smoother transition between surfaces.</li>
 </ul>
-</dd></dl>
-<p>Improvements:</p><ul>
+</li>
+<li>Improvements:<ul>
 <li>Added openvdb::assertAbort to replace cassert and a <code>OPENVDB_ENABLE_ASSERTS</code> cmake argument/compile define to toggle assertions in OpenVDB code, independantly of NDEBUG. Asserts are no longer enabled by default in when NDEBUG is absent (e.g. Debug builds).</li>
 <li>Removed last traces of Boost when <code>OPENVDB_USE_DELAYED_LOADING</code> is OFF <em>[Reported&#160;by&#160;Brian&#160;McKinnon]</em></li>
 <li>RootNode code cleanup to eliminate redundant key conversion and to create map values in-place.</li>
@@ -120,22 +121,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>Added InternalNode::setChildUnsafe(), InternalNode::resetChildUnsafe(), InternalNode::stealChildUnsafe(), InternalNode::deleteChildUnsafe().</li>
 <li>For LeafNode, LeafNodeBool and LeafNodeMask - added LeafNode::getValueUnsafe(), LeafNode::setActiveStateunsafe(), LeafNode::setValueOnlyUnsafe(), LeafNode::setValueOnUnsafe(), LeafNode::setValueOffUnsafe().</li>
 </ul>
-<p>ABI changes:</p><ul>
+</li>
+<li>ABI changes:<ul>
 <li>Tree::leafCount(), Tree::unallocatedLeafCount(), Tree::nonLeafCount() and Tree::nodeCount() now use Index64 in their return types instead of Index32.</li>
 </ul>
-<p>API Changes:</p><ul>
+</li>
+<li>API Changes:<ul>
 <li>RootNode::tileCount(), RootNode::activeTileCount() and RootNode::inactiveTileCount() are now public.</li>
 <li>RootNode::hasKey() and RootNode::coordToKey() are now public.</li>
 <li>RootNode::leafCount(), RootNode::nonLeafCount() and RootNode::nodeCount() now use Index64 instead of Index32. The Index32 variant is deprecated.</li>
 <li>InternalNode::leafCount(), InternalNode::nonLeafCount() and InternalNode::nodeCount() now use Index64 instead of Index32. The Index32 variant is deprecated.</li>
 <li>LeafNode::leafCount() and LeafNode::nonLeafCount() now use Index64 instead of Index32. The Index32 variant is deprecated.</li>
 </ul>
-<p>Bug Fixes:</p><ul>
+</li>
+<li>Bug Fixes:<ul>
 <li>Fix potential crash reading corrupt .vdb files with invalid blosc or zip chunks. <em>[Reported&#160;by&#160;Matthias&#160;Ueberheide]</em></li>
 <li>Fix a bug in RootNode::setOrigin() where the origin was updated before the error was thrown potentially leaving the root in an invalid state.</li>
 <li>Fixed a thread sanitizer issue which could cause undefined behaviour in VolumeToSpheres::fillWithSpheres <em>[Reported&#160;by&#160;Jérémie&#160;Dumas]</em></li>
 <li>Fixed an occurance of undefined behaviour in tools::activate (though this would typically not have manifested with any unintended behaviour)</li>
 </ul>
+</li>
+</ul>
+</dd></dl>
 <dl class="section user"><dt></dt><dd>NanoVDB:<ul>
 <li>Bug fix:<ul>
 <li>nanovdb::readGrids works with raw grid buffer.</li>
