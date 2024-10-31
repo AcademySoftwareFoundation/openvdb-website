@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -101,6 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &quot;<a class="el" href="Math_8h_source.html">Math.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Vec3_8h_source.html">Vec3.h</a>&quot;</code><br />
 <code>#include &lt;<a class="el" href="openvdb_2Exceptions_8h_source.html">openvdb/Exceptions.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="Assert_8h_source.html">openvdb/util/Assert.h</a>&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
@@ -110,50 +111,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1math_1_1Quat.html">Quat&lt; T &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1math_1_1Quat.html">Quat&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1math_1_1Quat.html">Quat&lt; T &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1math_1_1Quat.html">Quat&lt; T &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceopenvdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb.html">openvdb</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v11__0"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0.html">openvdb::v11_0</a></td></tr>
+<tr class="memitem:namespaceopenvdb_1_1v12__0"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0.html">openvdb::v12_0</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v11__0_1_1math"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1math.html">openvdb::v11_0::math</a></td></tr>
+<tr class="memitem:namespaceopenvdb_1_1v12__0_1_1math"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1math.html">openvdb::v12_0::math</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ae5d4fcba2b5d70080b3938b662e2914b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1math.html#ae5d4fcba2b5d70080b3938b662e2914b">Quats</a> = Quat&lt; float &gt;</td></tr>
+<tr class="memitem:ae5d4fcba2b5d70080b3938b662e2914b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1math.html#ae5d4fcba2b5d70080b3938b662e2914b">Quats</a> = Quat&lt; float &gt;</td></tr>
 <tr class="separator:ae5d4fcba2b5d70080b3938b662e2914b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf69cf7c7e5473d4533bd7c513a57580"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1math.html#acf69cf7c7e5473d4533bd7c513a57580">Quatd</a> = Quat&lt; double &gt;</td></tr>
+<tr class="memitem:acf69cf7c7e5473d4533bd7c513a57580"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1math.html#acf69cf7c7e5473d4533bd7c513a57580">Quatd</a> = Quat&lt; double &gt;</td></tr>
 <tr class="separator:acf69cf7c7e5473d4533bd7c513a57580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad0217fab88ef83d018702c43cfba1703"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad0217fab88ef83d018702c43cfba1703"><td class="memTemplItemLeft" align="right" valign="top">Quat&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1math.html#ad0217fab88ef83d018702c43cfba1703">slerp</a> (const Quat&lt; T &gt; &amp;q1, const Quat&lt; T &gt; &amp;q2, T t, T tolerance=0.00001)</td></tr>
-<tr class="memdesc:ad0217fab88ef83d018702c43cfba1703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear interpolation between the two quaternions.  <a href="namespaceopenvdb_1_1v11__0_1_1math.html#ad0217fab88ef83d018702c43cfba1703">More...</a><br /></td></tr>
-<tr class="separator:ad0217fab88ef83d018702c43cfba1703"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a661b31ab6940759b883b9cafad016dd8"><td class="memTemplParams" colspan="2">template&lt;typename S , typename T &gt; </td></tr>
-<tr class="memitem:a661b31ab6940759b883b9cafad016dd8"><td class="memTemplItemLeft" align="right" valign="top">Quat&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1math.html#a661b31ab6940759b883b9cafad016dd8">operator*</a> (S scalar, const Quat&lt; T &gt; &amp;q)</td></tr>
-<tr class="memdesc:a661b31ab6940759b883b9cafad016dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply each element of the given quaternion by <em>scalar</em> and return the result.  <a href="namespaceopenvdb_1_1v11__0_1_1math.html#a661b31ab6940759b883b9cafad016dd8">More...</a><br /></td></tr>
-<tr class="separator:a661b31ab6940759b883b9cafad016dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f1d1ccc0012c5b611df9a027499279d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename T0 &gt; </td></tr>
-<tr class="memitem:a6f1d1ccc0012c5b611df9a027499279d"><td class="memTemplItemLeft" align="right" valign="top">Mat3&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1math.html#a6f1d1ccc0012c5b611df9a027499279d">slerp</a> (const Mat3&lt; T0 &gt; &amp;m1, const Mat3&lt; T0 &gt; &amp;m2, T t)</td></tr>
-<tr class="memdesc:a6f1d1ccc0012c5b611df9a027499279d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate between m1 and m2. Converts to quaternion form and uses slerp m1 and m2 must be rotation matrices!  <a href="namespaceopenvdb_1_1v11__0_1_1math.html#a6f1d1ccc0012c5b611df9a027499279d">More...</a><br /></td></tr>
-<tr class="separator:a6f1d1ccc0012c5b611df9a027499279d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4315e4dcffe8ad5165bc055211200384"><td class="memTemplParams" colspan="2">template&lt;typename T , typename T0 &gt; </td></tr>
-<tr class="memitem:a4315e4dcffe8ad5165bc055211200384"><td class="memTemplItemLeft" align="right" valign="top">Mat3&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1math.html#a4315e4dcffe8ad5165bc055211200384">bezLerp</a> (const Mat3&lt; T0 &gt; &amp;m1, const Mat3&lt; T0 &gt; &amp;m2, const Mat3&lt; T0 &gt; &amp;m3, const Mat3&lt; T0 &gt; &amp;m4, T t)</td></tr>
-<tr class="separator:a4315e4dcffe8ad5165bc055211200384"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56b15893eb84533ab679b2bc28b7a214"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr class="memitem:a56b15893eb84533ab679b2bc28b7a214"><td class="memTemplItemLeft" align="right" valign="top">math::Quats&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0.html#a56b15893eb84533ab679b2bc28b7a214">zeroVal&lt; math::Quats &gt;</a> ()</td></tr>
-<tr class="separator:a56b15893eb84533ab679b2bc28b7a214"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a792ca441a4381e99e7909c623ea391c3"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr class="memitem:a792ca441a4381e99e7909c623ea391c3"><td class="memTemplItemLeft" align="right" valign="top">math::Quatd&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0.html#a792ca441a4381e99e7909c623ea391c3">zeroVal&lt; math::Quatd &gt;</a> ()</td></tr>
-<tr class="separator:a792ca441a4381e99e7909c623ea391c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2afeff0c5d501701b79a7f736011a2cd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a2afeff0c5d501701b79a7f736011a2cd"><td class="memTemplItemLeft" align="right" valign="top">Quat&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1math.html#a2afeff0c5d501701b79a7f736011a2cd">slerp</a> (const Quat&lt; T &gt; &amp;q1, const Quat&lt; T &gt; &amp;q2, T t, T tolerance=0.00001)</td></tr>
+<tr class="memdesc:a2afeff0c5d501701b79a7f736011a2cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linear interpolation between the two quaternions.  <a href="namespaceopenvdb_1_1v12__0_1_1math.html#a2afeff0c5d501701b79a7f736011a2cd">More...</a><br /></td></tr>
+<tr class="separator:a2afeff0c5d501701b79a7f736011a2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada8de303e405eaca69dc339308454f8a"><td class="memTemplParams" colspan="2">template&lt;typename S , typename T &gt; </td></tr>
+<tr class="memitem:ada8de303e405eaca69dc339308454f8a"><td class="memTemplItemLeft" align="right" valign="top">Quat&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1math.html#ada8de303e405eaca69dc339308454f8a">operator*</a> (S scalar, const Quat&lt; T &gt; &amp;q)</td></tr>
+<tr class="memdesc:ada8de303e405eaca69dc339308454f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply each element of the given quaternion by <em>scalar</em> and return the result.  <a href="namespaceopenvdb_1_1v12__0_1_1math.html#ada8de303e405eaca69dc339308454f8a">More...</a><br /></td></tr>
+<tr class="separator:ada8de303e405eaca69dc339308454f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e994b7e687a39abdc39d9a6b00ac05"><td class="memTemplParams" colspan="2">template&lt;typename T , typename T0 &gt; </td></tr>
+<tr class="memitem:a66e994b7e687a39abdc39d9a6b00ac05"><td class="memTemplItemLeft" align="right" valign="top">Mat3&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1math.html#a66e994b7e687a39abdc39d9a6b00ac05">slerp</a> (const Mat3&lt; T0 &gt; &amp;m1, const Mat3&lt; T0 &gt; &amp;m2, T t)</td></tr>
+<tr class="memdesc:a66e994b7e687a39abdc39d9a6b00ac05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpolate between m1 and m2. Converts to quaternion form and uses slerp m1 and m2 must be rotation matrices!  <a href="namespaceopenvdb_1_1v12__0_1_1math.html#a66e994b7e687a39abdc39d9a6b00ac05">More...</a><br /></td></tr>
+<tr class="separator:a66e994b7e687a39abdc39d9a6b00ac05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22883ee8dbd0142448de71066d03fbeb"><td class="memTemplParams" colspan="2">template&lt;typename T , typename T0 &gt; </td></tr>
+<tr class="memitem:a22883ee8dbd0142448de71066d03fbeb"><td class="memTemplItemLeft" align="right" valign="top">Mat3&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1math.html#a22883ee8dbd0142448de71066d03fbeb">bezLerp</a> (const Mat3&lt; T0 &gt; &amp;m1, const Mat3&lt; T0 &gt; &amp;m2, const Mat3&lt; T0 &gt; &amp;m3, const Mat3&lt; T0 &gt; &amp;m4, T t)</td></tr>
+<tr class="separator:a22883ee8dbd0142448de71066d03fbeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea935278c581814c8d118d1fdf32d903"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:aea935278c581814c8d118d1fdf32d903"><td class="memTemplItemLeft" align="right" valign="top">math::Quats&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0.html#aea935278c581814c8d118d1fdf32d903">zeroVal&lt; math::Quats &gt;</a> ()</td></tr>
+<tr class="separator:aea935278c581814c8d118d1fdf32d903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad394cbb4064e5a0f26dc7903507bccac"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:ad394cbb4064e5a0f26dc7903507bccac"><td class="memTemplItemLeft" align="right" valign="top">math::Quatd&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0.html#ad394cbb4064e5a0f26dc7903507bccac">zeroVal&lt; math::Quatd &gt;</a> ()</td></tr>
+<tr class="separator:ad394cbb4064e5a0f26dc7903507bccac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

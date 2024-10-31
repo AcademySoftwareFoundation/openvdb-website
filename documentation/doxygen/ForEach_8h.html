@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>A unified wrapper for tbb::parallel_for and a naive std::thread fallback.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="Range_8h_source.html">Range.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="Range_8h_source.html">nanovdb/util/Range.h</a>&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
 <code>#include &lt;mutex&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -108,13 +108,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacenanovdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html">nanovdb</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacenanovdb_1_1util"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html">nanovdb::util</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa9e7d15aa73e2ff1be5a4f958c4cf8c7"><td class="memTemplParams" colspan="2">template&lt;typename RangeT , typename FuncT &gt; </td></tr>
-<tr class="memitem:aa9e7d15aa73e2ff1be5a4f958c4cf8c7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#aa9e7d15aa73e2ff1be5a4f958c4cf8c7">forEach</a> (RangeT range, const FuncT &amp;func)</td></tr>
-<tr class="memdesc:aa9e7d15aa73e2ff1be5a4f958c4cf8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">simple wrapper for tbb::parallel_for with a naive std fallback  <a href="namespacenanovdb.html#aa9e7d15aa73e2ff1be5a4f958c4cf8c7">More...</a><br /></td></tr>
-<tr class="separator:aa9e7d15aa73e2ff1be5a4f958c4cf8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d25f59bf5a40f686bb5bf4ff0e01dac"><td class="memTemplParams" colspan="2">template&lt;typename RangeT , typename FuncT &gt; </td></tr>
+<tr class="memitem:a9d25f59bf5a40f686bb5bf4ff0e01dac"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a9d25f59bf5a40f686bb5bf4ff0e01dac">forEach</a> (RangeT range, const FuncT &amp;func)</td></tr>
+<tr class="memdesc:a9d25f59bf5a40f686bb5bf4ff0e01dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">simple wrapper for tbb::parallel_for with a naive std fallback  <a href="namespacenanovdb_1_1util.html#a9d25f59bf5a40f686bb5bf4ff0e01dac">More...</a><br /></td></tr>
+<tr class="separator:a9d25f59bf5a40f686bb5bf4ff0e01dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8806bc0b194bf4d66692060d04a15d"><td class="memTemplParams" colspan="2">template&lt;typename FuncT &gt; </td></tr>
+<tr class="memitem:a8e8806bc0b194bf4d66692060d04a15d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a8e8806bc0b194bf4d66692060d04a15d">forEach</a> (size_t begin, size_t end, size_t grainSize, const FuncT &amp;func)</td></tr>
+<tr class="memdesc:a8e8806bc0b194bf4d66692060d04a15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wrapper for the function defined above.  <a href="namespacenanovdb_1_1util.html#a8e8806bc0b194bf4d66692060d04a15d">More...</a><br /></td></tr>
+<tr class="separator:a8e8806bc0b194bf4d66692060d04a15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f5e81fc0fef348506a975f687ff8bde"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename... &gt; class ContainerT, typename... T, typename FuncT &gt; </td></tr>
+<tr class="memitem:a4f5e81fc0fef348506a975f687ff8bde"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a4f5e81fc0fef348506a975f687ff8bde">forEach</a> (const ContainerT&lt; T... &gt; &amp;c, const FuncT &amp;func)</td></tr>
+<tr class="memdesc:a4f5e81fc0fef348506a975f687ff8bde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wrapper for the function defined above, which works with std::containers.  <a href="namespacenanovdb_1_1util.html#a4f5e81fc0fef348506a975f687ff8bde">More...</a><br /></td></tr>
+<tr class="separator:a4f5e81fc0fef348506a975f687ff8bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d398a71377beb33a660e8476546a6b4"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename... &gt; class ContainerT, typename... T, typename FuncT &gt; </td></tr>
+<tr class="memitem:a2d398a71377beb33a660e8476546a6b4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a2d398a71377beb33a660e8476546a6b4">forEach</a> (const ContainerT&lt; T... &gt; &amp;c, size_t grainSize, const FuncT &amp;func)</td></tr>
+<tr class="memdesc:a2d398a71377beb33a660e8476546a6b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wrapper for the function defined above, which works with std::containers.  <a href="namespacenanovdb_1_1util.html#a2d398a71377beb33a660e8476546a6b4">More...</a><br /></td></tr>
+<tr class="separator:a2d398a71377beb33a660e8476546a6b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8217f6dee65241e14b8a0a5f76b06547"><td class="memTemplParams" colspan="2">template&lt;typename FuncT &gt; </td></tr>
 <tr class="memitem:a8217f6dee65241e14b8a0a5f76b06547"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a8217f6dee65241e14b8a0a5f76b06547">forEach</a> (size_t begin, size_t end, size_t grainSize, const FuncT &amp;func)</td></tr>
 <tr class="memdesc:a8217f6dee65241e14b8a0a5f76b06547"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wrapper for the function defined above.  <a href="namespacenanovdb.html#a8217f6dee65241e14b8a0a5f76b06547">More...</a><br /></td></tr>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p><a class="el" href="classnanovdb_1_1NodeManagerHandle.html" title="NodeManagerHandle manages the memory of a NodeManager. ">NodeManagerHandle</a> manages the memory of a <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a>.  
  <a href="classnanovdb_1_1NodeManagerHandle.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="nanovdb_2nanovdb_2util_2NodeManager_8h_source.html">nanovdb/util/NodeManager.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="nanovdb_2nanovdb_2NodeManager_8h_source.html">nanovdb/NodeManager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -133,12 +133,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1684d1a94834c06891ea11944c985f2a"><td class="memItemLeft" align="right" valign="top">const BufferT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#a1684d1a94834c06891ea11944c985f2a">buffer</a> () const </td></tr>
 <tr class="memdesc:a1684d1a94834c06891ea11944c985f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const reference to the buffer.  <a href="#a1684d1a94834c06891ea11944c985f2a">More...</a><br /></td></tr>
 <tr class="separator:a1684d1a94834c06891ea11944c985f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a731c70d12750586b67c6cde637b650"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#a6a731c70d12750586b67c6cde637b650">data</a> ()</td></tr>
-<tr class="memdesc:a6a731c70d12750586b67c6cde637b650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a non-const pointer to the data.  <a href="#a6a731c70d12750586b67c6cde637b650">More...</a><br /></td></tr>
-<tr class="separator:a6a731c70d12750586b67c6cde637b650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40fe50b14bf164129156972247acb8e4"><td class="memItemLeft" align="right" valign="top">const uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#a40fe50b14bf164129156972247acb8e4">data</a> () const </td></tr>
-<tr class="memdesc:a40fe50b14bf164129156972247acb8e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const pointer to the data.  <a href="#a40fe50b14bf164129156972247acb8e4">More...</a><br /></td></tr>
-<tr class="separator:a40fe50b14bf164129156972247acb8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2c67dc864c6b6e705710853b5568ef"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#a3f2c67dc864c6b6e705710853b5568ef">data</a> ()</td></tr>
+<tr class="memdesc:a3f2c67dc864c6b6e705710853b5568ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a non-const pointer to the data.  <a href="#a3f2c67dc864c6b6e705710853b5568ef">More...</a><br /></td></tr>
+<tr class="separator:a3f2c67dc864c6b6e705710853b5568ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ed6f0f1eb8d14c1a7ac38fd7688a753"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#a2ed6f0f1eb8d14c1a7ac38fd7688a753">data</a> () const </td></tr>
+<tr class="memdesc:a2ed6f0f1eb8d14c1a7ac38fd7688a753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const pointer to the data.  <a href="#a2ed6f0f1eb8d14c1a7ac38fd7688a753">More...</a><br /></td></tr>
+<tr class="separator:a2ed6f0f1eb8d14c1a7ac38fd7688a753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b6868dbef44fc07f11d050eb59e5f7e"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#a0b6868dbef44fc07f11d050eb59e5f7e">size</a> () const </td></tr>
 <tr class="memdesc:a0b6868dbef44fc07f11d050eb59e5f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size in bytes of the raw memory buffer managed by this <a class="el" href="classnanovdb_1_1NodeManagerHandle.html" title="NodeManagerHandle manages the memory of a NodeManager. ">NodeManagerHandle</a>'s allocator.  <a href="#a0b6868dbef44fc07f11d050eb59e5f7e">More...</a><br /></td></tr>
 <tr class="separator:a0b6868dbef44fc07f11d050eb59e5f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,22 +150,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad91924e6851be1c1b19276b9f2d679fe"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; BuildT &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#ad91924e6851be1c1b19276b9f2d679fe">mgr</a> ()</td></tr>
 <tr class="memdesc:ad91924e6851be1c1b19276b9f2d679fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> encoded in this <a class="el" href="classnanovdb_1_1NodeManagerHandle.html" title="NodeManagerHandle manages the memory of a NodeManager. ">NodeManagerHandle</a>.  <a href="#ad91924e6851be1c1b19276b9f2d679fe">More...</a><br /></td></tr>
 <tr class="separator:ad91924e6851be1c1b19276b9f2d679fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c8ce5bf6f3a3e1d2538e92d31c542e3"><td class="memTemplParams" colspan="2">template&lt;typename BuildT , typename U  = BufferT&gt; </td></tr>
-<tr class="memitem:a2c8ce5bf6f3a3e1d2538e92d31c542e3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, const <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; BuildT &gt; * &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#a2c8ce5bf6f3a3e1d2538e92d31c542e3">deviceMgr</a> () const </td></tr>
-<tr class="memdesc:a2c8ce5bf6f3a3e1d2538e92d31c542e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const pointer to the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> encoded in this <a class="el" href="classnanovdb_1_1NodeManagerHandle.html" title="NodeManagerHandle manages the memory of a NodeManager. ">NodeManagerHandle</a> on the device, e.g. GPU.  <a href="#a2c8ce5bf6f3a3e1d2538e92d31c542e3">More...</a><br /></td></tr>
-<tr class="separator:a2c8ce5bf6f3a3e1d2538e92d31c542e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9e39e45de6f2e1296edfea653df7097"><td class="memTemplParams" colspan="2">template&lt;typename BuildT , typename U  = BufferT&gt; </td></tr>
-<tr class="memitem:ab9e39e45de6f2e1296edfea653df7097"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; BuildT &gt; * &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#ab9e39e45de6f2e1296edfea653df7097">deviceMgr</a> ()</td></tr>
-<tr class="memdesc:ab9e39e45de6f2e1296edfea653df7097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const pointer to the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> encoded in this <a class="el" href="classnanovdb_1_1NodeManagerHandle.html" title="NodeManagerHandle manages the memory of a NodeManager. ">NodeManagerHandle</a> on the device, e.g. GPU.  <a href="#ab9e39e45de6f2e1296edfea653df7097">More...</a><br /></td></tr>
-<tr class="separator:ab9e39e45de6f2e1296edfea653df7097"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94d3fb371a6e9e22e54fc44959c68025"><td class="memTemplParams" colspan="2">template&lt;typename U  = BufferT&gt; </td></tr>
-<tr class="memitem:a94d3fb371a6e9e22e54fc44959c68025"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#a94d3fb371a6e9e22e54fc44959c68025">deviceUpload</a> (void *deviceGrid, void *stream=nullptr, bool sync=true)</td></tr>
-<tr class="memdesc:a94d3fb371a6e9e22e54fc44959c68025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upload the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> to the device, e.g. from CPU to GPU.  <a href="#a94d3fb371a6e9e22e54fc44959c68025">More...</a><br /></td></tr>
-<tr class="separator:a94d3fb371a6e9e22e54fc44959c68025"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abaf4adec9af7b7769bd626261aedbe10"><td class="memTemplParams" colspan="2">template&lt;typename U  = BufferT&gt; </td></tr>
-<tr class="memitem:abaf4adec9af7b7769bd626261aedbe10"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#abaf4adec9af7b7769bd626261aedbe10">deviceDownload</a> (void *stream=nullptr, bool sync=true)</td></tr>
-<tr class="memdesc:abaf4adec9af7b7769bd626261aedbe10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Download the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> to from the device, e.g. from GPU to CPU.  <a href="#abaf4adec9af7b7769bd626261aedbe10">More...</a><br /></td></tr>
-<tr class="separator:abaf4adec9af7b7769bd626261aedbe10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa9ff6517bf66e52c2a9b34187b26acb"><td class="memTemplParams" colspan="2">template&lt;typename BuildT , typename U  = BufferT&gt; </td></tr>
+<tr class="memitem:afa9ff6517bf66e52c2a9b34187b26acb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, const <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; BuildT &gt; * &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#afa9ff6517bf66e52c2a9b34187b26acb">deviceMgr</a> () const </td></tr>
+<tr class="memdesc:afa9ff6517bf66e52c2a9b34187b26acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const pointer to the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> encoded in this <a class="el" href="classnanovdb_1_1NodeManagerHandle.html" title="NodeManagerHandle manages the memory of a NodeManager. ">NodeManagerHandle</a> on the device, e.g. GPU.  <a href="#afa9ff6517bf66e52c2a9b34187b26acb">More...</a><br /></td></tr>
+<tr class="separator:afa9ff6517bf66e52c2a9b34187b26acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29885f9da0ed6d020f7e2511e44b54bf"><td class="memTemplParams" colspan="2">template&lt;typename BuildT , typename U  = BufferT&gt; </td></tr>
+<tr class="memitem:a29885f9da0ed6d020f7e2511e44b54bf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt; BuildT &gt; * &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#a29885f9da0ed6d020f7e2511e44b54bf">deviceMgr</a> ()</td></tr>
+<tr class="memdesc:a29885f9da0ed6d020f7e2511e44b54bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const pointer to the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> encoded in this <a class="el" href="classnanovdb_1_1NodeManagerHandle.html" title="NodeManagerHandle manages the memory of a NodeManager. ">NodeManagerHandle</a> on the device, e.g. GPU.  <a href="#a29885f9da0ed6d020f7e2511e44b54bf">More...</a><br /></td></tr>
+<tr class="separator:a29885f9da0ed6d020f7e2511e44b54bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a527b9702e05de1a6e62aa56ee4c21"><td class="memTemplParams" colspan="2">template&lt;typename U  = BufferT&gt; </td></tr>
+<tr class="memitem:a56a527b9702e05de1a6e62aa56ee4c21"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#a56a527b9702e05de1a6e62aa56ee4c21">deviceUpload</a> (void *deviceGrid, void *stream=nullptr, bool sync=true)</td></tr>
+<tr class="memdesc:a56a527b9702e05de1a6e62aa56ee4c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upload the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> to the device, e.g. from CPU to GPU.  <a href="#a56a527b9702e05de1a6e62aa56ee4c21">More...</a><br /></td></tr>
+<tr class="separator:a56a527b9702e05de1a6e62aa56ee4c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2793b5f7e9f606a31060992c82ec827"><td class="memTemplParams" colspan="2">template&lt;typename U  = BufferT&gt; </td></tr>
+<tr class="memitem:ac2793b5f7e9f606a31060992c82ec827"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1NodeManagerHandle.html#ac2793b5f7e9f606a31060992c82ec827">deviceDownload</a> (void *stream=nullptr, bool sync=true)</td></tr>
+<tr class="memdesc:ac2793b5f7e9f606a31060992c82ec827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Download the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes. ">NodeManager</a> to from the device, e.g. from GPU to CPU.  <a href="#ac2793b5f7e9f606a31060992c82ec827">More...</a><br /></td></tr>
+<tr class="separator:ac2793b5f7e9f606a31060992c82ec827"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename BufferT&gt;<br />
@@ -363,7 +363,7 @@ class nanovdb::NodeManagerHandle&lt; BufferT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a6a731c70d12750586b67c6cde637b650"></a>
+<a class="anchor" id="a3f2c67dc864c6b6e705710853b5568ef"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -371,7 +371,7 @@ class nanovdb::NodeManagerHandle&lt; BufferT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t* data </td>
+          <td class="memname">void* data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -389,7 +389,7 @@ class nanovdb::NodeManagerHandle&lt; BufferT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a40fe50b14bf164129156972247acb8e4"></a>
+<a class="anchor" id="a2ed6f0f1eb8d14c1a7ac38fd7688a753"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -397,7 +397,7 @@ class nanovdb::NodeManagerHandle&lt; BufferT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const uint8_t* data </td>
+          <td class="memname">const void* data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -415,7 +415,7 @@ class nanovdb::NodeManagerHandle&lt; BufferT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="abaf4adec9af7b7769bd626261aedbe10"></a>
+<a class="anchor" id="ac2793b5f7e9f606a31060992c82ec827"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -423,7 +423,7 @@ class nanovdb::NodeManagerHandle&lt; BufferT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, void&gt;::type deviceDownload </td>
+          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, void&gt;::type deviceDownload </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>stream</em> = <code>nullptr</code>, </td>
@@ -452,7 +452,7 @@ class nanovdb::NodeManagerHandle&lt; BufferT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a2c8ce5bf6f3a3e1d2538e92d31c542e3"></a>
+<a class="anchor" id="afa9ff6517bf66e52c2a9b34187b26acb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -460,7 +460,7 @@ class nanovdb::NodeManagerHandle&lt; BufferT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, const <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt;BuildT&gt;*&gt;::type deviceMgr </td>
+          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, const <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt;BuildT&gt;*&gt;::type deviceMgr </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -478,7 +478,7 @@ class nanovdb::NodeManagerHandle&lt; BufferT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="ab9e39e45de6f2e1296edfea653df7097"></a>
+<a class="anchor" id="a29885f9da0ed6d020f7e2511e44b54bf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -486,7 +486,7 @@ class nanovdb::NodeManagerHandle&lt; BufferT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt;BuildT&gt;*&gt;::type deviceMgr </td>
+          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, <a class="el" href="classnanovdb_1_1NodeManager.html">NodeManager</a>&lt;BuildT&gt;*&gt;::type deviceMgr </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -504,7 +504,7 @@ class nanovdb::NodeManagerHandle&lt; BufferT &gt;</h3>
 
 </div>
 </div>
-<a class="anchor" id="a94d3fb371a6e9e22e54fc44959c68025"></a>
+<a class="anchor" id="a56a527b9702e05de1a6e62aa56ee4c21"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -512,7 +512,7 @@ class nanovdb::NodeManagerHandle&lt; BufferT &gt;</h3>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1enable__if.html">enable_if</a>&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, void&gt;::type deviceUpload </td>
+          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt;<a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt;U&gt;::hasDeviceDual, void&gt;::type deviceUpload </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>deviceGrid</em>, </td>

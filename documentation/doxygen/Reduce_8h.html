@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>A unified wrapper for tbb::parallel_reduce and a naive std::future analog.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="Range_8h_source.html">Range.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="Range_8h_source.html">nanovdb/util/Range.h</a>&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
 <code>#include &lt;future&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -108,12 +108,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacenanovdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html">nanovdb</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacenanovdb_1_1util"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html">nanovdb::util</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aba0883eaca9426eb39788f54b310d469"><td class="memTemplParams" colspan="2">template&lt;typename RangeT , typename T , typename FuncT , typename JoinT &gt; </td></tr>
-<tr class="memitem:aba0883eaca9426eb39788f54b310d469"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#aba0883eaca9426eb39788f54b310d469">reduce</a> (RangeT range, const T &amp;identity, const FuncT &amp;func, const JoinT &amp;join)</td></tr>
-<tr class="separator:aba0883eaca9426eb39788f54b310d469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6926c150c02074fbb336a56ed6737443"><td class="memTemplParams" colspan="2">template&lt;typename RangeT , typename T , typename FuncT , typename JoinT &gt; </td></tr>
+<tr class="memitem:a6926c150c02074fbb336a56ed6737443"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a6926c150c02074fbb336a56ed6737443">reduce</a> (RangeT range, const T &amp;identity, const FuncT &amp;func, const JoinT &amp;join)</td></tr>
+<tr class="separator:a6926c150c02074fbb336a56ed6737443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43c77504075525e8a6ef9ed5348d1811"><td class="memTemplParams" colspan="2">template&lt;typename T , typename FuncT , typename JoinT &gt; </td></tr>
+<tr class="memitem:a43c77504075525e8a6ef9ed5348d1811"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a43c77504075525e8a6ef9ed5348d1811">reduce</a> (size_t begin, size_t end, size_t grainSize, const T &amp;identity, const FuncT &amp;func, const JoinT &amp;join)</td></tr>
+<tr class="memdesc:a43c77504075525e8a6ef9ed5348d1811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wrapper to the function defined above.  <a href="namespacenanovdb_1_1util.html#a43c77504075525e8a6ef9ed5348d1811">More...</a><br /></td></tr>
+<tr class="separator:a43c77504075525e8a6ef9ed5348d1811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a937ddcd1b7103e452f60b85310f3454e"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename... &gt; class ContainerT, typename... ArgT, typename T , typename FuncT , typename JoinT &gt; </td></tr>
+<tr class="memitem:a937ddcd1b7103e452f60b85310f3454e"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a937ddcd1b7103e452f60b85310f3454e">reduce</a> (const ContainerT&lt; ArgT... &gt; &amp;c, const T &amp;identity, const FuncT &amp;func, const JoinT &amp;join)</td></tr>
+<tr class="memdesc:a937ddcd1b7103e452f60b85310f3454e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wrapper that works with std::containers.  <a href="namespacenanovdb_1_1util.html#a937ddcd1b7103e452f60b85310f3454e">More...</a><br /></td></tr>
+<tr class="separator:a937ddcd1b7103e452f60b85310f3454e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35667511db8fc6055b9a13832095edbc"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename... &gt; class ContainerT, typename... ArgT, typename T , typename FuncT , typename JoinT &gt; </td></tr>
+<tr class="memitem:a35667511db8fc6055b9a13832095edbc"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a35667511db8fc6055b9a13832095edbc">reduce</a> (const ContainerT&lt; ArgT... &gt; &amp;c, size_t grainSize, const T &amp;identity, const FuncT &amp;func, const JoinT &amp;join)</td></tr>
+<tr class="memdesc:a35667511db8fc6055b9a13832095edbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wrapper that works with std::containers.  <a href="namespacenanovdb_1_1util.html#a35667511db8fc6055b9a13832095edbc">More...</a><br /></td></tr>
+<tr class="separator:a35667511db8fc6055b9a13832095edbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad84b941ee1fc9a991c5e8ded2521786d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename FuncT , typename JoinT &gt; </td></tr>
 <tr class="memitem:ad84b941ee1fc9a991c5e8ded2521786d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#ad84b941ee1fc9a991c5e8ded2521786d">reduce</a> (size_t begin, size_t end, size_t grainSize, const T &amp;identity, const FuncT &amp;func, const JoinT &amp;join)</td></tr>
 <tr class="memdesc:ad84b941ee1fc9a991c5e8ded2521786d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wrapper to the function defined above.  <a href="namespacenanovdb.html#ad84b941ee1fc9a991c5e8ded2521786d">More...</a><br /></td></tr>

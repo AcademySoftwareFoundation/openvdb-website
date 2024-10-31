@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -87,208 +87,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">GridBuilder.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This file defines a minimum set of tree nodes and tools that can be used (instead of OpenVDB) to build nanovdb grids on the CPU.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;map&gt;</code><br />
-<code>#include &lt;limits&gt;</code><br />
-<code>#include &lt;sstream&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
-<code>#include &lt;mutex&gt;</code><br />
-<code>#include &lt;array&gt;</code><br />
-<code>#include &lt;atomic&gt;</code><br />
-<code>#include &lt;<a class="el" href="NanoVDB_8h_source.html">nanovdb/NanoVDB.h</a>&gt;</code><br />
-<code>#include &quot;<a class="el" href="Range_8h_source.html">Range.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ForEach_8h_source.html">ForEach.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="nanovdb_2nanovdb_2util_2Util_8h_source.html">nanovdb/util/Util.h</a>&gt;</code><br />
+<code>#include &lt;nanovdb/tools/GridBuilder.h&gt;</code><br />
 </div>
 <p><a href="GridBuilder_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1GetValue.html">GetValue&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements Tree::getValue(Coord), i.e. return the value associated with a specific coordinate <code>ijk</code>.  <a href="structnanovdb_1_1build_1_1GetValue.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1SetValue.html">SetValue&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value and its state at the leaf level mapped to by ijk, and create the leaf node and branch if needed.  <a href="structnanovdb_1_1build_1_1SetValue.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1TouchLeaf.html">TouchLeaf&lt; T &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1GetState.html">GetState&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements Tree::isActive(Coord)  <a href="structnanovdb_1_1build_1_1GetState.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1ProbeValue.html">ProbeValue&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements Tree::probeLeaf(Coord)  <a href="structnanovdb_1_1build_1_1ProbeValue.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1RootNode.html">RootNode&lt; ChildT &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1RootNode_1_1Tile.html">RootNode&lt; ChildT &gt;::Tile</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1RootNode_1_1ChildIterator.html">RootNode&lt; ChildT &gt;::ChildIterator</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1RootNode_1_1ValueIterator.html">RootNode&lt; ChildT &gt;::ValueIterator</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1RootNode_1_1ValueOnIterator.html">RootNode&lt; ChildT &gt;::ValueOnIterator</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1RootNode_1_1TileIterator.html">RootNode&lt; ChildT &gt;::TileIterator</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1InternalNode.html">InternalNode&lt; ChildT &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1InternalNode_1_1Tile.html">InternalNode&lt; ChildT &gt;::Tile</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1InternalNode_1_1ChildIterator.html">InternalNode&lt; ChildT &gt;::ChildIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits child nodes of this node only.  <a href="classnanovdb_1_1build_1_1InternalNode_1_1ChildIterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1InternalNode_1_1ValueIterator.html">InternalNode&lt; ChildT &gt;::ValueIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all tile values in this node, i.e. both inactive and active tiles.  <a href="classnanovdb_1_1build_1_1InternalNode_1_1ValueIterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1InternalNode_1_1ValueOnIterator.html">InternalNode&lt; ChildT &gt;::ValueOnIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits active tile values of this node only.  <a href="classnanovdb_1_1build_1_1InternalNode_1_1ValueOnIterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1InternalNode_1_1DenseIterator.html">InternalNode&lt; ChildT &gt;::DenseIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all tile values and child nodes of this node.  <a href="classnanovdb_1_1build_1_1InternalNode_1_1DenseIterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1LeafNode.html">LeafNode&lt; BuildT &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1LeafNode_1_1ValueOnIterator.html">LeafNode&lt; BuildT &gt;::ValueOnIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all active values in a leaf node.  <a href="classnanovdb_1_1build_1_1LeafNode_1_1ValueOnIterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1LeafNode_1_1ValueOffIterator.html">LeafNode&lt; BuildT &gt;::ValueOffIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all inactive values in a leaf node.  <a href="classnanovdb_1_1build_1_1LeafNode_1_1ValueOffIterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1LeafNode_1_1ValueIterator.html">LeafNode&lt; BuildT &gt;::ValueIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all values in a leaf node, i.e. both active and inactive values.  <a href="classnanovdb_1_1build_1_1LeafNode_1_1ValueIterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1LeafNode_3_01ValueMask_01_4.html">LeafNode&lt; ValueMask &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1LeafNode_3_01ValueMask_01_4_1_1ValueOnIterator.html">LeafNode&lt; ValueMask &gt;::ValueOnIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all active values in a leaf node.  <a href="classnanovdb_1_1build_1_1LeafNode_3_01ValueMask_01_4_1_1ValueOnIterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1LeafNode_3_01ValueMask_01_4_1_1ValueOffIterator.html">LeafNode&lt; ValueMask &gt;::ValueOffIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all inactive values in a leaf node.  <a href="classnanovdb_1_1build_1_1LeafNode_3_01ValueMask_01_4_1_1ValueOffIterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1LeafNode_3_01ValueMask_01_4_1_1ValueIterator.html">LeafNode&lt; ValueMask &gt;::ValueIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all values in a leaf node, i.e. both active and inactive values.  <a href="classnanovdb_1_1build_1_1LeafNode_3_01ValueMask_01_4_1_1ValueIterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1LeafNode_3_01bool_01_4.html">LeafNode&lt; bool &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1LeafNode_3_01bool_01_4_1_1ValueOnIterator.html">LeafNode&lt; bool &gt;::ValueOnIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all active values in a leaf node.  <a href="classnanovdb_1_1build_1_1LeafNode_3_01bool_01_4_1_1ValueOnIterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1LeafNode_3_01bool_01_4_1_1ValueOffIterator.html">LeafNode&lt; bool &gt;::ValueOffIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all inactive values in a leaf node.  <a href="classnanovdb_1_1build_1_1LeafNode_3_01bool_01_4_1_1ValueOffIterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1LeafNode_3_01bool_01_4_1_1ValueIterator.html">LeafNode&lt; bool &gt;::ValueIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visits all values in a leaf node, i.e. both active and inactive values.  <a href="classnanovdb_1_1build_1_1LeafNode_3_01bool_01_4_1_1ValueIterator.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1ValueAccessor.html">ValueAccessor&lt; BuildT &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1Tree.html">Tree&lt; BuildT &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1Tree_1_1WriteAccessor.html">Tree&lt; BuildT &gt;::WriteAccessor</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1Grid.html">Grid&lt; BuildT &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1build_1_1NodeManager.html">NodeManager&lt; GridT &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1TouchLeaf.html">TouchLeaf&lt; T &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1GetValue.html">GetValue&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements Tree::getValue(Coord), i.e. return the value associated with a specific coordinate <code>ijk</code>.  <a href="structnanovdb_1_1build_1_1GetValue.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1GetState.html">GetState&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements Tree::isActive(Coord)  <a href="structnanovdb_1_1build_1_1GetState.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1SetValue.html">SetValue&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value and its state at the leaf level mapped to by ijk, and create the leaf node and branch if needed.  <a href="structnanovdb_1_1build_1_1SetValue.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1build_1_1ProbeValue.html">ProbeValue&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements Tree::probeLeaf(Coord)  <a href="structnanovdb_1_1build_1_1ProbeValue.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacenanovdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html">nanovdb</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacenanovdb_1_1build"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html">nanovdb::build</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a7d2b08d010996f0c2a308a0384a7de54"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a7d2b08d010996f0c2a308a0384a7de54"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#a7d2b08d010996f0c2a308a0384a7de54">BuildLeaf</a> = LeafNode&lt; T &gt;</td></tr>
-<tr class="separator:a7d2b08d010996f0c2a308a0384a7de54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae28bed75dd6227a9d3abb66d08190c57"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae28bed75dd6227a9d3abb66d08190c57"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#ae28bed75dd6227a9d3abb66d08190c57">BuildLower</a> = InternalNode&lt; BuildLeaf&lt; T &gt;&gt;</td></tr>
-<tr class="separator:ae28bed75dd6227a9d3abb66d08190c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d23189b42fc85c0e4387f5c29a8bb61"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a9d23189b42fc85c0e4387f5c29a8bb61"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#a9d23189b42fc85c0e4387f5c29a8bb61">BuildUpper</a> = InternalNode&lt; BuildLower&lt; T &gt;&gt;</td></tr>
-<tr class="separator:a9d23189b42fc85c0e4387f5c29a8bb61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18a40c7f74beb9b3d427ab07fe992965"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a18a40c7f74beb9b3d427ab07fe992965"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#a18a40c7f74beb9b3d427ab07fe992965">BuildRoot</a> = RootNode&lt; BuildUpper&lt; T &gt;&gt;</td></tr>
-<tr class="separator:a18a40c7f74beb9b3d427ab07fe992965"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae274fd06ef003c82c42fc68105d9ed8d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ae274fd06ef003c82c42fc68105d9ed8d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#ae274fd06ef003c82c42fc68105d9ed8d">BuildTile</a> = typename BuildRoot&lt; T &gt;::Tile</td></tr>
-<tr class="separator:ae274fd06ef003c82c42fc68105d9ed8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a1647f5b319d60c4f2890fab034f51f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#a0a1647f5b319d60c4f2890fab034f51f">FloatGrid</a> = Grid&lt; float &gt;</td></tr>
-<tr class="separator:a0a1647f5b319d60c4f2890fab034f51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10a696876bd5a6493221317f359c8472"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#a10a696876bd5a6493221317f359c8472">Fp4Grid</a> = Grid&lt; Fp4 &gt;</td></tr>
-<tr class="separator:a10a696876bd5a6493221317f359c8472"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbacfccd1f14ebea3b107bb9d9aa9d0d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#abbacfccd1f14ebea3b107bb9d9aa9d0d">Fp8Grid</a> = Grid&lt; Fp8 &gt;</td></tr>
-<tr class="separator:abbacfccd1f14ebea3b107bb9d9aa9d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac1b44e7847f32ce7b59d7b903cc9a76"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#aac1b44e7847f32ce7b59d7b903cc9a76">Fp16Grid</a> = Grid&lt; Fp16 &gt;</td></tr>
-<tr class="separator:aac1b44e7847f32ce7b59d7b903cc9a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac802a94b50ab67ceabf546aa6e640941"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#ac802a94b50ab67ceabf546aa6e640941">FpNGrid</a> = Grid&lt; FpN &gt;</td></tr>
-<tr class="separator:ac802a94b50ab67ceabf546aa6e640941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2e72a83a7b1b811bb46b1b76ccc580b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#aa2e72a83a7b1b811bb46b1b76ccc580b">DoubleGrid</a> = Grid&lt; double &gt;</td></tr>
-<tr class="separator:aa2e72a83a7b1b811bb46b1b76ccc580b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30c66179f7e2d684f6ad89119f189ee8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#a30c66179f7e2d684f6ad89119f189ee8">Int32Grid</a> = Grid&lt; int32_t &gt;</td></tr>
-<tr class="separator:a30c66179f7e2d684f6ad89119f189ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d22a43c899391d71e2a8c8072502356"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#a5d22a43c899391d71e2a8c8072502356">UInt32Grid</a> = Grid&lt; uint32_t &gt;</td></tr>
-<tr class="separator:a5d22a43c899391d71e2a8c8072502356"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9bd8c4012d8e2fe52148e0ec9d1500f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#ac9bd8c4012d8e2fe52148e0ec9d1500f">Int64Grid</a> = Grid&lt; int64_t &gt;</td></tr>
-<tr class="separator:ac9bd8c4012d8e2fe52148e0ec9d1500f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03dd388575a8f1c5c83751e71041354a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#a03dd388575a8f1c5c83751e71041354a">Vec3fGrid</a> = Grid&lt; Vec3f &gt;</td></tr>
-<tr class="separator:a03dd388575a8f1c5c83751e71041354a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2deb27c1f7e3a07eb5997a66d4ac26d7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#a2deb27c1f7e3a07eb5997a66d4ac26d7">Vec3dGrid</a> = Grid&lt; Vec3d &gt;</td></tr>
-<tr class="separator:a2deb27c1f7e3a07eb5997a66d4ac26d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60437cbe5adcb2aa20a7f63645c821d2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#a60437cbe5adcb2aa20a7f63645c821d2">Vec4fGrid</a> = Grid&lt; Vec4f &gt;</td></tr>
-<tr class="separator:a60437cbe5adcb2aa20a7f63645c821d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad476cfd63574c1af01967186c2129eec"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#ad476cfd63574c1af01967186c2129eec">Vec4dGrid</a> = Grid&lt; Vec4d &gt;</td></tr>
-<tr class="separator:ad476cfd63574c1af01967186c2129eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a640485084511095d7c9fad6bc4f05778"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#a640485084511095d7c9fad6bc4f05778">MaskGrid</a> = Grid&lt; ValueMask &gt;</td></tr>
-<tr class="separator:a640485084511095d7c9fad6bc4f05778"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad29e322ff312f99f2f6478b442b8d933"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#ad29e322ff312f99f2f6478b442b8d933">IndexGrid</a> = Grid&lt; ValueIndex &gt;</td></tr>
-<tr class="separator:ad29e322ff312f99f2f6478b442b8d933"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a911748c90a9b76c6d960ed0a3d94f010"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#a911748c90a9b76c6d960ed0a3d94f010">OnIndexGrid</a> = Grid&lt; ValueOnIndex &gt;</td></tr>
-<tr class="separator:a911748c90a9b76c6d960ed0a3d94f010"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adccc1a6bc3d374fe02f575088922a625"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#adccc1a6bc3d374fe02f575088922a625">BoolGrid</a> = Grid&lt; bool &gt;</td></tr>
-<tr class="separator:adccc1a6bc3d374fe02f575088922a625"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:aad8b04e1e7962373c4342e99fa0ca9a4"><td class="memTemplParams" colspan="2">template&lt;typename NodeManagerT &gt; </td></tr>
-<tr class="memitem:aad8b04e1e7962373c4342e99fa0ca9a4"><td class="memTemplItemLeft" align="right" valign="top">enable_if&lt; is_floating_point&lt; typename NodeManagerT::ValueType &gt;::value &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#aad8b04e1e7962373c4342e99fa0ca9a4">sdfToLevelSet</a> (NodeManagerT &amp;mgr)</td></tr>
-<tr class="separator:aad8b04e1e7962373c4342e99fa0ca9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a782e1c7895f21e598b0e4af41a370acf"><td class="memTemplParams" colspan="2">template&lt;typename NodeManagerT &gt; </td></tr>
-<tr class="memitem:a782e1c7895f21e598b0e4af41a370acf"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1build.html#a782e1c7895f21e598b0e4af41a370acf">levelSetToFog</a> (NodeManagerT &amp;mgr, bool rebuild=true)</td></tr>
-<tr class="separator:a782e1c7895f21e598b0e4af41a370acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file defines a minimum set of tree nodes and tools that can be used (instead of OpenVDB) to build nanovdb grids on the CPU. </p>
-<dl class="section author"><dt>Author</dt><dd>Ken Museth</dd></dl>
-<dl class="section date"><dt>Date</dt><dd>June 26, 2020 </dd></dl>
-</div></div><!-- contents -->
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

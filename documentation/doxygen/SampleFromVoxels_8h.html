@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -87,105 +87,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">SampleFromVoxels.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>NearestNeighborSampler, TrilinearSampler, TriquadraticSampler and TricubicSampler.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="nanovdb_2nanovdb_2util_2Util_8h_source.html">nanovdb/util/Util.h</a>&gt;</code><br />
+<code>#include &lt;nanovdb/math/SampleFromVoxels.h&gt;</code><br />
 </div>
 <p><a href="SampleFromVoxels_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1SampleFromVoxels.html">SampleFromVoxels&lt; TreeT, Order, UseCache &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_010_00_01true_01_4.html">SampleFromVoxels&lt; TreeOrAccT, 0, true &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nearest neighbor, i.e. zero order, interpolator with caching.  <a href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_010_00_01true_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_010_00_01false_01_4.html">SampleFromVoxels&lt; TreeOrAccT, 0, false &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nearest neighbor, i.e. zero order, interpolator without caching.  <a href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_010_00_01false_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1TrilinearSampler.html">TrilinearSampler&lt; TreeOrAccT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tri-linear sampler, i.e. first order, interpolator.  <a href="classnanovdb_1_1TrilinearSampler.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_011_00_01false_01_4.html">SampleFromVoxels&lt; TreeOrAccT, 1, false &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization that does not use caching of stencil points.  <a href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_011_00_01false_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_011_00_01true_01_4.html">SampleFromVoxels&lt; TreeOrAccT, 1, true &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization with caching of stencil values.  <a href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_011_00_01true_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1TriquadraticSampler.html">TriquadraticSampler&lt; TreeOrAccT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tri-quadratic sampler, i.e. second order, interpolator.  <a href="classnanovdb_1_1TriquadraticSampler.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_012_00_01false_01_4.html">SampleFromVoxels&lt; TreeOrAccT, 2, false &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization that does not use caching of stencil points.  <a href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_012_00_01false_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_012_00_01true_01_4.html">SampleFromVoxels&lt; TreeOrAccT, 2, true &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization with caching of stencil values.  <a href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_012_00_01true_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1TricubicSampler.html">TricubicSampler&lt; TreeOrAccT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tri-cubic sampler, i.e. third order, interpolator.  <a href="classnanovdb_1_1TricubicSampler.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_013_00_01true_01_4.html">SampleFromVoxels&lt; TreeOrAccT, 3, true &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1SampleFromVoxels_3_01TreeOrAccT_00_013_00_01false_01_4.html">SampleFromVoxels&lt; TreeOrAccT, 3, false &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacenanovdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html">nanovdb</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a551e5ea2539324048f4b47c00ab67d55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a></td></tr>
-<tr class="separator:a551e5ea2539324048f4b47c00ab67d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a6b96fde524bd034712bd4a7b90f68c59"><td class="memTemplParams" colspan="2">template&lt;int Order, typename TreeOrAccT , bool UseCache = true&gt; </td></tr>
-<tr class="memitem:a6b96fde524bd034712bd4a7b90f68c59"><td class="memTemplItemLeft" align="right" valign="top">SampleFromVoxels&lt; TreeOrAccT, Order, UseCache &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a6b96fde524bd034712bd4a7b90f68c59">createSampler</a> (const TreeOrAccT &amp;acc)</td></tr>
-<tr class="memdesc:a6b96fde524bd034712bd4a7b90f68c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory free-function for a sampler of specific polynomial orders.  <a href="namespacenanovdb.html#a6b96fde524bd034712bd4a7b90f68c59">More...</a><br /></td></tr>
-<tr class="separator:a6b96fde524bd034712bd4a7b90f68c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75dae2b142f1c71af7737bbfbcfebc44"><td class="memTemplParams" colspan="2">template&lt;typename CoordT , typename RealT , template&lt; typename &gt; class Vec3T&gt; </td></tr>
-<tr class="memitem:a75dae2b142f1c71af7737bbfbcfebc44"><td class="memTemplItemLeft" align="right" valign="top">CoordT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a75dae2b142f1c71af7737bbfbcfebc44">Floor</a> (Vec3T&lt; RealT &gt; &amp;xyz)</td></tr>
-<tr class="memdesc:a75dae2b142f1c71af7737bbfbcfebc44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility function that returns the <a class="el" href="classnanovdb_1_1Coord.html" title="Signed (i, j, k) 32-bit integer coordinate class, similar to openvdb::math::Coord. ">Coord</a> of the round-down of <em>xyz</em> and redefined (<em>x</em>,&amp;nbsp <em>y</em>,&amp;nbsp <em>z</em>) as the fractional part, ie xyz-in = return-value + xyz-out.  <a href="namespacenanovdb.html#a75dae2b142f1c71af7737bbfbcfebc44">More...</a><br /></td></tr>
-<tr class="separator:a75dae2b142f1c71af7737bbfbcfebc44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71cf4ddeaa11085d3b006fda1346012f"><td class="memTemplParams" colspan="2">template&lt;typename CoordT , template&lt; typename &gt; class Vec3T&gt; </td></tr>
-<tr class="memitem:a71cf4ddeaa11085d3b006fda1346012f"><td class="memTemplItemLeft" align="right" valign="top">CoordT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a71cf4ddeaa11085d3b006fda1346012f">Floor</a> (Vec3T&lt; float &gt; &amp;xyz)</td></tr>
-<tr class="memdesc:a71cf4ddeaa11085d3b006fda1346012f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of Floor for Vec3&lt;float&gt;  <a href="namespacenanovdb.html#a71cf4ddeaa11085d3b006fda1346012f">More...</a><br /></td></tr>
-<tr class="separator:a71cf4ddeaa11085d3b006fda1346012f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7882473a1b7f7792391697f4b00ac40a"><td class="memTemplParams" colspan="2">template&lt;typename CoordT , template&lt; typename &gt; class Vec3T&gt; </td></tr>
-<tr class="memitem:a7882473a1b7f7792391697f4b00ac40a"><td class="memTemplItemLeft" align="right" valign="top">CoordT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a7882473a1b7f7792391697f4b00ac40a">Floor</a> (Vec3T&lt; double &gt; &amp;xyz)</td></tr>
-<tr class="memdesc:a7882473a1b7f7792391697f4b00ac40a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of Floor for Vec3&lt;float&gt;  <a href="namespacenanovdb.html#a7882473a1b7f7792391697f4b00ac40a">More...</a><br /></td></tr>
-<tr class="separator:a7882473a1b7f7792391697f4b00ac40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>NearestNeighborSampler, TrilinearSampler, TriquadraticSampler and TricubicSampler. </p>
-<dl class="section note"><dt>Note</dt><dd>These interpolators employ internal caching for better performance when used repeatedly in the same voxel location, so try to reuse an instance of these classes more than once.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>While all the interpolators defined below work with both scalars and vectors values (e.g. float and Vec3&lt;float&gt;) TrilinarSampler::zeroCrossing and Trilinear::gradient will only compile with floating point value types.</dd></dl>
-<dl class="section author"><dt>Author</dt><dd>Ken Museth </dd></dl>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="a551e5ea2539324048f4b47c00ab67d55"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define __hostdev__</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

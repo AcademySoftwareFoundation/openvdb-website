@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -87,92 +87,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">GridStats.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Re-computes min/max/avg/var/bbox information for each node in a pre-existing NanoVDB grid.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="NanoVDB_8h_source.html">nanovdb/NanoVDB.h</a>&gt;</code><br />
-<code>#include &quot;<a class="el" href="Range_8h_source.html">Range.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="ForEach_8h_source.html">ForEach.h</a>&quot;</code><br />
-<code>#include &lt;limits.h&gt;</code><br />
-<code>#include &lt;atomic&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="nanovdb_2nanovdb_2util_2Util_8h_source.html">nanovdb/util/Util.h</a>&gt;</code><br />
+<code>#include &lt;nanovdb/tools/GridStats.h&gt;</code><br />
 </div>
 <p><a href="GridStats_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Extrema.html">Extrema&lt; ValueT, Rank &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Extrema_3_01ValueT_00_010_01_4.html">Extrema&lt; ValueT, 0 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of <a class="el" href="classnanovdb_1_1Extrema.html">Extrema</a> on scalar value types, i.e. rank = 0.  <a href="classnanovdb_1_1Extrema_3_01ValueT_00_010_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Extrema_3_01VecT_00_011_01_4.html">Extrema&lt; VecT, 1 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of <a class="el" href="classnanovdb_1_1Extrema.html">Extrema</a> on vector value types, i.e. rank = 1.  <a href="classnanovdb_1_1Extrema_3_01VecT_00_011_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1Extrema_3_01VecT_00_011_01_4_1_1Pair.html">Extrema&lt; VecT, 1 &gt;::Pair</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Stats.html">Stats&lt; ValueT, Rank &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Stats_3_01ValueT_00_010_01_4.html">Stats&lt; ValueT, 0 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class computes statistics (minimum value, maximum value, mean, variance and standard deviation) of a population of floating-point values.  <a href="classnanovdb_1_1Stats_3_01ValueT_00_010_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Stats_3_01ValueT_00_011_01_4.html">Stats&lt; ValueT, 1 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class computes statistics (minimum value, maximum value, mean, variance and standard deviation) of a population of floating-point values.  <a href="classnanovdb_1_1Stats_3_01ValueT_00_011_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1NoopStats.html">NoopStats&lt; ValueT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">No-op <a class="el" href="classnanovdb_1_1Stats.html">Stats</a> class.  <a href="structnanovdb_1_1NoopStats.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridStats.html">GridStats&lt; GridT, StatsT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows for the construction of NanoVDB grids without any dependency.  <a href="classnanovdb_1_1GridStats.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridStats_1_1NodeStats.html">GridStats&lt; GridT, StatsT &gt;::NodeStats</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacenanovdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html">nanovdb</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a9209f010b67392a690df6ba4845807cb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a9209f010b67392a690df6ba4845807cb">StatsMode</a> : uint32_t { <br />
-&#160;&#160;<a class="el" href="namespacenanovdb.html#a9209f010b67392a690df6ba4845807cbabcfaccebf745acfd5e75351095a5394a">Disable</a> = 0, 
-<a class="el" href="namespacenanovdb.html#a9209f010b67392a690df6ba4845807cba10d00aee2b16f65d5a5426f43e7fb77e">BBox</a> = 1, 
-<a class="el" href="namespacenanovdb.html#a9209f010b67392a690df6ba4845807cbab3599ae8afe8304462dbdbd42d791488">MinMax</a> = 2, 
-<a class="el" href="namespacenanovdb.html#a9209f010b67392a690df6ba4845807cbab1c94ca2fbc3e78fc30069c8d0f01680">All</a> = 3, 
-<br />
-&#160;&#160;<a class="el" href="namespacenanovdb.html#a9209f010b67392a690df6ba4845807cba7a1920d61156abc05a60135aefe8bc67">Default</a> = 3, 
-<a class="el" href="namespacenanovdb.html#a9209f010b67392a690df6ba4845807cba87557f11575c0ad78e4e28abedc13b6e">End</a> = 4
-<br />
- }<tr class="memdesc:a9209f010b67392a690df6ba4845807cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grid flags which indicate what extra information is present in the grid buffer.  <a href="namespacenanovdb.html#a9209f010b67392a690df6ba4845807cb">More...</a><br /></td></tr>
-</td></tr>
-<tr class="separator:a9209f010b67392a690df6ba4845807cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ab19a49c8f2b6595a2d8c95d42c031d28"><td class="memTemplParams" colspan="2">template&lt;typename BuildT &gt; </td></tr>
-<tr class="memitem:ab19a49c8f2b6595a2d8c95d42c031d28"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#ab19a49c8f2b6595a2d8c95d42c031d28">gridStats</a> (NanoGrid&lt; BuildT &gt; &amp;grid, StatsMode mode=StatsMode::Default)</td></tr>
-<tr class="memdesc:ab19a49c8f2b6595a2d8c95d42c031d28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-computes the min/max, stats and bbox information for an existing NanoVDB <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">Grid</a>.  <a href="namespacenanovdb.html#ab19a49c8f2b6595a2d8c95d42c031d28">More...</a><br /></td></tr>
-<tr class="separator:ab19a49c8f2b6595a2d8c95d42c031d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a757390e837f413ece96bec94744e3c3b"><td class="memTemplParams" colspan="2">template&lt;typename BuildT &gt; </td></tr>
-<tr class="memitem:a757390e837f413ece96bec94744e3c3b"><td class="memTemplItemLeft" align="right" valign="top">Extrema&lt; typename NanoGrid&lt; BuildT &gt;::ValueType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a757390e837f413ece96bec94744e3c3b">getExtrema</a> (const NanoGrid&lt; BuildT &gt; &amp;grid, const CoordBBox &amp;bbox)</td></tr>
-<tr class="memdesc:a757390e837f413ece96bec94744e3c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the extrema of all the values in a grid that intersects the specified bounding box.  <a href="namespacenanovdb.html#a757390e837f413ece96bec94744e3c3b">More...</a><br /></td></tr>
-<tr class="separator:a757390e837f413ece96bec94744e3c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Re-computes min/max/avg/var/bbox information for each node in a pre-existing NanoVDB grid. </p>
-<dl class="section author"><dt>Author</dt><dd>Ken Museth</dd></dl>
-<dl class="section date"><dt>Date</dt><dd>August 29, 2020 </dd></dl>
-</div></div><!-- contents -->
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

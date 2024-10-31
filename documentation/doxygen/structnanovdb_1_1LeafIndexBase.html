@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -94,6 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="structnanovdb_1_1LeafIndexBase-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">LeafIndexBase&lt; CoordT, MaskT, LOG2DIM &gt; Struct Template Reference</div>  </div>
@@ -115,30 +116,30 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adf1a7abf3218f3f048af00bf0f6826f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#adf1a7abf3218f3f048af00bf0f6826f9">hasStats</a> () const </td></tr>
-<tr class="separator:adf1a7abf3218f3f048af00bf0f6826f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0b6606ac4339509873e7d8e1b672141"><td class="memItemLeft" align="right" valign="top">const uint64_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#ab0b6606ac4339509873e7d8e1b672141">firstOffset</a> () const </td></tr>
-<tr class="separator:ab0b6606ac4339509873e7d8e1b672141"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac72dbbec51826911663669cf8cc3cd11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#ac72dbbec51826911663669cf8cc3cd11">setMin</a> (const <a class="el" href="structnanovdb_1_1LeafIndexBase.html#a42ef5b9e3bda59f74792879a259df620">ValueType</a> &amp;)</td></tr>
-<tr class="separator:ac72dbbec51826911663669cf8cc3cd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c04aed00b68fb6149e630fda9a3bbc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a4c04aed00b68fb6149e630fda9a3bbc1">setMax</a> (const <a class="el" href="structnanovdb_1_1LeafIndexBase.html#a42ef5b9e3bda59f74792879a259df620">ValueType</a> &amp;)</td></tr>
-<tr class="separator:a4c04aed00b68fb6149e630fda9a3bbc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7ddf47345564a7ea064987ea4149a92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#ab7ddf47345564a7ea064987ea4149a92">setAvg</a> (const <a class="el" href="structnanovdb_1_1LeafIndexBase.html#a491ff8aed2f4fb47d806d5e4c3bc6edc">FloatType</a> &amp;)</td></tr>
-<tr class="separator:ab7ddf47345564a7ea064987ea4149a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59a796d26dbe9bef11b2db4d45a800b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a59a796d26dbe9bef11b2db4d45a800b1">setDev</a> (const <a class="el" href="structnanovdb_1_1LeafIndexBase.html#a491ff8aed2f4fb47d806d5e4c3bc6edc">FloatType</a> &amp;)</td></tr>
-<tr class="separator:a59a796d26dbe9bef11b2db4d45a800b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52991ea12190ad4df50cc29a237f9f29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a52991ea12190ad4df50cc29a237f9f29">setOn</a> (uint32_t offset)</td></tr>
-<tr class="separator:a52991ea12190ad4df50cc29a237f9f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a000298b28e29ef44df2686dc2f384d4f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a000298b28e29ef44df2686dc2f384d4f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a000298b28e29ef44df2686dc2f384d4f">setOrigin</a> (const T &amp;ijk)</td></tr>
-<tr class="separator:a000298b28e29ef44df2686dc2f384d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bd47b303d41e034d24446ce96cfc46e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a7bd47b303d41e034d24446ce96cfc46e">hasStats</a> () const </td></tr>
+<tr class="separator:a7bd47b303d41e034d24446ce96cfc46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a042a3143b587ec926a20db9e001f8204"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const uint64_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a042a3143b587ec926a20db9e001f8204">firstOffset</a> () const </td></tr>
+<tr class="separator:a042a3143b587ec926a20db9e001f8204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2556c2164100ae4535c04e7de7c52cd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a2556c2164100ae4535c04e7de7c52cd9">setMin</a> (const <a class="el" href="structnanovdb_1_1LeafIndexBase.html#a42ef5b9e3bda59f74792879a259df620">ValueType</a> &amp;)</td></tr>
+<tr class="separator:a2556c2164100ae4535c04e7de7c52cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbb1bceeee8d9912b5cefa2fe6e894fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#adbb1bceeee8d9912b5cefa2fe6e894fd">setMax</a> (const <a class="el" href="structnanovdb_1_1LeafIndexBase.html#a42ef5b9e3bda59f74792879a259df620">ValueType</a> &amp;)</td></tr>
+<tr class="separator:adbb1bceeee8d9912b5cefa2fe6e894fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9578eeddc83253b4e518d3b2aa6f1e3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a9578eeddc83253b4e518d3b2aa6f1e3b">setAvg</a> (const <a class="el" href="structnanovdb_1_1LeafIndexBase.html#a491ff8aed2f4fb47d806d5e4c3bc6edc">FloatType</a> &amp;)</td></tr>
+<tr class="separator:a9578eeddc83253b4e518d3b2aa6f1e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3beafe8aadc0ca365f3c4b831d074409"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a3beafe8aadc0ca365f3c4b831d074409">setDev</a> (const <a class="el" href="structnanovdb_1_1LeafIndexBase.html#a491ff8aed2f4fb47d806d5e4c3bc6edc">FloatType</a> &amp;)</td></tr>
+<tr class="separator:a3beafe8aadc0ca365f3c4b831d074409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a903ab64df2c8846f5f01bb492155a05f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a903ab64df2c8846f5f01bb492155a05f">setOn</a> (uint32_t offset)</td></tr>
+<tr class="separator:a903ab64df2c8846f5f01bb492155a05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae3bcbbc93b104b7eaaa524d42114356"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aae3bcbbc93b104b7eaaa524d42114356"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#aae3bcbbc93b104b7eaaa524d42114356">setOrigin</a> (const T &amp;ijk)</td></tr>
+<tr class="separator:aae3bcbbc93b104b7eaaa524d42114356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a885bc3eda95d14f11aa2a9ad0e521582"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a885bc3eda95d14f11aa2a9ad0e521582">padding</a> ()</td></tr>
-<tr class="separator:a885bc3eda95d14f11aa2a9ad0e521582"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdbf948e7b299b032f08cc4591b5d974"><td class="memItemLeft" align="right" valign="top">static uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#abdbf948e7b299b032f08cc4591b5d974">memUsage</a> ()</td></tr>
-<tr class="separator:abdbf948e7b299b032f08cc4591b5d974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a918c88792414e56df353d3d843fdf274"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a918c88792414e56df353d3d843fdf274">padding</a> ()</td></tr>
+<tr class="separator:a918c88792414e56df353d3d843fdf274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3068d7c124ec7a0d3bdc2205cf835657"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a3068d7c124ec7a0d3bdc2205cf835657">memUsage</a> ()</td></tr>
+<tr class="separator:a3068d7c124ec7a0d3bdc2205cf835657"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -159,6 +160,18 @@ Public Attributes</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a17e684702cf41406fe05663e7aa7c8a6"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a17e684702cf41406fe05663e7aa7c8a6">FIXED_SIZE</a> = true</td></tr>
 <tr class="separator:a17e684702cf41406fe05663e7aa7c8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:abe0054803948d9d250c28fac9babe046"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#abe0054803948d9d250c28fac9babe046">LeafIndexBase</a> ()=default</td></tr>
+<tr class="memdesc:abe0054803948d9d250c28fac9babe046"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class should be used as an abstract class and only constructed or deleted via child classes.  <a href="#abe0054803948d9d250c28fac9babe046">More...</a><br /></td></tr>
+<tr class="separator:abe0054803948d9d250c28fac9babe046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eefa7f57e93fd50c31e9d01779f7808"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a7eefa7f57e93fd50c31e9d01779f7808">LeafIndexBase</a> (const <a class="el" href="structnanovdb_1_1LeafIndexBase.html">LeafIndexBase</a> &amp;)=default</td></tr>
+<tr class="separator:a7eefa7f57e93fd50c31e9d01779f7808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a095b567296a0a358e78a28208ba11fff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1LeafIndexBase.html">LeafIndexBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a095b567296a0a358e78a28208ba11fff">operator=</a> (const <a class="el" href="structnanovdb_1_1LeafIndexBase.html">LeafIndexBase</a> &amp;)=default</td></tr>
+<tr class="separator:a095b567296a0a358e78a28208ba11fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64e9bfc168c5fcd743d0cf583594fb66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1LeafIndexBase.html#a64e9bfc168c5fcd743d0cf583594fb66">~LeafIndexBase</a> ()=default</td></tr>
+<tr class="separator:a64e9bfc168c5fcd743d0cf583594fb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="af1a7c06ec1f80ed7748ce61023e84489"></a>
@@ -197,8 +210,81 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="abe0054803948d9d250c28fac9babe046"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1LeafIndexBase.html">LeafIndexBase</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This class should be used as an abstract class and only constructed or deleted via child classes. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7eefa7f57e93fd50c31e9d01779f7808"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1LeafIndexBase.html">LeafIndexBase</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1LeafIndexBase.html">LeafIndexBase</a>&lt; CoordT, MaskT, LOG2DIM &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a64e9bfc168c5fcd743d0cf583594fb66"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="structnanovdb_1_1LeafIndexBase.html">LeafIndexBase</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab0b6606ac4339509873e7d8e1b672141"></a>
+<a class="anchor" id="a042a3143b587ec926a20db9e001f8204"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -206,7 +292,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const uint64_t&amp; firstOffset </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const uint64_t&amp; firstOffset </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -221,7 +307,7 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adf1a7abf3218f3f048af00bf0f6826f9"></a>
+<a class="anchor" id="a7bd47b303d41e034d24446ce96cfc46e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -229,7 +315,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool hasStats </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool hasStats </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -244,7 +330,7 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abdbf948e7b299b032f08cc4591b5d974"></a>
+<a class="anchor" id="a3068d7c124ec7a0d3bdc2205cf835657"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -252,7 +338,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static uint64_t memUsage </td>
+          <td class="memname">static <a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t memUsage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -267,7 +353,7 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a885bc3eda95d14f11aa2a9ad0e521582"></a>
+<a class="anchor" id="a095b567296a0a358e78a28208ba11fff"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -275,7 +361,31 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static constexpr uint32_t padding </td>
+          <td class="memname"><a class="el" href="structnanovdb_1_1LeafIndexBase.html">LeafIndexBase</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1LeafIndexBase.html">LeafIndexBase</a>&lt; CoordT, MaskT, LOG2DIM &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a918c88792414e56df353d3d843fdf274"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr uint32_t padding </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -290,7 +400,7 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab7ddf47345564a7ea064987ea4149a92"></a>
+<a class="anchor" id="a9578eeddc83253b4e518d3b2aa6f1e3b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -298,7 +408,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void setAvg </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void setAvg </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structnanovdb_1_1LeafIndexBase.html#a491ff8aed2f4fb47d806d5e4c3bc6edc">FloatType</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -314,7 +424,7 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a59a796d26dbe9bef11b2db4d45a800b1"></a>
+<a class="anchor" id="a3beafe8aadc0ca365f3c4b831d074409"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -322,7 +432,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void setDev </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void setDev </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structnanovdb_1_1LeafIndexBase.html#a491ff8aed2f4fb47d806d5e4c3bc6edc">FloatType</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -338,7 +448,7 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4c04aed00b68fb6149e630fda9a3bbc1"></a>
+<a class="anchor" id="adbb1bceeee8d9912b5cefa2fe6e894fd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -346,7 +456,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void setMax </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void setMax </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structnanovdb_1_1LeafIndexBase.html#a42ef5b9e3bda59f74792879a259df620">ValueType</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -362,7 +472,7 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac72dbbec51826911663669cf8cc3cd11"></a>
+<a class="anchor" id="a2556c2164100ae4535c04e7de7c52cd9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -370,7 +480,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void setMin </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void setMin </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structnanovdb_1_1LeafIndexBase.html#a42ef5b9e3bda59f74792879a259df620">ValueType</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -386,7 +496,7 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a52991ea12190ad4df50cc29a237f9f29"></a>
+<a class="anchor" id="a903ab64df2c8846f5f01bb492155a05f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -394,7 +504,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void setOn </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void setOn </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>offset</em></td><td>)</td>
@@ -410,7 +520,7 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a000298b28e29ef44df2686dc2f384d4f"></a>
+<a class="anchor" id="aae3bcbbc93b104b7eaaa524d42114356"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -418,7 +528,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void setOrigin </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void setOrigin </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>ijk</em></td><td>)</td>

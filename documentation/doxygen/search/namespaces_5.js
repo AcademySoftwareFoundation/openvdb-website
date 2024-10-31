@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['build',['build',['../namespacenanovdb_1_1build.html',1,'nanovdb']]],
-  ['crc32',['crc32',['../namespacenanovdb_1_1crc32.html',1,'nanovdb']]],
-  ['internal',['Internal',['../namespacenanovdb_1_1io_1_1Internal.html',1,'nanovdb::io']]],
+  ['impl',['impl',['../namespacenanovdb_1_1util_1_1impl.html',1,'nanovdb::util']]],
   ['io',['io',['../namespacenanovdb_1_1io.html',1,'nanovdb']]],
-  ['nanovdb',['nanovdb',['../namespacenanovdb.html',1,'']]]
+  ['nanovdb',['nanovdb',['../namespacenanovdb.html',1,'']]],
+  ['util',['util',['../namespacenanovdb_1_1util.html',1,'nanovdb']]]
 ];

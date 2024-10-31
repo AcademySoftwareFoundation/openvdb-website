@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -97,52 +97,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
-<code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;<a class="el" href="Platform_8h_source.html">openvdb/Platform.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="openvdb_2Types_8h_source.html">openvdb/Types.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="Assert_8h_source.html">openvdb/util/Assert.h</a>&gt;</code><br />
 </div>
 <p><a href="NodeMasks_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1BaseMaskIterator.html">BaseMaskIterator&lt; NodeMask &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for the bit mask iterators.  <a href="classopenvdb_1_1v11__0_1_1util_1_1BaseMaskIterator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1BaseMaskIterator.html">BaseMaskIterator&lt; NodeMask &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for the bit mask iterators.  <a href="classopenvdb_1_1v12__0_1_1util_1_1BaseMaskIterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1OnMaskIterator.html">OnMaskIterator&lt; NodeMask &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1OnMaskIterator.html">OnMaskIterator&lt; NodeMask &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1OffMaskIterator.html">OffMaskIterator&lt; NodeMask &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1OffMaskIterator.html">OffMaskIterator&lt; NodeMask &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1DenseMaskIterator.html">DenseMaskIterator&lt; NodeMask &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1DenseMaskIterator.html">DenseMaskIterator&lt; NodeMask &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1NodeMask.html">NodeMask&lt; Log2Dim &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit mask for the internal and leaf nodes of VDB. This is a 64-bit implementation.  <a href="classopenvdb_1_1v11__0_1_1util_1_1NodeMask.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1NodeMask.html">NodeMask&lt; Log2Dim &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit mask for the internal and leaf nodes of VDB. This is a 64-bit implementation.  <a href="classopenvdb_1_1v12__0_1_1util_1_1NodeMask.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1NodeMask_3_011_01_4.html">NodeMask&lt; 1 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of <a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1NodeMask.html" title="Bit mask for the internal and leaf nodes of VDB. This is a 64-bit implementation. ...">NodeMask</a> for Log2Dim=1, i.e. 2^3 nodes.  <a href="classopenvdb_1_1v11__0_1_1util_1_1NodeMask_3_011_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1NodeMask_3_011_01_4.html">NodeMask&lt; 1 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of <a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1NodeMask.html" title="Bit mask for the internal and leaf nodes of VDB. This is a 64-bit implementation. ...">NodeMask</a> for Log2Dim=1, i.e. 2^3 nodes.  <a href="classopenvdb_1_1v12__0_1_1util_1_1NodeMask_3_011_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1NodeMask_3_012_01_4.html">NodeMask&lt; 2 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of <a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1NodeMask.html" title="Bit mask for the internal and leaf nodes of VDB. This is a 64-bit implementation. ...">NodeMask</a> for Log2Dim=2, i.e. 4^3 nodes.  <a href="classopenvdb_1_1v11__0_1_1util_1_1NodeMask_3_012_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1NodeMask_3_012_01_4.html">NodeMask&lt; 2 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of <a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1NodeMask.html" title="Bit mask for the internal and leaf nodes of VDB. This is a 64-bit implementation. ...">NodeMask</a> for Log2Dim=2, i.e. 4^3 nodes.  <a href="classopenvdb_1_1v12__0_1_1util_1_1NodeMask_3_012_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1RootNodeMask.html">RootNodeMask</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1RootNodeMask.html">RootNodeMask</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1RootNodeMask_1_1BaseIterator.html">RootNodeMask::BaseIterator</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1RootNodeMask_1_1BaseIterator.html">RootNodeMask::BaseIterator</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1RootNodeMask_1_1OnIterator.html">RootNodeMask::OnIterator</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1RootNodeMask_1_1OnIterator.html">RootNodeMask::OnIterator</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1RootNodeMask_1_1OffIterator.html">RootNodeMask::OffIterator</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1RootNodeMask_1_1OffIterator.html">RootNodeMask::OffIterator</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v11__0_1_1util_1_1RootNodeMask_1_1DenseIterator.html">RootNodeMask::DenseIterator</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v12__0_1_1util_1_1RootNodeMask_1_1DenseIterator.html">RootNodeMask::DenseIterator</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceopenvdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb.html">openvdb</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v11__0"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0.html">openvdb::v11_0</a></td></tr>
+<tr class="memitem:namespaceopenvdb_1_1v12__0"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0.html">openvdb::v12_0</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespaceopenvdb_1_1v11__0_1_1util"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1util.html">openvdb::v11_0::util</a></td></tr>
+<tr class="memitem:namespaceopenvdb_1_1v12__0_1_1util"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1util.html">openvdb::v12_0::util</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -156,36 +156,36 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8ab00fa2d15bc235caa037e93dc3551b"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1util.html#a8ab00fa2d15bc235caa037e93dc3551b">CountOn</a> (Byte v)</td></tr>
-<tr class="memdesc:a8ab00fa2d15bc235caa037e93dc3551b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of on bits in the given 8-bit value.  <a href="namespaceopenvdb_1_1v11__0_1_1util.html#a8ab00fa2d15bc235caa037e93dc3551b">More...</a><br /></td></tr>
-<tr class="separator:a8ab00fa2d15bc235caa037e93dc3551b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f96c32b56fb16338eb586fa93322758"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1util.html#a1f96c32b56fb16338eb586fa93322758">CountOff</a> (Byte v)</td></tr>
-<tr class="memdesc:a1f96c32b56fb16338eb586fa93322758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of off bits in the given 8-bit value.  <a href="namespaceopenvdb_1_1v11__0_1_1util.html#a1f96c32b56fb16338eb586fa93322758">More...</a><br /></td></tr>
-<tr class="separator:a1f96c32b56fb16338eb586fa93322758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5534ec6866d6b139f6de01fb4a5b237d"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1util.html#a5534ec6866d6b139f6de01fb4a5b237d">CountOn</a> (Index32 v)</td></tr>
-<tr class="memdesc:a5534ec6866d6b139f6de01fb4a5b237d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of on bits in the given 32-bit value.  <a href="namespaceopenvdb_1_1v11__0_1_1util.html#a5534ec6866d6b139f6de01fb4a5b237d">More...</a><br /></td></tr>
-<tr class="separator:a5534ec6866d6b139f6de01fb4a5b237d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb1b6306fbc5a1471b1c675ca800feaf"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1util.html#aeb1b6306fbc5a1471b1c675ca800feaf">CountOff</a> (Index32 v)</td></tr>
-<tr class="memdesc:aeb1b6306fbc5a1471b1c675ca800feaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of off bits in the given 32-bit value.  <a href="namespaceopenvdb_1_1v11__0_1_1util.html#aeb1b6306fbc5a1471b1c675ca800feaf">More...</a><br /></td></tr>
-<tr class="separator:aeb1b6306fbc5a1471b1c675ca800feaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad894b340d882abe2706162d4d5e437b3"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1util.html#ad894b340d882abe2706162d4d5e437b3">CountOn</a> (Index64 v)</td></tr>
-<tr class="memdesc:ad894b340d882abe2706162d4d5e437b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of on bits in the given 64-bit value.  <a href="namespaceopenvdb_1_1v11__0_1_1util.html#ad894b340d882abe2706162d4d5e437b3">More...</a><br /></td></tr>
-<tr class="separator:ad894b340d882abe2706162d4d5e437b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabe8678c1b594099e773e7c8986149bd"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1util.html#aabe8678c1b594099e773e7c8986149bd">CountOff</a> (Index64 v)</td></tr>
-<tr class="memdesc:aabe8678c1b594099e773e7c8986149bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of off bits in the given 64-bit value.  <a href="namespaceopenvdb_1_1v11__0_1_1util.html#aabe8678c1b594099e773e7c8986149bd">More...</a><br /></td></tr>
-<tr class="separator:aabe8678c1b594099e773e7c8986149bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f9a53a29bd939181bc95bf3a3cd1a5e"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1util.html#a6f9a53a29bd939181bc95bf3a3cd1a5e">FindLowestOn</a> (Byte v)</td></tr>
-<tr class="memdesc:a6f9a53a29bd939181bc95bf3a3cd1a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the least significant on bit of the given 8-bit value.  <a href="namespaceopenvdb_1_1v11__0_1_1util.html#a6f9a53a29bd939181bc95bf3a3cd1a5e">More...</a><br /></td></tr>
-<tr class="separator:a6f9a53a29bd939181bc95bf3a3cd1a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a107f5a84fae45e975e82d23e5eab858b"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1util.html#a107f5a84fae45e975e82d23e5eab858b">FindLowestOn</a> (Index32 v)</td></tr>
-<tr class="memdesc:a107f5a84fae45e975e82d23e5eab858b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the least significant on bit of the given 32-bit value.  <a href="namespaceopenvdb_1_1v11__0_1_1util.html#a107f5a84fae45e975e82d23e5eab858b">More...</a><br /></td></tr>
-<tr class="separator:a107f5a84fae45e975e82d23e5eab858b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c2f57c1c38f20e941f4d04206a19051"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1util.html#a4c2f57c1c38f20e941f4d04206a19051">FindLowestOn</a> (Index64 v)</td></tr>
-<tr class="memdesc:a4c2f57c1c38f20e941f4d04206a19051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the least significant on bit of the given 64-bit value.  <a href="namespaceopenvdb_1_1v11__0_1_1util.html#a4c2f57c1c38f20e941f4d04206a19051">More...</a><br /></td></tr>
-<tr class="separator:a4c2f57c1c38f20e941f4d04206a19051"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab4a1cfa4ae3fe63ede09593d52fb661"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v11__0_1_1util.html#aab4a1cfa4ae3fe63ede09593d52fb661">FindHighestOn</a> (Index32 v)</td></tr>
-<tr class="memdesc:aab4a1cfa4ae3fe63ede09593d52fb661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the most significant on bit of the given 32-bit value.  <a href="namespaceopenvdb_1_1v11__0_1_1util.html#aab4a1cfa4ae3fe63ede09593d52fb661">More...</a><br /></td></tr>
-<tr class="separator:aab4a1cfa4ae3fe63ede09593d52fb661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf57a7b881de0c070cf905e8b4359fb8"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1util.html#aaf57a7b881de0c070cf905e8b4359fb8">CountOn</a> (Byte v)</td></tr>
+<tr class="memdesc:aaf57a7b881de0c070cf905e8b4359fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of on bits in the given 8-bit value.  <a href="namespaceopenvdb_1_1v12__0_1_1util.html#aaf57a7b881de0c070cf905e8b4359fb8">More...</a><br /></td></tr>
+<tr class="separator:aaf57a7b881de0c070cf905e8b4359fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e08967e84c573105e64a2bb3f236ec4"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1util.html#a5e08967e84c573105e64a2bb3f236ec4">CountOff</a> (Byte v)</td></tr>
+<tr class="memdesc:a5e08967e84c573105e64a2bb3f236ec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of off bits in the given 8-bit value.  <a href="namespaceopenvdb_1_1v12__0_1_1util.html#a5e08967e84c573105e64a2bb3f236ec4">More...</a><br /></td></tr>
+<tr class="separator:a5e08967e84c573105e64a2bb3f236ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70b77d9847d62841e3b4bf5a3dfb69ef"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1util.html#a70b77d9847d62841e3b4bf5a3dfb69ef">CountOn</a> (Index32 v)</td></tr>
+<tr class="memdesc:a70b77d9847d62841e3b4bf5a3dfb69ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of on bits in the given 32-bit value.  <a href="namespaceopenvdb_1_1v12__0_1_1util.html#a70b77d9847d62841e3b4bf5a3dfb69ef">More...</a><br /></td></tr>
+<tr class="separator:a70b77d9847d62841e3b4bf5a3dfb69ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45603c572959f4b3c7d7156a20bba195"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1util.html#a45603c572959f4b3c7d7156a20bba195">CountOff</a> (Index32 v)</td></tr>
+<tr class="memdesc:a45603c572959f4b3c7d7156a20bba195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of off bits in the given 32-bit value.  <a href="namespaceopenvdb_1_1v12__0_1_1util.html#a45603c572959f4b3c7d7156a20bba195">More...</a><br /></td></tr>
+<tr class="separator:a45603c572959f4b3c7d7156a20bba195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd85f4582a8a6e08066af575fe5c5e3f"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1util.html#afd85f4582a8a6e08066af575fe5c5e3f">CountOn</a> (Index64 v)</td></tr>
+<tr class="memdesc:afd85f4582a8a6e08066af575fe5c5e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of on bits in the given 64-bit value.  <a href="namespaceopenvdb_1_1v12__0_1_1util.html#afd85f4582a8a6e08066af575fe5c5e3f">More...</a><br /></td></tr>
+<tr class="separator:afd85f4582a8a6e08066af575fe5c5e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b296398ce72f8d39dc67592d890b995"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1util.html#a5b296398ce72f8d39dc67592d890b995">CountOff</a> (Index64 v)</td></tr>
+<tr class="memdesc:a5b296398ce72f8d39dc67592d890b995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of off bits in the given 64-bit value.  <a href="namespaceopenvdb_1_1v12__0_1_1util.html#a5b296398ce72f8d39dc67592d890b995">More...</a><br /></td></tr>
+<tr class="separator:a5b296398ce72f8d39dc67592d890b995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab404b398b26b62173ff75196f06ca35d"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1util.html#ab404b398b26b62173ff75196f06ca35d">FindLowestOn</a> (Byte v)</td></tr>
+<tr class="memdesc:ab404b398b26b62173ff75196f06ca35d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the least significant on bit of the given 8-bit value.  <a href="namespaceopenvdb_1_1v12__0_1_1util.html#ab404b398b26b62173ff75196f06ca35d">More...</a><br /></td></tr>
+<tr class="separator:ab404b398b26b62173ff75196f06ca35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b1d6b50cdde90e690f96e5ceeec0faa"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1util.html#a7b1d6b50cdde90e690f96e5ceeec0faa">FindLowestOn</a> (Index32 v)</td></tr>
+<tr class="memdesc:a7b1d6b50cdde90e690f96e5ceeec0faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the least significant on bit of the given 32-bit value.  <a href="namespaceopenvdb_1_1v12__0_1_1util.html#a7b1d6b50cdde90e690f96e5ceeec0faa">More...</a><br /></td></tr>
+<tr class="separator:a7b1d6b50cdde90e690f96e5ceeec0faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a191cddd38ddbf4b2d03b10a07075c3e7"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1util.html#a191cddd38ddbf4b2d03b10a07075c3e7">FindLowestOn</a> (Index64 v)</td></tr>
+<tr class="memdesc:a191cddd38ddbf4b2d03b10a07075c3e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the least significant on bit of the given 64-bit value.  <a href="namespaceopenvdb_1_1v12__0_1_1util.html#a191cddd38ddbf4b2d03b10a07075c3e7">More...</a><br /></td></tr>
+<tr class="separator:a191cddd38ddbf4b2d03b10a07075c3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4fc7c57697220c0e45464ac637fd8c4"><td class="memItemLeft" align="right" valign="top">Index32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v12__0_1_1util.html#ad4fc7c57697220c0e45464ac637fd8c4">FindHighestOn</a> (Index32 v)</td></tr>
+<tr class="memdesc:ad4fc7c57697220c0e45464ac637fd8c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the most significant on bit of the given 32-bit value.  <a href="namespaceopenvdb_1_1v12__0_1_1util.html#ad4fc7c57697220c0e45464ac637fd8c4">More...</a><br /></td></tr>
+<tr class="separator:ad4fc7c57697220c0e45464ac637fd8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Ken Museth </dd></dl>

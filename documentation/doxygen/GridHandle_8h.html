@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>OpenVDB: nanovdb/util/GridHandle.h File Reference</title>
+<title>OpenVDB: nanovdb/GridHandle.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_9862d8700dece0becc08811a9cb1ac22.html">nanovdb</a></li><li class="navelem"><a class="el" href="dir_f9ca77ac9acdbd6a209f5e94183bcf27.html">util</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9862d8700dece0becc08811a9cb1ac22.html">nanovdb</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -103,8 +103,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;initializer_list&gt;</code><br />
 <code>#include &lt;<a class="el" href="NanoVDB_8h_source.html">nanovdb/NanoVDB.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="HostBuffer_8h_source.html">nanovdb/util/HostBuffer.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="GridChecksum_8h_source.html">nanovdb/util/GridChecksum.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="HostBuffer_8h_source.html">nanovdb/HostBuffer.h</a>&gt;</code><br />
+<code>#include &lt;nanovdb/tools/GridChecksum.h&gt;</code><br />
 </div>
 <p><a href="GridHandle_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -123,9 +123,11 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a36018cff61df38070da00a8d60fe911c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a36018cff61df38070da00a8d60fe911c">cpyGridHandleMeta</a> (const GridData *data, GridHandleMetaData *meta)</td></tr>
+<tr class="separator:a36018cff61df38070da00a8d60fe911c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc2e5de9a5c920250fd92c3025d3352b"><td class="memTemplParams" colspan="2">template&lt;typename BufferT , template&lt; class, class... &gt; class VectorT = std::vector&gt; </td></tr>
 <tr class="memitem:adc2e5de9a5c920250fd92c3025d3352b"><td class="memTemplItemLeft" align="right" valign="top">VectorT&lt; GridHandle&lt; BufferT &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#adc2e5de9a5c920250fd92c3025d3352b">splitGrids</a> (const GridHandle&lt; BufferT &gt; &amp;handle, const BufferT *other=nullptr)</td></tr>
-<tr class="memdesc:adc2e5de9a5c920250fd92c3025d3352b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classnanovdb_1_1Split.html">Split</a> all grids in a single <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> into a vector of multiple GridHandles each with a single grid.  <a href="namespacenanovdb.html#adc2e5de9a5c920250fd92c3025d3352b">More...</a><br /></td></tr>
+<tr class="memdesc:adc2e5de9a5c920250fd92c3025d3352b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split all grids in a single <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> into a vector of multiple GridHandles each with a single grid.  <a href="namespacenanovdb.html#adc2e5de9a5c920250fd92c3025d3352b">More...</a><br /></td></tr>
 <tr class="separator:adc2e5de9a5c920250fd92c3025d3352b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a610672495a0c0a4d1e505e0a53a85f22"><td class="memTemplParams" colspan="2">template&lt;typename BufferT , template&lt; class, class... &gt; class VectorT&gt; </td></tr>
 <tr class="memitem:a610672495a0c0a4d1e505e0a53a85f22"><td class="memTemplItemLeft" align="right" valign="top">GridHandle&lt; BufferT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a610672495a0c0a4d1e505e0a53a85f22">mergeGrids</a> (const VectorT&lt; GridHandle&lt; BufferT &gt;&gt; &amp;handles, const BufferT *pool=nullptr)</td></tr>

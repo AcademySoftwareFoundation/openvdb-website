@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -109,85 +109,87 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d1b83d766a42865b6434a23a153d3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0ca1632c1112308658724696e9540a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ad0ca1632c1112308658724696e9540a4">GridMetaData</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData)</td></tr>
 <tr class="separator:ad0ca1632c1112308658724696e9540a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12ff15acc3e264af4794a8ed54610d01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a12ff15acc3e264af4794a8ed54610d01">safeCast</a> () const </td></tr>
-<tr class="memdesc:a12ff15acc3e264af4794a8ed54610d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if the <a class="el" href="structnanovdb_1_1RootData.html" title="Struct with all the member data of the RootNode (useful during serialization of an openvdb RootNode) ...">RootData</a> follows right after the <a class="el" href="structnanovdb_1_1TreeData.html">TreeData</a>. If so, this implies that it's safe to cast the grid from which this instance was constructed to a <a class="el" href="classnanovdb_1_1GridMetaData.html" title="This is a convenient class that allows for access to grid meta-data that are independent of the value...">GridMetaData</a>  <a href="#a12ff15acc3e264af4794a8ed54610d01">More...</a><br /></td></tr>
-<tr class="separator:a12ff15acc3e264af4794a8ed54610d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#aac1b70a2ed67ead038c4d3f5ac4d8a81">isValid</a> () const </td></tr>
-<tr class="separator:aac1b70a2ed67ead038c4d3f5ac4d8a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a259d44e4d6c5a6a29e462ee8932f3edb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0">GridType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a259d44e4d6c5a6a29e462ee8932f3edb">gridType</a> () const </td></tr>
-<tr class="separator:a259d44e4d6c5a6a29e462ee8932f3edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a699c8c71743c884aec021754933ead62"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538">GridClass</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a699c8c71743c884aec021754933ead62">gridClass</a> () const </td></tr>
-<tr class="separator:a699c8c71743c884aec021754933ead62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3871c12599d41f1a64a4b33cfaccb01c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a3871c12599d41f1a64a4b33cfaccb01c">isLevelSet</a> () const </td></tr>
-<tr class="separator:a3871c12599d41f1a64a4b33cfaccb01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f43d9ef07b4fe31f7198c7850d19d68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a0f43d9ef07b4fe31f7198c7850d19d68">isFogVolume</a> () const </td></tr>
-<tr class="separator:a0f43d9ef07b4fe31f7198c7850d19d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ee43d08f23320d58c94639c211d4022"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a5ee43d08f23320d58c94639c211d4022">isStaggered</a> () const </td></tr>
-<tr class="separator:a5ee43d08f23320d58c94639c211d4022"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88d0587f63a0e0884475a9ccd0893109"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a88d0587f63a0e0884475a9ccd0893109">isPointIndex</a> () const </td></tr>
-<tr class="separator:a88d0587f63a0e0884475a9ccd0893109"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a912e2d5abe2be1bc9ba8dbb8ed4475e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a912e2d5abe2be1bc9ba8dbb8ed4475e4">isGridIndex</a> () const </td></tr>
-<tr class="separator:a912e2d5abe2be1bc9ba8dbb8ed4475e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66d1a320b45e81fba92ca470313323f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a66d1a320b45e81fba92ca470313323f2">isPointData</a> () const </td></tr>
-<tr class="separator:a66d1a320b45e81fba92ca470313323f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09533cf22ad427de1b0c59b8be4b0cfc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a09533cf22ad427de1b0c59b8be4b0cfc">isMask</a> () const </td></tr>
-<tr class="separator:a09533cf22ad427de1b0c59b8be4b0cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a149513a42ebb9fdcdad12d028a585b18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a149513a42ebb9fdcdad12d028a585b18">isUnknown</a> () const </td></tr>
-<tr class="separator:a149513a42ebb9fdcdad12d028a585b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94a634a4b210a6ea05e146918ebb4e2b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a94a634a4b210a6ea05e146918ebb4e2b">hasMinMax</a> () const </td></tr>
-<tr class="separator:a94a634a4b210a6ea05e146918ebb4e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf725e5e3b79e74ceb7cb146b3b3b4a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#acf725e5e3b79e74ceb7cb146b3b3b4a4">hasBBox</a> () const </td></tr>
-<tr class="separator:acf725e5e3b79e74ceb7cb146b3b3b4a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab94c770e4d55dd2f5a375a1e28dc5536"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ab94c770e4d55dd2f5a375a1e28dc5536">hasLongGridName</a> () const </td></tr>
-<tr class="separator:ab94c770e4d55dd2f5a375a1e28dc5536"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a566a3789fbf3a92f0ce9715ee2c74e69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a566a3789fbf3a92f0ce9715ee2c74e69">hasAverage</a> () const </td></tr>
-<tr class="separator:a566a3789fbf3a92f0ce9715ee2c74e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab732a81273218294293dc81263926d4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ab732a81273218294293dc81263926d4d">hasStdDeviation</a> () const </td></tr>
-<tr class="separator:ab732a81273218294293dc81263926d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96b0b4c118a9593fbf775f5ef48ea067"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a96b0b4c118a9593fbf775f5ef48ea067">isBreadthFirst</a> () const </td></tr>
-<tr class="separator:a96b0b4c118a9593fbf775f5ef48ea067"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56b024a603c2305a4fcff3180d1f6b2a"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a56b024a603c2305a4fcff3180d1f6b2a">gridSize</a> () const </td></tr>
-<tr class="separator:a56b024a603c2305a4fcff3180d1f6b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6757fa094fdcb558aafeaff758ace46c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a6757fa094fdcb558aafeaff758ace46c">gridIndex</a> () const </td></tr>
-<tr class="separator:a6757fa094fdcb558aafeaff758ace46c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7410a55f8cc2fff5a43e4b50e80a31b5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a7410a55f8cc2fff5a43e4b50e80a31b5">gridCount</a> () const </td></tr>
-<tr class="separator:a7410a55f8cc2fff5a43e4b50e80a31b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac60d5eb1e4b87e2b0a174b37b530b461"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ac60d5eb1e4b87e2b0a174b37b530b461">shortGridName</a> () const </td></tr>
-<tr class="separator:ac60d5eb1e4b87e2b0a174b37b530b461"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07c15aa873ef4d5fdfb4dc90b237d250"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1Map.html">Map</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a07c15aa873ef4d5fdfb4dc90b237d250">map</a> () const </td></tr>
-<tr class="separator:a07c15aa873ef4d5fdfb4dc90b237d250"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8886c49541e724d942354e10b845806"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt; <a class="el" href="namespacenanovdb.html#a98d94999010cb92dfb5f652c353d1d82">Vec3d</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ad8886c49541e724d942354e10b845806">worldBBox</a> () const </td></tr>
-<tr class="separator:ad8886c49541e724d942354e10b845806"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b44733507fd4cef9dea7e7ddd04621b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt; <a class="el" href="classnanovdb_1_1Coord.html">Coord</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a3b44733507fd4cef9dea7e7ddd04621b">indexBBox</a> () const </td></tr>
-<tr class="separator:a3b44733507fd4cef9dea7e7ddd04621b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe11d7ce015c713f29f88fb376e22d0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenanovdb.html#a98d94999010cb92dfb5f652c353d1d82">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#abe11d7ce015c713f29f88fb376e22d0f">voxelSize</a> () const </td></tr>
-<tr class="separator:abe11d7ce015c713f29f88fb376e22d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71267eab956fab2c9b34d704479a8ba9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a71267eab956fab2c9b34d704479a8ba9">blindDataCount</a> () const </td></tr>
-<tr class="separator:a71267eab956fab2c9b34d704479a8ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96a9b9032b2eec85384a96ad8b436555"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a96a9b9032b2eec85384a96ad8b436555">activeVoxelCount</a> () const </td></tr>
-<tr class="separator:a96a9b9032b2eec85384a96ad8b436555"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac015937b7e1e71ab77c27f063e62306"><td class="memItemLeft" align="right" valign="top">const uint32_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#aac015937b7e1e71ab77c27f063e62306">activeTileCount</a> (uint32_t level) const </td></tr>
-<tr class="separator:aac015937b7e1e71ab77c27f063e62306"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cbf02520b0d9d379ac8ef5959d63915"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a6cbf02520b0d9d379ac8ef5959d63915">nodeCount</a> (uint32_t level) const </td></tr>
-<tr class="separator:a6cbf02520b0d9d379ac8ef5959d63915"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0880c82c125789d4d13e79d87408c5b0"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a0880c82c125789d4d13e79d87408c5b0">checksum</a> () const </td></tr>
-<tr class="separator:a0880c82c125789d4d13e79d87408c5b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b0a6d351fe6365338a18ff053e77bbb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a7b0a6d351fe6365338a18ff053e77bbb">rootTableSize</a> () const </td></tr>
-<tr class="separator:a7b0a6d351fe6365338a18ff053e77bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a479432127ee77145cc19d6a2d1590821"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a479432127ee77145cc19d6a2d1590821">isEmpty</a> () const </td></tr>
-<tr class="separator:a479432127ee77145cc19d6a2d1590821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58d42d3098d09eeaf661f67c40a5d51e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Version.html">Version</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a58d42d3098d09eeaf661f67c40a5d51e">version</a> () const </td></tr>
-<tr class="separator:a58d42d3098d09eeaf661f67c40a5d51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa90b7bcc5f9fbc84db0ddf0940000cdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1GridMetaData.html">GridMetaData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#aa90b7bcc5f9fbc84db0ddf0940000cdc">operator=</a> (const <a class="el" href="classnanovdb_1_1GridMetaData.html">GridMetaData</a> &amp;)=default</td></tr>
+<tr class="separator:aa90b7bcc5f9fbc84db0ddf0940000cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7340592475c88103d8e49a3493127b68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a7340592475c88103d8e49a3493127b68">safeCast</a> () const </td></tr>
+<tr class="memdesc:a7340592475c88103d8e49a3493127b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if the <a class="el" href="structnanovdb_1_1RootData.html" title="Struct with all the member data of the RootNode (useful during serialization of an openvdb RootNode) ...">RootData</a> follows right after the <a class="el" href="structnanovdb_1_1TreeData.html">TreeData</a>. If so, this implies that it's safe to cast the grid from which this instance was constructed to a <a class="el" href="classnanovdb_1_1GridMetaData.html" title="This is a convenient class that allows for access to grid meta-data that are independent of the value...">GridMetaData</a>  <a href="#a7340592475c88103d8e49a3493127b68">More...</a><br /></td></tr>
+<tr class="separator:a7340592475c88103d8e49a3493127b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c670dbb0635dcc47b561cfe150cd365"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a9c670dbb0635dcc47b561cfe150cd365">isValid</a> () const </td></tr>
+<tr class="separator:a9c670dbb0635dcc47b561cfe150cd365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab52d05c4dfcb233e91036be980fc19b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0">GridType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#aab52d05c4dfcb233e91036be980fc19b">gridType</a> () const </td></tr>
+<tr class="separator:aab52d05c4dfcb233e91036be980fc19b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ccce6b9b336bb473c745ce16bc1e7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538">GridClass</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a25ccce6b9b336bb473c745ce16bc1e7a">gridClass</a> () const </td></tr>
+<tr class="separator:a25ccce6b9b336bb473c745ce16bc1e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb2ec12f9c0f6a90d2a7ea24e376041d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#aeb2ec12f9c0f6a90d2a7ea24e376041d">isLevelSet</a> () const </td></tr>
+<tr class="separator:aeb2ec12f9c0f6a90d2a7ea24e376041d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d58b80f9b528351b0464276a280a48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a91d58b80f9b528351b0464276a280a48">isFogVolume</a> () const </td></tr>
+<tr class="separator:a91d58b80f9b528351b0464276a280a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6c61a0cf8d041bcc8372774c01ee441"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ae6c61a0cf8d041bcc8372774c01ee441">isStaggered</a> () const </td></tr>
+<tr class="separator:ae6c61a0cf8d041bcc8372774c01ee441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa632f19a0e7d264c56dbefaece32f982"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#aa632f19a0e7d264c56dbefaece32f982">isPointIndex</a> () const </td></tr>
+<tr class="separator:aa632f19a0e7d264c56dbefaece32f982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eee5f0e13427f9617ca125800520392"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a4eee5f0e13427f9617ca125800520392">isGridIndex</a> () const </td></tr>
+<tr class="separator:a4eee5f0e13427f9617ca125800520392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c957d5bf60c04d9e207fa16d3c30f21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a6c957d5bf60c04d9e207fa16d3c30f21">isPointData</a> () const </td></tr>
+<tr class="separator:a6c957d5bf60c04d9e207fa16d3c30f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab760032e37f903d3fd113a449dd15438"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ab760032e37f903d3fd113a449dd15438">isMask</a> () const </td></tr>
+<tr class="separator:ab760032e37f903d3fd113a449dd15438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b87fc1a4294e17f63953b2d80f39496"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a8b87fc1a4294e17f63953b2d80f39496">isUnknown</a> () const </td></tr>
+<tr class="separator:a8b87fc1a4294e17f63953b2d80f39496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b742262524b8852a6fdc9bcb32c857f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a6b742262524b8852a6fdc9bcb32c857f">hasMinMax</a> () const </td></tr>
+<tr class="separator:a6b742262524b8852a6fdc9bcb32c857f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9867caa7e3705aec5eeaa674c8e4dcb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a9867caa7e3705aec5eeaa674c8e4dcb4">hasBBox</a> () const </td></tr>
+<tr class="separator:a9867caa7e3705aec5eeaa674c8e4dcb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae58ee1ba4fe04d3a1ae2c4b2a99f5f46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ae58ee1ba4fe04d3a1ae2c4b2a99f5f46">hasLongGridName</a> () const </td></tr>
+<tr class="separator:ae58ee1ba4fe04d3a1ae2c4b2a99f5f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab44f2da93e345d269a8ea7d0c7b41614"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ab44f2da93e345d269a8ea7d0c7b41614">hasAverage</a> () const </td></tr>
+<tr class="separator:ab44f2da93e345d269a8ea7d0c7b41614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86d8099ce635a152e815ae0daad29f06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a86d8099ce635a152e815ae0daad29f06">hasStdDeviation</a> () const </td></tr>
+<tr class="separator:a86d8099ce635a152e815ae0daad29f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c328c8ea51f77f1d023dc6d99e94b6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a5c328c8ea51f77f1d023dc6d99e94b6b">isBreadthFirst</a> () const </td></tr>
+<tr class="separator:a5c328c8ea51f77f1d023dc6d99e94b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a743dec4f21faffa9b34df55ffd7893aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a743dec4f21faffa9b34df55ffd7893aa">gridSize</a> () const </td></tr>
+<tr class="separator:a743dec4f21faffa9b34df55ffd7893aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c7dd5c9342bf9adb1d33faa768869f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a18c7dd5c9342bf9adb1d33faa768869f">gridIndex</a> () const </td></tr>
+<tr class="separator:a18c7dd5c9342bf9adb1d33faa768869f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a824b90490d6deee3bd7ada9d31d1e4d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a824b90490d6deee3bd7ada9d31d1e4d6">gridCount</a> () const </td></tr>
+<tr class="separator:a824b90490d6deee3bd7ada9d31d1e4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee92183e34b3f4247202a4469a013fc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#aee92183e34b3f4247202a4469a013fc2">shortGridName</a> () const </td></tr>
+<tr class="separator:aee92183e34b3f4247202a4469a013fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7f9b4a9caa71bd80ee8eedbd9853cd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="structnanovdb_1_1Map.html">Map</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ab7f9b4a9caa71bd80ee8eedbd9853cd9">map</a> () const </td></tr>
+<tr class="separator:ab7f9b4a9caa71bd80ee8eedbd9853cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a054b4842a48a7018ceeeba49b12e2a5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const Vec3dBBox &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a054b4842a48a7018ceeeba49b12e2a5c">worldBBox</a> () const </td></tr>
+<tr class="separator:a054b4842a48a7018ceeeba49b12e2a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7de035e6a07ef6d51c67f10a37e9c6cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const CoordBBox &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a7de035e6a07ef6d51c67f10a37e9c6cd">indexBBox</a> () const </td></tr>
+<tr class="separator:a7de035e6a07ef6d51c67f10a37e9c6cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95883e3c24b0d5525dd28e7b12d91d82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0ad5b40ccec7be098557d1e35969a4bec2">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a95883e3c24b0d5525dd28e7b12d91d82">voxelSize</a> () const </td></tr>
+<tr class="separator:a95883e3c24b0d5525dd28e7b12d91d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cadde37ce3ac53412000e732a505f22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a9cadde37ce3ac53412000e732a505f22">blindDataCount</a> () const </td></tr>
+<tr class="separator:a9cadde37ce3ac53412000e732a505f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d60261df5cd5d06638d9c98080ca965"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a9d60261df5cd5d06638d9c98080ca965">activeVoxelCount</a> () const </td></tr>
+<tr class="separator:a9d60261df5cd5d06638d9c98080ca965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8932f1cf4ce94666aaf6f2e5e0df1fb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const uint32_t &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a8932f1cf4ce94666aaf6f2e5e0df1fb6">activeTileCount</a> (uint32_t level) const </td></tr>
+<tr class="separator:a8932f1cf4ce94666aaf6f2e5e0df1fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a695474e05f8c7d77a725798161f99e15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a695474e05f8c7d77a725798161f99e15">nodeCount</a> (uint32_t level) const </td></tr>
+<tr class="separator:a695474e05f8c7d77a725798161f99e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab815d0b2b99acf77751768efb0ff312c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="classnanovdb_1_1Checksum.html">Checksum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ab815d0b2b99acf77751768efb0ff312c">checksum</a> () const </td></tr>
+<tr class="separator:ab815d0b2b99acf77751768efb0ff312c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32948d82339d9aecc772b5a9090e8f4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a32948d82339d9aecc772b5a9090e8f4c">rootTableSize</a> () const </td></tr>
+<tr class="separator:a32948d82339d9aecc772b5a9090e8f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada42b90afd75e2bfab398ace2a5e72b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#ada42b90afd75e2bfab398ace2a5e72b3">isEmpty</a> () const </td></tr>
+<tr class="separator:ada42b90afd75e2bfab398ace2a5e72b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec384482f1ac9456a3f4c7846f1c3cee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1Version.html">Version</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#aec384482f1ac9456a3f4c7846f1c3cee">version</a> () const </td></tr>
+<tr class="separator:aec384482f1ac9456a3f4c7846f1c3cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a1063457aedaf90a9742b3f4913637c37"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a1063457aedaf90a9742b3f4913637c37">safeCast</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData)</td></tr>
-<tr class="memdesc:a1063457aedaf90a9742b3f4913637c37"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if it is safe to cast the grid to a pointer of type <a class="el" href="classnanovdb_1_1GridMetaData.html" title="This is a convenient class that allows for access to grid meta-data that are independent of the value...">GridMetaData</a>, i.e. construction can be avoided.  <a href="#a1063457aedaf90a9742b3f4913637c37">More...</a><br /></td></tr>
-<tr class="separator:a1063457aedaf90a9742b3f4913637c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a669014037cd5ff83ef5afa2a43c97506"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a669014037cd5ff83ef5afa2a43c97506"><td class="memTemplItemLeft" align="right" valign="top">static bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a669014037cd5ff83ef5afa2a43c97506">safeCast</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; T &gt; &amp;grid)</td></tr>
-<tr class="memdesc:a669014037cd5ff83ef5afa2a43c97506"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if it is safe to cast the grid to a pointer of type <a class="el" href="classnanovdb_1_1GridMetaData.html" title="This is a convenient class that allows for access to grid meta-data that are independent of the value...">GridMetaData</a>, i.e. construction can be avoided.  <a href="#a669014037cd5ff83ef5afa2a43c97506">More...</a><br /></td></tr>
-<tr class="separator:a669014037cd5ff83ef5afa2a43c97506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ce54cbf0f3bf39236b398ce341f0ac"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#a25ce54cbf0f3bf39236b398ce341f0ac">safeCast</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData)</td></tr>
+<tr class="memdesc:a25ce54cbf0f3bf39236b398ce341f0ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if it is safe to cast the grid to a pointer of type <a class="el" href="classnanovdb_1_1GridMetaData.html" title="This is a convenient class that allows for access to grid meta-data that are independent of the value...">GridMetaData</a>, i.e. construction can be avoided.  <a href="#a25ce54cbf0f3bf39236b398ce341f0ac">More...</a><br /></td></tr>
+<tr class="separator:a25ce54cbf0f3bf39236b398ce341f0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb319321aaaf3b62c5b48bcb5bb4ca3f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:acb319321aaaf3b62c5b48bcb5bb4ca3f"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridMetaData.html#acb319321aaaf3b62c5b48bcb5bb4ca3f">safeCast</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; T &gt; &amp;grid)</td></tr>
+<tr class="memdesc:acb319321aaaf3b62c5b48bcb5bb4ca3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if it is safe to cast the grid to a pointer of type <a class="el" href="classnanovdb_1_1GridMetaData.html" title="This is a convenient class that allows for access to grid meta-data that are independent of the value...">GridMetaData</a>, i.e. construction can be avoided.  <a href="#acb319321aaaf3b62c5b48bcb5bb4ca3f">More...</a><br /></td></tr>
+<tr class="separator:acb319321aaaf3b62c5b48bcb5bb4ca3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This is a convenient class that allows for access to grid meta-data that are independent of the value type of a grid. That is, this class can be used to get information about a grid without actually knowing its ValueType. </p>
@@ -241,7 +243,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aac015937b7e1e71ab77c27f063e62306"></a>
+<a class="anchor" id="a8932f1cf4ce94666aaf6f2e5e0df1fb6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -249,7 +251,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const uint32_t&amp; activeTileCount </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const uint32_t&amp; activeTileCount </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>level</em></td><td>)</td>
@@ -265,7 +267,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a96a9b9032b2eec85384a96ad8b436555"></a>
+<a class="anchor" id="a9d60261df5cd5d06638d9c98080ca965"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -273,7 +275,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t activeVoxelCount </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t activeVoxelCount </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -288,7 +290,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a71267eab956fab2c9b34d704479a8ba9"></a>
+<a class="anchor" id="a9cadde37ce3ac53412000e732a505f22"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -296,7 +298,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int blindDataCount </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> int blindDataCount </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -311,7 +313,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0880c82c125789d4d13e79d87408c5b0"></a>
+<a class="anchor" id="ab815d0b2b99acf77751768efb0ff312c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -319,7 +321,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t checksum </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="classnanovdb_1_1Checksum.html">Checksum</a>&amp; checksum </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -334,7 +336,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a699c8c71743c884aec021754933ead62"></a>
+<a class="anchor" id="a25ccce6b9b336bb473c745ce16bc1e7a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -342,7 +344,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538">GridClass</a>&amp; gridClass </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538">GridClass</a>&amp; gridClass </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -357,7 +359,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7410a55f8cc2fff5a43e4b50e80a31b5"></a>
+<a class="anchor" id="a824b90490d6deee3bd7ada9d31d1e4d6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -365,7 +367,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t gridCount </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t gridCount </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -380,7 +382,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6757fa094fdcb558aafeaff758ace46c"></a>
+<a class="anchor" id="a18c7dd5c9342bf9adb1d33faa768869f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -388,7 +390,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t gridIndex </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t gridIndex </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -403,7 +405,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a56b024a603c2305a4fcff3180d1f6b2a"></a>
+<a class="anchor" id="a743dec4f21faffa9b34df55ffd7893aa"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -411,7 +413,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t gridSize </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t gridSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -426,7 +428,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a259d44e4d6c5a6a29e462ee8932f3edb"></a>
+<a class="anchor" id="aab52d05c4dfcb233e91036be980fc19b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -434,7 +436,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0">GridType</a>&amp; gridType </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0">GridType</a>&amp; gridType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -449,7 +451,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a566a3789fbf3a92f0ce9715ee2c74e69"></a>
+<a class="anchor" id="ab44f2da93e345d269a8ea7d0c7b41614"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -457,7 +459,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool hasAverage </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool hasAverage </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -472,7 +474,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acf725e5e3b79e74ceb7cb146b3b3b4a4"></a>
+<a class="anchor" id="a9867caa7e3705aec5eeaa674c8e4dcb4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -480,7 +482,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool hasBBox </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool hasBBox </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -495,7 +497,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab94c770e4d55dd2f5a375a1e28dc5536"></a>
+<a class="anchor" id="ae58ee1ba4fe04d3a1ae2c4b2a99f5f46"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -503,7 +505,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool hasLongGridName </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool hasLongGridName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -518,7 +520,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a94a634a4b210a6ea05e146918ebb4e2b"></a>
+<a class="anchor" id="a6b742262524b8852a6fdc9bcb32c857f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -526,7 +528,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool hasMinMax </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool hasMinMax </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -541,7 +543,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab732a81273218294293dc81263926d4d"></a>
+<a class="anchor" id="a86d8099ce635a152e815ae0daad29f06"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -549,7 +551,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool hasStdDeviation </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool hasStdDeviation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -564,7 +566,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3b44733507fd4cef9dea7e7ddd04621b"></a>
+<a class="anchor" id="a7de035e6a07ef6d51c67f10a37e9c6cd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -572,7 +574,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt;<a class="el" href="classnanovdb_1_1Coord.html">Coord</a>&gt;&amp; indexBBox </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const CoordBBox&amp; indexBBox </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -587,7 +589,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a96b0b4c118a9593fbf775f5ef48ea067"></a>
+<a class="anchor" id="a5c328c8ea51f77f1d023dc6d99e94b6b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -595,7 +597,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isBreadthFirst </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isBreadthFirst </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -610,7 +612,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a479432127ee77145cc19d6a2d1590821"></a>
+<a class="anchor" id="ada42b90afd75e2bfab398ace2a5e72b3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -618,7 +620,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isEmpty </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isEmpty </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -633,7 +635,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0f43d9ef07b4fe31f7198c7850d19d68"></a>
+<a class="anchor" id="a91d58b80f9b528351b0464276a280a48"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -641,7 +643,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isFogVolume </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isFogVolume </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -656,7 +658,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a912e2d5abe2be1bc9ba8dbb8ed4475e4"></a>
+<a class="anchor" id="a4eee5f0e13427f9617ca125800520392"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -664,7 +666,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isGridIndex </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isGridIndex </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -679,7 +681,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3871c12599d41f1a64a4b33cfaccb01c"></a>
+<a class="anchor" id="aeb2ec12f9c0f6a90d2a7ea24e376041d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -687,7 +689,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isLevelSet </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isLevelSet </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -702,7 +704,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a09533cf22ad427de1b0c59b8be4b0cfc"></a>
+<a class="anchor" id="ab760032e37f903d3fd113a449dd15438"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -710,7 +712,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isMask </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isMask </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -725,7 +727,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a66d1a320b45e81fba92ca470313323f2"></a>
+<a class="anchor" id="a6c957d5bf60c04d9e207fa16d3c30f21"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -733,7 +735,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isPointData </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isPointData </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -748,7 +750,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a88d0587f63a0e0884475a9ccd0893109"></a>
+<a class="anchor" id="aa632f19a0e7d264c56dbefaece32f982"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -756,7 +758,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isPointIndex </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isPointIndex </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -771,7 +773,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5ee43d08f23320d58c94639c211d4022"></a>
+<a class="anchor" id="ae6c61a0cf8d041bcc8372774c01ee441"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -779,7 +781,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isStaggered </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isStaggered </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -794,7 +796,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a149513a42ebb9fdcdad12d028a585b18"></a>
+<a class="anchor" id="a8b87fc1a4294e17f63953b2d80f39496"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -802,7 +804,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isUnknown </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isUnknown </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -817,7 +819,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aac1b70a2ed67ead038c4d3f5ac4d8a81"></a>
+<a class="anchor" id="a9c670dbb0635dcc47b561cfe150cd365"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -825,7 +827,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool isValid </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isValid </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -840,7 +842,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a07c15aa873ef4d5fdfb4dc90b237d250"></a>
+<a class="anchor" id="ab7f9b4a9caa71bd80ee8eedbd9853cd9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -848,7 +850,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="structnanovdb_1_1Map.html">Map</a>&amp; map </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="structnanovdb_1_1Map.html">Map</a>&amp; map </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -863,7 +865,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6cbf02520b0d9d379ac8ef5959d63915"></a>
+<a class="anchor" id="a695474e05f8c7d77a725798161f99e15"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -871,7 +873,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t nodeCount </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t nodeCount </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>level</em></td><td>)</td>
@@ -887,7 +889,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7b0a6d351fe6365338a18ff053e77bbb"></a>
+<a class="anchor" id="aa90b7bcc5f9fbc84db0ddf0940000cdc"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -895,7 +897,31 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t rootTableSize </td>
+          <td class="memname"><a class="el" href="classnanovdb_1_1GridMetaData.html">GridMetaData</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1GridMetaData.html">GridMetaData</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a32948d82339d9aecc772b5a9090e8f4c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t rootTableSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -910,7 +936,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a12ff15acc3e264af4794a8ed54610d01"></a>
+<a class="anchor" id="a7340592475c88103d8e49a3493127b68"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -918,7 +944,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool safeCast </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool safeCast </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -935,7 +961,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1063457aedaf90a9742b3f4913637c37"></a>
+<a class="anchor" id="a25ce54cbf0f3bf39236b398ce341f0ac"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -943,7 +969,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool safeCast </td>
+          <td class="memname">static <a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool safeCast </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *&#160;</td>
           <td class="paramname"><em>gridData</em></td><td>)</td>
@@ -961,7 +987,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a669014037cd5ff83ef5afa2a43c97506"></a>
+<a class="anchor" id="acb319321aaaf3b62c5b48bcb5bb4ca3f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -969,7 +995,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool safeCast </td>
+          <td class="memname">static <a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool safeCast </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>grid</em></td><td>)</td>
@@ -987,7 +1013,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac60d5eb1e4b87e2b0a174b37b530b461"></a>
+<a class="anchor" id="aee92183e34b3f4247202a4469a013fc2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -995,7 +1021,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char* shortGridName </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const char* shortGridName </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1010,7 +1036,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a58d42d3098d09eeaf661f67c40a5d51e"></a>
+<a class="anchor" id="aec384482f1ac9456a3f4c7846f1c3cee"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1018,7 +1044,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classnanovdb_1_1Version.html">Version</a> version </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1Version.html">Version</a> version </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1033,7 +1059,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abe11d7ce015c713f29f88fb376e22d0f"></a>
+<a class="anchor" id="a95883e3c24b0d5525dd28e7b12d91d82"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1041,7 +1067,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacenanovdb.html#a98d94999010cb92dfb5f652c353d1d82">Vec3d</a> voxelSize </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0ad5b40ccec7be098557d1e35969a4bec2">Vec3d</a> voxelSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1056,7 +1082,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad8886c49541e724d942354e10b845806"></a>
+<a class="anchor" id="a054b4842a48a7018ceeeba49b12e2a5c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1064,7 +1090,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="structnanovdb_1_1BBox.html">BBox</a>&lt;<a class="el" href="namespacenanovdb.html#a98d94999010cb92dfb5f652c353d1d82">Vec3d</a>&gt;&amp; worldBBox </td>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const Vec3dBBox&amp; worldBBox </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

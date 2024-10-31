@@ -22,6 +22,5 @@ var searchData=
   ['cputimer_2eh',['CpuTimer.h',['../openvdb_2openvdb_2util_2CpuTimer_8h.html',1,'']]],
   ['cputimer_2eh',['CpuTimer.h',['../nanovdb_2nanovdb_2util_2CpuTimer_8h.html',1,'']]],
   ['createnanogrid_2eh',['CreateNanoGrid.h',['../CreateNanoGrid_8h.html',1,'']]],
-  ['csamplefromvoxels_2eh',['CSampleFromVoxels.h',['../CSampleFromVoxels_8h.html',1,'']]],
   ['customdata_2eh',['CustomData.h',['../CustomData_8h.html',1,'']]]
 ];

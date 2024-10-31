@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>This is a buffer that contains a shared or private pool to either externally or internally managed host memory.  
  <a href="classnanovdb_1_1HostBuffer.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="HostBuffer_8h_source.html">nanovdb/util/HostBuffer.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="HostBuffer_8h_source.html">nanovdb/HostBuffer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -128,7 +128,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4b94d5f07607b05d69e93d13a470b663"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1HostBuffer.html">HostBuffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#a4b94d5f07607b05d69e93d13a470b663">operator=</a> (const <a class="el" href="classnanovdb_1_1HostBuffer.html">HostBuffer</a> &amp;)=delete</td></tr>
 <tr class="memdesc:a4b94d5f07607b05d69e93d13a470b663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disallow copy assignment operation.  <a href="#a4b94d5f07607b05d69e93d13a470b663">More...</a><br /></td></tr>
 <tr class="separator:a4b94d5f07607b05d69e93d13a470b663"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a868306da35b47e165ce4eafe38a133ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#a868306da35b47e165ce4eafe38a133ac">init</a> (uint64_t <a class="el" href="classnanovdb_1_1HostBuffer.html#aba0fc633a0690845d3541d9b15e100b6">bufferSize</a>, void *<a class="el" href="classnanovdb_1_1HostBuffer.html#a40fe50b14bf164129156972247acb8e4">data</a>=nullptr)</td></tr>
+<tr class="memitem:a868306da35b47e165ce4eafe38a133ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#a868306da35b47e165ce4eafe38a133ac">init</a> (uint64_t <a class="el" href="classnanovdb_1_1HostBuffer.html#aba0fc633a0690845d3541d9b15e100b6">bufferSize</a>, void *<a class="el" href="classnanovdb_1_1HostBuffer.html#a2ed6f0f1eb8d14c1a7ac38fd7688a753">data</a>=nullptr)</td></tr>
 <tr class="memdesc:a868306da35b47e165ce4eafe38a133ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize as a full buffer with the specified size. If data is NULL the memory is internally allocated.  <a href="#a868306da35b47e165ce4eafe38a133ac">More...</a><br /></td></tr>
 <tr class="separator:a868306da35b47e165ce4eafe38a133ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac589a7b08dfe8ede6c6b58df215142bc"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#ac589a7b08dfe8ede6c6b58df215142bc">poolSize</a> () const </td></tr>
@@ -152,16 +152,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae9d9eb51274dafd844ab3f48667f1d17"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#ae9d9eb51274dafd844ab3f48667f1d17">poolUsage</a> () const </td></tr>
 <tr class="memdesc:ae9d9eb51274dafd844ab3f48667f1d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of bytes from the pool currently in use by buffers.  <a href="#ae9d9eb51274dafd844ab3f48667f1d17">More...</a><br /></td></tr>
 <tr class="separator:ae9d9eb51274dafd844ab3f48667f1d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adff2829859a082576aaf2cdfca56259b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#adff2829859a082576aaf2cdfca56259b">resizePool</a> (uint64_t <a class="el" href="classnanovdb_1_1HostBuffer.html#ac589a7b08dfe8ede6c6b58df215142bc">poolSize</a>, void *<a class="el" href="classnanovdb_1_1HostBuffer.html#a40fe50b14bf164129156972247acb8e4">data</a>=nullptr)</td></tr>
+<tr class="memitem:adff2829859a082576aaf2cdfca56259b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#adff2829859a082576aaf2cdfca56259b">resizePool</a> (uint64_t <a class="el" href="classnanovdb_1_1HostBuffer.html#ac589a7b08dfe8ede6c6b58df215142bc">poolSize</a>, void *<a class="el" href="classnanovdb_1_1HostBuffer.html#a2ed6f0f1eb8d14c1a7ac38fd7688a753">data</a>=nullptr)</td></tr>
 <tr class="memdesc:adff2829859a082576aaf2cdfca56259b"><td class="mdescLeft">&#160;</td><td class="mdescRight">resize the pool size. It will attempt to resize the existing memory block, but if that fails a deep copy is performed. If <code>data</code> is not NULL it will be used as new externally managed memory for the pool. All registered buffers are updated so <a class="el" href="classnanovdb_1_1GridHandle.html#a455e4da696d8326ccee9b3704aaa175f" title="Returns a const host pointer to the n&#39;th NanoVDB grid encoded in this GridHandle. ...">GridHandle::grid</a> might return a new address (if deep copy was performed).  <a href="#adff2829859a082576aaf2cdfca56259b">More...</a><br /></td></tr>
 <tr class="separator:adff2829859a082576aaf2cdfca56259b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a40fe50b14bf164129156972247acb8e4"><td class="memItemLeft" align="right" valign="top">const uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#a40fe50b14bf164129156972247acb8e4">data</a> () const </td></tr>
-<tr class="memdesc:a40fe50b14bf164129156972247acb8e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retuns a pointer to the raw memory buffer managed by this allocator.  <a href="#a40fe50b14bf164129156972247acb8e4">More...</a><br /></td></tr>
-<tr class="separator:a40fe50b14bf164129156972247acb8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a731c70d12750586b67c6cde637b650"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#a6a731c70d12750586b67c6cde637b650">data</a> ()</td></tr>
-<tr class="memdesc:a6a731c70d12750586b67c6cde637b650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retuns a pointer to the raw memory buffer managed by this allocator.  <a href="#a6a731c70d12750586b67c6cde637b650">More...</a><br /></td></tr>
-<tr class="separator:a6a731c70d12750586b67c6cde637b650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ed6f0f1eb8d14c1a7ac38fd7688a753"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#a2ed6f0f1eb8d14c1a7ac38fd7688a753">data</a> () const </td></tr>
+<tr class="memdesc:a2ed6f0f1eb8d14c1a7ac38fd7688a753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retuns a pointer to the raw memory buffer managed by this allocator.  <a href="#a2ed6f0f1eb8d14c1a7ac38fd7688a753">More...</a><br /></td></tr>
+<tr class="separator:a2ed6f0f1eb8d14c1a7ac38fd7688a753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2c67dc864c6b6e705710853b5568ef"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#a3f2c67dc864c6b6e705710853b5568ef">data</a> ()</td></tr>
+<tr class="memdesc:a3f2c67dc864c6b6e705710853b5568ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retuns a pointer to the raw memory buffer managed by this allocator.  <a href="#a3f2c67dc864c6b6e705710853b5568ef">More...</a><br /></td></tr>
+<tr class="separator:a3f2c67dc864c6b6e705710853b5568ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
 <tr class="memitem:aba0fc633a0690845d3541d9b15e100b6"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#aba0fc633a0690845d3541d9b15e100b6">bufferSize</a> () const </td></tr>
 <tr class="memdesc:aba0fc633a0690845d3541d9b15e100b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size in bytes associated with this buffer.  <a href="#aba0fc633a0690845d3541d9b15e100b6">More...</a><br /></td></tr>
@@ -179,10 +179,10 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aef4c6ec0920591bf597e2d3a37f2ef1e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classnanovdb_1_1HostBuffer.html">HostBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#aef4c6ec0920591bf597e2d3a37f2ef1e">createPool</a> (uint64_t <a class="el" href="classnanovdb_1_1HostBuffer.html#ac589a7b08dfe8ede6c6b58df215142bc">poolSize</a>, void *<a class="el" href="classnanovdb_1_1HostBuffer.html#a40fe50b14bf164129156972247acb8e4">data</a>=nullptr)</td></tr>
+<tr class="memitem:aef4c6ec0920591bf597e2d3a37f2ef1e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classnanovdb_1_1HostBuffer.html">HostBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#aef4c6ec0920591bf597e2d3a37f2ef1e">createPool</a> (uint64_t <a class="el" href="classnanovdb_1_1HostBuffer.html#ac589a7b08dfe8ede6c6b58df215142bc">poolSize</a>, void *<a class="el" href="classnanovdb_1_1HostBuffer.html#a2ed6f0f1eb8d14c1a7ac38fd7688a753">data</a>=nullptr)</td></tr>
 <tr class="memdesc:aef4c6ec0920591bf597e2d3a37f2ef1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pool buffer which satisfies: buffer.size == 0, buffer.poolSize() == poolSize, and buffer.data() == nullptr. If data==nullptr, memory for the pool will be allocated.  <a href="#aef4c6ec0920591bf597e2d3a37f2ef1e">More...</a><br /></td></tr>
 <tr class="separator:aef4c6ec0920591bf597e2d3a37f2ef1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a659568e91cdae3848f81aace40620554"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classnanovdb_1_1HostBuffer.html">HostBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#a659568e91cdae3848f81aace40620554">createFull</a> (uint64_t <a class="el" href="classnanovdb_1_1HostBuffer.html#aba0fc633a0690845d3541d9b15e100b6">bufferSize</a>, void *<a class="el" href="classnanovdb_1_1HostBuffer.html#a40fe50b14bf164129156972247acb8e4">data</a>=nullptr)</td></tr>
+<tr class="memitem:a659568e91cdae3848f81aace40620554"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classnanovdb_1_1HostBuffer.html">HostBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#a659568e91cdae3848f81aace40620554">createFull</a> (uint64_t <a class="el" href="classnanovdb_1_1HostBuffer.html#aba0fc633a0690845d3541d9b15e100b6">bufferSize</a>, void *<a class="el" href="classnanovdb_1_1HostBuffer.html#a2ed6f0f1eb8d14c1a7ac38fd7688a753">data</a>=nullptr)</td></tr>
 <tr class="memdesc:a659568e91cdae3848f81aace40620554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a full buffer which satisfies: buffer.size == bufferSize, buffer.poolSize() == bufferSize, and buffer.data() == data. If data==nullptr, memory for the pool will be allocated.  <a href="#a659568e91cdae3848f81aace40620554">More...</a><br /></td></tr>
 <tr class="separator:a659568e91cdae3848f81aace40620554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac53e6de0ad4fe28ed4a5fb9d0ce460be"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classnanovdb_1_1HostBuffer.html">HostBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#ac53e6de0ad4fe28ed4a5fb9d0ce460be">create</a> (uint64_t <a class="el" href="classnanovdb_1_1HostBuffer.html#aba0fc633a0690845d3541d9b15e100b6">bufferSize</a>, const <a class="el" href="classnanovdb_1_1HostBuffer.html">HostBuffer</a> *pool=nullptr)</td></tr>
@@ -473,7 +473,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a40fe50b14bf164129156972247acb8e4"></a>
+<a class="anchor" id="a2ed6f0f1eb8d14c1a7ac38fd7688a753"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -481,7 +481,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const uint8_t* data </td>
+          <td class="memname">const void* data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -499,7 +499,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6a731c70d12750586b67c6cde637b650"></a>
+<a class="anchor" id="a3f2c67dc864c6b6e705710853b5568ef"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -507,7 +507,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t* data </td>
+          <td class="memname">void* data </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

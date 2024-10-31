@@ -13,9 +13,6 @@ var searchData=
   ['create_5finternal_5fnode_5fint',['CREATE_INTERNAL_NODE_int',['../CNanoVDB_8h.html#a3e12a4697c57caa38cf5ab3fbb27c390',1,'CNanoVDB.h']]],
   ['create_5fleaf_5fnode',['CREATE_LEAF_NODE',['../CNanoVDB_8h.html#a8dabf637e3ee237af7e009099f5ce824',1,'CNanoVDB.h']]],
   ['create_5fleaf_5fnode_5fint',['CREATE_LEAF_NODE_int',['../CNanoVDB_8h.html#a47bd840ced7fd156ed73346b118e3c00',1,'CNanoVDB.h']]],
-  ['create_5flerpsimple',['CREATE_LERPSIMPLE',['../CSampleFromVoxels_8h.html#a9687f55bd4665cb1b9574ea31a0e8327',1,'CSampleFromVoxels.h']]],
   ['create_5frootdata',['CREATE_ROOTDATA',['../CNanoVDB_8h.html#aff94f0347d1f83f3188f47eb80378840',1,'CNanoVDB.h']]],
-  ['create_5fsample',['CREATE_SAMPLE',['../CSampleFromVoxels_8h.html#a32c37274211ce9ce06e746655d8bb833',1,'CSampleFromVoxels.h']]],
-  ['create_5fstencil',['CREATE_STENCIL',['../CSampleFromVoxels_8h.html#af44e910a01a2e0dcdac8bab426ed3365',1,'CSampleFromVoxels.h']]],
   ['create_5ftileentry',['CREATE_TILEENTRY',['../CNanoVDB_8h.html#a9e6f602fbea00a179a9c49ea97dfeebd',1,'CNanoVDB.h']]]
 ];

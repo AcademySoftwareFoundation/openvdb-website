@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -268,13 +268,13 @@ Building Against Houdini</h2>
 <tr>
 <td>Log4cplus </td><td>An optional dependency for improved OpenVDB Logging </td><td>Optional (All) </td></tr>
 <tr>
-<td>PyBind11 </td><td>C++/python bindings </td><td>Optional (Python) </td></tr>
+<td>nanobind </td><td>C++/python bindings </td><td>Optional (Python) </td></tr>
 <tr>
 <td>NumPy </td><td>Scientific computing with Python </td><td>Optional (Python) </td></tr>
 <tr>
 <td>LLVM </td><td>Target-independent code generation </td><td>OpenVDB AX </td></tr>
 </table>
-<p>At a minimum, boost, a matching C++17 compiler and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software. Note that as Blosc and ZLib are provided as part of the Houdini installation <code>USE_BLOSC</code> and <code>USE_ZLIB</code> should be left <code>ON</code>.</p>
+<p>At a minimum a matching C++17 compiler and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software. Note that as Blosc and ZLib are provided as part of the Houdini installation <code>USE_BLOSC</code> and <code>USE_ZLIB</code> should be left <code>ON</code>.</p>
 <p>With the necessary dependencies installed, create and enter a directory for cmake to write to. It's generally useful to create this in the location you've extracted the OpenVDB repository. It will house CMake's generated build files.</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;mkdir build</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;cd build</div></div><!-- fragment --><p>Now you can call CMake by providing the absolute or relative path to the root of the OpenVDB source tree along with the following options:</p>
 <p>Required:</p>
@@ -328,7 +328,7 @@ Building Against Maya</h2>
 <tr>
 <td>Log4cplus </td><td>An optional dependency for improved OpenVDB Logging </td><td>Optional (All) </td></tr>
 <tr>
-<td>PyBind11 </td><td>C++/python bindings </td><td>Optional (Python) </td></tr>
+<td>nanobind </td><td>C++/python bindings </td><td>Optional (Python) </td></tr>
 <tr>
 <td>NumPy </td><td>Scientific computing with Python </td><td>Optional (Python) </td></tr>
 <tr>

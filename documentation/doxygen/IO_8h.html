@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -87,151 +87,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">IO.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Implements I/O for NanoVDB grids. Features optional BLOSC and ZIP file compression, support for multiple grids per file as well as multiple grid types.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="NanoVDB_8h_source.html">nanovdb/NanoVDB.h</a>&gt;</code><br />
-<code>#include &quot;<a class="el" href="GridHandle_8h_source.html">GridHandle.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="GridChecksum_8h_source.html">GridChecksum.h</a>&quot;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;sstream&gt;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
-<code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="nanovdb_2nanovdb_2util_2Util_8h_source.html">nanovdb/util/Util.h</a>&gt;</code><br />
+<code>#include &lt;nanovdb/io/IO.h&gt;</code><br />
 </div>
 <p><a href="IO_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1io_1_1FileGridMetaData.html">FileGridMetaData</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class defines the meta data stored for each grid in a segment.  <a href="structnanovdb_1_1io_1_1FileGridMetaData.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1io_1_1Segment.html">Segment</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class defines all the data stored in segment of a file.  <a href="structnanovdb_1_1io_1_1Segment.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacenanovdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html">nanovdb</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacenanovdb_1_1io"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html">nanovdb::io</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacenanovdb_1_1io_1_1Internal"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html">nanovdb::io::Internal</a></td></tr>
-<tr class="memdesc:namespacenanovdb_1_1io_1_1Internal"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html" title="Internal functions for compressed read/write of a NanoVDB GridHandle into a stream. ">Internal</a> functions for compressed read/write of a NanoVDB <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a> into a stream. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a42f08a8c97a0f8a349fc762cd7b42640"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a42f08a8c97a0f8a349fc762cd7b42640">fileSize_t</a> = uint64_t</td></tr>
-<tr class="separator:a42f08a8c97a0f8a349fc762cd7b42640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:aaba17c8bdd4c1875df28c1a808c4c531"><td class="memTemplParams" colspan="2">template&lt;typename BufferT &gt; </td></tr>
-<tr class="memitem:aaba17c8bdd4c1875df28c1a808c4c531"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#aaba17c8bdd4c1875df28c1a808c4c531">writeGrid</a> (const std::string &amp;fileName, const GridHandle&lt; BufferT &gt; &amp;handle, io::Codec codec=io::Codec::NONE, int verbose=0)</td></tr>
-<tr class="memdesc:aaba17c8bdd4c1875df28c1a808c4c531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a single grid to file (over-writing existing content of the file)  <a href="namespacenanovdb_1_1io.html#aaba17c8bdd4c1875df28c1a808c4c531">More...</a><br /></td></tr>
-<tr class="separator:aaba17c8bdd4c1875df28c1a808c4c531"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a883585892be297b041fbb0f1363707fb"><td class="memTemplParams" colspan="2">template&lt;typename BufferT  = HostBuffer, template&lt; typename... &gt; class VecT = std::vector&gt; </td></tr>
-<tr class="memitem:a883585892be297b041fbb0f1363707fb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a883585892be297b041fbb0f1363707fb">writeGrids</a> (const std::string &amp;fileName, const VecT&lt; GridHandle&lt; BufferT &gt;&gt; &amp;handles, Codec codec=Codec::NONE, int verbose=0)</td></tr>
-<tr class="memdesc:a883585892be297b041fbb0f1363707fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write multiple grids to file (over-writing existing content of the file)  <a href="namespacenanovdb_1_1io.html#a883585892be297b041fbb0f1363707fb">More...</a><br /></td></tr>
-<tr class="separator:a883585892be297b041fbb0f1363707fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf2ccd85c88fce820f9cda85cc8e60c8"><td class="memTemplParams" colspan="2">template&lt;typename BufferT  = HostBuffer&gt; </td></tr>
-<tr class="memitem:aaf2ccd85c88fce820f9cda85cc8e60c8"><td class="memTemplItemLeft" align="right" valign="top">GridHandle&lt; BufferT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#aaf2ccd85c88fce820f9cda85cc8e60c8">readGrid</a> (const std::string &amp;fileName, int n=0, int verbose=0, const BufferT &amp;buffer=BufferT())</td></tr>
-<tr class="memdesc:aaf2ccd85c88fce820f9cda85cc8e60c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and return one or all grids from a file into a single <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids. ">GridHandle</a>.  <a href="namespacenanovdb_1_1io.html#aaf2ccd85c88fce820f9cda85cc8e60c8">More...</a><br /></td></tr>
-<tr class="separator:aaf2ccd85c88fce820f9cda85cc8e60c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dd3936e650bba047f0e3d9994fe578b"><td class="memTemplParams" colspan="2">template&lt;typename BufferT  = HostBuffer&gt; </td></tr>
-<tr class="memitem:a1dd3936e650bba047f0e3d9994fe578b"><td class="memTemplItemLeft" align="right" valign="top">GridHandle&lt; BufferT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a1dd3936e650bba047f0e3d9994fe578b">readGrid</a> (const std::string &amp;fileName, const std::string &amp;gridName, int verbose=0, const BufferT &amp;buffer=BufferT())</td></tr>
-<tr class="memdesc:a1dd3936e650bba047f0e3d9994fe578b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and return the first grid with a specific name from a file.  <a href="namespacenanovdb_1_1io.html#a1dd3936e650bba047f0e3d9994fe578b">More...</a><br /></td></tr>
-<tr class="separator:a1dd3936e650bba047f0e3d9994fe578b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a289b7a199b335c9b9d3fd10b4b076bb5"><td class="memTemplParams" colspan="2">template&lt;typename BufferT  = HostBuffer, template&lt; typename... &gt; class VecT = std::vector&gt; </td></tr>
-<tr class="memitem:a289b7a199b335c9b9d3fd10b4b076bb5"><td class="memTemplItemLeft" align="right" valign="top">VecT&lt; GridHandle&lt; BufferT &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a289b7a199b335c9b9d3fd10b4b076bb5">readGrids</a> (const std::string &amp;fileName, int verbose=0, const BufferT &amp;buffer=BufferT())</td></tr>
-<tr class="memdesc:a289b7a199b335c9b9d3fd10b4b076bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read all the grids in the file and return them as a vector of multiple GridHandles, each containing all grids encoded in the same segment of the file (i.e. they where written together)  <a href="namespacenanovdb_1_1io.html#a289b7a199b335c9b9d3fd10b4b076bb5">More...</a><br /></td></tr>
-<tr class="separator:a289b7a199b335c9b9d3fd10b4b076bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a109892d9b66d348f1620296ef5f02c88"><td class="memTemplParams" colspan="2">template&lt;typename BufferT &gt; </td></tr>
-<tr class="memitem:a109892d9b66d348f1620296ef5f02c88"><td class="memTemplItemLeft" align="right" valign="top">static fileSize_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html#a109892d9b66d348f1620296ef5f02c88">write</a> (std::ostream &amp;os, const GridHandle&lt; BufferT &gt; &amp;handle, Codec codec, uint32_t n)</td></tr>
-<tr class="separator:a109892d9b66d348f1620296ef5f02c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86f892341f16b3bcd7d073b571ede1b1"><td class="memTemplParams" colspan="2">template&lt;typename BufferT &gt; </td></tr>
-<tr class="memitem:a86f892341f16b3bcd7d073b571ede1b1"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html#a86f892341f16b3bcd7d073b571ede1b1">read</a> (std::istream &amp;is, BufferT &amp;buffer, Codec codec)</td></tr>
-<tr class="separator:a86f892341f16b3bcd7d073b571ede1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a144fd3e7fde84398a7859a18b286ad87"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html#a144fd3e7fde84398a7859a18b286ad87">read</a> (std::istream &amp;is, char *data, fileSize_t size, Codec codec)</td></tr>
-<tr class="memdesc:a144fd3e7fde84398a7859a18b286ad87"><td class="mdescLeft">&#160;</td><td class="mdescRight">read compressed grid from stream  <a href="namespacenanovdb_1_1io_1_1Internal.html#a144fd3e7fde84398a7859a18b286ad87">More...</a><br /></td></tr>
-<tr class="separator:a144fd3e7fde84398a7859a18b286ad87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a823b736a665c7befa71cbf99ec662009"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a823b736a665c7befa71cbf99ec662009">stringHash</a> (const char *cstr)</td></tr>
-<tr class="memdesc:a823b736a665c7befa71cbf99ec662009"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard hash function to use on strings; std::hash may vary by platform/implementation and is know to produce frequent collisions.  <a href="namespacenanovdb_1_1io.html#a823b736a665c7befa71cbf99ec662009">More...</a><br /></td></tr>
-<tr class="separator:a823b736a665c7befa71cbf99ec662009"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad11f0b7954f89824d211746e1985ae84"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#ad11f0b7954f89824d211746e1985ae84">stringHash</a> (const std::string &amp;str)</td></tr>
-<tr class="memdesc:ad11f0b7954f89824d211746e1985ae84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a uint64_t hash key of a std::string.  <a href="namespacenanovdb_1_1io.html#ad11f0b7954f89824d211746e1985ae84">More...</a><br /></td></tr>
-<tr class="separator:ad11f0b7954f89824d211746e1985ae84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a62940918d1c5f4b0f1e0402d48b986"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a8a62940918d1c5f4b0f1e0402d48b986">reverseEndianness</a> (uint64_t val)</td></tr>
-<tr class="memdesc:a8a62940918d1c5f4b0f1e0402d48b986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a uint64_t with its bytes reversed so we can check for endianness.  <a href="namespacenanovdb_1_1io.html#a8a62940918d1c5f4b0f1e0402d48b986">More...</a><br /></td></tr>
-<tr class="separator:a8a62940918d1c5f4b0f1e0402d48b986"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae98c496257c8884f3870fd35adb7a67b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#ae98c496257c8884f3870fd35adb7a67b">hasGrid</a> (const std::string &amp;fileName, const std::string &amp;gridName)</td></tr>
-<tr class="memdesc:ae98c496257c8884f3870fd35adb7a67b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the file contains a grid with the specified name.  <a href="namespacenanovdb_1_1io.html#ae98c496257c8884f3870fd35adb7a67b">More...</a><br /></td></tr>
-<tr class="separator:ae98c496257c8884f3870fd35adb7a67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14b123cd39e9eb906df94b585eac005a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a14b123cd39e9eb906df94b585eac005a">hasGrid</a> (std::istream &amp;is, const std::string &amp;gridName)</td></tr>
-<tr class="memdesc:a14b123cd39e9eb906df94b585eac005a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the stream contains a grid with the specified name.  <a href="namespacenanovdb_1_1io.html#a14b123cd39e9eb906df94b585eac005a">More...</a><br /></td></tr>
-<tr class="separator:a14b123cd39e9eb906df94b585eac005a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c23088b989efdf905059e9b1a83fe0c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; FileGridMetaData &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a5c23088b989efdf905059e9b1a83fe0c">readGridMetaData</a> (const std::string &amp;fileName)</td></tr>
-<tr class="memdesc:a5c23088b989efdf905059e9b1a83fe0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads and returns a vector of meta data for all the grids found in the specified file.  <a href="namespacenanovdb_1_1io.html#a5c23088b989efdf905059e9b1a83fe0c">More...</a><br /></td></tr>
-<tr class="separator:a5c23088b989efdf905059e9b1a83fe0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c1a8f7004273c2355b63a2b0f9d0698"><td class="memItemLeft" align="right" valign="top">std::vector&lt; FileGridMetaData &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a5c1a8f7004273c2355b63a2b0f9d0698">readGridMetaData</a> (std::istream &amp;is)</td></tr>
-<tr class="memdesc:a5c1a8f7004273c2355b63a2b0f9d0698"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads and returns a vector of meta data for all the grids found in the specified stream.  <a href="namespacenanovdb_1_1io.html#a5c1a8f7004273c2355b63a2b0f9d0698">More...</a><br /></td></tr>
-<tr class="separator:a5c1a8f7004273c2355b63a2b0f9d0698"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a267b4547127b0398beabcda4d1bf21"><td class="memTemplParams" colspan="2">template&lt;typename BufferT &gt; </td></tr>
-<tr class="memitem:a6a267b4547127b0398beabcda4d1bf21"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a6a267b4547127b0398beabcda4d1bf21">writeGrid</a> (std::ostream &amp;os, const GridHandle&lt; BufferT &gt; &amp;handle, Codec codec)</td></tr>
-<tr class="separator:a6a267b4547127b0398beabcda4d1bf21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa5d524b50c21152c6c1da2dbd712eed"><td class="memTemplParams" colspan="2">template&lt;typename BufferT  = HostBuffer, template&lt; typename... &gt; class VecT = std::vector&gt; </td></tr>
-<tr class="memitem:afa5d524b50c21152c6c1da2dbd712eed"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#afa5d524b50c21152c6c1da2dbd712eed">writeGrids</a> (std::ostream &amp;os, const VecT&lt; GridHandle&lt; BufferT &gt;&gt; &amp;handles, Codec codec=Codec::NONE)</td></tr>
-<tr class="separator:afa5d524b50c21152c6c1da2dbd712eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4a1491ffbf2e981bc8ec131b30c0a64"><td class="memTemplParams" colspan="2">template&lt;typename BufferT &gt; </td></tr>
-<tr class="memitem:ac4a1491ffbf2e981bc8ec131b30c0a64"><td class="memTemplItemLeft" align="right" valign="top">GridHandle&lt; BufferT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#ac4a1491ffbf2e981bc8ec131b30c0a64">readGrid</a> (std::istream &amp;is, int n, const BufferT &amp;pool)</td></tr>
-<tr class="separator:ac4a1491ffbf2e981bc8ec131b30c0a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4157a36073ba21ca28a2b786b52805d9"><td class="memTemplParams" colspan="2">template&lt;typename BufferT &gt; </td></tr>
-<tr class="memitem:a4157a36073ba21ca28a2b786b52805d9"><td class="memTemplItemLeft" align="right" valign="top">GridHandle&lt; BufferT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a4157a36073ba21ca28a2b786b52805d9">readGrid</a> (std::istream &amp;is, const std::string &amp;gridName, const BufferT &amp;pool)</td></tr>
-<tr class="memdesc:a4157a36073ba21ca28a2b786b52805d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a specific grid from an input stream given the name of the grid.  <a href="namespacenanovdb_1_1io.html#a4157a36073ba21ca28a2b786b52805d9">More...</a><br /></td></tr>
-<tr class="separator:a4157a36073ba21ca28a2b786b52805d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48b4b1feec26517d2b00f2656530c939"><td class="memTemplParams" colspan="2">template&lt;typename BufferT  = HostBuffer, template&lt; typename... &gt; class VecT = std::vector&gt; </td></tr>
-<tr class="memitem:a48b4b1feec26517d2b00f2656530c939"><td class="memTemplItemLeft" align="right" valign="top">VecT&lt; GridHandle&lt; BufferT &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a48b4b1feec26517d2b00f2656530c939">readGrids</a> (std::istream &amp;is, const BufferT &amp;pool=BufferT())</td></tr>
-<tr class="separator:a48b4b1feec26517d2b00f2656530c939"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e8b8c24951759d131e94fcbba67f38f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3e8b8c24951759d131e94fcbba67f38f"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a3e8b8c24951759d131e94fcbba67f38f">operator&lt;&lt;</a> (std::ostream &amp;os, const BBox&lt; Vec3&lt; T &gt;&gt; &amp;b)</td></tr>
-<tr class="separator:a3e8b8c24951759d131e94fcbba67f38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2080a00a411771f301c8c57c2821f1c7"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a2080a00a411771f301c8c57c2821f1c7">operator&lt;&lt;</a> (std::ostream &amp;os, const CoordBBox &amp;b)</td></tr>
-<tr class="separator:a2080a00a411771f301c8c57c2821f1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ed475f4107a1ad409bffb92fa601cef"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a1ed475f4107a1ad409bffb92fa601cef">operator&lt;&lt;</a> (std::ostream &amp;os, const Coord &amp;ijk)</td></tr>
-<tr class="separator:a1ed475f4107a1ad409bffb92fa601cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2e50c40879ac6edce4132af6d6b0cba"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:af2e50c40879ac6edce4132af6d6b0cba"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#af2e50c40879ac6edce4132af6d6b0cba">operator&lt;&lt;</a> (std::ostream &amp;os, const Vec3&lt; T &gt; &amp;v)</td></tr>
-<tr class="separator:af2e50c40879ac6edce4132af6d6b0cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e5ef189f9e5a78fb2e5395eba87580f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a7e5ef189f9e5a78fb2e5395eba87580f"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a7e5ef189f9e5a78fb2e5395eba87580f">operator&lt;&lt;</a> (std::ostream &amp;os, const Vec4&lt; T &gt; &amp;v)</td></tr>
-<tr class="separator:a7e5ef189f9e5a78fb2e5395eba87580f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:af14ea714c058e7ae2186c5186f4cf0a1"><td class="memItemLeft" align="right" valign="top">static constexpr fileSize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io_1_1Internal.html#af14ea714c058e7ae2186c5186f4cf0a1">MAX_SIZE</a> = 1UL &lt;&lt; 30</td></tr>
-<tr class="separator:af14ea714c058e7ae2186c5186f4cf0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Implements I/O for NanoVDB grids. Features optional BLOSC and ZIP file compression, support for multiple grids per file as well as multiple grid types. </p>
-<dl class="section author"><dt>Author</dt><dd>Ken Museth</dd></dl>
-<dl class="section date"><dt>Date</dt><dd>May 1, 2020</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>This file does NOT depend on OpenVDB, but optionally on ZIP and BLOSC</dd></dl>
-<p>NanoVDB files take on of two formats: 1) multiple segments each with multiple grids (segments have easy to access metadata about its grids) 2) starting with verion 32.6.0 nanovdb files also support a raw buffer with one or more grids (just a dump of a raw grid buffer, so no new metadata).</p>
-<p>1: Segment: FileHeader, MetaData0, gridName0...MetaDataN, gridNameN, compress Grid0,...compressed GridN 2: Raw: Grid0,...GridN </p>
-</div></div><!-- contents -->
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

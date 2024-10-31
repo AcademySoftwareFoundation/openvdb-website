@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">11.0.0</span>
+   &#160;<span id="projectnumber">12.0.0</span>
    </div>
   </td>
  </tr>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>Multi-threaded implementations of inclusive prefix sum.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="Range_8h_source.html">Range.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="Range_8h_source.html">nanovdb/util/Range.h</a>&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
 </div>
@@ -107,17 +107,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacenanovdb"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html">nanovdb</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacenanovdb_1_1util"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html">nanovdb::util</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac06981b465ecffc4663e5b905abca429"><td class="memTemplParams" colspan="2">template&lt;typename T , typename OpT  = std::plus&lt;T&gt;&gt; </td></tr>
-<tr class="memitem:ac06981b465ecffc4663e5b905abca429"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#ac06981b465ecffc4663e5b905abca429">prefixSum</a> (std::vector&lt; T &gt; &amp;vec, bool threaded=true, OpT op=OpT())</td></tr>
-<tr class="memdesc:ac06981b465ecffc4663e5b905abca429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes inclusive prefix sum of a vector.  <a href="namespacenanovdb.html#ac06981b465ecffc4663e5b905abca429">More...</a><br /></td></tr>
+<tr class="memitem:ac06981b465ecffc4663e5b905abca429"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#ac06981b465ecffc4663e5b905abca429">prefixSum</a> (std::vector&lt; T &gt; &amp;vec, bool threaded=true, OpT op=OpT())</td></tr>
+<tr class="memdesc:ac06981b465ecffc4663e5b905abca429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes inclusive prefix sum of a vector.  <a href="namespacenanovdb_1_1util.html#ac06981b465ecffc4663e5b905abca429">More...</a><br /></td></tr>
 <tr class="separator:ac06981b465ecffc4663e5b905abca429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbfafbb4266f51ac7dd64cb39977873d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Op &gt; </td></tr>
-<tr class="memitem:abbfafbb4266f51ac7dd64cb39977873d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#abbfafbb4266f51ac7dd64cb39977873d">inclusiveScan</a> (T *array, size_t size, const T &amp;identity, bool threaded, Op op)</td></tr>
-<tr class="memdesc:abbfafbb4266f51ac7dd64cb39977873d"><td class="mdescLeft">&#160;</td><td class="mdescRight">An inclusive scan includes in[i] when computing out[i].  <a href="namespacenanovdb.html#abbfafbb4266f51ac7dd64cb39977873d">More...</a><br /></td></tr>
-<tr class="separator:abbfafbb4266f51ac7dd64cb39977873d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed29a2b7d8e91a89bcc61a4e0a88fbce"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Op &gt; </td></tr>
+<tr class="memitem:aed29a2b7d8e91a89bcc61a4e0a88fbce"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#aed29a2b7d8e91a89bcc61a4e0a88fbce">inclusiveScan</a> (T *array, size_t size, const T &amp;identity, bool threaded, Op op)</td></tr>
+<tr class="memdesc:aed29a2b7d8e91a89bcc61a4e0a88fbce"><td class="mdescLeft">&#160;</td><td class="mdescRight">An inclusive scan includes in[i] when computing out[i].  <a href="namespacenanovdb_1_1util.html#aed29a2b7d8e91a89bcc61a4e0a88fbce">More...</a><br /></td></tr>
+<tr class="separator:aed29a2b7d8e91a89bcc61a4e0a88fbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbcaf8a7c07e5058401b632f7ca9e8dc"><td class="memTemplParams" colspan="2">template&lt;typename T , typename OpT  = std::plus&lt;T&gt;&gt; </td></tr>
+<tr class="memitem:afbcaf8a7c07e5058401b632f7ca9e8dc"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#afbcaf8a7c07e5058401b632f7ca9e8dc">prefixSum</a> (std::vector&lt; T &gt; &amp;vec, bool threaded=true, OpT op=OpT())</td></tr>
+<tr class="separator:afbcaf8a7c07e5058401b632f7ca9e8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Multi-threaded implementations of inclusive prefix sum. </p>
