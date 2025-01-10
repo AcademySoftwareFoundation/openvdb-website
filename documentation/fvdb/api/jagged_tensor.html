@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JaggedTensor &mdash; fVDB  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="fvdb.nn" href="nn.html" />
+    <link rel="prev" title="GridBatch" href="grid_batch.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            fVDB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to fVDB!</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/building_grids.html">Building Sparse Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/basic_grid_ops.html">Basic GridBatch Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/ray_tracing.html">Ray Tracing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/simple_unet.html">A Simple Convolutional U-Net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/io.html">Sparse Grid I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/mutable_grids.html">Mutable Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/volume_rendering.html">Volume Rendering</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API References</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="grid_batch.html">GridBatch</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">JaggedTensor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fvdb.JaggedTensor"><code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.abs"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.abs()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.abs_"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.abs_()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.ceil"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.ceil()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.ceil_"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.ceil_()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.clone"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.clone()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.cpu"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.cpu()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.cuda"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.cuda()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.detach"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.detach()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.device"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.device</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.double"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.double()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.dtype"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.dtype</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.edim"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.edim</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.eshape"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.eshape</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.float"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.float()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.floor"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.floor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.floor_"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.floor_()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.from_data_and_indices"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.from_data_and_indices()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.from_data_and_offsets"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.from_data_and_offsets()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.from_data_indices_and_list_ids"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.from_data_indices_and_list_ids()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.from_data_offsets_and_list_ids"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.from_data_offsets_and_list_ids()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.int"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.int()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.is_cpu"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.is_cpu</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.is_cuda"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.is_cuda</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.jagged_like"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.jagged_like()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.jdata"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.jdata</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.jflatten"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.jflatten()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.jidx"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.jidx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.jlidx"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.jlidx</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.jmax"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.jmax()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.jmin"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.jmin()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.joffsets"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.joffsets</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.jreshape"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.jreshape()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.jreshape_as"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.jreshape_as()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.jsum"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.jsum()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.ldim"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.ldim</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.long"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.long()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.lshape"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.lshape</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.num_tensors"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.num_tensors</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.requires_grad"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.requires_grad</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.requires_grad_"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.requires_grad_()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.rmask"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.rmask()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.round"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.round()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.round_"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.round_()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.rshape"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.rshape</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.sqrt"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.sqrt()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.sqrt_"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.sqrt_()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.to"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.to()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.type"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.type()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.type_as"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.type_as()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fvdb.JaggedTensor.unbind"><code class="docutils literal notranslate"><span class="pre">JaggedTensor.unbind()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nn.html">fvdb.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">fvdb.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fVDB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">JaggedTensor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/jagged_tensor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="jaggedtensor">
+<h1>JaggedTensor<a class="headerlink" href="#jaggedtensor" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">fvdb.</span></span><span class="sig-name descname"><span class="pre">JaggedTensor</span></span><a class="headerlink" href="#fvdb.JaggedTensor" title="Link to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.abs">
+<span class="sig-name descname"><span class="pre">abs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.abs" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.abs_">
+<span class="sig-name descname"><span class="pre">abs_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.abs_" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.ceil">
+<span class="sig-name descname"><span class="pre">ceil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.ceil" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.ceil_">
+<span class="sig-name descname"><span class="pre">ceil_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.ceil_" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.clone">
+<span class="sig-name descname"><span class="pre">clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.clone" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.cpu">
+<span class="sig-name descname"><span class="pre">cpu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.cpu" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.cuda">
+<span class="sig-name descname"><span class="pre">cuda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.cuda" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.detach">
+<span class="sig-name descname"><span class="pre">detach</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.detach" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.device">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">device</span></span><a class="headerlink" href="#fvdb.JaggedTensor.device" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.double">
+<span class="sig-name descname"><span class="pre">double</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.double" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.dtype">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dtype</span></span><a class="headerlink" href="#fvdb.JaggedTensor.dtype" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.edim">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">edim</span></span><a class="headerlink" href="#fvdb.JaggedTensor.edim" title="Link to this definition"></a></dt>
+<dd><p>]).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of dimensions of each element indexed by this JaggedTensor. Same as len(jdata.shape[1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.eshape">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eshape</span></span><a class="headerlink" href="#fvdb.JaggedTensor.eshape" title="Link to this definition"></a></dt>
+<dd><p>].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The shape each element indexed by this JaggedTensor. Same as jdata.shape[1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.float">
+<span class="sig-name descname"><span class="pre">float</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.float" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.floor">
+<span class="sig-name descname"><span class="pre">floor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.floor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.floor_">
+<span class="sig-name descname"><span class="pre">floor_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.floor_" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.from_data_and_indices">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_data_and_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.from_data_and_indices" title="Link to this definition"></a></dt>
+<dd><p>Initialize jagged tensor with ldim=1 from data and indices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>torch.Tensor</em>) – The data of the JaggedTensor.</p></li>
+<li><p><strong>indices</strong> (<em>torch.Tensor</em>) – The indices indicating the batch index where the element belong to.</p></li>
+<li><p><strong>num_tensors</strong> (<em>int</em>) – The batch size of the JaggedTensor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>jt</strong> (<em>JaggedTensor</em>) – The JaggedTensor with the given data and indices.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.from_data_and_offsets">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_data_and_offsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.from_data_and_offsets" title="Link to this definition"></a></dt>
+<dd><p>Initialize jagged tensor with ldim=1 from data and offsets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>torch.Tensor</em>) – The data of the JaggedTensor.</p></li>
+<li><p><strong>offsets</strong> (<em>torch.Tensor</em>) – The 1-dimensional offsets indicating the start and end of each tensor in data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>jt</strong> (<em>JaggedTensor</em>) – The JaggedTensor with the given data and offsets.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.from_data_indices_and_list_ids">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_data_indices_and_list_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_tensors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.from_data_indices_and_list_ids" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.from_data_offsets_and_list_ids">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_data_offsets_and_list_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offsets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.from_data_offsets_and_list_ids" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.int">
+<span class="sig-name descname"><span class="pre">int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.int" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.is_cpu">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_cpu</span></span><a class="headerlink" href="#fvdb.JaggedTensor.is_cpu" title="Link to this definition"></a></dt>
+<dd><p>Whether the JaggedTensor is on a CPU device.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.is_cuda">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_cuda</span></span><a class="headerlink" href="#fvdb.JaggedTensor.is_cuda" title="Link to this definition"></a></dt>
+<dd><p>Whether the JaggedTensor is on a CUDA device.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.jagged_like">
+<span class="sig-name descname"><span class="pre">jagged_like</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.jagged_like" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.jdata">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">jdata</span></span><a class="headerlink" href="#fvdb.JaggedTensor.jdata" title="Link to this definition"></a></dt>
+<dd><p>The data of the JaggedTensor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.jflatten">
+<span class="sig-name descname"><span class="pre">jflatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.jflatten" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.jidx">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">jidx</span></span><a class="headerlink" href="#fvdb.JaggedTensor.jidx" title="Link to this definition"></a></dt>
+<dd><p>The indices indicating the batch index where the element belong to.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.jlidx">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">jlidx</span></span><a class="headerlink" href="#fvdb.JaggedTensor.jlidx" title="Link to this definition"></a></dt>
+<dd><p>The list index of the JaggedTensor with size [num_tensors, ldim].</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.jmax">
+<span class="sig-name descname"><span class="pre">jmax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keepdim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#fvdb.JaggedTensor.jmax" title="Link to this definition"></a></dt>
+<dd><p>Returns the maximum of each batch element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>values</strong> (<em>torch.Tensor</em>) – A tensor of size (batch_size, <a href="#id1"><span class="problematic" id="id2">*</span></a>) containing the maximum value.</p></li>
+<li><p><strong>indices</strong> (<em>torch.Tensor</em>) – A tensor of size (batch_size, <a href="#id3"><span class="problematic" id="id4">*</span></a>) containing the argmax.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.jmin">
+<span class="sig-name descname"><span class="pre">jmin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keepdim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#fvdb.JaggedTensor.jmin" title="Link to this definition"></a></dt>
+<dd><p>Returns the minimum of each batch element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>values</strong> (<em>torch.Tensor</em>) – A tensor of size (batch_size, <a href="#id5"><span class="problematic" id="id6">*</span></a>) containing the minimum value.</p></li>
+<li><p><strong>indices</strong> (<em>torch.Tensor</em>) – A tensor of size (batch_size, <a href="#id7"><span class="problematic" id="id8">*</span></a>) containing the argmin.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.joffsets">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">joffsets</span></span><a class="headerlink" href="#fvdb.JaggedTensor.joffsets" title="Link to this definition"></a></dt>
+<dd><p>A [num_tensors + 1] array where each row contains the start and end row index in jdata.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.jreshape">
+<span class="sig-name descname"><span class="pre">jreshape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fvdb.JaggedTensor.jreshape" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>jreshape(self: fvdb._Cpp.JaggedTensor, lshape: list[int]) -&gt; fvdb._Cpp.JaggedTensor</p></li>
+<li><p>jreshape(self: fvdb._Cpp.JaggedTensor, lshape: list[list[int]]) -&gt; fvdb._Cpp.JaggedTensor</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.jreshape_as">
+<span class="sig-name descname"><span class="pre">jreshape_as</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.jreshape_as" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.jsum">
+<span class="sig-name descname"><span class="pre">jsum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keepdim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.jsum" title="Link to this definition"></a></dt>
+<dd><p>Returns the sum of each batch element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sum</strong> (<em>torch.Tensor</em>) – A tensor of size (batch_size, <a href="#id9"><span class="problematic" id="id10">*</span></a>) containing the sum of each batch element, feature dimensions are preserved.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.ldim">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ldim</span></span><a class="headerlink" href="#fvdb.JaggedTensor.ldim" title="Link to this definition"></a></dt>
+<dd><p>The list dimension of this JaggedTensor. E.g. a list has ldim 1, a list-of-lists has ldim2 and so on.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.long">
+<span class="sig-name descname"><span class="pre">long</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.long" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.lshape">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lshape</span></span><a class="headerlink" href="#fvdb.JaggedTensor.lshape" title="Link to this definition"></a></dt>
+<dd><p>The shape of jdata.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.num_tensors">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_tensors</span></span><a class="headerlink" href="#fvdb.JaggedTensor.num_tensors" title="Link to this definition"></a></dt>
+<dd><p>The number of tensors in the JaggedTensor.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.requires_grad">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">requires_grad</span></span><a class="headerlink" href="#fvdb.JaggedTensor.requires_grad" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.requires_grad_">
+<span class="sig-name descname"><span class="pre">requires_grad_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.requires_grad_" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.rmask">
+<span class="sig-name descname"><span class="pre">rmask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.Tensor</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.rmask" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.round">
+<span class="sig-name descname"><span class="pre">round</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.round" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.round_">
+<span class="sig-name descname"><span class="pre">round_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.round_" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.rshape">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rshape</span></span><a class="headerlink" href="#fvdb.JaggedTensor.rshape" title="Link to this definition"></a></dt>
+<dd><p>The shape of the raw data tensor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.sqrt">
+<span class="sig-name descname"><span class="pre">sqrt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.sqrt" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.sqrt_">
+<span class="sig-name descname"><span class="pre">sqrt_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.sqrt_" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.to">
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#fvdb.JaggedTensor.to" title="Link to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li><p>to(self: fvdb._Cpp.JaggedTensor, arg0: fvdb._Cpp.TorchDeviceOrString) -&gt; fvdb._Cpp.JaggedTensor</p></li>
+<li><p>to(self: fvdb._Cpp.JaggedTensor, arg0: torch.dtype) -&gt; fvdb._Cpp.JaggedTensor</p></li>
+<li><p>to(self: fvdb._Cpp.JaggedTensor, device: fvdb._Cpp.TorchDeviceOrString) -&gt; fvdb._Cpp.JaggedTensor</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.type">
+<span class="sig-name descname"><span class="pre">type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">torch.dtype</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.type_as">
+<span class="sig-name descname"><span class="pre">type_as</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></span><a class="headerlink" href="#fvdb.JaggedTensor.type_as" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="fvdb.JaggedTensor.unbind">
+<span class="sig-name descname"><span class="pre">unbind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#fvdb.JaggedTensor" title="fvdb.JaggedTensor"><span class="pre">fvdb.JaggedTensor</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#fvdb.JaggedTensor.unbind" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="grid_batch.html" class="btn btn-neutral float-left" title="GridBatch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nn.html" class="btn btn-neutral float-right" title="fvdb.nn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Contributors to the OpenVDB Project.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

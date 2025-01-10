@@ -1,0 +1,705 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>fvdb.nn.modules &mdash; fVDB  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            fVDB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index.html">Welcome to fVDB!</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/building_grids.html">Building Sparse Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/basic_grid_ops.html">Basic GridBatch Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/ray_tracing.html">Ray Tracing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/simple_unet.html">A Simple Convolutional U-Net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/io.html">Sparse Grid I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/mutable_grids.html">Mutable Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/volume_rendering.html">Volume Rendering</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/grid_batch.html">GridBatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/jagged_tensor.html">JaggedTensor</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/nn.html">fvdb.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/utils.html">fvdb.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">fVDB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">fvdb.nn.modules</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for fvdb.nn.modules</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright Contributors to the OpenVDB Project</span>
+<span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
+<span class="c1">#</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nn</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">torch.profiler</span><span class="w"> </span><span class="kn">import</span> <span class="n">record_function</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb</span><span class="w"> </span><span class="kn">import</span> <span class="n">GridBatch</span><span class="p">,</span> <span class="n">JaggedTensor</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.vdbtensor</span><span class="w"> </span><span class="kn">import</span> <span class="n">VDBTensor</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">fvnn_module</span><span class="p">(</span><span class="n">module</span><span class="p">):</span>
+    <span class="c1"># Register class as a module in fvdb.nn</span>
+    <span class="n">old_forward</span> <span class="o">=</span> <span class="n">module</span><span class="o">.</span><span class="n">forward</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">record_function</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="n">old_forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="n">module</span><span class="o">.</span><span class="n">forward</span> <span class="o">=</span> <span class="n">_forward</span>
+    <span class="k">return</span> <span class="n">module</span>
+
+
+<span class="n">GridOrVDBTensor</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="n">fvdb</span><span class="o">.</span><span class="n">GridBatch</span><span class="p">,</span> <span class="n">VDBTensor</span><span class="p">]</span>
+<span class="n">ListOrInt</span> <span class="o">=</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span>
+
+
+<div class="viewcode-block" id="MaxPool">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.MaxPool">[docs]</a>
+<span class="nd">@fvnn_module</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MaxPool</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 3D max pooling over an input signal.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        kernel_size: the size of the window to take a max over</span>
+<span class="sd">        stride: the stride of the window. Default value is :attr:`kernel_size`</span>
+
+<span class="sd">    Note:</span>
+<span class="sd">        For target voxels that are not covered by any source voxels, the</span>
+<span class="sd">        output feature will be set to zero.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">:</span> <span class="n">ListOrInt</span><span class="p">,</span> <span class="n">stride</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ListOrInt</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">=</span> <span class="n">kernel_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stride</span> <span class="o">=</span> <span class="n">stride</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">VDBTensor</span><span class="p">,</span> <span class="n">ref_coarse_data</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">GridOrVDBTensor</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VDBTensor</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ref_coarse_data</span><span class="p">,</span> <span class="n">VDBTensor</span><span class="p">):</span>
+            <span class="n">coarse_grid</span><span class="p">,</span> <span class="n">coarse_kmap</span> <span class="o">=</span> <span class="n">ref_coarse_data</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="n">ref_coarse_data</span><span class="o">.</span><span class="n">kmap</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ref_coarse_data</span><span class="p">,</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">GridBatch</span><span class="p">):</span>
+            <span class="n">coarse_grid</span><span class="p">,</span> <span class="n">coarse_kmap</span> <span class="o">=</span> <span class="n">ref_coarse_data</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">coarse_grid</span><span class="p">,</span> <span class="n">coarse_kmap</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+        <span class="n">new_feature</span><span class="p">,</span> <span class="n">new_grid</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">max_pool</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">,</span> <span class="nb">input</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span> <span class="n">coarse_grid</span><span class="o">=</span><span class="n">coarse_grid</span>
+        <span class="p">)</span>
+        <span class="n">new_feature</span><span class="o">.</span><span class="n">jdata</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">isinf</span><span class="p">(</span><span class="n">new_feature</span><span class="o">.</span><span class="n">jdata</span><span class="p">)]</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="k">return</span> <span class="n">VDBTensor</span><span class="p">(</span><span class="n">new_grid</span><span class="p">,</span> <span class="n">new_feature</span><span class="p">,</span> <span class="n">kmap</span><span class="o">=</span><span class="n">coarse_kmap</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">extra_repr</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;kernel_size=</span><span class="si">{kernel_size}</span><span class="s2">, stride=</span><span class="si">{stride}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="AvgPool">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.AvgPool">[docs]</a>
+<span class="nd">@fvnn_module</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">AvgPool</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 3D average pooling over an input signal.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        kernel_size: the size of the window to take average over</span>
+<span class="sd">        stride: the stride of the window. Default value is :attr:`kernel_size`</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kernel_size</span><span class="p">:</span> <span class="n">ListOrInt</span><span class="p">,</span> <span class="n">stride</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ListOrInt</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">=</span> <span class="n">kernel_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stride</span> <span class="o">=</span> <span class="n">stride</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">VDBTensor</span><span class="p">,</span> <span class="n">ref_coarse_data</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">GridOrVDBTensor</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VDBTensor</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ref_coarse_data</span><span class="p">,</span> <span class="n">VDBTensor</span><span class="p">):</span>
+            <span class="n">coarse_grid</span><span class="p">,</span> <span class="n">coarse_kmap</span> <span class="o">=</span> <span class="n">ref_coarse_data</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="n">ref_coarse_data</span><span class="o">.</span><span class="n">kmap</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ref_coarse_data</span><span class="p">,</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">GridBatch</span><span class="p">):</span>
+            <span class="n">coarse_grid</span><span class="p">,</span> <span class="n">coarse_kmap</span> <span class="o">=</span> <span class="n">ref_coarse_data</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">coarse_grid</span><span class="p">,</span> <span class="n">coarse_kmap</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+        <span class="n">new_feature</span><span class="p">,</span> <span class="n">new_grid</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">avg_pool</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">,</span> <span class="nb">input</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span> <span class="n">coarse_grid</span><span class="o">=</span><span class="n">coarse_grid</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">VDBTensor</span><span class="p">(</span><span class="n">new_grid</span><span class="p">,</span> <span class="n">new_feature</span><span class="p">,</span> <span class="n">kmap</span><span class="o">=</span><span class="n">coarse_kmap</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">extra_repr</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;kernel_size=</span><span class="si">{kernel_size}</span><span class="s2">, stride=</span><span class="si">{stride}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="UpsamplingNearest">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.UpsamplingNearest">[docs]</a>
+<span class="nd">@fvnn_module</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">UpsamplingNearest</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Upsamples the input by a given scale factor using nearest upsampling.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        scale_factor: the upsampling factor</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale_factor</span><span class="p">:</span> <span class="n">ListOrInt</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span> <span class="o">=</span> <span class="n">scale_factor</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">VDBTensor</span><span class="p">,</span> <span class="n">mask</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">JaggedTensor</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">ref_fine_data</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">GridOrVDBTensor</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VDBTensor</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ref_fine_data</span><span class="p">,</span> <span class="n">VDBTensor</span><span class="p">):</span>
+            <span class="n">fine_grid</span><span class="p">,</span> <span class="n">fine_kmap</span> <span class="o">=</span> <span class="n">ref_fine_data</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="n">ref_fine_data</span><span class="o">.</span><span class="n">kmap</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">ref_fine_data</span><span class="p">,</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">GridBatch</span><span class="p">):</span>
+            <span class="n">fine_grid</span><span class="p">,</span> <span class="n">fine_kmap</span> <span class="o">=</span> <span class="n">ref_fine_data</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fine_grid</span><span class="p">,</span> <span class="n">fine_kmap</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+        <span class="n">new_feature</span><span class="p">,</span> <span class="n">new_grid</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span><span class="p">,</span> <span class="nb">input</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">mask</span><span class="p">,</span> <span class="n">fine_grid</span><span class="o">=</span><span class="n">fine_grid</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">VDBTensor</span><span class="p">(</span><span class="n">new_grid</span><span class="p">,</span> <span class="n">new_feature</span><span class="p">,</span> <span class="n">kmap</span><span class="o">=</span><span class="n">fine_kmap</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">extra_repr</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;scale_factor=</span><span class="si">{scale_factor}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scale_factor</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">scale_factor</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="FillFromGrid">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.FillFromGrid">[docs]</a>
+<span class="nd">@fvnn_module</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">FillFromGrid</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Fill the content of input vdb-tensor to another grid.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        default_value: the default value to fill in the new grid.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default_value</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_value</span> <span class="o">=</span> <span class="n">default_value</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">VDBTensor</span><span class="p">,</span> <span class="n">other_data</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">GridOrVDBTensor</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VDBTensor</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other_data</span><span class="p">,</span> <span class="n">VDBTensor</span><span class="p">):</span>
+            <span class="n">other_grid</span><span class="p">,</span> <span class="n">other_kmap</span> <span class="o">=</span> <span class="n">other_data</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="n">other_data</span><span class="o">.</span><span class="n">kmap</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other_data</span><span class="p">,</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">GridBatch</span><span class="p">):</span>
+            <span class="n">other_grid</span><span class="p">,</span> <span class="n">other_kmap</span> <span class="o">=</span> <span class="n">other_data</span><span class="p">,</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">input</span>
+
+        <span class="n">new_feature</span> <span class="o">=</span> <span class="n">other_grid</span><span class="o">.</span><span class="n">fill_from_grid</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="nb">input</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_value</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">VDBTensor</span><span class="p">(</span><span class="n">other_grid</span><span class="p">,</span> <span class="n">new_feature</span><span class="p">,</span> <span class="n">kmap</span><span class="o">=</span><span class="n">other_kmap</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="SparseConv3d">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.SparseConv3d">[docs]</a>
+<span class="nd">@fvnn_module</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">SparseConv3d</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies a 3D convolution over an input signal composed of several input</span>
+<span class="sd">    planes, by performing a sparse convolution on the underlying VDB grid.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        in_channels: number of channels in the input tensor</span>
+<span class="sd">        out_channels: number of channels produced by the convolution</span>
+<span class="sd">        kernel_size: size of the convolving kernel</span>
+<span class="sd">        stride: stride of the convolution. Default value is 1</span>
+<span class="sd">        bias: if ``True``, adds a learnable bias to the output. Default: ``True``</span>
+<span class="sd">        transposed: if ``True``, uses a transposed convolution operator</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">CUTLASS_SUPPORTED_CHANNELS</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">64</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">128</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">32</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">128</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">384</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">192</span><span class="p">,</span> <span class="mi">128</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="mi">512</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">256</span><span class="p">),</span>
+        <span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">),</span>
+    <span class="p">]</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Backend for performing convolutions:</span>
+<span class="sd">      - &quot;default&quot;: for now it is &#39;igemm_mode1&#39;</span>
+<span class="sd">      - &quot;legacy&quot;: the old slow implementation</span>
+<span class="sd">      - &quot;me&quot;: MinkowskiEngine implementation</span>
+<span class="sd">      - &quot;halo&quot;: 10x10x10 halo buffer implementation, stride 1, kernel 3</span>
+<span class="sd">      - &quot;cutlass&quot;: 4x4x6 cutlass implementation, stride 1, kernel 3, forward only, limited channels support</span>
+<span class="sd">      - &quot;lggs&quot;: kernel optimized for sparse structures</span>
+<span class="sd">      - &quot;igemm_mode0&quot;: unsorted</span>
+<span class="sd">      - &quot;igemm_mode1&quot;: sorted + split=1</span>
+<span class="sd">      - &quot;igemm_mode2&quot;: sorted + split=3</span>
+<span class="sd">      - &quot;dense&quot;: dense convolution</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">backend</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span>
+    <span class="n">allow_tf32</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">in_channels</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">out_channels</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">kernel_size</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="n">stride</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">bias</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">transposed</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">in_channels</span> <span class="o">=</span> <span class="n">in_channels</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out_channels</span> <span class="o">=</span> <span class="n">out_channels</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">kernel_size</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="n">kernel_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">kernel_size</span><span class="p">,)</span> <span class="o">*</span> <span class="mi">3</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">kernel_size</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">stride</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+            <span class="n">stride</span> <span class="o">=</span> <span class="p">(</span><span class="n">stride</span><span class="p">,)</span> <span class="o">*</span> <span class="mi">3</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">stride</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">=</span> <span class="n">kernel_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stride</span> <span class="o">=</span> <span class="n">stride</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transposed</span> <span class="o">=</span> <span class="n">transposed</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">transposed</span><span class="p">:</span>
+            <span class="c1"># Only change kernel size instead of module dict</span>
+            <span class="n">out_channels</span><span class="p">,</span> <span class="n">in_channels</span> <span class="o">=</span> <span class="n">in_channels</span><span class="p">,</span> <span class="n">out_channels</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">kernel_volume</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_volume</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># Weight tensor is of shape (Do, Di, K0, K1, K2), but the underlying data is (K2, K1, K0, Di, Do)</span>
+            <span class="c1">#   so we don&#39;t need to make a copy of the permuted tensor within the conv kernel.</span>
+            <span class="n">weight_shape</span> <span class="o">=</span> <span class="p">[</span><span class="n">out_channels</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">)</span>
+            <span class="n">weight</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="o">*</span><span class="n">weight_shape</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">weight</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">weight</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">out_channels</span><span class="p">,</span> <span class="n">in_channels</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">bias</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">bias</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">out_channels</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">register_parameter</span><span class="p">(</span><span class="s2">&quot;bias&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">reset_parameters</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">extra_repr</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{in_channels}</span><span class="s2">, </span><span class="si">{out_channels}</span><span class="s2">, kernel_size=</span><span class="si">{kernel_size}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span> <span class="o">!=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;, stride=</span><span class="si">{stride}</span><span class="s2">&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;, bias=False&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">transposed</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;, transposed=True&quot;</span>
+        <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">std</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">out_channels</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">transposed</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_channels</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_volume</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">uniform_</span><span class="p">(</span><span class="o">-</span><span class="n">std</span><span class="p">,</span> <span class="n">std</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">bias</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">uniform_</span><span class="p">(</span><span class="o">-</span><span class="n">std</span><span class="p">,</span> <span class="n">std</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_dispatch_conv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_feature</span><span class="p">,</span> <span class="n">in_grid</span><span class="p">,</span> <span class="n">in_kmap</span><span class="p">,</span> <span class="n">out_grid</span><span class="p">):</span>
+
+        <span class="n">backend</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">backend</span>
+
+        <span class="n">sm_arch</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_capability</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_capability</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mi">10</span>
+        <span class="c1"># tf32 requires compute capability &gt;= 8.0 (Ampere)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">allow_tf32</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">is_cuda</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="p">(</span>
+                <span class="n">sm_arch</span> <span class="o">&gt;=</span> <span class="mi">8</span>
+            <span class="p">),</span> <span class="s2">&quot;TF32 requires GPU with compute capability &gt;= 8.0. Please set fvdb.nn.SparseConv3d.allow_tf32 = False.&quot;</span>
+
+        <span class="c1"># bf16 requires compute capability &gt;= 8.0 (Ampere)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">is_cuda</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">bfloat16</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">sm_arch</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;BF16 requires GPU with compute capability &gt;= 8.0.&quot;</span>
+
+        <span class="c1"># float16 requires compute capability &gt;= 7.5 (Turing)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">is_cuda</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">float16</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">sm_arch</span> <span class="o">&gt;=</span> <span class="mf">7.5</span><span class="p">,</span> <span class="s2">&quot;FP16 requires GPU with compute capability &gt;= 7.5.&quot;</span>
+
+        <span class="c1"># cutlass, lggs, halo backends require compute capability &gt;= 8.0 (Ampere)</span>
+        <span class="k">if</span> <span class="n">backend</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;cutlass&quot;</span><span class="p">,</span> <span class="s2">&quot;lggs&quot;</span><span class="p">,</span> <span class="s2">&quot;halo&quot;</span><span class="p">]:</span>
+            <span class="k">assert</span> <span class="p">(</span>
+                <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_capability</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">8</span>
+            <span class="p">),</span> <span class="s2">&quot;cutlass, LGGS and Halo backends require GPU with compute capability &gt;= 8.0.&quot;</span>
+
+        <span class="k">if</span> <span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;cutlass&quot;</span> <span class="ow">and</span> <span class="p">(</span>
+            <span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">is_cuda</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_channels</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_channels</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">CUTLASS_SUPPORTED_CHANNELS</span>
+        <span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Cutlass backend does not support </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">in_channels</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">out_channels</span><span class="si">}</span><span class="s2"> convolutions, falling back to default&quot;</span>
+            <span class="p">)</span>
+            <span class="n">backend</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span>
+
+        <span class="k">if</span> <span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;lggs&quot;</span> <span class="ow">and</span> <span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">in_channels</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_channels</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">)]):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LGGS backend only supports 128 to 128 convolution, falling back to default&quot;</span><span class="p">)</span>
+            <span class="n">backend</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span>
+
+        <span class="k">if</span> <span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;default&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">is_cuda</span><span class="p">)</span> <span class="ow">or</span> <span class="n">in_feature</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">torch</span><span class="o">.</span><span class="n">float64</span><span class="p">:</span>
+                <span class="n">backend</span> <span class="o">=</span> <span class="s2">&quot;legacy&quot;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">backend</span> <span class="o">=</span> <span class="s2">&quot;igemm_mode1&quot;</span>
+
+        <span class="k">if</span> <span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;halo&quot;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">==</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+            <span class="k">assert</span> <span class="n">out_grid</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">in_grid</span><span class="o">.</span><span class="n">is_same</span><span class="p">(</span><span class="n">out_grid</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">in_grid</span><span class="p">,</span> <span class="n">in_grid</span><span class="o">.</span><span class="n">sparse_conv_halo</span><span class="p">(</span><span class="n">in_feature</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="kc">None</span>
+
+        <span class="k">elif</span> <span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;dense&quot;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">assert</span> <span class="n">out_grid</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">in_grid</span><span class="o">.</span><span class="n">is_same</span><span class="p">(</span><span class="n">out_grid</span><span class="p">)</span>
+            <span class="n">min_coord</span> <span class="o">=</span> <span class="n">in_grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">jdata</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+            <span class="c1"># BWHDC -&gt; BCDHW</span>
+            <span class="n">dense_feature</span> <span class="o">=</span> <span class="n">in_grid</span><span class="o">.</span><span class="n">write_to_dense</span><span class="p">(</span><span class="n">in_feature</span><span class="p">,</span> <span class="n">min_coord</span><span class="o">=</span><span class="n">min_coord</span><span class="p">)</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">dense_feature</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">conv3d</span><span class="p">(</span><span class="n">dense_feature</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="c1"># BCDHW -&gt; BWHDC</span>
+            <span class="n">dense_feature</span> <span class="o">=</span> <span class="n">dense_feature</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">contiguous</span><span class="p">()</span>
+            <span class="n">dense_feature</span> <span class="o">=</span> <span class="n">in_grid</span><span class="o">.</span><span class="n">read_from_dense</span><span class="p">(</span><span class="n">dense_feature</span><span class="p">,</span> <span class="n">dense_origins</span><span class="o">=</span><span class="n">min_coord</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">in_grid</span><span class="p">,</span> <span class="n">dense_feature</span><span class="p">,</span> <span class="kc">None</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Fallback to the default implementation</span>
+            <span class="n">can_cache</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">out_grid</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">out_grid</span><span class="o">.</span><span class="n">is_same</span><span class="p">(</span><span class="n">in_grid</span><span class="p">))</span>
+
+            <span class="k">if</span> <span class="n">in_kmap</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">in_kmap</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="ow">and</span> <span class="n">can_cache</span><span class="p">:</span>
+                <span class="n">kmap</span><span class="p">,</span> <span class="n">out_grid</span> <span class="o">=</span> <span class="n">in_kmap</span><span class="p">,</span> <span class="n">in_grid</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">transposed</span><span class="p">:</span>
+                    <span class="k">assert</span> <span class="n">out_grid</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                    <span class="n">kmap</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">out_grid</span><span class="o">.</span><span class="n">sparse_conv_kernel_map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span> <span class="n">in_grid</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">kmap</span><span class="p">,</span> <span class="n">out_grid</span> <span class="o">=</span> <span class="n">in_grid</span><span class="o">.</span><span class="n">sparse_conv_kernel_map</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span> <span class="n">out_grid</span><span class="p">)</span>
+
+            <span class="n">out_kmap</span> <span class="o">=</span> <span class="n">kmap</span> <span class="k">if</span> <span class="n">can_cache</span> <span class="k">else</span> <span class="kc">None</span>
+
+            <span class="n">backend</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_build_kmap_and_convert_backend</span><span class="p">(</span><span class="n">kmap</span><span class="p">,</span> <span class="n">backend</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">transposed</span><span class="p">:</span>
+                <span class="n">out_feature</span> <span class="o">=</span> <span class="n">kmap</span><span class="o">.</span><span class="n">sparse_conv_3d</span><span class="p">(</span><span class="n">in_feature</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="n">backend</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">out_feature</span> <span class="o">=</span> <span class="n">kmap</span><span class="o">.</span><span class="n">sparse_transpose_conv_3d</span><span class="p">(</span><span class="n">in_feature</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="n">backend</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">out_grid</span><span class="p">,</span> <span class="n">out_feature</span><span class="p">,</span> <span class="n">out_kmap</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_build_kmap_and_convert_backend</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kmap</span><span class="p">:</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">SparseConvPackInfo</span><span class="p">,</span> <span class="n">backend</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">ConvPackBackend</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">backend</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;legacy&quot;</span><span class="p">,</span> <span class="s2">&quot;me&quot;</span><span class="p">]:</span>
+            <span class="n">kmap</span><span class="o">.</span><span class="n">build_gather_scatter</span><span class="p">(</span><span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;me&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">ConvPackBackend</span><span class="o">.</span><span class="n">GATHER_SCATTER</span>
+
+        <span class="k">elif</span> <span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;cutlass&quot;</span><span class="p">:</span>
+            <span class="n">kmap</span><span class="o">.</span><span class="n">build_cutlass</span><span class="p">(</span><span class="n">benchmark</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">ConvPackBackend</span><span class="o">.</span><span class="n">CUTLASS</span>
+
+        <span class="k">elif</span> <span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;igemm_mode0&quot;</span><span class="p">:</span>
+            <span class="n">kmap</span><span class="o">.</span><span class="n">build_implicit_gemm</span><span class="p">(</span>
+                <span class="nb">sorted</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">split_mask_num</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">training</span><span class="p">,</span> <span class="n">split_mask_num_bwd</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">use_tf32</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">allow_tf32</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">ConvPackBackend</span><span class="o">.</span><span class="n">IGEMM</span>
+
+        <span class="k">elif</span> <span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;igemm_mode1&quot;</span><span class="p">:</span>
+            <span class="n">kmap</span><span class="o">.</span><span class="n">build_implicit_gemm</span><span class="p">(</span>
+                <span class="nb">sorted</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">split_mask_num</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">training</span><span class="p">,</span> <span class="n">split_mask_num_bwd</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">use_tf32</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">allow_tf32</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">ConvPackBackend</span><span class="o">.</span><span class="n">IGEMM</span>
+
+        <span class="k">elif</span> <span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;igemm_mode2&quot;</span><span class="p">:</span>
+            <span class="n">kmap</span><span class="o">.</span><span class="n">build_implicit_gemm</span><span class="p">(</span>
+                <span class="nb">sorted</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">split_mask_num</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">training</span><span class="p">,</span> <span class="n">split_mask_num_bwd</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">use_tf32</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">allow_tf32</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">ConvPackBackend</span><span class="o">.</span><span class="n">IGEMM</span>
+
+        <span class="k">elif</span> <span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;lggs&quot;</span><span class="p">:</span>
+            <span class="n">kmap</span><span class="o">.</span><span class="n">build_lggs</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">ConvPackBackend</span><span class="o">.</span><span class="n">LGGS</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Backend </span><span class="si">{</span><span class="n">backend</span><span class="si">}</span><span class="s2"> is not supported&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="nb">input</span><span class="p">:</span> <span class="n">VDBTensor</span><span class="p">,</span>
+        <span class="n">out_grid</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">GridBatch</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VDBTensor</span><span class="p">:</span>
+        <span class="n">in_feature</span><span class="p">,</span> <span class="n">in_grid</span><span class="p">,</span> <span class="n">in_kmap</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="nb">input</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="nb">input</span><span class="o">.</span><span class="n">kmap</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">kernel_size</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">out_feature</span> <span class="o">=</span> <span class="n">in_feature</span><span class="o">.</span><span class="n">jdata</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="n">out_feature</span> <span class="o">=</span> <span class="n">in_feature</span><span class="o">.</span><span class="n">jagged_like</span><span class="p">(</span><span class="n">out_feature</span><span class="p">)</span>
+            <span class="n">out_grid</span><span class="p">,</span> <span class="n">out_kmap</span> <span class="o">=</span> <span class="n">in_grid</span><span class="p">,</span> <span class="n">in_kmap</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">out_grid</span><span class="p">,</span> <span class="n">out_feature</span><span class="p">,</span> <span class="n">out_kmap</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dispatch_conv</span><span class="p">(</span><span class="n">in_feature</span><span class="p">,</span> <span class="n">in_grid</span><span class="p">,</span> <span class="n">in_kmap</span><span class="p">,</span> <span class="n">out_grid</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">out_feature</span><span class="o">.</span><span class="n">jdata</span> <span class="o">=</span> <span class="n">out_feature</span><span class="o">.</span><span class="n">jdata</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bias</span>
+
+        <span class="k">if</span> <span class="n">out_grid</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Failed to compute output grid. This is a bug in the implementation.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">VDBTensor</span><span class="p">(</span><span class="n">out_grid</span><span class="p">,</span> <span class="n">out_feature</span><span class="p">,</span> <span class="n">out_kmap</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="GroupNorm">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.GroupNorm">[docs]</a>
+<span class="nd">@fvnn_module</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">GroupNorm</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">GroupNorm</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies Group Normalization over a VDBTensor.</span>
+<span class="sd">    See :class:`~torch.nn.GroupNorm` for detailed information.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">VDBTensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VDBTensor</span><span class="p">:</span>
+        <span class="n">num_channels</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">jdata</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">num_channels</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_channels</span><span class="p">,</span> <span class="s2">&quot;Input feature should have the same number of channels as GroupNorm&quot;</span>
+        <span class="n">num_batches</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">grid_count</span>
+
+        <span class="n">flat_data</span><span class="p">,</span> <span class="n">flat_offsets</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">jdata</span><span class="p">,</span> <span class="nb">input</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">joffsets</span>
+
+        <span class="n">result_data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">flat_data</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_batches</span><span class="p">):</span>
+            <span class="n">feat</span> <span class="o">=</span> <span class="n">flat_data</span><span class="p">[</span><span class="n">flat_offsets</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="p">:</span> <span class="n">flat_offsets</span><span class="p">[</span><span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]</span>
+            <span class="k">if</span> <span class="n">feat</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">feat</span> <span class="o">=</span> <span class="n">feat</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_channels</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+                <span class="n">feat</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">feat</span><span class="p">)</span>
+                <span class="n">feat</span> <span class="o">=</span> <span class="n">feat</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">num_channels</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+                <span class="n">result_data</span><span class="p">[</span><span class="n">flat_offsets</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="p">:</span> <span class="n">flat_offsets</span><span class="p">[</span><span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">feat</span>
+
+        <span class="k">return</span> <span class="n">VDBTensor</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="nb">input</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">jagged_like</span><span class="p">(</span><span class="n">result_data</span><span class="p">),</span> <span class="nb">input</span><span class="o">.</span><span class="n">kmap</span><span class="p">)</span></div>
+
+
+
+<span class="nd">@fvnn_module</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">BatchNorm</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">BatchNorm1d</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Applies Batch Normalization over a VDBTensor.</span>
+<span class="sd">    See :class:`~torch.nn.BatchNorm1d` for detailed information.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">VDBTensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VDBTensor</span><span class="p">:</span>
+        <span class="n">num_channels</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">jdata</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">num_channels</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_features</span><span class="p">,</span> <span class="s2">&quot;Input feature should have the same number of channels as BatchNorm&quot;</span>
+        <span class="n">result_data</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">jdata</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">VDBTensor</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="nb">input</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">jagged_like</span><span class="p">(</span><span class="n">result_data</span><span class="p">),</span> <span class="nb">input</span><span class="o">.</span><span class="n">kmap</span><span class="p">)</span>
+
+
+<span class="c1"># Non-linear Activations</span>
+
+
+<span class="nd">@fvnn_module</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ElementwiseMixin</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">VDBTensor</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VDBTensor</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">input</span><span class="p">,</span> <span class="n">VDBTensor</span><span class="p">),</span> <span class="s2">&quot;Input should have type VDBTensor&quot;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">jdata</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+        <span class="k">return</span> <span class="n">VDBTensor</span><span class="p">(</span><span class="nb">input</span><span class="o">.</span><span class="n">grid</span><span class="p">,</span> <span class="nb">input</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">jagged_like</span><span class="p">(</span><span class="n">res</span><span class="p">),</span> <span class="nb">input</span><span class="o">.</span><span class="n">kmap</span><span class="p">)</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ELU</span><span class="p">(</span><span class="n">ElementwiseMixin</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">ELU</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies the Exponential Linear Unit function element-wise:</span>
+<span class="sd">    .. math::</span>
+<span class="sd">    \text{ELU}(x) = \begin{cases}</span>
+<span class="sd">    x, &amp; \text{ if } x &gt; 0\\</span>
+<span class="sd">    \alpha * (\exp(x) - 1), &amp; \text{ if } x \leq 0</span>
+<span class="sd">    \end{cases}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">CELU</span><span class="p">(</span><span class="n">ElementwiseMixin</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">CELU</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies the CELU function element-wise.</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \text{CELU}(x) = \max(0,x) + \min(0, \alpha * (\exp(x/\alpha) - 1))</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">GELU</span><span class="p">(</span><span class="n">ElementwiseMixin</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">GELU</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies the Gaussian Error Linear Units function.</span>
+
+<span class="sd">    .. math:: \text{GELU}(x) = x * \Phi(x)</span>
+
+<span class="sd">    where :math:`\Phi(x)` is the Cumulative Distribution Function for Gaussian Distribution.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="Linear">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.Linear">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Linear</span><span class="p">(</span><span class="n">ElementwiseMixin</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies a linear transformation to the incoming data: :math:`y = xA^T + b`.</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="ReLU">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.ReLU">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ReLU</span><span class="p">(</span><span class="n">ElementwiseMixin</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">ReLU</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies the rectified linear unit function element-wise: :math:`\text{ReLU}(x) = (x)^+ = \max(0, x)`</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="LeakyReLU">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.LeakyReLU">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">LeakyReLU</span><span class="p">(</span><span class="n">ElementwiseMixin</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">LeakyReLU</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies the element-wise function: :math:`\text{LeakyReLU}(x) = \max(0, x) + \text{negative\_slope} * \min(0, x)`</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="SELU">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.SELU">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">SELU</span><span class="p">(</span><span class="n">ElementwiseMixin</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">SELU</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies element-wise, :math:`\text{SELU}(x) = \lambda \left\{</span>
+<span class="sd">    \begin{array}{lr}</span>
+<span class="sd">    x, &amp; \text{if } x &gt; 0 \\</span>
+<span class="sd">    \text{negative\_slope} \times e^x - \text{negative\_slope}, &amp; \text{otherwise }</span>
+<span class="sd">    \end{array}</span>
+<span class="sd">    \right.`</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="SiLU">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.SiLU">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">SiLU</span><span class="p">(</span><span class="n">ElementwiseMixin</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">SiLU</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies element-wise, :math:`\text{SiLU}(x) = x * \sigma(x)`, where :math:`\sigma(x)` is the sigmoid function.</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="Tanh">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.Tanh">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Tanh</span><span class="p">(</span><span class="n">ElementwiseMixin</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Tanh</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies element-wise, :math:`\text{Tanh}(x) = \tanh(x) = \frac{e^x - e^{-x}} {e^x + e^{-x}}`</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="Sigmoid">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.Sigmoid">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Sigmoid</span><span class="p">(</span><span class="n">ElementwiseMixin</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sigmoid</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies element-wise, :math:`\text{Sigmoid}(x) = \frac{1}{1 + \exp(-x)}`</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+
+
+<span class="c1"># Dropout Layers</span>
+
+
+<div class="viewcode-block" id="Dropout">
+<a class="viewcode-back" href="../../../api/nn.html#fvdb.nn.Dropout">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Dropout</span><span class="p">(</span><span class="n">ElementwiseMixin</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    During training, randomly zeroes some of the elements of the input tensor with probability :attr:`p`</span>
+<span class="sd">    using samples from a Bernoulli distribution. The elements to zero are randomized on every forward call.</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, NVIDIA Corporation.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

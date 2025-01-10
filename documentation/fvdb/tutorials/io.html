@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sparse Grid I/O &mdash; fVDB  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mutable Grids" href="mutable_grids.html" />
+    <link rel="prev" title="A Simple Convolutional U-Net" href="simple_unet.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            fVDB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to fVDB!</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_grids.html">Building Sparse Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_grid_ops.html">Basic GridBatch Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ray_tracing.html">Ray Tracing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simple_unet.html">A Simple Convolutional U-Net</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sparse Grid I/O</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python-serialization">Python Serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-nanovdb-files">Loading NanoVDB Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#saving-loading-openvdb-files">Saving/Loading OpenVDB Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mutable_grids.html">Mutable Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="volume_rendering.html">Volume Rendering</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/grid_batch.html">GridBatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/jagged_tensor.html">JaggedTensor</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/nn.html">fvdb.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/utils.html">fvdb.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fVDB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Sparse Grid I/O</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/io.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="sparse-grid-i-o">
+<h1>Sparse Grid I/O<a class="headerlink" href="#sparse-grid-i-o" title="Link to this heading"></a></h1>
+<p>We give an overview of ways to save and load sparse grids including how fVDB’s serialized format relates to other libraries such as OpenVDB and NanoVDB.  All of the examples in this tutorial are available in the <code class="docutils literal notranslate"><span class="pre">examples/io.py</span></code> file of the fVDB repository.</p>
+<p>In these examples we will be using tools which are part of the <code class="docutils literal notranslate"><span class="pre">NanoVDB</span></code> project such as <code class="docutils literal notranslate"><span class="pre">nanovdb_convert</span></code>.  It is assumed that the <code class="docutils literal notranslate"><span class="pre">NanoVDB</span></code> tools are available to call (i.e. findable on the system’s <code class="docutils literal notranslate"><span class="pre">$PATH</span></code>).  If you have not already installed these tools, you can find instructions on building NanoVDB with OpenVDB from its documentation:</p>
+<p><a class="reference external" href="https://www.openvdb.org/documentation/doxygen/NanoVDB_HowToBuild.html">https://www.openvdb.org/documentation/doxygen/NanoVDB_HowToBuild.html</a></p>
+<p>While not necessary for fVDB’s functionality, they are useful utilities to have available for inspecting and manipulating sparse grids.</p>
+<section id="python-serialization">
+<h2>Python Serialization<a class="headerlink" href="#python-serialization" title="Link to this heading"></a></h2>
+<p>Batches of sparse grids can be serialized to a NanoVDB file using the <code class="docutils literal notranslate"><span class="pre">fvdb.save</span></code> method.  Here, we create two grids of different sizes and numbers of points and save them to a compressed NanoVDB file with specified names.  The names are optional.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_points</span><span class="p">(</span>
+    <span class="n">p</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="p">[[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">]],</span> <span class="n">origins</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="p">)</span>
+
+<span class="c1"># save the grid and features to a compressed nvdb file</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">(),</span> <span class="s2">&quot;two_random_grids.nvdb&quot;</span><span class="p">)</span>
+<span class="n">fvdb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;taco1&quot;</span><span class="p">,</span> <span class="s2">&quot;taco2&quot;</span><span class="p">],</span> <span class="n">compressed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">nanovdb_print</span></code> command line tool to show information about our saved file.  Note how our grids have the <code class="docutils literal notranslate"><span class="pre">INDEX</span></code> class since they have no features and only store the voxel indices.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>The<span class="w"> </span>file<span class="w"> </span><span class="s2">&quot;/tmp/tmpwnu7qc_7/two_random_grids.nvdb&quot;</span><span class="w"> </span>contains<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="m">2</span><span class="w"> </span>grids:
+<span class="c1">#  Name   Type     Class  Version  Codec  Size      File      Scale             # Voxels  Resolution</span>
+<span class="m">1</span><span class="w">  </span>taco1<span class="w">  </span>OnIndex<span class="w">  </span>INDEX<span class="w">  </span><span class="m">32</span>.6.0<span class="w">   </span>BLOSC<span class="w">  </span><span class="m">1</span>.453<span class="w"> </span>MB<span class="w">  </span><span class="m">7</span>.181<span class="w"> </span>KB<span class="w">  </span><span class="o">(</span><span class="m">0</span>.1,0.1,0.1<span class="o">)</span><span class="w">     </span><span class="m">10</span><span class="w">        </span><span class="m">22</span><span class="w"> </span>x<span class="w"> </span><span class="m">43</span><span class="w"> </span>x<span class="w"> </span><span class="m">37</span>
+<span class="m">2</span><span class="w">  </span>taco2<span class="w">  </span>OnIndex<span class="w">  </span>INDEX<span class="w">  </span><span class="m">32</span>.6.0<span class="w">   </span>BLOSC<span class="w">  </span><span class="m">2</span>.326<span class="w"> </span>MB<span class="w">  </span><span class="m">12</span>.7<span class="w"> </span>KB<span class="w">   </span><span class="o">(</span><span class="m">0</span>.15,0.15,0.15<span class="o">)</span><span class="w">  </span><span class="m">100</span><span class="w">       </span><span class="m">33</span><span class="w"> </span>x<span class="w"> </span><span class="m">39</span><span class="w"> </span>x<span class="w"> </span><span class="m">38</span>
+</pre></div>
+</div>
+<p>We can include N-dimensional features by passing a JaggedTensor as the second argument (or <code class="docutils literal notranslate"><span class="pre">data</span></code> kwarg) to <code class="docutils literal notranslate"><span class="pre">fvdb.save</span></code>.  Here, we create a grid with a single, float feature channel for our grids and save it to a <code class="docutils literal notranslate"><span class="pre">nvdb</span></code> file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># a single, scalar float feature per grid</span>
+<span class="n">feats</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">grid</span><span class="o">.</span><span class="n">num_voxels</span><span class="p">])</span>
+
+<span class="c1"># save the grid and features to a compressed nvdb file</span>
+<span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">(),</span> <span class="s2">&quot;two_random_grids.nvdb&quot;</span><span class="p">)</span>
+<span class="n">fvdb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">feats</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;taco1&quot;</span><span class="p">,</span> <span class="s2">&quot;taco2&quot;</span><span class="p">],</span> <span class="n">compressed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Again, we can use the <code class="docutils literal notranslate"><span class="pre">nanovdb_print</span></code> command line tool to show information about our saved file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>The<span class="w"> </span>file<span class="w"> </span><span class="s2">&quot;/tmp/tmpg9ol5841/two_random_grids.nvdb&quot;</span><span class="w"> </span>contains<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="m">2</span><span class="w"> </span>grids:
+<span class="c1">#  Name   Type   Class  Version  Codec  Size      File      Scale    # Voxels  Resolution</span>
+<span class="m">1</span><span class="w">  </span>taco1<span class="w">  </span>float<span class="w">  </span>?<span class="w">      </span><span class="m">32</span>.6.0<span class="w">   </span>BLOSC<span class="w">  </span><span class="m">1</span>.47<span class="w"> </span>MB<span class="w">   </span><span class="m">7</span>.959<span class="w"> </span>KB<span class="w">  </span><span class="o">(</span><span class="m">1</span>,1,1<span class="o">)</span><span class="w">  </span><span class="m">10</span><span class="w">        </span><span class="m">26</span><span class="w"> </span>x<span class="w"> </span><span class="m">30</span><span class="w"> </span>x<span class="w"> </span><span class="m">36</span>
+<span class="m">2</span><span class="w">  </span>taco2<span class="w">  </span>float<span class="w">  </span>?<span class="w">      </span><span class="m">32</span>.6.0<span class="w">   </span>BLOSC<span class="w">  </span><span class="m">2</span>.411<span class="w"> </span>MB<span class="w">  </span><span class="m">16</span>.48<span class="w"> </span>KB<span class="w">  </span><span class="o">(</span><span class="m">1</span>,1,1<span class="o">)</span><span class="w">  </span><span class="m">100</span><span class="w">       </span><span class="m">32</span><span class="w"> </span>x<span class="w"> </span><span class="m">33</span><span class="w"> </span>x<span class="w"> </span><span class="m">34</span>
+</pre></div>
+</div>
+<p>Note how our serialized NanoVDB grids are now of type <code class="docutils literal notranslate"><span class="pre">float</span></code>.  fVDB will automatically map N-dimensional features to appropriate NanoVDB types.  For feature sizes that don’t naturally map to any NanoVDB data types, fVDB will save the feature data as NanoVDB blind-data which will be appropriately read back as N-dimensional features by fVDB.</p>
+<p>Let’s try to save the same two grids with a <code class="docutils literal notranslate"><span class="pre">Vec3d</span></code> type by creating a JaggedTensor of 3-dimensional double-precision features.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># a 3-vector double feature per grid</span>
+<span class="n">feats</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">grid</span><span class="o">.</span><span class="n">num_voxels</span><span class="p">])</span>
+
+<span class="c1"># save the grid and features to a compressed nvdb file</span>
+<span class="n">saved_nvdb</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">(),</span> <span class="s2">&quot;two_random_vec3d_grids.nvdb&quot;</span><span class="p">)</span>
+<span class="n">fvdb</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">saved_nvdb</span><span class="p">,</span> <span class="n">grid</span><span class="p">,</span> <span class="n">feats</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;taco1&quot;</span><span class="p">,</span> <span class="s2">&quot;taco2&quot;</span><span class="p">],</span> <span class="n">compressed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>The<span class="w"> </span>file<span class="w"> </span><span class="s2">&quot;/tmp/tmpwnu7qc_7/two_random_grids.nvdb&quot;</span><span class="w"> </span>contains<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span><span class="m">2</span><span class="w"> </span>grids:
+<span class="c1">#  Name   Type   Class  Version  Codec  Size      File      Scale    # Voxels  Resolution</span>
+<span class="m">1</span><span class="w">  </span>taco1<span class="w">  </span>Vec3d<span class="w">  </span>?<span class="w">      </span><span class="m">32</span>.6.0<span class="w">   </span>BLOSC<span class="w">  </span><span class="m">6</span>.077<span class="w"> </span>MB<span class="w">  </span><span class="m">28</span>.18<span class="w"> </span>KB<span class="w">  </span><span class="o">(</span><span class="m">1</span>,1,1<span class="o">)</span><span class="w">  </span><span class="m">10</span><span class="w">        </span><span class="m">23</span><span class="w"> </span>x<span class="w"> </span><span class="m">36</span><span class="w"> </span>x<span class="w"> </span><span class="m">35</span>
+<span class="m">2</span><span class="w">  </span>taco2<span class="w">  </span>Vec3d<span class="w">  </span>?<span class="w">      </span><span class="m">32</span>.6.0<span class="w">   </span>BLOSC<span class="w">  </span><span class="m">7</span>.346<span class="w"> </span>MB<span class="w">  </span><span class="m">41</span>.37<span class="w"> </span>KB<span class="w">  </span><span class="o">(</span><span class="m">1</span>,1,1<span class="o">)</span><span class="w">  </span><span class="m">100</span><span class="w">       </span><span class="m">37</span><span class="w"> </span>x<span class="w"> </span><span class="m">40</span><span class="w"> </span>x<span class="w"> </span><span class="m">34</span>
+</pre></div>
+</div>
+</section>
+<section id="loading-nanovdb-files">
+<h2>Loading NanoVDB Files<a class="headerlink" href="#loading-nanovdb-files" title="Link to this heading"></a></h2>
+<p>Loading NanoVDB files is as simple as calling <code class="docutils literal notranslate"><span class="pre">fvdb.load</span></code>.  You can optionally supply a PyTorch device you’d like the grids and features loaded onto.  Here, we load the two grids we saved in the previous section onto our GPU.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the grid and features from the compressed nvdb file</span>
+<span class="n">grid_batch</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">saved_nvdb</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;cuda:0&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loaded grid batch total number of voxels: &quot;</span><span class="p">,</span> <span class="n">grid_batch</span><span class="o">.</span><span class="n">total_voxels</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loaded grid batch data type: </span><span class="si">%s</span><span class="s2">, device: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">features</span><span class="o">.</span><span class="n">device</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Loaded<span class="w"> </span>grid<span class="w"> </span>batch<span class="w"> </span>total<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>voxels:<span class="w">  </span><span class="m">110</span>
+Loaded<span class="w"> </span>grid<span class="w"> </span>batch<span class="w"> </span>data<span class="w"> </span>type:<span class="w"> </span>torch.float64,<span class="w"> </span>device:<span class="w"> </span>cuda:0
+</pre></div>
+</div>
+</section>
+<section id="saving-loading-openvdb-files">
+<h2>Saving/Loading OpenVDB Files<a class="headerlink" href="#saving-loading-openvdb-files" title="Link to this heading"></a></h2>
+<p>While saving and loading from OpenVDB files is not directly supported by fVDB, it is possible to easily convert between NanoVDB and OpenVDB files using the <code class="docutils literal notranslate"><span class="pre">nanovdb_convert</span></code> command line tool.  Here, we convert our previously saved NanoVDB file to an OpenVDB file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vdb_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">(),</span> <span class="s2">&quot;two_random_grids.vdb&quot;</span><span class="p">)</span>
+<span class="n">convert_cmd</span> <span class="o">=</span> <span class="s2">&quot;nanovdb_convert -v </span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">saved_nvdb</span><span class="p">,</span> <span class="n">vdb_path</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nanovdb_convert our nvdb to vdb: &quot;</span><span class="p">,</span> <span class="n">convert_cmd</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="n">convert_cmd</span><span class="o">.</span><span class="n">split</span><span class="p">())</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nanovdb_convert<span class="w"> </span>our<span class="w"> </span>nvdb<span class="w"> </span>to<span class="w"> </span>vdb:<span class="w">  </span>nanovdb_convert<span class="w"> </span>-v<span class="w"> </span>/tmp/tmpnr7gk0tf/two_random_vec3d_grids.nvdb<span class="w"> </span>/tmp/tmpnr7gk0tf/two_random_grids.vdb
+Opening<span class="w"> </span>NanoVDB<span class="w"> </span>file<span class="w"> </span>named<span class="w"> </span><span class="s2">&quot;/tmp/tmpnr7gk0tf/two_random_vec3d_grids.nvdb&quot;</span>
+Read<span class="w"> </span><span class="m">1</span><span class="w"> </span>NanoGrid<span class="o">(</span>s<span class="o">)</span><span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>file<span class="w"> </span>named<span class="w"> </span><span class="s2">&quot;/tmp/tmpnr7gk0tf/two_random_vec3d_grids.nvdb&quot;</span>
+Converting<span class="w"> </span>NanoVDB<span class="w"> </span>grid<span class="w"> </span>named<span class="w"> </span><span class="s2">&quot;taco1&quot;</span><span class="w"> </span>to<span class="w"> </span>OpenVDB
+Converting<span class="w"> </span>NanoVDB<span class="w"> </span>grid<span class="w"> </span>named<span class="w"> </span><span class="s2">&quot;taco2&quot;</span><span class="w"> </span>to<span class="w"> </span>OpenVDB
+</pre></div>
+</div>
+<p>From here, our grid can be loaded by OpenVDB tools.  Roundtripping our converted cache back to NanoVDB is possible with the <code class="docutils literal notranslate"><span class="pre">nanovdb_convert</span></code> tool as well.</p>
+<p>Loading the converted OpenVDB file into fVDB shows our familiar grids and features as we expect:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">convert_cmd</span> <span class="o">=</span> <span class="s2">&quot;nanovdb_convert -v -f </span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span>  <span class="c1"># -f flag forces overwriting existing file</span>
+    <span class="n">vdb_path</span><span class="p">,</span>
+    <span class="n">saved_nvdb</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nanovdb_convert roundtrip the vdb to nvdb: &quot;</span><span class="p">,</span> <span class="n">convert_cmd</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="n">convert_cmd</span><span class="o">.</span><span class="n">split</span><span class="p">())</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+
+<span class="c1"># Load the nvdb file of the converted vdb</span>
+<span class="n">grid_batch</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">saved_nvdb</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;cuda:0&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loaded grid batch total number of voxels: &quot;</span><span class="p">,</span> <span class="n">grid_batch</span><span class="o">.</span><span class="n">total_voxels</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loaded grid batch data type: </span><span class="si">%s</span><span class="s2">, device: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">features</span><span class="o">.</span><span class="n">device</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nanovdb_convert<span class="w"> </span>roundtrip<span class="w"> </span>the<span class="w"> </span>vdb<span class="w"> </span>to<span class="w"> </span>nvdb:<span class="w">  </span>nanovdb_convert<span class="w"> </span>-v<span class="w"> </span>-f<span class="w"> </span>/tmp/tmpuwq2r5mx/two_random_grids.vdb<span class="w"> </span>/tmp/tmpuwq2r5mx/two_random_vec3d_grids.nvdb
+Opening<span class="w"> </span>OpenVDB<span class="w"> </span>file<span class="w"> </span>named<span class="w"> </span><span class="s2">&quot;/tmp/tmpuwq2r5mx/two_random_grids.vdb&quot;</span>
+Converting<span class="w"> </span>OpenVDB<span class="w"> </span>grid<span class="w"> </span>named<span class="w"> </span><span class="s2">&quot;taco1&quot;</span><span class="w"> </span>to<span class="w"> </span>NanoVDB
+Converting<span class="w"> </span>OpenVDB<span class="w"> </span>grid<span class="w"> </span>named<span class="w"> </span><span class="s2">&quot;taco2&quot;</span><span class="w"> </span>to<span class="w"> </span>NanoVDB
+
+Loaded<span class="w"> </span>grid<span class="w"> </span>batch<span class="w"> </span>total<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>voxels:<span class="w">  </span><span class="m">110</span>
+Loaded<span class="w"> </span>grid<span class="w"> </span>batch<span class="w"> </span>data<span class="w"> </span>type:<span class="w"> </span>torch.float64,<span class="w"> </span>device:<span class="w"> </span>cuda:0
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="simple_unet.html" class="btn btn-neutral float-left" title="A Simple Convolutional U-Net" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mutable_grids.html" class="btn btn-neutral float-right" title="Mutable Grids" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Contributors to the OpenVDB Project.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

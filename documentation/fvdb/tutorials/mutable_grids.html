@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mutable Grids &mdash; fVDB  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Volume Rendering" href="volume_rendering.html" />
+    <link rel="prev" title="Sparse Grid I/O" href="io.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            fVDB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to fVDB!</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_grids.html">Building Sparse Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_grid_ops.html">Basic GridBatch Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ray_tracing.html">Ray Tracing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simple_unet.html">A Simple Convolutional U-Net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="io.html">Sparse Grid I/O</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mutable Grids</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#concepts">Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-example">Basic example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#structure-optimization">Structure optimization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="volume_rendering.html">Volume Rendering</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/grid_batch.html">GridBatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/jagged_tensor.html">JaggedTensor</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/nn.html">fvdb.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/utils.html">fvdb.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fVDB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Mutable Grids</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/mutable_grids.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="mutable-grids">
+<h1>Mutable Grids<a class="headerlink" href="#mutable-grids" title="Link to this heading"></a></h1>
+<section id="concepts">
+<h2>Concepts<a class="headerlink" href="#concepts" title="Link to this heading"></a></h2>
+<p>Mutable grids refer to <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code> whose voxels can be turned ‘off’.
+Each voxel hence not only stores an integer offset that indexes into the external feature array, but also includes a bit switch indicating whether the voxel exist or not.</p>
+<p><img alt="mutable_grid.png" src="../_images/mutable_grid.png" /></p>
+<p>The ability to turn on (enable) voxels and turn off (disable) voxels make it easier for downstream tasks such as structural optimization and neural rendering.
+Note that even if you disable some voxels, the corresponding entry in the feature array still exists.
+Such a design keeps the feature unchanged while changing the grid topology in a flexible way.</p>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading"></a></h2>
+<section id="basic-example">
+<h3>Basic example<a class="headerlink" href="#basic-example" title="Link to this heading"></a></h3>
+<p>Mutable grids can be created by adding <code class="docutils literal notranslate"><span class="pre">mutable=True</span></code> arguments into the grid building function.
+For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+
+<span class="n">v1</span><span class="p">,</span> <span class="n">f1</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">(</span><span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">v2</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">load_car_2_mesh</span><span class="p">(</span><span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">mesh_v_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">])</span>
+<span class="n">mesh_f_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">])</span><span class="o">.</span><span class="n">int</span><span class="p">()</span>
+
+<span class="c1"># Create mutable grid</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_mesh</span><span class="p">(</span>
+    <span class="n">mesh_v_jagged</span><span class="p">,</span> <span class="n">mesh_f_jagged</span><span class="p">,</span>
+    <span class="n">voxel_sizes</span><span class="o">=</span><span class="p">[</span><span class="mf">0.01</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="n">origins</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="n">mutable</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="c1"># Create additional features for visualization purpose</span>
+<span class="n">feature</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">grid_to_world</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">float</span><span class="p">())</span>
+<span class="n">feature</span><span class="o">.</span><span class="n">jdata</span> <span class="o">=</span> <span class="p">(</span><span class="n">feature</span><span class="o">.</span><span class="n">jdata</span> <span class="o">-</span> <span class="n">feature</span><span class="o">.</span><span class="n">jdata</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">)</span> <span class="o">/</span> \
+    <span class="p">(</span><span class="n">feature</span><span class="o">.</span><span class="n">jdata</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">values</span> <span class="o">-</span> <span class="n">feature</span><span class="o">.</span><span class="n">jdata</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="mg_origin.png" src="../_images/mg_origin.png" /></p>
+<p>Voxels can be disabled in batches via <code class="docutils literal notranslate"><span class="pre">disable_ijk</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the IJK coordinates to be disabled</span>
+<span class="n">disable_ijk</span><span class="p">:</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">rmask</span><span class="p">(</span><span class="n">feature</span><span class="o">.</span><span class="n">jdata</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Disable them!</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">disable_ijk</span><span class="p">(</span><span class="n">disable_ijk</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Once disabled, those voxels will virtually disappear, meaning that all subsequent grid operations such as sampling, splatting, or ray marching, will treat those voxels as they do not exist.
+One can visualize the enable mask via:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">enabled_mask</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">enabled_mask</span>
+</pre></div>
+</div>
+<p><img alt="mg_mask.png" src="../_images/mg_mask.png" /></p>
+<p>Note that in the above figure, white voxels are those still enabled, while black voxels are disabled voxels.
+To verify, we try to sample features from the grid to a set of sampled points:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pts_feature</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">sample_trilinear</span><span class="p">(</span><span class="n">mesh_v_jagged</span><span class="p">,</span> <span class="n">feature</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="mg_pts_after.png" src="../_images/mg_pts_after.png" /></p>
+<p>Because the disabled voxels will be treated as non-existing, no voxels will contribute to the features on the points at the front. Hence those points are marked as black (i.e. feature = 0).</p>
+<p>The disabled voxels could be revived at any time using <code class="docutils literal notranslate"><span class="pre">enable_ijk</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span><span class="o">.</span><span class="n">enable_ijk</span><span class="p">(</span><span class="n">disable_ijk</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Conducting the same feature sampling with <code class="docutils literal notranslate"><span class="pre">sample_trilinear</span></code>, one can get the full features being correctly sampled.</p>
+<p><img alt="mg_pts_before.png" src="../_images/mg_pts_before.png" /></p>
+</section>
+<section id="structure-optimization">
+<h3>Structure optimization<a class="headerlink" href="#structure-optimization" title="Link to this heading"></a></h3>
+<p>In this example, we will cover a more advanced topic to perform structure optimization from images.
+Suppose we have the following observations of a single object’s mask:</p>
+<p><img alt="struct_mask.png" src="../_images/struct_mask.png" /></p>
+<p>The task is to recover the underlying 3D shape from the images. Here we use the underlying representation of our VDB grid.
+Such a problem could be solved in many different ways, with one obvious one being space culling.
+However, to demonstrate the wide applicability and flexibility of fVDB, we will take the differentiable rendering approach here.
+Each voxel is hereby given an opacity value, and the entire sparse grid is volume rendered into a predicted mask.
+A simple L1 loss is compared between the given ground-truth mask and the predicted mask to force them align.</p>
+<p>To begin, we create a mutable grid and the corresponding opacity (<code class="docutils literal notranslate"><span class="pre">alpha</span></code>) by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="n">init_resolution</span> <span class="o">=</span> <span class="mi">96</span>
+
+<span class="c1"># Suppose our shape lies within the unit bounding box from [-0.5, 0.5, 0.5] to [0.5, 0.5, 0.5]</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_dense</span><span class="p">(</span>
+    <span class="n">num_grids</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dense_dims</span><span class="o">=</span><span class="p">[</span><span class="n">init_resolution</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="n">voxel_sizes</span><span class="o">=</span><span class="p">[</span><span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="n">init_resolution</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="n">origins</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">],</span>
+    <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">,</span>
+    <span class="n">mutable</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">inv_sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="n">grid</span><span class="o">.</span><span class="n">total_voxels</span><span class="p">,</span> <span class="p">),</span> <span class="n">inv_sigmoid</span><span class="p">(</span><span class="mf">0.1</span><span class="p">),</span> <span class="n">device</span><span class="o">=</span><span class="n">grid</span><span class="o">.</span><span class="n">device</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The structure optimization is done via <code class="docutils literal notranslate"><span class="pre">torch</span></code>’s Adam optimizer, with the loop being:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">([</span><span class="n">alpha</span><span class="p">],</span> <span class="n">lr</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+
+<span class="c1"># Optimization loop</span>
+<span class="k">for</span> <span class="n">it</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="c1"># Subsample rays from the given camera poses.</span>
+    <span class="n">sub_inds</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ray_orig</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="p">),</span> <span class="n">device</span><span class="o">=</span><span class="n">grid</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+    <span class="n">pd_opacity</span> <span class="o">=</span> <span class="n">render_opacity</span><span class="p">(</span>
+        <span class="n">grid</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">alpha</span><span class="p">),</span>
+        <span class="n">ray_orig</span><span class="o">=</span><span class="n">ray_orig</span><span class="p">[</span><span class="n">sub_inds</span><span class="p">],</span> <span class="n">ray_dir</span><span class="o">=</span><span class="n">ray_dir</span><span class="p">[</span><span class="n">sub_inds</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">gt_opacity</span> <span class="o">=</span> <span class="n">ray_opacity</span><span class="p">[</span><span class="n">sub_inds</span><span class="p">]</span>
+
+    <span class="c1"># Compute L1 loss</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">pd_opacity</span> <span class="o">-</span> <span class="n">gt_opacity</span><span class="p">))</span>
+
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Here <code class="docutils literal notranslate"><span class="pre">render_opacity</span></code> is an approximate differentiable rendering algorithm like:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pack_info</span><span class="p">,</span> <span class="n">voxel_inds</span><span class="p">,</span> <span class="n">out_times</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">voxels_along_rays</span><span class="p">(</span><span class="n">ray_orig</span><span class="p">,</span> <span class="n">ray_dir</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">voxel_inds</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">ijk_to_index</span><span class="p">(</span><span class="n">voxel_inds</span><span class="p">)</span><span class="o">.</span><span class="n">jdata</span>
+
+<span class="n">rgb</span><span class="p">,</span> <span class="n">depth</span><span class="p">,</span> <span class="n">opacity</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">volume_render</span><span class="p">(</span>
+    <span class="n">sigmas</span><span class="o">=-</span><span class="n">torch</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">feature</span><span class="p">[</span><span class="n">voxel_inds</span><span class="p">]),</span>
+    <span class="n">rgbs</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">voxel_inds</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">),</span> <span class="n">device</span><span class="o">=</span><span class="n">grid</span><span class="o">.</span><span class="n">device</span><span class="p">),</span>
+    <span class="n">deltaTs</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">voxel_inds</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">device</span><span class="o">=</span><span class="n">grid</span><span class="o">.</span><span class="n">device</span><span class="p">),</span>
+    <span class="n">ts</span><span class="o">=</span><span class="n">out_times</span><span class="o">.</span><span class="n">jdata</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">packInfo</span><span class="o">=</span><span class="n">pack_info</span><span class="o">.</span><span class="n">jdata</span><span class="p">,</span> <span class="n">transmittanceThresh</span><span class="o">=</span><span class="mf">0.0</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>During the optimization, the voxels of the grid could be disabled or enabled freely.
+In this example, we demonstrate the following strategy similar to Instant-NGP.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">it</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">it</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="c1"># Disable voxels that are transparent</span>
+    <span class="n">bad_mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.1</span>
+    <span class="n">grid</span><span class="o">.</span><span class="n">disable_ijk</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">rmask</span><span class="p">(</span><span class="n">bad_mask</span><span class="p">))</span>
+
+    <span class="c1"># Randomly revive voxels at the beginning.</span>
+    <span class="k">if</span> <span class="n">it</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="n">enable_mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">total_voxels</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">grid</span><span class="o">.</span><span class="n">device</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.01</span>
+        <span class="n">grid</span><span class="o">.</span><span class="n">enable_ijk</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">rmask</span><span class="p">(</span><span class="n">enable_mask</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Note that a way simpler strategy that only turns voxels off at a much sparse internal also works in this very simplified scenario.
+The snippet above is solely for demonstration purpose of our API.</p>
+<p>The optimization procedure looks as follows. One can see that we are able to recover the ground-truth voxel structure of the provided car.</p>
+<p><img alt="struct_optim.png" src="../_images/struct_optim.png" /></p>
+<p>A full runnable example could be found at <code class="docutils literal notranslate"><span class="pre">examples/structure_optimization.py</span></code>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="io.html" class="btn btn-neutral float-left" title="Sparse Grid I/O" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="volume_rendering.html" class="btn btn-neutral float-right" title="Volume Rendering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Contributors to the OpenVDB Project.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

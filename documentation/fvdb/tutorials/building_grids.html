@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building Sparse Grids &mdash; fVDB  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Basic GridBatch Operations" href="basic_grid_ops.html" />
+    <link rel="prev" title="Basic Concepts" href="basic_concepts.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            fVDB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to fVDB!</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building Sparse Grids</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#from-coordinate-lists">From Coordinate Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#from-point-clouds">From Point Clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#from-meshes">From Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#from-dense">From Dense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deriving-from-other-grids">Deriving from other grids</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dual-grid">Dual grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#subdividing-and-coarsening-a-grid">Subdividing and Coarsening a grid</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic_grid_ops.html">Basic GridBatch Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ray_tracing.html">Ray Tracing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simple_unet.html">A Simple Convolutional U-Net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="io.html">Sparse Grid I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutable_grids.html">Mutable Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="volume_rendering.html">Volume Rendering</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/grid_batch.html">GridBatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/jagged_tensor.html">JaggedTensor</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/nn.html">fvdb.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/utils.html">fvdb.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fVDB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Building Sparse Grids</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/building_grids.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="building-sparse-grids">
+<h1>Building Sparse Grids<a class="headerlink" href="#building-sparse-grids" title="Link to this heading"></a></h1>
+<p>We introduce several ways to construct sparse voxel grids from various data sources including point clouds, coordinate lists, triangle meshes, and deriving from other grids.
+All the examples below could be found in full version (including visualization) at <code class="docutils literal notranslate"><span class="pre">examples/grid_building.py</span></code> and <code class="docutils literal notranslate"><span class="pre">examples/grid_subdivide_coarsen.py</span></code>.</p>
+<section id="from-coordinate-lists">
+<h2>From Coordinate Lists<a class="headerlink" href="#from-coordinate-lists" title="Link to this heading"></a></h2>
+<p>If you already have an integer list of the <code class="docutils literal notranslate"><span class="pre">ijk</span></code> coordinates for each voxel in the grid, you could directly build grids from the list.
+Additionally, you will have to specify the voxel sizes and voxel origins for the grid.
+An example is as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+
+<span class="n">coords_1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">()</span>
+<span class="n">coords_2</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">load_car_2_mesh</span><span class="p">()</span>
+<span class="n">coords_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span>
+    <span class="n">coords_1</span><span class="o">.</span><span class="n">long</span><span class="p">()</span><span class="o">.</span><span class="n">cuda</span><span class="p">(),</span>
+    <span class="n">coords_2</span><span class="o">.</span><span class="n">long</span><span class="p">()</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="p">])</span>
+<span class="n">voxel_sizes</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">]]</span>
+
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_ijk</span><span class="p">(</span><span class="n">coords_jagged</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="n">voxel_sizes</span><span class="p">,</span> <span class="n">origins</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The above code assumes that you want to build a grid with two batch elements, one with voxel size <code class="docutils literal notranslate"><span class="pre">[0.1,</span> <span class="pre">0.1,</span> <span class="pre">0.1]</span></code>, and the other with voxel size <code class="docutils literal notranslate"><span class="pre">[0.15,</span> <span class="pre">0.15,</span> <span class="pre">0.15]</span></code> (although usually you just want all the elements in your batch to have the same size, in which case you could just pass in <code class="docutils literal notranslate"><span class="pre">voxel_sizes=[0.1,</span> <span class="pre">0.1,</span> <span class="pre">0.1]</span></code>).
+The same logic applies for <code class="docutils literal notranslate"><span class="pre">origins</span></code> that specifies the world coordinates of voxel <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></code>, which we set to the origin here.
+The grid will be constructed on the same device as <code class="docutils literal notranslate"><span class="pre">coords_jagged</span></code>, which is a <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code>. The JaggedTensor is built from two numpy <code class="docutils literal notranslate"><span class="pre">int64</span></code> arrays with size <code class="docutils literal notranslate"><span class="pre">[*,</span> <span class="pre">3]</span></code> called <code class="docutils literal notranslate"><span class="pre">coords_1</span></code> and <code class="docutils literal notranslate"><span class="pre">coords_2</span></code>.</p>
+<p><img alt="build_from_coordinates.png" src="../_images/build_from_coordinates.png" /></p>
+</section>
+<section id="from-point-clouds">
+<h2>From Point Clouds<a class="headerlink" href="#from-point-clouds" title="Link to this heading"></a></h2>
+<p>You could either choose to quantize the coordinates of your point cloud into <code class="docutils literal notranslate"><span class="pre">ijk</span></code> coordinates yourself (e.g. using <code class="docutils literal notranslate"><span class="pre">np.unique((xyz</span> <span class="pre">/</span> <span class="pre">voxel_size).floor(),</span> <span class="pre">axis=0)</span></code>), or let <code class="docutils literal notranslate"><span class="pre">fvdb</span></code> handle this logic. Specifically, you could do:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+
+<span class="n">coords_1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">()</span>
+<span class="n">coords_2</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">load_car_2_mesh</span><span class="p">()</span>
+
+<span class="c1"># Assemble point clouds into JaggedTensor</span>
+<span class="n">pcd_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span>
+    <span class="n">coords_1</span><span class="o">.</span><span class="n">cuda</span><span class="p">(),</span>
+    <span class="n">coords_2</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="p">])</span>
+<span class="n">voxel_sizes</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">]]</span>
+
+<span class="c1"># Method 1:</span>
+<span class="n">grid_a1</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_points</span><span class="p">(</span><span class="n">pcd_jagged</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="n">voxel_sizes</span><span class="p">,</span> <span class="n">origins</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Method 2:</span>
+<span class="n">grid_a2</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">GridBatch</span><span class="p">(</span><span class="n">device</span><span class="o">=</span><span class="n">pcd_jagged</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+<span class="n">grid_a2</span><span class="o">.</span><span class="n">set_from_points</span><span class="p">(</span><span class="n">pcd_jagged</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="n">voxel_sizes</span><span class="p">,</span> <span class="n">origins</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Above we show two methods of building grids from points. Similar functions exist for other grid building approaches. The built grids are shown as following:</p>
+<p><img alt="build_from_points.png" src="../_images/build_from_points.png" /></p>
+<p>In some applications, you may want to build a dilated version of the grid by ensuring that all <span class="math notranslate nohighlight">\(2\times 2 \times 2\)</span> voxels around each point are included in the built grid. That said, you could build the grid by:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+
+<span class="n">coords_1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">()</span>
+<span class="n">coords_2</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">load_car_2_mesh</span><span class="p">()</span>
+
+<span class="c1"># Assemble point clouds into JaggedTensor</span>
+<span class="n">pcd_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span>
+    <span class="n">coords_1</span><span class="o">.</span><span class="n">cuda</span><span class="p">(),</span>
+    <span class="n">coords_2</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="p">])</span>
+<span class="n">voxel_sizes</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">]]</span>
+
+<span class="c1"># Build grid from containing nearest voxels to the points</span>
+<span class="n">grid_b</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_nearest_voxels_to_points</span><span class="p">(</span><span class="n">pcd_jagged</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="n">voxel_sizes</span><span class="p">,</span> <span class="n">origins</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="build_from_points_nn.png" src="../_images/build_from_points_nn.png" /></p>
+</section>
+<section id="from-meshes">
+<h2>From Meshes<a class="headerlink" href="#from-meshes" title="Link to this heading"></a></h2>
+<p>We allow building grids enclosing a triangle mesh easily. The given triangle mesh does not have to be manifold nor watertight and it will be treated as a triangle soup internally.
+An example to build grids from meshes is shown as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+
+<span class="n">mesh_1_v</span><span class="p">,</span> <span class="n">mesh_1_f</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;vf&#39;</span><span class="p">)</span>
+<span class="n">mesh_2_v</span><span class="p">,</span> <span class="n">mesh_2_f</span> <span class="o">=</span> <span class="n">load_car_2_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;vf&#39;</span><span class="p">)</span>
+
+<span class="n">mesh_v_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span>
+    <span class="n">mesh_1_v</span><span class="o">.</span><span class="n">float</span><span class="p">()</span><span class="o">.</span><span class="n">cuda</span><span class="p">(),</span>
+    <span class="n">mesh_2_v</span><span class="o">.</span><span class="n">float</span><span class="p">()</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="p">])</span>
+<span class="n">mesh_f_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span>
+    <span class="n">mesh_1_f</span><span class="o">.</span><span class="n">long</span><span class="p">()</span><span class="o">.</span><span class="n">cuda</span><span class="p">(),</span>
+    <span class="n">mesh_2_f</span><span class="o">.</span><span class="n">long</span><span class="p">()</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="p">])</span>
+
+<span class="n">voxel_sizes</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">]]</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_mesh</span><span class="p">(</span><span class="n">mesh_v_jagged</span><span class="p">,</span> <span class="n">mesh_f_jagged</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="n">voxel_sizes</span><span class="p">,</span> <span class="n">origins</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here <code class="docutils literal notranslate"><span class="pre">mesh_1_v</span></code> and <code class="docutils literal notranslate"><span class="pre">mesh_1_f</span></code> are the vertex array and triangle array of the mesh to build grid from, with the shape of <span class="math notranslate nohighlight">\((V, 3)\)</span> and <span class="math notranslate nohighlight">\((F, 3)\)</span>. The triangle array is an integer array that indexes into the vertex array (starting from 0 for each element in the batch). Same for another <code class="docutils literal notranslate"><span class="pre">mesh_2_v</span></code> and <code class="docutils literal notranslate"><span class="pre">mesh_2_f</span></code>.</p>
+<p><img alt="build_from_mesh.png" src="../_images/build_from_mesh.png" /></p>
+</section>
+<section id="from-dense">
+<h2>From Dense<a class="headerlink" href="#from-dense" title="Link to this heading"></a></h2>
+<p>We have APIs for you to build dense grids of shape <span class="math notranslate nohighlight">\((D, H, W)\)</span> containing the full <span class="math notranslate nohighlight">\(D\times H \times W\)</span> voxels.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_dense</span><span class="p">(</span><span class="n">num_grids</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dense_dims</span><span class="o">=</span><span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">],</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="build_from_dense.png" src="../_images/build_from_dense.png" /></p>
+<p>If you are comparing the performance of dense pytorch 3D tensors vs sparse grids, it is usually very helpful to build the exact same input (including grid and features). In <code class="docutils literal notranslate"><span class="pre">fvdb.nn</span></code>, we provide a thin wrapper class <code class="docutils literal notranslate"><span class="pre">VDBTensor</span></code> that works like a <code class="docutils literal notranslate"><span class="pre">torch.Tensor</span></code>, yet enclosing the grid topology. To convert data back and forth from dense PyTorch <code class="docutils literal notranslate"><span class="pre">Tensor</span></code>s, we could do:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.nn</span><span class="w"> </span><span class="kn">import</span> <span class="n">VDBTensor</span>
+
+<span class="c1"># Easy way to initialize a VDBTensor from a torch 3D tensor [B, D, H, W, C]</span>
+<span class="n">dense_data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">sparse_data</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">vdbtensor_from_dense</span><span class="p">(</span><span class="n">dense_data</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">dense_data_back</span> <span class="o">=</span> <span class="n">sparse_data</span><span class="o">.</span><span class="n">to_dense</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">torch</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">dense_data</span> <span class="o">==</span> <span class="n">dense_data_back</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here <code class="docutils literal notranslate"><span class="pre">sparse_data</span></code> will be a <code class="docutils literal notranslate"><span class="pre">fvdb.nn.VDBTensor</span></code> class, containing both <code class="docutils literal notranslate"><span class="pre">feature</span></code> and <code class="docutils literal notranslate"><span class="pre">grid</span></code> attribute.
+Such a class could be fed into all the neural network components available in <code class="docutils literal notranslate"><span class="pre">fvdb.nn</span></code>.</p>
+</section>
+<section id="deriving-from-other-grids">
+<h2>Deriving from other grids<a class="headerlink" href="#deriving-from-other-grids" title="Link to this heading"></a></h2>
+<section id="dual-grid">
+<h3>Dual grid<a class="headerlink" href="#dual-grid" title="Link to this heading"></a></h3>
+<p>A dual grid (of a primal grid) is also a grid, with its voxel <em>centers</em> covering the <em>corners</em> of the primal grid, and <em>corners</em> taking the positions of the <em>centers</em> of the primal grid.
+A dual grid shares the same voxel sizes as its primal grid, and is just a simple shift of half the voxel size in translation.
+In the picture below, green grid is the primal grid while purple grid is its dual.</p>
+<p><img alt="build_dual.png" src="../_images/build_dual.png" /></p>
+<p>To create a dual grid from a given primal grid, use <code class="docutils literal notranslate"><span class="pre">GridBatch.dual_grid()</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dragon_mesh</span>
+
+<span class="n">coords_1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">load_dragon_mesh</span><span class="p">()</span>
+
+<span class="n">grid_primal</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_points</span><span class="p">(</span><span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">coords_1</span><span class="p">]))</span>
+
+<span class="n">grid_dual</span> <span class="o">=</span> <span class="n">grid_primal</span><span class="o">.</span><span class="n">dual_grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="subdividing-and-coarsening-a-grid">
+<h3>Subdividing and Coarsening a grid<a class="headerlink" href="#subdividing-and-coarsening-a-grid" title="Link to this heading"></a></h3>
+<p>The grid could be subdivided or coarsened with a subdivision/coarsening factor provided:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_happy_mesh</span>
+
+<span class="n">coords_1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">load_happy_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;vf&#39;</span><span class="p">)</span>
+
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_points</span><span class="p">(</span><span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">coords_1</span><span class="p">]))</span>
+
+<span class="n">grid_subdivided</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">subdivided_grid</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">grid_coarsened</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">coarsened_grid</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="build_coarse_subdivide.png" src="../_images/build_coarse_subdivide.png" /></p>
+<p>The features associated with the grids could be processed via the examples in <code class="docutils literal notranslate"><span class="pre">Grid</span> <span class="pre">Operations</span></code>.
+Refer to the corresponding section for more details.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="basic_concepts.html" class="btn btn-neutral float-left" title="Basic Concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="basic_grid_ops.html" class="btn btn-neutral float-right" title="Basic GridBatch Operations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Contributors to the OpenVDB Project.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
