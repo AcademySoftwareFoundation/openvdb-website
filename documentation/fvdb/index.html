@@ -1,0 +1,189 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to fVDB! &mdash; fVDB  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Basic Concepts" href="tutorials/basic_concepts.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            fVDB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Welcome to fVDB!</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/building_grids.html">Building Sparse Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/basic_grid_ops.html">Basic GridBatch Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/simple_unet.html">A Simple Convolutional U-Net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/io.html">Sparse Grid I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/mutable_grids.html">Mutable Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/volume_rendering.html">Volume Rendering</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/grid_batch.html">GridBatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/jagged_tensor.html">JaggedTensor</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/nn.html">fvdb.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/utils.html">fvdb.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">fVDB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to fVDB!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-fvdb">
+<h1>Welcome to fVDB!<a class="headerlink" href="#welcome-to-fvdb" title="Link to this heading"></a></h1>
+<p>fVDB, inspired by function notation to resemble <span class="math notranslate nohighlight">\(f(VDB)\)</span>, is a data structure for encoding and operating on <em>sparse</em> voxel hierarchies of features in PyTorch.
+A sparse voxel hierarchy is a coarse-to-fine hierarchy of sparse voxel grids such that every fine voxel is contained within some coarse voxel.
+fvdb supports storing PyTorch tensors at the corners and centers of voxels in a hierarchy and enables a number of differentiable operations on these tensors (e.g. trilinear interpolation, splatting, ray tracing).</p>
+<a class="reference internal image-reference" href="_images/fvdb_teaser.png"><img alt="_images/fvdb_teaser.png" class="align-center" src="_images/fvdb_teaser.png" style="width: 400px;" />
+</a>
+<p>Please refer to the tutorials for examples of how to install and use fVDB to build your own sparse voxel pipelines.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/building_grids.html">Building Sparse Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/basic_grid_ops.html">Basic GridBatch Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/simple_unet.html">A Simple Convolutional U-Net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/io.html">Sparse Grid I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/mutable_grids.html">Mutable Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/volume_rendering.html">Volume Rendering</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">API References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/grid_batch.html">GridBatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/jagged_tensor.html">JaggedTensor</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/nn.html">fvdb.nn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.VDBTensor"><code class="docutils literal notranslate"><span class="pre">VDBTensor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.MaxPool"><code class="docutils literal notranslate"><span class="pre">MaxPool</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.AvgPool"><code class="docutils literal notranslate"><span class="pre">AvgPool</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.UpsamplingNearest"><code class="docutils literal notranslate"><span class="pre">UpsamplingNearest</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.FillFromGrid"><code class="docutils literal notranslate"><span class="pre">FillFromGrid</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.SparseConv3d"><code class="docutils literal notranslate"><span class="pre">SparseConv3d</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.GroupNorm"><code class="docutils literal notranslate"><span class="pre">GroupNorm</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.Linear"><code class="docutils literal notranslate"><span class="pre">Linear</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.ReLU"><code class="docutils literal notranslate"><span class="pre">ReLU</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.LeakyReLU"><code class="docutils literal notranslate"><span class="pre">LeakyReLU</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.SELU"><code class="docutils literal notranslate"><span class="pre">SELU</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.SiLU"><code class="docutils literal notranslate"><span class="pre">SiLU</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.Tanh"><code class="docutils literal notranslate"><span class="pre">Tanh</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.Sigmoid"><code class="docutils literal notranslate"><span class="pre">Sigmoid</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nn.html#fvdb.nn.Dropout"><code class="docutils literal notranslate"><span class="pre">Dropout</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api/utils.html">fvdb.utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/utils.html#fvdb.utils.build_ext.FVDBExtension"><code class="docutils literal notranslate"><span class="pre">FVDBExtension()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr></section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tutorials/basic_concepts.html" class="btn btn-neutral float-right" title="Basic Concepts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Contributors to the OpenVDB Project.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

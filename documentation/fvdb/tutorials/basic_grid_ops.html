@@ -1,0 +1,960 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic GridBatch Operations &mdash; fVDB  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="A Simple Convolutional U-Net" href="simple_unet.html" />
+    <link rel="prev" title="Building Sparse Grids" href="building_grids.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            fVDB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome to fVDB!</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="building_grids.html">Building Sparse Grids</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic GridBatch Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sampling-grids">Sampling grids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#splatting-point-data-to-a-grid">Splatting point data to a grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#checking-if-points-are-in-a-grid">Checking if points are in a grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#checking-if-ijk-coordinates-are-in-a-grid">Checking if ijk coordinates are in a grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#checking-if-axis-aligned-cubes-intersect-a-grid">Checking if axis aligned cubes intersect a grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#converting-ijk-values-to-indexes">Converting ijk values to indexes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#converting-indexes-to-ijk-values">Converting indexes to ijk values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-indexes-of-neighbors">Getting indexes of neighbors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clipping-a-grid-to-a-bounding-box">Clipping a grid to a bounding box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#max-mean-pooling">Max/Mean Pooling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#subdividing-a-grid">Subdividing a grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-the-number-of-enabled-voxels-per-grid-in-a-batch">Getting the number of enabled voxels per grid in a batch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#converting-between-ijk-grid-coordinates-and-world-coordinates">Converting between ijk (grid) coordinates and world coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convolution">Convolution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#high-level-usage-with-fvdb-nn">High-level Usage with <code class="docutils literal notranslate"><span class="pre">fvdb.nn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#low-level-usage-with-gridbatch">Low-level Usage with <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simple_unet.html">A Simple Convolutional U-Net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="io.html">Sparse Grid I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mutable_grids.html">Mutable Grids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="volume_rendering.html">Volume Rendering</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/grid_batch.html">GridBatch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/jagged_tensor.html">JaggedTensor</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/nn.html">fvdb.nn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/utils.html">fvdb.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">fVDB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Basic GridBatch Operations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/basic_grid_ops.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="basic-gridbatch-operations">
+<h1>Basic GridBatch Operations<a class="headerlink" href="#basic-gridbatch-operations" title="Link to this heading"></a></h1>
+<p>Here we describe basic operations you can perform on a <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code>. Generally, these operations involve a <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code> and an associated <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> of data representing the attributes/features at each voxel within the grid.</p>
+<section id="sampling-grids">
+<h2>Sampling grids<a class="headerlink" href="#sampling-grids" title="Link to this heading"></a></h2>
+<p>You can differentiably sample data stored at the voxels of a grid using <em>trilinear</em> or <em>Bézier</em> interpolation as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># We&#39;re going to create a minibatch of two meshes</span>
+<span class="n">v1</span><span class="p">,</span> <span class="n">f1</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">v2</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">load_car_2_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+
+<span class="c1"># Build a GridBatch from two meshes</span>
+<span class="n">mesh_v_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">])</span>
+<span class="n">mesh_f_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">])</span><span class="o">.</span><span class="n">int</span><span class="p">()</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_mesh</span><span class="p">(</span><span class="n">mesh_v_jagged</span><span class="p">,</span> <span class="n">mesh_f_jagged</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="c1"># Generate some sample points by adding random gaussian noise to the center of each voxel</span>
+<span class="n">world_space_centers</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">grid_to_world</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">float</span><span class="p">())</span>
+<span class="c1"># 5 samples per voxel for the first grid and 7 samples per voxel for the second</span>
+<span class="n">sample_pts</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span>
+    <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">world_space_centers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">jdata</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">world_space_centers</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">jdata</span><span class="p">]</span> <span class="o">*</span> <span class="mi">7</span><span class="p">)])</span>
+<span class="n">sample_pts</span> <span class="o">+=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span>
+    <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">num_voxels_at</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">device</span><span class="p">)</span> <span class="o">*</span> <span class="n">grid</span><span class="o">.</span><span class="n">voxel_sizes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">num_voxels_at</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">device</span><span class="p">)</span> <span class="o">*</span> <span class="n">grid</span><span class="o">.</span><span class="n">voxel_sizes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mf">0.3</span><span class="p">])</span>
+
+<span class="c1"># Generate RGB values per voxel as the normalized absolute grid coordinate of the voxel</span>
+<span class="n">per_voxel_colors</span> <span class="o">=</span> <span class="n">world_space_centers</span><span class="o">.</span><span class="n">clone</span><span class="p">()</span>
+<span class="n">per_voxel_colors</span><span class="o">.</span><span class="n">jdata</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">world_space_centers</span><span class="o">.</span><span class="n">jdata</span><span class="p">)</span> <span class="o">/</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">world_space_centers</span><span class="o">.</span><span class="n">jdata</span><span class="p">,</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Sample these RGB colors at each sample point with trilinear interpolation</span>
+<span class="c1"># NOTE: You can use grid.sample_bezier to sample using bezier interpolation</span>
+<span class="n">sampled_colors</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">sample_trilinear</span><span class="p">(</span><span class="n">sample_pts</span><span class="p">,</span> <span class="n">per_voxel_colors</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Grid with color attributes</p></th>
+<th class="head text-center"><p>Points with sampled colors</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><img alt="" src="../_images/sampling_1.png" /></p></td>
+<td class="text-center"><p><img alt="" src="../_images/sampling_2.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="splatting-point-data-to-a-grid">
+<h2>Splatting point data to a grid<a class="headerlink" href="#splatting-point-data-to-a-grid" title="Link to this heading"></a></h2>
+<p>You can differentiably splat data at a set of points into voxels in a grid using <em>trilinear</em> or <em>Bézier</em> interpolation as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">point_cloud_utils</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pcu</span>
+
+<span class="c1"># We&#39;re going to create a minibatch of two point clouds each of which</span>
+<span class="c1"># has a different number of points</span>
+<span class="n">pts1</span><span class="p">,</span> <span class="n">clrs1</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vn&quot;</span><span class="p">)</span>
+<span class="n">pts2</span><span class="p">,</span> <span class="n">clrs2</span> <span class="o">=</span> <span class="n">load_car_2_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vn&quot;</span><span class="p">)</span>
+
+<span class="c1"># JaggedTensors of points and normals</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">pts1</span><span class="p">,</span> <span class="n">pts2</span><span class="p">])</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">clrs1</span><span class="p">,</span> <span class="n">clrs2</span><span class="p">])</span>
+
+<span class="c1"># Create a grid where the voxels each have unit sidelength</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_points</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+
+<span class="c1"># Splat the normals into the grid with trilinear interpolation</span>
+<span class="c1"># vox_normals is a JaggedTensor of per-voxel normas</span>
+<span class="c1"># NOTE: You can use grid.splat_bezier to splat using bezier interpolation</span>
+<span class="n">vox_colors</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">splat_trilinear</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">colors</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Input grid and points with colors</p></th>
+<th class="head text-center"><p>Splat colors onto the grid</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><img alt="" src="../_images/screenshot_000000.png.trim.png" /></p></td>
+<td class="text-center"><p><img alt="" src="../_images/screenshot_000006.png.trim.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="checking-if-points-are-in-a-grid">
+<h2>Checking if points are in a grid<a class="headerlink" href="#checking-if-points-are-in-a-grid" title="Link to this heading"></a></h2>
+<p>You can query whether points lie in a grid as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">point_cloud_utils</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pcu</span>
+
+<span class="c1"># We&#39;re going to create a minibatch of two meshes</span>
+<span class="n">v1</span><span class="p">,</span> <span class="n">f1</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">v2</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">load_car_2_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">f1</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span> <span class="n">f2</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+<span class="c1"># Build a GridBatch from two meshes</span>
+<span class="n">mesh_v_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">mesh_f_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_mesh</span><span class="p">(</span><span class="n">mesh_v_jagged</span><span class="p">,</span> <span class="n">mesh_f_jagged</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="c1"># Generate some points and check if they lie within the grid</span>
+<span class="n">bbox_sizes</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">bbox</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">grid</span><span class="o">.</span><span class="n">bbox</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">bbox_origins</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">bbox</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">pts</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span>
+    <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10_000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">bbox_origins</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="n">bbox_sizes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">11_000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="n">bbox_origins</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="n">bbox_sizes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="p">])</span>
+
+<span class="c1"># Get a mask indicating which points lie in the grid</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">points_in_active_voxel</span><span class="p">(</span><span class="n">pts</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We visualize the points which intersect the grid (yellow points intersect and purple points do not).
+<img alt="" src="../_images/pts_in_grid.png" /></p>
+</section>
+<section id="checking-if-ijk-coordinates-are-in-a-grid">
+<h2>Checking if ijk coordinates are in a grid<a class="headerlink" href="#checking-if-ijk-coordinates-are-in-a-grid" title="Link to this heading"></a></h2>
+<p>Similar to querying whether world space points lie in a grid, you can query whether the index space <code class="docutils literal notranslate"><span class="pre">ijk</span></code> integer coordinates lie in a grid as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">point_cloud_utils</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pcu</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">polyscope</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ps</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+
+<span class="c1"># We&#39;re going to create a minibatch of two meshes</span>
+<span class="n">v1</span><span class="p">,</span> <span class="n">f1</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">v2</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">load_car_2_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">f1</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span> <span class="n">f2</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+<span class="c1"># Build a GridBatch from two meshes</span>
+<span class="n">mesh_v_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">mesh_f_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_mesh</span><span class="p">(</span><span class="n">mesh_v_jagged</span><span class="p">,</span> <span class="n">mesh_f_jagged</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="mf">0.025</span><span class="p">)</span>
+
+<span class="n">rand_idx_pts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">b</span><span class="p">,</span> <span class="n">b_grid</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">bbox</span><span class="p">):</span>
+    <span class="n">pts</span> <span class="o">=</span> <span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">b_grid</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">b_grid</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]),</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2_000</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">),),</span> <span class="n">device</span><span class="o">=</span><span class="s1">&#39;cuda&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
+    <span class="n">rand_idx_pts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="n">pts</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span><span class="n">rand_idx_pts</span><span class="p">)</span>
+
+<span class="n">coords_in_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">coords_in_active_voxel</span><span class="p">(</span><span class="n">pts</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We visualize the coordinates which intersect the grid (yellow coordinates intersect and purple coordinates do not).
+<img alt="" src="../_images/coords_in_grid.png" /></p>
+</section>
+<section id="checking-if-axis-aligned-cubes-intersect-a-grid">
+<h2>Checking if axis aligned cubes intersect a grid<a class="headerlink" href="#checking-if-axis-aligned-cubes-intersect-a-grid" title="Link to this heading"></a></h2>
+<p>There are methods of a grid to help ascertain whether a provided set of axis-aligned cubes (all of the same size) each are contained within voxels of the grid or intersect with any voxel of the grid.  These methods are called <code class="docutils literal notranslate"><span class="pre">cubes_in_grid</span></code> and <code class="docutils literal notranslate"><span class="pre">cubes_intersect_grid</span></code>, respectively, and return a <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> of boolean values which indicate the result.</p>
+<p>In this example we create some random points to represent the centers of cubes of size <code class="docutils literal notranslate"><span class="pre">0.03</span></code> units along-a-side. Then we use these two methods to discover which of those cubes would intersect a voxel of the grid and which would be entirely enclosed by a voxel in the grid.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">point_cloud_utils</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pcu</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">polyscope</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ps</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="c1"># We&#39;re going to create a minibatch of two meshes</span>
+<span class="n">v1</span><span class="p">,</span> <span class="n">f1</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">v2</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">load_car_2_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">f1</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span> <span class="n">f2</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+<span class="c1"># Build a GridBatch from two meshes</span>
+<span class="n">mesh_v_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">mesh_f_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_mesh</span><span class="p">(</span><span class="n">mesh_v_jagged</span><span class="p">,</span> <span class="n">mesh_f_jagged</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="mf">0.025</span><span class="p">)</span>
+
+<span class="c1"># Generate some points and check if they lie within the grid</span>
+<span class="n">bbox_sizes</span> <span class="o">=</span> <span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">bbox</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">grid</span><span class="o">.</span><span class="n">bbox</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="n">grid</span><span class="o">.</span><span class="n">voxel_sizes</span>
+<span class="n">bbox_origins</span> <span class="o">=</span> <span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">bbox</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">grid</span><span class="o">.</span><span class="n">origins</span><span class="p">)</span> <span class="o">*</span> <span class="n">grid</span><span class="o">.</span><span class="n">voxel_sizes</span>
+<span class="n">pts</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">))</span> <span class="o">*</span> <span class="n">bbox_sizes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">bbox_origins</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">))</span> <span class="o">*</span> <span class="n">bbox_sizes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">bbox_origins</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">cube_size</span> <span class="o">=</span> <span class="mf">0.03</span>
+
+<span class="c1"># We can check if the axis-aligned cubes intersect any voxels of the grid...</span>
+<span class="n">cubes_intersect_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">cubes_intersect_grid</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="o">-</span><span class="n">cube_size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cube_size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># ... or if they are fully contained within the grid</span>
+<span class="n">cubes_in_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">cubes_in_grid</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="o">-</span><span class="n">cube_size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">cube_size</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We visualize the cubes which intersect a voxel in the grid (yellow cubes intersect and purple cubes do not).
+<img alt="" src="../_images/cubes_intersect_grid.png" /></p>
+<p>And which cubes lie entirely within a voxel of the grid
+<img alt="" src="../_images/cubes_inside_grid.png" /></p>
+</section>
+<section id="converting-ijk-values-to-indexes">
+<h2>Converting ijk values to indexes<a class="headerlink" href="#converting-ijk-values-to-indexes" title="Link to this heading"></a></h2>
+<p>There is a convenient method to convert ijk values, which are integer coordinates in the index space of a grid, to indexes, which are the linearized indices of the voxels in the GridBatch.  This method, <code class="docutils literal notranslate"><span class="pre">ijk_to_index</span></code>, returns a <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> of indexes.  If the provided ijk values do not correspond to any voxels in the grid, the returned index will be <code class="docutils literal notranslate"><span class="pre">-1</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">point_cloud_utils</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pcu</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">polyscope</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ps</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="n">torch</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_random_points</span><span class="p">(</span><span class="n">bounding_box</span><span class="p">,</span> <span class="n">num_points</span><span class="p">):</span>
+    <span class="n">min_i</span><span class="p">,</span> <span class="n">min_j</span><span class="p">,</span> <span class="n">min_k</span> <span class="o">=</span> <span class="n">bounding_box</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">max_i</span><span class="p">,</span> <span class="n">max_j</span><span class="p">,</span> <span class="n">max_k</span> <span class="o">=</span> <span class="n">bounding_box</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># Generate random integer points within the bounding box</span>
+    <span class="n">random_i</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">min_i</span><span class="p">,</span> <span class="n">max_i</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">num_points</span><span class="p">,))</span>
+    <span class="n">random_j</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">min_j</span><span class="p">,</span> <span class="n">max_j</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">num_points</span><span class="p">,))</span>
+    <span class="n">random_k</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">min_k</span><span class="p">,</span> <span class="n">max_k</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">num_points</span><span class="p">,))</span>
+
+    <span class="n">random_points</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">random_i</span><span class="p">,</span> <span class="n">random_j</span><span class="p">,</span> <span class="n">random_k</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">random_points</span>
+
+<span class="c1"># We&#39;re going to create a minibatch of two meshes</span>
+<span class="n">v1</span><span class="p">,</span> <span class="n">f1</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">v2</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">f1</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span> <span class="n">f2</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+<span class="c1"># Build a GridBatch from two meshes</span>
+<span class="n">mesh_v_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">mesh_f_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_mesh</span><span class="p">(</span><span class="n">mesh_v_jagged</span><span class="p">,</span> <span class="n">mesh_f_jagged</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="mf">0.025</span><span class="p">)</span>
+
+<span class="n">rand_pts</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">generate_random_points</span><span class="p">(</span><span class="n">bbox</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span> <span class="k">for</span> <span class="n">bbox</span> <span class="ow">in</span> <span class="n">grid</span><span class="o">.</span><span class="n">bbox</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+
+<span class="n">rand_pts_indices</span><span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">ijk_to_index</span><span class="p">(</span><span class="n">rand_pts</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rand_pts_indices</span><span class="o">.</span><span class="n">jdata</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tensor<span class="o">([</span><span class="w">  </span>-1,<span class="w">   </span>-1,<span class="w">  </span><span class="m">121</span>,<span class="w">  </span>...,<span class="w"> </span><span class="m">4614</span>,<span class="w"> </span><span class="m">5695</span>,<span class="w">   </span>-1<span class="o">]</span>,<span class="w"> </span><span class="nv">device</span><span class="o">=</span><span class="s1">&#39;cuda:0&#39;</span><span class="o">)</span>
+</pre></div>
+</div>
+</section>
+<section id="converting-indexes-to-ijk-values">
+<h2>Converting indexes to ijk values<a class="headerlink" href="#converting-indexes-to-ijk-values" title="Link to this heading"></a></h2>
+<p>If we have the value of an index into the feature data and want to obtain its corresponding ijk value, this is as simple as indexing into the <code class="docutils literal notranslate"><span class="pre">ijk</span></code> attribute of the grid which is itself just a <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> representing the <code class="docutils literal notranslate"><span class="pre">ijk</span></code> values of each index.  Here we get the <code class="docutils literal notranslate"><span class="pre">ijk</span></code> values for 1000 random indexes of a <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">point_cloud_utils</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pcu</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">polyscope</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ps</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="c1"># We&#39;re going to create a minibatch of two meshes</span>
+<span class="n">v1</span><span class="p">,</span> <span class="n">f1</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">v2</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">load_car_2_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">f1</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span> <span class="n">f2</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+<span class="c1"># Build a GridBatch from two meshes</span>
+<span class="n">mesh_v_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">mesh_f_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_mesh</span><span class="p">(</span><span class="n">mesh_v_jagged</span><span class="p">,</span> <span class="n">mesh_f_jagged</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="mf">0.025</span><span class="p">)</span>
+
+<span class="n">rand_indexes</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">grid</span><span class="o">.</span><span class="n">total_voxels</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1000</span><span class="p">,))</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">jdata</span><span class="p">[</span><span class="n">rand_indexes</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">jidx</span><span class="p">[</span><span class="n">rand_indexes</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tensor<span class="o">([[</span>-11,<span class="w">   </span><span class="m">5</span>,<span class="w">   </span><span class="m">7</span><span class="o">]</span>,
+<span class="w">        </span><span class="o">[</span><span class="w">  </span><span class="m">8</span>,<span class="w">  </span>-4,<span class="w">  </span>-5<span class="o">]</span>,
+<span class="w">        </span><span class="o">[</span>-15,<span class="w">   </span><span class="m">3</span>,<span class="w">  </span>-2<span class="o">]</span>,
+<span class="w">        </span>...,
+<span class="w">        </span><span class="o">[</span><span class="w"> </span><span class="m">18</span>,<span class="w">   </span><span class="m">1</span>,<span class="w">   </span><span class="m">6</span><span class="o">]</span>,
+<span class="w">        </span><span class="o">[</span><span class="w"> </span><span class="m">19</span>,<span class="w">  </span>-3,<span class="w">   </span><span class="m">6</span><span class="o">]</span>,
+<span class="w">        </span><span class="o">[</span>-14,<span class="w">  </span>-7,<span class="w">   </span><span class="m">8</span><span class="o">]]</span>,<span class="w"> </span><span class="nv">device</span><span class="o">=</span><span class="s1">&#39;cuda:0&#39;</span>,<span class="w"> </span><span class="nv">dtype</span><span class="o">=</span>torch.int32<span class="o">)</span>
+</pre></div>
+</div>
+<p>However, you may also want to obtain the batch index of the grid that the <code class="docutils literal notranslate"><span class="pre">ijk</span></code> coordinate belongs to.  This is just as simple by using the <code class="docutils literal notranslate"><span class="pre">jidx</span></code> attribute of the <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> which represents the batch index of each element in the <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code>.  Using the same random indexes as above, we can get the batch index of the grid for each random index.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">jidx</span><span class="p">[</span><span class="n">rand_indexes</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tensor<span class="o">([</span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,
+<span class="w">        </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,
+<span class="w">        </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,
+<span class="w">        </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="m">0</span>,…<span class="o">]</span>,<span class="w"> </span><span class="nv">device</span><span class="o">=</span><span class="s1">&#39;cuda:0&#39;</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>While this case of having a random set of <code class="docutils literal notranslate"><span class="pre">ijk</span></code> values is very contrived, it is more likely that we would have a <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> of features that correspond to each <code class="docutils literal notranslate"><span class="pre">ijk</span></code> value but are out-of-order in relation to another <code class="docutils literal notranslate"><span class="pre">grid.ijk</span></code>’s and we need to reorder these features to for this other grid.  For this, there is the <code class="docutils literal notranslate"><span class="pre">ijk_to_inv_index</span></code> function.</p>
+<p>Given a <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> of <code class="docutils literal notranslate"><span class="pre">ijk</span></code> values, <code class="docutils literal notranslate"><span class="pre">grid_batch.ijk_to_inv_index</span></code> will return a scalar integer <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> of size <code class="docutils literal notranslate"><span class="pre">[B,</span> <span class="pre">-1]</span></code>, where <code class="docutils literal notranslate"><span class="pre">B</span></code> is the number of grids in the batch and -1 represents the number of voxels in each grid.  This <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> of indexes can be used to permute the input to <code class="docutils literal notranslate"><span class="pre">ijk_to_inv_index</span></code> (or the feature <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> that correspond to those <code class="docutils literal notranslate"><span class="pre">ijk</span></code>’s) to match the ordering of the <code class="docutils literal notranslate"><span class="pre">grid_batch</span></code>.</p>
+<p>To concisely illustrate the properties of this function,</p>
+<ul class="simple">
+<li><p>if <code class="docutils literal notranslate"><span class="pre">idx</span> <span class="pre">=</span> <span class="pre">grid.ijk_to_inv_index(misordered_ijk)</span></code>, then <code class="docutils literal notranslate"><span class="pre">grid.ijk</span> <span class="pre">==</span> <span class="pre">misordered_ijk[idx]</span></code></p></li>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">idx</span> <span class="pre">=</span> <span class="pre">grid.ijk_to_index(misordered_ijk)</span></code>, then <code class="docutils literal notranslate"><span class="pre">grid.ijk[idx]</span> <span class="pre">==</span> <span class="pre">misordered_ijk</span></code></p></li>
+</ul>
+<p>Note:  If any <code class="docutils literal notranslate"><span class="pre">ijk</span></code> values in the grid are not present in the input to <code class="docutils literal notranslate"><span class="pre">ijk_to_inv_index</span></code>, the returned index will be <code class="docutils literal notranslate"><span class="pre">-1</span></code> at that position.</p>
+<p>In this example, let’s illustrate the more useful case where we have corresponding features and <code class="docutils literal notranslate"><span class="pre">ijk</span></code> values from a grid that are ordered differently from another reference grid and we want to re-order the features to match the order they should be in the reference grid.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">point_cloud_utils</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pcu</span>
+
+<span class="c1"># We&#39;re going to create a minibatch of two meshes</span>
+<span class="n">v1</span><span class="p">,</span> <span class="n">f1</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">v2</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">load_car_2_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">f1</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span> <span class="n">f2</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+<span class="c1"># Build a GridBatch from two meshes</span>
+<span class="n">mesh_v_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">mesh_f_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">reference_grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_mesh</span><span class="p">(</span><span class="n">mesh_v_jagged</span><span class="p">,</span> <span class="n">mesh_f_jagged</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="mf">0.025</span><span class="p">)</span>
+
+<span class="c1"># 7 random feature values for each voxel in the grid</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">reference_grid</span><span class="o">.</span><span class="n">jagged_like</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">total_voxels</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">device</span><span class="p">))</span>
+
+<span class="c1"># Create a set of randomly shuffled corresponding ijk/features from our original grid/features</span>
+<span class="n">shuffled_ijks</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">shuffled_features</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">reference_grid</span><span class="o">.</span><span class="n">grid_count</span><span class="p">):</span>
+    <span class="n">perm</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randperm</span><span class="p">(</span><span class="n">reference_grid</span><span class="o">.</span><span class="n">num_voxels_at</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">shuffled_ijks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reference_grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">jdata</span><span class="p">[</span><span class="n">grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">jidx</span><span class="o">==</span><span class="n">i</span><span class="p">][</span><span class="n">perm</span><span class="p">])</span>
+    <span class="n">shuffled_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">jdata</span><span class="p">[</span><span class="n">features</span><span class="o">.</span><span class="n">jidx</span><span class="o">==</span><span class="n">i</span><span class="p">][</span><span class="n">perm</span><span class="p">])</span>
+
+<span class="n">shuffled_ijks</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span><span class="n">shuffled_ijks</span><span class="p">)</span>
+<span class="n">shuffled_features</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span><span class="n">shuffled_features</span><span class="p">)</span>
+
+<span class="c1"># Get the indexes to reorder the shuffled features to match the grid&#39;s original ijk ordering</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">reference_grid</span><span class="o">.</span><span class="n">ijk_to_inv_index</span><span class="p">(</span><span class="n">shuffled_ijks</span><span class="p">)</span>
+
+<span class="c1"># Permute the shuffled features based on the ordering from `ijk_to_inv_index`</span>
+<span class="n">unshuffled_features</span> <span class="o">=</span> <span class="n">shuffled_features</span><span class="o">.</span><span class="n">jdata</span><span class="p">[</span><span class="n">idx</span><span class="o">.</span><span class="n">jdata</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Do the shuffled features that have been permuted based on `ijk_to_inv_index` match the original features? &quot;</span><span class="p">,</span> <span class="s2">&quot;Yes!&quot;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">unshuffled_features</span> <span class="o">==</span> <span class="n">features</span><span class="o">.</span><span class="n">jdata</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;No!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Do<span class="w"> </span>the<span class="w"> </span>shuffled<span class="w"> </span>features<span class="w"> </span>that<span class="w"> </span>have<span class="w"> </span>been<span class="w"> </span>permuted<span class="w"> </span>based<span class="w"> </span>on<span class="w"> </span><span class="sb">`</span>ijk_to_inv_index<span class="sb">`</span><span class="w"> </span>match<span class="w"> </span>the<span class="w"> </span>original<span class="w"> </span>features?<span class="w">  </span>Yes!
+</pre></div>
+</div>
+</section>
+<section id="getting-indexes-of-neighbors">
+<h2>Getting indexes of neighbors<a class="headerlink" href="#getting-indexes-of-neighbors" title="Link to this heading"></a></h2>
+<p>If we want to get the indexes of all the spatial neighbors of a set of ijk values, we can use the <code class="docutils literal notranslate"><span class="pre">neighbor_indexes</span></code> method of a <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code>.  This method receives a set of <code class="docutils literal notranslate"><span class="pre">ijk</span></code> values and an <code class="docutils literal notranslate"><span class="pre">extent</span></code> (the number of voxels away from the ijk value to consider neighbors) and returns a <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> of indexes of neighbors for each ijk value.  The returned <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> has <code class="docutils literal notranslate"><span class="pre">jdata</span></code> of size <code class="docutils literal notranslate"><span class="pre">[N,</span> <span class="pre">extent*2+1,</span> <span class="pre">extent*2+1,</span> <span class="pre">extent*2+1]</span></code> where <code class="docutils literal notranslate"><span class="pre">N</span></code> is the number of requested ijk values.</p>
+<p>In this example we create a set of 24 random ijk values per grid and get the indexes of all neighbors 2 voxels away from each ijk.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">point_cloud_utils</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pcu</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">polyscope</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ps</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="c1"># We&#39;re going to create a minibatch of two meshes</span>
+<span class="n">v1</span><span class="p">,</span> <span class="n">f1</span> <span class="o">=</span> <span class="n">load_car_1_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">v2</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">load_car_2_mesh</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+<span class="n">f1</span><span class="p">,</span> <span class="n">f2</span> <span class="o">=</span> <span class="n">f1</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span> <span class="n">f2</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+<span class="c1"># Build a GridBatch from two meshes</span>
+<span class="n">mesh_v_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">mesh_f_jagged</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">])</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_mesh</span><span class="p">(</span><span class="n">mesh_v_jagged</span><span class="p">,</span> <span class="n">mesh_f_jagged</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="mf">0.025</span><span class="p">)</span>
+
+<span class="c1"># Build a set of 24 randomly selected ijk values per grid</span>
+<span class="n">rand_ijks</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="n">grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">jdata</span><span class="p">[</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">joffsets</span><span class="p">[</span><span class="n">b</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">ijk</span><span class="o">.</span><span class="n">joffsets</span><span class="p">[</span><span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]),</span> <span class="p">(</span><span class="mi">24</span><span class="p">,))</span>
+        <span class="p">]</span>
+        <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">grid_count</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+
+<span class="c1"># Get the indexes of all neighbors 2 voxels away from each ijk</span>
+<span class="c1"># Returns a JaggedTensor with jdata of size [48, 5, 5, 5] ([ N x (extent*2+1)^3 ])</span>
+<span class="c1">#   where each [5, 5, 5] describes the layout of neighbouring indexes of each ijk</span>
+<span class="n">neighbor_idxs</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">neighbor_indexes</span><span class="p">(</span><span class="n">rand_ijks</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We visualize the voxels we selected in red and their neighbors in blue.
+<img alt="" src="../_images/neighbor_indexes.png" /></p>
+</section>
+<section id="clipping-a-grid-to-a-bounding-box">
+<h2>Clipping a grid to a bounding box<a class="headerlink" href="#clipping-a-grid-to-a-bounding-box" title="Link to this heading"></a></h2>
+<p>If we want to ‘clip’ a grid, meaning remove all the voxels that are outside of a bounding box, we can use the <code class="docutils literal notranslate"><span class="pre">clipped_grid</span></code> method of a <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code>.  The minimum and maximum <code class="docutils literal notranslate"><span class="pre">ijk</span></code> extents of the bounding box used for this clipping are provided as arguments and can be specified per-grid of the batch.</p>
+<p>If we want to both clip the batch of grids and the accompanying <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> of batched features, we can use the <code class="docutils literal notranslate"><span class="pre">clip</span></code> method of a <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code> which can be provided the <code class="docutils literal notranslate"><span class="pre">features</span></code> to be clipped along with the grid.</p>
+<p>In this example we clip a batch of grids to independent bounding boxes and visualize the result.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span><span class="p">,</span> <span class="n">load_car_3_mesh</span><span class="p">,</span> <span class="n">load_car_4_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">point_cloud_utils</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pcu</span>
+
+<span class="n">device</span> <span class="o">=</span> <span class="s1">&#39;cuda&#39;</span>
+<span class="n">mesh_vs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mesh_fs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">mesh_load_funcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">load_car_1_mesh</span><span class="p">,</span> <span class="n">load_car_2_mesh</span><span class="p">,</span> <span class="n">load_car_3_mesh</span><span class="p">,</span> <span class="n">load_car_4_mesh</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">mesh_load_funcs</span><span class="p">:</span>
+    <span class="n">v</span><span class="p">,</span> <span class="n">f</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vf&quot;</span><span class="p">)</span>
+    <span class="n">mesh_vs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="n">mesh_fs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">))</span>
+
+<span class="n">mesh_vs</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span><span class="n">mesh_vs</span><span class="p">)</span>
+<span class="n">mesh_fs</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span><span class="n">mesh_fs</span><span class="p">)</span>
+
+<span class="n">vox_size</span> <span class="o">=</span> <span class="mf">0.01</span>
+
+<span class="c1"># Build GridBatch from meshes</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_mesh</span><span class="p">(</span><span class="n">mesh_vs</span><span class="p">,</span> <span class="n">mesh_fs</span><span class="p">,</span> <span class="n">vox_size</span><span class="p">)</span>
+
+<span class="c1"># Use `clipped_grid` to clip the grids outside of the specified minimum and maximum bounding boxes for each grid…</span>
+<span class="n">clipped_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">clipped_grid</span><span class="p">(</span>
+                         <span class="n">ijk_min</span><span class="o">=</span><span class="p">[[</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">],</span>  <span class="p">[</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">]],</span>
+                         <span class="n">ijk_max</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>      <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>  <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>       <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">]])</span>
+
+<span class="c1"># Use `clip` to both clip the grids and the accompanying JaggedTensor of features</span>
+<span class="n">features</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">jagged_like</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">total_voxels</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">))</span>
+<span class="n">clipped_features</span><span class="p">,</span> <span class="n">clipped_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span>
+                         <span class="n">features</span><span class="o">=</span><span class="n">features</span><span class="p">,</span>
+                         <span class="n">ijk_min</span><span class="o">=</span><span class="p">[[</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">],</span>  <span class="p">[</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">]],</span>
+                         <span class="n">ijk_max</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>      <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>  <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>       <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">]])</span>
+
+</pre></div>
+</div>
+<p>We visualize these grids, each clipped to a different bounding box.</p>
+<p><img alt="" src="../_images/clip.png" /></p>
+</section>
+<section id="max-mean-pooling">
+<h2>Max/Mean Pooling<a class="headerlink" href="#max-mean-pooling" title="Link to this heading"></a></h2>
+<p>‘Pooling’ a grid has the effect of coarsening the resolution of the grid by a constant factor (and can be performed anisotropically for different factors in each <code class="docutils literal notranslate"><span class="pre">xyz</span></code> spatial dimension).  When pooling a grid, the values of the new, coarser grid can be determined by the maximum or mean of the values of the voxels in the original grid that are covered by each voxel in the new grid.  Maximum and mean pooling can be accomplished by the <code class="docutils literal notranslate"><span class="pre">max_pool</span></code> and <code class="docutils literal notranslate"><span class="pre">avg_pool</span></code> operators.</p>
+<p>In this example, we create a grid from a mesh and then perform max and mean pooling on it to illustrate the difference between the two.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">point_cloud_utils</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pcu</span>
+
+<span class="n">vox_size</span> <span class="o">=</span> <span class="mf">0.02</span>
+<span class="n">num_pts</span> <span class="o">=</span> <span class="mi">10_000</span>
+
+<span class="n">mesh_load_funcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">load_car_1_mesh</span><span class="p">]</span>
+
+<span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">normals</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">mesh_load_funcs</span><span class="p">:</span>
+    <span class="n">pts</span><span class="p">,</span> <span class="n">nms</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vn&quot;</span><span class="p">)</span>
+    <span class="n">pmt</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randperm</span><span class="p">(</span><span class="n">pts</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])[:</span><span class="n">num_pts</span><span class="p">]</span>
+    <span class="n">pts</span><span class="p">,</span> <span class="n">nms</span> <span class="o">=</span> <span class="n">pts</span><span class="p">[</span><span class="n">pmt</span><span class="p">],</span> <span class="n">nms</span><span class="p">[</span><span class="n">pmt</span><span class="p">]</span>
+    <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pts</span><span class="p">)</span>
+    <span class="n">normals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nms</span><span class="p">)</span>
+
+<span class="c1"># JaggedTensors of points and normals</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<span class="n">normals</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span><span class="n">normals</span><span class="p">)</span>
+
+<span class="c1"># Create a grid</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_points</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="n">vox_size</span><span class="p">)</span>
+
+<span class="c1"># Splat the normals into the grid with trilinear interpolation</span>
+<span class="n">vox_normals</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">splat_trilinear</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">normals</span><span class="p">)</span>
+
+<span class="c1"># Mean Pooling of normals features</span>
+<span class="n">avg_normals</span><span class="p">,</span> <span class="n">avg_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">avg_pool</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">vox_normals</span><span class="p">)</span>
+<span class="c1"># Max Pooling of normals features</span>
+<span class="n">max_normals</span><span class="p">,</span> <span class="n">max_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">max_pool</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">vox_normals</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We visualize the original grid with values of the mesh normals as features, the features/grid after mean pooling, and the features/grid after max pooling to illustrate how these pooling modes affect the resulting features of the grid.</p>
+<p><img alt="" src="../_images/max_avg_pool.png" /></p>
+</section>
+<section id="subdividing-a-grid">
+<h2>Subdividing a grid<a class="headerlink" href="#subdividing-a-grid" title="Link to this heading"></a></h2>
+<p>Subdividing a grid has the effect of increasing the resolution of the grid by a constant factor (and can be performed anisotropically for different factors in each <code class="docutils literal notranslate"><span class="pre">xyz</span></code> spatial dimension).</p>
+<p>The most straightforward way to use the <code class="docutils literal notranslate"><span class="pre">subdivide</span></code> method is to provide an integer value for the subdivision factor.  This will result in a grid that is <code class="docutils literal notranslate"><span class="pre">subdiv_factor</span></code> times the resolution of the original grid in each spatial dimension.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">point_cloud_utils</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pcu</span>
+
+<span class="n">vox_size</span> <span class="o">=</span> <span class="mf">0.02</span>
+<span class="n">num_pts</span> <span class="o">=</span> <span class="mi">10_000</span>
+
+<span class="n">mesh_load_funcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">load_car_1_mesh</span><span class="p">]</span>
+
+<span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">normals</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">mesh_load_funcs</span><span class="p">:</span>
+    <span class="n">pts</span><span class="p">,</span> <span class="n">nms</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vn&quot;</span><span class="p">)</span>
+    <span class="n">pmt</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randperm</span><span class="p">(</span><span class="n">pts</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])[:</span><span class="n">num_pts</span><span class="p">]</span>
+    <span class="n">pts</span><span class="p">,</span> <span class="n">nms</span> <span class="o">=</span> <span class="n">pts</span><span class="p">[</span><span class="n">pmt</span><span class="p">],</span> <span class="n">nms</span><span class="p">[</span><span class="n">pmt</span><span class="p">]</span>
+    <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pts</span><span class="p">)</span>
+    <span class="n">normals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nms</span><span class="p">)</span>
+
+<span class="c1"># JaggedTensors of points and normals</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<span class="n">normals</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span><span class="n">normals</span><span class="p">)</span>
+
+<span class="c1"># Create a grid</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_points</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="n">vox_size</span><span class="p">)</span>
+
+<span class="c1"># Splat the normals into the grid with trilinear interpolation</span>
+<span class="n">vox_normals</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">splat_trilinear</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">normals</span><span class="p">)</span>
+
+<span class="c1"># Subdivide by a constant factor of 2</span>
+<span class="n">subdiv_normals</span><span class="p">,</span> <span class="n">subdiv_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">vox_normals</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here we visualize the original grid on the right and the grid after subdivision by a factor of 2 on the left.</p>
+<p><img alt="" src="../_images/subdivide.png" /></p>
+<p>In practice, in a deep neural network like a U-Net architecture, the resolution of the grid can be decreased early in the network and then the grid’s features need to be concatenated with features of the grid after its resolution is increased again.  When working with traditional, dense 2D or 3D data, cropping any mismatched outputs is straightforward to be able to concatenate these features.  However, in a sparse 3D grid, this is not straightforward and it’s entirely unclear how to align the features.</p>
+<p>Take this simple example to illustrate the difficulties created by changing the grid topology in this way.  We take the grid created from our mesh, perform Pooling by a factor of 2 and then try to Subdivide by an equal factor of 2 to invert the Pooling operation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">max_normals</span><span class="p">,</span> <span class="n">max_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">max_pool</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">vox_normals</span><span class="p">)</span>
+
+<span class="n">subdiv_normals</span><span class="p">,</span> <span class="n">subdiv_grid</span> <span class="o">=</span> <span class="n">max_grid</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_normals</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Let’s visualize these results from left to right of the original grid, the grid after max pooling, and the grid after max pooling and then subdividing again by the same factor.</p>
+<p><img alt="" src="../_images/subdiv_pool_incorrect.png" /></p>
+<p>Notice how we have not obtained the topology of the original grid and have obtained a grid with many more voxels than the original.</p>
+<p>To correctly invert the Pooling operation, we can provide the <code class="docutils literal notranslate"><span class="pre">subdivide</span></code> function with a <code class="docutils literal notranslate"><span class="pre">fine_grid</span></code> optional argument which describes the topology we want the grid to have after the subdivision.  The original grid before the Pooling operation can be used as this <code class="docutils literal notranslate"><span class="pre">fine_grid</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">max_normals</span><span class="p">,</span> <span class="n">max_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">max_pool</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">vox_normals</span><span class="p">)</span>
+
+<span class="c1"># Providing the original grid as our fine_grid target</span>
+<span class="n">subdiv_normals</span><span class="p">,</span> <span class="n">subdiv_grid</span> <span class="o">=</span> <span class="n">max_grid</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">max_normals</span><span class="p">,</span> <span class="n">fine_grid</span><span class="o">=</span><span class="n">grid</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="" src="../_images/subdiv_pool_correct.png" /></p>
+<p>Note the matching topology of the grid after the Subdivision operation to the original grid (though the features are different due to the Pooling operation).</p>
+<p>One other useful feature of the <code class="docutils literal notranslate"><span class="pre">subdivide</span></code> operator is that this operation can be <em>masked</em> so that subdivision is only performed on a subset of the voxels in the grid.</p>
+<p>The optional <code class="docutils literal notranslate"><span class="pre">mask</span></code> argument to <code class="docutils literal notranslate"><span class="pre">subdivide</span></code> is a <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> of boolean values that indicates which voxels should be subdivided.  Given this <code class="docutils literal notranslate"><span class="pre">mask</span></code> is simply a <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code>, this operation can be made differentiable in a neural network and the <code class="docutils literal notranslate"><span class="pre">subdivide</span></code> operator can be learned.</p>
+<p>Let’s illustrate a very simple example of how to use the <code class="docutils literal notranslate"><span class="pre">mask</span></code> argument to only subdivide the voxels which have a feature value greater than a certain threshold.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mask the grid with the normals where only the normals with a value greater than 0.5 on the x-axis are subdivided</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">vox_normals</span><span class="o">.</span><span class="n">jdata</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.5</span>
+
+<span class="n">subdiv_normals</span><span class="p">,</span> <span class="n">subdiv_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">subdivide</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">vox_normals</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="" src="../_images/subdiv_mask.png" /></p>
+</section>
+<section id="getting-the-number-of-enabled-voxels-per-grid-in-a-batch">
+<h2>Getting the number of enabled voxels per grid in a batch<a class="headerlink" href="#getting-the-number-of-enabled-voxels-per-grid-in-a-batch" title="Link to this heading"></a></h2>
+<p>Getting the number of voxels in the grids of a <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code> can be easily accomplished with <code class="docutils literal notranslate"><span class="pre">num_voxels</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+
+<span class="c1"># Create a GridBatch of random points</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">pts</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10_000</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="mi">3</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)])</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">GridBatch</span><span class="p">(</span><span class="n">mutable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">set_from_points</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+
+<span class="c1"># Get the number of voxels per grid in the batch</span>
+<span class="k">for</span> <span class="n">batch</span><span class="p">,</span> <span class="n">num_voxels</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">num_voxels</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Grid </span><span class="si">{</span><span class="n">batch</span><span class="si">}</span><span class="s2"> has </span><span class="si">{</span><span class="n">num_voxels</span><span class="si">}</span><span class="s2"> voxels&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Grid<span class="w"> </span><span class="m">0</span><span class="w"> </span>has<span class="w"> </span><span class="m">9645</span><span class="w"> </span>voxels
+Grid<span class="w"> </span><span class="m">1</span><span class="w"> </span>has<span class="w"> </span><span class="m">18503</span><span class="w"> </span>voxels
+Grid<span class="w"> </span><span class="m">2</span><span class="w"> </span>has<span class="w"> </span><span class="m">26749</span><span class="w"> </span>voxels
+Grid<span class="w"> </span><span class="m">3</span><span class="w"> </span>has<span class="w"> </span><span class="m">34378</span><span class="w"> </span>voxels
+</pre></div>
+</div>
+<p>If the grid is <em>mutable</em> and the number of enabled voxels has changed, you can use <code class="docutils literal notranslate"><span class="pre">num_enabled_voxels</span></code> to get the number of <em>enabled</em> voxels.  If a grid is not mutable, <code class="docutils literal notranslate"><span class="pre">num_enabled_voxels</span></code> will return the same value as <code class="docutils literal notranslate"><span class="pre">num_voxels</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a mutable GridBatch of random points</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">GridBatch</span><span class="p">(</span><span class="n">mutable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">set_from_points</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+<span class="c1"># Disable some voxels randomly</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">disable_ijk</span><span class="p">(</span><span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">,(</span><span class="mi">100_000</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)]))</span>
+
+<span class="c1"># Get the number of enabled voxels per grid in the batch</span>
+<span class="k">for</span> <span class="n">batch</span><span class="p">,</span> <span class="n">num_voxels</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">num_enabled_voxels</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Grid </span><span class="si">{</span><span class="n">batch</span><span class="si">}</span><span class="s2"> has </span><span class="si">{</span><span class="n">grid</span><span class="o">.</span><span class="n">num_enabled_voxels_at</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span><span class="si">}</span><span class="s2"> enabled voxels and </span><span class="si">{</span><span class="n">grid</span><span class="o">.</span><span class="n">num_voxels_at</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span><span class="si">}</span><span class="s2"> total voxels&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Grid<span class="w"> </span><span class="m">0</span><span class="w"> </span>has<span class="w"> </span><span class="m">4434</span><span class="w"> </span>enabled<span class="w"> </span>voxels<span class="w"> </span>and<span class="w"> </span><span class="m">9645</span><span class="w"> </span>total<span class="w"> </span>voxels
+Grid<span class="w"> </span><span class="m">1</span><span class="w"> </span>has<span class="w"> </span><span class="m">8620</span><span class="w"> </span>enabled<span class="w"> </span>voxels<span class="w"> </span>and<span class="w"> </span><span class="m">18503</span><span class="w"> </span>total<span class="w"> </span>voxels
+Grid<span class="w"> </span><span class="m">2</span><span class="w"> </span>has<span class="w"> </span><span class="m">12456</span><span class="w"> </span>enabled<span class="w"> </span>voxels<span class="w"> </span>and<span class="w"> </span><span class="m">26749</span><span class="w"> </span>total<span class="w"> </span>voxels
+Grid<span class="w"> </span><span class="m">3</span><span class="w"> </span>has<span class="w"> </span><span class="m">16155</span><span class="w"> </span>enabled<span class="w"> </span>voxels<span class="w"> </span>and<span class="w"> </span><span class="m">34378</span><span class="w"> </span>total<span class="w"> </span>voxels
+</pre></div>
+</div>
+</section>
+<section id="converting-between-ijk-grid-coordinates-and-world-coordinates">
+<h2>Converting between ijk (grid) coordinates and world coordinates<a class="headerlink" href="#converting-between-ijk-grid-coordinates-and-world-coordinates" title="Link to this heading"></a></h2>
+<p>A <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code> can contain multiple grids, each with its own coordinate system that relate the grids’ <code class="docutils literal notranslate"><span class="pre">ijk</span></code> integer index space coordinates to <code class="docutils literal notranslate"><span class="pre">xyz</span></code> floating-point world-space coordinates.  These axis-aligned coordinate systems are defined by specifying a list of three-dimensional world-space origin and scale values when we define the topology of the grids in the <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code> like so:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+
+<span class="c1"># Create a GridBatch of random points</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">pts</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10_000</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="mi">3</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)])</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">GridBatch</span><span class="p">()</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">set_from_points</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span>
+                    <span class="n">voxel_sizes</span><span class="o">=</span><span class="p">[[</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.04</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">]],</span>
+                    <span class="n">origins</span><span class="o">=</span><span class="p">[[</span><span class="o">-</span><span class="mf">.1</span><span class="p">,</span><span class="o">-</span><span class="mf">.1</span><span class="p">,</span><span class="o">-</span><span class="mf">.1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mf">.1</span><span class="p">,</span><span class="mf">.1</span><span class="p">,</span><span class="mf">.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">.2</span><span class="p">,</span><span class="o">-</span><span class="mf">.2</span><span class="p">,</span><span class="mf">.2</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>When <code class="docutils literal notranslate"><span class="pre">voxel_sizes</span></code> and <code class="docutils literal notranslate"><span class="pre">origins</span></code> are not defined, it is assumed all grids have a unit scale voxel_size and an origin at <code class="docutils literal notranslate"><span class="pre">[0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0]</span></code>.</p>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code>’s <code class="docutils literal notranslate"><span class="pre">grid_to_world</span></code> function to convert between <code class="docutils literal notranslate"><span class="pre">ijk</span></code> index coordinates and their corresponding world-space <code class="docutils literal notranslate"><span class="pre">xyz</span></code> coordinates.  In this example, let’s obtain the world-space position that would lie at the index-space <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">1]</span></code> point of each grid:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert ijk coordinates to world coordinates</span>
+<span class="n">ijk</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)])</span>
+<span class="n">world_coords</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">grid_to_world</span><span class="p">(</span><span class="n">ijk</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">grid_count</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;World-space point that lies at index [1,1,1] for Grid </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> is positioned at </span><span class="si">{</span><span class="n">world_coords</span><span class="o">.</span><span class="n">jdata</span><span class="p">[</span><span class="n">world_coords</span><span class="o">.</span><span class="n">jidx</span><span class="o">==</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>World-space<span class="w"> </span>point<span class="w"> </span>that<span class="w"> </span>lies<span class="w"> </span>at<span class="w"> </span>index<span class="w"> </span><span class="o">[</span><span class="m">1</span>,1,1<span class="o">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>Grid<span class="w"> </span><span class="m">0</span><span class="w"> </span>is<span class="w"> </span>positioned<span class="w"> </span>at<span class="w"> </span><span class="o">[[</span>-0.07999999821186066,<span class="w"> </span>-0.07999999821186066,<span class="w"> </span>-0.07999999821186066<span class="o">]]</span>
+World-space<span class="w"> </span>point<span class="w"> </span>that<span class="w"> </span>lies<span class="w"> </span>at<span class="w"> </span>index<span class="w"> </span><span class="o">[</span><span class="m">1</span>,1,1<span class="o">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>Grid<span class="w"> </span><span class="m">1</span><span class="w"> </span>is<span class="w"> </span>positioned<span class="w"> </span>at<span class="w"> </span><span class="o">[[</span><span class="m">0</span>.030000001192092896,<span class="w"> </span><span class="m">0</span>.030000001192092896,<span class="w"> </span><span class="m">0</span>.030000001192092896<span class="o">]]</span>
+World-space<span class="w"> </span>point<span class="w"> </span>that<span class="w"> </span>lies<span class="w"> </span>at<span class="w"> </span>index<span class="w"> </span><span class="o">[</span><span class="m">1</span>,1,1<span class="o">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>Grid<span class="w"> </span><span class="m">2</span><span class="w"> </span>is<span class="w"> </span>positioned<span class="w"> </span>at<span class="w"> </span><span class="o">[[</span><span class="m">0</span>.14000000059604645,<span class="w"> </span><span class="m">0</span>.14000000059604645,<span class="w"> </span><span class="m">0</span>.14000000059604645<span class="o">]]</span>
+World-space<span class="w"> </span>point<span class="w"> </span>that<span class="w"> </span>lies<span class="w"> </span>at<span class="w"> </span>index<span class="w"> </span><span class="o">[</span><span class="m">1</span>,1,1<span class="o">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>Grid<span class="w"> </span><span class="m">3</span><span class="w"> </span>is<span class="w"> </span>positioned<span class="w"> </span>at<span class="w"> </span><span class="o">[[</span><span class="m">0</span>.25,<span class="w"> </span>-0.15000000596046448,<span class="w"> </span><span class="m">0</span>.25<span class="o">]]</span>
+</pre></div>
+</div>
+<p>We can also do the inverse operation and convert world-space <code class="docutils literal notranslate"><span class="pre">xyz</span></code> coordinates to their corresponding <code class="docutils literal notranslate"><span class="pre">ijk</span></code> index-space coordinates using <code class="docutils literal notranslate"><span class="pre">world_to_grid</span></code>.  In this example, let’s find the <code class="docutils literal notranslate"><span class="pre">ijk</span></code> index coordinates of the voxel which would contain the world-space point located at <code class="docutils literal notranslate"><span class="pre">[1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0]</span></code> for each grid in our <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert world coordinates to ijk coordinates</span>
+<span class="n">xyz</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">([</span><span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)])</span>
+<span class="n">ijk_coords</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">world_to_grid</span><span class="p">(</span><span class="n">xyz</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">grid_count</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Index-space voxel that contains the point [1.0, 1.0, 1.0] for Grid </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">ijk_coords</span><span class="o">.</span><span class="n">jdata</span><span class="p">[</span><span class="n">ijk_coords</span><span class="o">.</span><span class="n">jidx</span><span class="o">==</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">int</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Index-space<span class="w"> </span>voxel<span class="w"> </span>that<span class="w"> </span>contains<span class="w"> </span>the<span class="w"> </span>point<span class="w"> </span><span class="o">[</span><span class="m">1</span>.0,<span class="w"> </span><span class="m">1</span>.0,<span class="w"> </span><span class="m">1</span>.0<span class="o">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>Grid<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">[[</span><span class="m">55</span>,<span class="w"> </span><span class="m">55</span>,<span class="w"> </span><span class="m">55</span><span class="o">]]</span>
+Index-space<span class="w"> </span>voxel<span class="w"> </span>that<span class="w"> </span>contains<span class="w"> </span>the<span class="w"> </span>point<span class="w"> </span><span class="o">[</span><span class="m">1</span>.0,<span class="w"> </span><span class="m">1</span>.0,<span class="w"> </span><span class="m">1</span>.0<span class="o">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>Grid<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">[[</span><span class="m">33</span>,<span class="w"> </span><span class="m">33</span>,<span class="w"> </span><span class="m">33</span><span class="o">]]</span>
+Index-space<span class="w"> </span>voxel<span class="w"> </span>that<span class="w"> </span>contains<span class="w"> </span>the<span class="w"> </span>point<span class="w"> </span><span class="o">[</span><span class="m">1</span>.0,<span class="w"> </span><span class="m">1</span>.0,<span class="w"> </span><span class="m">1</span>.0<span class="o">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>Grid<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">[[</span><span class="m">22</span>,<span class="w"> </span><span class="m">22</span>,<span class="w"> </span><span class="m">22</span><span class="o">]]</span>
+Index-space<span class="w"> </span>voxel<span class="w"> </span>that<span class="w"> </span>contains<span class="w"> </span>the<span class="w"> </span>point<span class="w"> </span><span class="o">[</span><span class="m">1</span>.0,<span class="w"> </span><span class="m">1</span>.0,<span class="w"> </span><span class="m">1</span>.0<span class="o">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>Grid<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">[[</span><span class="m">16</span>,<span class="w"> </span><span class="m">24</span>,<span class="w"> </span><span class="m">16</span><span class="o">]]</span>
+</pre></div>
+</div>
+<p>While <code class="docutils literal notranslate"><span class="pre">grid_to_world</span></code> and <code class="docutils literal notranslate"><span class="pre">world_to_grid</span></code> are convenient functions for these purposes, the row-major transformation matrices used for these calculations can be obtained directly from a <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code> for use in your own logic:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Grid to world matrices:</span><span class="se">\n</span><span class="si">{</span><span class="n">grid</span><span class="o">.</span><span class="n">grid_to_world_matrices</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;World to grid matrices:</span><span class="se">\n</span><span class="si">{</span><span class="n">grid</span><span class="o">.</span><span class="n">grid_to_world_matrices</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Grid<span class="w"> </span>to<span class="w"> </span>world<span class="w"> </span>matrices:
+tensor<span class="o">([[[</span><span class="w"> </span><span class="m">0</span>.0200,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0200,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0200,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span>-0.1000,<span class="w"> </span>-0.1000,<span class="w"> </span>-0.1000,<span class="w">  </span><span class="m">1</span>.0000<span class="o">]]</span>,
+
+<span class="w">        </span><span class="o">[[</span><span class="w"> </span><span class="m">0</span>.0300,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0300,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0300,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">1</span>.0000<span class="o">]]</span>,
+
+<span class="w">        </span><span class="o">[[</span><span class="w"> </span><span class="m">0</span>.0400,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0400,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0400,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.1000,<span class="w">  </span><span class="m">0</span>.1000,<span class="w">  </span><span class="m">0</span>.1000,<span class="w">  </span><span class="m">1</span>.0000<span class="o">]]</span>,
+
+<span class="w">        </span><span class="o">[[</span><span class="w"> </span><span class="m">0</span>.0500,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0500,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0500,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.2000,<span class="w"> </span>-0.2000,<span class="w">  </span><span class="m">0</span>.2000,<span class="w">  </span><span class="m">1</span>.0000<span class="o">]]])</span>
+World<span class="w"> </span>to<span class="w"> </span>grid<span class="w"> </span>matrices:
+tensor<span class="o">([[[</span><span class="w"> </span><span class="m">0</span>.0200,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0200,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0200,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span>-0.1000,<span class="w"> </span>-0.1000,<span class="w"> </span>-0.1000,<span class="w">  </span><span class="m">1</span>.0000<span class="o">]]</span>,
+
+<span class="w">        </span><span class="o">[[</span><span class="w"> </span><span class="m">0</span>.0300,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0300,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0300,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">1</span>.0000<span class="o">]]</span>,
+
+<span class="w">        </span><span class="o">[[</span><span class="w"> </span><span class="m">0</span>.0400,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0400,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0400,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.1000,<span class="w">  </span><span class="m">0</span>.1000,<span class="w">  </span><span class="m">0</span>.1000,<span class="w">  </span><span class="m">1</span>.0000<span class="o">]]</span>,
+
+<span class="w">        </span><span class="o">[[</span><span class="w"> </span><span class="m">0</span>.0500,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0500,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0000,<span class="w">  </span><span class="m">0</span>.0500,<span class="w">  </span><span class="m">0</span>.0000<span class="o">]</span>,
+<span class="w">         </span><span class="o">[</span><span class="w"> </span><span class="m">0</span>.2000,<span class="w"> </span>-0.2000,<span class="w">  </span><span class="m">0</span>.2000,<span class="w">  </span><span class="m">1</span>.0000<span class="o">]]])</span>
+</pre></div>
+</div>
+</section>
+<section id="convolution">
+<h2>Convolution<a class="headerlink" href="#convolution" title="Link to this heading"></a></h2>
+<p>Convolving the features of a <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code> can be accomplished with either a high-level <code class="docutils literal notranslate"><span class="pre">torch.nn.Module</span></code> derived class provided by <code class="docutils literal notranslate"><span class="pre">fvdb.nn</span></code> or with more low-level methods available with <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code>, we will illustrate both techniques.</p>
+<section id="high-level-usage-with-fvdb-nn">
+<h3>High-level Usage with <code class="docutils literal notranslate"><span class="pre">fvdb.nn</span></code><a class="headerlink" href="#high-level-usage-with-fvdb-nn" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">fvdb.nn.SparseConv3d</span></code> provides a high-level <code class="docutils literal notranslate"><span class="pre">torch.nn.Module</span></code> class for convolution on <code class="docutils literal notranslate"><span class="pre">fvdb</span></code> classes that is an analogue to the use of <code class="docutils literal notranslate"><span class="pre">torch.nn.Conv3d</span></code>.  Using this module is the recommended functionality for performing convolution with <code class="docutils literal notranslate"><span class="pre">fvdb</span></code> because it not only manages functionality such as initializing the weights of the convolution and calling appropriate backend implementation functions but it also provides certain backend optimizations which will be illustrated in the <a class="reference internal" href="#low-level-usage-with-gridbatch"><span class="xref myst">Low-level usage</span></a> section.</p>
+<p>One thing to note is <code class="docutils literal notranslate"><span class="pre">fvdb.nn.SparseConv3d</span></code> operates on a class that wraps a <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code> and <code class="docutils literal notranslate"><span class="pre">JaggedTensor</span></code> together into a convenience object, <code class="docutils literal notranslate"><span class="pre">fvdb.VDBTensor</span></code>, which is used by all the <code class="docutils literal notranslate"><span class="pre">fvdb.nn</span></code> modules.</p>
+<p>A simple example of using <code class="docutils literal notranslate"><span class="pre">fvdb.nn.SparseConv3d</span></code> is as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">fvdb.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">fvdbnn</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">point_cloud_utils</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pcu</span>
+
+<span class="n">num_pts</span> <span class="o">=</span> <span class="mi">10_000</span>
+<span class="n">vox_size</span> <span class="o">=</span> <span class="mf">0.02</span>
+
+<span class="n">mesh_load_funcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">load_car_1_mesh</span><span class="p">]</span>
+
+<span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">normals</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">mesh_load_funcs</span><span class="p">:</span>
+    <span class="n">pts</span><span class="p">,</span> <span class="n">nms</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vn&quot;</span><span class="p">)</span>
+    <span class="n">pmt</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randperm</span><span class="p">(</span><span class="n">pts</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])[:</span><span class="n">num_pts</span><span class="p">]</span>
+    <span class="n">pts</span><span class="p">,</span> <span class="n">nms</span> <span class="o">=</span> <span class="n">pts</span><span class="p">[</span><span class="n">pmt</span><span class="p">],</span> <span class="n">nms</span><span class="p">[</span><span class="n">pmt</span><span class="p">]</span>
+    <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pts</span><span class="p">)</span>
+    <span class="n">normals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nms</span><span class="p">)</span>
+
+<span class="c1"># JaggedTensors of points and normals</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<span class="n">normals</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span><span class="n">normals</span><span class="p">)</span>
+
+<span class="c1"># Create a grid</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_points</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="n">vox_size</span><span class="p">)</span>
+
+<span class="c1"># Splat the normals into the grid with trilinear interpolation</span>
+<span class="n">vox_normals</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">splat_trilinear</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">normals</span><span class="p">)</span>
+
+<span class="c1"># VDBTensor is a simple wrapper of a grid and a feature tensor</span>
+<span class="n">vdbtensor</span> <span class="o">=</span> <span class="n">fvdbnn</span><span class="o">.</span><span class="n">VDBTensor</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">vox_normals</span><span class="p">)</span>
+
+<span class="c1"># fvdb.nn.SparseConv3d is a convenient torch.nn.Module implementing the fVDB convolution</span>
+<span class="n">conv</span> <span class="o">=</span> <span class="n">fvdbnn</span><span class="o">.</span><span class="n">SparseConv3d</span><span class="p">(</span><span class="n">in_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">out_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">vdbtensor</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+
+<span class="n">output</span> <span class="o">=</span> <span class="n">conv</span><span class="p">(</span><span class="n">vdbtensor</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Let’s visualize the original grid with normals visualized as colours alongside the result of these features after a convolution initialized with random weights:
+<img alt="" src="../_images/simple_conv.png" /></p>
+<p>For stride values greater than 1, the output of the convolution will be a grid with a smaller resolution than the input grid (similar in topological effect to the output of a Pooling operator).  Let’s illustrate this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># We would expect for stride=2 that the output grid would have half the resolution (or twice the world-space size) of the input grid</span>
+<span class="n">conv</span> <span class="o">=</span> <span class="n">fvdbnn</span><span class="o">.</span><span class="n">SparseConv3d</span><span class="p">(</span><span class="n">in_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">out_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">vdbtensor</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+
+<span class="n">output</span> <span class="o">=</span> <span class="n">conv</span><span class="p">(</span><span class="n">vdbtensor</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="" src="../_images/stride_conv.png" /></p>
+<p>Transposed convolution can be performed with <code class="docutils literal notranslate"><span class="pre">fvdb.nn.SparseConv3d</span></code> which can increase the resolution of the grid.  It only really makes sense to perform transposed sparse convolution with a target grid topology we wish to produce with this operation (see the <a class="reference internal" href="#maxmean-pooling"><span class="xref myst">Pooling Operators</span></a> for an explanation).  Therefore, an <code class="docutils literal notranslate"><span class="pre">out_grid</span></code> argument must be provided in this case to specify the target grid topology:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tranposed convolution operator, stride=2</span>
+<span class="n">transposed_conv</span> <span class="o">=</span> <span class="n">fvdbnn</span><span class="o">.</span><span class="n">SparseConv3d</span><span class="p">(</span><span class="n">in_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">out_channels</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">transposed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">vdbtensor</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+
+<span class="c1"># Note the use of the `out_grid` argument to specify the target grid topology</span>
+<span class="n">transposed_output</span> <span class="o">=</span> <span class="n">transposed_conv</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">out_grid</span><span class="o">=</span><span class="n">vdbtensor</span><span class="o">.</span><span class="n">grid</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here we visuzlie the original grid, the grid after strided convolution and the grid after transposed convolution inverts the topological operation of the strided convolution to produce the same topology as the original grid with the features convolved by our two layers:</p>
+<p><img alt="" src="../_images/transposed_stride_conv.png" /></p>
+</section>
+<section id="low-level-usage-with-gridbatch">
+<h3>Low-level Usage with <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code><a class="headerlink" href="#low-level-usage-with-gridbatch" title="Link to this heading"></a></h3>
+<p>The <a class="reference internal" href="#high-level-convolution-with-fvdbnn"><span class="xref myst">high-level <code class="docutils literal notranslate"><span class="pre">fvdb.nn.SparseConv3d</span></code> class</span></a> wraps several pieces of <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code> functionality to provide a convenient <code class="docutils literal notranslate"><span class="pre">torch.nn.Module</span></code> for convolution.  However, for a more low-level approach that accomplishes the same outcome, the <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code> class itself can be the starting point for performing convolution on the grid and its features.  We will illustrate this approach for completeness, though we do recommend the use of the <code class="docutils literal notranslate"><span class="pre">fvdb.nn.SparseConv3d</span></code> Module for most use-cases.</p>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">GridBatch</span></code> convolution functions directly requires a little more knowledge about the implementation under-the-hood.  Due to the nature of a sparse grid, in order to make convolution performant, it is useful to pre-compute a mapping of which features in the input grid will contribute to the values of the output grid when convolved by a kernel of a particular dimension and stride.  This mapping structure is called a ‘kernel map’.</p>
+<p>The kernel map, as well as the functionality for using it to compute the convolution, is contained within a <code class="docutils literal notranslate"><span class="pre">fvdb.SparseConvPackInfo</span></code> class which can be constructed by <code class="docutils literal notranslate"><span class="pre">GridBatch.sparse_conv_kernel_map</span></code>.  A <code class="docutils literal notranslate"><span class="pre">fvdb.SparseConvPackInfo</span></code> must perform a pre-computation of the kernel map based on the style expected by the backend implementation of the convolution utilized by <code class="docutils literal notranslate"><span class="pre">fvdb.SparseConvPackInfo.sparse_conv_3d</span></code>.  Here is an example of how to construct a <code class="docutils literal notranslate"><span class="pre">fvdb.SparseConvPackInfo</span></code> and use it to perform a convolution:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">fvdb</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">fvdb.nn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">fvdbnn</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fvdb.utils.examples</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_car_1_mesh</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">point_cloud_utils</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pcu</span>
+
+<span class="n">num_pts</span> <span class="o">=</span> <span class="mi">10_000</span>
+<span class="n">vox_size</span> <span class="o">=</span> <span class="mf">0.02</span>
+
+<span class="n">mesh_load_funcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">load_car_1_mesh</span><span class="p">]</span>
+
+<span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">normals</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">mesh_load_funcs</span><span class="p">:</span>
+    <span class="n">pts</span><span class="p">,</span> <span class="n">nms</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;vn&quot;</span><span class="p">)</span>
+    <span class="n">pmt</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randperm</span><span class="p">(</span><span class="n">pts</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])[:</span><span class="n">num_pts</span><span class="p">]</span>
+    <span class="n">pts</span><span class="p">,</span> <span class="n">nms</span> <span class="o">=</span> <span class="n">pts</span><span class="p">[</span><span class="n">pmt</span><span class="p">],</span> <span class="n">nms</span><span class="p">[</span><span class="n">pmt</span><span class="p">]</span>
+    <span class="n">points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pts</span><span class="p">)</span>
+    <span class="n">normals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nms</span><span class="p">)</span>
+
+<span class="c1"># JaggedTensors of points and normals</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<span class="n">normals</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">JaggedTensor</span><span class="p">(</span><span class="n">normals</span><span class="p">)</span>
+
+<span class="c1"># Create a grid</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">fvdb</span><span class="o">.</span><span class="n">gridbatch_from_points</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">voxel_sizes</span><span class="o">=</span><span class="n">vox_size</span><span class="p">)</span>
+
+<span class="c1"># Splat the normals into the grid with trilinear interpolation</span>
+<span class="n">vox_normals</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">splat_trilinear</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">normals</span><span class="p">)</span>\
+
+<span class="c1"># Create the kernel map (housed in a SparseConvPackInfo) and the output grid&#39;s topology based on the kernel parameters</span>
+<span class="n">sparse_conv_packinfo</span><span class="p">,</span> <span class="n">out_grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">sparse_conv_kernel_map</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># The kernel map must be pre-computed based on the backend implementation we plan on using, here we use gather/scatter, the default implementation</span>
+<span class="n">sparse_conv_packinfo</span><span class="o">.</span><span class="n">build_gather_scatter</span><span class="p">()</span>
+
+<span class="c1"># Create random weights for our convolution kernel of size 3x3x3 that takes 3 input channels and produces 3 output channels</span>
+<span class="n">kernel_weights</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">grid</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+
+<span class="c1"># Perform convolution on the normals colours.  Gather/scatter is used as the backend, it is the default</span>
+<span class="n">conv_vox_normals</span> <span class="o">=</span> <span class="n">sparse_conv_packinfo</span><span class="o">.</span><span class="n">sparse_conv_3d</span><span class="p">(</span><span class="n">vox_normals</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">kernel_weights</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">fvdb</span><span class="o">.</span><span class="n">ConvPackBackend</span><span class="o">.</span><span class="n">GATHER_SCATTER</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here we visualize the output of our convolution alongside the original grid with normals visualized as colours:
+<img alt="" src="../_images/gridbatch_conv.png" /></p>
+<p>The kernel map can potentially be expensive to compute, so it is often useful to re-use the <code class="docutils literal notranslate"><span class="pre">SparseConvPackInfo</span></code> in the same network to perform a convolution on other features or with different weights.  This optimization is something <code class="docutils literal notranslate"><span class="pre">fvdb.nn.SparseConv3d</span></code> attempts to do where appropriate and is one reason we recommend using <code class="docutils literal notranslate"><span class="pre">fvdb.nn.SparseConv3d</span></code> over this low-level approach.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="building_grids.html" class="btn btn-neutral float-left" title="Building Sparse Grids" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="simple_unet.html" class="btn btn-neutral float-right" title="A Simple Convolutional U-Net" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Contributors to the OpenVDB Project.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
