@@ -25,7 +25,6 @@ Please refer to the tutorials for examples of how to install and use fVDB to bui
    tutorials/basic_concepts
    tutorials/building_grids
    tutorials/basic_grid_ops
-   tutorials/ray_tracing
    tutorials/simple_unet
    tutorials/io
    tutorials/mutable_grids
