@@ -439,6 +439,16 @@ a {
   background:transparent url(images/vred.png) center top no-repeat;
 }
 
+#sidebar-integration h4.stoke {
+  height: 41px;
+  background:transparent url(images/stoke.png) center top no-repeat;
+}
+
+#sidebar-integration h4.picogk {
+  height: 38px;
+  background:transparent url(images/picogk.png) center top no-repeat;
+}
+
 #sidebar-integration h4.vfx {
   height: 26px;
   background:transparent url(images/vfx.png) center top no-repeat;
