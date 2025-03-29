@@ -275,6 +275,7 @@ var searchData=
   ['setversion',['setVersion',['../namespaceopenvdb_1_1v12__0_1_1io.html#a971a811bfc8223ee84ac77c7bf26ffc5',1,'openvdb::v12_0::io']]],
   ['setwarningprefix',['setWarningPrefix',['../classopenvdb_1_1v12__0_1_1ax_1_1Logger.html#a0c0ce7563ed7e13cc654063791132369',1,'openvdb::v12_0::ax::Logger']]],
   ['setwarningsaserrors',['setWarningsAsErrors',['../classopenvdb_1_1v12__0_1_1ax_1_1Logger.html#a9a11321f26a16eff7a3e7f1536c37b34',1,'openvdb::v12_0::ax::Logger']]],
+  ['setword',['setWord',['../classnanovdb_1_1Mask.html#ada5861103cf05c3f86145e9697e00ae3',1,'nanovdb::Mask']]],
   ['setworldray',['setWorldRay',['../classopenvdb_1_1v12__0_1_1tools_1_1VolumeRayIntersector.html#ad4334e396bf96feeb6e90634f63f907e',1,'openvdb::v12_0::tools::VolumeRayIntersector::setWorldRay()'],['../classopenvdb_1_1v12__0_1_1tools_1_1LinearSearchImpl.html#ad4334e396bf96feeb6e90634f63f907e',1,'openvdb::v12_0::tools::LinearSearchImpl::setWorldRay()']]],
   ['setwritegridstats',['setWriteGridStats',['../classopenvdb_1_1v12__0_1_1io_1_1StreamMetadata.html#afef9484575d167652b8c68c694fb5684',1,'openvdb::v12_0::io::StreamMetadata']]],
   ['setwritegridstatsmetadata',['setWriteGridStatsMetadata',['../namespaceopenvdb_1_1v12__0_1_1io.html#a5e16af8fff3e59d28fac3914576a4ef2',1,'openvdb::v12_0::io']]],

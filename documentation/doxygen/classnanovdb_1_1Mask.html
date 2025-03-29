@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">12.0.0</span>
+   &#160;<span id="projectnumber">12.0.1</span>
    </div>
   </td>
  </tr>
@@ -146,6 +146,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8c41118a6769a0a7acb744b137c7eb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46004d413547670f9f4c7057e27f7c1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const uint64_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a46004d413547670f9f4c7057e27f7c1a">words</a> () const </td></tr>
 <tr class="separator:a46004d413547670f9f4c7057e27f7c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a8967065190527ba69e048bb80b736"><td class="memTemplParams" colspan="2">template&lt;typename WordT &gt; </td></tr>
+<tr class="memitem:a58a8967065190527ba69e048bb80b736"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> WordT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a58a8967065190527ba69e048bb80b736">getWord</a> (uint32_t n) const </td></tr>
+<tr class="separator:a58a8967065190527ba69e048bb80b736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada5861103cf05c3f86145e9697e00ae3"><td class="memTemplParams" colspan="2">template&lt;typename WordT &gt; </td></tr>
+<tr class="memitem:ada5861103cf05c3f86145e9697e00ae3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#ada5861103cf05c3f86145e9697e00ae3">setWord</a> (WordT w, uint32_t n)</td></tr>
+<tr class="separator:ada5861103cf05c3f86145e9697e00ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ce1244d07cc974bcc624cde71434257"><td class="memTemplParams" colspan="2">template&lt;typename MaskT  = Mask&gt; </td></tr>
 <tr class="memitem:a7ce1244d07cc974bcc624cde71434257"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt;!<a class="el" href="structnanovdb_1_1util_1_1is__same.html">util::is_same</a>&lt; MaskT, <a class="el" href="classnanovdb_1_1Mask.html">Mask</a> &gt;::value, <a class="el" href="classnanovdb_1_1Mask.html">Mask</a> &amp; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Mask.html#a7ce1244d07cc974bcc624cde71434257">operator=</a> (const MaskT &amp;other)</td></tr>
 <tr class="memdesc:a7ce1244d07cc974bcc624cde71434257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator that works with openvdb::util::NodeMask.  <a href="#a7ce1244d07cc974bcc624cde71434257">More...</a><br /></td></tr>
@@ -543,6 +549,30 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
           <td class="paramname"><em>start</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58a8967065190527ba69e048bb80b736"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> WordT getWord </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1045,6 +1075,40 @@ class nanovdb::Mask&lt; LOG2DIM &gt;</h3>
 </div><div class="memdoc">
 
 <p>Set all bits on. </p>
+
+</div>
+</div>
+<a class="anchor" id="ada5861103cf05c3f86145e9697e00ae3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void setWord </td>
+          <td>(</td>
+          <td class="paramtype">WordT&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

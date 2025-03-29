@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">12.0.0</span>
+   &#160;<span id="projectnumber">12.0.1</span>
    </div>
   </td>
  </tr>
@@ -109,17 +109,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac90bb64677ce4aa235bfb6c1f5178177"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1util_1_1Timer.html#ac90bb64677ce4aa235bfb6c1f5178177">start</a> (const std::string &amp;msg, std::ostream &amp;os=std::cerr)</td></tr>
 <tr class="memdesc:ac90bb64677ce4aa235bfb6c1f5178177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the timer.  <a href="#ac90bb64677ce4aa235bfb6c1f5178177">More...</a><br /></td></tr>
 <tr class="separator:ac90bb64677ce4aa235bfb6c1f5178177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2ae727c20e5f803e5f075b41aea2fb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1util_1_1Timer.html#ad2ae727c20e5f803e5f075b41aea2fb4">record</a> ()</td></tr>
+<tr class="memdesc:ad2ae727c20e5f803e5f075b41aea2fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Record the stop time so the elapsed time since start can be computed.  <a href="#ad2ae727c20e5f803e5f075b41aea2fb4">More...</a><br /></td></tr>
+<tr class="separator:ad2ae727c20e5f803e5f075b41aea2fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c1fbacebeaf4d25a786353d543d09d6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1util_1_1Timer.html#a1c1fbacebeaf4d25a786353d543d09d6">milliseconds</a> () const </td></tr>
+<tr class="memdesc:a1c1fbacebeaf4d25a786353d543d09d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time in milliseconds since record was called.  <a href="#a1c1fbacebeaf4d25a786353d543d09d6">More...</a><br /></td></tr>
+<tr class="separator:a1c1fbacebeaf4d25a786353d543d09d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6fad1492964bc13b1ac74190f357550"><td class="memTemplParams" colspan="2">template&lt;typename AccuracyT  = std::chrono::milliseconds&gt; </td></tr>
 <tr class="memitem:ab6fad1492964bc13b1ac74190f357550"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1util_1_1Timer.html#ab6fad1492964bc13b1ac74190f357550">elapsed</a> ()</td></tr>
-<tr class="memdesc:ab6fad1492964bc13b1ac74190f357550"><td class="mdescLeft">&#160;</td><td class="mdescRight">elapsed time (since start) in miliseconds  <a href="#ab6fad1492964bc13b1ac74190f357550">More...</a><br /></td></tr>
+<tr class="memdesc:ab6fad1492964bc13b1ac74190f357550"><td class="mdescLeft">&#160;</td><td class="mdescRight">call record and return the elapsed time (since start) in miliseconds  <a href="#ab6fad1492964bc13b1ac74190f357550">More...</a><br /></td></tr>
 <tr class="separator:ab6fad1492964bc13b1ac74190f357550"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4a0b6ea58c853e1943a3107e084a930"><td class="memTemplParams" colspan="2">template&lt;typename AccuracyT  = std::chrono::milliseconds&gt; </td></tr>
 <tr class="memitem:aa4a0b6ea58c853e1943a3107e084a930"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1util_1_1Timer.html#aa4a0b6ea58c853e1943a3107e084a930">stop</a> (std::ostream &amp;os=std::cerr)</td></tr>
-<tr class="memdesc:aa4a0b6ea58c853e1943a3107e084a930"><td class="mdescLeft">&#160;</td><td class="mdescRight">stop the timer  <a href="#aa4a0b6ea58c853e1943a3107e084a930">More...</a><br /></td></tr>
+<tr class="memdesc:aa4a0b6ea58c853e1943a3107e084a930"><td class="mdescLeft">&#160;</td><td class="mdescRight">stop the timer and print elapsed time to a stream  <a href="#aa4a0b6ea58c853e1943a3107e084a930">More...</a><br /></td></tr>
 <tr class="separator:aa4a0b6ea58c853e1943a3107e084a930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c898c94bf62ee7cb07a5170cc1875f2"><td class="memTemplParams" colspan="2">template&lt;typename AccuracyT  = std::chrono::milliseconds&gt; </td></tr>
 <tr class="memitem:a6c898c94bf62ee7cb07a5170cc1875f2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1util_1_1Timer.html#a6c898c94bf62ee7cb07a5170cc1875f2">restart</a> (const std::string &amp;msg, std::ostream &amp;os=std::cerr)</td></tr>
-<tr class="memdesc:a6c898c94bf62ee7cb07a5170cc1875f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">stop and start the timer  <a href="#a6c898c94bf62ee7cb07a5170cc1875f2">More...</a><br /></td></tr>
+<tr class="memdesc:a6c898c94bf62ee7cb07a5170cc1875f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">stop and start the timer again  <a href="#a6c898c94bf62ee7cb07a5170cc1875f2">More...</a><br /></td></tr>
 <tr class="separator:a6c898c94bf62ee7cb07a5170cc1875f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -213,7 +219,57 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>elapsed time (since start) in miliseconds </p>
+<p>call record and return the elapsed time (since start) in miliseconds </p>
+
+</div>
+</div>
+<a class="anchor" id="a1c1fbacebeaf4d25a786353d543d09d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float milliseconds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the time in milliseconds since record was called. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad2ae727c20e5f803e5f075b41aea2fb4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void record </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Record the stop time so the elapsed time since start can be computed. </p>
 
 </div>
 </div>
@@ -249,7 +305,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>stop and start the timer </p>
+<p>stop and start the timer again </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">AccuracyT</td><td>Template parameter defining the accuracy of the reported times </td></tr>
@@ -331,7 +387,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>stop the timer </p>
+<p>stop the timer and print elapsed time to a stream </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">AccuracyT</td><td>Template parameter defining the accuracy of the reported times </td></tr>
