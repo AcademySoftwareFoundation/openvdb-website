@@ -85,7 +85,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p> <a name="v12_0_1_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 12.0.1</b> - <em>In development</em></dd></dl>
+<div class="textblock"><p> <a name="v12_0_1_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 12.0.1</b> - <em>April 3, 2025</em></dd></dl>
+<dl class="section user"><dt></dt><dd>OpenVDB:<ul>
+<li>New features:<ul>
+<li>Added read and write support for OFF (Object File Format) files to vdb_tool</li>
+</ul>
+</li>
+<li>Build:<ul>
+<li>Fixed a build issue with vdb_render on Windows with newer versions of glew not including glu.h by default</li>
+<li>Fixed issues with newer versions of clang refusing to accept older ::template syntax</li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>NanoVDB:<ul>
+<li>New features:<ul>
+<li>Added support for multiple GPUs to DeviceBuffer</li>
+<li>Added a UnifiedBuffer class that wraps CUDA unified memory</li>
+<li>Added example for multiGPU sparse convolution</li>
+<li>Added CUDA utility functions for device queries</li>
+<li>Added functions to independently stop and compute the elapsed time for timer classes</li>
+</ul>
+</li>
+<li>Improvements:<ul>
+<li>Replaced CUB's CachingDeviceAllocator with the default asynchronous stream ordered allocator in PointsToGrid for improved performance</li>
+</ul>
+</li>
+<li>Bug fix:<ul>
+<li>Map is now properly transposed when converting NanoVDB to OpenVDB.</li>
+<li>Fixed ostream specializations being hidden within the nanovdb namespace</li>
+<li>Fixed a call to a non-existent method in GridBuild.h</li>
+</ul>
+</li>
+</ul>
+</dd></dl>
 <p> <a name="v1_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 12.0.0</b> - <em>October 31, 2024</em></dd></dl>
 <dl class="section user"><dt></dt><dd><blockquote class="doxtable">
 <p>OpenVDB is now licensed under the Apache&#160;2.0 license, instead of the MPL&#160;2.0 license. </p>
