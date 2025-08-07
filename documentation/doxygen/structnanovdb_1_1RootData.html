@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">12.0.1</span>
+   &#160;<span id="projectnumber">12.1.0</span>
    </div>
   </td>
  </tr>
@@ -112,6 +112,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData_1_1Tile.html">Tile</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1RootData_1_1TileIter.html">TileIter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -126,18 +128,34 @@ Public Types</h2></td></tr>
 <tr class="memitem:a5699e4397038afcbc1e0d7828c9e71d2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#a5699e4397038afcbc1e0d7828c9e71d2">KeyT</a> = uint64_t</td></tr>
 <tr class="memdesc:a5699e4397038afcbc1e0d7828c9e71d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a key based on the coordinates of a voxel.  <a href="#a5699e4397038afcbc1e0d7828c9e71d2">More...</a><br /></td></tr>
 <tr class="separator:a5699e4397038afcbc1e0d7828c9e71d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef8b519eb3ffa53f5bc161412696a440"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#aef8b519eb3ffa53f5bc161412696a440">TileIterator</a> = <a class="el" href="classnanovdb_1_1RootData_1_1TileIter.html">TileIter</a>&lt; <a class="el" href="structnanovdb_1_1RootData.html">RootData</a> &gt;</td></tr>
+<tr class="separator:aef8b519eb3ffa53f5bc161412696a440"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae36d86d3fe323e32ec6c30b87ad8b94a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#ae36d86d3fe323e32ec6c30b87ad8b94a">ConstTileIterator</a> = <a class="el" href="classnanovdb_1_1RootData_1_1TileIter.html">TileIter</a>&lt; const <a class="el" href="structnanovdb_1_1RootData.html">RootData</a> &gt;</td></tr>
+<tr class="separator:ae36d86d3fe323e32ec6c30b87ad8b94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad3ea08b31f8177d0b499fd6aeb6c80dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="structnanovdb_1_1RootData_1_1Tile.html">Tile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#ad3ea08b31f8177d0b499fd6aeb6c80dc">tile</a> (uint32_t n) const </td></tr>
-<tr class="memdesc:ad3ea08b31f8177d0b499fd6aeb6c80dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a non-const reference to the tile at the specified linear offset.  <a href="#ad3ea08b31f8177d0b499fd6aeb6c80dc">More...</a><br /></td></tr>
+<tr class="memdesc:ad3ea08b31f8177d0b499fd6aeb6c80dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the tile at the specified linear offset.  <a href="#ad3ea08b31f8177d0b499fd6aeb6c80dc">More...</a><br /></td></tr>
 <tr class="separator:ad3ea08b31f8177d0b499fd6aeb6c80dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a004ab39e72227bff47bbc524e94dc2e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="structnanovdb_1_1RootData_1_1Tile.html">Tile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#a004ab39e72227bff47bbc524e94dc2e9">tile</a> (uint32_t n)</td></tr>
 <tr class="separator:a004ab39e72227bff47bbc524e94dc2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aa396e75a7b165edf40fcd865750989"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="structnanovdb_1_1RootData.html#aef8b519eb3ffa53f5bc161412696a440">TileIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#a2aa396e75a7b165edf40fcd865750989">beginTile</a> ()</td></tr>
+<tr class="separator:a2aa396e75a7b165edf40fcd865750989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7274a13452c8d94100f4cdbf4c2d7eb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="structnanovdb_1_1RootData.html#ae36d86d3fe323e32ec6c30b87ad8b94a">ConstTileIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#a7274a13452c8d94100f4cdbf4c2d7eb1">cbeginTile</a> () const </td></tr>
+<tr class="separator:a7274a13452c8d94100f4cdbf4c2d7eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b8177e893ab2e70a2992f4c4d7a574"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="structnanovdb_1_1RootData.html#aef8b519eb3ffa53f5bc161412696a440">TileIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#ac5b8177e893ab2e70a2992f4c4d7a574">probe</a> (const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;ijk)</td></tr>
+<tr class="separator:ac5b8177e893ab2e70a2992f4c4d7a574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae786d933aff59dcac7b08a95087bf60d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="structnanovdb_1_1RootData.html#ae36d86d3fe323e32ec6c30b87ad8b94a">ConstTileIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#ae786d933aff59dcac7b08a95087bf60d">probe</a> (const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;ijk) const </td></tr>
+<tr class="separator:ae786d933aff59dcac7b08a95087bf60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad281b98e9e778cbbcd5e895fad3741db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="structnanovdb_1_1RootData_1_1Tile.html">Tile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#ad281b98e9e778cbbcd5e895fad3741db">probeTile</a> (const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;ijk)</td></tr>
 <tr class="separator:ad281b98e9e778cbbcd5e895fad3741db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9e51f2cf2bc171636d77fcc3ce95bbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="structnanovdb_1_1RootData_1_1Tile.html">Tile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#aa9e51f2cf2bc171636d77fcc3ce95bbf">probeTile</a> (const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;ijk) const </td></tr>
 <tr class="separator:aa9e51f2cf2bc171636d77fcc3ce95bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a7b7d3cac8ee6ef984964af4fd0d674"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> ChildT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#a7a7b7d3cac8ee6ef984964af4fd0d674">probeChild</a> (const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;ijk)</td></tr>
+<tr class="separator:a7a7b7d3cac8ee6ef984964af4fd0d674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc94fc993bf1de9ce96d6bc30981ee5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const ChildT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#acc94fc993bf1de9ce96d6bc30981ee5b">probeChild</a> (const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;ijk) const </td></tr>
+<tr class="separator:acc94fc993bf1de9ce96d6bc30981ee5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb5b3ecd7d4153deb09b3126590dab62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> ChildT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1RootData.html#acb5b3ecd7d4153deb09b3126590dab62">getChild</a> (const <a class="el" href="structnanovdb_1_1RootData_1_1Tile.html">Tile</a> *<a class="el" href="structnanovdb_1_1RootData.html#ad3ea08b31f8177d0b499fd6aeb6c80dc">tile</a>)</td></tr>
 <tr class="memdesc:acb5b3ecd7d4153deb09b3126590dab62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the child node in the specified tile.  <a href="#acb5b3ecd7d4153deb09b3126590dab62">More...</a><br /></td></tr>
 <tr class="separator:acb5b3ecd7d4153deb09b3126590dab62"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,6 +239,18 @@ struct nanovdb::RootData&lt; ChildT &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="ae36d86d3fe323e32ec6c30b87ad8b94a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structnanovdb_1_1RootData.html#ae36d86d3fe323e32ec6c30b87ad8b94a">ConstTileIterator</a> =  <a class="el" href="classnanovdb_1_1RootData_1_1TileIter.html">TileIter</a>&lt;const <a class="el" href="structnanovdb_1_1RootData.html">RootData</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a02814723ac4ced8cacf10f521e324ba2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -253,6 +283,18 @@ struct nanovdb::RootData&lt; ChildT &gt;</h3>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="structnanovdb_1_1RootData.html#a6b925a2a478794759774313d42b7fce0">StatsT</a> =  typename ChildT::FloatType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aef8b519eb3ffa53f5bc161412696a440"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="structnanovdb_1_1RootData.html#aef8b519eb3ffa53f5bc161412696a440">TileIterator</a> =  <a class="el" href="classnanovdb_1_1RootData_1_1TileIter.html">TileIter</a>&lt;<a class="el" href="structnanovdb_1_1RootData.html">RootData</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -354,6 +396,52 @@ struct nanovdb::RootData&lt; ChildT &gt;</h3>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="structnanovdb_1_1RootData.html#a6b925a2a478794759774313d42b7fce0">StatsT</a>&amp; average </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2aa396e75a7b165edf40fcd865750989"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="structnanovdb_1_1RootData.html#aef8b519eb3ffa53f5bc161412696a440">TileIterator</a> beginTile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7274a13452c8d94100f4cdbf4c2d7eb1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="structnanovdb_1_1RootData.html#ae36d86d3fe323e32ec6c30b87ad8b94a">ConstTileIterator</a> cbeginTile </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -563,6 +651,102 @@ struct nanovdb::RootData&lt; ChildT &gt;</h3>
 
 </div>
 </div>
+<a class="anchor" id="ac5b8177e893ab2e70a2992f4c4d7a574"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="structnanovdb_1_1RootData.html#aef8b519eb3ffa53f5bc161412696a440">TileIterator</a> probe </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;&#160;</td>
+          <td class="paramname"><em>ijk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae786d933aff59dcac7b08a95087bf60d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="structnanovdb_1_1RootData.html#ae36d86d3fe323e32ec6c30b87ad8b94a">ConstTileIterator</a> probe </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;&#160;</td>
+          <td class="paramname"><em>ijk</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7a7b7d3cac8ee6ef984964af4fd0d674"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> ChildT* probeChild </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;&#160;</td>
+          <td class="paramname"><em>ijk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acc94fc993bf1de9ce96d6bc30981ee5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const ChildT* probeChild </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1RootData.html#a02814723ac4ced8cacf10f521e324ba2">CoordT</a> &amp;&#160;</td>
+          <td class="paramname"><em>ijk</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad281b98e9e778cbbcd5e895fad3741db"></a>
 <div class="memitem">
 <div class="memproto">
@@ -752,7 +936,7 @@ struct nanovdb::RootData&lt; ChildT &gt;</h3>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a non-const reference to the tile at the specified linear offset. </p>
+<p>Returns a pointer to the tile at the specified linear offset. </p>
 <dl class="section warning"><dt>Warning</dt><dd>The linear offset is assumed to be in the valid range </dd></dl>
 
 </div>

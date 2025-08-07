@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">12.0.1</span>
+   &#160;<span id="projectnumber">12.1.0</span>
    </div>
   </td>
  </tr>
@@ -238,7 +238,7 @@ Scalars</h2>
 <dl class="section user"><dt>Integer Overflow and Floating Point Truncation</dt><dd>Scalars may be cast from one type to another, either explicitly using the <a class="el" href="ax.html#axopother">cast</a> operator or implicitly during <a class="el" href="ax.html#axopassignment">assignments</a> or <a class="el" href="ax.html#axopbinarithmetic">binary arthimetic</a> operations (in which case the order of <a class="el" href="ax.html#axtypeprecedence">type precedence</a> is observed). Data can be truncated (converting floats to integrals) or overflow (conversions from integers of larger bit widths to integers of smaller bit widths) depending on the source and target types. See the below examples: </dd></dl>
 <dl class="section user"><dt></dt><dd>This example demonstrates floating point truncation in AX. <div class="fragment"><div class="line"><span class="keywordtype">float</span> a = 1.1f;</div><div class="line"><span class="keywordtype">int</span> b = 5.5f; <span class="comment">// implict conversion from literal 5.5f. &quot;b&quot; is set to 5</span></div><div class="line">b = a; <span class="comment">// implicit conversion from float &quot;a&quot;. &quot;b&quot; is set to 1</span></div></div><!-- fragment --> </dd></dl>
 <dl class="section user"><dt></dt><dd>This example demonstrates integer overflow in AX. <div class="fragment"><div class="line">int64 a = 2147483648l; <span class="comment">// one more than can be held in an int (note the last letter &quot;l&quot;)</span></div><div class="line"><span class="keywordtype">int</span> b = a; <span class="comment">// implicit conversion. &quot;b&quot; is set to -2147483648</span></div></div><!-- fragment --> </dd></dl>
-<dl class="section user"><dt>Infinite and NaN values</dt><dd>Floating point values have two additional intrinsic states; <b><code>inf</code></b> and <b><code>nan</code></b>. These states can occur during invalid floating point arithmetic. AX performs no checks on arithmetic to catch these values. A typical example of both <b><code>inf</code></b> and <b><code>nan</code></b> values are division by zero expressions: <div class="fragment"><div class="line"><span class="keywordtype">float</span> a = 1.0f/0.0f;</div><div class="line"><a class="code" href="namespaceopenvdb_1_1v12__0_1_1ax_1_1ast.html#a1b066671fba6b75811ec72f221d54fae">print</a>(a); <span class="comment">// prints &quot;inf&quot;</span></div></div><!-- fragment --> <div class="fragment"><div class="line"><span class="keywordtype">float</span> a = 0.0f/0.0f;</div><div class="line"><a class="code" href="namespaceopenvdb_1_1v12__0_1_1ax_1_1ast.html#a1b066671fba6b75811ec72f221d54fae">print</a>(a); <span class="comment">// prints some version of &quot;nan&quot;</span></div></div><!-- fragment --> </dd></dl>
+<dl class="section user"><dt>Infinite and NaN values</dt><dd>Floating point values have two additional intrinsic states; <b><code>inf</code></b> and <b><code>nan</code></b>. These states can occur during invalid floating point arithmetic. AX performs no checks on arithmetic to catch these values. A typical example of both <b><code>inf</code></b> and <b><code>nan</code></b> values are division by zero expressions: <div class="fragment"><div class="line"><span class="keywordtype">float</span> a = 1.0f/0.0f;</div><div class="line"><a class="code" href="namespaceopenvdb_1_1v12__1_1_1ax_1_1ast.html#a082c445d2da7e00ab27aac040d236f4e">print</a>(a); <span class="comment">// prints &quot;inf&quot;</span></div></div><!-- fragment --> <div class="fragment"><div class="line"><span class="keywordtype">float</span> a = 0.0f/0.0f;</div><div class="line"><a class="code" href="namespaceopenvdb_1_1v12__1_1_1ax_1_1ast.html#a082c445d2da7e00ab27aac040d236f4e">print</a>(a); <span class="comment">// prints some version of &quot;nan&quot;</span></div></div><!-- fragment --> </dd></dl>
 <dl class="section user"><dt></dt><dd>Generally these values are not desired and can cause problems as they propagate throughout your program.</dd></dl>
 </div><h2><a class="anchor" id="axvecmats"></a>
 Vectors / Matrices</h2>
@@ -738,23 +738,23 @@ Container Access</h2>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>Where component is one of the below supported component letters. It only provides access for the first three elements of any vector (for <b><code>vec2</code></b> types, only the first 2 components are accessible). Accessing a vector using the dot operator is fundamentally the same as using the <b><code>[]</code></b> operator with the corresponding integer index. </dd></dl>
 <dl class="section user"><dt></dt><dd><div class="fragment"><div class="line">vec4i a = { 6, 7, 8, 9 };</div><div class="line"><span class="keywordtype">int</span> b = a.z; <span class="comment">// get the the third elements value (8)</span></div></div><!-- fragment --> <center> <p class="formulaDsp">
-<img class="formulaDsp" alt="\[ A=\begin{bmatrix} a_{0}\quad a_{1}\quad a_{2} \end{bmatrix} \]" src="form_3.png"/>
+<img class="formulaDsp" alt="\[ A=\begin{bmatrix} a_{0}\quad a_{1}\quad a_{2} \end{bmatrix} \]" src="form_6.png"/>
 </p>
  <table class="doxtable">
 <tr>
 <th align="center">Component </th><th align="center">Access Index </th><th align="center">Result  </th></tr>
 <tr>
-<td align="center"><b><code>A.x</code></b> </td><td align="center">0 </td><td align="center"><img class="formulaInl" alt="$ a_{0} $" src="form_4.png"/> </td></tr>
+<td align="center"><b><code>A.x</code></b> </td><td align="center">0 </td><td align="center"><img class="formulaInl" alt="$ a_{0} $" src="form_7.png"/> </td></tr>
 <tr>
-<td align="center"><b><code>A.r</code></b> </td><td align="center">0 </td><td align="center"><img class="formulaInl" alt="$ a_{0} $" src="form_4.png"/> </td></tr>
+<td align="center"><b><code>A.r</code></b> </td><td align="center">0 </td><td align="center"><img class="formulaInl" alt="$ a_{0} $" src="form_7.png"/> </td></tr>
 <tr>
-<td align="center"><b><code>A.y</code></b> </td><td align="center">1 </td><td align="center"><img class="formulaInl" alt="$ a_{1} $" src="form_5.png"/> </td></tr>
+<td align="center"><b><code>A.y</code></b> </td><td align="center">1 </td><td align="center"><img class="formulaInl" alt="$ a_{1} $" src="form_8.png"/> </td></tr>
 <tr>
-<td align="center"><b><code>A.g</code></b> </td><td align="center">1 </td><td align="center"><img class="formulaInl" alt="$ a_{1} $" src="form_5.png"/> </td></tr>
+<td align="center"><b><code>A.g</code></b> </td><td align="center">1 </td><td align="center"><img class="formulaInl" alt="$ a_{1} $" src="form_8.png"/> </td></tr>
 <tr>
-<td align="center"><b><code>A.z</code></b> </td><td align="center">2 </td><td align="center"><img class="formulaInl" alt="$ a_{2} $" src="form_6.png"/> </td></tr>
+<td align="center"><b><code>A.z</code></b> </td><td align="center">2 </td><td align="center"><img class="formulaInl" alt="$ a_{2} $" src="form_9.png"/> </td></tr>
 <tr>
-<td align="center"><b><code>A.b</code></b> </td><td align="center">2 </td><td align="center"><img class="formulaInl" alt="$ a_{2} $" src="form_6.png"/> </td></tr>
+<td align="center"><b><code>A.b</code></b> </td><td align="center">2 </td><td align="center"><img class="formulaInl" alt="$ a_{2} $" src="form_9.png"/> </td></tr>
 </table>
 </center> </dd></dl>
 <dl class="section user"><dt></dt><dd>This operator can provide more immediately readability when working with expressions that focus on colour or Cartesian coordinate systems. <a class="anchor" id="axvecaccessop"></a></dd></dl>
@@ -778,46 +778,46 @@ Container Access</h2>
 <dl class="section user"><dt></dt><dd><table class="doxtable">
 <tr style="text-align:center">
 <td style="border:none" colspan="3"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ A=\begin{bmatrix} a_{00}\quad a_{01}\quad a_{02}\\ a_{10}\quad a_{11}\quad a_{12}\\ a_{20}\quad a_{21}\quad a_{22}\\ \end{bmatrix} \]" src="form_7.png"/>
+<img class="formulaDsp" alt="\[ A=\begin{bmatrix} a_{00}\quad a_{01}\quad a_{02}\\ a_{10}\quad a_{11}\quad a_{12}\\ a_{20}\quad a_{21}\quad a_{22}\\ \end{bmatrix} \]" src="form_10.png"/>
 </p>
   </td><td style="border:none"></td><td style="border:none" colspan="3"><p class="formulaDsp">
-<img class="formulaDsp" alt="\[ A=\begin{bmatrix} a_{00}\quad a_{01}\quad a_{02}\quad a_{03}\\ a_{10}\quad a_{11}\quad a_{12}\quad a_{13}\\ a_{20}\quad a_{21}\quad a_{22}\quad a_{23}\\ a_{30}\quad a_{31}\quad a_{32}\quad a_{33}\\ \end{bmatrix} \]" src="form_8.png"/>
+<img class="formulaDsp" alt="\[ A=\begin{bmatrix} a_{00}\quad a_{01}\quad a_{02}\quad a_{03}\\ a_{10}\quad a_{11}\quad a_{12}\quad a_{13}\\ a_{20}\quad a_{21}\quad a_{22}\quad a_{23}\\ a_{30}\quad a_{31}\quad a_{32}\quad a_{33}\\ \end{bmatrix} \]" src="form_11.png"/>
 </p>
    </td></tr>
 <tr style="text-align:center">
 <th>Access [a] </th><th>Access [a,b] </th><th style="border-right-style:none;">Result </th><td style="border:none" rowspan="17"></td><th>Access [a] </th><th>Access [a,b] </th><th>Result  </th></tr>
 <tr style="text-align:center">
-<td><code>A[0]</code> </td><td><code>A[0,0]</code> </td><td><img class="formulaInl" alt="$ a_{00} $" src="form_9.png"/> </td><td><code>A[0]</code> </td><td><code>A[0,0]</code> </td><td><img class="formulaInl" alt="$ a_{00} $" src="form_9.png"/>  </td></tr>
+<td><code>A[0]</code> </td><td><code>A[0,0]</code> </td><td><img class="formulaInl" alt="$ a_{00} $" src="form_12.png"/> </td><td><code>A[0]</code> </td><td><code>A[0,0]</code> </td><td><img class="formulaInl" alt="$ a_{00} $" src="form_12.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[1]</code> </td><td><code>A[0,1]</code> </td><td><img class="formulaInl" alt="$ a_{01} $" src="form_10.png"/> </td><td><code>A[1]</code> </td><td><code>A[0,1]</code> </td><td><img class="formulaInl" alt="$ a_{01} $" src="form_10.png"/>  </td></tr>
+<td><code>A[1]</code> </td><td><code>A[0,1]</code> </td><td><img class="formulaInl" alt="$ a_{01} $" src="form_13.png"/> </td><td><code>A[1]</code> </td><td><code>A[0,1]</code> </td><td><img class="formulaInl" alt="$ a_{01} $" src="form_13.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[2]</code> </td><td><code>A[0,2]</code> </td><td><img class="formulaInl" alt="$ a_{02} $" src="form_11.png"/> </td><td><code>A[2]</code> </td><td><code>A[0,2]</code> </td><td><img class="formulaInl" alt="$ a_{02} $" src="form_11.png"/>  </td></tr>
+<td><code>A[2]</code> </td><td><code>A[0,2]</code> </td><td><img class="formulaInl" alt="$ a_{02} $" src="form_14.png"/> </td><td><code>A[2]</code> </td><td><code>A[0,2]</code> </td><td><img class="formulaInl" alt="$ a_{02} $" src="form_14.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[3]</code> </td><td><code>A[1,0]</code> </td><td><img class="formulaInl" alt="$ a_{10} $" src="form_12.png"/> </td><td><code>A[3]</code> </td><td><code>A[0,3]</code> </td><td><img class="formulaInl" alt="$ a_{03} $" src="form_13.png"/>  </td></tr>
+<td><code>A[3]</code> </td><td><code>A[1,0]</code> </td><td><img class="formulaInl" alt="$ a_{10} $" src="form_15.png"/> </td><td><code>A[3]</code> </td><td><code>A[0,3]</code> </td><td><img class="formulaInl" alt="$ a_{03} $" src="form_16.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[4]</code> </td><td><code>A[1,1]</code> </td><td><img class="formulaInl" alt="$ a_{10} $" src="form_12.png"/> </td><td><code>A[4]</code> </td><td><code>A[1,0]</code> </td><td><img class="formulaInl" alt="$ a_{10} $" src="form_12.png"/>  </td></tr>
+<td><code>A[4]</code> </td><td><code>A[1,1]</code> </td><td><img class="formulaInl" alt="$ a_{10} $" src="form_15.png"/> </td><td><code>A[4]</code> </td><td><code>A[1,0]</code> </td><td><img class="formulaInl" alt="$ a_{10} $" src="form_15.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[5]</code> </td><td><code>A[1,2]</code> </td><td><img class="formulaInl" alt="$ a_{12} $" src="form_14.png"/> </td><td><code>A[5]</code> </td><td><code>A[1,1]</code> </td><td><img class="formulaInl" alt="$ a_{11} $" src="form_15.png"/>  </td></tr>
+<td><code>A[5]</code> </td><td><code>A[1,2]</code> </td><td><img class="formulaInl" alt="$ a_{12} $" src="form_17.png"/> </td><td><code>A[5]</code> </td><td><code>A[1,1]</code> </td><td><img class="formulaInl" alt="$ a_{11} $" src="form_18.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[6]</code> </td><td><code>A[2,0]</code> </td><td><img class="formulaInl" alt="$ a_{20} $" src="form_16.png"/> </td><td><code>A[6]</code> </td><td><code>A[1,2]</code> </td><td><img class="formulaInl" alt="$ a_{12} $" src="form_14.png"/>  </td></tr>
+<td><code>A[6]</code> </td><td><code>A[2,0]</code> </td><td><img class="formulaInl" alt="$ a_{20} $" src="form_19.png"/> </td><td><code>A[6]</code> </td><td><code>A[1,2]</code> </td><td><img class="formulaInl" alt="$ a_{12} $" src="form_17.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[7]</code> </td><td><code>A[2,1]</code> </td><td><img class="formulaInl" alt="$ a_{21} $" src="form_17.png"/> </td><td><code>A[7]</code> </td><td><code>A[1,3]</code> </td><td><img class="formulaInl" alt="$ a_{13} $" src="form_18.png"/>  </td></tr>
+<td><code>A[7]</code> </td><td><code>A[2,1]</code> </td><td><img class="formulaInl" alt="$ a_{21} $" src="form_20.png"/> </td><td><code>A[7]</code> </td><td><code>A[1,3]</code> </td><td><img class="formulaInl" alt="$ a_{13} $" src="form_21.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[8]</code> </td><td><code>A[2,2]</code> </td><td><img class="formulaInl" alt="$ a_{22} $" src="form_19.png"/> </td><td><code>A[8]</code> </td><td><code>A[2,0]</code> </td><td><img class="formulaInl" alt="$ a_{20} $" src="form_16.png"/>  </td></tr>
+<td><code>A[8]</code> </td><td><code>A[2,2]</code> </td><td><img class="formulaInl" alt="$ a_{22} $" src="form_22.png"/> </td><td><code>A[8]</code> </td><td><code>A[2,0]</code> </td><td><img class="formulaInl" alt="$ a_{20} $" src="form_19.png"/>  </td></tr>
 <tr style="text-align:center">
-<td style="border:none;" colspan="3" rowspan="7"></td><td><code>A[9]</code> </td><td><code>A[2,1]</code> </td><td><img class="formulaInl" alt="$ a_{21} $" src="form_17.png"/>  </td></tr>
+<td style="border:none;" colspan="3" rowspan="7"></td><td><code>A[9]</code> </td><td><code>A[2,1]</code> </td><td><img class="formulaInl" alt="$ a_{21} $" src="form_20.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[10]</code> </td><td><code>A[2,2]</code> </td><td><img class="formulaInl" alt="$ a_{22} $" src="form_19.png"/>  </td></tr>
+<td><code>A[10]</code> </td><td><code>A[2,2]</code> </td><td><img class="formulaInl" alt="$ a_{22} $" src="form_22.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[11]</code> </td><td><code>A[2,3]</code> </td><td><img class="formulaInl" alt="$ a_{23} $" src="form_20.png"/>  </td></tr>
+<td><code>A[11]</code> </td><td><code>A[2,3]</code> </td><td><img class="formulaInl" alt="$ a_{23} $" src="form_23.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[12]</code> </td><td><code>A[3,0]</code> </td><td><img class="formulaInl" alt="$ a_{30} $" src="form_21.png"/>  </td></tr>
+<td><code>A[12]</code> </td><td><code>A[3,0]</code> </td><td><img class="formulaInl" alt="$ a_{30} $" src="form_24.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[13]</code> </td><td><code>A[3,1]</code> </td><td><img class="formulaInl" alt="$ a_{31} $" src="form_22.png"/>  </td></tr>
+<td><code>A[13]</code> </td><td><code>A[3,1]</code> </td><td><img class="formulaInl" alt="$ a_{31} $" src="form_25.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[14]</code> </td><td><code>A[3,2]</code> </td><td><img class="formulaInl" alt="$ a_{32} $" src="form_23.png"/>  </td></tr>
+<td><code>A[14]</code> </td><td><code>A[3,2]</code> </td><td><img class="formulaInl" alt="$ a_{32} $" src="form_26.png"/>  </td></tr>
 <tr style="text-align:center">
-<td><code>A[15]</code> </td><td><code>A[3,3]</code> </td><td><img class="formulaInl" alt="$ a_{33} $" src="form_24.png"/>  </td></tr>
+<td><code>A[15]</code> </td><td><code>A[3,3]</code> </td><td><img class="formulaInl" alt="$ a_{33} $" src="form_27.png"/>  </td></tr>
 </table>
 </dd></dl>
 </div><h2><a class="anchor" id="axopother"></a>

@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">12.0.1</span>
+   &#160;<span id="projectnumber">12.1.0</span>
    </div>
   </td>
  </tr>
@@ -160,7 +160,7 @@ Dependency Table</h2>
 <tr>
 <td>Boost </td><td>1.80 </td><td>1.82 </td><td>Components: iostreams </td><td>Y </td><td>Y </td><td><a href="https://www.boost.org">https://www.boost.org</a> </td></tr>
 <tr>
-<td>LLVM </td><td>13.0.0 </td><td>15.0.0* </td><td>Target-independent code generation </td><td>Y </td><td>Y </td><td><a href="https://llvm.org/">https://llvm.org/</a> </td></tr>
+<td>LLVM </td><td>15.0.0* </td><td>18.0.0 </td><td>Target-independent code generation </td><td>Y </td><td>Y </td><td><a href="https://llvm.org/">https://llvm.org/</a> </td></tr>
 <tr>
 <td>Bison </td><td>3.7.0 </td><td>3.7.0 </td><td>General-purpose parser generator </td><td>Y </td><td>Y </td><td><a href="https://www.gnu.org/software/gcc">https://www.gnu.org/software/gcc</a> </td></tr>
 <tr>
@@ -198,7 +198,7 @@ Dependency Table</h2>
 <h2><a class="anchor" id="depKnownIssues"></a>
 Known Issues</h2>
 <ul>
-<li><b>LLVM</b> &gt;= 15. LLVM has recently changed their IR pointer data types to be completely opaque. Some support is provided in LLVM 15 but tests with AX show that this is extremely unstable. AX currently only supports LLVM versions up until 14.X.X. See <a href="https://llvm.org/docs/OpaquePointers.html">https://llvm.org/docs/OpaquePointers.html</a> for more details.</li>
+<li><b>On</b> Linux, LLVM == 17 has symbol issues which makes it incompatible when used with the OpenVDB Python plugin. LLVM versions greater than 18 should be preferred.</li>
 <li><b>GLFW:</b> Crash with GLFW 3.2.1 when used with EGL on Linux. OpenVDB View may segfault on closure. Fixed in GLFW 3.3</li>
 <li><b>Blosc:</b> OpenVDB has historically used an old version of blosc (1.5.0) to serialize .vdb files. OpenVDB has moved to a new blosc version minimum of 1.17.0. We have tested a range of blosc versions and found that the following versions are NOT compatible with OpenVDB caches written using blosc 1.5.0. Additionally these versions of blosc may generally not be compatible with OpenVDB itself. Avoid using these versions and upgrade to the new minimum of 1.17.0 where possible.</li>
 <li>All versions from 1.11.0 through to, but excluding, 1.14.0.</li>

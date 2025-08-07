@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">12.0.1</span>
+   &#160;<span id="projectnumber">12.1.0</span>
    </div>
   </td>
  </tr>
@@ -113,6 +113,8 @@ Macros</h2></td></tr>
 <tr class="separator:ac156b02c89b6fcf62cd867da6d881475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7a931484d0bf4c15d597386de0ec0f6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Platform_8h.html#aa7a931484d0bf4c15d597386de0ec0f6">OPENVDB_UNLIKELY</a>(x)&#160;&#160;&#160;(x)</td></tr>
 <tr class="separator:aa7a931484d0bf4c15d597386de0ec0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c57090b8fcfc0467b3ee535ec330fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Platform_8h.html#ac7c57090b8fcfc0467b3ee535ec330fa">OPENVDB_ASSUME</a>(...)</td></tr>
+<tr class="separator:ac7c57090b8fcfc0467b3ee535ec330fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a857e437e165109054fd5c6ec359a00c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Platform_8h.html#a857e437e165109054fd5c6ec359a00c2">OPENVDB_FORCE_INLINE</a>&#160;&#160;&#160;inline</td></tr>
 <tr class="separator:a857e437e165109054fd5c6ec359a00c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8dadf7b858eb1987194e570f80bff79"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Platform_8h.html#ac8dadf7b858eb1987194e570f80bff79">OPENVDB_NO_UNREACHABLE_CODE_WARNING_BEGIN</a></td></tr>
@@ -193,6 +195,23 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>All classes and public free standing functions must be explicitly marked as &lt;lib&gt;_API to be exported. The &lt;lib&gt;_PRIVATE macros are defined when building that particular library. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac7c57090b8fcfc0467b3ee535ec330fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENVDB_ASSUME</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Macros for assume builtins. Note that we currently don't simply apply these in place of asserts (when asserts are disabled) - they should be only be applied with an assert once profiled </p>
 
 </div>
 </div>

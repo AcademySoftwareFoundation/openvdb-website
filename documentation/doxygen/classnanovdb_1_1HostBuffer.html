@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">12.0.1</span>
+   &#160;<span id="projectnumber">12.1.0</span>
    </div>
   </td>
  </tr>
@@ -131,6 +131,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a868306da35b47e165ce4eafe38a133ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#a868306da35b47e165ce4eafe38a133ac">init</a> (uint64_t <a class="el" href="classnanovdb_1_1HostBuffer.html#aba0fc633a0690845d3541d9b15e100b6">bufferSize</a>, void *<a class="el" href="classnanovdb_1_1HostBuffer.html#a2ed6f0f1eb8d14c1a7ac38fd7688a753">data</a>=nullptr)</td></tr>
 <tr class="memdesc:a868306da35b47e165ce4eafe38a133ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize as a full buffer with the specified size. If data is NULL the memory is internally allocated.  <a href="#a868306da35b47e165ce4eafe38a133ac">More...</a><br /></td></tr>
 <tr class="separator:a868306da35b47e165ce4eafe38a133ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1afa4a4f9b9c5fcaa10b231e6ddab0f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae1afa4a4f9b9c5fcaa10b231e6ddab0f"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#ae1afa4a4f9b9c5fcaa10b231e6ddab0f">data</a> (ptrdiff_t count=0) const </td></tr>
+<tr class="memdesc:ae1afa4a4f9b9c5fcaa10b231e6ddab0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an offset pointer of a specific type from the allocated host memory.  <a href="#ae1afa4a4f9b9c5fcaa10b231e6ddab0f">More...</a><br /></td></tr>
+<tr class="separator:ae1afa4a4f9b9c5fcaa10b231e6ddab0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac589a7b08dfe8ede6c6b58df215142bc"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1HostBuffer.html#ac589a7b08dfe8ede6c6b58df215142bc">poolSize</a> () const </td></tr>
 <tr class="memdesc:ac589a7b08dfe8ede6c6b58df215142bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size in bytes of the memory pool shared with this instance.  <a href="#ac589a7b08dfe8ede6c6b58df215142bc">More...</a><br /></td></tr>
 <tr class="separator:ac589a7b08dfe8ede6c6b58df215142bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -522,6 +526,45 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Retuns a pointer to the raw memory buffer managed by this allocator. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Note that the pointer can be NULL if the allocator was not initialized! </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae1afa4a4f9b9c5fcaa10b231e6ddab0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* data </td>
+          <td>(</td>
+          <td class="paramtype">ptrdiff_t&#160;</td>
+          <td class="paramname"><em>count</em> = <code>0</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an offset pointer of a specific type from the allocated host memory. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of the pointer returned </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>Numbers of elements of <code>parameter</code> type T to skip </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>might return NULL </dd></dl>
 
 </div>
 </div>

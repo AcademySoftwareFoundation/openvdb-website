@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">12.0.1</span>
+   &#160;<span id="projectnumber">12.1.0</span>
    </div>
   </td>
  </tr>
@@ -196,11 +196,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GetState.html">GetState</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements Tree::isActive(math::Coord)  <a href="structnanovdb_1_1GetState.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GetTile.html">GetTile</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return point to the root Tile where math::Coord maps to one of its values, i.e. terminates.  <a href="structnanovdb_1_1GetTile.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GetUpper.html">GetUpper</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return point to the upper internal node where math::Coord maps to one of its values, i.e. terminates.  <a href="structnanovdb_1_1GetUpper.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GetValue.html">GetValue</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements Tree::getValue(math::Coord), i.e. return the value associated with a specific coordinate <code>ijk</code>.  <a href="structnanovdb_1_1GetValue.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Below is an example of a struct used for random get methods.  <a href="structnanovdb_1_1GetValue.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1Grid.html">Grid</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently only supports uniform scaling and translation).  <a href="classnanovdb_1_1Grid.html#details">More...</a><br /></td></tr>
@@ -569,11 +572,8 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacenanovdb.html#aa0895e3576a80fc34b25fff786b1d108a723913be2557a3dcfe17866296fee5b6">NanoGrid</a> = 3, 
 <br />
 &#160;&#160;<a class="el" href="namespacenanovdb.html#aa0895e3576a80fc34b25fff786b1d108acabfde358eaaeaff8df932f1346f0bcf">NanoFile</a> = 4, 
-<a class="el" href="namespacenanovdb.html#aa0895e3576a80fc34b25fff786b1d108a424e3d83a854848e33557deb839998a9">NanoNode</a> = 5, 
-<a class="el" href="namespacenanovdb.html#aa0895e3576a80fc34b25fff786b1d108a7de23fcb1352fa82065eb9be76d63a5d">NanoFrag</a> = 6, 
-<a class="el" href="namespacenanovdb.html#aa0895e3576a80fc34b25fff786b1d108a87557f11575c0ad78e4e28abedc13b6e">End</a> = 7, 
-<br />
-&#160;&#160;<a class="el" href="namespacenanovdb.html#aa0895e3576a80fc34b25fff786b1d108a3b057f70b2c3c127066f1555ea066942">StrLen</a> = End + 25
+<a class="el" href="namespacenanovdb.html#aa0895e3576a80fc34b25fff786b1d108a87557f11575c0ad78e4e28abedc13b6e">End</a> = 5, 
+<a class="el" href="namespacenanovdb.html#aa0895e3576a80fc34b25fff786b1d108a3b057f70b2c3c127066f1555ea066942">StrLen</a> = End + 14
 <br />
  }<tr class="memdesc:aa0895e3576a80fc34b25fff786b1d108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enums used to identify magic numbers recognized by NanoVDB.  <a href="namespacenanovdb.html#aa0895e3576a80fc34b25fff786b1d108">More...</a><br /></td></tr>
 </td></tr>
@@ -1696,10 +1696,6 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="aa0895e3576a80fc34b25fff786b1d108acabfde358eaaeaff8df932f1346f0bcf"></a>NanoFile&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="aa0895e3576a80fc34b25fff786b1d108a424e3d83a854848e33557deb839998a9"></a>NanoNode&#160;</td><td class="fielddoc">
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="aa0895e3576a80fc34b25fff786b1d108a7de23fcb1352fa82065eb9be76d63a5d"></a>NanoFrag&#160;</td><td class="fielddoc">
-</td></tr>
 <tr><td class="fieldname"><a class="anchor" id="aa0895e3576a80fc34b25fff786b1d108a87557f11575c0ad78e4e28abedc13b6e"></a>End&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="aa0895e3576a80fc34b25fff786b1d108a3b057f70b2c3c127066f1555ea066942"></a>StrLen&#160;</td><td class="fielddoc">
@@ -2793,6 +2789,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>return the number of characters (including null termination) required to convert enum type to a string </p>
+<dl class="section note"><dt>Note</dt><dd>This curious implementation, which subtracts End from StrLen, avoids duplicate values in the enum! </dd></dl>
 
 </div>
 </div>
