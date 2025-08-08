@@ -127,6 +127,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>As of this release, LLVM 15 is the minimum required version for OpenVDB AX. Note that there is an issue with LLVM 17 symbols which makes it incompatible with the OpenVDB Python plugin. AS such, LLVM version 18 and greater are the recommended LLVM versions to use, with LLVM 18 being the new future minimum version.</li>
 <li>Significant performance improvement to the compilation of AX kernels when using LLVM 18 and greater.</li>
 <li>Significant backend refactoring to AX IR generation to support newer versions of LLVM. In particular, parts of the codegen::Function and codegen::FunctionBuilder API require new usage from LLVM 16 due to the LLVM opaque pointer changes. If you're not using the OpenVDB AX Function codegen API then no client changes should be necessary.</li>
+<li>Migrated OpenVDB AX unit tests from cppunit to gtest [Contributed by Tim Straubinger]</li>
 </ul>
 </li>
 <li>Fixes:<ul>
