@@ -13,5 +13,6 @@ var searchData=
   ['metadata_2eh',['Metadata.h',['../Metadata_8h.html',1,'']]],
   ['metamap_2eh',['MetaMap.h',['../MetaMap_8h.html',1,'']]],
   ['morphology_2eh',['Morphology.h',['../Morphology_8h.html',1,'']]],
+  ['morphologyhelpers_2eh',['MorphologyHelpers.h',['../MorphologyHelpers_8h.html',1,'']]],
   ['multiresgrid_2eh',['MultiResGrid.h',['../MultiResGrid_8h.html',1,'']]]
 ];

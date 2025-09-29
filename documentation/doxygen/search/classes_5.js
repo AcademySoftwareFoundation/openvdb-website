@@ -52,10 +52,10 @@ var searchData=
   ['functiontraits_3c_20r_28_2a_29_28args_2e_2e_2e_29_3e',['FunctionTraits&lt; R(*)(Args...)&gt;',['../structopenvdb_1_1v12__1_1_1ax_1_1codegen_1_1FunctionTraits_3_01R_07_5_08_07Args_8_8_8_08_4.html',1,'openvdb::v12_1::ax::codegen']]],
   ['functiontraits_3c_20r_28args_2e_2e_2e_29_3e',['FunctionTraits&lt; R(Args...)&gt;',['../structopenvdb_1_1v12__1_1_1ax_1_1codegen_1_1FunctionTraits.html',1,'openvdb::v12_1::ax::codegen']]],
   ['functiontraits_3c_20returnt_28args_2e_2e_2e_29_3e',['FunctionTraits&lt; ReturnT(Args...)&gt;',['../structopenvdb_1_1v12__1_1_1ax_1_1codegen_1_1FunctionTraits_3_01ReturnT_07Args_8_8_8_08_4.html',1,'openvdb::v12_1::ax::codegen']]],
-  ['functor',['Functor',['../structopenvdb_1_1v12__1_1_1tools_1_1Divergence_1_1Functor.html',1,'openvdb::v12_1::tools::Divergence']]],
-  ['functor',['Functor',['../structopenvdb_1_1v12__1_1_1tools_1_1MeanCurvature_1_1Functor.html',1,'openvdb::v12_1::tools::MeanCurvature']]],
-  ['functor',['Functor',['../structopenvdb_1_1v12__1_1_1tools_1_1Magnitude_1_1Functor.html',1,'openvdb::v12_1::tools::Magnitude']]],
   ['functor',['Functor',['../structopenvdb_1_1v12__1_1_1tools_1_1Gradient_1_1Functor.html',1,'openvdb::v12_1::tools::Gradient']]],
+  ['functor',['Functor',['../structopenvdb_1_1v12__1_1_1tools_1_1Divergence_1_1Functor.html',1,'openvdb::v12_1::tools::Divergence']]],
+  ['functor',['Functor',['../structopenvdb_1_1v12__1_1_1tools_1_1Magnitude_1_1Functor.html',1,'openvdb::v12_1::tools::Magnitude']]],
   ['functor',['Functor',['../structopenvdb_1_1v12__1_1_1tools_1_1Laplacian_1_1Functor.html',1,'openvdb::v12_1::tools::Laplacian']]],
+  ['functor',['Functor',['../structopenvdb_1_1v12__1_1_1tools_1_1MeanCurvature_1_1Functor.html',1,'openvdb::v12_1::tools::MeanCurvature']]],
   ['functor',['Functor',['../structopenvdb_1_1v12__1_1_1tools_1_1Normalize_1_1Functor.html',1,'openvdb::v12_1::tools::Normalize']]]
 ];

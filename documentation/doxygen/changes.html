@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">12.1.0</span>
+   &#160;<span id="projectnumber">12.1.1</span>
    </div>
   </td>
  </tr>
@@ -85,7 +85,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Release Notes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p> <a name="v12_1_0_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 12.1.0</b> - <em>August 8, 2025</em></dd></dl>
+<div class="textblock"><p> <a name="v12_1_1_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 12.1.1</b> - <em>September 30, 2025</em></dd></dl>
+<dl class="section user"><dt></dt><dd>OpenVDB AX:<ul>
+<li>Fixes:<ul>
+<li>Fixed an issue which was causing host specific optimization passes to be omitted when using LLVM 16 and higher.</li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+<dl class="section user"><dt></dt><dd>Houdini:<ul>
+<li>Fixed a compilation issue with the OpenVDB Activate SOP with Houdini 21 [Reported by ]</li>
+</ul>
+</dd></dl>
+<p> <a name="v12_1_0_changes"></a> </p><dl class="section user"><dt></dt><dd><b>Version 12.1.0</b> - <em>August 8, 2025</em></dd></dl>
 <dl class="section user"><dt></dt><dd>OpenVDB:<ul>
 <li>New features:<ul>
 <li>New level set constructor tools::createLevelSetCapsule creates a grid containing a narrow-band level set representation of a capsule (tube with constant radius and sphere caps).</li>
