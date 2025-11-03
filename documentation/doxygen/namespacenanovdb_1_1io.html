@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">12.1.1</span>
+   &#160;<span id="projectnumber">13.0.0</span>
    </div>
   </td>
  </tr>
@@ -128,6 +128,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a52e8d5b885353625687618cee8e54bc8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a52e8d5b885353625687618cee8e54bc8">writeUncompressedGrid</a> (StreamT &amp;os, const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData, bool raw=false)</td></tr>
 <tr class="memdesc:a52e8d5b885353625687618cee8e54bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a standalone alternative to io::writeGrid(...,<a class="el" href="namespacenanovdb_1_1io.html#ae42f8cdb9215c4db646cf1021c45648aab50339a10e1de285ac99d4c3990b8693">Codec::NONE</a>) defined in <a class="el" href="IO_8h.html">util/IO.h</a> Unlike the latter this function has no dependencies at all, not even <a class="el" href="NanoVDB_8h.html" title="Implements a light-weight self-contained VDB data-structure in a single file! In other words...">NanoVDB.h</a>, so it also works if client code only includes <a class="el" href="PNanoVDB_8h.html" title="This file is a portable (e.g. pointer-less) C99/GLSL/HLSL port of NanoVDB.h, which is compatible with...">PNanoVDB.h</a>!  <a href="#a52e8d5b885353625687618cee8e54bc8">More...</a><br /></td></tr>
 <tr class="separator:a52e8d5b885353625687618cee8e54bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de235cceb0d47acce93f2ec91b5367e"><td class="memTemplParams" colspan="2">template&lt;typename StreamT , typename ValueT &gt; </td></tr>
+<tr class="memitem:a8de235cceb0d47acce93f2ec91b5367e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a8de235cceb0d47acce93f2ec91b5367e">writeUncompressedGrid</a> (StreamT &amp;os, const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData, const ValueT *blindData, <a class="el" href="namespacenanovdb.html#ad302dde29b8cf276217e7db12f56e1ea">GridBlindDataSemantic</a> semantic=<a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0a88183b946cc5f0e8c96b2e66e1c74a7e">GridBlindDataSemantic::Unknown</a>, bool raw=false)</td></tr>
+<tr class="memdesc:a8de235cceb0d47acce93f2ec91b5367e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an IndexGrid to a stream and append blind data.  <a href="#a8de235cceb0d47acce93f2ec91b5367e">More...</a><br /></td></tr>
+<tr class="separator:a8de235cceb0d47acce93f2ec91b5367e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a040550b6c786ac685ad64fda0382db05"><td class="memTemplParams" colspan="2">template&lt;typename GridHandleT , template&lt; typename... &gt; class VecT&gt; </td></tr>
 <tr class="memitem:a040550b6c786ac685ad64fda0382db05"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1io.html#a040550b6c786ac685ad64fda0382db05">writeUncompressedGrids</a> (const char *fileName, const VecT&lt; GridHandleT &gt; &amp;handles, bool raw=false)</td></tr>
 <tr class="memdesc:a040550b6c786ac685ad64fda0382db05"><td class="mdescLeft">&#160;</td><td class="mdescRight">write multiple NanoVDB grids to a single file, without compression.  <a href="#a040550b6c786ac685ad64fda0382db05">More...</a><br /></td></tr>
@@ -345,6 +349,69 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>This is pretty ugly code that involves lots of pointer and bit manipulations - not for the faint of heart :) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8de235cceb0d47acce93f2ec91b5367e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nanovdb::io::writeUncompressedGrid </td>
+          <td>(</td>
+          <td class="paramtype">StreamT &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *&#160;</td>
+          <td class="paramname"><em>gridData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ValueT *&#160;</td>
+          <td class="paramname"><em>blindData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacenanovdb.html#ad302dde29b8cf276217e7db12f56e1ea">GridBlindDataSemantic</a>&#160;</td>
+          <td class="paramname"><em>semantic</em> = <code><a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0a88183b946cc5f0e8c96b2e66e1c74a7e">GridBlindDataSemantic::Unknown</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>raw</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write an IndexGrid to a stream and append blind data. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">StreamT</td><td>Type of stream to write the IndexGrid and blind data to </td></tr>
+    <tr><td class="paramname">ValueT</td><td>Type of the blind data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>Output stream to write to </td></tr>
+    <tr><td class="paramname">gridData</td><td><a class="el" href="structnanovdb_1_1GridData.html" title="Struct with all the member data of the Grid (useful during serialization of an openvdb grid) ...">GridData</a> containing an IndexGrid WITHOUT existing blind data </td></tr>
+    <tr><td class="paramname">blindData</td><td>Raw point to array of blind data </td></tr>
+    <tr><td class="paramname">semantic</td><td>GridBlindDataSemantic of the blind data </td></tr>
+    <tr><td class="paramname">raw</td><td>If true the IndexGrid and blind data are streamed raw, i.e. without a file header. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

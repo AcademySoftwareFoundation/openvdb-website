@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">12.1.1</span>
+   &#160;<span id="projectnumber">13.0.0</span>
    </div>
   </td>
  </tr>
@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afb3f09434ff04a805766a6bf1af32109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const pointer to the blind data represented by this meta data.  <a href="#afb3f09434ff04a805766a6bf1af32109">More...</a><br /></td></tr>
 <tr class="separator:afb3f09434ff04a805766a6bf1af32109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c670dbb0635dcc47b561cfe150cd365"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#a9c670dbb0635dcc47b561cfe150cd365">isValid</a> () const </td></tr>
-<tr class="memdesc:a9c670dbb0635dcc47b561cfe150cd365"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if this meta data has a valid combination of semantic, class and value tags  <a href="#a9c670dbb0635dcc47b561cfe150cd365">More...</a><br /></td></tr>
+<tr class="memdesc:a9c670dbb0635dcc47b561cfe150cd365"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if this meta data has a valid combination of semantic, class and value tags.  <a href="#a9c670dbb0635dcc47b561cfe150cd365">More...</a><br /></td></tr>
 <tr class="separator:a9c670dbb0635dcc47b561cfe150cd365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7594bb708e45bd4b9cfd788ba5e58fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridBlindMetaData.html#aa7594bb708e45bd4b9cfd788ba5e58fa">blindDataSize</a> () const </td></tr>
 <tr class="memdesc:aa7594bb708e45bd4b9cfd788ba5e58fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">return size in bytes of the blind data represented by this blind meta data  <a href="#aa7594bb708e45bd4b9cfd788ba5e58fa">More...</a><br /></td></tr>
@@ -371,8 +371,8 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>return true if this meta data has a valid combination of semantic, class and value tags </p>
-<dl class="section note"><dt>Note</dt><dd>this does not check if the mDataOffset has been set! </dd></dl>
+<p>return true if this meta data has a valid combination of semantic, class and value tags. </p>
+<dl class="section note"><dt>Note</dt><dd>this does not check if the mDataOffset has been set! It is intended to catch invalid combinations of semantic, class and value tags. </dd></dl>
 
 </div>
 </div>

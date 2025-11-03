@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">12.1.1</span>
+   &#160;<span id="projectnumber">13.0.0</span>
    </div>
   </td>
  </tr>
@@ -91,7 +91,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">nanovdb::util Namespace Reference</div>  </div>
 </div><!--header-->
@@ -100,6 +101,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacenanovdb_1_1util_1_1impl"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util_1_1impl.html">impl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacenanovdb_1_1util_1_1morphology"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util_1_1morphology.html">morphology</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -189,6 +192,27 @@ Typedefs</h2></td></tr>
 <tr class="separator:abf41916a456c149b99f70070d372b9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6065157b6cb3382d22e4fd2fc70eb0c0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a6065157b6cb3382d22e4fd2fc70eb0c0">Range3D</a> = <a class="el" href="classnanovdb_1_1util_1_1Range.html">Range</a>&lt; 3, size_t &gt;</td></tr>
 <tr class="separator:a6065157b6cb3382d22e4fd2fc70eb0c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd80b775b0bd95747206fc628ad065f0"><td class="memTemplParams" colspan="2">template&lt;bool Test, typename T  = void&gt; </td></tr>
+<tr class="memitem:afd80b775b0bd95747206fc628ad065f0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#afd80b775b0bd95747206fc628ad065f0">enable_if_t</a> = typename <a class="el" href="structnanovdb_1_1util_1_1enable__if.html">enable_if</a>&lt; Test, T &gt;::type</td></tr>
+<tr class="separator:afd80b775b0bd95747206fc628ad065f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa8141e3acbf997a858072900827516"><td class="memTemplParams" colspan="2">template&lt;bool Test, typename T  = void&gt; </td></tr>
+<tr class="memitem:aefa8141e3acbf997a858072900827516"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#aefa8141e3acbf997a858072900827516">disable_if_t</a> = typename <a class="el" href="structnanovdb_1_1util_1_1disable__if.html">disable_if</a>&lt; Test, T &gt;::type</td></tr>
+<tr class="separator:aefa8141e3acbf997a858072900827516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f453fbca8b93aa016556b17d03c9850"><td class="memTemplParams" colspan="2">template&lt;bool Test, class TrueT , class FalseT &gt; </td></tr>
+<tr class="memitem:a9f453fbca8b93aa016556b17d03c9850"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a9f453fbca8b93aa016556b17d03c9850">conditional_t</a> = typename <a class="el" href="structnanovdb_1_1util_1_1conditional.html">conditional</a>&lt; Test, TrueT, FalseT &gt;::type</td></tr>
+<tr class="separator:a9f453fbca8b93aa016556b17d03c9850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75ab6c9a804ec997a6e8cb9c5b36c3e4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a75ab6c9a804ec997a6e8cb9c5b36c3e4"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a75ab6c9a804ec997a6e8cb9c5b36c3e4">remove_const_t</a> = typename <a class="el" href="structnanovdb_1_1util_1_1remove__const.html">remove_const</a>&lt; T &gt;::type</td></tr>
+<tr class="separator:a75ab6c9a804ec997a6e8cb9c5b36c3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad94dd578c8a2516de4794a7c247605f3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad94dd578c8a2516de4794a7c247605f3"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#ad94dd578c8a2516de4794a7c247605f3">remove_reference_t</a> = typename <a class="el" href="structnanovdb_1_1util_1_1remove__const.html">remove_const</a>&lt; T &gt;::type</td></tr>
+<tr class="separator:ad94dd578c8a2516de4794a7c247605f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81cba9b583535ccfde0e7eb172bbec71"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a81cba9b583535ccfde0e7eb172bbec71"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a81cba9b583535ccfde0e7eb172bbec71">remove_pointer_t</a> = typename <a class="el" href="structnanovdb_1_1util_1_1remove__pointer.html">remove_pointer</a>&lt; T &gt;::type</td></tr>
+<tr class="separator:a81cba9b583535ccfde0e7eb172bbec71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9405e80b82bef0fb4b2312d512e3e8"><td class="memTemplParams" colspan="2">template&lt;typename T , typename ReferenceT &gt; </td></tr>
+<tr class="memitem:acd9405e80b82bef0fb4b2312d512e3e8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#acd9405e80b82bef0fb4b2312d512e3e8">match_const_t</a> = typename <a class="el" href="structnanovdb_1_1util_1_1match__const.html">match_const</a>&lt; T, ReferenceT &gt;::type</td></tr>
+<tr class="separator:acd9405e80b82bef0fb4b2312d512e3e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -297,8 +321,71 @@ Functions</h2></td></tr>
 <tr class="separator:a75f543a81cfc2e0b250f1799f37ace62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbbff454317849f8500f79d3d7d7fa3c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#abbbff454317849f8500f79d3d7d7fa3c">countOn</a> (uint64_t v)</td></tr>
 <tr class="separator:abbbff454317849f8500f79d3d7d7fa3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:afad3cfcd1c6b755ddbeb802cb5176947"><td class="memTemplParams" colspan="2">template&lt;typename T0 , typename T1 , typename... T&gt; </td></tr>
+<tr class="memitem:afad3cfcd1c6b755ddbeb802cb5176947"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#afad3cfcd1c6b755ddbeb802cb5176947">is_same_v</a> = <a class="el" href="structnanovdb_1_1util_1_1is__same.html">is_same</a>&lt;T0, T1, T...&gt;::value</td></tr>
+<tr class="separator:afad3cfcd1c6b755ddbeb802cb5176947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a70da46bf8635132fd3757deb2fff94"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8a70da46bf8635132fd3757deb2fff94"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a8a70da46bf8635132fd3757deb2fff94">is_floating_point_v</a> = <a class="el" href="structnanovdb_1_1util_1_1is__floating__point.html">is_floating_point</a>&lt;T&gt;::value</td></tr>
+<tr class="separator:a8a70da46bf8635132fd3757deb2fff94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bf567b7866a96e4005d64743e0859b0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0bf567b7866a96e4005d64743e0859b0"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a0bf567b7866a96e4005d64743e0859b0">is_const_v</a> = <a class="el" href="structnanovdb_1_1util_1_1is__const.html">is_const</a>&lt;T&gt;::value</td></tr>
+<tr class="separator:a0bf567b7866a96e4005d64743e0859b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60d8a43ca3d5d473f1651ef5114c2628"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a60d8a43ca3d5d473f1651ef5114c2628"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a60d8a43ca3d5d473f1651ef5114c2628">is_pointer_v</a> = <a class="el" href="structnanovdb_1_1util_1_1is__pointer.html">is_pointer</a>&lt;T&gt;::value</td></tr>
+<tr class="separator:a60d8a43ca3d5d473f1651ef5114c2628"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a9f453fbca8b93aa016556b17d03c9850"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacenanovdb_1_1util.html#a9f453fbca8b93aa016556b17d03c9850">conditional_t</a> =  typename <a class="el" href="structnanovdb_1_1util_1_1conditional.html">conditional</a>&lt;Test, TrueT, FalseT&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aefa8141e3acbf997a858072900827516"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacenanovdb_1_1util.html#aefa8141e3acbf997a858072900827516">disable_if_t</a> =  typename <a class="el" href="structnanovdb_1_1util_1_1disable__if.html">disable_if</a>&lt;Test, T&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afd80b775b0bd95747206fc628ad065f0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacenanovdb_1_1util.html#afd80b775b0bd95747206fc628ad065f0">enable_if_t</a> =  typename <a class="el" href="structnanovdb_1_1util_1_1enable__if.html">enable_if</a>&lt;Test, T&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acd9405e80b82bef0fb4b2312d512e3e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacenanovdb_1_1util.html#acd9405e80b82bef0fb4b2312d512e3e8">match_const_t</a> =  typename <a class="el" href="structnanovdb_1_1util_1_1match__const.html">match_const</a>&lt;T, ReferenceT&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af3673a774597551e15a27cdf4ac7e71d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -329,6 +416,42 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="namespacenanovdb_1_1util.html#a6065157b6cb3382d22e4fd2fc70eb0c0">Range3D</a> =  <a class="el" href="classnanovdb_1_1util_1_1Range.html">Range</a>&lt;3, size_t&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a75ab6c9a804ec997a6e8cb9c5b36c3e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacenanovdb_1_1util.html#a75ab6c9a804ec997a6e8cb9c5b36c3e4">remove_const_t</a> =  typename <a class="el" href="structnanovdb_1_1util_1_1remove__const.html">remove_const</a>&lt;T&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a81cba9b583535ccfde0e7eb172bbec71"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacenanovdb_1_1util.html#a81cba9b583535ccfde0e7eb172bbec71">remove_pointer_t</a> =  typename <a class="el" href="structnanovdb_1_1util_1_1remove__pointer.html">remove_pointer</a>&lt;T&gt;::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad94dd578c8a2516de4794a7c247605f3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacenanovdb_1_1util.html#ad94dd578c8a2516de4794a7c247605f3">remove_reference_t</a> =  typename <a class="el" href="structnanovdb_1_1util_1_1remove__const.html">remove_const</a>&lt;T&gt;::type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1640,6 +1763,87 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>destination string <code>dst</code> </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>if strncpy(dst, src, max)[max-1]!='\0' then <code>src</code> has more characters than <code>max</code> and the return string needs to be manually null-terminated, i.e. strncpy(dst, src, max)[max-1]='\0' </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a0bf567b7866a96e4005d64743e0859b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool is_const_v = <a class="el" href="structnanovdb_1_1util_1_1is__const.html">is_const</a>&lt;T&gt;::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8a70da46bf8635132fd3757deb2fff94"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool is_floating_point_v = <a class="el" href="structnanovdb_1_1util_1_1is__floating__point.html">is_floating_point</a>&lt;T&gt;::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a60d8a43ca3d5d473f1651ef5114c2628"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool is_pointer_v = <a class="el" href="structnanovdb_1_1util_1_1is__pointer.html">is_pointer</a>&lt;T&gt;::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afad3cfcd1c6b755ddbeb802cb5176947"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool is_same_v = <a class="el" href="structnanovdb_1_1util_1_1is__same.html">is_same</a>&lt;T0, T1, T...&gt;::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

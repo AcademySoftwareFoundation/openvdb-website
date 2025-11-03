@@ -7,7 +7,7 @@ var searchData=
   ['upper_5foff_5fstddev',['upper_off_stddev',['../structpnanovdb__grid__type__constants__t.html#af252f48996aa0320ae94b2f785123609',1,'pnanovdb_grid_type_constants_t']]],
   ['upper_5foff_5ftable',['upper_off_table',['../structpnanovdb__grid__type__constants__t.html#a49554b7cdaf6e871073edccf380c2c23',1,'pnanovdb_grid_type_constants_t']]],
   ['upper_5fsize',['upper_size',['../structpnanovdb__grid__type__constants__t.html#a84c2b24b78023308a0dcd739cc10852e',1,'pnanovdb_grid_type_constants_t']]],
-  ['useradius',['useRadius',['../structopenvdb_1_1v12__1_1_1points_1_1FrustumRasterizerSettings.html#a2196931253855f86b5dc76a8fad7a62c',1,'openvdb::v12_1::points::FrustumRasterizerSettings']]],
-  ['userasterizepoint',['UseRasterizePoint',['../structopenvdb_1_1v12__1_1_1points_1_1transfer__internal_1_1RasterizePoints.html#a53c7dbce937be8f55f442a3305947833',1,'openvdb::v12_1::points::transfer_internal::RasterizePoints']]],
-  ['userasterizepoints',['UseRasterizePoints',['../structopenvdb_1_1v12__1_1_1points_1_1transfer__internal_1_1RasterizePoints.html#ab635955041d41d102f7afb6cf404b484',1,'openvdb::v12_1::points::transfer_internal::RasterizePoints']]]
+  ['useradius',['useRadius',['../structopenvdb_1_1v13__0_1_1points_1_1FrustumRasterizerSettings.html#a2196931253855f86b5dc76a8fad7a62c',1,'openvdb::v13_0::points::FrustumRasterizerSettings']]],
+  ['userasterizepoint',['UseRasterizePoint',['../structopenvdb_1_1v13__0_1_1points_1_1transfer__internal_1_1RasterizePoints.html#a53c7dbce937be8f55f442a3305947833',1,'openvdb::v13_0::points::transfer_internal::RasterizePoints']]],
+  ['userasterizepoints',['UseRasterizePoints',['../structopenvdb_1_1v13__0_1_1points_1_1transfer__internal_1_1RasterizePoints.html#ab635955041d41d102f7afb6cf404b484',1,'openvdb::v13_0::points::transfer_internal::RasterizePoints']]]
 ];

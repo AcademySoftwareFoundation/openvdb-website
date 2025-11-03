@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['halfband',['halfband',['../structopenvdb_1_1v12__1_1_1points_1_1SphereSettings.html#a77d16453150d564b4a007f39a592a4c8',1,'openvdb::v12_1::points::SphereSettings']]],
+  ['halfband',['halfband',['../structopenvdb_1_1v13__0_1_1points_1_1SphereSettings.html#a77d16453150d564b4a007f39a592a4c8',1,'openvdb::v13_0::points::SphereSettings']]],
   ['has_5fdenorm',['has_denorm',['../classstd_1_1numeric__limits_3_01openvdb_1_1math_1_1internal_1_1half_01_4.html#a49a4afa9b79b2f17164eccf3fcd068cf',1,'std::numeric_limits&lt; openvdb::math::internal::half &gt;']]],
   ['has_5fdenorm_5floss',['has_denorm_loss',['../classstd_1_1numeric__limits_3_01openvdb_1_1math_1_1internal_1_1half_01_4.html#a7359db10e9faf135518e4691deb56c95',1,'std::numeric_limits&lt; openvdb::math::internal::half &gt;']]],
   ['has_5finfinity',['has_infinity',['../classstd_1_1numeric__limits_3_01openvdb_1_1math_1_1internal_1_1half_01_4.html#a755eb8c67d331adc268ce24d7f67aa61',1,'std::numeric_limits&lt; openvdb::math::internal::half &gt;']]],

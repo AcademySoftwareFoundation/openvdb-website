@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OpenVDB
-   &#160;<span id="projectnumber">12.1.1</span>
+   &#160;<span id="projectnumber">13.0.0</span>
    </div>
   </td>
  </tr>
@@ -237,9 +237,9 @@ Building Against Houdini/Maya</h2>
 <tr>
 <th>DCC </th><th>Supported Version </th><th>OpenVDB ABI  </th></tr>
 <tr>
-<td>Houdini </td><td>20.0 </td><td>10 </td></tr>
-<tr>
 <td>Houdini </td><td>20.5 </td><td>11 </td></tr>
+<tr>
+<td>Houdini </td><td>21.0 </td><td>12 </td></tr>
 </table>
 <h2><a class="anchor" id="buildBuildHou"></a>
 Building Against Houdini</h2>
@@ -263,8 +263,6 @@ Building Against Houdini</h2>
 <td>Log4cplus </td><td>An optional dependency for improved OpenVDB Logging </td><td>Optional (All) </td></tr>
 <tr>
 <td>nanobind </td><td>C++/python bindings </td><td>Optional (Python) </td></tr>
-<tr>
-<td>NumPy </td><td>Scientific computing with Python </td><td>Optional (Python) </td></tr>
 <tr>
 <td>LLVM </td><td>Target-independent code generation </td><td>OpenVDB AX </td></tr>
 </table>
@@ -322,8 +320,6 @@ Building Against Maya</h2>
 <tr>
 <td>nanobind </td><td>C++/python bindings </td><td>Optional (Python) </td></tr>
 <tr>
-<td>NumPy </td><td>Scientific computing with Python </td><td>Optional (Python) </td></tr>
-<tr>
 <td>LLVM </td><td>Target-independent code generation </td><td>OpenVDB AX </td></tr>
 </table>
 <p>See <a class="el" href="build.html#buildBloscSupport">blosc support</a></p>
@@ -362,7 +358,7 @@ Building With OpenVDB</h1>
 <p>The following assumes that OpenVDB was installed with <code>OPENVDB_BUILD_CORE=ON</code> and <code>OPENVDB_INSTALL_CMAKE_MODULES=ON</code>. Don't worry if you didn't specify these options directly, they both default to <code>ON</code>. This ensures that OpenVDB has installed the required CMake modules that your application will need to use.</p>
 <p><b>Note:</b> Typically, projects provide a <b>Config-file</b> rather than a <b>Find-module</b> for downstream use. OpenVDB currently provides a <b>Find-module</b>. This may change in the future. Further information <a href="https://cmake.org/cmake/help/latest/manual/cmake-packages.7.html#using-packages">here</a>.</p>
 <p>You can add the below CMake snippet to your main <code>CMakeLists.txt</code> to bring in OpenVDB as a dependency:</p>
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake_minimum_required(VERSION 3.20)</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;list(APPEND CMAKE_MODULE_PATH &quot;/location/of/openvdb/install/lib/cmake/OpenVDB&quot;)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;find_package(OpenVDB REQUIRED)</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;target_link_libraries(myapp OpenVDB::openvdb)</div></div><!-- fragment --><p><code>myapp</code> in the above is a CMake target, usually created with <code>add_library()</code> or <code>add_executable()</code>. You can optionally provide <code>CMAKE_MODULE_PATH</code> as a <code>-D</code> argument to the cmake command line instead of specifying it in your <code>CMakeLists.txt</code>.</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;cmake_minimum_required(VERSION 3.24)</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;list(APPEND CMAKE_MODULE_PATH &quot;/location/of/openvdb/install/lib/cmake/OpenVDB&quot;)</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;find_package(OpenVDB REQUIRED)</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;target_link_libraries(myapp OpenVDB::openvdb)</div></div><!-- fragment --><p><code>myapp</code> in the above is a CMake target, usually created with <code>add_library()</code> or <code>add_executable()</code>. You can optionally provide <code>CMAKE_MODULE_PATH</code> as a <code>-D</code> argument to the cmake command line instead of specifying it in your <code>CMakeLists.txt</code>.</p>
 <p>Note that the <code>FindOpenVDB.cmake</code> module relies on the other <code>FindModules</code> provided in the OpenVDB installation to find it's own dependencies. This may require you to provide additional dependency locations for OpenVDB's dependencies. See <a class="el" href="build.html#buildDependencies">Locating Dependencies</a> or the below troubleshooting for more information. </p><hr/>
 <h1><a class="anchor" id="buildTroubleshooting"></a>
 Troubleshooting</h1>
@@ -382,10 +378,12 @@ CMake warnings/errors in FindBoost.cmake</h2>
 <p>There are a variety of potential warnings and errors that may arise from the version compatibility of Boost and CMake. These are related to how both Boost and CMake have historically been kept in sync. A common warning and error combination is:</p>
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;CMake Warning at ...  Imported targets not available for Boost version XXXXXX</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;...</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;Target &quot;...&quot; links to target &quot;Boost::XXX&quot; but the target</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;was not found.  Perhaps a find_package() call is missing for an IMPORTED</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;target, or an ALIAS target is missing?</div></div><!-- fragment --><p>OpenVDB uses <a href="https://cmake.org/cmake/help/latest/command/add_library.html#imported-libraries">imported targets</a> for all its dependencies. For imported Boost compatibility, the following versions of CMake are required:</p>
 <ul>
-<li>Boost 1.80 requires CMake 3.24.2 or newer.</li>
-<li>Boost 1.81 requires CMake 3.25.2 or newer.</li>
 <li>Boost 1.82 requires CMake 3.27.0 or newer.</li>
 <li>Boost 1.83 requires CMake 3.27.4 or newer.</li>
+<li>Boost 1.84 requires CMake 3.28.2 or newer.</li>
+<li>Boost 1.85 requires CMake 3.29.3 or newer.</li>
+<li>Boost 1.86 requires CMake 3.30.6, 3.31.1, or newer.</li>
+<li>Boost 1.87 requires CMake 3.31.4 or newer.</li>
 </ul>
 <p>Use the above list to identify the version of CMake you require for your version of Boost. Note that this may be implemented into the OpenVDB CMake in the future.</p>
 <h2><a class="anchor" id="troubleshoot4"></a>
