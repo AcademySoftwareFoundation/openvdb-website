@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['nearestneighbors',['NearestNeighbors',['../namespaceopenvdb_1_1v13__0_1_1tools.html#a31d3cd59d1264144ae21e5250166cfc2',1,'openvdb::v13_0::tools::NearestNeighbors()'],['../namespacenanovdb_1_1tools_1_1morphology.html#a31d3cd59d1264144ae21e5250166cfc2',1,'nanovdb::tools::morphology::NearestNeighbors()']]],
-  ['nodetype',['NodeType',['../structopenvdb_1_1v13__0_1_1ax_1_1ast_1_1Node.html#acac9cbaeea226ed297804c012dc12b16',1,'openvdb::v13_0::ax::ast::Node']]]
+  ['nearestneighbors_0',['NearestNeighbors',['../namespaceopenvdb_1_1v13__0_1_1tools.html#a31d3cd59d1264144ae21e5250166cfc2',1,'openvdb::v13_0::tools::NearestNeighbors'],['../namespacenanovdb_1_1tools_1_1morphology.html#a31d3cd59d1264144ae21e5250166cfc2',1,'nanovdb::tools::morphology::NearestNeighbors']]],
+  ['nodetype_1',['NodeType',['../structopenvdb_1_1v13__0_1_1ax_1_1ast_1_1Node.html#acac9cbaeea226ed297804c012dc12b16',1,'openvdb::v13_0::ax::ast::Node::NodeType'],['../structopenvdb_1_1v13__0_1_1ax_1_1ast_1_1Node.html#acac9cbaeea226ed297804c012dc12b16',1,'openvdb::v13_0::ax::ast::Value&lt; std::string &gt;::NodeType']]]
 ];

@@ -1,0 +1,4 @@
+var structnanovdb_1_1util_1_1is__specialization_3_01TemplateType_3_01Args_8_8_8_01_4_00_01TemplateType_01_4 =
+[
+    [ "value", "structnanovdb_1_1util_1_1is__specialization_3_01TemplateType_3_01Args_8_8_8_01_4_00_01TemplateType_01_4.html#a11ddd051208250c32dc4985abcafa86d", null ]
+];

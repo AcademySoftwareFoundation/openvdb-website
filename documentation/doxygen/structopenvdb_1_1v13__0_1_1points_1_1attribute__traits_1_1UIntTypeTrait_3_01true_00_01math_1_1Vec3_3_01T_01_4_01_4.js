@@ -1,0 +1,4 @@
+var structopenvdb_1_1v13__0_1_1points_1_1attribute__traits_1_1UIntTypeTrait_3_01true_00_01math_1_1Vec3_3_01T_01_4_01_4 =
+[
+    [ "Type", "structopenvdb_1_1v13__0_1_1points_1_1attribute__traits_1_1UIntTypeTrait_3_01true_00_01math_1_1Vec3_3_01T_01_4_01_4.html#af31210fb3664c4675dd482214ddf76b4", null ]
+];

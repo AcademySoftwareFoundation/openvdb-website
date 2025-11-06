@@ -1,0 +1,4 @@
+var structopenvdb_1_1v13__0_1_1tools_1_1ds_1_1CompositeFunctorTranslator_3_01DS__OVER_00_01ValueT_01_4 =
+[
+    [ "OpT", "structopenvdb_1_1v13__0_1_1tools_1_1ds_1_1CompositeFunctorTranslator_3_01DS__OVER_00_01ValueT_01_4.html#ae8547ccb3753e43a8e7c8e9b6bc09105", null ]
+];

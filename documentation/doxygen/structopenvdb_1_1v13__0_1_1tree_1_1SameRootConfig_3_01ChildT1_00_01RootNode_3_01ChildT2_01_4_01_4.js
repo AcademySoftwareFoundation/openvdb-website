@@ -1,0 +1,4 @@
+var structopenvdb_1_1v13__0_1_1tree_1_1SameRootConfig_3_01ChildT1_00_01RootNode_3_01ChildT2_01_4_01_4 =
+[
+    [ "value", "structopenvdb_1_1v13__0_1_1tree_1_1SameRootConfig_3_01ChildT1_00_01RootNode_3_01ChildT2_01_4_01_4.html#a11ddd051208250c32dc4985abcafa86d", null ]
+];

@@ -1,0 +1,27 @@
+var Vec4_8h =
+[
+    [ "Vec4< T >", "classopenvdb_1_1v13__0_1_1math_1_1Vec4.html", "classopenvdb_1_1v13__0_1_1math_1_1Vec4" ],
+    [ "openvdb::v13_0::math::Vec4d", "namespaceopenvdb_1_1v13__0_1_1math.html#ae1623b1310537d33661857dd0cfffe3f", null ],
+    [ "openvdb::v13_0::math::Vec4i", "namespaceopenvdb_1_1v13__0_1_1math.html#ac9ce07c996cfc491f09d5affb2d086d7", null ],
+    [ "openvdb::v13_0::math::Vec4s", "namespaceopenvdb_1_1v13__0_1_1math.html#a5ac9cf81cc2f815e160e3ed02ff551b7", null ],
+    [ "openvdb::v13_0::math::Vec4ui", "namespaceopenvdb_1_1v13__0_1_1math.html#a18ea2033ec5ab1dee9883d920dd89cea", null ],
+    [ "openvdb::v13_0::math::Abs", "namespaceopenvdb_1_1v13__0_1_1math.html#abd052050b22df5ee201c05767b9abb62", null ],
+    [ "openvdb::v13_0::math::Exp", "namespaceopenvdb_1_1v13__0_1_1math.html#a789656b590efe66dc2fc383191003a45", null ],
+    [ "openvdb::v13_0::math::isApproxEqual", "namespaceopenvdb_1_1v13__0_1_1math.html#a464c3e97d7e9dacdbbf8e3fac2fab16c", null ],
+    [ "openvdb::v13_0::math::isApproxEqual", "namespaceopenvdb_1_1v13__0_1_1math.html#a2c3d0db21b87152152e942436a91ccb8", null ],
+    [ "openvdb::v13_0::math::Log", "namespaceopenvdb_1_1v13__0_1_1math.html#a6f9d8aaa1494828ffb2e376762c009d1", null ],
+    [ "openvdb::v13_0::math::maxComponent", "namespaceopenvdb_1_1v13__0_1_1math.html#a16082ce08441d795566ec392e2ed8d3e", null ],
+    [ "openvdb::v13_0::math::minComponent", "namespaceopenvdb_1_1v13__0_1_1math.html#ae7fcedbc87f3945d199c25f7da665f9d", null ],
+    [ "openvdb::v13_0::math::operator!=", "namespaceopenvdb_1_1v13__0_1_1math.html#a82516d5f65d35ae9f964363047e234f7", null ],
+    [ "openvdb::v13_0::math::operator*", "namespaceopenvdb_1_1v13__0_1_1math.html#aa2bfc2a9a6061639b81fc5c825e1f7b2", null ],
+    [ "openvdb::v13_0::math::operator*", "namespaceopenvdb_1_1v13__0_1_1math.html#aaa54efe5fdf2f47a0250728481a4dea4", null ],
+    [ "openvdb::v13_0::math::operator*", "namespaceopenvdb_1_1v13__0_1_1math.html#a2fc695f3d029c09a41d428df60a71bce", null ],
+    [ "openvdb::v13_0::math::operator+", "namespaceopenvdb_1_1v13__0_1_1math.html#aed5114bfafd882dc458d37ac7a0a1bcb", null ],
+    [ "openvdb::v13_0::math::operator+", "namespaceopenvdb_1_1v13__0_1_1math.html#a72ef73cccc82d0372d0e3372d0c2dd61", null ],
+    [ "openvdb::v13_0::math::operator-", "namespaceopenvdb_1_1v13__0_1_1math.html#adfa0240ab04580dc955b6f6204d5975b", null ],
+    [ "openvdb::v13_0::math::operator-", "namespaceopenvdb_1_1v13__0_1_1math.html#a02aa58d0f018768603fa24972925dce4", null ],
+    [ "openvdb::v13_0::math::operator/", "namespaceopenvdb_1_1v13__0_1_1math.html#ae060c52d428d5f07822ad9b8001af8dd", null ],
+    [ "openvdb::v13_0::math::operator/", "namespaceopenvdb_1_1v13__0_1_1math.html#a6f042a5b6229948880bc58217329fca2", null ],
+    [ "openvdb::v13_0::math::operator/", "namespaceopenvdb_1_1v13__0_1_1math.html#a8e576ae0296713848fddc4ac96ccd83c", null ],
+    [ "openvdb::v13_0::math::operator==", "namespaceopenvdb_1_1v13__0_1_1math.html#aa02d2eb1bcbd9a3e047b8522076dfe45", null ]
+];

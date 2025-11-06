@@ -1,0 +1,11 @@
+var classopenvdb_1_1v13__0_1_1tree_1_1NodeUnion_3_01ValueT_00_01ChildT_00_01typename_01std_1_1enable3541fe84f788dddfea7adcd5921edaac =
+[
+    [ "NodeUnion", "classopenvdb_1_1v13__0_1_1tree_1_1NodeUnion_3_01ValueT_00_01ChildT_00_01typename_01std_1_1enable3541fe84f788dddfea7adcd5921edaac.html#a4ae1423de7d932181d485f6c5e2b391f", null ],
+    [ "getChild", "classopenvdb_1_1v13__0_1_1tree_1_1NodeUnion_3_01ValueT_00_01ChildT_00_01typename_01std_1_1enable3541fe84f788dddfea7adcd5921edaac.html#a41b73c9ae079cf9139364fea27a9d234", null ],
+    [ "getValue", "classopenvdb_1_1v13__0_1_1tree_1_1NodeUnion_3_01ValueT_00_01ChildT_00_01typename_01std_1_1enable3541fe84f788dddfea7adcd5921edaac.html#a2b7e637ce54a93b53978eb2a158e7aeb", null ],
+    [ "getValue", "classopenvdb_1_1v13__0_1_1tree_1_1NodeUnion_3_01ValueT_00_01ChildT_00_01typename_01std_1_1enable3541fe84f788dddfea7adcd5921edaac.html#a2ca902bc5563fc8f0fd5b3269e0f4494", null ],
+    [ "setChild", "classopenvdb_1_1v13__0_1_1tree_1_1NodeUnion_3_01ValueT_00_01ChildT_00_01typename_01std_1_1enable3541fe84f788dddfea7adcd5921edaac.html#a043790fd9cad19569d830db6077581f9", null ],
+    [ "setValue", "classopenvdb_1_1v13__0_1_1tree_1_1NodeUnion_3_01ValueT_00_01ChildT_00_01typename_01std_1_1enable3541fe84f788dddfea7adcd5921edaac.html#a8141c87bb6668fe943167b5c9ccaaa1e", null ],
+    [ "mChild", "classopenvdb_1_1v13__0_1_1tree_1_1NodeUnion_3_01ValueT_00_01ChildT_00_01typename_01std_1_1enable3541fe84f788dddfea7adcd5921edaac.html#a892faca663aee728654563b71d6ce5c3", null ],
+    [ "mValue", "classopenvdb_1_1v13__0_1_1tree_1_1NodeUnion_3_01ValueT_00_01ChildT_00_01typename_01std_1_1enable3541fe84f788dddfea7adcd5921edaac.html#aa133e86104f9934767c44f1a275d9da0", null ]
+];

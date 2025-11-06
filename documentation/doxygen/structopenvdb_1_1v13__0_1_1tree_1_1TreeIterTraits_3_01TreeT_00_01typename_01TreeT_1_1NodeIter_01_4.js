@@ -1,0 +1,4 @@
+var structopenvdb_1_1v13__0_1_1tree_1_1TreeIterTraits_3_01TreeT_00_01typename_01TreeT_1_1NodeIter_01_4 =
+[
+    [ "begin", "structopenvdb_1_1v13__0_1_1tree_1_1TreeIterTraits_3_01TreeT_00_01typename_01TreeT_1_1NodeIter_01_4.html#ae6bd6d0e8f4b0c78f717d1c37cc49113", null ]
+];

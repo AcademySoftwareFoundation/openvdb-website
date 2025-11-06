@@ -1,0 +1,4 @@
+var structopenvdb_1_1v13__0_1_1points_1_1attribute__traits_1_1TruncateTrait_3_01math_1_1Vec3_3_01T_01_4_01_4 =
+[
+    [ "Type", "structopenvdb_1_1v13__0_1_1points_1_1attribute__traits_1_1TruncateTrait_3_01math_1_1Vec3_3_01T_01_4_01_4.html#a32234c392bce46767f09a47a3786fa8e", null ]
+];

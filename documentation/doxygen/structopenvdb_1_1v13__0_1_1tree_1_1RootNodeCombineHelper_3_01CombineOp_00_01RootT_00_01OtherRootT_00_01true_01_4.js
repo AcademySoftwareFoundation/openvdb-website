@@ -1,0 +1,4 @@
+var structopenvdb_1_1v13__0_1_1tree_1_1RootNodeCombineHelper_3_01CombineOp_00_01RootT_00_01OtherRootT_00_01true_01_4 =
+[
+    [ "combine2", "structopenvdb_1_1v13__0_1_1tree_1_1RootNodeCombineHelper_3_01CombineOp_00_01RootT_00_01OtherRootT_00_01true_01_4.html#a5c3917fa037d57120324df9ea6d47db4", null ]
+];

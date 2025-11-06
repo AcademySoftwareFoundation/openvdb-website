@@ -1,0 +1,28 @@
+var classopenvdb_1_1v13__0_1_1UnknownMetadata =
+[
+    [ "ByteVec", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a8ae831a4e567394d5f48c8dca5df9be4", null ],
+    [ "ConstPtr", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a05d29487544d9b140c4869d0dbe04df1", null ],
+    [ "Ptr", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#ace3ea7af32684cd869611506ad3e12e8", null ],
+    [ "UnknownMetadata", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#acb887b32118fafa3896e93aa203db8bf", null ],
+    [ "asBool", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a839d4799266fbdc2b7edb54760d03a21", null ],
+    [ "clearRegistry", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#acf71679f2c3fee401465b443a08a77c0", null ],
+    [ "copy", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#aa4b31717ed37e8aad9712347c9b60140", null ],
+    [ "copy", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a68a159731e39f36604c1a78dd48515e8", null ],
+    [ "createMetadata", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a53362877f5b2a7b70a2445dee3db7150", null ],
+    [ "isRegisteredType", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#aa9b76271b1a77807fa6910d6bbe7c467", null ],
+    [ "operator!=", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a199574c97b9317e5c68ff987e45da24a", null ],
+    [ "operator==", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#acb28c2ac6feb1a455bfeb5ee79ed1fe5", null ],
+    [ "read", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a8a43053947abc08a85ad9f53558ce19f", null ],
+    [ "readSize", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#ac3c5726797c8f93c8879e537fad05ff3", null ],
+    [ "readValue", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#ad24172d2d4cc43df798b6852e1bd39bb", null ],
+    [ "registerType", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a6e8722817dee3ec246918f5c239b39ed", null ],
+    [ "setValue", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a2404cbe7bb3af6f5a3cb075a45bd011b", null ],
+    [ "size", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a28d0eeb8fbc4df2a92bb20e4e9b8579f", null ],
+    [ "str", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a71dd831ccbdcbb9b9549802286d1092f", null ],
+    [ "typeName", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a8589a9a5b113151c910c1398f2ccba24", null ],
+    [ "unregisterType", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#ac36e5e8693aa2d6456d00c2bc68fd077", null ],
+    [ "value", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a6af05a1c27eb8a9a88cce28939913997", null ],
+    [ "write", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#a50b1bb21b887e4926b4d17e3b4e40257", null ],
+    [ "writeSize", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#acfa821dab7ebb6d1656c3f6024710699", null ],
+    [ "writeValue", "classopenvdb_1_1v13__0_1_1UnknownMetadata.html#aa17f14718f21780b22f74937254cd5ad", null ]
+];

@@ -1,0 +1,12 @@
+var structopenvdb_1_1v13__0_1_1tools_1_1QuadraticSampler =
+[
+    [ "consistent", "structopenvdb_1_1v13__0_1_1tools_1_1QuadraticSampler.html#afd3da75b32679d899a56532f92469c8f", null ],
+    [ "mipmap", "structopenvdb_1_1v13__0_1_1tools_1_1QuadraticSampler.html#a6c9ddbbbd600c052cade13207665aa39", null ],
+    [ "name", "structopenvdb_1_1v13__0_1_1tools_1_1QuadraticSampler.html#a80926f21b03253a1045be08235e9d6ea", null ],
+    [ "order", "structopenvdb_1_1v13__0_1_1tools_1_1QuadraticSampler.html#a4440d8900b99dab3c079c8b53775952f", null ],
+    [ "radius", "structopenvdb_1_1v13__0_1_1tools_1_1QuadraticSampler.html#a4836a8d316f4fbaaf3064e0b1acd10ec", null ],
+    [ "sample", "structopenvdb_1_1v13__0_1_1tools_1_1QuadraticSampler.html#aa8ab47901cc813773d65645dfff1eb2e", null ],
+    [ "sample", "structopenvdb_1_1v13__0_1_1tools_1_1QuadraticSampler.html#aaa22ae89fd0aec39956caad811f550b8", null ],
+    [ "staggered", "structopenvdb_1_1v13__0_1_1tools_1_1QuadraticSampler.html#a0050bc9dc3e95de2ca035e98149763ed", null ],
+    [ "triquadraticInterpolation", "structopenvdb_1_1v13__0_1_1tools_1_1QuadraticSampler.html#a0861fd17ac9c8cb119b1a4de4617bf83", null ]
+];
