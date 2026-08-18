@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+  var isFirefox = navigator.userAgent.indexOf("Firefox") !== -1;
 
   $(".btn-close").click(function(){
     $(this).parent().animate({'height':'0px'}, function() {
@@ -20,7 +21,7 @@ $(document).ready(function(){
   $("#page1").css({ opacity: 0.2 });
 
   $("#page3").click(function(){
-    if ($.browser.mozilla) {      
+    if (isFirefox) {
      $('#vdb-folder').css({
                'background-position': '-1480px 0px',
                '-moz-transition': 'all 500ms ease'
@@ -35,7 +36,7 @@ $(document).ready(function(){
 
   $("#page2").click(function() {
 
-    if ($.browser.mozilla) {      
+    if (isFirefox) {
      $('#vdb-folder').css({
                'background-position': '-740px 0px',
                '-moz-transition': 'all 500ms ease'
@@ -50,7 +51,7 @@ $(document).ready(function(){
   });
 
   $("#page1").click(function(){
-    if ($.browser.mozilla) {      
+    if (isFirefox) {
      $('#vdb-folder').css({
                'background-position': '0px 0px',
                '-moz-transition': 'all 500ms ease'
@@ -76,7 +77,7 @@ $(document).ready(function(){
   $("#conversion-page1").css({ opacity: 0.2 });
 
   $("#conversion-page1").click(function(){
-    if ($.browser.mozilla) {      
+    if (isFirefox) {
      $('#conversion-folder').css({
                'background-position': '0px 0px',
                '-moz-transition': 'all 500ms ease'
@@ -93,7 +94,7 @@ $(document).ready(function(){
   });
 
   $("#conversion-page2").click(function(){
-    if ($.browser.mozilla) {      
+    if (isFirefox) {
      $('#conversion-folder').css({
                'background-position': '-740px 0px',
                '-moz-transition': 'all 500ms ease'
@@ -110,7 +111,7 @@ $(document).ready(function(){
   });
 
   $("#conversion-page3").click(function(){
-    if ($.browser.mozilla) {      
+    if (isFirefox) {
      $('#conversion-folder').css({
                'background-position': '-1480px 0px',
                '-moz-transition': 'all 500ms ease'
@@ -129,7 +130,7 @@ $(document).ready(function(){
 
   $("#conversion-page4").click(function(){
 
-    if ($.browser.mozilla) {      
+    if (isFirefox) {
      $('#conversion-folder').css({
                'background-position': '-2220px 0px',
                '-moz-transition': 'all 500ms ease'
@@ -146,7 +147,7 @@ $(document).ready(function(){
   });
 
   $("#conversion-page5").click(function(){
-    if ($.browser.mozilla) {      
+    if (isFirefox) {
      $('#conversion-folder').css({
                'background-position': '-2960px 0px',
                '-moz-transition': 'all 500ms ease'
@@ -163,7 +164,7 @@ $(document).ready(function(){
   });
 
   $("#conversion-page6").click(function(){
-    if ($.browser.mozilla) {      
+    if (isFirefox) {
      $('#conversion-folder').css({
                'background-position': '-3700px 0px',
                '-moz-transition': 'all 500ms ease'
