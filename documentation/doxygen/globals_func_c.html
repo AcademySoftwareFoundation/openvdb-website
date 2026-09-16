@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -118,6 +118,8 @@ $(function(){initNavTree('globals_func_c.html','',''); });
 
 <h3 class="doxsection"><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>cnanovdb_coord_compare()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#a4cb13a7929aba2bcefe8b9370cff8bfb">CNanoVDB.h</a></li>
+<li>cnanovdb_coord_fract()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#a2daa983b5937a50ee10317c283863a72">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_coord_round()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#a8d04c60fb84e972cff81acfc5dea8ae6">CSampleFromVoxels.h</a></li>
 <li>cnanovdb_coord_to_key()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#af4121db6d494fd74401f1166c9cf60bd">CNanoVDB.h</a></li>
 <li>cnanovdb_griddata_applyIJT()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#af5e42b2886c5d7d3923fb219896c664b">CNanoVDB.h</a></li>
 <li>cnanovdb_griddata_indexToWorld()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#a670dbd434c355ada00c41232bc44ba56">CNanoVDB.h</a></li>
@@ -129,6 +131,9 @@ $(function(){initNavTree('globals_func_c.html','',''); });
 <li>cnanovdb_griddata_validI()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#acd47c0db586a03290caf99ecedd35e10">CNanoVDB.h</a></li>
 <li>cnanovdb_griddata_worldToIndex()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#ae233426736f2295d21f88df2903c2bda">CNanoVDB.h</a></li>
 <li>cnanovdb_griddata_worldToIndexDir()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#a1f8e9185bf86e9a857baeb18ff79cd8e">CNanoVDB.h</a></li>
+<li>cnanovdb_lerpD()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#adf2e87fb7c7131b7212912c78c42606c">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_lerpF()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#ad42ffccc6c78348b260d3e8e1f23c2bb">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_lerpF3()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#a9f34f63c2c43f598197c8c521e1a4fd9">CSampleFromVoxels.h</a></li>
 <li>cnanovdb_map_apply()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#a828c0b6db00e1d9b549ac7d0ecaabe68">CNanoVDB.h</a></li>
 <li>cnanovdb_map_applyIJT()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#a3d67597db39a3226d40241330d67fe9b">CNanoVDB.h</a></li>
 <li>cnanovdb_map_applyInverse()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#a3fc7b9f2b5422510ada3555b9db1b7f6">CNanoVDB.h</a></li>
@@ -278,6 +283,21 @@ $(function(){initNavTree('globals_func_c.html','',''); });
 <li>cnanovdb_rootdataI_isActiveAndCache()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#a2538d5ac63ee932603a1152e07484cb2">CNanoVDB.h</a></li>
 <li>cnanovdb_rootdataI_setValue()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#ad1bd543917e77fe4770d07898ded6149">CNanoVDB.h</a></li>
 <li>cnanovdb_rootdataI_setValueAndCache()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#a56eaf4895ceefe5bd838bd70aeeb8378">CNanoVDB.h</a></li>
+<li>cnanovdb_sampleF3_nearest()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#ab5f0bcc97de9f122c5e3f324c99e1958">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_sampleF3_trilinear()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#a974509d5490c0f63cdee8f04bb1275e2">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_sampleF3_trilinear_stencil()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#ad630ef4200fa8b086039639d0c7724e0">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_sampleF_gradient()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#a295941ac96ceccbdd1214e2861e34e37">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_sampleF_gradient0()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#a899eb3ba266702eb9a91f23db2daa940">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_sampleF_gradient0_stencil()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#a95b3055294bb0b57013cb3431f9fdbc3">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_sampleF_nearest()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#a15b24c14dbedf2858fd8cc6cc90ec60f">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_sampleF_trilinear()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#ac51e34d5342751ae0fe61b8f60d4c386">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_sampleF_trilinear_stencil()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#a4195406093594777d3806b403907cb67">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_stencil1F3_clear()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#ac749da57aaf339a32b0b43d8a34796de">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_stencil1F3_fill()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#aa64e223aa3adeae60e927cae323e2f30">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_stencil1F3_update()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#acc999f8191476d3d05f1e4a163887549">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_stencil1F_clear()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#a92ce5ff97666f87e61be2984fa34a5f7">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_stencil1F_fill()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#aa9fd9f4bf8e2e912b464d0475c9e4e58">CSampleFromVoxels.h</a></li>
+<li>cnanovdb_stencil1F_update()&#160;:&#160;<a class="el" href="CSampleFromVoxels_8h.html#a290bde75860ee845adff4f02d8274fc1">CSampleFromVoxels.h</a></li>
 <li>cnanovdb_tree_getNode0F()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#afcb025d92f7c71bf280dc858ce8baba2">CNanoVDB.h</a></li>
 <li>cnanovdb_tree_getNode0F3()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#a64904013b6d84bd7e48ec8e1916e39de">CNanoVDB.h</a></li>
 <li>cnanovdb_tree_getNode0I()&#160;:&#160;<a class="el" href="CNanoVDB_8h.html#adadc37b390d119f9e1aa2232a22279ca">CNanoVDB.h</a></li>

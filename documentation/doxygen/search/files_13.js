@@ -16,5 +16,6 @@ var searchData=
   ['volumekernelfunctions_2eh_13',['VolumeKernelFunctions.h',['../VolumeKernelFunctions_8h.html',1,'']]],
   ['volumetomesh_2eh_14',['VolumeToMesh.h',['../VolumeToMesh_8h.html',1,'']]],
   ['volumetospheres_2eh_15',['VolumeToSpheres.h',['../VolumeToSpheres_8h.html',1,'']]],
-  ['voxtonanovdb_2eh_16',['VoxToNanoVDB.h',['../VoxToNanoVDB_8h.html',1,'']]]
+  ['voxelblockmanager_2eh_16',['VoxelBlockManager.h',['../VoxelBlockManager_8h.html',1,'']]],
+  ['voxtonanovdb_2eh_17',['VoxToNanoVDB.h',['../VoxToNanoVDB_8h.html',1,'']]]
 ];

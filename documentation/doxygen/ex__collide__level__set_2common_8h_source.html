@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -122,37 +122,39 @@ $(function(){initNavTree('ex__collide__level__set_2common_8h_source.html','','')
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="ex__collide__level__set_2common_8h.html#a525335710b53cb064ca56b936120431e">    6</a></span><span class="preprocessor">#define _USE_MATH_DEFINES</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;<a class="code" href="NanoVDB_8h.html">nanovdb/NanoVDB.h</a>&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="ComputePrimitives_8h.html">ComputePrimitives.h</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// http://www.burtleburtle.net/bob/hash/doobs.html</span></div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="ex__collide__level__set_2common_8h.html#a160005dd72037232c75e7ec2a68a0533">   14</a></span><span class="keyword">inline</span> <a class="code hl_define" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t <a class="code hl_function" href="ex__collide__level__set_2common_8h.html#a160005dd72037232c75e7ec2a68a0533">hash</a>(uint32_t x)</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    x += (x &lt;&lt; 10u);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    x ^= (x &gt;&gt; 6u);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    x += (x &lt;&lt; 3u);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    x ^= (x &gt;&gt; 11u);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    x += (x &lt;&lt; 15u);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">return</span> x;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef _USE_MATH_DEFINES</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="ex__collide__level__set_2common_8h.html#a525335710b53cb064ca56b936120431e">    7</a></span><span class="preprocessor">#define _USE_MATH_DEFINES</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;<a class="code" href="NanoVDB_8h.html">nanovdb/NanoVDB.h</a>&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="ComputePrimitives_8h.html">ComputePrimitives.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// http://www.burtleburtle.net/bob/hash/doobs.html</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="ex__collide__level__set_2common_8h.html#a160005dd72037232c75e7ec2a68a0533">   16</a></span><span class="keyword">inline</span> <a class="code hl_define" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t <a class="code hl_function" href="ex__collide__level__set_2common_8h.html#a160005dd72037232c75e7ec2a68a0533">hash</a>(uint32_t x)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    x += (x &lt;&lt; 10u);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    x ^= (x &gt;&gt; 6u);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    x += (x &lt;&lt; 3u);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    x ^= (x &gt;&gt; 11u);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    x += (x &lt;&lt; 15u);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">return</span> x;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
 </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="ex__collide__level__set_2common_8h.html#a0caeb1a670a9facd5899c2aff5043788">   24</a></span><span class="keyword">inline</span> <a class="code hl_define" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <span class="keywordtype">float</span> <a class="code hl_function" href="ex__collide__level__set_2common_8h.html#a0caeb1a670a9facd5899c2aff5043788">randomf</a>(uint32_t s)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="ex__collide__level__set_2common_8h.html#a160005dd72037232c75e7ec2a68a0533">hash</a>(s) / float(0xffffffffu);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="ex__collide__level__set_2common_8h.html#a0caeb1a670a9facd5899c2aff5043788">   26</a></span><span class="keyword">inline</span> <a class="code hl_define" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <span class="keywordtype">float</span> <a class="code hl_function" href="ex__collide__level__set_2common_8h.html#a0caeb1a670a9facd5899c2aff5043788">randomf</a>(uint32_t s)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="ex__collide__level__set_2common_8h.html#a160005dd72037232c75e7ec2a68a0533">hash</a>(s) / float(0xffffffffu);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>}</div>
 </div>
 <div class="ttc" id="aComputePrimitives_8h_html"><div class="ttname"><a href="ComputePrimitives_8h.html">ComputePrimitives.h</a></div><div class="ttdoc">A collection of parallel compute primitives.</div></div>
 <div class="ttc" id="aNanoVDB_8h_html"><div class="ttname"><a href="NanoVDB_8h.html">NanoVDB.h</a></div><div class="ttdoc">Implements a light-weight self-contained VDB data-structure in a single file! In other words,...</div></div>
-<div class="ttc" id="aex__collide__level__set_2common_8h_html_a0caeb1a670a9facd5899c2aff5043788"><div class="ttname"><a href="ex__collide__level__set_2common_8h.html#a0caeb1a670a9facd5899c2aff5043788">randomf</a></div><div class="ttdeci">__hostdev__ float randomf(uint32_t s)</div><div class="ttdef"><b>Definition</b> common.h:24</div></div>
-<div class="ttc" id="aex__collide__level__set_2common_8h_html_a160005dd72037232c75e7ec2a68a0533"><div class="ttname"><a href="ex__collide__level__set_2common_8h.html#a160005dd72037232c75e7ec2a68a0533">hash</a></div><div class="ttdeci">__hostdev__ uint32_t hash(uint32_t x)</div><div class="ttdef"><b>Definition</b> common.h:14</div></div>
-<div class="ttc" id="ananovdb_2nanovdb_2util_2Util_8h_html_a551e5ea2539324048f4b47c00ab67d55"><div class="ttname"><a href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a></div><div class="ttdeci">#define __hostdev__</div><div class="ttdef"><b>Definition</b> Util.h:76</div></div>
+<div class="ttc" id="aex__collide__level__set_2common_8h_html_a0caeb1a670a9facd5899c2aff5043788"><div class="ttname"><a href="ex__collide__level__set_2common_8h.html#a0caeb1a670a9facd5899c2aff5043788">randomf</a></div><div class="ttdeci">__hostdev__ float randomf(uint32_t s)</div><div class="ttdef"><b>Definition</b> common.h:26</div></div>
+<div class="ttc" id="aex__collide__level__set_2common_8h_html_a160005dd72037232c75e7ec2a68a0533"><div class="ttname"><a href="ex__collide__level__set_2common_8h.html#a160005dd72037232c75e7ec2a68a0533">hash</a></div><div class="ttdeci">__hostdev__ uint32_t hash(uint32_t x)</div><div class="ttdef"><b>Definition</b> common.h:16</div></div>
+<div class="ttc" id="amath_2SampleFromVoxels_8h_html_a551e5ea2539324048f4b47c00ab67d55"><div class="ttname"><a href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a></div><div class="ttdeci">#define __hostdev__</div><div class="ttdef"><b>Definition</b> SampleFromVoxels.h:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

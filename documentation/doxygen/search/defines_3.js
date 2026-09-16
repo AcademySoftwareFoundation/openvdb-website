@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['checkptr_0',['checkPtr',['../HostBuffer_8h.html#aff2830fced928188855df8b9366e031f',1,'HostBuffer.h']]],
+  ['checkptr_0',['checkPtr',['../HostBuffer_8h.html#aff2830fced928188855df8b9366e031f',1,'checkPtr:&#160;HostBuffer.h'],['../nanovdb_2nanovdb_2util_2cuda_2Util_8h.html#aff2830fced928188855df8b9366e031f',1,'checkPtr:&#160;Util.h']]],
   ['cnanovdb_5fglobal_1',['CNANOVDB_GLOBAL',['../CNanoVDB_8h.html#a7f096c15911abf186f73c60507f88027',1,'CNanoVDB.h']]],
   ['cnanovdb_5fgridtype_5fdouble_2',['CNANOVDB_GRIDTYPE_DOUBLE',['../CNanoVDB_8h.html#a7e3bdd82604d7ca58b802b01d1372aa5',1,'CNanoVDB.h']]],
   ['cnanovdb_5fgridtype_5fend_3',['CNANOVDB_GRIDTYPE_END',['../CNanoVDB_8h.html#ab4ee87ee411dac9425bdf462c256485e',1,'CNanoVDB.h']]],
@@ -22,6 +22,12 @@ var searchData=
   ['create_5finternal_5fnode_5fint_19',['CREATE_INTERNAL_NODE_int',['../CNanoVDB_8h.html#a3e12a4697c57caa38cf5ab3fbb27c390',1,'CNanoVDB.h']]],
   ['create_5fleaf_5fnode_20',['CREATE_LEAF_NODE',['../CNanoVDB_8h.html#a8dabf637e3ee237af7e009099f5ce824',1,'CNanoVDB.h']]],
   ['create_5fleaf_5fnode_5fint_21',['CREATE_LEAF_NODE_int',['../CNanoVDB_8h.html#a47bd840ced7fd156ed73346b118e3c00',1,'CNanoVDB.h']]],
-  ['create_5frootdata_22',['CREATE_ROOTDATA',['../CNanoVDB_8h.html#aff94f0347d1f83f3188f47eb80378840',1,'CNanoVDB.h']]],
-  ['create_5ftileentry_23',['CREATE_TILEENTRY',['../CNanoVDB_8h.html#a9e6f602fbea00a179a9c49ea97dfeebd',1,'CNanoVDB.h']]]
+  ['create_5flerpsimple_22',['CREATE_LERPSIMPLE',['../CSampleFromVoxels_8h.html#a9687f55bd4665cb1b9574ea31a0e8327',1,'CSampleFromVoxels.h']]],
+  ['create_5frootdata_23',['CREATE_ROOTDATA',['../CNanoVDB_8h.html#aff94f0347d1f83f3188f47eb80378840',1,'CNanoVDB.h']]],
+  ['create_5fsample_24',['CREATE_SAMPLE',['../CSampleFromVoxels_8h.html#a32c37274211ce9ce06e746655d8bb833',1,'CSampleFromVoxels.h']]],
+  ['create_5fstencil_25',['CREATE_STENCIL',['../CSampleFromVoxels_8h.html#af44e910a01a2e0dcdac8bab426ed3365',1,'CSampleFromVoxels.h']]],
+  ['create_5ftileentry_26',['CREATE_TILEENTRY',['../CNanoVDB_8h.html#a9e6f602fbea00a179a9c49ea97dfeebd',1,'CNanoVDB.h']]],
+  ['cudacheck_27',['cudaCheck',['../nanovdb_2nanovdb_2util_2cuda_2Util_8h.html#a93e6bf7c8996268aa9a2740d6f1de76d',1,'Util.h']]],
+  ['cudacheckerror_28',['cudaCheckError',['../nanovdb_2nanovdb_2util_2cuda_2Util_8h.html#adfb85e36cfe1268c9a886608a71a83c9',1,'Util.h']]],
+  ['cudasync_29',['cudaSync',['../nanovdb_2nanovdb_2util_2cuda_2Util_8h.html#ab4bc4130d14d1d65ccf675b79c6efe25',1,'Util.h']]]
 ];

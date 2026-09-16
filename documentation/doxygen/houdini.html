@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -192,8 +192,8 @@ ParmFactory and ParmList</h2>
 <div class="line">    <span class="comment">// Define a menu from a dynamically-constructed list of items.</span></div>
 <div class="line">    {</div>
 <div class="line">        std::vector&lt;std::string&gt; items;</div>
-<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_enumvalue" href="namespaceopenvdb_1_1v13__0.html#ac7f17d61b775b80e8dc5661f7969bdbfad920626883d514328c461b4d2496e3b6">openvdb::NUM_GRID_CLASSES</a>; ++i) {</div>
-<div class="line">            <a class="code hl_enumeration" href="namespaceopenvdb_1_1v13__0.html#a511a7f5bd868162ec06bcc20b98e160e">openvdb::GridClass</a> cls = <a class="code hl_enumeration" href="namespaceopenvdb_1_1v13__0.html#a511a7f5bd868162ec06bcc20b98e160e">openvdb::GridClass</a>(i);</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_enumvalue" href="namespaceopenvdb_1_1v13__1.html#ac7f17d61b775b80e8dc5661f7969bdbfad920626883d514328c461b4d2496e3b6">openvdb::NUM_GRID_CLASSES</a>; ++i) {</div>
+<div class="line">            <a class="code hl_enumeration" href="namespaceopenvdb_1_1v13__1.html#a511a7f5bd868162ec06bcc20b98e160e">openvdb::GridClass</a> cls = <a class="code hl_enumeration" href="namespaceopenvdb_1_1v13__1.html#a511a7f5bd868162ec06bcc20b98e160e">openvdb::GridClass</a>(i);</div>
 <div class="line">            items.push_back(openvdb::GridBase::gridClassToString(cls));   <span class="comment">// token</span></div>
 <div class="line">            items.push_back(openvdb::GridBase::gridClassToMenuName(cls)); <span class="comment">// label</span></div>
 <div class="line">        }</div>
@@ -207,8 +207,8 @@ ParmFactory and ParmList</h2>
 <div class="line">}</div>
 <div class="ttc" id="aclasshoudini__utils_1_1ParmList_html"><div class="ttname"><a href="classhoudini__utils_1_1ParmList.html">houdini_utils::ParmList</a></div><div class="ttdoc">Parameter template list that is always terminated.</div><div class="ttdef"><b>Definition</b> ParmFactory.h:74</div></div>
 <div class="ttc" id="aclasshoudini__utils_1_1ParmList_html_ab6138cf7816ab2cc5fc0ed88a5f2dac2"><div class="ttname"><a href="classhoudini__utils_1_1ParmList.html#ab6138cf7816ab2cc5fc0ed88a5f2dac2">houdini_utils::ParmList::add</a></div><div class="ttdeci">ParmList &amp; add(const PRM_Template &amp;)</div><div class="ttdoc">Add a parameter to this list.</div></div>
-<div class="ttc" id="anamespaceopenvdb_1_1v13__0_html_a511a7f5bd868162ec06bcc20b98e160e"><div class="ttname"><a href="namespaceopenvdb_1_1v13__0.html#a511a7f5bd868162ec06bcc20b98e160e">openvdb::v13_0::GridClass</a></div><div class="ttdeci">GridClass</div><div class="ttdef"><b>Definition</b> Types.h:524</div></div>
-<div class="ttc" id="anamespaceopenvdb_1_1v13__0_html_ac7f17d61b775b80e8dc5661f7969bdbfad920626883d514328c461b4d2496e3b6"><div class="ttname"><a href="namespaceopenvdb_1_1v13__0.html#ac7f17d61b775b80e8dc5661f7969bdbfad920626883d514328c461b4d2496e3b6">openvdb::v13_0::NUM_GRID_CLASSES</a></div><div class="ttdeci">@ NUM_GRID_CLASSES</div><div class="ttdef"><b>Definition</b> Types.h:530</div></div>
+<div class="ttc" id="anamespaceopenvdb_1_1v13__1_html_a511a7f5bd868162ec06bcc20b98e160e"><div class="ttname"><a href="namespaceopenvdb_1_1v13__1.html#a511a7f5bd868162ec06bcc20b98e160e">openvdb::v13_1::GridClass</a></div><div class="ttdeci">GridClass</div><div class="ttdef"><b>Definition</b> Types.h:524</div></div>
+<div class="ttc" id="anamespaceopenvdb_1_1v13__1_html_ac7f17d61b775b80e8dc5661f7969bdbfad920626883d514328c461b4d2496e3b6"><div class="ttname"><a href="namespaceopenvdb_1_1v13__1.html#ac7f17d61b775b80e8dc5661f7969bdbfad920626883d514328c461b4d2496e3b6">openvdb::v13_1::NUM_GRID_CLASSES</a></div><div class="ttdeci">@ NUM_GRID_CLASSES</div><div class="ttdef"><b>Definition</b> Types.h:530</div></div>
 </div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="Switchers"></a>
 Switchers</h2>
 <p>The <b>ParmList</b> provides a convenient way of defining switchers (tab menus):</p>
@@ -507,7 +507,7 @@ Processing grids of different types</h2>
 <div class="line">        &amp;bGrid = bPrim-&gt;getGrid();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// CSG operations require the A and B grids to have the same type.</span></div>
-<div class="line">    <span class="keywordflow">if</span> (aGrid.<a class="code hl_function" href="classopenvdb_1_1v13__0_1_1GridBase.html#ac84caf0458432553a758020564afd5b6">type</a>() != bGrid.type()) {</div>
+<div class="line">    <span class="keywordflow">if</span> (aGrid.<a class="code hl_function" href="classopenvdb_1_1v13__1_1_1GridBase.html#ac84caf0458432553a758020564afd5b6">type</a>() != bGrid.type()) {</div>
 <div class="line">        addError(SOP_MESSAGE, <span class="stringliteral">&quot;grids have different types&quot;</span>);</div>
 <div class="line">    } <span class="keywordflow">else</span> {</div>
 <div class="line">        CSGUnionOp proc;</div>
@@ -524,7 +524,7 @@ Processing grids of different types</h2>
 <div class="line">    }</div>
 <div class="line">}</div>
 <div class="ttc" id="aComposite_8h_html"><div class="ttname"><a href="Composite_8h.html">Composite.h</a></div><div class="ttdoc">Functions to efficiently perform various compositing operations on grids.</div></div>
-<div class="ttc" id="aclassopenvdb_1_1v13__0_1_1GridBase_html_ac84caf0458432553a758020564afd5b6"><div class="ttname"><a href="classopenvdb_1_1v13__0_1_1GridBase.html#ac84caf0458432553a758020564afd5b6">openvdb::v13_0::GridBase::type</a></div><div class="ttdeci">virtual Name type() const =0</div><div class="ttdoc">Return the name of this grid&#39;s type.</div></div>
+<div class="ttc" id="aclassopenvdb_1_1v13__1_1_1GridBase_html_ac84caf0458432553a758020564afd5b6"><div class="ttname"><a href="classopenvdb_1_1v13__1_1_1GridBase.html#ac84caf0458432553a758020564afd5b6">openvdb::v13_1::GridBase::type</a></div><div class="ttdeci">virtual Name type() const =0</div><div class="ttdoc">Return the name of this grid&#39;s type.</div></div>
 </div><!-- fragment --><p>Certain operations might make sense only for grids with scalar or with vector voxel values. Variants of <b>GEOvdbProcessTypedGrid</b> exist to handle those cases. For example, <b>GEOvdbProcessTypedGridScalar</b> and <b>GEOvdbProcessTypedGridVec3</b> invoke a functor only on grids of scalar or 3-vector types, respectively, and they return <code>false</code> for and ignore grids of all other types.</p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

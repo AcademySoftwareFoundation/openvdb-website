@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -120,6 +120,7 @@ $(function(){initNavTree('namespacenanovdb_1_1util.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
+<tr class="memitem:cuda" id="r_cuda"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util_1_1cuda.html">cuda</a></td></tr>
 <tr class="memitem:impl" id="r_impl"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util_1_1impl.html">impl</a></td></tr>
 <tr class="memitem:morphology" id="r_morphology"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util_1_1morphology.html">morphology</a></td></tr>
 </table><table class="memberdecls">
@@ -194,6 +195,25 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a99deb987c331a61e46803a65e1e4083c" id="r_a99deb987c331a61e46803a65e1e4083c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99deb987c331a61e46803a65e1e4083c">initCrc32Lut</a> (uint32_t lut[256], uint32_t n)</td></tr>
+<tr class="memdesc:a99deb987c331a61e46803a65e1e4083c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate single entry in look-up-table for CRC32 computations.  <br /></td></tr>
+<tr class="memitem:a095b672ee24609644d2525a76ea08cb4" id="r_a095b672ee24609644d2525a76ea08cb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a095b672ee24609644d2525a76ea08cb4">initCrc32Lut</a> (uint32_t lut[256])</td></tr>
+<tr class="memdesc:a095b672ee24609644d2525a76ea08cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate entire look-up-table for CRC32 computations.  <br /></td></tr>
+<tr class="memitem:aec758c30430701210d4c4865ffcc5866" id="r_aec758c30430701210d4c4865ffcc5866"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; uint32_t[]&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec758c30430701210d4c4865ffcc5866">createCrc32Lut</a> ()</td></tr>
+<tr class="memdesc:aec758c30430701210d4c4865ffcc5866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create and initiate entire look-up-table for CRC32 computations.  <br /></td></tr>
+<tr class="memitem:a4896cca559b4932234bfd87fb49470ef" id="r_a4896cca559b4932234bfd87fb49470ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4896cca559b4932234bfd87fb49470ef">crc32</a> (const void *data, size_t size, uint32_t crc=0)</td></tr>
+<tr class="memdesc:a4896cca559b4932234bfd87fb49470ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute crc32 checksum of <code>data</code> of <code>size</code> bytes (without a lookup table))  <br /></td></tr>
+<tr class="memitem:a65a4a21f33b695432df8c01a5947970d" id="r_a65a4a21f33b695432df8c01a5947970d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65a4a21f33b695432df8c01a5947970d">crc32</a> (const void *begin, const void *end, uint32_t crc=0)</td></tr>
+<tr class="memdesc:a65a4a21f33b695432df8c01a5947970d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute crc32 checksum of data between <code>begin</code> and <code>end</code>.  <br /></td></tr>
+<tr class="memitem:a1edc39b700dd60d8cafd9709baa5228b" id="r_a1edc39b700dd60d8cafd9709baa5228b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1edc39b700dd60d8cafd9709baa5228b">crc32</a> (const void *data, size_t size, const uint32_t lut[256], uint32_t crc=0)</td></tr>
+<tr class="memdesc:a1edc39b700dd60d8cafd9709baa5228b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute crc32 checksum of <code>data</code> with <code>size</code> bytes using a lookup table.  <br /></td></tr>
+<tr class="memitem:a93594e15428a8c4e9385d2c2c2629f56" id="r_a93594e15428a8c4e9385d2c2c2629f56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93594e15428a8c4e9385d2c2c2629f56">crc32</a> (const void *begin, const void *end, const uint32_t lut[256], uint32_t crc=0)</td></tr>
+<tr class="memdesc:a93594e15428a8c4e9385d2c2c2629f56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute crc32 checksum of data between <code>begin</code> and <code>end</code> using a lookup table.  <br /></td></tr>
+<tr class="memitem:a011e9a60a8c47ac7ff716b65f36fa690" id="r_a011e9a60a8c47ac7ff716b65f36fa690"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a011e9a60a8c47ac7ff716b65f36fa690">blockedCrc32</a> (const void *data, size_t size, const uint32_t *lut)</td></tr>
+<tr class="memitem:a12bed39361e8580b459fca23d058653a" id="r_a12bed39361e8580b459fca23d058653a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12bed39361e8580b459fca23d058653a">blockedCrc32</a> (const void *begin, const void *end, const uint32_t *lut)</td></tr>
+<tr class="memitem:a275b41df8d9f35b1210137d0b9b392ff" id="r_a275b41df8d9f35b1210137d0b9b392ff"><td class="memTemplParams" colspan="2">template&lt;int N, int Shift, typename DataT, typename MaskT&gt; </td></tr>
+<tr class="memitem:a275b41df8d9f35b1210137d0b9b392ff template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a275b41df8d9f35b1210137d0b9b392ff">shuffleDownMask</a> (DataT *<a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a20b30ba86aa53ca12682d9258d792bb3">NANOVDB_RESTRICT</a> data, const MaskT *<a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a20b30ba86aa53ca12682d9258d792bb3">NANOVDB_RESTRICT</a> masks, MaskT maskBits)</td></tr>
+<tr class="memdesc:a275b41df8d9f35b1210137d0b9b392ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">One pass of masked conditional shuffle-down on a stream of values.  <br /></td></tr>
 <tr class="memitem:aeecddc2b41154f35c7304658df4a4d85" id="r_aeecddc2b41154f35c7304658df4a4d85"><td class="memTemplParams" colspan="2">template&lt;typename RangeT, typename FuncT&gt; </td></tr>
 <tr class="memitem:aeecddc2b41154f35c7304658df4a4d85 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeecddc2b41154f35c7304658df4a4d85">forEach</a> (RangeT range, const FuncT &amp;func)</td></tr>
 <tr class="memdesc:aeecddc2b41154f35c7304658df4a4d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">simple wrapper for tbb::parallel_for with a naive std fallback  <br /></td></tr>
@@ -505,6 +525,92 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="a12bed39361e8580b459fca23d058653a" name="a12bed39361e8580b459fca23d058653a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12bed39361e8580b459fca23d058653a">&#9670;&#160;</a></span>blockedCrc32() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t blockedCrc32 </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t *</td>          <td class="paramname"><span class="paramname"><em>lut</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">begin</td><td></td></tr>
+    <tr><td class="paramname">end</td><td></td></tr>
+    <tr><td class="paramname">lut</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a011e9a60a8c47ac7ff716b65f36fa690" name="a011e9a60a8c47ac7ff716b65f36fa690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a011e9a60a8c47ac7ff716b65f36fa690">&#9670;&#160;</a></span>blockedCrc32() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t blockedCrc32 </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t *</td>          <td class="paramname"><span class="paramname"><em>lut</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+    <tr><td class="paramname">size</td><td></td></tr>
+    <tr><td class="paramname">lut</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <a id="a057ba19c8e8aaeb137db8d13893dae7c" name="a057ba19c8e8aaeb137db8d13893dae7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a057ba19c8e8aaeb137db8d13893dae7c">&#9670;&#160;</a></span>buildMaskPrefixSums()</h2>
 
@@ -582,6 +688,226 @@ template&lt;bool Invert = false&gt; </div>
 </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Number of bits that are on in the specified 64-bit word </dd></dl>
+
+</div>
+</div>
+<a id="a93594e15428a8c4e9385d2c2c2629f56" name="a93594e15428a8c4e9385d2c2c2629f56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93594e15428a8c4e9385d2c2c2629f56">&#9670;&#160;</a></span>crc32() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t crc32 </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t</td>          <td class="paramname"><span class="paramname"><em>lut</em></span>[256], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>crc</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute crc32 checksum of data between <code>begin</code> and <code>end</code> using a lookup table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">begin</td><td>points to beginning of data </td></tr>
+    <tr><td class="paramname">end</td><td>points to end of <code>data</code>, (exclusive) </td></tr>
+    <tr><td class="paramname">lut</td><td>pointer to loopup table for accelerated crc32 computation </td></tr>
+    <tr><td class="paramname">crc</td><td>initial value of crc32 checksum </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>return crc32 checksum </dd></dl>
+
+</div>
+</div>
+<a id="a65a4a21f33b695432df8c01a5947970d" name="a65a4a21f33b695432df8c01a5947970d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65a4a21f33b695432df8c01a5947970d">&#9670;&#160;</a></span>crc32() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t crc32 </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>crc</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute crc32 checksum of data between <code>begin</code> and <code>end</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">begin</td><td>points to beginning of data </td></tr>
+    <tr><td class="paramname">end</td><td>points to end of <code>data</code>, (exclusive) </td></tr>
+    <tr><td class="paramname">crc</td><td>initial value of crc32 checksum </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>return crc32 checksum </dd></dl>
+
+</div>
+</div>
+<a id="a1edc39b700dd60d8cafd9709baa5228b" name="a1edc39b700dd60d8cafd9709baa5228b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1edc39b700dd60d8cafd9709baa5228b">&#9670;&#160;</a></span>crc32() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t crc32 </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t</td>          <td class="paramname"><span class="paramname"><em>lut</em></span>[256], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>crc</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute crc32 checksum of <code>data</code> with <code>size</code> bytes using a lookup table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>pointer to begenning of data </td></tr>
+    <tr><td class="paramname">size</td><td>byte size </td></tr>
+    <tr><td class="paramname">lut</td><td>pointer to loopup table for accelerated crc32 computation </td></tr>
+    <tr><td class="paramname">crc</td><td>initial value of the checksum </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>crc32 checksum of <code>data</code> with <code>size</code> bytes </dd></dl>
+
+</div>
+</div>
+<a id="a4896cca559b4932234bfd87fb49470ef" name="a4896cca559b4932234bfd87fb49470ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4896cca559b4932234bfd87fb49470ef">&#9670;&#160;</a></span>crc32() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t crc32 </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>crc</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute crc32 checksum of <code>data</code> of <code>size</code> bytes (without a lookup table)) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>pointer to beginning of data </td></tr>
+    <tr><td class="paramname">size</td><td>byte size of data </td></tr>
+    <tr><td class="paramname">crc</td><td>initial value of crc32 checksum </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>return crc32 checksum of <code>data</code> </dd></dl>
+
+</div>
+</div>
+<a id="aec758c30430701210d4c4865ffcc5866" name="aec758c30430701210d4c4865ffcc5866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec758c30430701210d4c4865ffcc5866">&#9670;&#160;</a></span>createCrc32Lut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; uint32_t[]&gt; createCrc32Lut </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create and initiate entire look-up-table for CRC32 computations. </p>
+<dl class="section return"><dt>Returns</dt><dd>returns a unique pointer to the lookup table of size 256. </dd></dl>
 
 </div>
 </div>
@@ -871,7 +1197,7 @@ template&lt;typename RangeT, typename FuncT&gt; </div>
 <p>simple wrapper for tbb::parallel_for with a naive std fallback </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">range</td><td><a class="el" href="classnanovdb_1_1util_1_1Range.html">Range</a>, CoordBBox, tbb::blocked_range, blocked_range2D, or blocked_range3D. </td></tr>
+    <tr><td class="paramname">range</td><td><a class="el" href="classnanovdb_1_1util_1_1Range.html">Range</a>, <a class="el" href="namespacenanovdb.html#aba8106a1b57a1702680175a5b6d6a7fa">CoordBBox</a>, tbb::blocked_range, blocked_range2D, or blocked_range3D. </td></tr>
     <tr><td class="paramname">func</td><td>functor with the signature [](const RangeT&amp;){...},</td></tr>
   </table>
   </dd>
@@ -964,6 +1290,77 @@ template&lt;typename T, typename Op&gt; </div>
 
 <p>An inclusive scan includes in[i] when computing out[i]. </p>
 <dl class="section note"><dt>Note</dt><dd>Inclusive prefix operation: for (i=1; i&lt;N; ++i) vec[i] = Op(vec[i],vec[i-1]) </dd></dl>
+
+</div>
+</div>
+<a id="a095b672ee24609644d2525a76ea08cb4" name="a095b672ee24609644d2525a76ea08cb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a095b672ee24609644d2525a76ea08cb4">&#9670;&#160;</a></span>initCrc32Lut() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void initCrc32Lut </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>lut</em></span>[256]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initiate entire look-up-table for CRC32 computations. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lut</td><td>pointer of size 256 for look-up-table </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a99deb987c331a61e46803a65e1e4083c" name="a99deb987c331a61e46803a65e1e4083c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99deb987c331a61e46803a65e1e4083c">&#9670;&#160;</a></span>initCrc32Lut() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void initCrc32Lut </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>lut</em></span>[256], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initiate single entry in look-up-table for CRC32 computations. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lut</td><td>pointer of size 256 for look-up-table </td></tr>
+    <tr><td class="paramname">n</td><td>entry in table (assumed n &lt; 256) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1342,7 +1739,7 @@ template&lt;typename RangeT, typename T, typename FuncT, typename JoinT&gt; </di
 <dl class="section return"><dt>Returns</dt><dd>reduction</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">range</td><td>RangeT can be <a class="el" href="classnanovdb_1_1util_1_1Range.html">Range&lt;dim,T&gt;</a>, CoordBBox, tbb::blocked_range, blocked_range2D, or blocked_range3D. </td></tr>
+    <tr><td class="paramname">range</td><td>RangeT can be <a class="el" href="classnanovdb_1_1util_1_1Range.html">Range&lt;dim,T&gt;</a>, <a class="el" href="namespacenanovdb.html#aba8106a1b57a1702680175a5b6d6a7fa">CoordBBox</a>, tbb::blocked_range, blocked_range2D, or blocked_range3D. </td></tr>
     <tr><td class="paramname">identity</td><td>initial value </td></tr>
     <tr><td class="paramname">func</td><td>functor with signature T FuncT::operator()(const RangeT&amp; range, const T&amp; a) const </td></tr>
     <tr><td class="paramname">join</td><td>functor with the signature T JoinT::operator()(const T&amp; a, const T&amp; b) const <div class="fragment"><div class="line">std::vector&lt;int&gt; array(100, 1);</div>
@@ -1406,6 +1803,66 @@ template&lt;typename T, typename FuncT, typename JoinT&gt; </div>
 </div><div class="memdoc">
 
 <p>Simple wrapper to the function defined above. </p>
+
+</div>
+</div>
+<a id="a275b41df8d9f35b1210137d0b9b392ff" name="a275b41df8d9f35b1210137d0b9b392ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a275b41df8d9f35b1210137d0b9b392ff">&#9670;&#160;</a></span>shuffleDownMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int N, int Shift, typename DataT, typename MaskT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void shuffleDownMask </td>
+          <td>(</td>
+          <td class="paramtype">DataT *<a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a20b30ba86aa53ca12682d9258d792bb3">NANOVDB_RESTRICT</a></td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MaskT *<a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a20b30ba86aa53ca12682d9258d792bb3">NANOVDB_RESTRICT</a></td>          <td class="paramname"><span class="paramname"><em>masks</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MaskT</td>          <td class="paramname"><span class="paramname"><em>maskBits</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>One pass of masked conditional shuffle-down on a stream of values. </p>
+<p>For each position j in [0, N - Shift), conditionally replaces data[j] with data[j+Shift] based on the predicate (masks[j+Shift] &amp; maskBits) != 0:</p>
+<p>m = ~DataT{0} if (masks[j+Shift] &amp; maskBits) != 0 (all-ones blend mask) m = DataT{0} otherwise (all-zeros blend mask) data[j] = (data[j+Shift] &amp; m) | (data[j] &amp; ~m)</p>
+<p>Positions j in [N - Shift, N) are left unchanged (the trailing portion of the stream that cannot receive a shifted element).</p>
+<p>In-place safe: j &lt; j+Shift guarantees every source element is read before its slot is overwritten, including under SIMD vectorization.</p>
+<p>The name follows the CUDA __shfl_down_sync convention: "shuffle down" denotes a conditional fixed-distance gather from higher-indexed positions, as opposed to an arbitrary permutation.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">N</td><td>Length of the data and masks arrays. </td></tr>
+    <tr><td class="paramname">Shift</td><td>Number of positions to shift; must satisfy 0 &lt; Shift &lt; N. </td></tr>
+    <tr><td class="paramname">DataT</td><td>Element type of the data array (any unsigned integer type). </td></tr>
+    <tr><td class="paramname">MaskT</td><td>Element type of the masks array (any unsigned integer type). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Buffer of N DataT values, updated in-place. </td></tr>
+    <tr><td class="paramname">masks</td><td>Read-only predicate table of N MaskT values. </td></tr>
+    <tr><td class="paramname">maskBits</td><td>Bitmask ANDed with masks[j+Shift] to form the predicate. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

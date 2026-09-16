@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -129,18 +129,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a13258dac0adf6a0010c90904d8f395d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor that resets mDataOffset and zeros out mName.  <br /></td></tr>
 <tr class="memitem:a708c5bd41446e1ffc89e55d7b57bda69" id="r_a708c5bd41446e1ffc89e55d7b57bda69"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a708c5bd41446e1ffc89e55d7b57bda69">operator=</a> (const <a class="el" href="structnanovdb_1_1GridBlindMetaData.html">GridBlindMetaData</a> &amp;rhs)</td></tr>
 <tr class="memdesc:a708c5bd41446e1ffc89e55d7b57bda69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator that resets mDataOffset and copies mName.  <br /></td></tr>
-<tr class="memitem:a4b785926eb904dee9c74d4f7117171d9" id="r_a4b785926eb904dee9c74d4f7117171d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b785926eb904dee9c74d4f7117171d9">setBlindData</a> (const void *<a class="el" href="#ad6470eb8e425c5bb37518708bff369ac">blindData</a>)</td></tr>
-<tr class="memitem:ac4e1d4203ac6f9a36359ec3c57a5095b" id="r_ac4e1d4203ac6f9a36359ec3c57a5095b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4e1d4203ac6f9a36359ec3c57a5095b">setName</a> (const char *name)</td></tr>
-<tr class="memdesc:ac4e1d4203ac6f9a36359ec3c57a5095b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name string.  <br /></td></tr>
-<tr class="memitem:ad6470eb8e425c5bb37518708bff369ac" id="r_ad6470eb8e425c5bb37518708bff369ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6470eb8e425c5bb37518708bff369ac">blindData</a> () const</td></tr>
-<tr class="memdesc:ad6470eb8e425c5bb37518708bff369ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a const void point to the blind data  <br /></td></tr>
-<tr class="memitem:ad0f25ef6dc247feda57bfed25d275906" id="r_ad0f25ef6dc247feda57bfed25d275906"><td class="memTemplParams" colspan="2">template&lt;typename BlindDataT&gt; </td></tr>
-<tr class="memitem:ad0f25ef6dc247feda57bfed25d275906 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const BlindDataT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0f25ef6dc247feda57bfed25d275906">getBlindData</a> () const</td></tr>
-<tr class="memdesc:ad0f25ef6dc247feda57bfed25d275906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const pointer to the blind data represented by this meta data.  <br /></td></tr>
-<tr class="memitem:a8642f2bd38ed69600e3609a60b7516a0" id="r_a8642f2bd38ed69600e3609a60b7516a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8642f2bd38ed69600e3609a60b7516a0">isValid</a> () const</td></tr>
-<tr class="memdesc:a8642f2bd38ed69600e3609a60b7516a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if this meta data has a valid combination of semantic, class and value tags.  <br /></td></tr>
-<tr class="memitem:a20a586e876a1a4b041a32f3126c50543" id="r_a20a586e876a1a4b041a32f3126c50543"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20a586e876a1a4b041a32f3126c50543">blindDataSize</a> () const</td></tr>
-<tr class="memdesc:a20a586e876a1a4b041a32f3126c50543"><td class="mdescLeft">&#160;</td><td class="mdescRight">return size in bytes of the blind data represented by this blind meta data  <br /></td></tr>
+<tr class="memitem:ac2350a1c6c124868659e1930174abf11" id="r_ac2350a1c6c124868659e1930174abf11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2350a1c6c124868659e1930174abf11">setBlindData</a> (const void *<a class="el" href="#a93bf75c3902e1295d8c84556949ad5ae">blindData</a>)</td></tr>
+<tr class="memitem:a7249cba883105a37cf189e3422194356" id="r_a7249cba883105a37cf189e3422194356"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7249cba883105a37cf189e3422194356">setName</a> (const char *name)</td></tr>
+<tr class="memdesc:a7249cba883105a37cf189e3422194356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name string.  <br /></td></tr>
+<tr class="memitem:a93bf75c3902e1295d8c84556949ad5ae" id="r_a93bf75c3902e1295d8c84556949ad5ae"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93bf75c3902e1295d8c84556949ad5ae">blindData</a> () const</td></tr>
+<tr class="memdesc:a93bf75c3902e1295d8c84556949ad5ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a const void point to the blind data  <br /></td></tr>
+<tr class="memitem:a48aa0eacad1451391827c4b06557dacd" id="r_a48aa0eacad1451391827c4b06557dacd"><td class="memTemplParams" colspan="2">template&lt;typename BlindDataT&gt; </td></tr>
+<tr class="memitem:a48aa0eacad1451391827c4b06557dacd template"><td class="memItemLeft" align="right" valign="top">const BlindDataT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48aa0eacad1451391827c4b06557dacd">getBlindData</a> () const</td></tr>
+<tr class="memdesc:a48aa0eacad1451391827c4b06557dacd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a const pointer to the blind data represented by this meta data.  <br /></td></tr>
+<tr class="memitem:a5bc2a781be2586924afce4e4a4ea6697" id="r_a5bc2a781be2586924afce4e4a4ea6697"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bc2a781be2586924afce4e4a4ea6697">isValid</a> () const</td></tr>
+<tr class="memdesc:a5bc2a781be2586924afce4e4a4ea6697"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if this meta data has a valid combination of semantic, class and value tags.  <br /></td></tr>
+<tr class="memitem:a3e2cbd04638cfc20ec281c74bcd5b1d4" id="r_a3e2cbd04638cfc20ec281c74bcd5b1d4"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e2cbd04638cfc20ec281c74bcd5b1d4">blindDataSize</a> () const</td></tr>
+<tr class="memdesc:a3e2cbd04638cfc20ec281c74bcd5b1d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">return size in bytes of the blind data represented by this blind meta data  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -261,8 +261,8 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ad6470eb8e425c5bb37518708bff369ac" name="ad6470eb8e425c5bb37518708bff369ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6470eb8e425c5bb37518708bff369ac">&#9670;&#160;</a></span>blindData()</h2>
+<a id="a93bf75c3902e1295d8c84556949ad5ae" name="a93bf75c3902e1295d8c84556949ad5ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93bf75c3902e1295d8c84556949ad5ae">&#9670;&#160;</a></span>blindData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -271,7 +271,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const void * blindData </td>
+          <td class="memname">const void * blindData </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -289,8 +289,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a20a586e876a1a4b041a32f3126c50543" name="a20a586e876a1a4b041a32f3126c50543"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20a586e876a1a4b041a32f3126c50543">&#9670;&#160;</a></span>blindDataSize()</h2>
+<a id="a3e2cbd04638cfc20ec281c74bcd5b1d4" name="a3e2cbd04638cfc20ec281c74bcd5b1d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e2cbd04638cfc20ec281c74bcd5b1d4">&#9670;&#160;</a></span>blindDataSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -299,7 +299,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t blindDataSize </td>
+          <td class="memname">uint64_t blindDataSize </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -317,8 +317,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad0f25ef6dc247feda57bfed25d275906" name="ad0f25ef6dc247feda57bfed25d275906"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0f25ef6dc247feda57bfed25d275906">&#9670;&#160;</a></span>getBlindData()</h2>
+<a id="a48aa0eacad1451391827c4b06557dacd" name="a48aa0eacad1451391827c4b06557dacd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48aa0eacad1451391827c4b06557dacd">&#9670;&#160;</a></span>getBlindData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,7 +329,7 @@ template&lt;typename BlindDataT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const BlindDataT * getBlindData </td>
+          <td class="memname">const BlindDataT * getBlindData </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -349,13 +349,13 @@ template&lt;typename BlindDataT&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns NULL if mGridType!=<a class="el" href="namespacenanovdb.html#a1fd46c7c96fb30e3eb3424e20d39273c" title="Maps from a templated build type to a GridType enum.">toGridType&lt;BlindDataT&gt;()</a>, else a const point of type BlindDataT. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns NULL if mGridType!=<a class="el" href="namespacenanovdb.html#a1e2f4ffbfed871a8058727e7c6dd5534" title="Maps from a templated build type to a GridType enum.">toGridType&lt;BlindDataT&gt;()</a>, else a const point of type BlindDataT. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>Use mDataType=Unknown if BlindDataT is a custom data type unknown to NanoVDB. </dd></dl>
 
 </div>
 </div>
-<a id="a8642f2bd38ed69600e3609a60b7516a0" name="a8642f2bd38ed69600e3609a60b7516a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8642f2bd38ed69600e3609a60b7516a0">&#9670;&#160;</a></span>isValid()</h2>
+<a id="a5bc2a781be2586924afce4e4a4ea6697" name="a5bc2a781be2586924afce4e4a4ea6697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bc2a781be2586924afce4e4a4ea6697">&#9670;&#160;</a></span>isValid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,7 +364,7 @@ template&lt;typename BlindDataT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isValid </td>
+          <td class="memname">bool isValid </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -416,8 +416,8 @@ template&lt;typename BlindDataT&gt; </div>
 
 </div>
 </div>
-<a id="a4b785926eb904dee9c74d4f7117171d9" name="a4b785926eb904dee9c74d4f7117171d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b785926eb904dee9c74d4f7117171d9">&#9670;&#160;</a></span>setBlindData()</h2>
+<a id="ac2350a1c6c124868659e1930174abf11" name="ac2350a1c6c124868659e1930174abf11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2350a1c6c124868659e1930174abf11">&#9670;&#160;</a></span>setBlindData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,7 +426,7 @@ template&lt;typename BlindDataT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void setBlindData </td>
+          <td class="memname">void setBlindData </td>
           <td>(</td>
           <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>blindData</em></span></td><td>)</td>
           <td></td>
@@ -441,8 +441,8 @@ template&lt;typename BlindDataT&gt; </div>
 
 </div>
 </div>
-<a id="ac4e1d4203ac6f9a36359ec3c57a5095b" name="ac4e1d4203ac6f9a36359ec3c57a5095b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4e1d4203ac6f9a36359ec3c57a5095b">&#9670;&#160;</a></span>setName()</h2>
+<a id="a7249cba883105a37cf189e3422194356" name="a7249cba883105a37cf189e3422194356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7249cba883105a37cf189e3422194356">&#9670;&#160;</a></span>setName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,7 +451,7 @@ template&lt;typename BlindDataT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool setName </td>
+          <td class="memname">bool setName </td>
           <td>(</td>
           <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
           <td></td>

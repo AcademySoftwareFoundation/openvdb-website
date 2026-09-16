@@ -1,0 +1,4 @@
+var structnanovdb_1_1BufferHasDestroy_3_01BufferT_00_01std_1_1void__t_3_01decltype_07std_1_1declval_11e89a2455810b99660b58a59361d24e =
+[
+    [ "value", "structnanovdb_1_1BufferHasDestroy_3_01BufferT_00_01std_1_1void__t_3_01decltype_07std_1_1declval_11e89a2455810b99660b58a59361d24e.html#a5b4ee4ae6cba6bb75200ba7af1910873", null ]
+];

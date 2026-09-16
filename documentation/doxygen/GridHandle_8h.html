@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -118,15 +118,18 @@ $(function(){initNavTree('GridHandle_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Defines GridHandle, which manages a host, and possibly a device, memory buffer containing one or more NanoVDB grids.  
+<p>Defines GridHandle, which manages a memory buffer containing one or more NanoVDB grids: host-resident, dual host/device, or a single-space device-only buffer.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;initializer_list&gt;</code><br />
 <code>#include &lt;<a class="el" href="NanoVDB_8h_source.html">nanovdb/NanoVDB.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="HostBuffer_8h_source.html">nanovdb/HostBuffer.h</a>&gt;</code><br />
-<code>#include &lt;nanovdb/tools/GridChecksum.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="tools_2GridChecksum_8h_source.html">nanovdb/tools/GridChecksum.h</a>&gt;</code><br />
 </div>
 <p><a href="GridHandle_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -139,10 +142,18 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:nanovdb" id="r_nanovdb"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html">nanovdb</a></td></tr>
+<tr class="memdesc:namespacenanovdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a simple memory pool used to call cub functions that use dynamic temporary storage. <br /></td></tr>
+<tr class="memitem:nanovdb_3A_3Acuda" id="r_nanovdb_3A_3Acuda"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1cuda.html">nanovdb::cuda</a></td></tr>
+<tr class="memitem:nanovdb_3A_3Acuda_3A_3Adetail" id="r_nanovdb_3A_3Acuda_3A_3Adetail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1cuda_1_1detail.html">nanovdb::cuda::detail</a></td></tr>
+<tr class="memitem:nanovdb_3A_3Adetail" id="r_nanovdb_3A_3Adetail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1detail.html">nanovdb::detail</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0aa7ba290bbd672413524413aae811e7" id="r_a0aa7ba290bbd672413524413aae811e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a0aa7ba290bbd672413524413aae811e7">cpyGridHandleMeta</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *data, <a class="el" href="structnanovdb_1_1GridHandleMetaData.html">GridHandleMetaData</a> *meta)</td></tr>
+<tr class="memitem:ad03e642d832671da61495eb3baeeffb1" id="r_ad03e642d832671da61495eb3baeeffb1"><td class="memTemplParams" colspan="2">template&lt;typename BufferT&gt; </td></tr>
+<tr class="memitem:ad03e642d832671da61495eb3baeeffb1 template"><td class="memItemLeft" align="right" valign="top">BufferT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1detail.html#ad03e642d832671da61495eb3baeeffb1">createHostStorage</a> (uint64_t bytes, const BufferT &amp;pool)</td></tr>
+<tr class="memdesc:ad03e642d832671da61495eb3baeeffb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates <code>bytes</code> of host-readable storage for a <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a>: through <code>BufferT::create</code> for buffers that provide it, and through <code>pool's</code> resource for a host-accessible single-space buffer (e.g. a pinned-resource <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer</a>). The braced third argument selects the uninitialized-storage constructor without naming its tag type, so this header stays CUDA-free.  <br /></td></tr>
+<tr class="memitem:ae42e92c3f674dbbeb1c1d7aed82c7c5a" id="r_ae42e92c3f674dbbeb1c1d7aed82c7c5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1detail.html#ae42e92c3f674dbbeb1c1d7aed82c7c5a">parseHostGridChain</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *head, uint64_t bytes, std::vector&lt; <a class="el" href="structnanovdb_1_1GridHandleMetaData.html">GridHandleMetaData</a> &gt; &amp;meta)</td></tr>
+<tr class="memdesc:ae42e92c3f674dbbeb1c1d7aed82c7c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates the grid chain in <em class="arg">bytes</em> of host-readable memory headed by <em class="arg">head</em> and fills <em class="arg">meta</em> with one entry per grid: every header must be valid, carry its expected index and the chain's total count, and fit inside the buffer, so a truncated buffer or a forged header is rejected before its metadata is trusted. This is the host counterpart of the device-side chain parse, and it is what makes a handle's metadata safe to adopt without re-validation (<a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a>).  <br /></td></tr>
 <tr class="memitem:a2d80d40ab0add4f3ab16c1cdbb50c2ce" id="r_a2d80d40ab0add4f3ab16c1cdbb50c2ce"><td class="memTemplParams" colspan="2">template&lt;typename BufferT, template&lt; class, class... &gt; class VectorT = std::vector&gt; </td></tr>
 <tr class="memitem:a2d80d40ab0add4f3ab16c1cdbb50c2ce template"><td class="memItemLeft" align="right" valign="top">VectorT&lt; <a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a>&lt; BufferT &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a2d80d40ab0add4f3ab16c1cdbb50c2ce">splitGrids</a> (const <a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a>&lt; BufferT &gt; &amp;handle, const BufferT *other=nullptr)</td></tr>
 <tr class="memdesc:a2d80d40ab0add4f3ab16c1cdbb50c2ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split all grids in a single <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> into a vector of multiple GridHandles each with a single grid.  <br /></td></tr>
@@ -151,7 +162,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a1999ea4347f33abf15bb667141a1f2df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combines (or merges) multiple GridHandles into a single <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> containing all grids.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Defines GridHandle, which manages a host, and possibly a device, memory buffer containing one or more NanoVDB grids. </p>
+<div class="textblock"><p>Defines GridHandle, which manages a memory buffer containing one or more NanoVDB grids: host-resident, dual host/device, or a single-space device-only buffer. </p>
 <dl class="section author"><dt>Author</dt><dd>Ken Museth</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>January 8, 2020 </dd></dl>
 </div></div><!-- contents -->

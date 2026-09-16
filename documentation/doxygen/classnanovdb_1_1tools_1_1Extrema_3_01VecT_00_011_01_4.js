@@ -1,0 +1,26 @@
+var classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4 =
+[
+    [ "Pair", "structnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4_1_1Pair.html", "structnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4_1_1Pair" ],
+    [ "Real", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#a93406a929bdf592974c84d44d2e8fd3f", null ],
+    [ "ValueType", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#af8fe50dec122e0227c1fe7e8736f052a", null ],
+    [ "Extrema", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#a950e7da23cdd4304f0b62473ff6ebb1b", null ],
+    [ "Extrema", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#aad5b6236c1cc7970baea0addfa5e75fe", null ],
+    [ "Extrema", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#ab2037b15fe9d51128a85be302eee1ac2", null ],
+    [ "add", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#ab099699b2fb6acbabbb63d4b21372f1f", null ],
+    [ "add", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#a59e7b65ee36bfc21ae16e264bbcfb765", null ],
+    [ "add", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#ae6c8bbffeac3c83f11f8bd2352c7bda1", null ],
+    [ "add", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#a9fb2815f5e9ba5f720b8548ed9a71529", null ],
+    [ "hasAverage", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#a20246090dd6383bcff5431de22e3e737", null ],
+    [ "hasMinMax", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#a74911985fd8d58754ed9877c20c18603", null ],
+    [ "hasStats", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#af8da47d60a5b1d5985c6ec92d7cead79", null ],
+    [ "hasStdDeviation", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#ac36cbca55e3cfb790e3a86adfcedcf33", null ],
+    [ "max", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#aa8846beaa802e7bd96dc92ceff74dcf3", null ],
+    [ "max", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#aa92e2e29eb89c429708e483d5b1fc458", null ],
+    [ "min", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#ab84551f0e468d6924bd6ba21a4303e4a", null ],
+    [ "min", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#a37cf8718bb056b5b80aa0dc5378c1632", null ],
+    [ "operator bool", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#aabac1f710a9cc519a171968ead10188f", null ],
+    [ "setStats", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#a185e8025aad82862dc0240ef448a7f92", null ],
+    [ "size", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#a240da938f811362823e6cf24d248d3d7", null ],
+    [ "mMax", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#a9536cf3917fbebf901a18f944fefa9b0", null ],
+    [ "mMin", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#a4b12a9c62c8a17bf46af7b08f9b98925", null ]
+];

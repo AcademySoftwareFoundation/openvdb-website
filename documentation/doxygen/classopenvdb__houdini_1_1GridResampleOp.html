@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -138,8 +138,8 @@ class openvdb_houdini::GridResampleOp&lt; Sampler, TransformerType &gt;</div><p>
 <div class="line">    <span class="keyword">struct </span>MyXform</div>
 <div class="line">    {</div>
 <div class="line">        <span class="keywordtype">bool</span> isAffine()<span class="keyword"> const </span>{ ... }</div>
-<div class="line">        <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> transform(<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a>&amp;)<span class="keyword"> const </span>{ ... }</div>
-<div class="line">        <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> invTransform(<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a>&amp;)<span class="keyword"> const </span>{ ... }</div>
+<div class="line">        <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> transform(<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a>&amp;)<span class="keyword"> const </span>{ ... }</div>
+<div class="line">        <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> invTransform(<span class="keyword">const</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a>&amp;)<span class="keyword"> const </span>{ ... }</div>
 <div class="line">    };</div>
 <div class="line">}</div>
 <div class="line"> </div>
@@ -154,7 +154,7 @@ class openvdb_houdini::GridResampleOp&lt; Sampler, TransformerType &gt;</div><p>
 <div class="line"><a class="code hl_function" href="#a5febfb76f7a7cd80cb2a063fd2d18697">GridResampleOp&lt;openvdb::tools::BoxSampler, MyXform&gt;</a> op(outGrid, MyXform());</div>
 <div class="line">inGrid.apply&lt;<a class="code hl_typedef" href="namespaceopenvdb__houdini.html#ab6a30c6d7d6899e60cb0b23f50c12de3">openvdb_houdini::ScalarGridTypes</a>&gt;(op);</div>
 <div class="ttc" id="aclassopenvdb__houdini_1_1GridResampleOp_html_a5febfb76f7a7cd80cb2a063fd2d18697"><div class="ttname"><a href="#a5febfb76f7a7cd80cb2a063fd2d18697">openvdb_houdini::GridResampleOp::GridResampleOp</a></div><div class="ttdeci">GridResampleOp(GridPtr &amp;outGrid, const TransformerType &amp;t)</div><div class="ttdef"><b>Definition</b> UT_VDBTools.h:108</div></div>
-<div class="ttc" id="anamespaceopenvdb_1_1v13__0_1_1math_html_a98d94999010cb92dfb5f652c353d1d82"><div class="ttname"><a href="namespaceopenvdb_1_1v13__0_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::v13_0::math::Vec3d</a></div><div class="ttdeci">Vec3&lt; double &gt; Vec3d</div><div class="ttdef"><b>Definition</b> Vec3.h:708</div></div>
+<div class="ttc" id="anamespaceopenvdb_1_1v13__1_1_1math_html_a98d94999010cb92dfb5f652c353d1d82"><div class="ttname"><a href="namespaceopenvdb_1_1v13__1_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::v13_1::math::Vec3d</a></div><div class="ttdeci">Vec3&lt; double &gt; Vec3d</div><div class="ttdef"><b>Definition</b> Vec3.h:708</div></div>
 <div class="ttc" id="anamespaceopenvdb__houdini_html_a50a182da6cbbd72a2deb7f635b080497"><div class="ttname"><a href="namespaceopenvdb__houdini.html#a50a182da6cbbd72a2deb7f635b080497">openvdb_houdini::GridPtr</a></div><div class="ttdeci">openvdb::GridBase::Ptr GridPtr</div><div class="ttdef"><b>Definition</b> Utils.h:44</div></div>
 <div class="ttc" id="anamespaceopenvdb__houdini_html_ab68e398333046373641f36c9d3ba33d0"><div class="ttname"><a href="namespaceopenvdb__houdini.html#ab68e398333046373641f36c9d3ba33d0">openvdb_houdini::Grid</a></div><div class="ttdeci">openvdb::GridBase Grid</div><div class="ttdef"><b>Definition</b> Utils.h:43</div></div>
 <div class="ttc" id="anamespaceopenvdb__houdini_html_ab6a30c6d7d6899e60cb0b23f50c12de3"><div class="ttname"><a href="namespaceopenvdb__houdini.html#ab6a30c6d7d6899e60cb0b23f50c12de3">openvdb_houdini::ScalarGridTypes</a></div><div class="ttdeci">openvdb::TypeList&lt; openvdb::BoolGrid, openvdb::FloatGrid, openvdb::DoubleGrid, openvdb::Int32Grid, openvdb::Int64Grid &gt; ScalarGridTypes</div><div class="ttdef"><b>Definition</b> Utils.h:297</div></div>

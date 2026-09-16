@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -170,7 +170,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a923242e2c79487f009884c3708fde133" id="r_a923242e2c79487f009884c3708fde133"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a923242e2c79487f009884c3708fde133">poolUsage</a> () const</td></tr>
 <tr class="memdesc:a923242e2c79487f009884c3708fde133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total number of bytes from the pool currently in use by buffers.  <br /></td></tr>
 <tr class="memitem:adff2829859a082576aaf2cdfca56259b" id="r_adff2829859a082576aaf2cdfca56259b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adff2829859a082576aaf2cdfca56259b">resizePool</a> (uint64_t <a class="el" href="#a6cc8c81b633136d1554a5426430e1948">poolSize</a>, void *<a class="el" href="#a332a750ed35277f0bc297fbfecce598f">data</a>=nullptr)</td></tr>
-<tr class="memdesc:adff2829859a082576aaf2cdfca56259b"><td class="mdescLeft">&#160;</td><td class="mdescRight">resize the pool size. It will attempt to resize the existing memory block, but if that fails a deep copy is performed. If <code>data</code> is not NULL it will be used as new externally managed memory for the pool. All registered buffers are updated so <a class="el" href="classnanovdb_1_1GridHandle.html#a55830727b5cd6cd25e014c68b1ab2eb2" title="Returns a const host pointer to the n&#39;th NanoVDB grid encoded in this GridHandle.">GridHandle::grid</a> might return a new address (if deep copy was performed).  <br /></td></tr>
+<tr class="memdesc:adff2829859a082576aaf2cdfca56259b"><td class="mdescLeft">&#160;</td><td class="mdescRight">resize the pool size. It will attempt to resize the existing memory block, but if that fails a deep copy is performed. If <code>data</code> is not NULL it will be used as new externally managed memory for the pool. All registered buffers are updated so <a class="el" href="classnanovdb_1_1GridHandle.html#a70db61b5606f01a553873d387f0f95e2" title="Returns a const host pointer to the n&#39;th NanoVDB grid encoded in this GridHandle.">GridHandle::grid</a> might return a new address (if deep copy was performed).  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -887,7 +887,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>resize the pool size. It will attempt to resize the existing memory block, but if that fails a deep copy is performed. If <code>data</code> is not NULL it will be used as new externally managed memory for the pool. All registered buffers are updated so <a class="el" href="classnanovdb_1_1GridHandle.html#a55830727b5cd6cd25e014c68b1ab2eb2" title="Returns a const host pointer to the n&#39;th NanoVDB grid encoded in this GridHandle.">GridHandle::grid</a> might return a new address (if deep copy was performed). </p>
+<p>resize the pool size. It will attempt to resize the existing memory block, but if that fails a deep copy is performed. If <code>data</code> is not NULL it will be used as new externally managed memory for the pool. All registered buffers are updated so <a class="el" href="classnanovdb_1_1GridHandle.html#a70db61b5606f01a553873d387f0f95e2" title="Returns a const host pointer to the n&#39;th NanoVDB grid encoded in this GridHandle.">GridHandle::grid</a> might return a new address (if deep copy was performed). </p>
 <dl class="section note"><dt>Note</dt><dd>This method can be use to resize the memory pool and even change it from internally to externally managed memory or vice versa.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">

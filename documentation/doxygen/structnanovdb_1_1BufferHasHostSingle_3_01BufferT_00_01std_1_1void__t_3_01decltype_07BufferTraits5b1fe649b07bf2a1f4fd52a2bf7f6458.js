@@ -1,0 +1,4 @@
+var structnanovdb_1_1BufferHasHostSingle_3_01BufferT_00_01std_1_1void__t_3_01decltype_07BufferTraits5b1fe649b07bf2a1f4fd52a2bf7f6458 =
+[
+    [ "value", "structnanovdb_1_1BufferHasHostSingle_3_01BufferT_00_01std_1_1void__t_3_01decltype_07BufferTraits5b1fe649b07bf2a1f4fd52a2bf7f6458.html#a5b4ee4ae6cba6bb75200ba7af1910873", null ]
+];

@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -127,6 +127,7 @@ Contents</h1>
 <li><a class="el" href="#buildBloscSupport">Blosc Support</a></li>
 <li><a class="el" href="#buildZLibSupport">ZLIB Support</a></li>
 <li><a class="el" href="#buildVCPKG">Building Dependencies using VCPKG</a></li>
+<li><a class="el" href="#buildSimd">Building With Target ISA Support</a></li>
 </ul>
 </li>
 <li><a class="el" href="#buildComponents">OpenVDB Components</a></li>
@@ -206,6 +207,56 @@ ZLIB Support</h2>
 <h2 class="doxsection"><a class="anchor" id="buildVCPKG"></a>
 Building Dependencies using VCPKG</h2>
 <p>It is recommended to set the VCPKG_DEFAULT_TRIPLET=x64-windows environment variable to use 64-bit libraries by default as even on a 64-bit Windows OS, VCPKG builds and installs 32-bit libraries by default.</p>
+<h2 class="doxsection"><a class="anchor" id="buildSimd"></a>
+Building With Target ISA Support</h2>
+<dl class="section warning"><dt>Warning</dt><dd>OpenVDB does not perform host CPU ISA detection during configuration or build. The selected ISA is treated as a deployment target and must be chosen explicitly by the user.</dd></dl>
+<p>OpenVDB currently only natively supports targeted ISA selection on x86. You can continue to provide any flags you like via <span class="tt">-DCXXFLAGS</span>, but we recommend using the available options to better specify intent, when building for a specific x86 ISA. The following table lists the available x86 ISA controls.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Build Flag  </th><th class="markdownTableHeadNone">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">-DUSE_VCL=ON</span>  </td><td class="markdownTableBodyNone">Use the internal copy of Agner Fog's VCL  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">-DOPENVDB_X86_INSTRSET=0</span>  </td><td class="markdownTableBodyNone">Unknown or unspecified  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">-DOPENVDB_X86_INSTRSET=1</span>  </td><td class="markdownTableBodyNone">SSE, <span class="tt">-msse</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">-DOPENVDB_X86_INSTRSET=2</span>  </td><td class="markdownTableBodyNone">^, SSE2, <span class="tt">-msse2</span> # Minimum on x86_64  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">-DOPENVDB_X86_INSTRSET=3</span>  </td><td class="markdownTableBodyNone">^, SSE3, <span class="tt">-msse3</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">-DOPENVDB_X86_INSTRSET=4</span>  </td><td class="markdownTableBodyNone">^, SSSE3, <span class="tt">-mssse3</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">-DOPENVDB_X86_INSTRSET=5</span>  </td><td class="markdownTableBodyNone">^, SSE4.1, <span class="tt">-msse4.1</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">-DOPENVDB_X86_INSTRSET=6</span>  </td><td class="markdownTableBodyNone">^, SSE4.2, <span class="tt">-msse4.2</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">-DOPENVDB_X86_INSTRSET=7</span>  </td><td class="markdownTableBodyNone">^, AVX, <span class="tt">-mavx</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">-DOPENVDB_X86_INSTRSET=8</span>  </td><td class="markdownTableBodyNone">^, AVX2, <span class="tt">-mavx2</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><span class="tt">-DOPENVDB_X86_INSTRSET=9</span>  </td><td class="markdownTableBodyNone">^, AVX512F, <span class="tt">-mavx512f</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><span class="tt">-DOPENVDB_X86_INSTRSET=10</span>  </td><td class="markdownTableBodyNone">^, AVX512BW/DQ/VL, <span class="tt">-mavx512bw</span> <span class="tt">-mavx512dq</span> <span class="tt">-mavx512vl</span>  </td></tr>
+</table>
+<p>The recommended configuration depends on the intended deployment target. See also the section on <a class="el" href="overview.html#simdInOpenVDB">SIMD in OpenVDB</a> for more details.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Deployment Target  </th><th class="markdownTableHeadNone">Recommended Options  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Maximum runtime deployment compatibility  </td><td class="markdownTableBodyNone">Default configuration  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Modern x86 CPUs  </td><td class="markdownTableBodyNone"><span class="tt">-DOPENVDB_X86_INSTRSET=6</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Explicit SIMD on x86  </td><td class="markdownTableBodyNone"><span class="tt">-DUSE_VCL=ON</span> <span class="tt">-DOPENVDB_X86_INSTRSET=6</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Explicit SIMD on AVX hardware  </td><td class="markdownTableBodyNone"><span class="tt">-DUSE_VCL=ON</span> <span class="tt">-DOPENVDB_X86_INSTRSET=7</span>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Explicit SIMD on AVX2 hardware  </td><td class="markdownTableBodyNone"><span class="tt">-DUSE_VCL=ON</span> <span class="tt">-DOPENVDB_X86_INSTRSET=8</span>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Explicit SIMD on AVX512 hardware  </td><td class="markdownTableBodyNone"><span class="tt">-DUSE_VCL=ON</span> <span class="tt">-DOPENVDB_X86_INSTRSET=10</span>  </td></tr>
+</table>
+<p>In general, users are encouraged to target the oldest ISA that is known to be available on all deployment systems. Building for a newer ISA than is supported by the target CPU may result in illegal instruction at runtime.</p>
 <h1 class="doxsection"><a class="anchor" id="buildComponents"></a>
 OpenVDB Components</h1>
 <p>The following table lists all targets (mainly library and binary components) which can be built through the CMake build system. They can be set when using CMake from the command line with <span class="tt">-D VAR=ON/OFF</span> or with a CMake gui:</p>

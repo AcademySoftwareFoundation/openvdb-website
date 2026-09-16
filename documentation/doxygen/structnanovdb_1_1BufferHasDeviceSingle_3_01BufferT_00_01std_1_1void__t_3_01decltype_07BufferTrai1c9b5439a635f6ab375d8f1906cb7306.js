@@ -1,0 +1,4 @@
+var structnanovdb_1_1BufferHasDeviceSingle_3_01BufferT_00_01std_1_1void__t_3_01decltype_07BufferTrai1c9b5439a635f6ab375d8f1906cb7306 =
+[
+    [ "value", "structnanovdb_1_1BufferHasDeviceSingle_3_01BufferT_00_01std_1_1void__t_3_01decltype_07BufferTrai1c9b5439a635f6ab375d8f1906cb7306.html#a5b4ee4ae6cba6bb75200ba7af1910873", null ]
+];

@@ -1,0 +1,4 @@
+var structnanovdb_1_1BufferHasByteElements_3_01BufferT_00_01std_1_1void__t_3_01typename_01BufferT_1_1ElementType_01_4_01_4 =
+[
+    [ "value", "structnanovdb_1_1BufferHasByteElements_3_01BufferT_00_01std_1_1void__t_3_01typename_01BufferT_1_1ElementType_01_4_01_4.html#a5b4ee4ae6cba6bb75200ba7af1910873", null ]
+];

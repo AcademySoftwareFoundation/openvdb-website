@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -119,12 +119,12 @@ $(function(){initNavTree('NanoVDB_HelloWorld.html','',''); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_doc_2nanovdb_2HelloWorld"></a></p>
 <p>The example snippets below are pulled directly from compiled example source files via Doxygen's <span class="tt">\snippet</span> mechanism, so the code shown here is always in sync with what is built and tested in CI. Enable <span class="tt">-DNANOVDB_BUILD_EXAMPLES=ON</span> to build them locally.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
 Convert an OpenVDB grid to NanoVDB and use accessors</h1>
 <p><a href="https://github.com/AcademySoftwareFoundation/openvdb/blob/master/nanovdb/nanovdb/examples/ex_openvdb_to_nanovdb_accessor/openvdb_to_nanovdb_accessor.cc">The first example</a> shows how to convert an OpenVDB level set sphere into a NanoVDB level set, use accessors to print out multiple values from both grids, and save the NanoVDB grid to file. Note that <b>this example depends on both OpenVDB and NanoVDB</b>.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="LevelSetSphere_8h.html">openvdb/tools/LevelSetSphere.h</a>&gt;</span> <span class="comment">// replace with your own dependencies for generating the OpenVDB grid</span></div>
-<div class="line"><span class="preprocessor">#include &lt;nanovdb/tools/CreateNanoGrid.h&gt;</span> <span class="comment">// converter from OpenVDB to NanoVDB (includes NanoVDB.h and GridManager.h)</span></div>
-<div class="line"><span class="preprocessor">#include &lt;nanovdb/io/IO.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="tools_2CreateNanoGrid_8h.html">nanovdb/tools/CreateNanoGrid.h</a>&gt;</span> <span class="comment">// converter from OpenVDB to NanoVDB (includes NanoVDB.h and GridManager.h)</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="io_2IO_8h.html">nanovdb/io/IO.h</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Convert an openvdb level set sphere into a nanovdb, use accessors to print out multiple values from both</span></div>
 <div class="line"><span class="comment">// grids and save the NanoVDB grid to file.</span></div>
@@ -133,10 +133,10 @@ Convert an OpenVDB grid to NanoVDB and use accessors</h1>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">try</span> {</div>
 <div class="line">        <span class="comment">// Create an OpenVDB grid (here a level set surface but replace this with your own code)</span></div>
-<div class="line">        <span class="keyword">auto</span> srcGrid = openvdb::tools::createLevelSetSphere&lt;openvdb::FloatGrid&gt;(100.0f, <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0.html#a4873ae29d5d8d4f1cb7c7717af41a993">openvdb::Vec3f</a>(0.0f), 1.0f);</div>
+<div class="line">        <span class="keyword">auto</span> srcGrid = openvdb::tools::createLevelSetSphere&lt;openvdb::FloatGrid&gt;(100.0f, <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1.html#a4873ae29d5d8d4f1cb7c7717af41a993">openvdb::Vec3f</a>(0.0f), 1.0f);</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Convert the OpenVDB grid, srcGrid, into a NanoVDB grid handle.</span></div>
-<div class="line">        <span class="keyword">auto</span> handle = nanovdb::tools::createNanoGrid(*srcGrid);</div>
+<div class="line">        <span class="keyword">auto</span> handle = <a class="code hl_function" href="namespacenanovdb_1_1tools.html#a98b5c7c72db3741f896f3b54796670fa">nanovdb::tools::createNanoGrid</a>(*srcGrid);</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Define a (raw) pointer to the NanoVDB grid on the host. Note we match the value type of the srcGrid!</span></div>
 <div class="line">        <span class="keyword">auto</span>* dstGrid = handle.grid&lt;<span class="keywordtype">float</span>&gt;();</div>
@@ -150,20 +150,20 @@ Convert an OpenVDB grid to NanoVDB and use accessors</h1>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Access and print out a cross-section of the narrow-band level set from the two grids</span></div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 97; i &lt; 104; ++i) {</div>
-<div class="line">            printf(<span class="stringliteral">&quot;(%3i,0,0) OpenVDB cpu: % -4.2f, NanoVDB cpu: % -4.2f\n&quot;</span>, i, srcAcc.getValue(<a class="code hl_class" href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">openvdb::Coord</a>(i, 0, 0)), dstAcc.getValue(nanovdb::Coord(i, 0, 0)));</div>
+<div class="line">            printf(<span class="stringliteral">&quot;(%3i,0,0) OpenVDB cpu: % -4.2f, NanoVDB cpu: % -4.2f\n&quot;</span>, i, srcAcc.getValue(<a class="code hl_class" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::Coord</a>(i, 0, 0)), dstAcc.getValue(<a class="code hl_class" href="classnanovdb_1_1math_1_1Coord.html">nanovdb::Coord</a>(i, 0, 0)));</div>
 <div class="line">        }</div>
 <div class="line"> </div>
-<div class="line">        nanovdb::io::writeGrid(<span class="stringliteral">&quot;data/sphere.nvdb&quot;</span>, handle); <span class="comment">// Write the NanoVDB grid to file and throw if writing fails</span></div>
+<div class="line">        <a class="code hl_function" href="namespacenanovdb_1_1io.html#aaba17c8bdd4c1875df28c1a808c4c531">nanovdb::io::writeGrid</a>(<span class="stringliteral">&quot;data/sphere.nvdb&quot;</span>, handle); <span class="comment">// Write the NanoVDB grid to file and throw if writing fails</span></div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
 <div class="line">        std::cerr &lt;&lt; <span class="stringliteral">&quot;An exception occurred: \&quot;&quot;</span> &lt;&lt; e.what() &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}<span class="comment"></span></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
 Read a NanoVDB grid from a file (host only)</h1>
 <p><a href="https://github.com/AcademySoftwareFoundation/openvdb/blob/master/nanovdb/nanovdb/examples/ex_read_nanovdb_sphere_accessor/read_nanovdb_sphere_accessor.cc">The second example</a> reads a NanoVDB grid from a file (the one saved in the previous example) and prints out multiple values. Note that <b>this example does not depend on OpenVDB (nor CUDA), only NanoVDB</b>.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;nanovdb/io/IO.h&gt;</span> <span class="comment">// this is required to read (and write) NanoVDB files on the host</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="io_2IO_8h.html">nanovdb/io/IO.h</a>&gt;</span> <span class="comment">// this is required to read (and write) NanoVDB files on the host</span></div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/// @brief Read a NanoVDB grid from a file and print out multiple values.</span></div>
 <div class="line"><span class="comment">///</span></div>
@@ -171,7 +171,7 @@ Read a NanoVDB grid from a file (host only)</h1>
 <div class="line"><span class="keywordtype">int</span> main()</div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">try</span> {</div>
-<div class="line">        <span class="keyword">auto</span> handle = nanovdb::io::readGrid(<span class="stringliteral">&quot;data/sphere.nvdb&quot;</span>); <span class="comment">// reads first grid from file</span></div>
+<div class="line">        <span class="keyword">auto</span> handle = <a class="code hl_function" href="namespacenanovdb_1_1io.html#aaf2ccd85c88fce820f9cda85cc8e60c8">nanovdb::io::readGrid</a>(<span class="stringliteral">&quot;data/sphere.nvdb&quot;</span>); <span class="comment">// reads first grid from file</span></div>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">auto</span>* grid = handle.grid&lt;<span class="keywordtype">float</span>&gt;(); <span class="comment">// get a (raw) pointer to a NanoVDB grid of value type float</span></div>
 <div class="line"> </div>
@@ -180,7 +180,7 @@ Read a NanoVDB grid from a file (host only)</h1>
 <div class="line"> </div>
 <div class="line">        <span class="keyword">auto</span> acc = grid-&gt;getAccessor(); <span class="comment">// create an accessor for fast access to multiple values</span></div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 97; i &lt; 104; ++i) {</div>
-<div class="line">            printf(<span class="stringliteral">&quot;(%3i,0,0) NanoVDB cpu: % -4.2f\n&quot;</span>, i, acc.getValue(nanovdb::Coord(i, 0, 0)));</div>
+<div class="line">            printf(<span class="stringliteral">&quot;(%3i,0,0) NanoVDB cpu: % -4.2f\n&quot;</span>, i, acc.getValue(<a class="code hl_class" href="classnanovdb_1_1math_1_1Coord.html">nanovdb::Coord</a>(i, 0, 0)));</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception&amp; e) {</div>
@@ -192,8 +192,7 @@ Read a NanoVDB grid from a file (host only)</h1>
 Read a NanoVDB grid and access it on the CPU and GPU</h1>
 <p><a href="https://github.com/AcademySoftwareFoundation/openvdb/blob/master/nanovdb/nanovdb/examples/ex_read_nanovdb_sphere_accessor_cuda/read_nanovdb_sphere_accessor_cuda.cu">The third example</a> reads a NanoVDB grid from a file (the one saved in the first example) and prints out multiple values on both the CPU and GPU. Note that <b>this example does NOT depend on OpenVDB, only NanoVDB and CUDA</b>.</p>
 <div class="fragment"><div class="line">#include &lt;nanovdb/io/IO.h&gt; // this is required to read (and write) NanoVDB files on the host</div>
-<div class="line">#include &lt;nanovdb/cuda/DeviceBuffer.h&gt; // required for CUDA memory management</div>
-<div class="line">#include &lt;nanovdb/GridHandle.h&gt;</div>
+<div class="line">#include &lt;nanovdb/cuda/GridHandle.cuh&gt; // for cuda::copyTo, the explicit host&lt;-&gt;device grid transfer</div>
 <div class="line"> </div>
 <div class="line">extern &quot;C&quot; void launch_kernels(const nanovdb::NanoGrid&lt;float&gt;*,</div>
 <div class="line">                               const nanovdb::NanoGrid&lt;float&gt;*,</div>
@@ -205,23 +204,27 @@ Read a NanoVDB grid and access it on the CPU and GPU</h1>
 <div class="line">int main(int, char**)</div>
 <div class="line">{</div>
 <div class="line">    try {</div>
-<div class="line">        // returns a GridHandle using CUDA for memory management.</div>
-<div class="line">        auto handle = nanovdb::io::readGrid&lt;nanovdb::CudaDeviceBuffer&gt;(&quot;data/sphere.nvdb&quot;);</div>
+<div class="line">        // read the grid into host memory (HostBuffer is the default buffer type)</div>
+<div class="line">        auto handle = nanovdb::io::readGrid(&quot;data/sphere.nvdb&quot;);</div>
 <div class="line"> </div>
-<div class="line">        cudaStream_t stream; // Create a CUDA stream to allow for asynchronous copy of pinned CUDA memory.</div>
+<div class="line">        cudaStream_t stream; // stream that orders the transfer and the kernels below</div>
 <div class="line">        cudaStreamCreate(&amp;stream);</div>
+<div class="line">        {</div>
+<div class="line">            // Deep-copy the grid to the GPU: the copy is ordered on the stream, and the</div>
+<div class="line">            // returned handle validates the transferred grid on the device.</div>
+<div class="line">            auto deviceHandle = nanovdb::cuda::copyTo&lt;nanovdb::cuda::Buffer&lt;std::byte&gt;&gt;(handle, stream);</div>
 <div class="line"> </div>
-<div class="line">        handle.deviceUpload(stream, false); // Copy the NanoVDB grid to the GPU asynchronously</div>
+<div class="line">            auto* cpuGrid = handle.grid&lt;float&gt;(); // a (raw) pointer to the grid of value type float on the CPU</div>
+<div class="line">            auto* deviceGrid = deviceHandle.deviceGrid&lt;float&gt;(); // and its deep copy on the GPU</div>
 <div class="line"> </div>
-<div class="line">        auto* cpuGrid = handle.grid&lt;float&gt;(); // get a (raw) pointer to a NanoVDB grid of value type float on the CPU</div>
-<div class="line">        auto* deviceGrid = handle.deviceGrid&lt;float&gt;(); // get a (raw) pointer to a NanoVDB grid of value type float on the GPU</div>
+<div class="line">            if (!deviceGrid || !cpuGrid)</div>
+<div class="line">                throw std::runtime_error(&quot;GridHandle did not contain a grid with value type float&quot;);</div>
 <div class="line"> </div>
-<div class="line">        if (!deviceGrid || !cpuGrid)</div>
-<div class="line">            throw std::runtime_error(&quot;GridHandle did not contain a grid with value type float&quot;);</div>
+<div class="line">            launch_kernels(deviceGrid, cpuGrid, stream); // print grid values on both the CPU and GPU</div>
 <div class="line"> </div>
-<div class="line">        launch_kernels(deviceGrid, cpuGrid, stream); // Call a host method to print a grid values on both the CPU and GPU</div>
-<div class="line"> </div>
-<div class="line">        cudaStreamDestroy(stream); // Destroy the CUDA stream</div>
+<div class="line">            cudaStreamSynchronize(stream); // the kernels must finish before the device handle (whose buffer frees on this stream) goes away</div>
+<div class="line">        }</div>
+<div class="line">        cudaStreamDestroy(stream); // safe: nothing outlives the stream now</div>
 <div class="line">    }</div>
 <div class="line">    catch (const std::exception&amp; e) {</div>
 <div class="line">        std::cerr &lt;&lt; &quot;An exception occurred: \&quot;&quot; &lt;&lt; e.what() &lt;&lt; &quot;\&quot;&quot; &lt;&lt; std::endl;</div>

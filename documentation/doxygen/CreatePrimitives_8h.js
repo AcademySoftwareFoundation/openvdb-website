@@ -1,0 +1,27 @@
+var CreatePrimitives_8h =
+[
+    [ "NANOVDB_PARALLEL_PRIMITIVES", "CreatePrimitives_8h.html#a3e282d6a9fd31bd641fa86f54f609657", null ],
+    [ "nanovdb::tools::createFogVolumeBox", "namespacenanovdb_1_1tools.html#aac48fdbd7742c83434590b82ce71c435", null ],
+    [ "nanovdb::tools::createFogVolumeBox", "namespacenanovdb_1_1tools.html#a6fd0e5d1dc852ac978fbc5ab5dc2018e", null ],
+    [ "nanovdb::tools::createFogVolumeOctahedron", "namespacenanovdb_1_1tools.html#ad0818acfb3e6935b4696ac6b3b066bfa", null ],
+    [ "nanovdb::tools::createFogVolumeOctahedron", "namespacenanovdb_1_1tools.html#a12e70819361399d6c255dfb388652c86", null ],
+    [ "nanovdb::tools::createFogVolumeSphere", "namespacenanovdb_1_1tools.html#a1721f547b63594b7b24846a91df2dbe6", null ],
+    [ "nanovdb::tools::createFogVolumeSphere", "namespacenanovdb_1_1tools.html#a6e5e905b0e53aad8a33f7a7a4803e12d", null ],
+    [ "nanovdb::tools::createFogVolumeTorus", "namespacenanovdb_1_1tools.html#a607a8404558c5525807331d03e9be555", null ],
+    [ "nanovdb::tools::createFogVolumeTorus", "namespacenanovdb_1_1tools.html#a45696c8fec09329a8fc3248543d10843", null ],
+    [ "nanovdb::tools::createLevelSetBBox", "namespacenanovdb_1_1tools.html#aa388eb6b60bb1eda16b63a97c2f375ed", null ],
+    [ "nanovdb::tools::createLevelSetBBox", "namespacenanovdb_1_1tools.html#a9f5d4886ca548773d4fba2f80cc13eeb", null ],
+    [ "nanovdb::tools::createLevelSetBox", "namespacenanovdb_1_1tools.html#a6b6630606037267762a2d39e22164527", null ],
+    [ "nanovdb::tools::createLevelSetBox", "namespacenanovdb_1_1tools.html#a1fbbcb6a535761b58938cb4181e8cbed", null ],
+    [ "nanovdb::tools::createLevelSetOctahedron", "namespacenanovdb_1_1tools.html#a339167828ea9846917e5aeed82159bf8", null ],
+    [ "nanovdb::tools::createLevelSetOctahedron", "namespacenanovdb_1_1tools.html#ac314ba5ff90aaa6508674a25fa3231aa", null ],
+    [ "nanovdb::tools::createLevelSetSphere", "namespacenanovdb_1_1tools.html#a7eb996ccbca668d3be446027293697f8", null ],
+    [ "nanovdb::tools::createLevelSetSphere", "namespacenanovdb_1_1tools.html#abedcacba0270e784f7030b0d1c2f95fd", null ],
+    [ "nanovdb::tools::createLevelSetSphere", "namespacenanovdb_1_1tools.html#a51a990fdf7ba5cd04cacd1b02752a740", null ],
+    [ "nanovdb::tools::createLevelSetTorus", "namespacenanovdb_1_1tools.html#a268835157256f550603958de31ee5b85", null ],
+    [ "nanovdb::tools::createLevelSetTorus", "namespacenanovdb_1_1tools.html#a06c9f7d005364deb2d94d0ccc22686f7", null ],
+    [ "nanovdb::tools::createPointBox", "namespacenanovdb_1_1tools.html#aa686479cd486d7d2cb0a646d1b52eb60", null ],
+    [ "nanovdb::tools::createPointScatter", "namespacenanovdb_1_1tools.html#acf1ab2027dc3079bc1d8a945f167ced3", null ],
+    [ "nanovdb::tools::createPointSphere", "namespacenanovdb_1_1tools.html#a0026fea10a08792aa96d78e094899374", null ],
+    [ "nanovdb::tools::createPointTorus", "namespacenanovdb_1_1tools.html#a2a4906a5844cece60e8355e82310a7bf", null ]
+];

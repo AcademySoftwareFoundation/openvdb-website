@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -353,7 +353,7 @@ $(function(){initNavTree('GU__VDBPointTools_8h_source.html','',''); });
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
 </div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="structGU__VDBPointToolsInternal_1_1PackedMaskConstructor.html#afcc6cd9b02253cd7f6b92af7d8fcb159">  207</a></span>    <a class="code hl_typedef" href="classopenvdb_1_1v13__0_1_1Grid.html#afc0f397bf0d1638f08250c19bc02d39e">openvdb::MaskGrid::Ptr</a> <a class="code hl_function" href="structGU__VDBPointToolsInternal_1_1PackedMaskConstructor.html#afcc6cd9b02253cd7f6b92af7d8fcb159">getMaskGrid</a>() { <span class="keywordflow">return</span> mMaskGrid; }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="structGU__VDBPointToolsInternal_1_1PackedMaskConstructor.html#afcc6cd9b02253cd7f6b92af7d8fcb159">  207</a></span>    <a class="code hl_typedef" href="classopenvdb_1_1v13__1_1_1Grid.html#afc0f397bf0d1638f08250c19bc02d39e">openvdb::MaskGrid::Ptr</a> <a class="code hl_function" href="structGU__VDBPointToolsInternal_1_1PackedMaskConstructor.html#afcc6cd9b02253cd7f6b92af7d8fcb159">getMaskGrid</a>() { <span class="keywordflow">return</span> mMaskGrid; }</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="structGU__VDBPointToolsInternal_1_1PackedMaskConstructor.html#a87c214082ae079bfeab11c51bd652e6b">  209</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structGU__VDBPointToolsInternal_1_1PackedMaskConstructor.html#a87c214082ae079bfeab11c51bd652e6b">join</a>(<a class="code hl_function" href="structGU__VDBPointToolsInternal_1_1PackedMaskConstructor.html#a3874458c29b2f36af5165081117c426a">PackedMaskConstructor</a>&amp; rhs) { mMaskGrid-&gt;tree().topologyUnion(rhs.mMaskGrid-&gt;tree()); }</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
@@ -383,7 +383,7 @@ $(function(){initNavTree('GU__VDBPointTools_8h_source.html','',''); });
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            }</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            <a class="code hl_struct" href="structGU__VDBPointList.html">GU_VDBPointList&lt;openvdb::Vec3R&gt;</a>  points(*detailtouse);</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            <a class="code hl_typedef" href="classopenvdb_1_1v13__0_1_1Grid.html#afc0f397bf0d1638f08250c19bc02d39e">openvdb::MaskGrid::Ptr</a> grid = openvdb::tools::createPointMask(points, mXForm);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            <a class="code hl_typedef" href="classopenvdb_1_1v13__1_1_1Grid.html#afc0f397bf0d1638f08250c19bc02d39e">openvdb::MaskGrid::Ptr</a> grid = openvdb::tools::createPointMask(points, mXForm);</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            mMaskGrid-&gt;tree().topologyUnion(grid-&gt;tree());</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        }</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    }</div>
@@ -392,7 +392,7 @@ $(function(){initNavTree('GU__VDBPointTools_8h_source.html','',''); });
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    GA_Primitive <span class="keyword">const</span> * <span class="keyword">const</span> * <span class="keyword">const</span>  mPrims;</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    openvdb::math::Transform            mXForm;</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <a class="code hl_typedef" href="classopenvdb_1_1v13__0_1_1Grid.html#afc0f397bf0d1638f08250c19bc02d39e">openvdb::MaskGrid::Ptr</a>              mMaskGrid;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <a class="code hl_typedef" href="classopenvdb_1_1v13__1_1_1Grid.html#afc0f397bf0d1638f08250c19bc02d39e">openvdb::MaskGrid::Ptr</a>              mMaskGrid;</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>}; <span class="comment">// struct PackedMaskConstructor</span></div>
 </div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
@@ -506,7 +506,7 @@ $(function(){initNavTree('GU__VDBPointTools_8h_source.html','',''); });
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="comment"></span> </div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="comment">/// @brief    Utility method to construct a boolean PointMaskGrid</span></div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="comment">/// @details  This method supports packed points.</span></div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="keyword">inline</span> <a class="code hl_typedef" href="classopenvdb_1_1v13__0_1_1Grid.html#afc0f397bf0d1638f08250c19bc02d39e">openvdb::MaskGrid::Ptr</a></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="keyword">inline</span> <a class="code hl_typedef" href="classopenvdb_1_1v13__1_1_1Grid.html#afc0f397bf0d1638f08250c19bc02d39e">openvdb::MaskGrid::Ptr</a></div>
 <div class="foldopen" id="foldopen00345" data-start="{" data-end="}">
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno"><a class="line" href="GU__VDBPointTools_8h.html#a65546313e2304b4e3ea80e79d968dfba">  345</a></span><a class="code hl_function" href="GU__VDBPointTools_8h.html#a65546313e2304b4e3ea80e79d968dfba">GUvdbCreatePointMaskGrid</a>(</div>
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keyword">const</span> openvdb::math::Transform&amp; xform,</div>
@@ -564,7 +564,7 @@ $(function(){initNavTree('GU__VDBPointTools_8h_source.html','',''); });
 <div class="ttc" id="aPlatform_8h_html"><div class="ttname"><a href="Platform_8h.html">Platform.h</a></div></div>
 <div class="ttc" id="aPointIndexGrid_8h_html"><div class="ttname"><a href="PointIndexGrid_8h.html">PointIndexGrid.h</a></div><div class="ttdoc">Space-partitioning acceleration structure for points. Partitions the points into voxels to accelerate...</div></div>
 <div class="ttc" id="aPointsToMask_8h_html"><div class="ttname"><a href="PointsToMask_8h.html">PointsToMask.h</a></div><div class="ttdoc">This tool produces a grid where every voxel that contains a point is active. It employs thread-local ...</div></div>
-<div class="ttc" id="aclassopenvdb_1_1v13__0_1_1Grid_html_afc0f397bf0d1638f08250c19bc02d39e"><div class="ttname"><a href="classopenvdb_1_1v13__0_1_1Grid.html#afc0f397bf0d1638f08250c19bc02d39e">openvdb::v13_0::Grid&lt; MaskTree &gt;::Ptr</a></div><div class="ttdeci">SharedPtr&lt; Grid &gt; Ptr</div><div class="ttdef"><b>Definition</b> Grid.h:573</div></div>
+<div class="ttc" id="aclassopenvdb_1_1v13__1_1_1Grid_html_afc0f397bf0d1638f08250c19bc02d39e"><div class="ttname"><a href="classopenvdb_1_1v13__1_1_1Grid.html#afc0f397bf0d1638f08250c19bc02d39e">openvdb::v13_1::Grid&lt; MaskTree &gt;::Ptr</a></div><div class="ttdeci">SharedPtr&lt; Grid &gt; Ptr</div><div class="ttdef"><b>Definition</b> Grid.h:573</div></div>
 <div class="ttc" id="anamespaceGU__VDBPointToolsInternal_html"><div class="ttname"><a href="namespaceGU__VDBPointToolsInternal.html">GU_VDBPointToolsInternal</a></div><div class="ttdef"><b>Definition</b> GU_VDBPointTools.h:170</div></div>
 <div class="ttc" id="anamespaceGU__VDBPointToolsInternal_html_a7aaa9b5d5e4ab683a4b5455fe6df3970"><div class="ttname"><a href="namespaceGU__VDBPointToolsInternal.html#a7aaa9b5d5e4ab683a4b5455fe6df3970">GU_VDBPointToolsInternal::getPackedPrimitiveOffsets</a></div><div class="ttdeci">void getPackedPrimitiveOffsets(const GU_Detail &amp;detail, std::vector&lt; const GA_Primitive * &gt; &amp;primitives)</div><div class="ttdef"><b>Definition</b> GU_VDBPointTools.h:249</div></div>
 <div class="ttc" id="anamespacedetail_html"><div class="ttname"><a href="namespacedetail.html">detail</a></div><div class="ttdef"><b>Definition</b> VoxToNanoVDB.h:15</div></div>

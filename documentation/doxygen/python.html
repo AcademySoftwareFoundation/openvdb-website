@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -117,9 +117,9 @@ $(function(){initNavTree('python.html','',''); });
   <div class="headertitle"><div class="title">OpenVDB Python </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This section describes the OpenVDB Python module and includes Python code snippets and some complete programs that illustrate how to perform common tasks. The Python module exposes most of the functionality of the C++ <a class="el" href="classopenvdb_1_1v13__0_1_1Grid.html">Grid</a> class, including I/O, metadata management, voxel access and iteration, but almost none of the many <a class="el" href="overview.html#secToolUtils">tools</a>. We expect to add support for tools in forthcoming releases.</p>
+<div class="textblock"><p>This section describes the OpenVDB Python module and includes Python code snippets and some complete programs that illustrate how to perform common tasks. The Python module exposes most of the functionality of the C++ <a class="el" href="classopenvdb_1_1v13__1_1_1Grid.html">Grid</a> class, including I/O, metadata management, voxel access and iteration, but almost none of the many <a class="el" href="overview.html#secToolUtils">tools</a>. We expect to add support for tools in forthcoming releases.</p>
 <p>The Python module supports a fixed set of grid types. If the symbol <code>PY_OPENVDB_WRAP_ALL_GRID_TYPES</code> is defined at compile time, most of the grid types declared in <a class="el" href="openvdb_8h.html">openvdb.h</a> are accessible in Python, otherwise only <b>FloatGrid</b>, <b>BoolGrid</b> and <b>Vec3SGrid</b> are accessible. To add support for grids with other value types or configurations, search for <code>PY_OPENVDB_WRAP_ALL_GRID_TYPES</code> in the module source code, update the code as appropriate and recompile the module. (It is possible that this process will be streamlined in the future with a plugin mechanism.) Note however that adding grid types can significantly increase the time and memory needed to compile the module and can significantly increase the size of the resulting executable. In addition, grids of custom types that are saved to <span class="tt">.vdb</span> files or pickled will not be readable by clients using the standard version of the module.</p>
-<p>Also note that the <a class="el" href="classopenvdb_1_1v13__0_1_1tree_1_1Tree.html">Tree</a> class is not exposed in Python. Much of its functionality is either available through the <a class="el" href="classopenvdb_1_1v13__0_1_1Grid.html">Grid</a> or is too low-level to be generally useful in Python. Although trees are not accessible in Python, they can of course be operated on indirectly. Of note are the grid methods <b>copy</b>, which returns a new grid that shares its tree with the original grid, <b>deepCopy</b>, which returns a new grid that owns its own tree, and <b>sharesWith</b>, which reports whether two grids share a tree.</p>
+<p>Also note that the <a class="el" href="classopenvdb_1_1v13__1_1_1tree_1_1Tree.html">Tree</a> class is not exposed in Python. Much of its functionality is either available through the <a class="el" href="classopenvdb_1_1v13__1_1_1Grid.html">Grid</a> or is too low-level to be generally useful in Python. Although trees are not accessible in Python, they can of course be operated on indirectly. Of note are the grid methods <b>copy</b>, which returns a new grid that shares its tree with the original grid, <b>deepCopy</b>, which returns a new grid that owns its own tree, and <b>sharesWith</b>, which reports whether two grids share a tree.</p>
 <h1 class="doxsection"><a class="anchor" id="sPyContents"></a>
 Contents</h1>
 <ul>
@@ -468,7 +468,7 @@ Working with NumPy arrays</h1>
 </div><!-- fragment --><p> <b>copyToArray</b> has no <code>tolerance</code> argument, because there is no distinction between active and inactive values in the destination array.</p>
 <h1 class="doxsection"><a class="anchor" id="sPyMeshConversion"></a>
 Mesh conversion</h1>
-<p>Also available if the OpenVDB Python module is compiled with NumPy support (see <a class="el" href="#sPyNumPy">above</a>) are grid methods to convert polygonal meshes to level sets (see <a class="el" href="namespaceopenvdb_1_1v13__0_1_1tools.html#a49d6517666da8e1ec1175651ebf12f32">tools::meshToLevelSet</a> for some restrictions) and to convert isosurfaces of scalar-valued grids to meshes. </p><div class="fragment"><div class="line">&gt;&gt;&gt; <span class="keyword">import</span> pyopenvdb <span class="keyword">as</span> vdb</div>
+<p>Also available if the OpenVDB Python module is compiled with NumPy support (see <a class="el" href="#sPyNumPy">above</a>) are grid methods to convert polygonal meshes to level sets (see <a class="el" href="namespaceopenvdb_1_1v13__1_1_1tools.html#a49d6517666da8e1ec1175651ebf12f32">tools::meshToLevelSet</a> for some restrictions) and to convert isosurfaces of scalar-valued grids to meshes. </p><div class="fragment"><div class="line">&gt;&gt;&gt; <span class="keyword">import</span> pyopenvdb <span class="keyword">as</span> vdb</div>
 <div class="line">&gt;&gt;&gt; <span class="keyword">import</span> numpy</div>
 <div class="line"> </div>
 <div class="line">&gt;&gt;&gt; grid = vdb.read(<span class="stringliteral">&#39;bunny.vdb&#39;</span>, <span class="stringliteral">&#39;ls_bunny&#39;</span>)</div>
@@ -561,7 +561,7 @@ Mesh conversion</h1>
 <div class="line">&gt;&gt;&gt; writeObjFile(<span class="stringliteral">&#39;bunny.obj&#39;</span>, *mesh)</div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="sPyCppAPI"></a>
 C++ glue routines</h1>
-<p>Python objects of type <b>FloatGrid</b>, <b>Vec3SGrid</b>, etc. are backed by C structs that &ldquo;inherit&rdquo; from <code>PyObject</code>. The OpenVDB Python extension module includes public functions that you can call in your own extension modules to convert between <a class="el" href="classopenvdb_1_1v13__0_1_1Grid.html">openvdb::Grids</a> and <span class="tt">PyObject</span>s. See the pyopenvdb.h reference for a description of these functions and a usage example.</p>
+<p>Python objects of type <b>FloatGrid</b>, <b>Vec3SGrid</b>, etc. are backed by C structs that &ldquo;inherit&rdquo; from <code>PyObject</code>. The OpenVDB Python extension module includes public functions that you can call in your own extension modules to convert between <a class="el" href="classopenvdb_1_1v13__1_1_1Grid.html">openvdb::Grids</a> and <span class="tt">PyObject</span>s. See the pyopenvdb.h reference for a description of these functions and a usage example.</p>
 <p>Your extension module might need to link against the OpenVDB extension module in order to access these functions. On UNIX systems, it might also be necessary to specify the <code>RTLD_GLOBAL</code> flag when importing the OpenVDB module, to allow its symbols to be shared across modules. See <b>setdlopenflags</b> in the Python <b>sys</b> module for one way to do this. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

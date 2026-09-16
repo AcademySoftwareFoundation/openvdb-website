@@ -40,7 +40,6 @@ var dir_56dd20a90d91c3ec0f84e02ccf2e754a =
     [ "PointScatter.h", "tools_2PointScatter_8h.html", "tools_2PointScatter_8h" ],
     [ "PointsToMask.h", "PointsToMask_8h.html", "PointsToMask_8h" ],
     [ "PoissonSolver.h", "PoissonSolver_8h.html", "PoissonSolver_8h" ],
-    [ "PolySoupToLevelSet.h", "PolySoupToLevelSet_8h.html", "PolySoupToLevelSet_8h" ],
     [ "PotentialFlow.h", "PotentialFlow_8h.html", "PotentialFlow_8h" ],
     [ "Prune.h", "Prune_8h.html", "Prune_8h" ],
     [ "RayIntersector.h", "RayIntersector_8h.html", "RayIntersector_8h" ],

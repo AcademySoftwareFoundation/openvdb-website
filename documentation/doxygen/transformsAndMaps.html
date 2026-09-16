@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -137,27 +137,27 @@ Contents</h1>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="sTransforms"></a>
 Transforms in OpenVDB</h1>
-<p>The OpenVDB <a class="el" href="classopenvdb_1_1v13__0_1_1tree_1_1Tree.html">Tree</a> is a sparse representation of a three-dimensional array of voxels, each element of which is addressed via discrete, three-dimensional index space coordinates, typically in the form of a <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">Coord</a>. For example, the following code retrieves the floating-point value of a voxel with index coordinates&#160;(1,&#160;2,&#160;3): </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0.html#a2ae45d4df056c7d0d936a496fec925ee">openvdb::FloatGrid</a> grid = ...;</div>
-<div class="line"><a class="code hl_typedef" href="classopenvdb_1_1v13__0_1_1Grid.html#a5a3350167a40a723301d9877740fe859">openvdb::FloatGrid::Accessor</a> accessor = grid.<a class="code hl_function" href="classopenvdb_1_1v13__0_1_1Grid.html#afd9327e5a015e2e860017765f0eb372c">getAccessor</a>();</div>
-<div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">openvdb::Coord</a> ijk(1,2,3);</div>
+<p>The OpenVDB <a class="el" href="classopenvdb_1_1v13__1_1_1tree_1_1Tree.html">Tree</a> is a sparse representation of a three-dimensional array of voxels, each element of which is addressed via discrete, three-dimensional index space coordinates, typically in the form of a <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">Coord</a>. For example, the following code retrieves the floating-point value of a voxel with index coordinates&#160;(1,&#160;2,&#160;3): </p><div class="fragment"><div class="line"><a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1.html#a2ae45d4df056c7d0d936a496fec925ee">openvdb::FloatGrid</a> grid = ...;</div>
+<div class="line"><a class="code hl_typedef" href="classopenvdb_1_1v13__1_1_1Grid.html#a5a3350167a40a723301d9877740fe859">openvdb::FloatGrid::Accessor</a> accessor = grid.<a class="code hl_function" href="classopenvdb_1_1v13__1_1_1Grid.html#afd9327e5a015e2e860017765f0eb372c">getAccessor</a>();</div>
+<div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::Coord</a> ijk(1,2,3);</div>
 <div class="line"><span class="keywordtype">float</span> value = accessor.getValue(ijk);</div>
-<div class="ttc" id="aclassopenvdb_1_1v13__0_1_1Grid_html_a5a3350167a40a723301d9877740fe859"><div class="ttname"><a href="classopenvdb_1_1v13__0_1_1Grid.html#a5a3350167a40a723301d9877740fe859">openvdb::v13_0::Grid&lt; FloatTree &gt;::Accessor</a></div><div class="ttdeci">typename FloatTree::Accessor Accessor</div><div class="ttdef"><b>Definition</b> Grid.h:589</div></div>
-<div class="ttc" id="aclassopenvdb_1_1v13__0_1_1Grid_html_afd9327e5a015e2e860017765f0eb372c"><div class="ttname"><a href="classopenvdb_1_1v13__0_1_1Grid.html#afd9327e5a015e2e860017765f0eb372c">openvdb::v13_0::Grid::getAccessor</a></div><div class="ttdeci">Accessor getAccessor()</div><div class="ttdoc">Return an accessor that provides random read and write access to this grid&#39;s voxels.</div><div class="ttdef"><b>Definition</b> Grid.h:732</div></div>
-<div class="ttc" id="aclassopenvdb_1_1v13__0_1_1math_1_1Coord_html"><div class="ttname"><a href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">openvdb::v13_0::math::Coord</a></div><div class="ttdoc">Signed (x, y, z) 32-bit integer coordinates.</div><div class="ttdef"><b>Definition</b> Coord.h:26</div></div>
-<div class="ttc" id="anamespaceopenvdb_1_1v13__0_html_a2ae45d4df056c7d0d936a496fec925ee"><div class="ttname"><a href="namespaceopenvdb_1_1v13__0.html#a2ae45d4df056c7d0d936a496fec925ee">openvdb::v13_0::FloatGrid</a></div><div class="ttdeci">Grid&lt; FloatTree &gt; FloatGrid</div><div class="ttdef"><b>Definition</b> openvdb.h:76</div></div>
-</div><!-- fragment --><p>A <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Transform.html">Transform</a> relates index space coordinates to world space coordinates that give a spatial context for the discretized data. Translation from index coordinates (<em>i</em>,&#160;<em>j</em>,&#160;<em>k</em>) to world space coordinates (<em>x</em>,&#160;<em>y</em>,&#160;<em>z</em>) is done with a call to the <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Transform.html#a3b329893fca1e7c0b027b5911ca9bc8a">indexToWorld</a> method, and from world space coordinates to index space coordinates with a call to <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Transform.html#a4aa9cbb2a52e87a525e8f037675e48fe">worldToIndex</a>: </p><div class="fragment"><div class="line"><span class="comment">// Create a linear transform that scales i, j and k by 0.1</span></div>
+<div class="ttc" id="aclassopenvdb_1_1v13__1_1_1Grid_html_a5a3350167a40a723301d9877740fe859"><div class="ttname"><a href="classopenvdb_1_1v13__1_1_1Grid.html#a5a3350167a40a723301d9877740fe859">openvdb::v13_1::Grid&lt; FloatTree &gt;::Accessor</a></div><div class="ttdeci">typename FloatTree::Accessor Accessor</div><div class="ttdef"><b>Definition</b> Grid.h:589</div></div>
+<div class="ttc" id="aclassopenvdb_1_1v13__1_1_1Grid_html_afd9327e5a015e2e860017765f0eb372c"><div class="ttname"><a href="classopenvdb_1_1v13__1_1_1Grid.html#afd9327e5a015e2e860017765f0eb372c">openvdb::v13_1::Grid::getAccessor</a></div><div class="ttdeci">Accessor getAccessor()</div><div class="ttdoc">Return an accessor that provides random read and write access to this grid&#39;s voxels.</div><div class="ttdef"><b>Definition</b> Grid.h:732</div></div>
+<div class="ttc" id="aclassopenvdb_1_1v13__1_1_1math_1_1Coord_html"><div class="ttname"><a href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::v13_1::math::Coord</a></div><div class="ttdoc">Signed (x, y, z) 32-bit integer coordinates.</div><div class="ttdef"><b>Definition</b> Coord.h:26</div></div>
+<div class="ttc" id="anamespaceopenvdb_1_1v13__1_html_a2ae45d4df056c7d0d936a496fec925ee"><div class="ttname"><a href="namespaceopenvdb_1_1v13__1.html#a2ae45d4df056c7d0d936a496fec925ee">openvdb::v13_1::FloatGrid</a></div><div class="ttdeci">Grid&lt; FloatTree &gt; FloatGrid</div><div class="ttdef"><b>Definition</b> openvdb.h:76</div></div>
+</div><!-- fragment --><p>A <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Transform.html">Transform</a> relates index space coordinates to world space coordinates that give a spatial context for the discretized data. Translation from index coordinates (<em>i</em>,&#160;<em>j</em>,&#160;<em>k</em>) to world space coordinates (<em>x</em>,&#160;<em>y</em>,&#160;<em>z</em>) is done with a call to the <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Transform.html#a3b329893fca1e7c0b027b5911ca9bc8a">indexToWorld</a> method, and from world space coordinates to index space coordinates with a call to <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Transform.html#a4aa9cbb2a52e87a525e8f037675e48fe">worldToIndex</a>: </p><div class="fragment"><div class="line"><span class="comment">// Create a linear transform that scales i, j and k by 0.1</span></div>
 <div class="line">openvdb::math::Transform::Ptr linearTransform =</div>
 <div class="line">    openvdb::math::Transform::createLinearTransform(0.1);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Compute the location in world space that is the image of (1,2,3).</span></div>
 <div class="line"><span class="comment">// The result will be (0.1, 0.2, 0.3).</span></div>
-<div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">openvdb::Coord</a> ijk(1,2,3);</div>
-<div class="line"><a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> worldSpacePoint = linearTransform-&gt;indexToWorld(ijk);</div>
+<div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::Coord</a> ijk(1,2,3);</div>
+<div class="line"><a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> worldSpacePoint = linearTransform-&gt;indexToWorld(ijk);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Compute the location in index space that is the pre-image of (0.1, 0.2, 0.3).</span></div>
 <div class="line"><span class="comment">// The result will be (1.0, 2.0, 3.0).</span></div>
-<div class="line"><a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> indexSpacePoint = linearTransform-&gt;worldToIndex(worldSpacePoint);</div>
-<div class="ttc" id="anamespaceopenvdb_1_1v13__0_1_1math_html_a98d94999010cb92dfb5f652c353d1d82"><div class="ttname"><a href="namespaceopenvdb_1_1v13__0_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::v13_0::math::Vec3d</a></div><div class="ttdeci">Vec3&lt; double &gt; Vec3d</div><div class="ttdef"><b>Definition</b> Vec3.h:708</div></div>
+<div class="line"><a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> indexSpacePoint = linearTransform-&gt;worldToIndex(worldSpacePoint);</div>
+<div class="ttc" id="anamespaceopenvdb_1_1v13__1_1_1math_html_a98d94999010cb92dfb5f652c353d1d82"><div class="ttname"><a href="namespaceopenvdb_1_1v13__1_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::v13_1::math::Vec3d</a></div><div class="ttdeci">Vec3&lt; double &gt; Vec3d</div><div class="ttdef"><b>Definition</b> Vec3.h:708</div></div>
 </div><!-- fragment --><p> In the above example, there are two things to notice. First, world space locations are specified as three-dimensional, double-precision, floating-point vectors, and second, <b>worldToIndex</b> does not return discrete coordinates, but rather a floating-point vector. This is a reflection of the fact that not every location in a continuous world space, i.e., not every (<em>x</em>,&#160;<em>y</em>,&#160;<em>z</em>), is the image of discrete integral coordinates (<em>i</em>,&#160;<em>j</em>,&#160;<em>k</em>).</p>
 <h2 class="doxsection"><a class="anchor" id="sLinearTransforms"></a>
 Linear Transforms</h2>
@@ -193,7 +193,7 @@ Frustum Transforms</h2>
 <div class="line"><span class="comment">// Construct a frustum transform that results in a frustum whose</span></div>
 <div class="line"><span class="comment">// near plane is centered on the origin in world space.</span></div>
 <div class="line">openvdb::math::Transform::Ptr frustumTransform =</div>
-<div class="line">    <a class="code hl_namespace" href="namespaceopenvdb_1_1v13__0_1_1math.html">openvdb::math</a>:::Transform::createFrustumTransform(</div>
+<div class="line">    <a class="code hl_namespace" href="namespaceopenvdb_1_1v13__1_1_1math.html">openvdb::math</a>:::Transform::createFrustumTransform(</div>
 <div class="line">        bbox, taper, depth, xWidth);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// The frustum shape can be rotated, scaled, translated and even</span></div>
@@ -203,9 +203,9 @@ Frustum Transforms</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Compute the world space image of a given point within</span></div>
 <div class="line"><span class="comment">// the index space bounding box that defines the frustum.</span></div>
-<div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">openvdb::Coord</a> ijk(20,10,18);</div>
-<div class="line"><a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> worldLocation = frustumTransform-&gt;indexToWorld(ijk);</div>
-<div class="ttc" id="anamespaceopenvdb_1_1v13__0_1_1math_html"><div class="ttname"><a href="namespaceopenvdb_1_1v13__0_1_1math.html">openvdb::v13_0::math</a></div><div class="ttdef"><b>Definition</b> Types.h:763</div></div>
+<div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::Coord</a> ijk(20,10,18);</div>
+<div class="line"><a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> worldLocation = frustumTransform-&gt;indexToWorld(ijk);</div>
+<div class="ttc" id="anamespaceopenvdb_1_1v13__1_1_1math_html"><div class="ttname"><a href="namespaceopenvdb_1_1v13__1_1_1math.html">openvdb::v13_1::math</a></div><div class="ttdef"><b>Definition</b> Types.h:763</div></div>
 </div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="sCellVsVertex"></a>
 Cell-Centered vs. Vertex-Centered Transforms</h2>
 <p>When partitioning world space with a regular grid, two popular configurations are cell-centered and vertex-centered grids. This is really a question of interpretation and transforms.</p>
@@ -220,7 +220,7 @@ Cell-Centered vs. Vertex-Centered Transforms</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// A linear transform with the correct spacing</span></div>
 <div class="line">openvdb::math::Transform::Ptr transform =</div>
-<div class="line">    <a class="code hl_namespace" href="namespaceopenvdb_1_1v13__0_1_1math.html">openvdb::math</a>:::Transform::createLinearTransform(delta);</div>
+<div class="line">    <a class="code hl_namespace" href="namespaceopenvdb_1_1v13__1_1_1math.html">openvdb::math</a>:::Transform::createLinearTransform(delta);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Add the offset.</span></div>
 <div class="line">transform-&gt;postTranslate(offset);</div>
@@ -231,12 +231,12 @@ Cell-Centered vs. Vertex-Centered Transforms</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// A linear transform with the correct spacing</span></div>
 <div class="line">openvdb::math::Transform::Ptr transform =</div>
-<div class="line">    <a class="code hl_namespace" href="namespaceopenvdb_1_1v13__0_1_1math.html">openvdb::math</a>:::Transform::createLinearTransform(delta);</div>
+<div class="line">    <a class="code hl_namespace" href="namespaceopenvdb_1_1v13__1_1_1math.html">openvdb::math</a>:::Transform::createLinearTransform(delta);</div>
 </div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="sVoxels"></a>
 Voxel Interpretations</h2>
 <p>A similar and often related concept to cell- and vertex-centered partitioning of world space is the idea of a voxel. A voxel historically refers to the volumetric equivalent of a pixel and as such implies a small region of world space. A voxel could, for instance, be the image under transform of a vertex-centered (or cell-centered) box in index space. In this way the voxel can be seen as a generalization of regular grid cells. The interpretation of data stored in a grid can be related to the concept of a voxel but need not be. An application might interpret the grid value indexed by (<em>i</em>,&#160;<em>j</em>,&#160;<em>k</em>) as the spatial average of a quantity in a defined world-space voxel centered on the image of that lattice point. But in other situations the value stored at (<em>i</em>,&#160;<em>j</em>,&#160;<em>k</em>) might be a discrete sample taken from a single point in world space.</p>
-<p>The <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Transform.html">Transform</a> class does include methods such as <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Transform.html#a2d6ab90a71147a1c61767456f400d3b8">voxelSize</a> and <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Transform.html#a202f4ad9db5ab32dd5fdc8c96a0a086b">voxelVolume</a> that suppose a particular interpretation of a voxel. They assume a voxel that is the image of a vertex-centered cube in index space, so the <b>voxelSize</b> methods return the lengths of line segments in world space that connect vertices: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">openvdb::Coord</a> ijk(0,0,0);</div>
-<div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">openvdb::Coord</a> tmp0(1,0,0), tmp1(0,1,0), tmp2(0,0,1);</div>
+<p>The <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Transform.html">Transform</a> class does include methods such as <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Transform.html#a2d6ab90a71147a1c61767456f400d3b8">voxelSize</a> and <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Transform.html#a202f4ad9db5ab32dd5fdc8c96a0a086b">voxelVolume</a> that suppose a particular interpretation of a voxel. They assume a voxel that is the image of a vertex-centered cube in index space, so the <b>voxelSize</b> methods return the lengths of line segments in world space that connect vertices: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::Coord</a> ijk(0,0,0);</div>
+<div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::Coord</a> tmp0(1,0,0), tmp1(0,1,0), tmp2(0,0,1);</div>
 <div class="line"> </div>
 <div class="line">openvdb::math::Vec3d size;</div>
 <div class="line">size.x() = (xform.indexToWorld(ijk + tmp0) - xform.indexToWorld(ijk)).length();</div>
@@ -252,7 +252,7 @@ Staggered Velocity Grids</h2>
 <p>Staggered velocity data is often used in fluid simulations, and the relationship between data interpretation and transforms is somewhat peculiar when using a vector grid to hold staggered velocity data. In this case the lattice point (<em>i</em>,&#160;<em>j</em>,&#160;<em>k</em>) identifies a cell in world space by mapping to the cell&rsquo;s center, but each element of the velocity vector is identified with a different face of the cell. The first element of the vector is identified with the image of the (<em>i</em>&minus;1/2,&#160;<em>j</em>,&#160;<em>k</em>) face, the second element with (<em>i</em>,&#160;<em>j</em>&minus;1/2,&#160;<em>k</em>), and the third element with (<em>i</em>,&#160;<em>j</em>,&#160;<em>k</em>&minus;1/2).</p>
 <h1 class="doxsection"><a class="anchor" id="sMaps"></a>
 Maps in OpenVDB Transforms</h1>
-<p>The actual work of a <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Transform.html">Transform</a> is performed by an implementation object called a <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1MapBase.html">Map</a>. The <b>Map</b> in turn is a polymorphic object whose derived types are designed to optimally represent the most common transformations. Specifically, the <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Transform.html">Transform</a> holds a <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1MapBase.html">MapBase</a> pointer to a derived type that has been simplified to minimize calculations. When the transform is updated by prepending or appending a linear operation (e.g., with <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Transform.html#a827df214068afcf258e91d06dc9d52a8">preRotate</a>), the implementation map is recomputed and simplified if possible. For example, in many level-set-oriented applications the transform between index space and world space is simply a uniform scaling of the index points, i.e., (<em>x</em>,&#160;<em>y</em>,&#160;<em>z</em>) = (&Delta;<em>i</em>,&#160;&Delta;<em>j</em>,&#160;&Delta;<em>k</em>), where &Delta; has some world space units. For transforms such as this, the implementation is a <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1UniformScaleMap.html">UniformScaleMap</a>. </p><div class="fragment"><div class="line"><span class="comment">// Create a linear transform that scales i, j and k by 0.1</span></div>
+<p>The actual work of a <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Transform.html">Transform</a> is performed by an implementation object called a <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1MapBase.html">Map</a>. The <b>Map</b> in turn is a polymorphic object whose derived types are designed to optimally represent the most common transformations. Specifically, the <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Transform.html">Transform</a> holds a <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1MapBase.html">MapBase</a> pointer to a derived type that has been simplified to minimize calculations. When the transform is updated by prepending or appending a linear operation (e.g., with <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Transform.html#a827df214068afcf258e91d06dc9d52a8">preRotate</a>), the implementation map is recomputed and simplified if possible. For example, in many level-set-oriented applications the transform between index space and world space is simply a uniform scaling of the index points, i.e., (<em>x</em>,&#160;<em>y</em>,&#160;<em>z</em>) = (&Delta;<em>i</em>,&#160;&Delta;<em>j</em>,&#160;&Delta;<em>k</em>), where &Delta; has some world space units. For transforms such as this, the implementation is a <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1UniformScaleMap.html">UniformScaleMap</a>. </p><div class="fragment"><div class="line"><span class="comment">// Create a linear transform that scales i, j and k by 0.1</span></div>
 <div class="line">openvdb::math::Transform::Ptr linearTransform =</div>
 <div class="line">    openvdb::math::Transform::createLinearTransform(0.1);</div>
 <div class="line"> </div>
@@ -262,7 +262,7 @@ Maps in OpenVDB Transforms</h1>
 <div class="line"><span class="comment">// At this time the map holds a openvdb::math::UniformScaleMap.</span></div>
 <div class="line">assert(linearTransform-&gt;mapType() == openvdb::math::UniformScaleMap::type());</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">openvdb::Coord</a> ijk(1,2,3);</div>
+<div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::Coord</a> ijk(1,2,3);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Applying the transform...</span></div>
 <div class="line">openvdb::math::Vec3d transformResult = linearTransform-&gt;indexToWorld(ijk);</div>
@@ -271,7 +271,7 @@ Maps in OpenVDB Transforms</h1>
 <div class="line">openvdb::math::Vec3d mapResult = uniformScale.applyMap(ijk);</div>
 <div class="line"> </div>
 <div class="line">assert(mapResult == transformResult);</div>
-</div><!-- fragment --><p>There are specialized maps for a variety of common linear transforms: pure translation (<a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1TranslationMap.html">TranslationMap</a>), uniform scale (<a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1UniformScaleMap.html">UniformScaleMap</a>), uniform scale and translation (<a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1UniformScaleTranslateMap.html">UniformScaleTranslateMap</a>), non-uniform scale (<a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1ScaleMap.html">ScaleMap</a>), and non-uniform scale and translation (<a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1ScaleTranslateMap.html">ScaleTranslateMap</a>). A general affine map (<a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1AffineMap.html">AffineMap</a>) is used for all other cases (those that include non-degenerate rotation or shear).</p>
+</div><!-- fragment --><p>There are specialized maps for a variety of common linear transforms: pure translation (<a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1TranslationMap.html">TranslationMap</a>), uniform scale (<a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1UniformScaleMap.html">UniformScaleMap</a>), uniform scale and translation (<a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1UniformScaleTranslateMap.html">UniformScaleTranslateMap</a>), non-uniform scale (<a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1ScaleMap.html">ScaleMap</a>), and non-uniform scale and translation (<a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1ScaleTranslateMap.html">ScaleTranslateMap</a>). A general affine map (<a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1AffineMap.html">AffineMap</a>) is used for all other cases (those that include non-degenerate rotation or shear).</p>
 <h2 class="doxsection"><a class="anchor" id="sGettingMat4"></a>
 An Equivalent Matrix Representation</h2>
 <p>The matrix representation used within OpenVDB adheres to the minority convention of right-multiplication of the matrix against a vector: </p><div class="fragment"><div class="line"><span class="comment">// Example matrix transform that scales, next translates,</span></div>
@@ -286,7 +286,7 @@ An Equivalent Matrix Representation</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Apply the transform by right-multiplying the matrix.</span></div>
 <div class="line">openvdb::math::Vec3d worldSpace = indexSpace * transform;</div>
-</div><!-- fragment --><p> Any linear map can produce an equivalent <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1AffineMap.html">AffineMap</a>, which in turn can produce an equivalent 4&times;4 matrix. Starting with a linear transform one can produce a consistent matrix as follows: </p><div class="fragment"><div class="line">openvdb::math::Mat4d matrix;</div>
+</div><!-- fragment --><p> Any linear map can produce an equivalent <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1AffineMap.html">AffineMap</a>, which in turn can produce an equivalent 4&times;4 matrix. Starting with a linear transform one can produce a consistent matrix as follows: </p><div class="fragment"><div class="line">openvdb::math::Mat4d matrix;</div>
 <div class="line"><span class="keywordflow">if</span> (transform-&gt;isLinear()) {</div>
 <div class="line">   <span class="comment">// Get the equivalent 4x4 matrix.</span></div>
 <div class="line">   matrix = transform-&gt;getBaseMap()-&gt;getAffineMap()-&gt;getMat4();</div>
@@ -307,7 +307,7 @@ An Equivalent Matrix Representation</h2>
 <h2 class="doxsection"><a class="anchor" id="sCostOfMaps"></a>
 Working Directly with Maps</h2>
 <p>Accessing a transform&rsquo;s map through virtual function calls introduces some overhead and precludes compile-time optimizations such as inlining. For this reason, the more computationally intensive OpenVDB tools are templated to work directly with any underlying map. This allows the tools direct access to the map&rsquo;s simplified representation and gives the compiler a free hand to inline.</p>
-<p>Maps themselves know nothing of index space and world space, but are simply functions <em>x</em><sub><em>range</em></sub> = <em>f</em>(<em>x</em><sub><em>domain</em></sub>) that map 3-vectors from one space (the domain) to another (the range), or from the range back to the domain (<em>x</em><sub><em>domain</em></sub> = <em>f</em><sup>&minus;1</sup>(<em>x</em><sub><em>range</em></sub>)), by means of the methods <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1MapBase.html#a25df8ee7780261985003d37baf6f014d">applyMap</a> and <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1MapBase.html#a047af417cb22eb286a02bf3d51148eb3">applyInverseMap</a>.</p>
+<p>Maps themselves know nothing of index space and world space, but are simply functions <em>x</em><sub><em>range</em></sub> = <em>f</em>(<em>x</em><sub><em>domain</em></sub>) that map 3-vectors from one space (the domain) to another (the range), or from the range back to the domain (<em>x</em><sub><em>domain</em></sub> = <em>f</em><sup>&minus;1</sup>(<em>x</em><sub><em>range</em></sub>)), by means of the methods <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1MapBase.html#a25df8ee7780261985003d37baf6f014d">applyMap</a> and <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1MapBase.html#a047af417cb22eb286a02bf3d51148eb3">applyInverseMap</a>.</p>
 <div class="fragment"><div class="line"><span class="comment">// Create a simple uniform scale map that scales by 10.</span></div>
 <div class="line">openvdb::math::UniformScaleMap usm(10.0);</div>
 <div class="line"> </div>
@@ -319,7 +319,7 @@ Working Directly with Maps</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// The map is inverted thus:</span></div>
 <div class="line">assert(domainPoint == usm.applyInverseMap(rangePoint));</div>
-</div><!-- fragment --><p>In many tools, the actual map type is not known a priori and must be deduced at runtime prior to calling the appropriate map-specific or map-templated code. The type of map currently being used by a transform can be determined using the <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Transform.html#a0e605cf1b879a6908652dfd0ddfe5bce">mapType</a> method: </p><div class="fragment"><div class="line"><span class="comment">// Test for a uniform scale map.</span></div>
+</div><!-- fragment --><p>In many tools, the actual map type is not known a priori and must be deduced at runtime prior to calling the appropriate map-specific or map-templated code. The type of map currently being used by a transform can be determined using the <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Transform.html#a0e605cf1b879a6908652dfd0ddfe5bce">mapType</a> method: </p><div class="fragment"><div class="line"><span class="comment">// Test for a uniform scale map.</span></div>
 <div class="line"><span class="keywordflow">if</span> (transform-&gt;mapType() == openvdb::math::UniformScaleMap::type()) {</div>
 <div class="line"> </div>
 <div class="line">   <span class="comment">// This call would return a null pointer in the case of a map type mismatch.</span></div>
@@ -329,13 +329,13 @@ Working Directly with Maps</h2>
 <div class="line">   <span class="comment">// Call a function that accepts UniformScaleMaps.</span></div>
 <div class="line">   dofoo(*usm)</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>To simplify this process, the function <a class="el" href="namespaceopenvdb_1_1v13__0_1_1math.html#a6afa47f5da318605bfff1370ad9da7e7">processTypedMap</a> has been provided. It accepts a transform and a functor templated on the map type.</p>
+</div><!-- fragment --><p>To simplify this process, the function <a class="el" href="namespaceopenvdb_1_1v13__1_1_1math.html#a6afa47f5da318605bfff1370ad9da7e7">processTypedMap</a> has been provided. It accepts a transform and a functor templated on the map type.</p>
 <h2 class="doxsection"><a class="anchor" id="sGradientAndMaps"></a>
 Maps and Mathematical Operations</h2>
 <p>In addition to supporting the mapping of a point from one space to another, maps also support mapping of local gradients. This results from use of the chain rule of calculus in computing the Jacobian of the map. Essentially, the gradient calculated in the domain of a map can be converted to the gradient in the range of the map, allowing one to compute a gradient in index space and then transform it to a gradient in world space. </p><div class="fragment"><div class="line"><span class="comment">// Compute the gradient at a point in index space in a</span></div>
 <div class="line"><span class="comment">// floating-point grid using the second-order central difference.</span></div>
-<div class="line"><a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0.html#a2ae45d4df056c7d0d936a496fec925ee">openvdb::FloatGrid</a> grid = ...;</div>
-<div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">openvdb::Coord</a> ijk(2,3,5)</div>
+<div class="line"><a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1.html#a2ae45d4df056c7d0d936a496fec925ee">openvdb::FloatGrid</a> grid = ...;</div>
+<div class="line"><a class="code hl_class" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::Coord</a> ijk(2,3,5)</div>
 <div class="line"><a class="code hl_namespace" href="namespaceopenvdb.html">openvdb</a>::math::Vec3d isGrad =</div>
 <div class="line">    <a class="code hl_namespace" href="namespaceopenvdb.html">openvdb</a>::math::ISGradient&lt;CD_2D&gt;::result(grid, ijk);</div>
 <div class="line"> </div>

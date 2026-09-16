@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -129,8 +129,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afd45fa6953658665a42e0a495a89ae85" id="r_afd45fa6953658665a42e0a495a89ae85"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd45fa6953658665a42e0a495a89ae85">~AttributeDetailBase</a> ()=default</td></tr>
 <tr class="memitem:ad8ce3a7e1ef35a918317a146690d7e53" id="r_ad8ce3a7e1ef35a918317a146690d7e53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8ce3a7e1ef35a918317a146690d7e53">AttributeDetailBase</a> (const <a class="el" href="classopenvdb__houdini_1_1AttributeDetailBase.html">AttributeDetailBase</a> &amp;)=default</td></tr>
 <tr class="memitem:ae94df1d4fbfeb09cbaace6875c16304f" id="r_ae94df1d4fbfeb09cbaace6875c16304f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopenvdb__houdini_1_1AttributeDetailBase.html">AttributeDetailBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae94df1d4fbfeb09cbaace6875c16304f">operator=</a> (const <a class="el" href="classopenvdb__houdini_1_1AttributeDetailBase.html">AttributeDetailBase</a> &amp;)=default</td></tr>
-<tr class="memitem:abe39601a13aee15e19c10acef1daafac" id="r_abe39601a13aee15e19c10acef1daafac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe39601a13aee15e19c10acef1daafac">set</a> (const <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">openvdb::Coord</a> &amp;ijk, const GA_Offset(&amp;offsets)[3], const <a class="el" href="namespaceopenvdb_1_1v13__0_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> &amp;weights)=0</td></tr>
-<tr class="memitem:a3e2b9e0d09c8f9098376533f13945674" id="r_a3e2b9e0d09c8f9098376533f13945674"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e2b9e0d09c8f9098376533f13945674">set</a> (const <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">openvdb::Coord</a> &amp;ijk, GA_Offset offset)=0</td></tr>
+<tr class="memitem:abe39601a13aee15e19c10acef1daafac" id="r_abe39601a13aee15e19c10acef1daafac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe39601a13aee15e19c10acef1daafac">set</a> (const <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::Coord</a> &amp;ijk, const GA_Offset(&amp;offsets)[3], const <a class="el" href="namespaceopenvdb_1_1v13__1_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> &amp;weights)=0</td></tr>
+<tr class="memitem:a3e2b9e0d09c8f9098376533f13945674" id="r_a3e2b9e0d09c8f9098376533f13945674"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e2b9e0d09c8f9098376533f13945674">set</a> (const <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::Coord</a> &amp;ijk, GA_Offset offset)=0</td></tr>
 <tr class="memitem:a587432650607f2fe7e7cb0956b0e38e1" id="r_a587432650607f2fe7e7cb0956b0e38e1"><td class="memItemLeft" align="right" valign="top">virtual openvdb::GridBase::Ptr &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a587432650607f2fe7e7cb0956b0e38e1">grid</a> ()=0</td></tr>
 <tr class="memitem:a8e9a54fd285b776136234806500f70fe" id="r_a8e9a54fd285b776136234806500f70fe"><td class="memItemLeft" align="right" valign="top">virtual std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e9a54fd285b776136234806500f70fe">name</a> ()=0</td></tr>
 <tr class="memitem:ad6ec77d410ed7a570124718db2f35713" id="r_ad6ec77d410ed7a570124718db2f35713"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="#a8e6c2b0168121273abfca86e55e05198">AttributeDetailBase::Ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6ec77d410ed7a570124718db2f35713">copy</a> ()=0</td></tr>
@@ -349,7 +349,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void set </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">openvdb::Coord</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::Coord</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -359,7 +359,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespaceopenvdb_1_1v13__0_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>weights</em></span>&#160;)</td>
+          <td class="paramtype">const <a class="el" href="namespaceopenvdb_1_1v13__1_1_1math.html#a98d94999010cb92dfb5f652c353d1d82">openvdb::Vec3d</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>weights</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -385,7 +385,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual void set </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Coord.html">openvdb::Coord</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::Coord</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

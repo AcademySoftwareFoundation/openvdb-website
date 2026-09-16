@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['compiler_0',['Compiler',['../classopenvdb_1_1v13__0_1_1ax_1_1PointExecutable.html#a5f904e96618a83d59208fb22cdf11ff5',1,'openvdb::v13_0::ax::PointExecutable::Compiler()'],['../classopenvdb_1_1v13__0_1_1ax_1_1VolumeExecutable.html#a5f904e96618a83d59208fb22cdf11ff5',1,'openvdb::v13_0::ax::VolumeExecutable::Compiler()']]],
-  ['coordbbox_1',['CoordBBox',['../classopenvdb_1_1v13__0_1_1math_1_1CoordBBox_1_1Iterator.html#ae5c0dd304738b33c4dac01bcf162fdf0',1,'openvdb::v13_0::math::CoordBBox::Iterator::CoordBBox()'],['../classopenvdb_1_1v13__0_1_1CoordBBox_1_1Iterator.html#ae5c0dd304738b33c4dac01bcf162fdf0',1,'openvdb::v13_0::CoordBBox::Iterator::CoordBBox()']]]
+  ['compiler_0',['Compiler',['../classopenvdb_1_1v13__1_1_1ax_1_1PointExecutable.html#a5f904e96618a83d59208fb22cdf11ff5',1,'openvdb::v13_1::ax::PointExecutable::Compiler()'],['../classopenvdb_1_1v13__1_1_1ax_1_1VolumeExecutable.html#a5f904e96618a83d59208fb22cdf11ff5',1,'openvdb::v13_1::ax::VolumeExecutable::Compiler()']]],
+  ['coordbbox_1',['CoordBBox',['../classopenvdb_1_1v13__1_1_1math_1_1CoordBBox_1_1Iterator.html#ae5c0dd304738b33c4dac01bcf162fdf0',1,'openvdb::v13_1::math::CoordBBox::Iterator::CoordBBox()'],['../classopenvdb_1_1v13__1_1_1CoordBBox_1_1Iterator.html#ae5c0dd304738b33c4dac01bcf162fdf0',1,'openvdb::v13_1::CoordBBox::Iterator::CoordBBox()']]],
+  ['cuda_3a_3adetail_3a_3ahandlefactory_2',['HandleFactory',['../classnanovdb_1_1GridHandle.html#a4bf9002380412627cbe7384efc30cecc',1,'nanovdb::GridHandle']]]
 ];

@@ -19,9 +19,9 @@ var overview =
     [ "Iterators", "overview.html#secIterator", [
       [ "Tree Iterators", "overview.html#subsecTreeIter", null ],
       [ "Node Iterators", "overview.html#subsecNodeIter", null ],
-      [ "Value Accessor", "overview.html#subsecValueAccessor", null ],
-      [ "Tree Traversal", "overview.html#subsecTraversal", null ]
+      [ "Value Accessor", "overview.html#subsecValueAccessor", null ]
     ] ],
+    [ "SIMD in OpenVDB", "overview.html#simdInOpenVDB", null ],
     [ "Transforms and Maps", "transformsAndMaps.html", [
       [ "Contents", "transformsAndMaps.html#sMathContents", null ],
       [ "Transforms in OpenVDB", "transformsAndMaps.html#sTransforms", [

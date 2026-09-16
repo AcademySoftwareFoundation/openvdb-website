@@ -1,0 +1,28 @@
+var classnanovdb_1_1math_1_1BoxStencil =
+[
+    [ "AccessorType", "classnanovdb_1_1math_1_1BoxStencil.html#a8408a0997c8c0a9e3e6536cf926e83ac", null ],
+    [ "GridType", "classnanovdb_1_1math_1_1BoxStencil.html#ae9d62b96d5f8ffc6005fa785733919a6", null ],
+    [ "TreeType", "classnanovdb_1_1math_1_1BoxStencil.html#ab137a5a16dfb23c3b4974497aca7837d", null ],
+    [ "ValueType", "classnanovdb_1_1math_1_1BoxStencil.html#ab491c7d37a4cb92916550a148d388b55", null ],
+    [ "BoxStencil", "classnanovdb_1_1math_1_1BoxStencil.html#a366ecb5238961029e98ac05d7ea52ef4", null ],
+    [ "accessor", "classnanovdb_1_1math_1_1BoxStencil.html#a9edcd2f1cc0e2797192015be4e9280e0", null ],
+    [ "getCenterCoord", "classnanovdb_1_1math_1_1BoxStencil.html#ad5d18e9ae4a8390e0d0d6cee48044b4a", null ],
+    [ "getCenterValue", "classnanovdb_1_1math_1_1BoxStencil.html#a108296b0c9210691ceabfc67967a902f", null ],
+    [ "getValue", "classnanovdb_1_1math_1_1BoxStencil.html#a6098e125f274a6b6501570d911ab5a15", null ],
+    [ "gradient", "classnanovdb_1_1math_1_1BoxStencil.html#aa7a9e7593bd3b83e4bdc0479bb287358", null ],
+    [ "grid", "classnanovdb_1_1math_1_1BoxStencil.html#abf4681edc2ecefbc6dfb28d1c9eebb0e", null ],
+    [ "interpolation", "classnanovdb_1_1math_1_1BoxStencil.html#a41f1e993dfcc798ec47cfa983dfe2de8", null ],
+    [ "intersectionMask", "classnanovdb_1_1math_1_1BoxStencil.html#a746bc8869b8d429c403141ed5089ba5e", null ],
+    [ "intersects", "classnanovdb_1_1math_1_1BoxStencil.html#a870c22b8986cdad449f41f5fd8e8d4c3", null ],
+    [ "intersects", "classnanovdb_1_1math_1_1BoxStencil.html#a967a4471a9407fb1a9ba1ad562f98e7b", null ],
+    [ "max", "classnanovdb_1_1math_1_1BoxStencil.html#ad0590588190c94ee197b2830af000abd", null ],
+    [ "mean", "classnanovdb_1_1math_1_1BoxStencil.html#ae0638337df182203f70ca9fb1817c1df", null ],
+    [ "min", "classnanovdb_1_1math_1_1BoxStencil.html#a7ed7d2a060bacf987b2663159e6f96a8", null ],
+    [ "moveTo", "classnanovdb_1_1math_1_1BoxStencil.html#a9e57b6751e646572c9d4cc1099e4be38", null ],
+    [ "pos", "classnanovdb_1_1math_1_1BoxStencil.html#aadfa663c52d2f3da1235981796406dee", null ],
+    [ "setValue", "classnanovdb_1_1math_1_1BoxStencil.html#abd314568ff3ddab05b9fabe7975ee233", null ],
+    [ "size", "classnanovdb_1_1math_1_1BoxStencil.html#afb4988a5058dd4ab8c4274ec8bc6e05b", null ],
+    [ "BaseStencil", "classnanovdb_1_1math_1_1BoxStencil.html#ab7bb49e181c1ccad52de629de038e762", null ],
+    [ "mGrid", "classnanovdb_1_1math_1_1BoxStencil.html#a8f6ccd0c84475e8606642f6fe038394a", null ],
+    [ "SIZE", "classnanovdb_1_1math_1_1BoxStencil.html#a0ae4b10cd6576f2ccf0da832de940dae", null ]
+];

@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -119,7 +119,7 @@ $(function(){initNavTree('LevelSetRebuild_8h.html','',''); });
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="Grid_8h_source.html">openvdb/Grid.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="openvdb_2Exceptions_8h_source.html">openvdb/Exceptions.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="Math_8h_source.html">openvdb/math/Math.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="openvdb_2openvdb_2math_2Math_8h_source.html">openvdb/math/Math.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="Transform_8h_source.html">openvdb/math/Transform.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="NullInterrupter_8h_source.html">openvdb/util/NullInterrupter.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="openvdb_2openvdb_2util_2Util_8h_source.html">openvdb/util/Util.h</a>&gt;</code><br />
@@ -135,8 +135,8 @@ $(function(){initNavTree('LevelSetRebuild_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:openvdb" id="r_openvdb"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb.html">openvdb</a></td></tr>
-<tr class="memitem:openvdb_3A_3Av13_5F0" id="r_openvdb_3A_3Av13_5F0"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__0.html">openvdb::v13_0</a></td></tr>
-<tr class="memitem:openvdb_3A_3Av13_5F0_3A_3Atools" id="r_openvdb_3A_3Av13_5F0_3A_3Atools"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__0_1_1tools.html">openvdb::v13_0::tools</a></td></tr>
+<tr class="memitem:openvdb_3A_3Av13_5F1" id="r_openvdb_3A_3Av13_5F1"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__1.html">openvdb::v13_1</a></td></tr>
+<tr class="memitem:openvdb_3A_3Av13_5F1_3A_3Atools" id="r_openvdb_3A_3Av13_5F1_3A_3Atools"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__1_1_1tools.html">openvdb::v13_1::tools</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -145,13 +145,13 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af574939742ed86a148731292520c8e30" id="r_af574939742ed86a148731292520c8e30"><td class="memTemplParams" colspan="2">template&lt;class GridType&gt; </td></tr>
-<tr class="memitem:af574939742ed86a148731292520c8e30 template"><td class="memItemLeft" align="right" valign="top">GridType::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__0_1_1tools.html#af574939742ed86a148731292520c8e30">levelSetRebuild</a> (const GridType &amp;grid, float isovalue=0, float halfWidth=float(<a class="el" href="namespaceopenvdb_1_1v13__0.html#a04f60dd7b4a065a54f873613ff8df50f">LEVEL_SET_HALF_WIDTH</a>), const <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Transform.html">math::Transform</a> *xform=nullptr)</td></tr>
+<tr class="memitem:af574939742ed86a148731292520c8e30 template"><td class="memItemLeft" align="right" valign="top">GridType::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__1_1_1tools.html#af574939742ed86a148731292520c8e30">levelSetRebuild</a> (const GridType &amp;grid, float isovalue=0, float halfWidth=float(<a class="el" href="namespaceopenvdb_1_1v13__1.html#a04f60dd7b4a065a54f873613ff8df50f">LEVEL_SET_HALF_WIDTH</a>), const <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Transform.html">math::Transform</a> *xform=nullptr)</td></tr>
 <tr class="memdesc:af574939742ed86a148731292520c8e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new grid of type <code>GridType</code> that contains a narrow-band level set representation of an isosurface of a given grid.  <br /></td></tr>
 <tr class="memitem:a9ce3a230f06d4e222727e1046bc6ae3c" id="r_a9ce3a230f06d4e222727e1046bc6ae3c"><td class="memTemplParams" colspan="2">template&lt;class GridType&gt; </td></tr>
-<tr class="memitem:a9ce3a230f06d4e222727e1046bc6ae3c template"><td class="memItemLeft" align="right" valign="top">GridType::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__0_1_1tools.html#a9ce3a230f06d4e222727e1046bc6ae3c">levelSetRebuild</a> (const GridType &amp;grid, float isovalue, float exBandWidth, float inBandWidth, const <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Transform.html">math::Transform</a> *xform=nullptr)</td></tr>
+<tr class="memitem:a9ce3a230f06d4e222727e1046bc6ae3c template"><td class="memItemLeft" align="right" valign="top">GridType::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__1_1_1tools.html#a9ce3a230f06d4e222727e1046bc6ae3c">levelSetRebuild</a> (const GridType &amp;grid, float isovalue, float exBandWidth, float inBandWidth, const <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Transform.html">math::Transform</a> *xform=nullptr)</td></tr>
 <tr class="memdesc:a9ce3a230f06d4e222727e1046bc6ae3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new grid of type <code>GridType</code> that contains a narrow-band level set representation of an isosurface of a given grid.  <br /></td></tr>
 <tr class="memitem:a9b42eee5e13c85a68dfad82c21d510a1" id="r_a9b42eee5e13c85a68dfad82c21d510a1"><td class="memTemplParams" colspan="2">template&lt;class GridType, typename InterruptT&gt; </td></tr>
-<tr class="memitem:a9b42eee5e13c85a68dfad82c21d510a1 template"><td class="memItemLeft" align="right" valign="top">GridType::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__0_1_1tools.html#a9b42eee5e13c85a68dfad82c21d510a1">levelSetRebuild</a> (const GridType &amp;grid, float isovalue, float exBandWidth, float inBandWidth, const <a class="el" href="classopenvdb_1_1v13__0_1_1math_1_1Transform.html">math::Transform</a> *xform=nullptr, InterruptT *interrupter=nullptr)</td></tr>
+<tr class="memitem:a9b42eee5e13c85a68dfad82c21d510a1 template"><td class="memItemLeft" align="right" valign="top">GridType::Ptr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__1_1_1tools.html#a9b42eee5e13c85a68dfad82c21d510a1">levelSetRebuild</a> (const GridType &amp;grid, float isovalue, float exBandWidth, float inBandWidth, const <a class="el" href="classopenvdb_1_1v13__1_1_1math_1_1Transform.html">math::Transform</a> *xform=nullptr, InterruptT *interrupter=nullptr)</td></tr>
 <tr class="memdesc:a9b42eee5e13c85a68dfad82c21d510a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new grid of type <code>GridType</code> that contains a narrow-band level set representation of an isosurface of a given grid.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>

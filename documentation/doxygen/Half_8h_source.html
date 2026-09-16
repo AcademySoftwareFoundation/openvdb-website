@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -422,7 +422,7 @@ $(function(){initNavTree('Half_8h_source.html','',''); });
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="preprocessor">#if !defined(__cplusplus) &amp;&amp; !defined(__CUDACC__)</span><span class="comment"></span></div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="comment">/// if we&#39;re in a C-only context, alias the half bits type to half</span></div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="keyword">typedef</span> imath_half_bits_t <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="keyword">typedef</span> imath_half_bits_t <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>;</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="preprocessor">#if !defined(IMATH_HALF_NO_LOOKUP_TABLE)</span></div>
@@ -647,7 +647,7 @@ $(function(){initNavTree('Half_8h_source.html','',''); });
 <div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span><span class="comment">/// * sizeof (uint16_t) == 2</span></div>
 <div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span><span class="comment">///</span></div>
 <div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span> </div>
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span><span class="keyword">class </span><a class="code hl_define" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span><span class="keyword">class </span><a class="code hl_define" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>{</div>
 <div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>  <span class="keyword">public</span>:<span class="comment"></span></div>
 <div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span><span class="comment">    /// A special tag that lets us initialize a half from the raw bits.</span></div>
@@ -661,7 +661,7 @@ $(function(){initNavTree('Half_8h_source.html','',''); });
 <div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span><span class="comment"></span> </div>
 <div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span><span class="comment">    /// Default construction provides no initialization (hence it is</span></div>
 <div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span><span class="comment">    /// not constexpr).</span></div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>    <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>() noexcept = default;</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>    <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>() noexcept = default;</div>
 <div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span><span class="comment"></span> </div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span><span class="comment">    /// Construct from float</span></div>
 <div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>    half (<span class="keywordtype">float</span> f) noexcept;</div>
@@ -826,7 +826,7 @@ $(function(){initNavTree('Half_8h_source.html','',''); });
 <div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span><span class="comment">// Round to n-bit precision</span></div>
 <div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span><span class="comment">//-------------------------</span></div>
 <div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span> </div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
 <div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>half::round (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n) <span class="keyword">const</span> <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>{</div>
 <div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>    <span class="comment">//</span></div>
@@ -874,7 +874,7 @@ $(function(){initNavTree('Half_8h_source.html','',''); });
 <div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>    <span class="comment">// Put the original sign bit back.</span></div>
 <div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>    <span class="comment">//</span></div>
 <div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span> </div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>    <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> h (FromBits, s | e);</div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>    <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> h (FromBits, s | e);</div>
 <div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span> </div>
 <div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>    <span class="keywordflow">return</span> h;</div>
 <div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>}</div>
@@ -883,72 +883,72 @@ $(function(){initNavTree('Half_8h_source.html','',''); });
 <div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span><span class="comment">// Other inline functions</span></div>
 <div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span><span class="comment">//-----------------------</span></div>
 <div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span> </div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
 <div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>half::operator-() const noexcept</div>
 <div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>{</div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (FromBits, bits() ^ 0x8000);</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (FromBits, bits() ^ 0x8000);</div>
 <div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>}</div>
 <div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span> </div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
 <div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>half::operator= (<span class="keywordtype">float</span> f) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>{</div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (f);</div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (f);</div>
 <div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>}</div>
 <div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span> </div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
 <div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>half::operator+= (half h) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>{</div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) + <span class="keywordtype">float</span> (h));</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) + <span class="keywordtype">float</span> (h));</div>
 <div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>}</div>
 <div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span> </div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
 <div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>half::operator+= (<span class="keywordtype">float</span> f) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>{</div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) + f);</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) + f);</div>
 <div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>}</div>
 <div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span> </div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
 <div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>half::operator-= (half h) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>{</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) - <span class="keywordtype">float</span> (h));</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) - <span class="keywordtype">float</span> (h));</div>
 <div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>}</div>
 <div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span> </div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
 <div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>half::operator-= (<span class="keywordtype">float</span> f) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>{</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) - f);</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) - f);</div>
 <div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>}</div>
 <div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span> </div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
 <div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>half::operator*= (half h) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>{</div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) * <span class="keywordtype">float</span> (h));</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) * <span class="keywordtype">float</span> (h));</div>
 <div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>}</div>
 <div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span> </div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
 <div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>half::operator*= (<span class="keywordtype">float</span> f) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>{</div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) * f);</div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) * f);</div>
 <div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>}</div>
 <div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span> </div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
 <div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>half::operator/= (half h) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>{</div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) / <span class="keywordtype">float</span> (h));</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) / <span class="keywordtype">float</span> (h));</div>
 <div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>}</div>
 <div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span> </div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span><span class="keyword">inline</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a>&amp;</div>
 <div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>half::operator/= (<span class="keywordtype">float</span> f) <span class="keyword">noexcept</span></div>
 <div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>{</div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) / f);</div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>    *<span class="keyword">this</span> = <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (<span class="keywordtype">float</span> (*<span class="keyword">this</span>) / f);</div>
 <div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>}</div>
 <div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span> </div>
@@ -1006,28 +1006,28 @@ $(function(){initNavTree('Half_8h_source.html','',''); });
 <div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>    <span class="keywordflow">return</span> (_h &amp; 0x8000) != 0;</div>
 <div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>}</div>
 <div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span> </div>
-<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
 <div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>half::posInf() noexcept</div>
 <div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>{</div>
-<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (FromBits, 0x7c00);</div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (FromBits, 0x7c00);</div>
 <div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>}</div>
 <div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span> </div>
-<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
 <div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>half::negInf() noexcept</div>
 <div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>{</div>
-<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (FromBits, 0xfc00);</div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (FromBits, 0xfc00);</div>
 <div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>}</div>
 <div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span> </div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
 <div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>half::qNan() noexcept</div>
 <div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>{</div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (FromBits, 0x7fff);</div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (FromBits, 0x7fff);</div>
 <div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>}</div>
 <div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span> </div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a></div>
 <div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>half::sNan() noexcept</div>
 <div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>{</div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (FromBits, 0x7dff);</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>    <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">half</a> (FromBits, 0x7dff);</div>
 <div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>}</div>
 <div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span> </div>
 <div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span><span class="keyword">inline</span> <span class="keyword">constexpr</span> uint16_t</div>
@@ -1052,7 +1052,7 @@ $(function(){initNavTree('Half_8h_source.html','',''); });
 <div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span><a class="code hl_define" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> <span class="keywordtype">void</span> printBits (<span class="keywordtype">char</span> c[35], <span class="keywordtype">float</span> f);</div>
 <div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span><span class="comment"></span> </div>
 <div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span><span class="comment">/// Output h to os, formatted as a float</span></div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span><a class="code hl_define" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> std::ostream&amp; operator&lt;&lt; (std::ostream&amp; os, half h);</div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span><a class="code hl_define" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> std::ostream&amp; <a class="code hl_function" href="io_2IO_8h.html#a0c3da83fc17136a006d76529375bb8d3">operator&lt;&lt; </a>(std::ostream&amp; os, half h);</div>
 <div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span><span class="comment"></span> </div>
 <div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span><span class="comment">/// Input h from is</span></div>
 <div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span><a class="code hl_define" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">OPENVDB_API</a> std::istream&amp; operator&gt;&gt; (std::istream&amp; is, half&amp; h);</div>
@@ -1072,11 +1072,11 @@ $(function(){initNavTree('Half_8h_source.html','',''); });
 <div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> is_specialized = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span> </div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> openvdb::math::internal::half <a class="code hl_function" href="namespaceopenvdb_1_1v13__0_1_1tools_1_1composite.html#ad715de018c1beeec76eec91e8d4828c0">min</a> () noexcept</div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> openvdb::math::internal::half <a class="code hl_function" href="namespaceopenvdb_1_1v13__1_1_1tools_1_1composite.html#ad715de018c1beeec76eec91e8d4828c0">min</a> () noexcept</div>
 <div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>    {</div>
 <div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>        <span class="keywordflow">return</span> openvdb::math::internal::half (openvdb::math::internal::half::FromBits, 0x0400); <span class="comment">/*VDB_HALF_MIN*/</span></div>
 <div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>    }</div>
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> openvdb::math::internal::half <a class="code hl_function" href="namespaceopenvdb_1_1v13__0_1_1tools_1_1composite.html#a4f31bc8f32de5f0afa35e0588a6c5907">max</a> () noexcept</div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> openvdb::math::internal::half <a class="code hl_function" href="namespaceopenvdb_1_1v13__1_1_1tools_1_1composite.html#a4f31bc8f32de5f0afa35e0588a6c5907">max</a> () noexcept</div>
 <div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>    {</div>
 <div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>        <span class="keywordflow">return</span> openvdb::math::internal::half (openvdb::math::internal::half::FromBits, 0x7bff); <span class="comment">/*HALF_MAX*/</span></div>
 <div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>    }</div>
@@ -1148,12 +1148,13 @@ $(function(){initNavTree('Half_8h_source.html','',''); });
 <div class="ttc" id="aPlatform_8h_html_aa7a931484d0bf4c15d597386de0ec0f6"><div class="ttname"><a href="Platform_8h.html#aa7a931484d0bf4c15d597386de0ec0f6">OPENVDB_UNLIKELY</a></div><div class="ttdeci">#define OPENVDB_UNLIKELY(x)</div><div class="ttdef"><b>Definition</b> Platform.h:79</div></div>
 <div class="ttc" id="aPlatform_8h_html_ac13c11880cf8b8dd311a72e5a05b295d"><div class="ttname"><a href="Platform_8h.html#ac13c11880cf8b8dd311a72e5a05b295d">OPENVDB_NO_TYPE_CONVERSION_WARNING_END</a></div><div class="ttdeci">#define OPENVDB_NO_TYPE_CONVERSION_WARNING_END</div><div class="ttdef"><b>Definition</b> Platform.h:232</div></div>
 <div class="ttc" id="aPlatform_8h_html_ac156b02c89b6fcf62cd867da6d881475"><div class="ttname"><a href="Platform_8h.html#ac156b02c89b6fcf62cd867da6d881475">OPENVDB_LIKELY</a></div><div class="ttdeci">#define OPENVDB_LIKELY(x)</div><div class="ttdef"><b>Definition</b> Platform.h:78</div></div>
-<div class="ttc" id="anamespaceopenvdb_1_1v13__0_1_1math_html_adbecaf426b26757a5fff5ec0464c9138"><div class="ttname"><a href="namespaceopenvdb_1_1v13__0_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">openvdb::v13_0::math::half</a></div><div class="ttdeci">internal::half half</div><div class="ttdef"><b>Definition</b> HalfDecl.h:25</div></div>
-<div class="ttc" id="anamespaceopenvdb_1_1v13__0_1_1tools_1_1composite_html_a4f31bc8f32de5f0afa35e0588a6c5907"><div class="ttname"><a href="namespaceopenvdb_1_1v13__0_1_1tools_1_1composite.html#a4f31bc8f32de5f0afa35e0588a6c5907">openvdb::v13_0::tools::composite::max</a></div><div class="ttdeci">const std::enable_if&lt;!VecTraits&lt; T &gt;::IsVec, T &gt;::type &amp; max(const T &amp;a, const T &amp;b)</div><div class="ttdef"><b>Definition</b> Composite.h:110</div></div>
-<div class="ttc" id="anamespaceopenvdb_1_1v13__0_1_1tools_1_1composite_html_ad715de018c1beeec76eec91e8d4828c0"><div class="ttname"><a href="namespaceopenvdb_1_1v13__0_1_1tools_1_1composite.html#ad715de018c1beeec76eec91e8d4828c0">openvdb::v13_0::tools::composite::min</a></div><div class="ttdeci">const std::enable_if&lt;!VecTraits&lt; T &gt;::IsVec, T &gt;::type &amp; min(const T &amp;a, const T &amp;b)</div><div class="ttdef"><b>Definition</b> Composite.h:106</div></div>
+<div class="ttc" id="aio_2IO_8h_html_a0c3da83fc17136a006d76529375bb8d3"><div class="ttname"><a href="io_2IO_8h.html#a0c3da83fc17136a006d76529375bb8d3">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const nanovdb::math::BBox&lt; nanovdb::math::Vec3&lt; T &gt; &gt; &amp;b)</div><div class="ttdef"><b>Definition</b> IO.h:744</div></div>
+<div class="ttc" id="anamespaceopenvdb_1_1v13__1_1_1math_html_adbecaf426b26757a5fff5ec0464c9138"><div class="ttname"><a href="namespaceopenvdb_1_1v13__1_1_1math.html#adbecaf426b26757a5fff5ec0464c9138">openvdb::v13_1::math::half</a></div><div class="ttdeci">internal::half half</div><div class="ttdef"><b>Definition</b> HalfDecl.h:25</div></div>
+<div class="ttc" id="anamespaceopenvdb_1_1v13__1_1_1tools_1_1composite_html_a4f31bc8f32de5f0afa35e0588a6c5907"><div class="ttname"><a href="namespaceopenvdb_1_1v13__1_1_1tools_1_1composite.html#a4f31bc8f32de5f0afa35e0588a6c5907">openvdb::v13_1::tools::composite::max</a></div><div class="ttdeci">const std::enable_if&lt;!VecTraits&lt; T &gt;::IsVec, T &gt;::type &amp; max(const T &amp;a, const T &amp;b)</div><div class="ttdef"><b>Definition</b> Composite.h:110</div></div>
+<div class="ttc" id="anamespaceopenvdb_1_1v13__1_1_1tools_1_1composite_html_ad715de018c1beeec76eec91e8d4828c0"><div class="ttname"><a href="namespaceopenvdb_1_1v13__1_1_1tools_1_1composite.html#ad715de018c1beeec76eec91e8d4828c0">openvdb::v13_1::tools::composite::min</a></div><div class="ttdeci">const std::enable_if&lt;!VecTraits&lt; T &gt;::IsVec, T &gt;::type &amp; min(const T &amp;a, const T &amp;b)</div><div class="ttdef"><b>Definition</b> Composite.h:106</div></div>
 <div class="ttc" id="anamespaceopenvdb_html"><div class="ttname"><a href="namespaceopenvdb.html">openvdb</a></div><div class="ttdef"><b>Definition</b> Exceptions.h:13</div></div>
 <div class="ttc" id="aversion_8h_8in_html_a00be3835cb8ad1ded8abd821fad20fc0"><div class="ttname"><a href="version_8h_8in.html#a00be3835cb8ad1ded8abd821fad20fc0">OPENVDB_VERSION_NAME</a></div><div class="ttdeci">#define OPENVDB_VERSION_NAME</div><div class="ttdoc">The version namespace name for this library version.</div><div class="ttdef"><b>Definition</b> version.h.in:121</div></div>
-<div class="ttc" id="aversion_8h_8in_html_a2dde157791cd7558cdf886489256ba14"><div class="ttname"><a href="version_8h_8in.html#a2dde157791cd7558cdf886489256ba14">OPENVDB_USE_VERSION_NAMESPACE</a></div><div class="ttdeci">#define OPENVDB_USE_VERSION_NAMESPACE</div><div class="ttdef"><b>Definition</b> version.h.in:284</div></div>
+<div class="ttc" id="aversion_8h_8in_html_a2dde157791cd7558cdf886489256ba14"><div class="ttname"><a href="version_8h_8in.html#a2dde157791cd7558cdf886489256ba14">OPENVDB_USE_VERSION_NAMESPACE</a></div><div class="ttdeci">#define OPENVDB_USE_VERSION_NAMESPACE</div><div class="ttdef"><b>Definition</b> version.h.in:291</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

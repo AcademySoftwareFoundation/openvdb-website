@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -131,40 +131,43 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae8de8ca25d7977647a575329aaf19c45" id="r_ae8de8ca25d7977647a575329aaf19c45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8de8ca25d7977647a575329aaf19c45">PointAccessor</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; BuildT &gt; &amp;<a class="el" href="#ab5d0d32fd13302741256db5be3b98940">grid</a>)</td></tr>
-<tr class="memitem:aabac1f710a9cc519a171968ead10188f" id="r_aabac1f710a9cc519a171968ead10188f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabac1f710a9cc519a171968ead10188f">operator bool</a> () const</td></tr>
-<tr class="memdesc:aabac1f710a9cc519a171968ead10188f"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if this access was initialized correctly  <br /></td></tr>
-<tr class="memitem:ab5d0d32fd13302741256db5be3b98940" id="r_ab5d0d32fd13302741256db5be3b98940"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; BuildT &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5d0d32fd13302741256db5be3b98940">grid</a> () const</td></tr>
-<tr class="memitem:aa0c7d30c286051c54d8dee1f16fd2525" id="r_aa0c7d30c286051c54d8dee1f16fd2525"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0c7d30c286051c54d8dee1f16fd2525">gridPoints</a> (const AttT *&amp;begin, const AttT *&amp;end) const</td></tr>
-<tr class="memdesc:aa0c7d30c286051c54d8dee1f16fd2525"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the total number of point in the grid and set the iterators to the complete range of points.  <br /></td></tr>
-<tr class="memitem:a9a44aa232a6fa869ed72785fd0950991" id="r_a9a44aa232a6fa869ed72785fd0950991"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a44aa232a6fa869ed72785fd0950991">leafPoints</a> (const Coord &amp;ijk, const AttT *&amp;begin, const AttT *&amp;end) const</td></tr>
-<tr class="memdesc:a9a44aa232a6fa869ed72785fd0950991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of points in the leaf node containing the coordinate <em class="arg">ijk</em>. If this return value is larger than zero then the iterators <em class="arg">begin</em> and <em class="arg">end</em> will point to all the attributes contained within that leaf node.  <br /></td></tr>
-<tr class="memitem:a40adbb2a85351650866a8bc87e8e9893" id="r_a40adbb2a85351650866a8bc87e8e9893"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40adbb2a85351650866a8bc87e8e9893">voxelPoints</a> (const Coord &amp;ijk, const AttT *&amp;begin, const AttT *&amp;end) const</td></tr>
-<tr class="memdesc:a40adbb2a85351650866a8bc87e8e9893"><td class="mdescLeft">&#160;</td><td class="mdescRight">get iterators over attributes to points at a specific voxel location  <br /></td></tr>
-<tr class="memitem:afcf8466c416c574a78f1861e69c020c5" id="r_afcf8466c416c574a78f1861e69c020c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="classnanovdb_1_1RootNode.html">RootT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#afcf8466c416c574a78f1861e69c020c5">root</a> () const</td></tr>
-<tr class="memitem:a8eccb166ea3b8542483288aaeb961e4a" id="r_a8eccb166ea3b8542483288aaeb961e4a"><td class="memTemplParams" colspan="2">template&lt;typename NodeT&gt; </td></tr>
-<tr class="memitem:a8eccb166ea3b8542483288aaeb961e4a template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const NodeT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a8eccb166ea3b8542483288aaeb961e4a">getNode</a> () const</td></tr>
-<tr class="memdesc:a8eccb166ea3b8542483288aaeb961e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const point to the cached node of the specified type.  <br /></td></tr>
-<tr class="memitem:a1dc72e16fb03e082f637d02b6d96f630" id="r_a1dc72e16fb03e082f637d02b6d96f630"><td class="memTemplParams" colspan="2">template&lt;int LEVEL&gt; </td></tr>
-<tr class="memitem:a1dc72e16fb03e082f637d02b6d96f630 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="structnanovdb_1_1NodeTrait.html">NodeTrait</a>&lt; <a class="el" href="classnanovdb_1_1Tree.html">TreeT</a>, LEVEL &gt;::type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a1dc72e16fb03e082f637d02b6d96f630">getNode</a> () const</td></tr>
-<tr class="memitem:ade6b760de9ce445af32c455fc41cdb8b" id="r_ade6b760de9ce445af32c455fc41cdb8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#ade6b760de9ce445af32c455fc41cdb8b">clear</a> ()</td></tr>
-<tr class="memdesc:ade6b760de9ce445af32c455fc41cdb8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset this access to its initial state, i.e. with an empty cache.  <br /></td></tr>
-<tr class="memitem:ac7118c405b3604a3b26ad6a87653bb67" id="r_ac7118c405b3604a3b26ad6a87653bb67"><td class="memTemplParams" colspan="2">template&lt;typename NodeT&gt; </td></tr>
-<tr class="memitem:ac7118c405b3604a3b26ad6a87653bb67 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#ac7118c405b3604a3b26ad6a87653bb67">isCached</a> (const CoordType &amp;ijk) const</td></tr>
-<tr class="memitem:ae9307fda3821287cbe90781eaa6710ff" id="r_ae9307fda3821287cbe90781eaa6710ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> ValueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#ae9307fda3821287cbe90781eaa6710ff">getValue</a> (const CoordType &amp;ijk) const</td></tr>
-<tr class="memitem:afc446caee2cffc245d751205a6608f36" id="r_afc446caee2cffc245d751205a6608f36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> ValueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#afc446caee2cffc245d751205a6608f36">getValue</a> (int i, int j, int k) const</td></tr>
-<tr class="memitem:af50cf729d1a23527cb1e7084ce6532f0" id="r_af50cf729d1a23527cb1e7084ce6532f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> ValueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#af50cf729d1a23527cb1e7084ce6532f0">operator()</a> (const CoordType &amp;ijk) const</td></tr>
-<tr class="memitem:a9a2bbe0689152b9f15d6a0ed8b3ff98e" id="r_a9a2bbe0689152b9f15d6a0ed8b3ff98e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> ValueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a9a2bbe0689152b9f15d6a0ed8b3ff98e">operator()</a> (int i, int j, int k) const</td></tr>
-<tr class="memitem:abf7dc0cfaee99bb334d46a5270eaf8aa" id="r_abf7dc0cfaee99bb334d46a5270eaf8aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#abf7dc0cfaee99bb334d46a5270eaf8aa">getNodeInfo</a> (const CoordType &amp;ijk) const</td></tr>
-<tr class="memitem:a2b4da58ae5ccdeb98e90f69dfa4dc144" id="r_a2b4da58ae5ccdeb98e90f69dfa4dc144"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a2b4da58ae5ccdeb98e90f69dfa4dc144">isActive</a> (const CoordType &amp;ijk) const</td></tr>
-<tr class="memitem:a98c1e6a17ca8ec4e2ebd072f3b78a680" id="r_a98c1e6a17ca8ec4e2ebd072f3b78a680"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a98c1e6a17ca8ec4e2ebd072f3b78a680">probeValue</a> (const CoordType &amp;ijk, ValueType &amp;v) const</td></tr>
-<tr class="memitem:a766b247fb074f647ed4bc98bcfce5052" id="r_a766b247fb074f647ed4bc98bcfce5052"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="classnanovdb_1_1LeafNode.html">LeafT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a766b247fb074f647ed4bc98bcfce5052">probeLeaf</a> (const CoordType &amp;ijk) const</td></tr>
-<tr class="memitem:a67937d65fc40ce874d2895d8ddf90fdf" id="r_a67937d65fc40ce874d2895d8ddf90fdf"><td class="memTemplParams" colspan="2">template&lt;typename OpT, typename... ArgsT&gt; </td></tr>
-<tr class="memitem:a67937d65fc40ce874d2895d8ddf90fdf template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> OpT::Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a67937d65fc40ce874d2895d8ddf90fdf">get</a> (const CoordType &amp;ijk, ArgsT &amp;&amp;... args) const</td></tr>
-<tr class="memitem:a21516d7aef49cf3bf45a2d06102cf4ea" id="r_a21516d7aef49cf3bf45a2d06102cf4ea"><td class="memTemplParams" colspan="2">template&lt;typename OpT, typename... ArgsT&gt; </td></tr>
-<tr class="memitem:a21516d7aef49cf3bf45a2d06102cf4ea template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a21516d7aef49cf3bf45a2d06102cf4ea">set</a> (const CoordType &amp;ijk, ArgsT &amp;&amp;... args) const</td></tr>
-<tr class="memitem:a656b88f6c88dbbcfe10a4dfe619540b9" id="r_a656b88f6c88dbbcfe10a4dfe619540b9"><td class="memTemplParams" colspan="2">template&lt;typename RayT&gt; </td></tr>
-<tr class="memitem:a656b88f6c88dbbcfe10a4dfe619540b9 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a656b88f6c88dbbcfe10a4dfe619540b9">getDim</a> (const CoordType &amp;ijk, const RayT &amp;ray) const</td></tr>
+<tr class="memitem:ae8de8ca25d7977647a575329aaf19c45" id="r_ae8de8ca25d7977647a575329aaf19c45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8de8ca25d7977647a575329aaf19c45">PointAccessor</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; BuildT &gt; &amp;<a class="el" href="#a7da20fe93e1065a917794f700108162c">grid</a>)</td></tr>
+<tr class="memitem:a67b76affb3b5d35fa419ac234144038b" id="r_a67b76affb3b5d35fa419ac234144038b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67b76affb3b5d35fa419ac234144038b">operator bool</a> () const</td></tr>
+<tr class="memdesc:a67b76affb3b5d35fa419ac234144038b"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if this access was initialized correctly  <br /></td></tr>
+<tr class="memitem:a7da20fe93e1065a917794f700108162c" id="r_a7da20fe93e1065a917794f700108162c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; BuildT &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7da20fe93e1065a917794f700108162c">grid</a> () const</td></tr>
+<tr class="memitem:a039f866ddd670f1158401f26d3aae801" id="r_a039f866ddd670f1158401f26d3aae801"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a039f866ddd670f1158401f26d3aae801">gridPoints</a> (const AttT *&amp;begin, const AttT *&amp;end) const</td></tr>
+<tr class="memdesc:a039f866ddd670f1158401f26d3aae801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the total number of point in the grid and set the iterators to the complete range of points.  <br /></td></tr>
+<tr class="memitem:a724a4d6f7665b5202311572bebf6d3eb" id="r_a724a4d6f7665b5202311572bebf6d3eb"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a724a4d6f7665b5202311572bebf6d3eb">leafPoints</a> (const <a class="el" href="classnanovdb_1_1math_1_1Coord.html">Coord</a> &amp;ijk, const AttT *&amp;begin, const AttT *&amp;end) const</td></tr>
+<tr class="memdesc:a724a4d6f7665b5202311572bebf6d3eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of points in the leaf node containing the coordinate <em class="arg">ijk</em>. If this return value is larger than zero then the iterators <em class="arg">begin</em> and <em class="arg">end</em> will point to all the attributes contained within that leaf node.  <br /></td></tr>
+<tr class="memitem:afb013c11be9b1688ebf1b99a573274b3" id="r_afb013c11be9b1688ebf1b99a573274b3"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb013c11be9b1688ebf1b99a573274b3">voxelPoints</a> (const <a class="el" href="classnanovdb_1_1math_1_1Coord.html">Coord</a> &amp;ijk, const AttT *&amp;begin, const AttT *&amp;end) const</td></tr>
+<tr class="memdesc:afb013c11be9b1688ebf1b99a573274b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">get iterators over attributes to points at a specific voxel location  <br /></td></tr>
+<tr class="memitem:ac88f839f5c683a32db8fcca64323fc45" id="r_ac88f839f5c683a32db8fcca64323fc45"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1RootNode.html">RootT</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#ac88f839f5c683a32db8fcca64323fc45">root</a> () const</td></tr>
+<tr class="memitem:a9ef65b82b6c6dc6be7a13c28529e794f" id="r_a9ef65b82b6c6dc6be7a13c28529e794f"><td class="memTemplParams" colspan="2">template&lt;typename NodeT&gt; </td></tr>
+<tr class="memitem:a9ef65b82b6c6dc6be7a13c28529e794f template"><td class="memItemLeft" align="right" valign="top">const NodeT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a9ef65b82b6c6dc6be7a13c28529e794f">getNode</a> () const</td></tr>
+<tr class="memdesc:a9ef65b82b6c6dc6be7a13c28529e794f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const point to the cached node of the specified type.  <br /></td></tr>
+<tr class="memitem:a33b7749044d93726a4430d90ddccdde5" id="r_a33b7749044d93726a4430d90ddccdde5"><td class="memTemplParams" colspan="2">template&lt;int LEVEL&gt; </td></tr>
+<tr class="memitem:a33b7749044d93726a4430d90ddccdde5 template"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structnanovdb_1_1NodeTrait.html">NodeTrait</a>&lt; <a class="el" href="classnanovdb_1_1Tree.html">TreeT</a>, LEVEL &gt;::type *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a33b7749044d93726a4430d90ddccdde5">getNode</a> () const</td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
+<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset this access to its initial state, i.e. with an empty cache.  <br /></td></tr>
+<tr class="memitem:ae29b1233cdc851ecb99245a4c7668dc4" id="r_ae29b1233cdc851ecb99245a4c7668dc4"><td class="memTemplParams" colspan="2">template&lt;typename NodeT&gt; </td></tr>
+<tr class="memitem:ae29b1233cdc851ecb99245a4c7668dc4 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#ae29b1233cdc851ecb99245a4c7668dc4">isCached</a> (const CoordType &amp;ijk) const</td></tr>
+<tr class="memitem:aca3c81db8f66ec1a89eec04bb4c48468" id="r_aca3c81db8f66ec1a89eec04bb4c48468"><td class="memItemLeft" align="right" valign="top">ValueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#aca3c81db8f66ec1a89eec04bb4c48468">getValue</a> (const CoordType &amp;ijk) const</td></tr>
+<tr class="memitem:a2d86cd7b1aa27459759a5a939093fcd0" id="r_a2d86cd7b1aa27459759a5a939093fcd0"><td class="memItemLeft" align="right" valign="top">ValueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a2d86cd7b1aa27459759a5a939093fcd0">getValue</a> (int i, int j, int k) const</td></tr>
+<tr class="memitem:a65b6f9a6f9bb6e5aeff8b10202f559b4" id="r_a65b6f9a6f9bb6e5aeff8b10202f559b4"><td class="memItemLeft" align="right" valign="top">ValueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a65b6f9a6f9bb6e5aeff8b10202f559b4">operator()</a> (const CoordType &amp;ijk) const</td></tr>
+<tr class="memitem:a4199b5de7f3bac14c767b8f41f21e6ce" id="r_a4199b5de7f3bac14c767b8f41f21e6ce"><td class="memItemLeft" align="right" valign="top">ValueType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a4199b5de7f3bac14c767b8f41f21e6ce">operator()</a> (int i, int j, int k) const</td></tr>
+<tr class="memitem:a9b52a9f280a310f99ac07a706e2798fd" id="r_a9b52a9f280a310f99ac07a706e2798fd"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a9b52a9f280a310f99ac07a706e2798fd">getNodeInfo</a> (const CoordType &amp;ijk) const</td></tr>
+<tr class="memitem:a7e2991f83b1165b1f3603398c384ea01" id="r_a7e2991f83b1165b1f3603398c384ea01"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a7e2991f83b1165b1f3603398c384ea01">isActive</a> (const CoordType &amp;ijk) const</td></tr>
+<tr class="memitem:aa01fb7faba00dc3624ff243b4abc9c74" id="r_aa01fb7faba00dc3624ff243b4abc9c74"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#aa01fb7faba00dc3624ff243b4abc9c74">probeValue</a> (const CoordType &amp;ijk, ValueType &amp;v) const</td></tr>
+<tr class="memitem:aea6952ae0c7d92d8c04baa6abe42ddfa" id="r_aea6952ae0c7d92d8c04baa6abe42ddfa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classnanovdb_1_1LeafNode.html">LeafT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#aea6952ae0c7d92d8c04baa6abe42ddfa">probeLeaf</a> (const CoordType &amp;ijk) const</td></tr>
+<tr class="memitem:aa38fb13117ec5e411976adf15799ec3d" id="r_aa38fb13117ec5e411976adf15799ec3d"><td class="memTemplParams" colspan="2">template&lt;typename OpT, typename... ArgsT&gt; </td></tr>
+<tr class="memitem:aa38fb13117ec5e411976adf15799ec3d template"><td class="memItemLeft" align="right" valign="top">OpT::Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#aa38fb13117ec5e411976adf15799ec3d">get</a> (const CoordType &amp;ijk, ArgsT &amp;&amp;... args) const</td></tr>
+<tr class="memitem:a6669220d2f21c153d95d71e30f9a7c0d" id="r_a6669220d2f21c153d95d71e30f9a7c0d"><td class="memTemplParams" colspan="2">template&lt;typename OpT, typename... ArgsT&gt; </td></tr>
+<tr class="memitem:a6669220d2f21c153d95d71e30f9a7c0d template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#a6669220d2f21c153d95d71e30f9a7c0d">set</a> (const CoordType &amp;ijk, ArgsT &amp;&amp;... args) const</td></tr>
+<tr class="memitem:af236062244f42b844ef6cc357c1a20a4" id="r_af236062244f42b844ef6cc357c1a20a4"><td class="memTemplParams" colspan="2">template&lt;typename RayT&gt; </td></tr>
+<tr class="memitem:af236062244f42b844ef6cc357c1a20a4 template"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#af236062244f42b844ef6cc357c1a20a4">getDim</a> (const CoordType &amp;ijk, const RayT &amp;ray) const</td></tr>
+<tr class="memitem:ac9df47d306026f1bfffe21430c979242" id="r_ac9df47d306026f1bfffe21430c979242"><td class="memTemplParams" colspan="2">template&lt;typename Policy = ActiveExact, typename RayT&gt; </td></tr>
+<tr class="memitem:ac9df47d306026f1bfffe21430c979242 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1DimAndActive.html">DimAndActive</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1ReadAccessor_3_01BuildT_00_010_00_011_00_012_01_4.html#ac9df47d306026f1bfffe21430c979242">getDimAndActive</a> (const CoordType &amp;ijk, const RayT &amp;ray) const</td></tr>
+<tr class="memdesc:ac9df47d306026f1bfffe21430c979242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fused getDim + isActive: one tree walk returns both the HDDA step size and the active state of <em class="arg">ijk</em>, shaving the second descent / cache-check / leaf <a class="el" href="classnanovdb_1_1ValueMask.html" title="Dummy type for a voxel whose value equals its binary active state.">ValueMask</a> lookup. See <code><a class="el" href="structnanovdb_1_1ActiveExact.html" title="Policy that exactly matches separate getDim and isActive calls. A skip flag still controls dim but ca...">ActiveExact</a></code> / <code><a class="el" href="structnanovdb_1_1ActiveOnLeafOnly.html" title="Policy that preserves getDim&#39;s skip-flag fast path. If an InternalNode short-circuits,...">ActiveOnLeafOnly</a></code> for the <code>Policy</code> contract.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -173,7 +176,7 @@ Static Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename AttT, typename BuildT = uint32_t&gt;<br />
 class nanovdb::PointAccessor&lt; AttT, BuildT &gt;</div><p>Class to access points at a specific voxel location. </p>
-<dl class="section note"><dt>Note</dt><dd>If <a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538ac6672402f95bb6a565b10c45206e7073">GridClass::PointIndex</a> AttT should be uint32_t and if <a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538ae540450fb956cd9dbb96f979e5939d0f">GridClass::PointData</a> Vec3f </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If <a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538ac6672402f95bb6a565b10c45206e7073">GridClass::PointIndex</a> AttT should be uint32_t and if <a class="el" href="namespacenanovdb.html#a4b4b8c3c2fb135839b2d1b020cc06538ae540450fb956cd9dbb96f979e5939d0f">GridClass::PointData</a> <a class="el" href="namespacenanovdb.html#a4873ae29d5d8d4f1cb7c7717af41a993">Vec3f</a> </dd></dl>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="af4ba8d2d96ddb3cc03c40182e5c31ab9" name="af4ba8d2d96ddb3cc03c40182e5c31ab9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4ba8d2d96ddb3cc03c40182e5c31ab9">&#9670;&#160;</a></span>BuildType</h2>
@@ -276,8 +279,8 @@ template&lt;typename AttT, typename BuildT = uint32_t&gt; </div>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ade6b760de9ce445af32c455fc41cdb8b" name="ade6b760de9ce445af32c455fc41cdb8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade6b760de9ce445af32c455fc41cdb8b">&#9670;&#160;</a></span>clear()</h2>
+<a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bb3912a3ce86b15842e79d0b421204">&#9670;&#160;</a></span>clear()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,7 +291,7 @@ template&lt;typename BuildT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void clear </td>
+          <td class="memname">void clear </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -305,8 +308,8 @@ template&lt;typename BuildT&gt; </div>
 
 </div>
 </div>
-<a id="a67937d65fc40ce874d2895d8ddf90fdf" name="a67937d65fc40ce874d2895d8ddf90fdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67937d65fc40ce874d2895d8ddf90fdf">&#9670;&#160;</a></span>get()</h2>
+<a id="aa38fb13117ec5e411976adf15799ec3d" name="aa38fb13117ec5e411976adf15799ec3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38fb13117ec5e411976adf15799ec3d">&#9670;&#160;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,7 +322,7 @@ template&lt;typename OpT, typename... ArgsT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> OpT::Type get </td>
+          <td class="memname">OpT::Type get </td>
           <td>(</td>
           <td class="paramtype">const CoordType &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span>, </td>
         </tr>
@@ -338,8 +341,8 @@ template&lt;typename OpT, typename... ArgsT&gt; </div>
 
 </div>
 </div>
-<a id="a656b88f6c88dbbcfe10a4dfe619540b9" name="a656b88f6c88dbbcfe10a4dfe619540b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a656b88f6c88dbbcfe10a4dfe619540b9">&#9670;&#160;</a></span>getDim()</h2>
+<a id="af236062244f42b844ef6cc357c1a20a4" name="af236062244f42b844ef6cc357c1a20a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af236062244f42b844ef6cc357c1a20a4">&#9670;&#160;</a></span>getDim()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -352,7 +355,7 @@ template&lt;typename RayT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t getDim </td>
+          <td class="memname">uint32_t getDim </td>
           <td>(</td>
           <td class="paramtype">const CoordType &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span>, </td>
         </tr>
@@ -371,8 +374,43 @@ template&lt;typename RayT&gt; </div>
 
 </div>
 </div>
-<a id="a8eccb166ea3b8542483288aaeb961e4a" name="a8eccb166ea3b8542483288aaeb961e4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8eccb166ea3b8542483288aaeb961e4a">&#9670;&#160;</a></span>getNode() <span class="overload">[1/2]</span></h2>
+<a id="ac9df47d306026f1bfffe21430c979242" name="ac9df47d306026f1bfffe21430c979242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9df47d306026f1bfffe21430c979242">&#9670;&#160;</a></span>getDimAndActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BuildT&gt; </div>
+<div class="memtemplate">
+template&lt;typename Policy = ActiveExact, typename RayT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1DimAndActive.html">DimAndActive</a> getDimAndActive </td>
+          <td>(</td>
+          <td class="paramtype">const CoordType &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const RayT &amp;</td>          <td class="paramname"><span class="paramname"><em>ray</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fused getDim + isActive: one tree walk returns both the HDDA step size and the active state of <em class="arg">ijk</em>, shaving the second descent / cache-check / leaf <a class="el" href="classnanovdb_1_1ValueMask.html" title="Dummy type for a voxel whose value equals its binary active state.">ValueMask</a> lookup. See <code><a class="el" href="structnanovdb_1_1ActiveExact.html" title="Policy that exactly matches separate getDim and isActive calls. A skip flag still controls dim but ca...">ActiveExact</a></code> / <code><a class="el" href="structnanovdb_1_1ActiveOnLeafOnly.html" title="Policy that preserves getDim&#39;s skip-flag fast path. If an InternalNode short-circuits,...">ActiveOnLeafOnly</a></code> for the <code>Policy</code> contract. </p>
+
+</div>
+</div>
+<a id="a9ef65b82b6c6dc6be7a13c28529e794f" name="a9ef65b82b6c6dc6be7a13c28529e794f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef65b82b6c6dc6be7a13c28529e794f">&#9670;&#160;</a></span>getNode() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -385,7 +423,7 @@ template&lt;typename NodeT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const NodeT * getNode </td>
+          <td class="memname">const NodeT * getNode </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -403,8 +441,8 @@ template&lt;typename NodeT&gt; </div>
 
 </div>
 </div>
-<a id="a1dc72e16fb03e082f637d02b6d96f630" name="a1dc72e16fb03e082f637d02b6d96f630"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dc72e16fb03e082f637d02b6d96f630">&#9670;&#160;</a></span>getNode() <span class="overload">[2/2]</span></h2>
+<a id="a33b7749044d93726a4430d90ddccdde5" name="a33b7749044d93726a4430d90ddccdde5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b7749044d93726a4430d90ddccdde5">&#9670;&#160;</a></span>getNode() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -417,7 +455,7 @@ template&lt;int LEVEL&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="structnanovdb_1_1NodeTrait.html">NodeTrait</a>&lt; <a class="el" href="classnanovdb_1_1Tree.html">TreeT</a>, LEVEL &gt;::type * getNode </td>
+          <td class="memname">const <a class="el" href="structnanovdb_1_1NodeTrait.html">NodeTrait</a>&lt; <a class="el" href="classnanovdb_1_1Tree.html">TreeT</a>, LEVEL &gt;::type * getNode </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -432,8 +470,8 @@ template&lt;int LEVEL&gt; </div>
 
 </div>
 </div>
-<a id="abf7dc0cfaee99bb334d46a5270eaf8aa" name="abf7dc0cfaee99bb334d46a5270eaf8aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf7dc0cfaee99bb334d46a5270eaf8aa">&#9670;&#160;</a></span>getNodeInfo()</h2>
+<a id="a9b52a9f280a310f99ac07a706e2798fd" name="a9b52a9f280a310f99ac07a706e2798fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b52a9f280a310f99ac07a706e2798fd">&#9670;&#160;</a></span>getNodeInfo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -444,7 +482,7 @@ template&lt;typename BuildT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> auto getNodeInfo </td>
+          <td class="memname">auto getNodeInfo </td>
           <td>(</td>
           <td class="paramtype">const CoordType &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span></td><td>)</td>
           <td> const</td>
@@ -459,8 +497,8 @@ template&lt;typename BuildT&gt; </div>
 
 </div>
 </div>
-<a id="ae9307fda3821287cbe90781eaa6710ff" name="ae9307fda3821287cbe90781eaa6710ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9307fda3821287cbe90781eaa6710ff">&#9670;&#160;</a></span>getValue() <span class="overload">[1/2]</span></h2>
+<a id="aca3c81db8f66ec1a89eec04bb4c48468" name="aca3c81db8f66ec1a89eec04bb4c48468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3c81db8f66ec1a89eec04bb4c48468">&#9670;&#160;</a></span>getValue() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -471,7 +509,7 @@ template&lt;typename BuildT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> ValueType getValue </td>
+          <td class="memname">ValueType getValue </td>
           <td>(</td>
           <td class="paramtype">const CoordType &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span></td><td>)</td>
           <td> const</td>
@@ -486,8 +524,8 @@ template&lt;typename BuildT&gt; </div>
 
 </div>
 </div>
-<a id="afc446caee2cffc245d751205a6608f36" name="afc446caee2cffc245d751205a6608f36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc446caee2cffc245d751205a6608f36">&#9670;&#160;</a></span>getValue() <span class="overload">[2/2]</span></h2>
+<a id="a2d86cd7b1aa27459759a5a939093fcd0" name="a2d86cd7b1aa27459759a5a939093fcd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d86cd7b1aa27459759a5a939093fcd0">&#9670;&#160;</a></span>getValue() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -498,7 +536,7 @@ template&lt;typename BuildT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> ValueType getValue </td>
+          <td class="memname">ValueType getValue </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
         </tr>
@@ -522,8 +560,8 @@ template&lt;typename BuildT&gt; </div>
 
 </div>
 </div>
-<a id="ab5d0d32fd13302741256db5be3b98940" name="ab5d0d32fd13302741256db5be3b98940"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5d0d32fd13302741256db5be3b98940">&#9670;&#160;</a></span>grid()</h2>
+<a id="a7da20fe93e1065a917794f700108162c" name="a7da20fe93e1065a917794f700108162c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7da20fe93e1065a917794f700108162c">&#9670;&#160;</a></span>grid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -534,7 +572,7 @@ template&lt;typename AttT, typename BuildT = uint32_t&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; BuildT &gt; &amp; grid </td>
+          <td class="memname">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; BuildT &gt; &amp; grid </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -549,8 +587,8 @@ template&lt;typename AttT, typename BuildT = uint32_t&gt; </div>
 
 </div>
 </div>
-<a id="aa0c7d30c286051c54d8dee1f16fd2525" name="aa0c7d30c286051c54d8dee1f16fd2525"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0c7d30c286051c54d8dee1f16fd2525">&#9670;&#160;</a></span>gridPoints()</h2>
+<a id="a039f866ddd670f1158401f26d3aae801" name="a039f866ddd670f1158401f26d3aae801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a039f866ddd670f1158401f26d3aae801">&#9670;&#160;</a></span>gridPoints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -561,7 +599,7 @@ template&lt;typename AttT, typename BuildT = uint32_t&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t gridPoints </td>
+          <td class="memname">uint64_t gridPoints </td>
           <td>(</td>
           <td class="paramtype">const AttT *&amp;</td>          <td class="paramname"><span class="paramname"><em>begin</em></span>, </td>
         </tr>
@@ -582,8 +620,8 @@ template&lt;typename AttT, typename BuildT = uint32_t&gt; </div>
 
 </div>
 </div>
-<a id="a2b4da58ae5ccdeb98e90f69dfa4dc144" name="a2b4da58ae5ccdeb98e90f69dfa4dc144"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b4da58ae5ccdeb98e90f69dfa4dc144">&#9670;&#160;</a></span>isActive()</h2>
+<a id="a7e2991f83b1165b1f3603398c384ea01" name="a7e2991f83b1165b1f3603398c384ea01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e2991f83b1165b1f3603398c384ea01">&#9670;&#160;</a></span>isActive()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -594,7 +632,7 @@ template&lt;typename BuildT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isActive </td>
+          <td class="memname">bool isActive </td>
           <td>(</td>
           <td class="paramtype">const CoordType &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span></td><td>)</td>
           <td> const</td>
@@ -609,8 +647,8 @@ template&lt;typename BuildT&gt; </div>
 
 </div>
 </div>
-<a id="ac7118c405b3604a3b26ad6a87653bb67" name="ac7118c405b3604a3b26ad6a87653bb67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7118c405b3604a3b26ad6a87653bb67">&#9670;&#160;</a></span>isCached()</h2>
+<a id="ae29b1233cdc851ecb99245a4c7668dc4" name="ae29b1233cdc851ecb99245a4c7668dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae29b1233cdc851ecb99245a4c7668dc4">&#9670;&#160;</a></span>isCached()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -623,7 +661,7 @@ template&lt;typename NodeT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool isCached </td>
+          <td class="memname">bool isCached </td>
           <td>(</td>
           <td class="paramtype">const CoordType &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span></td><td>)</td>
           <td> const</td>
@@ -638,8 +676,8 @@ template&lt;typename NodeT&gt; </div>
 
 </div>
 </div>
-<a id="a9a44aa232a6fa869ed72785fd0950991" name="a9a44aa232a6fa869ed72785fd0950991"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a44aa232a6fa869ed72785fd0950991">&#9670;&#160;</a></span>leafPoints()</h2>
+<a id="a724a4d6f7665b5202311572bebf6d3eb" name="a724a4d6f7665b5202311572bebf6d3eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a724a4d6f7665b5202311572bebf6d3eb">&#9670;&#160;</a></span>leafPoints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -650,9 +688,9 @@ template&lt;typename AttT, typename BuildT = uint32_t&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t leafPoints </td>
+          <td class="memname">uint64_t leafPoints </td>
           <td>(</td>
-          <td class="paramtype">const Coord &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1Coord.html">Coord</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -676,8 +714,8 @@ template&lt;typename AttT, typename BuildT = uint32_t&gt; </div>
 
 </div>
 </div>
-<a id="aabac1f710a9cc519a171968ead10188f" name="aabac1f710a9cc519a171968ead10188f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabac1f710a9cc519a171968ead10188f">&#9670;&#160;</a></span>operator bool()</h2>
+<a id="a67b76affb3b5d35fa419ac234144038b" name="a67b76affb3b5d35fa419ac234144038b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67b76affb3b5d35fa419ac234144038b">&#9670;&#160;</a></span>operator bool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -688,7 +726,7 @@ template&lt;typename AttT, typename BuildT = uint32_t&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> operator bool </td>
+          <td class="memname">operator bool </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -705,8 +743,8 @@ template&lt;typename AttT, typename BuildT = uint32_t&gt; </div>
 
 </div>
 </div>
-<a id="af50cf729d1a23527cb1e7084ce6532f0" name="af50cf729d1a23527cb1e7084ce6532f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af50cf729d1a23527cb1e7084ce6532f0">&#9670;&#160;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+<a id="a65b6f9a6f9bb6e5aeff8b10202f559b4" name="a65b6f9a6f9bb6e5aeff8b10202f559b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b6f9a6f9bb6e5aeff8b10202f559b4">&#9670;&#160;</a></span>operator()() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -717,7 +755,7 @@ template&lt;typename BuildT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> ValueType operator() </td>
+          <td class="memname">ValueType operator() </td>
           <td>(</td>
           <td class="paramtype">const CoordType &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span></td><td>)</td>
           <td> const</td>
@@ -732,8 +770,8 @@ template&lt;typename BuildT&gt; </div>
 
 </div>
 </div>
-<a id="a9a2bbe0689152b9f15d6a0ed8b3ff98e" name="a9a2bbe0689152b9f15d6a0ed8b3ff98e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a2bbe0689152b9f15d6a0ed8b3ff98e">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+<a id="a4199b5de7f3bac14c767b8f41f21e6ce" name="a4199b5de7f3bac14c767b8f41f21e6ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4199b5de7f3bac14c767b8f41f21e6ce">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -744,7 +782,7 @@ template&lt;typename BuildT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> ValueType operator() </td>
+          <td class="memname">ValueType operator() </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span>, </td>
         </tr>
@@ -768,8 +806,8 @@ template&lt;typename BuildT&gt; </div>
 
 </div>
 </div>
-<a id="a766b247fb074f647ed4bc98bcfce5052" name="a766b247fb074f647ed4bc98bcfce5052"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a766b247fb074f647ed4bc98bcfce5052">&#9670;&#160;</a></span>probeLeaf()</h2>
+<a id="aea6952ae0c7d92d8c04baa6abe42ddfa" name="aea6952ae0c7d92d8c04baa6abe42ddfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea6952ae0c7d92d8c04baa6abe42ddfa">&#9670;&#160;</a></span>probeLeaf()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -780,7 +818,7 @@ template&lt;typename BuildT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="classnanovdb_1_1LeafNode.html">LeafT</a> * probeLeaf </td>
+          <td class="memname">const <a class="el" href="classnanovdb_1_1LeafNode.html">LeafT</a> * probeLeaf </td>
           <td>(</td>
           <td class="paramtype">const CoordType &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span></td><td>)</td>
           <td> const</td>
@@ -795,8 +833,8 @@ template&lt;typename BuildT&gt; </div>
 
 </div>
 </div>
-<a id="a98c1e6a17ca8ec4e2ebd072f3b78a680" name="a98c1e6a17ca8ec4e2ebd072f3b78a680"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98c1e6a17ca8ec4e2ebd072f3b78a680">&#9670;&#160;</a></span>probeValue()</h2>
+<a id="aa01fb7faba00dc3624ff243b4abc9c74" name="aa01fb7faba00dc3624ff243b4abc9c74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa01fb7faba00dc3624ff243b4abc9c74">&#9670;&#160;</a></span>probeValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -807,7 +845,7 @@ template&lt;typename BuildT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool probeValue </td>
+          <td class="memname">bool probeValue </td>
           <td>(</td>
           <td class="paramtype">const CoordType &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span>, </td>
         </tr>
@@ -826,8 +864,8 @@ template&lt;typename BuildT&gt; </div>
 
 </div>
 </div>
-<a id="afcf8466c416c574a78f1861e69c020c5" name="afcf8466c416c574a78f1861e69c020c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcf8466c416c574a78f1861e69c020c5">&#9670;&#160;</a></span>root()</h2>
+<a id="ac88f839f5c683a32db8fcca64323fc45" name="ac88f839f5c683a32db8fcca64323fc45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88f839f5c683a32db8fcca64323fc45">&#9670;&#160;</a></span>root()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -838,7 +876,7 @@ template&lt;typename BuildT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const <a class="el" href="classnanovdb_1_1RootNode.html">RootT</a> &amp; root </td>
+          <td class="memname">const <a class="el" href="classnanovdb_1_1RootNode.html">RootT</a> &amp; root </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -853,8 +891,8 @@ template&lt;typename BuildT&gt; </div>
 
 </div>
 </div>
-<a id="a21516d7aef49cf3bf45a2d06102cf4ea" name="a21516d7aef49cf3bf45a2d06102cf4ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21516d7aef49cf3bf45a2d06102cf4ea">&#9670;&#160;</a></span>set()</h2>
+<a id="a6669220d2f21c153d95d71e30f9a7c0d" name="a6669220d2f21c153d95d71e30f9a7c0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6669220d2f21c153d95d71e30f9a7c0d">&#9670;&#160;</a></span>set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -867,7 +905,7 @@ template&lt;typename OpT, typename... ArgsT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void set </td>
+          <td class="memname">void set </td>
           <td>(</td>
           <td class="paramtype">const CoordType &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span>, </td>
         </tr>
@@ -886,8 +924,8 @@ template&lt;typename OpT, typename... ArgsT&gt; </div>
 
 </div>
 </div>
-<a id="a40adbb2a85351650866a8bc87e8e9893" name="a40adbb2a85351650866a8bc87e8e9893"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40adbb2a85351650866a8bc87e8e9893">&#9670;&#160;</a></span>voxelPoints()</h2>
+<a id="afb013c11be9b1688ebf1b99a573274b3" name="afb013c11be9b1688ebf1b99a573274b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb013c11be9b1688ebf1b99a573274b3">&#9670;&#160;</a></span>voxelPoints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -898,9 +936,9 @@ template&lt;typename AttT, typename BuildT = uint32_t&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="nanovdb_2nanovdb_2util_2Util_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint64_t voxelPoints </td>
+          <td class="memname">uint64_t voxelPoints </td>
           <td>(</td>
-          <td class="paramtype">const Coord &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span>, </td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1Coord.html">Coord</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -222,7 +222,7 @@ $(function(){initNavTree('MaskPrefixSum_8h_source.html','',''); });
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    uint64_t       <a class="code hl_function" href="namespacenanovdb_1_1util.html#ac06981b465ecffc4663e5b905abca429">prefixSum</a>,</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    uint16_t       offsets[512])</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>{</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">const</span> uint64_t *maskWords = mask.<a class="code hl_function" href="classnanovdb_1_1Mask.html#a25ac09e356b23721a0095d8990e9b4da">words</a>();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">const</span> uint64_t *maskWords = mask.<a class="code hl_function" href="classnanovdb_1_1Mask.html#a9cbcacb71cf8301dbc8afd0a81f8407d">words</a>();</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">alignas</span>(64) QWord data[8][8];</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
@@ -345,11 +345,11 @@ $(function(){initNavTree('MaskPrefixSum_8h_source.html','',''); });
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="preprocessor">#endif </span><span class="comment">// NANOVDB_UTIL_MASKPREFIXSUM_H_HAS_BEEN_INCLUDED</span></div>
 <div class="ttc" id="aNanoVDB_8h_html"><div class="ttname"><a href="NanoVDB_8h.html">NanoVDB.h</a></div><div class="ttdoc">Implements a light-weight self-contained VDB data-structure in a single file! In other words,...</div></div>
 <div class="ttc" id="aclassnanovdb_1_1Mask_html"><div class="ttname"><a href="classnanovdb_1_1Mask.html">nanovdb::Mask</a></div><div class="ttdoc">Bit-mask to encode active states and facilitate sequential iterators and a fast codec for I/O compres...</div><div class="ttdef"><b>Definition</b> NanoVDB.h:1068</div></div>
-<div class="ttc" id="aclassnanovdb_1_1Mask_html_a25ac09e356b23721a0095d8990e9b4da"><div class="ttname"><a href="classnanovdb_1_1Mask.html#a25ac09e356b23721a0095d8990e9b4da">nanovdb::Mask::words</a></div><div class="ttdeci">__hostdev__ uint64_t * words()</div><div class="ttdoc">Return a pointer to the list of words of the bit mask.</div><div class="ttdef"><b>Definition</b> NanoVDB.h:1192</div></div>
-<div class="ttc" id="anamespacenanovdb_1_1util_html"><div class="ttname"><a href="namespacenanovdb_1_1util.html">nanovdb::util</a></div><div class="ttdef"><b>Definition</b> ForEach.h:29</div></div>
+<div class="ttc" id="aclassnanovdb_1_1Mask_html_a9cbcacb71cf8301dbc8afd0a81f8407d"><div class="ttname"><a href="classnanovdb_1_1Mask.html#a9cbcacb71cf8301dbc8afd0a81f8407d">nanovdb::Mask::words</a></div><div class="ttdeci">uint64_t * words()</div><div class="ttdoc">Return a pointer to the list of words of the bit mask.</div><div class="ttdef"><b>Definition</b> NanoVDB.h:1188</div></div>
+<div class="ttc" id="anamespacenanovdb_1_1util_html"><div class="ttname"><a href="namespacenanovdb_1_1util.html">nanovdb::util</a></div><div class="ttdef"><b>Definition</b> GridChecksum.h:86</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1util_html_a057ba19c8e8aaeb137db8d13893dae7c"><div class="ttname"><a href="namespacenanovdb_1_1util.html#a057ba19c8e8aaeb137db8d13893dae7c">nanovdb::util::buildMaskPrefixSums</a></div><div class="ttdeci">void buildMaskPrefixSums(const Mask&lt; 3 &gt; &amp;mask, uint64_t prefixSum, uint16_t offsets[512])</div><div class="ttdoc">Compute the 512-entry inclusive prefix-sum table for a NanoVDB Mask&lt;3&gt; leaf, optionally over the inve...</div><div class="ttdef"><b>Definition</b> MaskPrefixSum.h:100</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1util_html_ac06981b465ecffc4663e5b905abca429"><div class="ttname"><a href="namespacenanovdb_1_1util.html#ac06981b465ecffc4663e5b905abca429">nanovdb::util::prefixSum</a></div><div class="ttdeci">T prefixSum(std::vector&lt; T &gt; &amp;vec, bool threaded=true, OpT op=OpT())</div><div class="ttdoc">Computes inclusive prefix sum of a vector.</div><div class="ttdef"><b>Definition</b> PrefixSum.h:74</div></div>
-<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdef"><b>Definition</b> GridHandle.h:27</div></div>
+<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdoc">Defines a simple memory pool used to call cub functions that use dynamic temporary storage.</div><div class="ttdef"><b>Definition</b> GridHandle.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

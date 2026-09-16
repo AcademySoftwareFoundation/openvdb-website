@@ -1,15 +1,15 @@
 var classnanovdb_1_1InternalNode_1_1DenseIterator =
 [
-    [ "DenseIterator", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#ae22ffdea0258e9f294324a4cbf318ce0", null ],
-    [ "DenseIterator", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a60e8b61300e9eef30d95ef5fbcfaf92c", null ],
-    [ "getCoord", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#aeeccd5dc4acad6e3ab10f3d228925897", null ],
-    [ "getOrigin", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a7ac9aa9292e82e310f109d51b78d7d22", null ],
-    [ "isValueOn", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#ab299b5cc90869ef58d05042c4946600f", null ],
-    [ "operator bool", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#aabac1f710a9cc519a171968ead10188f", null ],
-    [ "operator*", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#abad6081a42ec8c7406ca8a8c3238eb52", null ],
-    [ "operator++", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a3d1a16453b573941a188622ac480276e", null ],
-    [ "operator++", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a931e266ac76c7b0290a5e11dc3d82a03", null ],
+    [ "DenseIterator", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a13934667d577a0f2e41a63b00d272b8f", null ],
+    [ "DenseIterator", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#aa4a5c120e759faf83e63bebb6f6f7966", null ],
+    [ "getCoord", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#affe05d818ec15ce71309bfe1286abf7f", null ],
+    [ "getOrigin", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a9826f75ef2bad7d8f744336fd8a2de26", null ],
+    [ "isValueOn", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a20294ea629b04cca095464f03ace2918", null ],
+    [ "operator bool", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a67b76affb3b5d35fa419ac234144038b", null ],
+    [ "operator*", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a78d71f64914e3585045972c20df3a0d6", null ],
+    [ "operator++", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a1f9cfef0d48b77c02b5530065d7804a1", null ],
+    [ "operator++", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a960c4e2af166fbb17261977b4f9761ef", null ],
     [ "operator=", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a3995d96ffa027b2bb5d603c53982f4ab", null ],
-    [ "pos", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#ab15fcffb10fddd7e1e6058c7aa6f650d", null ],
-    [ "probeChild", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a7f7a5341106a22de9456e6a728a5f60f", null ]
+    [ "pos", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#ac44100e408186d4be173edb7a4a3fdc6", null ],
+    [ "probeChild", "classnanovdb_1_1InternalNode_1_1DenseIterator.html#a4f33367fafd762484db08e414db65ae4", null ]
 ];

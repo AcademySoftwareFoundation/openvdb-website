@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -120,10 +120,11 @@ $(function(){initNavTree('namespaceopenvdb.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:v13_5F0" id="r_v13_5F0"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__0.html">v13_0</a></td></tr>
+<tr class="memitem:v13_5F1" id="r_v13_5F1"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__1.html">v13_1</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section note"><dt>Note</dt><dd>tbb/task_arena.h is the ONLY include that persists from TBB 2020 to TBB 2021 to TBB 2023 that itself includes the TBB specific version header files. In TBB 2020, the version header was called tbb/stddef.h. In 2021+, it's called tbb/version.h. We include tbb/task_arena.h here to indirectly access the version defines in a consistent way so that downstream software doesn't need to provide compile time defines. </dd></dl>
+<div class="textblock"><dl class="section warning"><dt>Warning</dt><dd>the below changes what includes are available from this header depending on whether version.h is available </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>tbb/task_arena.h is the ONLY include that persists from TBB 2020 to TBB 2021 to TBB 2023 that itself includes the TBB specific version header files. In TBB 2020, the version header was called tbb/stddef.h. In 2021+, it's called tbb/version.h. We include tbb/task_arena.h here to indirectly access the version defines in a consistent way so that downstream software doesn't need to provide compile time defines. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

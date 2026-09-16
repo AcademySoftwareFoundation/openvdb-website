@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -605,7 +605,7 @@ $(function(){initNavTree('GEO__PrimVDB_8h_source.html','',''); });
 <div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>    fpreal      calcPositiveDensity() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span> </div>
 <div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>    SYS_FORCE_INLINE</div>
-<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>    <span class="keywordtype">bool</span>        hasGrid()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> myGridAccessor.hasGrid(); }</div>
+<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>    <span class="keywordtype">bool</span>        <a class="code hl_function" href="namespacenanovdb_1_1io.html#ae98c496257c8884f3870fd35adb7a67b">hasGrid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> myGridAccessor.hasGrid(); }</div>
 <div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span><span class="comment"></span> </div>
 <div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span><span class="comment">    /// @brief If this primitive&#39;s grid&#39;s voxel data (i.e., its tree)</span></div>
 <div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span><span class="comment">    /// is shared, replace the tree with a deep copy of itself that is</span></div>
@@ -731,7 +731,7 @@ $(function(){initNavTree('GEO__PrimVDB_8h_source.html','',''); });
 <div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span><span class="comment">    /// @endcode</span></div>
 <div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Gr<span class="keywordtype">id</span>TypeListT, <span class="keyword">typename</span> OpT&gt;</div>
 <div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>    <span class="keywordtype">bool</span>    apply(OpT&amp; op)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span><span class="keyword">                </span>{ <span class="keywordflow">return</span> hasGrid() ? getConstGrid().apply&lt;GridTypeListT&gt;(op) : false; }</div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span><span class="keyword">                </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenanovdb_1_1io.html#ae98c496257c8884f3870fd35adb7a67b">hasGrid</a>() ? getConstGrid().apply&lt;GridTypeListT&gt;(op) : false; }</div>
 <div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span><span class="comment"></span> </div>
 <div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span><span class="comment">    /// @brief If this primitive&#39;s grid resolves to one of the listed grid types,</span></div>
 <div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span><span class="comment">    /// invoke the functor @a op on the resolved grid.</span></div>
@@ -754,20 +754,20 @@ $(function(){initNavTree('GEO__PrimVDB_8h_source.html','',''); });
 <div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Gr<span class="keywordtype">id</span>TypeListT, <span class="keyword">typename</span> OpT&gt;</div>
 <div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>    <span class="keywordtype">bool</span>    apply(OpT&amp; op, <span class="keywordtype">bool</span> makeUnique = <span class="keyword">true</span>)</div>
 <div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>            {</div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>                <span class="keywordflow">if</span> (hasGrid()) {</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacenanovdb_1_1io.html#ae98c496257c8884f3870fd35adb7a67b">hasGrid</a>()) {</div>
 <div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>                    <span class="keyword">auto</span>&amp; grid = myGridAccessor.getGrid(*<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>                    <span class="keywordflow">if</span> (makeUnique) {</div>
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>                        <span class="keyword">auto</span> treePtr = grid.<a class="code hl_function" href="classopenvdb_1_1v13__0_1_1GridBase.html#ade901fd5fd57d7fd89e6f5e5e2625105">baseTreePtr</a>();</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>                        <span class="keyword">auto</span> treePtr = grid.<a class="code hl_function" href="classopenvdb_1_1v13__1_1_1GridBase.html#ade901fd5fd57d7fd89e6f5e5e2625105">baseTreePtr</a>();</div>
 <div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>                        <span class="keywordflow">if</span> (treePtr.use_count() &gt; 2) { <span class="comment">// grid + treePtr = 2</span></div>
 <div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>                            <span class="comment">// If the grid resolves to one of the listed types and its tree</span></div>
 <div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>                            <span class="comment">// is shared with other grids, replace the tree with a deep copy.</span></div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>                            grid.<a class="code hl_function" href="classopenvdb_1_1v13__0_1_1GridBase.html#a947a1a224380c2913b07f6308cc3f662">apply</a>&lt;GridTypeListT&gt;([<span class="keyword">this</span>](openvdb::GridBase&amp; baseGrid) {</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>                            grid.<a class="code hl_function" href="classopenvdb_1_1v13__1_1_1GridBase.html#a947a1a224380c2913b07f6308cc3f662">apply</a>&lt;GridTypeListT&gt;([<span class="keyword">this</span>](openvdb::GridBase&amp; baseGrid) {</div>
 <div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>                                baseGrid.setTree(baseGrid.constBaseTree().copy());</div>
 <div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>                                this-&gt;incrTreeUniqueId();</div>
 <div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>                            });</div>
 <div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>                        }</div>
 <div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>                    }</div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>                    <span class="keywordflow">if</span> (grid.<a class="code hl_function" href="classopenvdb_1_1v13__0_1_1GridBase.html#a947a1a224380c2913b07f6308cc3f662">apply</a>&lt;GridTypeListT&gt;(op)) {</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>                    <span class="keywordflow">if</span> (grid.<a class="code hl_function" href="classopenvdb_1_1v13__1_1_1GridBase.html#a947a1a224380c2913b07f6308cc3f662">apply</a>&lt;GridTypeListT&gt;(op)) {</div>
 <div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>                        incrGridUniqueIds();</div>
 <div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>                    }</div>
@@ -882,7 +882,7 @@ $(function(){initNavTree('GEO__PrimVDB_8h_source.html','',''); });
 <div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>        UT_VDBType      getStorageType()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> myStorageType; }</div>
 <div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span> </div>
 <div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>        SYS_FORCE_INLINE</div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>        <span class="keywordtype">bool</span>            hasGrid()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> myGrid != 0; }</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>        <span class="keywordtype">bool</span>            <a class="code hl_function" href="namespacenanovdb_1_1io.html#ae98c496257c8884f3870fd35adb7a67b">hasGrid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> myGrid != 0; }</div>
 <div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span> </div>
 <div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>        <span class="keywordtype">void</span>            clearGridAndSetStorageType(UT_VDBType storage)</div>
 <div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>        { myStorageType = storage;  myGrid.reset(); }</div>
@@ -1071,8 +1071,9 @@ $(function(){initNavTree('GEO__PrimVDB_8h_source.html','',''); });
 <div class="ttc" id="aPlatform_8h_html"><div class="ttname"><a href="Platform_8h.html">Platform.h</a></div></div>
 <div class="ttc" id="aPlatform_8h_html_a88b26daa45bbdd69d6bb12f9c7bfa3b2"><div class="ttname"><a href="Platform_8h.html#a88b26daa45bbdd69d6bb12f9c7bfa3b2">OPENVDB_HOUDINI_API</a></div><div class="ttdeci">#define OPENVDB_HOUDINI_API</div><div class="ttdef"><b>Definition</b> Platform.h:286</div></div>
 <div class="ttc" id="aUT__VDBUtils_8h_html"><div class="ttname"><a href="UT__VDBUtils_8h.html">UT_VDBUtils.h</a></div></div>
-<div class="ttc" id="aclassopenvdb_1_1v13__0_1_1GridBase_html_a947a1a224380c2913b07f6308cc3f662"><div class="ttname"><a href="classopenvdb_1_1v13__0_1_1GridBase.html#a947a1a224380c2913b07f6308cc3f662">openvdb::v13_0::GridBase::apply</a></div><div class="ttdeci">bool apply(OpT &amp;) const</div><div class="ttdoc">If this grid resolves to one of the listed grid types, invoke the given functor on the resolved grid.</div><div class="ttdef"><b>Definition</b> Grid.h:1795</div></div>
-<div class="ttc" id="aclassopenvdb_1_1v13__0_1_1GridBase_html_ade901fd5fd57d7fd89e6f5e5e2625105"><div class="ttname"><a href="classopenvdb_1_1v13__0_1_1GridBase.html#ade901fd5fd57d7fd89e6f5e5e2625105">openvdb::v13_0::GridBase::baseTreePtr</a></div><div class="ttdeci">TreeBase::Ptr baseTreePtr()</div><div class="ttdoc">Return a pointer to this grid&#39;s tree, which might be shared with other grids. The pointer is guarante...</div><div class="ttdef"><b>Definition</b> Grid.h:1260</div></div>
+<div class="ttc" id="aclassopenvdb_1_1v13__1_1_1GridBase_html_a947a1a224380c2913b07f6308cc3f662"><div class="ttname"><a href="classopenvdb_1_1v13__1_1_1GridBase.html#a947a1a224380c2913b07f6308cc3f662">openvdb::v13_1::GridBase::apply</a></div><div class="ttdeci">bool apply(OpT &amp;) const</div><div class="ttdoc">If this grid resolves to one of the listed grid types, invoke the given functor on the resolved grid.</div><div class="ttdef"><b>Definition</b> Grid.h:1795</div></div>
+<div class="ttc" id="aclassopenvdb_1_1v13__1_1_1GridBase_html_ade901fd5fd57d7fd89e6f5e5e2625105"><div class="ttname"><a href="classopenvdb_1_1v13__1_1_1GridBase.html#ade901fd5fd57d7fd89e6f5e5e2625105">openvdb::v13_1::GridBase::baseTreePtr</a></div><div class="ttdeci">TreeBase::Ptr baseTreePtr()</div><div class="ttdoc">Return a pointer to this grid&#39;s tree, which might be shared with other grids. The pointer is guarante...</div><div class="ttdef"><b>Definition</b> Grid.h:1260</div></div>
+<div class="ttc" id="anamespacenanovdb_1_1io_html_ae98c496257c8884f3870fd35adb7a67b"><div class="ttname"><a href="namespacenanovdb_1_1io.html#ae98c496257c8884f3870fd35adb7a67b">nanovdb::io::hasGrid</a></div><div class="ttdeci">bool hasGrid(const std::string &amp;fileName, const std::string &amp;gridName)</div><div class="ttdoc">Return true if the file contains a grid with the specified name.</div><div class="ttdef"><b>Definition</b> IO.h:699</div></div>
 <div class="ttc" id="anamespacenanovdb_html_a4c0dc82510efc445233bd15b340bfeb0"><div class="ttname"><a href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0">nanovdb::GridType</a></div><div class="ttdeci">GridType</div><div class="ttdoc">List of types that are currently supported by NanoVDB.</div><div class="ttdef"><b>Definition</b> NanoVDB.h:219</div></div>
 <div class="ttc" id="anamespaceopenvdb__houdini_html"><div class="ttname"><a href="namespaceopenvdb__houdini.html">openvdb_houdini</a></div><div class="ttdef"><b>Definition</b> AttributeTransferUtil.h:34</div></div>
 <div class="ttc" id="aopenvdb_8h_html"><div class="ttname"><a href="openvdb_8h.html">openvdb.h</a></div></div>

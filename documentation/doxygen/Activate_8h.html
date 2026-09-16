@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.0.1</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
    </div>
   </td>
  </tr>
@@ -122,7 +122,7 @@ $(function(){initNavTree('Activate_8h.html','',''); });
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="openvdb_2Types_8h_source.html">openvdb/Types.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="Grid_8h_source.html">openvdb/Grid.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="Math_8h_source.html">openvdb/math/Math.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="openvdb_2openvdb_2math_2Math_8h_source.html">openvdb/math/Math.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="openvdb_2openvdb_2tree_2NodeManager_8h_source.html">openvdb/tree/NodeManager.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="openvdb_8h_source.html">openvdb/openvdb.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="PointDataGrid_8h_source.html">openvdb/points/PointDataGrid.h</a>&gt;</code><br />
@@ -132,16 +132,16 @@ $(function(){initNavTree('Activate_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:openvdb" id="r_openvdb"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb.html">openvdb</a></td></tr>
-<tr class="memitem:openvdb_3A_3Av13_5F0" id="r_openvdb_3A_3Av13_5F0"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__0.html">openvdb::v13_0</a></td></tr>
-<tr class="memitem:openvdb_3A_3Av13_5F0_3A_3Atools" id="r_openvdb_3A_3Av13_5F0_3A_3Atools"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__0_1_1tools.html">openvdb::v13_0::tools</a></td></tr>
+<tr class="memitem:openvdb_3A_3Av13_5F1" id="r_openvdb_3A_3Av13_5F1"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__1.html">openvdb::v13_1</a></td></tr>
+<tr class="memitem:openvdb_3A_3Av13_5F1_3A_3Atools" id="r_openvdb_3A_3Av13_5F1_3A_3Atools"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__1_1_1tools.html">openvdb::v13_1::tools</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:afbad51b90ae8354757fa735b4d2058b0" id="r_afbad51b90ae8354757fa735b4d2058b0"><td class="memTemplParams" colspan="2">template&lt;typename GridOrTree&gt; </td></tr>
-<tr class="memitem:afbad51b90ae8354757fa735b4d2058b0 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__0_1_1tools.html#afbad51b90ae8354757fa735b4d2058b0">activate</a> (GridOrTree &amp;, const typename GridOrTree::ValueType &amp;value, const typename GridOrTree::ValueType &amp;tolerance=<a class="el" href="namespaceopenvdb_1_1v13__0.html#a734ccd1d3c67a1ab1da81817137b2e1b">zeroVal</a>&lt; typename GridOrTree::ValueType &gt;(), const bool threaded=true)</td></tr>
+<tr class="memitem:afbad51b90ae8354757fa735b4d2058b0 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__1_1_1tools.html#afbad51b90ae8354757fa735b4d2058b0">activate</a> (GridOrTree &amp;, const typename GridOrTree::ValueType &amp;value, const typename GridOrTree::ValueType &amp;tolerance=<a class="el" href="namespaceopenvdb_1_1v13__1.html#a734ccd1d3c67a1ab1da81817137b2e1b">zeroVal</a>&lt; typename GridOrTree::ValueType &gt;(), const bool threaded=true)</td></tr>
 <tr class="memdesc:afbad51b90ae8354757fa735b4d2058b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark as active any inactive tiles or voxels in the given grid or tree whose values are equal to <em class="arg">value</em> (optionally to within the given <em class="arg">tolerance</em>).  <br /></td></tr>
 <tr class="memitem:a95818e0902bf2d721182aea060c98a39" id="r_a95818e0902bf2d721182aea060c98a39"><td class="memTemplParams" colspan="2">template&lt;typename GridOrTree&gt; </td></tr>
-<tr class="memitem:a95818e0902bf2d721182aea060c98a39 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__0_1_1tools.html#a95818e0902bf2d721182aea060c98a39">deactivate</a> (GridOrTree &amp;, const typename GridOrTree::ValueType &amp;value, const typename GridOrTree::ValueType &amp;tolerance=<a class="el" href="namespaceopenvdb_1_1v13__0.html#a734ccd1d3c67a1ab1da81817137b2e1b">zeroVal</a>&lt; typename GridOrTree::ValueType &gt;(), const bool threaded=true)</td></tr>
+<tr class="memitem:a95818e0902bf2d721182aea060c98a39 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__1_1_1tools.html#a95818e0902bf2d721182aea060c98a39">deactivate</a> (GridOrTree &amp;, const typename GridOrTree::ValueType &amp;value, const typename GridOrTree::ValueType &amp;tolerance=<a class="el" href="namespaceopenvdb_1_1v13__1.html#a734ccd1d3c67a1ab1da81817137b2e1b">zeroVal</a>&lt; typename GridOrTree::ValueType &gt;(), const bool threaded=true)</td></tr>
 <tr class="memdesc:a95818e0902bf2d721182aea060c98a39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark as inactive any active tiles or voxels in the given grid or tree whose values are equal to <em class="arg">value</em> (optionally to within the given <em class="arg">tolerance</em>).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>

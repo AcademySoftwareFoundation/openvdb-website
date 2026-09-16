@@ -1,4 +1,0 @@
-var structopenvdb_1_1v13__0_1_1tree_1_1IterTraits_3_01NodeT_00_01typename_01NodeT_1_1ChildOffIter_01_4_1_1NodeConverter =
-[
-    [ "Type", "structopenvdb_1_1v13__0_1_1tree_1_1IterTraits_3_01NodeT_00_01typename_01NodeT_1_1ChildOffIter_01_4_1_1NodeConverter.html#aa8a2bb89da0adf8929d146a572c94cad", null ]
-];

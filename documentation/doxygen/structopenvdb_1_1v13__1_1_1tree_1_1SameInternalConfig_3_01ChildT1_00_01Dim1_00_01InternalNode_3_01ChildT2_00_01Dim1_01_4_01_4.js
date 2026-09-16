@@ -1,0 +1,4 @@
+var structopenvdb_1_1v13__1_1_1tree_1_1SameInternalConfig_3_01ChildT1_00_01Dim1_00_01InternalNode_3_01ChildT2_00_01Dim1_01_4_01_4 =
+[
+    [ "value", "structopenvdb_1_1v13__1_1_1tree_1_1SameInternalConfig_3_01ChildT1_00_01Dim1_00_01InternalNode_3_01ChildT2_00_01Dim1_01_4_01_4.html#a11ddd051208250c32dc4985abcafa86d", null ]
+];

@@ -1,5 +1,6 @@
 var namespacenanovdb_1_1util =
 [
+    [ "cuda", "namespacenanovdb_1_1util_1_1cuda.html", "namespacenanovdb_1_1util_1_1cuda" ],
     [ "impl", "namespacenanovdb_1_1util_1_1impl.html", [
       [ "sprint", "namespacenanovdb_1_1util_1_1impl.html#ac0b7b295d89ceccc63d3f6c2af469d7a", null ],
       [ "sprint", "namespacenanovdb_1_1util_1_1impl.html#aaef038c38dd786a166c7c520ea7358e4", null ]
@@ -47,8 +48,15 @@ var namespacenanovdb_1_1util =
     [ "remove_reference_t", "namespacenanovdb_1_1util.html#ad94dd578c8a2516de4794a7c247605f3", null ],
     [ "atomicAnd", "namespacenanovdb_1_1util.html#ac135d88a977e129e28babb21176ebb5f", null ],
     [ "atomicOr", "namespacenanovdb_1_1util.html#aa05f485d523728abe2e6bb926b496c40", null ],
+    [ "blockedCrc32", "namespacenanovdb_1_1util.html#a12bed39361e8580b459fca23d058653a", null ],
+    [ "blockedCrc32", "namespacenanovdb_1_1util.html#a011e9a60a8c47ac7ff716b65f36fa690", null ],
     [ "buildMaskPrefixSums", "namespacenanovdb_1_1util.html#a057ba19c8e8aaeb137db8d13893dae7c", null ],
     [ "countOn", "namespacenanovdb_1_1util.html#a0cf31f0377ddc583b6407691b69bdb2f", null ],
+    [ "crc32", "namespacenanovdb_1_1util.html#a93594e15428a8c4e9385d2c2c2629f56", null ],
+    [ "crc32", "namespacenanovdb_1_1util.html#a65a4a21f33b695432df8c01a5947970d", null ],
+    [ "crc32", "namespacenanovdb_1_1util.html#a1edc39b700dd60d8cafd9709baa5228b", null ],
+    [ "crc32", "namespacenanovdb_1_1util.html#a4896cca559b4932234bfd87fb49470ef", null ],
+    [ "createCrc32Lut", "namespacenanovdb_1_1util.html#aec758c30430701210d4c4865ffcc5866", null ],
     [ "declval", "namespacenanovdb_1_1util.html#adead617f07ae8f9cac9768fafb25dff5", null ],
     [ "empty", "namespacenanovdb_1_1util.html#a77e7922c6a5dabb3b37e9803a0a25874", null ],
     [ "findHighestOn", "namespacenanovdb_1_1util.html#a1285bd5ca3cc77697d29c50e598f0617", null ],
@@ -60,6 +68,8 @@ var namespacenanovdb_1_1util =
     [ "forEach", "namespacenanovdb_1_1util.html#aeecddc2b41154f35c7304658df4a4d85", null ],
     [ "forEach", "namespacenanovdb_1_1util.html#aa574309e3ddb090bd7973b0898dd95c0", null ],
     [ "inclusiveScan", "namespacenanovdb_1_1util.html#ac18f6ee0142f7ddcf2caeee8c422f97a", null ],
+    [ "initCrc32Lut", "namespacenanovdb_1_1util.html#a095b672ee24609644d2525a76ea08cb4", null ],
+    [ "initCrc32Lut", "namespacenanovdb_1_1util.html#a99deb987c331a61e46803a65e1e4083c", null ],
     [ "invoke", "namespacenanovdb_1_1util.html#a9fa34a074151d9dae08f4fcfcfc164f8", null ],
     [ "memzero", "namespacenanovdb_1_1util.html#a6517124bbf2d54437b35a919f21684fd", null ],
     [ "prefixSum", "namespacenanovdb_1_1util.html#ac06981b465ecffc4663e5b905abca429", null ],
@@ -70,6 +80,7 @@ var namespacenanovdb_1_1util =
     [ "reduce", "namespacenanovdb_1_1util.html#a8e86a9eb8e5d6ab2dd7e9cc0133b1039", null ],
     [ "reduce", "namespacenanovdb_1_1util.html#a4a7d097db592a925e7d4adb63fb764ff", null ],
     [ "reduce", "namespacenanovdb_1_1util.html#a9bfe6769cee6e711d758b56c953192e8", null ],
+    [ "shuffleDownMask", "namespacenanovdb_1_1util.html#a275b41df8d9f35b1210137d0b9b392ff", null ],
     [ "sprint", "namespacenanovdb_1_1util.html#aaef038c38dd786a166c7c520ea7358e4", null ],
     [ "strcat", "namespacenanovdb_1_1util.html#a9517a4a50477f651785c09b27826d8ce", null ],
     [ "strcat", "namespacenanovdb_1_1util.html#a95ea4ce3ac68bde0c80b5a14e06e3f0d", null ],

@@ -1,0 +1,26 @@
+var classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4 =
+[
+    [ "BaseT", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#af031938aa7e4f224ab5f90cac669b01f", null ],
+    [ "RealT", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a7acd5052103ab7ed90a626b3b4b218db", null ],
+    [ "ValueType", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a72ced3f4f821016da17c4ecd262e8b03", null ],
+    [ "Stats", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a6cc4e9a62eff256638ecc9d9ba0d63d7", null ],
+    [ "Stats", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#ab56c741e06823ca17f789f8497a4b443", null ],
+    [ "add", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a0664e5f5573b6a8b49750fef53b59c1b", null ],
+    [ "add", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a7ca54353554f58150d71a5bf71a553dc", null ],
+    [ "add", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a8ec080d7a01ff2a9b401598a40a88f31", null ],
+    [ "avg", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a9892a25b3929facb23da2d4a4f0cd402", null ],
+    [ "hasAverage", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a20246090dd6383bcff5431de22e3e737", null ],
+    [ "hasMinMax", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a74911985fd8d58754ed9877c20c18603", null ],
+    [ "hasStats", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#af8da47d60a5b1d5985c6ec92d7cead79", null ],
+    [ "hasStdDeviation", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#ac36cbca55e3cfb790e3a86adfcedcf33", null ],
+    [ "mean", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a741930a5c5a4bc44f65b205e9bf0d7b1", null ],
+    [ "setStats", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a185e8025aad82862dc0240ef448a7f92", null ],
+    [ "size", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#abdb8d98293ba89a7cd5d520b22f252ea", null ],
+    [ "std", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#aaa9c8deb6863a8d6e9797983cda57357", null ],
+    [ "stdDev", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a2831cba1685a78144d4d5495688147cf", null ],
+    [ "var", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a82495a6c4dfd7f242c85e2689cdbba9f", null ],
+    [ "variance", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#af23b298764b55b74d3ad1dac36e15e6f", null ],
+    [ "mAux", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#ad1c8e51baddccfaff6f4be858336922c", null ],
+    [ "mAvg", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a1d259d725d0ba5bc05cbfd03a4dd17df", null ],
+    [ "mSize", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#a757cc25f4b97ac09f3e514049b4ac32c", null ]
+];
