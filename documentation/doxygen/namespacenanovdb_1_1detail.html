@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -118,17 +118,27 @@ $(function(){initNavTree('namespacenanovdb_1_1detail.html','',''); });
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:LayoutCopy" id="r_LayoutCopy"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1detail_1_1LayoutCopy.html">LayoutCopy</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps a byte-for-byte copy of a handle's buffer in a handle with that handle's layout. The layout already passed a header parse or <a class="el" href="classnanovdb_1_1GridHandle.html#a9bea8c755ec680a5c61c308323727c42" title="Constructs a handle over buffer from metadata the caller already knows to describe its contents,...">GridHandle::adopt</a> when the source was made, so it is not checked again. This also carries grids at unaligned offsets, which the constructors accept and <a class="el" href="classnanovdb_1_1GridHandle.html#a9bea8c755ec680a5c61c308323727c42" title="Constructs a handle over buffer from metadata the caller already knows to describe its contents,...">GridHandle::adopt</a> rejects. Used by <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a>.  <a href="structnanovdb_1_1detail_1_1LayoutCopy.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad03e642d832671da61495eb3baeeffb1" id="r_ad03e642d832671da61495eb3baeeffb1"><td class="memTemplParams" colspan="2">template&lt;typename BufferT&gt; </td></tr>
 <tr class="memitem:ad03e642d832671da61495eb3baeeffb1 template"><td class="memItemLeft" align="right" valign="top">BufferT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad03e642d832671da61495eb3baeeffb1">createHostStorage</a> (uint64_t bytes, const BufferT &amp;pool)</td></tr>
 <tr class="memdesc:ad03e642d832671da61495eb3baeeffb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates <code>bytes</code> of host-readable storage for a <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a>: through <code>BufferT::create</code> for buffers that provide it, and through <code>pool's</code> resource for a host-accessible single-space buffer (e.g. a pinned-resource <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer</a>). The braced third argument selects the uninitialized-storage constructor without naming its tag type, so this header stays CUDA-free.  <br /></td></tr>
+<tr class="memitem:a92cefffa9f90c22088f46718e2a89d4d" id="r_a92cefffa9f90c22088f46718e2a89d4d"><td class="memTemplParams" colspan="2">template&lt;typename BufferT&gt; </td></tr>
+<tr class="memitem:a92cefffa9f90c22088f46718e2a89d4d template"><td class="memItemLeft" align="right" valign="top">BufferT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92cefffa9f90c22088f46718e2a89d4d">createHostStorage</a> (uint64_t bytes, const BufferT *pool)</td></tr>
+<tr class="memdesc:a92cefffa9f90c22088f46718e2a89d4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer-taking form for callers whose pool is optional: a null pool default-constructs the buffer type as the prototype, which for a single-space buffer means a default-constructed resource.  <br /></td></tr>
+<tr class="memitem:a53172366c7d1274a217b0e14364f6f60" id="r_a53172366c7d1274a217b0e14364f6f60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53172366c7d1274a217b0e14364f6f60">validateGridLayout</a> (const std::vector&lt; <a class="el" href="structnanovdb_1_1GridHandleMetaData.html">GridHandleMetaData</a> &gt; &amp;meta, uint64_t bytes)</td></tr>
+<tr class="memdesc:a53172366c7d1274a217b0e14364f6f60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks that <em class="arg">meta</em> describes grids laid out back to back from offset zero inside <em class="arg">bytes</em> of storage, each starting at a multiple of NANOVDB_DATA_ALIGNMENT and naming a grid type below <a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0a87557f11575c0ad78e4e28abedc13b6e">GridType::End</a>. This is all the validation a handle adopting caller-supplied metadata performs: no header is read. No grids at all is accepted only over an empty buffer (an empty handle).  <br /></td></tr>
 <tr class="memitem:ae42e92c3f674dbbeb1c1d7aed82c7c5a" id="r_ae42e92c3f674dbbeb1c1d7aed82c7c5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae42e92c3f674dbbeb1c1d7aed82c7c5a">parseHostGridChain</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *head, uint64_t bytes, std::vector&lt; <a class="el" href="structnanovdb_1_1GridHandleMetaData.html">GridHandleMetaData</a> &gt; &amp;meta)</td></tr>
-<tr class="memdesc:ae42e92c3f674dbbeb1c1d7aed82c7c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates the grid chain in <em class="arg">bytes</em> of host-readable memory headed by <em class="arg">head</em> and fills <em class="arg">meta</em> with one entry per grid: every header must be valid, carry its expected index and the chain's total count, and fit inside the buffer, so a truncated buffer or a forged header is rejected before its metadata is trusted. This is the host counterpart of the device-side chain parse, and it is what makes a handle's metadata safe to adopt without re-validation (<a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a>).  <br /></td></tr>
+<tr class="memdesc:ae42e92c3f674dbbeb1c1d7aed82c7c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates the grid chain in <em class="arg">bytes</em> of host-readable memory headed by <em class="arg">head</em> and fills <em class="arg">meta</em> with one entry per grid: every header must be valid, carry its expected index and the chain's total count, and fit inside the buffer, so a truncated buffer or a forged header is rejected before its metadata is trusted. This is the host counterpart of the device-side chain parse. Like it, this does not require grid offsets to be aligned, unlike <a class="el" href="classnanovdb_1_1GridHandle.html#a9bea8c755ec680a5c61c308323727c42" title="Constructs a handle over buffer from metadata the caller already knows to describe its contents,...">GridHandle::adopt</a>.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ad03e642d832671da61495eb3baeeffb1" name="ad03e642d832671da61495eb3baeeffb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad03e642d832671da61495eb3baeeffb1">&#9670;&#160;</a></span>createHostStorage()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad03e642d832671da61495eb3baeeffb1">&#9670;&#160;</a></span>createHostStorage() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,6 +167,39 @@ template&lt;typename BufferT&gt; </div>
 </div><div class="memdoc">
 
 <p>Allocates <code>bytes</code> of host-readable storage for a <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a>: through <code>BufferT::create</code> for buffers that provide it, and through <code>pool's</code> resource for a host-accessible single-space buffer (e.g. a pinned-resource <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer</a>). The braced third argument selects the uninitialized-storage constructor without naming its tag type, so this header stays CUDA-free. </p>
+
+</div>
+</div>
+<a id="a92cefffa9f90c22088f46718e2a89d4d" name="a92cefffa9f90c22088f46718e2a89d4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92cefffa9f90c22088f46718e2a89d4d">&#9670;&#160;</a></span>createHostStorage() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BufferT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BufferT createHostStorage </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>bytes</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const BufferT *</td>          <td class="paramname"><span class="paramname"><em>pool</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer-taking form for callers whose pool is optional: a null pool default-constructs the buffer type as the prototype, which for a single-space buffer means a default-constructed resource. </p>
 
 </div>
 </div>
@@ -192,7 +235,38 @@ template&lt;typename BufferT&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Validates the grid chain in <em class="arg">bytes</em> of host-readable memory headed by <em class="arg">head</em> and fills <em class="arg">meta</em> with one entry per grid: every header must be valid, carry its expected index and the chain's total count, and fit inside the buffer, so a truncated buffer or a forged header is rejected before its metadata is trusted. This is the host counterpart of the device-side chain parse, and it is what makes a handle's metadata safe to adopt without re-validation (<a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a>). </p>
+<p>Validates the grid chain in <em class="arg">bytes</em> of host-readable memory headed by <em class="arg">head</em> and fills <em class="arg">meta</em> with one entry per grid: every header must be valid, carry its expected index and the chain's total count, and fit inside the buffer, so a truncated buffer or a forged header is rejected before its metadata is trusted. This is the host counterpart of the device-side chain parse. Like it, this does not require grid offsets to be aligned, unlike <a class="el" href="classnanovdb_1_1GridHandle.html#a9bea8c755ec680a5c61c308323727c42" title="Constructs a handle over buffer from metadata the caller already knows to describe its contents,...">GridHandle::adopt</a>. </p>
+
+</div>
+</div>
+<a id="a53172366c7d1274a217b0e14364f6f60" name="a53172366c7d1274a217b0e14364f6f60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53172366c7d1274a217b0e14364f6f60">&#9670;&#160;</a></span>validateGridLayout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void validateGridLayout </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structnanovdb_1_1GridHandleMetaData.html">GridHandleMetaData</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>meta</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t</td>          <td class="paramname"><span class="paramname"><em>bytes</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks that <em class="arg">meta</em> describes grids laid out back to back from offset zero inside <em class="arg">bytes</em> of storage, each starting at a multiple of NANOVDB_DATA_ALIGNMENT and naming a grid type below <a class="el" href="namespacenanovdb.html#a4c0dc82510efc445233bd15b340bfeb0a87557f11575c0ad78e4e28abedc13b6e">GridType::End</a>. This is all the validation a handle adopting caller-supplied metadata performs: no header is read. No grids at all is accepted only over an empty buffer (an empty handle). </p>
 
 </div>
 </div>

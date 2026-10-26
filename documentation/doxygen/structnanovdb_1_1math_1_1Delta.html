@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -118,11 +118,12 @@ $(function(){initNavTree('structnanovdb_1_1math_1_1Delta.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="structnanovdb_1_1math_1_1Delta.html" title="Delta for small floating-point offsets.">Delta</a> for small floating-point offsets.  
+<p>Per-type small floating-point offset, useful for nudging boundaries off-edge in geometric tests.  
  <a href="#details">More...</a></p>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-struct nanovdb::math::Delta&lt; T &gt;</div><p><a class="el" href="structnanovdb_1_1math_1_1Delta.html" title="Delta for small floating-point offsets.">Delta</a> for small floating-point offsets. </p>
+struct nanovdb::math::Delta&lt; T &gt;</div><p>Per-type small floating-point offset, useful for nudging boundaries off-edge in geometric tests. </p>
+<p>Returned by <code>Delta&lt;T&gt;::value()</code>. Specialized for <code>float</code>, <code>double</code>, and <code>long</code> double; instantiating on any other <code>T</code> is a compile error by design. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

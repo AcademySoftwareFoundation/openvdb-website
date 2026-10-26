@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['handling_20metadata_0',['Handling metadata',['../codeExamples.html#sHandlingMetadata',1,'Handling metadata'],['../python.html#sPyHandlingMetadata',1,'Handling metadata']]],
+  ['handling_20metadata_0',['Handling metadata',['../python.html#sPyHandlingMetadata',1,'Handling metadata'],['../codeExamples.html#sHandlingMetadata',1,'Handling metadata']]],
   ['header_20files_1',['Header Files',['../codingStyle.html#sHeaderFiles',1,'']]],
   ['hello_20world_20examples_2',['NanoVDB Hello World Examples',['../NanoVDB_HelloWorld.html',1,'NanoVDB_MainPage']]],
   ['hello_20world_20rdquo_20for_20openvdb_3',['&amp;ldquo;Hello, World&amp;rdquo; for OpenVDB',['../codeExamples.html#sHelloWorld',1,'']]],
   ['hello_20world_20rdquo_20for_20openvdb_20points_4',['&amp;ldquo;Hello, World&amp;rdquo; for OpenVDB Points',['../codeExamples.html#sPointsHelloWorld',1,'']]],
   ['homebrew_5',['Using Homebrew',['../dependencies.html#depUsingHomebrew',1,'']]],
-  ['host_20only_6',['Read a NanoVDB grid from a file (host only)',['../NanoVDB_HelloWorld.html#autotoc_md9',1,'']]],
+  ['host_20only_6',['Read a NanoVDB grid from a file (host only)',['../NanoVDB_HelloWorld.html#autotoc_md6',1,'']]],
   ['houdini_7',['Building Against Houdini',['../build.html#buildBuildHou',1,'']]],
   ['houdini_20cookbook_8',['Houdini Cookbook',['../houdini.html',1,'index']]],
   ['houdini_20maya_9',['Building Against Houdini/Maya',['../build.html#buildBuildHouMaya',1,'']]],

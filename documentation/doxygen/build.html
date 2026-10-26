@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -335,18 +335,16 @@ Building Against Houdini</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">C++17 Compiler  </td><td class="markdownTableBodyNone">Matching Houdini compiler and version  </td><td class="markdownTableBodyNone">All  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Boost  </td><td class="markdownTableBodyNone">Components: iostreams  </td><td class="markdownTableBodyNone">All  </td></tr>
-<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">GoogleTest  </td><td class="markdownTableBodyNone">A unit testing framework module for C++  </td><td class="markdownTableBodyNone">Unit Tests  </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">GLFW  </td><td class="markdownTableBodyNone">Simple API for OpenGL development  </td><td class="markdownTableBodyNone">OpenVDB View  </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Doxygen  </td><td class="markdownTableBodyNone">Documentation generation from C++  </td><td class="markdownTableBodyNone">Documentation  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Log4cplus  </td><td class="markdownTableBodyNone">An optional dependency for improved OpenVDB Logging  </td><td class="markdownTableBodyNone">Optional (All)  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">nanobind  </td><td class="markdownTableBodyNone">C++/python bindings  </td><td class="markdownTableBodyNone">Optional (Python)  </td></tr>
+<td class="markdownTableBodyNone">Log4cplus  </td><td class="markdownTableBodyNone">An optional dependency for improved OpenVDB Logging  </td><td class="markdownTableBodyNone">Optional (All)  </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">nanobind  </td><td class="markdownTableBodyNone">C++/python bindings  </td><td class="markdownTableBodyNone">Optional (Python)  </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">LLVM  </td><td class="markdownTableBodyNone">Target-independent code generation  </td><td class="markdownTableBodyNone">OpenVDB AX  </td></tr>
 </table>
 <p>At a minimum a matching C++17 compiler and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software. Note that as Blosc and ZLib are provided as part of the Houdini installation <span class="tt">USE_BLOSC</span> and <span class="tt">USE_ZLIB</span> should be left <span class="tt">ON</span>.</p>
@@ -370,11 +368,9 @@ Building Against Houdini</h2>
 </ul>
 </li>
 <li><b>USE_DEFAULT_HOUDINI_INSTALL</b> =<span class="tt">ON</span> # Use the above default locations if <b>OPENVDB_HOUDINI_INSTALL_PREFIX</b> is not specified. If <span class="tt">OFF</span>, uses the value of <b>CMAKE_INSTALL_PREFIX</b>.</li>
-<li><b>BOOST_ROOT</b> =<span class="tt">/path/to/boost/install</span> # Path to boost. May not be required, CMake may find it automatically</li>
 </ul>
 <p>For example on MacOS and where the build folder has been created inside the OpenVDB source root:</p>
-<div class="fragment"><div class="line">cmake -D BOOST_ROOT=/path/to/boost/install \</div>
-<div class="line">      -D Houdini_ROOT=/Applications/Houdini/Houdini17.0.506/ \</div>
+<div class="fragment"><div class="line">cmake -D Houdini_ROOT=/Applications/Houdini/Houdini17.0.506/ \</div>
 <div class="line">      -D USE_HOUDINI=ON \</div>
 <div class="line">      ../</div>
 </div><!-- fragment --><p>After the CMake build files have been successfully generated, run the build tool within the build directory to compile the project. On UNIX, you can typically incoke <span class="tt">make</span> directly: </p><div class="fragment"><div class="line">make -j4</div>
@@ -392,30 +388,28 @@ Building Against Maya</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">C++17 Compiler  </td><td class="markdownTableBodyNone">Matching Houdini compiler and version  </td><td class="markdownTableBodyNone">All  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Boost  </td><td class="markdownTableBodyNone">Components: iostreams  </td><td class="markdownTableBodyNone">All  </td></tr>
-<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">ZLIB  </td><td class="markdownTableBodyNone">Compression library for disk serialization compression  </td><td class="markdownTableBodyNone">All  </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Blosc  </td><td class="markdownTableBodyNone">Recommended dependency for improved disk compression  </td><td class="markdownTableBodyNone">All*  </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">GoogleTest  </td><td class="markdownTableBodyNone">A unit testing framework module for C++  </td><td class="markdownTableBodyNone">Unit Tests  </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">GLFW  </td><td class="markdownTableBodyNone">Simple API for OpenGL development  </td><td class="markdownTableBodyNone">OpenVDB View  </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Doxygen  </td><td class="markdownTableBodyNone">Documentation generation from C++  </td><td class="markdownTableBodyNone">Documentation  </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">OpenEXR  </td><td class="markdownTableBodyNone">EXR serialization support  </td><td class="markdownTableBodyNone">OpenVDB Render  </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Imath  </td><td class="markdownTableBodyNone">Used half precision floating points and EXR serialization support  </td><td class="markdownTableBodyNone">Optional (All)  </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Log4cplus  </td><td class="markdownTableBodyNone">An optional dependency for improved OpenVDB Logging  </td><td class="markdownTableBodyNone">Optional (All)  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">nanobind  </td><td class="markdownTableBodyNone">C++/python bindings  </td><td class="markdownTableBodyNone">Optional (Python)  </td></tr>
+<td class="markdownTableBodyNone">Log4cplus  </td><td class="markdownTableBodyNone">An optional dependency for improved OpenVDB Logging  </td><td class="markdownTableBodyNone">Optional (All)  </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">nanobind  </td><td class="markdownTableBodyNone">C++/python bindings  </td><td class="markdownTableBodyNone">Optional (Python)  </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">LLVM  </td><td class="markdownTableBodyNone">Target-independent code generation  </td><td class="markdownTableBodyNone">OpenVDB AX  </td></tr>
 </table>
 <p>See <a class="el" href="#buildBloscSupport">blosc support</a></p>
-<p>At a minimum, boost, a matching C++17 compiler, ZLIB, blosc and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software.</p>
+<p>At a minimum, a matching C++17 compiler, ZLIB, blosc and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software.</p>
 <p>With the necessary dependencies installed, create and enter a directory for cmake to write to. It's generally useful to create this in the location you've extracted the OpenVDB repository. It will house CMake's generated build files.</p>
 <div class="fragment"><div class="line">mkdir build</div>
 <div class="line">cd build</div>
@@ -429,11 +423,9 @@ Building Against Maya</h2>
 <ul>
 <li><a href="https://cmake.org/cmake/help/latest/variable/CMAKE_INSTALL_PREFIX.html">CMAKE_INSTALL_PREFIX</a> =<span class="tt">/path/to/install/dir</span> # The location you wish to install OpenVDB to. See the link for default values.</li>
 <li><b>OPENVDB_MAYA_INSTALL_PREFIX</b> =<span class="tt">/path/to/install/dir</span> # The location to install the Maya plugin to. Defaults to the value of <span class="tt">${CMAKE_INSTALL_PREFIX}/maya${Maya_VERSION}</span></li>
-<li><b>BOOST_ROOT</b> =<span class="tt">/path/to/boost/install</span> # Path to boost. May not be required, CMake may find it automatically</li>
 </ul>
 <p>For example on MacOS and where the build folder has been created inside the OpenVDB source root:</p>
-<div class="fragment"><div class="line">cmake -D BOOST_ROOT=/path/to/boost/install \</div>
-<div class="line">      -D Maya_ROOT=/Applications/Autodesk/maya2019/ \</div>
+<div class="fragment"><div class="line">cmake -D Maya_ROOT=/Applications/Autodesk/maya2019/ \</div>
 <div class="line">      -D USE_MAYA=ON \</div>
 <div class="line">      ../</div>
 </div><!-- fragment --><p>As the Maya plugin is disabled by default, you may also want to add <span class="tt">-D OPENVDB_BUILD_MAYA_PLUGIN=ON</span> to the command. The <a class="el" href="#buildComponents">components</a> section shows which targets are enabled by default.</p>
@@ -489,25 +481,6 @@ CMake Error ... Could NOT find XXX (missing: ... )</h2>
 </div><!-- fragment --><h2 class="doxsection"><a class="anchor" id="troubleshoot2"></a>
 CMake Error ... Could NOT find XXX (Found unsuitable version: ... )</h2>
 <p>By default, OpenVDB sets a number of minimum version requires for its dependencies. These can be found in the root CMakeList.txt or in the <a class="el" href="dependencies.html">dependency table</a>. These minimum versions either track the oldest supported <a href="https://www.vfxplatform.com/">VFX Reference Platform</a> or are otherwise required for compatibility. Although not recommended, you can bypass these checks with <span class="tt">-D DISABLE_DEPENDENCY_VERSION_CHECKS=ON</span> if necessary. Note that using older or untested dependencies may produce undesired behavior. Older versions in particular are not supported by OpenVDB.</p>
-<p><b>Note:</b> Boost will produce a version error in the format: <span class="tt">Detected version of Boost is too old.</span></p>
-<h2 class="doxsection"><a class="anchor" id="troubleshoot3"></a>
-CMake warnings/errors in FindBoost.cmake</h2>
-<p>There are a variety of potential warnings and errors that may arise from the version compatibility of Boost and CMake. These are related to how both Boost and CMake have historically been kept in sync. A common warning and error combination is:</p>
-<div class="fragment"><div class="line">CMake Warning at ...  Imported targets not available for Boost version XXXXXX</div>
-<div class="line">...</div>
-<div class="line">Target &quot;...&quot; links to target &quot;Boost::XXX&quot; but the target</div>
-<div class="line">was not found.  Perhaps a find_package() call is missing for an IMPORTED</div>
-<div class="line">target, or an ALIAS target is missing?</div>
-</div><!-- fragment --><p>OpenVDB uses <a href="https://cmake.org/cmake/help/latest/command/add_library.html#imported-libraries">imported targets</a> for all its dependencies. For imported Boost compatibility, the following versions of CMake are required:</p>
-<ul>
-<li>Boost 1.82 requires CMake 3.27.0 or newer.</li>
-<li>Boost 1.83 requires CMake 3.27.4 or newer.</li>
-<li>Boost 1.84 requires CMake 3.28.2 or newer.</li>
-<li>Boost 1.85 requires CMake 3.29.3 or newer.</li>
-<li>Boost 1.86 requires CMake 3.30.6, 3.31.1, or newer.</li>
-<li>Boost 1.87 requires CMake 3.31.4 or newer.</li>
-</ul>
-<p>Use the above list to identify the version of CMake you require for your version of Boost. Note that this may be implemented into the OpenVDB CMake in the future.</p>
 <h2 class="doxsection"><a class="anchor" id="troubleshoot4"></a>
 Detected VCPKG toolchain is using a mismatching triplet for OpenVDB build artifacts</h2>
 <p>If you are on Windows and using vcpkg, builds of OpenVDB should usually only build the static OR shared library depending on your vcpkg triplet. This is related to how libraries link against the Windows CRT. In vcpkg, static triplets, such as <b>x64-windows-static</b>, will use the <b>MultiThreaded</b> (/MT) flag and dynamic triplets, such as <b>x64-windows</b>, will use the <b>MultiThreadedDLL</b> (/MD) flag. These flags <b>must</b> match throughout all software artifacts in your toolchain (regardless if you are using vcpkg or not).</p>

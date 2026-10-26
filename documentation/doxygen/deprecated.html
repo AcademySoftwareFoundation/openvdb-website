@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -118,100 +118,264 @@ $(function(){initNavTree('deprecated.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1points_1_1AttributeArray.html#a5c378f2c901c47aabc66f30dfeecafb4">AttributeArray::isDataLoaded</a>  () const =0</dt>
+<dd><a class="anchor" id="_deprecated000024"></a>"This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1points_1_1AttributeArray.html#a92a5cfd06c13d5a36c90baace979e870">AttributeArray::loadData</a>  () const =0</dt>
+<dd><a class="anchor" id="_deprecated000023"></a>"This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1points_1_1AttributeArray.html#ab0fa44d136b9d951672ec5308d4abd9d">AttributeArray::memUsageIfLoaded</a>  () const =0</dt>
+<dd><a class="anchor" id="_deprecated000022"></a>"Use memUsage() instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1points_1_1AttributeSet.html#a0b24095f0e7a2cfb55a19d4a65b53b59">AttributeSet::memUsageIfLoaded</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000017"></a>"Use memUsage() instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
 <dt>Member <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html#ac8bb3912a3ce86b15842e79d0b421204">Buffer&lt; T, R &gt;::clear</a>  ()</dt>
-<dd><a class="anchor" id="_deprecated000027"></a>Use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html#a3a80b6032f86a56bec74609034b3246f" title="Frees the buffer memory (if any) and resets to the empty state. A stream-ordered resource frees on th...">destroy()</a>: the handles now dispatch to it directly.  </dd>
+<dd><a class="anchor" id="_deprecated000090"></a>Use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html#a3a80b6032f86a56bec74609034b3246f" title="Frees the buffer memory (if any) and resets to the empty state. A stream-ordered resource frees on th...">destroy()</a>: the handles now dispatch to it directly.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html#a53eceaedf27a6f693303e324ff7267e9">Buffer&lt; T, R &gt;::resize</a>  (CountT count, cudaStream_t stream)</dt>
+<dd><a class="anchor" id="_deprecated000089"></a>Use resize(stream, count).  </dd>
 <dt>Member <a class="el" href="classnanovdb_1_1cuda_1_1BufferView.html#ac8bb3912a3ce86b15842e79d0b421204">BufferView&lt; T &gt;::clear</a>  ()</dt>
-<dd><a class="anchor" id="_deprecated000028"></a>Use <a class="el" href="classnanovdb_1_1cuda_1_1BufferView.html#a3a80b6032f86a56bec74609034b3246f" title="Detaches the view (nulls the pointer and zeroes the size) without touching the underlying storage – t...">destroy()</a>: the handles now dispatch to it directly.  </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1CFunctionBase.html#a63efe3f44116e72bed2c9c6f7b916fe9">CFunctionBase::fold</a>  (const std::vector&lt; llvm::Value * &gt; &amp;, llvm::LLVMContext &amp;) const</dt>
-<dd><a class="anchor" id="_deprecated000037"></a>  </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1points_1_1EllipsoidSettings.html#a020a5ed16757011c234ad22ec7d3e20b">EllipsoidSettings&lt; AttributeTs, RadiusAttributeT, FilterT &gt;::rotation</a>  </dt>
-<dd><a class="anchor" id="_deprecated000001"></a>"Use EllipsoidSettings::xform" <br  />
+<dd><a class="anchor" id="_deprecated000091"></a>Use <a class="el" href="classnanovdb_1_1cuda_1_1BufferView.html#a3a80b6032f86a56bec74609034b3246f" title="Detaches the view (nulls the pointer and zeroes the size) without touching the underlying storage – t...">destroy()</a>: the handles now dispatch to it directly.  </dd>
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1CFunctionBase.html#a63efe3f44116e72bed2c9c6f7b916fe9">CFunctionBase::fold</a>  (const std::vector&lt; llvm::Value * &gt; &amp;, llvm::LLVMContext &amp;) const</dt>
+<dd><a class="anchor" id="_deprecated000077"></a>  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1DualDeviceBuffer.html#af290dd6c434ff475c94713284c9010d0">DualDeviceBuffer::deviceDownload</a>  (int device=0, cudaStream_t stream=0, bool sync=true)</dt>
+<dd><a class="anchor" id="_deprecated000096"></a>Build device grids into <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte&gt;</a> and move them with <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a>.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1DualDeviceBuffer.html#a908e1b9b5a3f560daddaa2d9fa2678ee">DualDeviceBuffer::deviceDownload</a>  (void *stream, bool sync)</dt>
+<dd><a class="anchor" id="_deprecated000097"></a>Build device grids into <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte&gt;</a> and move them with <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a>.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1DualDeviceBuffer.html#a3c7b6ccf86931014596423e5f340284d">DualDeviceBuffer::deviceUpload</a>  (int device=0, cudaStream_t stream=0, bool sync=true)</dt>
+<dd><a class="anchor" id="_deprecated000094"></a>Build device grids into <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte&gt;</a> and move them with <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a>.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1DualDeviceBuffer.html#ab9426ebaa93a8e76769db2245332e099">DualDeviceBuffer::deviceUpload</a>  (cudaStream_t stream, bool sync)</dt>
+<dd><a class="anchor" id="_deprecated000095"></a>Build device grids into <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte&gt;</a> and move them with <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a>.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1cuda_1_1DualUnifiedBuffer.html#a63ae8966aae5de4276e5c40e07003ae4">DualUnifiedBuffer::deviceDownload</a>  (cudaStream_t stream=0, bool sync=false) const</dt>
+<dd><a class="anchor" id="_deprecated000103"></a>Use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>, which the host and every device read in place.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1cuda_1_1DualUnifiedBuffer.html#aa2893aa154112cafefd09ea9f5c3bd03">DualUnifiedBuffer::deviceDownload</a>  (void *stream, bool sync) const</dt>
+<dd><a class="anchor" id="_deprecated000104"></a>Use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>, which the host and every device read in place.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1cuda_1_1DualUnifiedBuffer.html#a64871e03d8f21b08d246d114849934e7">DualUnifiedBuffer::deviceDownload</a>  (int dummmy, void *stream, bool sync) const</dt>
+<dd><a class="anchor" id="_deprecated000105"></a>Use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>, which the host and every device read in place.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1cuda_1_1DualUnifiedBuffer.html#aaca1b93cb8776e6fd959b56cbcb93083">DualUnifiedBuffer::deviceUpload</a>  (int device=0, cudaStream_t stream=cudaStreamPerThread, bool sync=false) const</dt>
+<dd><a class="anchor" id="_deprecated000101"></a>Use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>, which the host and every device read in place.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1cuda_1_1DualUnifiedBuffer.html#a8c26c137ef00f5b82f48fcd72d9061ec">DualUnifiedBuffer::deviceUpload</a>  (void *stream, bool sync) const</dt>
+<dd><a class="anchor" id="_deprecated000102"></a>Use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>, which the host and every device read in place.  </dd>
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1points_1_1EllipsoidSettings.html#a020a5ed16757011c234ad22ec7d3e20b">EllipsoidSettings&lt; AttributeTs, RadiusAttributeT, FilterT &gt;::rotation</a>  </dt>
+<dd><a class="anchor" id="_deprecated000021"></a>"Use EllipsoidSettings::xform" <br  />
   </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1Function.html#a8260c8666f1cbbb10279dd0f7b44e643">Function::call</a>  (const std::vector&lt; llvm::Value * &gt; &amp;args, llvm::IRBuilder&lt;&gt; &amp;B, const bool cast) const</dt>
-<dd><a class="anchor" id="_deprecated000029"></a>"Function::call which takes llvm::Value's and " "supports casting is incompatible with LLVM 16+ and will be removed." <br  />
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1File.html#aef56188f7ae689ee0d5ecbbb35b31c4d">File::copyMaxBytes</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000013"></a>"Always returns 0. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
   </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1Function.html#a851def4e79a8080add2df87bdf87a32a">Function::hasParamAttribute</a>  (const size_t i, const llvm::Attribute::AttrKind &amp;kind) const</dt>
-<dd><a class="anchor" id="_deprecated000031"></a>"This method incorrectly returns the attributes " "of the function set by the FunctionBuilder, not by the codegen. To " "inspect function attributes, retrieve the created function from the " "llvm::Module." <br  />
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1File.html#ae7ddb5e1a12ee4c0057795a5e006d827">File::open</a>  (bool)</dt>
+<dd><a class="anchor" id="_deprecated000011"></a>"Use File::open() instead.This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
   </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1Function.html#a8bc9b930270e06477d777256c1e060d9">Function::match</a>  (const std::vector&lt; llvm::Type * &gt; &amp;inputs, llvm::LLVMContext &amp;C) const</dt>
-<dd><a class="anchor" id="_deprecated000030"></a>"Switch to AX's internal ArgInfo types for LLVM 16 onwards" <br  />
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1File.html#a012e692efb69a67d5ebb8347d443f8a1">File::open</a>  (bool, const <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1MappedFile.html#aac962e662c93b254e6d141f661241003">MappedFile::Notifier</a> &amp;)</dt>
+<dd><a class="anchor" id="_deprecated000012"></a>"Use File::open() instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
   </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1Function.html#af6187793e0d3c6b1098b1d037e5b9530">Function::setArgumentNames</a>  (std::vector&lt; const char * &gt; names)</dt>
-<dd><a class="anchor" id="_deprecated000032"></a>"Use the FunctionBuilder to construct Functions" <br  />
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1File.html#aff9185020102ec5ab1d95b3f4dba99ed">File::setCopyMaxBytes</a>  (<a class="el" href="namespaceopenvdb_1_1v13__2.html#ac69cfd22ec6d99378ea1e829dc42781e">Index64</a>)</dt>
+<dd><a class="anchor" id="_deprecated000014"></a>"This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
   </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1Function.html#a130dc8b5cf81200428494e2d63384483">Function::setDependencies</a>  (std::vector&lt; const char * &gt; deps)</dt>
-<dd><a class="anchor" id="_deprecated000033"></a>"Use the FunctionBuilder to construct Functions" <br  />
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1Function.html#a8260c8666f1cbbb10279dd0f7b44e643">Function::call</a>  (const std::vector&lt; llvm::Value * &gt; &amp;args, llvm::IRBuilder&lt;&gt; &amp;B, const bool cast) const</dt>
+<dd><a class="anchor" id="_deprecated000069"></a>"Function::call which takes llvm::Value's and " "supports casting is incompatible with LLVM 16+ and will be removed." <br  />
   </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1Function.html#a6fb0a8f2ddba1d3d98741894a5db5f03">Function::setFnAttributes</a>  (const std::vector&lt; llvm::Attribute::AttrKind &gt; &amp;in)</dt>
-<dd><a class="anchor" id="_deprecated000034"></a>"Use the FunctionBuilder to construct Functions" <br  />
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1Function.html#a851def4e79a8080add2df87bdf87a32a">Function::hasParamAttribute</a>  (const size_t i, const llvm::Attribute::AttrKind &amp;kind) const</dt>
+<dd><a class="anchor" id="_deprecated000071"></a>"This method incorrectly returns the attributes " "of the function set by the FunctionBuilder, not by the codegen. To " "inspect function attributes, retrieve the created function from the " "llvm::Module." <br  />
   </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1Function.html#a359ce980d9f1de2430296ca2f3e42409">Function::setParamAttributes</a>  (const size_t i, const std::vector&lt; llvm::Attribute::AttrKind &gt; &amp;in)</dt>
-<dd><a class="anchor" id="_deprecated000036"></a>"Use the FunctionBuilder to construct Functions" <br  />
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1Function.html#a8bc9b930270e06477d777256c1e060d9">Function::match</a>  (const std::vector&lt; llvm::Type * &gt; &amp;inputs, llvm::LLVMContext &amp;C) const</dt>
+<dd><a class="anchor" id="_deprecated000070"></a>"Switch to AX's internal ArgInfo types for LLVM 16 onwards" <br  />
   </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1Function.html#a51952659e55f5546f5e3d8f6a4e56eb3">Function::setRetAttributes</a>  (const std::vector&lt; llvm::Attribute::AttrKind &gt; &amp;in)</dt>
-<dd><a class="anchor" id="_deprecated000035"></a>"Use the FunctionBuilder to construct Functions" <br  />
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1Function.html#af6187793e0d3c6b1098b1d037e5b9530">Function::setArgumentNames</a>  (std::vector&lt; const char * &gt; names)</dt>
+<dd><a class="anchor" id="_deprecated000072"></a>"Use the FunctionBuilder to construct Functions" <br  />
   </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1Function.html#ab2b6bacd57c3ab5d930fc96e1319977d">Function::types</a>  (std::vector&lt; llvm::Type * &gt; &amp;, llvm::LLVMContext &amp;) const =0</dt>
-<dd><a class="anchor" id="_deprecated000026"></a>"Switch to AX's internal ArgInfo types for LLVM 16 onwards" <br  />
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1Function.html#a130dc8b5cf81200428494e2d63384483">Function::setDependencies</a>  (std::vector&lt; const char * &gt; deps)</dt>
+<dd><a class="anchor" id="_deprecated000073"></a>"Use the FunctionBuilder to construct Functions" <br  />
   </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1FunctionGroup.html#aaa05b4f454fedf3e625d5ff1155f8e57">FunctionGroup::execute</a>  (const std::vector&lt; llvm::Value * &gt; &amp;args, llvm::IRBuilder&lt;&gt; &amp;B) const</dt>
-<dd><a class="anchor" id="_deprecated000040"></a>"FunctionGroup::execute which takes llvm::Value's and " "supports argument matching/casting is incompatible with LLVM 16+ and will be " "removed." <br  />
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1Function.html#a6fb0a8f2ddba1d3d98741894a5db5f03">Function::setFnAttributes</a>  (const std::vector&lt; llvm::Attribute::AttrKind &gt; &amp;in)</dt>
+<dd><a class="anchor" id="_deprecated000074"></a>"Use the FunctionBuilder to construct Functions" <br  />
   </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1FunctionGroup.html#adb6edc58a749ac18e50223ec48fb5b43">FunctionGroup::execute</a>  (const std::vector&lt; llvm::Value * &gt; &amp;args, llvm::IRBuilder&lt;&gt; &amp;B, llvm::Value *&amp;result) const</dt>
-<dd><a class="anchor" id="_deprecated000041"></a>"FunctionGroup::execute which takes llvm::Value's and " "supports argument matching/casting is incompatible with LLVM 16+ and will be " "removed." <br  />
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1Function.html#a359ce980d9f1de2430296ca2f3e42409">Function::setParamAttributes</a>  (const size_t i, const std::vector&lt; llvm::Attribute::AttrKind &gt; &amp;in)</dt>
+<dd><a class="anchor" id="_deprecated000076"></a>"Use the FunctionBuilder to construct Functions" <br  />
   </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1FunctionGroup.html#a824032018bcbf98c0feb287d458be062">FunctionGroup::match</a>  (const std::vector&lt; llvm::Type * &gt; &amp;types, llvm::LLVMContext &amp;C, <a class="el" href="structopenvdb_1_1v13__1_1_1ax_1_1codegen_1_1Function.html#aee8c90b86fef2410c5903bcdd9df708c" title="The result type from calls to Function::match.">Function::SignatureMatch</a> *type=nullptr) const</dt>
-<dd><a class="anchor" id="_deprecated000039"></a>"Switch to AX's internal ArgInfo types for LLVM 16 onwards" <br  />
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1Function.html#a51952659e55f5546f5e3d8f6a4e56eb3">Function::setRetAttributes</a>  (const std::vector&lt; llvm::Attribute::AttrKind &gt; &amp;in)</dt>
+<dd><a class="anchor" id="_deprecated000075"></a>"Use the FunctionBuilder to construct Functions" <br  />
   </dd>
-<dt>Member <a class="el" href="classopenvdb_1_1v13__1_1_1tree_1_1InternalNode.html#ae7a5e4f46465ad6bdf132b2967b324f2">InternalNode&lt; _ChildNodeType, Log2Dim &gt;::nodeCount</a>  (std::vector&lt; Index32 &gt; &amp;vec) const</dt>
-<dd><a class="anchor" id="_deprecated000005"></a>"Use input type std::vector&lt;Index64&gt; for nodeCount." <br  />
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1Function.html#ab2b6bacd57c3ab5d930fc96e1319977d">Function::types</a>  (std::vector&lt; llvm::Type * &gt; &amp;, llvm::LLVMContext &amp;) const =0</dt>
+<dd><a class="anchor" id="_deprecated000068"></a>"Switch to AX's internal ArgInfo types for LLVM 16 onwards" <br  />
   </dd>
-<dt>Member <a class="el" href="classopenvdb_1_1v13__1_1_1tree_1_1LeafNode.html#ac3885f366af0670259670275a4e4afde">LeafNode&lt; T, Log2Dim &gt;::nodeCount</a>  (std::vector&lt; Index32 &gt; &amp;) const</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>"Use input type std::vector&lt;Index64&gt; for nodeCount." <br  />
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1FunctionGroup.html#aaa05b4f454fedf3e625d5ff1155f8e57">FunctionGroup::execute</a>  (const std::vector&lt; llvm::Value * &gt; &amp;args, llvm::IRBuilder&lt;&gt; &amp;B) const</dt>
+<dd><a class="anchor" id="_deprecated000079"></a>"FunctionGroup::execute which takes llvm::Value's and " "supports argument matching/casting is incompatible with LLVM 16+ and will be " "removed." <br  />
   </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#a616b251ff2138f5fd680c0c09b3ba268">openvdb::v13_1::ax::codegen::array3Pack</a>  (llvm::Value *value1, llvm::Value *value2, llvm::Value *value3, llvm::IRBuilder&lt;&gt; &amp;builder)</dt>
-<dd><a class="anchor" id="_deprecated000019"></a>  </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#a52c8a0835c5e7d4cc34bafd3d215ae6c">openvdb::v13_1::ax::codegen::array3Unpack</a>  (llvm::Value *ptrToArray, llvm::Value *&amp;value1, llvm::Value *&amp;value2, llvm::Value *&amp;value3, llvm::IRBuilder&lt;&gt; &amp;builder)</dt>
-<dd><a class="anchor" id="_deprecated000018"></a>  </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#ab8371506c0853b404af6701903a0846c">openvdb::v13_1::ax::codegen::arrayCast</a>  (llvm::Value *ptrToArray, llvm::Type *targetElementType, llvm::IRBuilder&lt;&gt; &amp;builder)</dt>
-<dd><a class="anchor" id="_deprecated000015"></a>  </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#a43d53f041562eebe216cd998aacca1bc">openvdb::v13_1::ax::codegen::arrayIndexUnpack</a>  (llvm::Value *ptrToArray, const int16_t index, llvm::IRBuilder&lt;&gt; &amp;builder)</dt>
-<dd><a class="anchor" id="_deprecated000016"></a>  </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#aff3a0a55c4be188a0b19cdc729324d77">openvdb::v13_1::ax::codegen::arrayPack</a>  (llvm::Value *value, llvm::IRBuilder&lt;&gt; &amp;builder, const size_t size=3)</dt>
-<dd><a class="anchor" id="_deprecated000020"></a>  </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#a95396ba44c3ea25039cbfba9411ea853">openvdb::v13_1::ax::codegen::arrayPack</a>  (const std::vector&lt; llvm::Value * &gt; &amp;values, llvm::IRBuilder&lt;&gt; &amp;builder)</dt>
-<dd><a class="anchor" id="_deprecated000021"></a>  </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#ac93f0a3579beb04642ba6b8835345592">openvdb::v13_1::ax::codegen::arrayPackCast</a>  (std::vector&lt; llvm::Value * &gt; &amp;values, llvm::IRBuilder&lt;&gt; &amp;builder)</dt>
-<dd><a class="anchor" id="_deprecated000022"></a>  </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#a8367fdea9ffc5a00c802b43fd9384c4d">openvdb::v13_1::ax::codegen::arrayUnpack</a>  (llvm::Value *ptrToArray, std::vector&lt; llvm::Value * &gt; &amp;values, llvm::IRBuilder&lt;&gt; &amp;builder, const bool loadElements=false)</dt>
-<dd><a class="anchor" id="_deprecated000017"></a>  </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#af7d1295dd0caef35dff8ca7fadd49fec">openvdb::v13_1::ax::codegen::getBaseContainedType</a>  (llvm::Type *const type)</dt>
-<dd><a class="anchor" id="_deprecated000014"></a>  </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#ae14fdea230fa1062a4d2a1a9f36b500b">openvdb::v13_1::ax::codegen::ir_constgep2_64</a>  (llvm::IRBuilder&lt;&gt; &amp;B, llvm::Value *ptr, uint64_t Idx0, uint64_t Idx1, const char *Name="")</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>  </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#ac7f4818d23410060515a7db35b778496">openvdb::v13_1::ax::codegen::ir_constinboundsgep2_64</a>  (llvm::IRBuilder&lt;&gt; &amp;B, llvm::Value *ptr, uint64_t Idx0, uint64_t Idx1, const char *Name="")</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>  </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#a06d250b8a226d7bc716078d3244308d6">openvdb::v13_1::ax::codegen::ir_gep</a>  (llvm::IRBuilder&lt;&gt; &amp;B, llvm::Value *ptr, llvm::ArrayRef&lt; llvm::Value * &gt; IdxList, const char *Name="")</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>  </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#a6e071cb438c1c2f9e19984457c7867d5">openvdb::v13_1::ax::codegen::ir_load</a>  (llvm::IRBuilder&lt;&gt; &amp;B, llvm::Value *ptr, const char *Name="")</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>  </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#a4ddb10635251f8f3b8988a1d9f9886bd">openvdb::v13_1::ax::codegen::printSignature</a>  (std::ostream &amp;os, const std::vector&lt; llvm::Type * &gt; &amp;types, const llvm::Type *returnType, const char *name=nullptr, const std::vector&lt; const char * &gt; &amp;names={}, const bool axTypes=false)</dt>
-<dd><a class="anchor" id="_deprecated000025"></a>"Switch to AX's internal ArgInfo types for LLVM 16 onwards" <br  />
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1FunctionGroup.html#adb6edc58a749ac18e50223ec48fb5b43">FunctionGroup::execute</a>  (const std::vector&lt; llvm::Value * &gt; &amp;args, llvm::IRBuilder&lt;&gt; &amp;B, llvm::Value *&amp;result) const</dt>
+<dd><a class="anchor" id="_deprecated000080"></a>"FunctionGroup::execute which takes llvm::Value's and " "supports argument matching/casting is incompatible with LLVM 16+ and will be " "removed." <br  />
   </dd>
-<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__1_1_1ax_1_1codegen.html#a6ea6b1eaeb31e098fb2bfe2d983b3ddd">openvdb::v13_1::ax::codegen::scalarToMatrix</a>  (llvm::Value *scalar, llvm::IRBuilder&lt;&gt; &amp;builder, const size_t dim=3)</dt>
-<dd><a class="anchor" id="_deprecated000023"></a>  </dd>
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1FunctionGroup.html#a824032018bcbf98c0feb287d458be062">FunctionGroup::match</a>  (const std::vector&lt; llvm::Type * &gt; &amp;types, llvm::LLVMContext &amp;C, <a class="el" href="structopenvdb_1_1v13__2_1_1ax_1_1codegen_1_1Function.html#aee8c90b86fef2410c5903bcdd9df708c" title="The result type from calls to Function::match.">Function::SignatureMatch</a> *type=nullptr) const</dt>
+<dd><a class="anchor" id="_deprecated000078"></a>"Switch to AX's internal ArgInfo types for LLVM 16 onwards" <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1GridDescriptor.html#a625a8ac4631f76c21608537f437cd5aa">GridDescriptor::read</a>  (std::istream &amp;)</dt>
+<dd><p class="startdd"><a class="anchor" id="_deprecated000009"></a>Use <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1GridDescriptor.html#a23edba8a3a0a0019af6ac37c548eb5dc" title="Read this descriptor&#39;s header information (all data except for stream offsets) from the given stream.">readHeader()</a> followed by <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1GridDescriptor.html#a088a0c22ceebfb270a09265137821b66" title="Read stream positions (grid, block, and end offsets) from the given stream.">readStreamPos()</a> instead. </p>
+<p class="enddd"><a class="anchor" id="_deprecated000010"></a>"Use readHeader() followed by readStreamPos() instead." <br  />
+  </p>
+</dd>
+<dt>Member <a class="el" href="classnanovdb_1_1GridHandle.html#a1901a89dc8b4b440bf47de580d428228">GridHandle&lt; BufferT &gt;::deviceData</a>  (int device) const</dt>
+<dd><a class="anchor" id="_deprecated000083"></a>Use one single-space device handle per GPU, or a managed <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer</a>.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1GridHandle.html#a8b64bc6c8fb05bd0d8ee5db740f69197">GridHandle&lt; BufferT &gt;::deviceData</a>  (int device)</dt>
+<dd><a class="anchor" id="_deprecated000084"></a>Use one single-space device handle per GPU, or a managed <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer</a>.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1GridHandle.html#afbe7c6dac0f42f118894d79a5eceb078">GridHandle&lt; BufferT &gt;::deviceDownload</a>  (void *stream, bool sync=true)</dt>
+<dd><a class="anchor" id="_deprecated000087"></a><a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a> a host handle to read the grids on the host; for a multi-GPU handle, use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1GridHandle.html#a17136a1e9a8f4a047dd59a84d8215eb4">GridHandle&lt; BufferT &gt;::deviceDownload</a>  (int device=0, void *stream=nullptr, bool sync=true)</dt>
+<dd><a class="anchor" id="_deprecated000088"></a><a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a> a host handle to read the grids on the host; for a multi-GPU handle, use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1GridHandle.html#a1d957d3ecb8baca7710f79bf8bab08f4">GridHandle&lt; BufferT &gt;::deviceUpload</a>  (void *stream, bool sync=true)</dt>
+<dd><a class="anchor" id="_deprecated000085"></a>Build a host handle and <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a> a device handle; for a multi-GPU handle, use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1GridHandle.html#ae715b77e8f4a0a5cf54a1b50fbe28940">GridHandle&lt; BufferT &gt;::deviceUpload</a>  (int device=0, void *stream=nullptr, bool sync=true)</dt>
+<dd><a class="anchor" id="_deprecated000086"></a>Build a host handle and <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a> a device handle; for a multi-GPU handle, use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>.  </dd>
+<dt>Struct <a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1HandleFactory.html">HandleFactory</a>  </dt>
+<dd><a class="anchor" id="_deprecated000106"></a>Use <a class="el" href="classnanovdb_1_1GridHandle.html#a9bea8c755ec680a5c61c308323727c42" title="Constructs a handle over buffer from metadata the caller already knows to describe its contents,...">GridHandle::adopt</a> and <a class="el" href="classnanovdb_1_1GridHandle.html#a6e5294ebc71baf50c38ff1e8f7df311d" title="The layout of the grids in this handle&#39;s buffer: offset, size and grid type of each....">GridHandle::metaData</a>.  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1tree_1_1InternalNode.html#ae7a5e4f46465ad6bdf132b2967b324f2">InternalNode&lt; _ChildNodeType, Log2Dim &gt;::nodeCount</a>  (std::vector&lt; Index32 &gt; &amp;vec) const</dt>
+<dd><a class="anchor" id="_deprecated000049"></a>"Use input type std::vector&lt;Index64&gt; for nodeCount." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1tree_1_1LeafBuffer_3_01bool_00_01Log2Dim_01_4.html#a8a87d284cba0d5dc5c9e26187c3e25e2">LeafBuffer&lt; bool, Log2Dim &gt;::memUsageIfLoaded</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000038"></a>"Use memUsage() instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1tree_1_1LeafBuffer.html#a4cc1deb14b94b90ed61573f4991d3a54">LeafBuffer&lt; T, Log2Dim &gt;::isOutOfCore</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000036"></a>"Always returns false. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1tree_1_1LeafBuffer.html#a8a87d284cba0d5dc5c9e26187c3e25e2">LeafBuffer&lt; T, Log2Dim &gt;::memUsageIfLoaded</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000037"></a>"Use memUsage() instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1tree_1_1LeafNode.html#aa40f3171d0fbfedba6e068303286080c">LeafNode&lt; T, Log2Dim &gt;::memUsageIfLoaded</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000046"></a>"Use memUsage() instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1tree_1_1LeafNode.html#ac3885f366af0670259670275a4e4afde">LeafNode&lt; T, Log2Dim &gt;::nodeCount</a>  (std::vector&lt; Index32 &gt; &amp;) const</dt>
+<dd><a class="anchor" id="_deprecated000045"></a>"Use input type std::vector&lt;Index64&gt; for nodeCount." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1MappedFile.html#adfeda8bbb07e15aaf191a702c0901cf7">MappedFile::clearNotifier</a>  ()</dt>
+<dd><a class="anchor" id="_deprecated000007"></a>"This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1MappedFile.html#a60db821f34eb651208ad77a0836c2e08">MappedFile::createBuffer</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000005"></a>"Always returns a null stream buffer pointer. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1MappedFile.html#a94c732bb0f167eab349228237a8fbe3c">MappedFile::filename</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000004"></a>"Always returns an empty string. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1MappedFile.html#a60d0efb2836b5ae030d3d7428aa5c3fb">MappedFile::MappedFile</a>  (const std::string &amp;, bool=false)</dt>
+<dd><a class="anchor" id="_deprecated000003"></a>"This class is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1MappedFile.html#ae03b6175ee1fbbf77d8613ef5cecdab0">MappedFile::setNotifier</a>  (const <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1MappedFile.html#aac962e662c93b254e6d141f661241003">Notifier</a> &amp;)</dt>
+<dd><a class="anchor" id="_deprecated000006"></a>"This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1NodeManagerHandle.html#a4fa0268b556a4a657e0ac345af8c3cbe">NodeManagerHandle&lt; BufferT &gt;::deviceDownload</a>  (void *stream=nullptr, bool sync=true)</dt>
+<dd><a class="anchor" id="_deprecated000099"></a>Build the node manager on the host with createNodeManager.  </dd>
+<dt>Member <a class="el" href="classnanovdb_1_1NodeManagerHandle.html#a87a0b029fd1e7a70213bb6259ac1cb32">NodeManagerHandle&lt; BufferT &gt;::deviceUpload</a>  (void *deviceGrid, void *stream=nullptr, bool sync=true)</dt>
+<dd><a class="anchor" id="_deprecated000098"></a>Build the node manager on the device with cuda::createNodeManager(deviceGrid, resource).  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#a616b251ff2138f5fd680c0c09b3ba268">openvdb::v13_2::ax::codegen::array3Pack</a>  (llvm::Value *value1, llvm::Value *value2, llvm::Value *value3, llvm::IRBuilder&lt;&gt; &amp;builder)</dt>
+<dd><a class="anchor" id="_deprecated000062"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#a52c8a0835c5e7d4cc34bafd3d215ae6c">openvdb::v13_2::ax::codegen::array3Unpack</a>  (llvm::Value *ptrToArray, llvm::Value *&amp;value1, llvm::Value *&amp;value2, llvm::Value *&amp;value3, llvm::IRBuilder&lt;&gt; &amp;builder)</dt>
+<dd><a class="anchor" id="_deprecated000061"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#ab8371506c0853b404af6701903a0846c">openvdb::v13_2::ax::codegen::arrayCast</a>  (llvm::Value *ptrToArray, llvm::Type *targetElementType, llvm::IRBuilder&lt;&gt; &amp;builder)</dt>
+<dd><a class="anchor" id="_deprecated000058"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#a43d53f041562eebe216cd998aacca1bc">openvdb::v13_2::ax::codegen::arrayIndexUnpack</a>  (llvm::Value *ptrToArray, const int16_t index, llvm::IRBuilder&lt;&gt; &amp;builder)</dt>
+<dd><a class="anchor" id="_deprecated000059"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#aff3a0a55c4be188a0b19cdc729324d77">openvdb::v13_2::ax::codegen::arrayPack</a>  (llvm::Value *value, llvm::IRBuilder&lt;&gt; &amp;builder, const size_t size=3)</dt>
+<dd><a class="anchor" id="_deprecated000063"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#a95396ba44c3ea25039cbfba9411ea853">openvdb::v13_2::ax::codegen::arrayPack</a>  (const std::vector&lt; llvm::Value * &gt; &amp;values, llvm::IRBuilder&lt;&gt; &amp;builder)</dt>
+<dd><a class="anchor" id="_deprecated000064"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#ac93f0a3579beb04642ba6b8835345592">openvdb::v13_2::ax::codegen::arrayPackCast</a>  (std::vector&lt; llvm::Value * &gt; &amp;values, llvm::IRBuilder&lt;&gt; &amp;builder)</dt>
+<dd><a class="anchor" id="_deprecated000065"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#a8367fdea9ffc5a00c802b43fd9384c4d">openvdb::v13_2::ax::codegen::arrayUnpack</a>  (llvm::Value *ptrToArray, std::vector&lt; llvm::Value * &gt; &amp;values, llvm::IRBuilder&lt;&gt; &amp;builder, const bool loadElements=false)</dt>
+<dd><a class="anchor" id="_deprecated000060"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#af7d1295dd0caef35dff8ca7fadd49fec">openvdb::v13_2::ax::codegen::getBaseContainedType</a>  (llvm::Type *const type)</dt>
+<dd><a class="anchor" id="_deprecated000057"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#ae14fdea230fa1062a4d2a1a9f36b500b">openvdb::v13_2::ax::codegen::ir_constgep2_64</a>  (llvm::IRBuilder&lt;&gt; &amp;B, llvm::Value *ptr, uint64_t Idx0, uint64_t Idx1, const char *Name="")</dt>
+<dd><a class="anchor" id="_deprecated000055"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#ac7f4818d23410060515a7db35b778496">openvdb::v13_2::ax::codegen::ir_constinboundsgep2_64</a>  (llvm::IRBuilder&lt;&gt; &amp;B, llvm::Value *ptr, uint64_t Idx0, uint64_t Idx1, const char *Name="")</dt>
+<dd><a class="anchor" id="_deprecated000056"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#a06d250b8a226d7bc716078d3244308d6">openvdb::v13_2::ax::codegen::ir_gep</a>  (llvm::IRBuilder&lt;&gt; &amp;B, llvm::Value *ptr, llvm::ArrayRef&lt; llvm::Value * &gt; IdxList, const char *Name="")</dt>
+<dd><a class="anchor" id="_deprecated000054"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#a6e071cb438c1c2f9e19984457c7867d5">openvdb::v13_2::ax::codegen::ir_load</a>  (llvm::IRBuilder&lt;&gt; &amp;B, llvm::Value *ptr, const char *Name="")</dt>
+<dd><a class="anchor" id="_deprecated000053"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#a4ddb10635251f8f3b8988a1d9f9886bd">openvdb::v13_2::ax::codegen::printSignature</a>  (std::ostream &amp;os, const std::vector&lt; llvm::Type * &gt; &amp;types, const llvm::Type *returnType, const char *name=nullptr, const std::vector&lt; const char * &gt; &amp;names={}, const bool axTypes=false)</dt>
+<dd><a class="anchor" id="_deprecated000067"></a>"Switch to AX's internal ArgInfo types for LLVM 16 onwards" <br  />
+  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1ax_1_1codegen.html#a6ea6b1eaeb31e098fb2bfe2d983b3ddd">openvdb::v13_2::ax::codegen::scalarToMatrix</a>  (llvm::Value *scalar, llvm::IRBuilder&lt;&gt; &amp;builder, const size_t dim=3)</dt>
+<dd><a class="anchor" id="_deprecated000066"></a>  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1io.html#a854cb134292490c54401459273000d30">openvdb::v13_2::io::getMappedFilePtr</a>  (std::ios_base &amp;)</dt>
+<dd><a class="anchor" id="_deprecated000001"></a>"Always returns a null pointer. This function is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1io.html#a83510088cc76fe5f37d8fb74d108295e">openvdb::v13_2::io::setMappedFilePtr</a>  (std::ios_base &amp;, <a class="el" href="namespaceopenvdb_1_1v13__2.html#ad71c1f3b8d46b57fd328d48cee283c1f">SharedPtr&lt; MappedFile &gt;</a> &amp;)</dt>
+<dd><a class="anchor" id="_deprecated000002"></a>"This function is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1points.html#a4632221941624109b903b3389723417c">openvdb::v13_2::points::convertPointDataGridAttribute</a>  (TypedAttribute &amp;attribute, const PointDataTreeT &amp;tree, const std::vector&lt; Index64 &gt; &amp;pointOffsets, const <a class="el" href="namespaceopenvdb_1_1v13__2.html#ac69cfd22ec6d99378ea1e829dc42781e">Index64</a> startOffset, const unsigned arrayIndex, const <a class="el" href="namespaceopenvdb_1_1v13__2.html#a1a68fb76e3d6897fa878760b6bcbda7a">Index</a> stride, const FilterT &amp;filter, const bool)</dt>
+<dd><a class="anchor" id="_deprecated000019"></a>"Use convertPointDataGridAttribute() without inCoreOnly parameter instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1points.html#a9ef0e5e842c753bfffed37c26b4d4f2f">openvdb::v13_2::points::convertPointDataGridGroup</a>  (Group &amp;group, const PointDataTreeT &amp;tree, const std::vector&lt; Index64 &gt; &amp;pointOffsets, const <a class="el" href="namespaceopenvdb_1_1v13__2.html#ac69cfd22ec6d99378ea1e829dc42781e">Index64</a> startOffset, const <a class="el" href="classopenvdb_1_1v13__2_1_1points_1_1AttributeSet_1_1Descriptor.html#a0decda39ae55f7cf0a11bf16c61b270c">AttributeSet::Descriptor::GroupIndex</a> index, const FilterT &amp;filter, const bool)</dt>
+<dd><a class="anchor" id="_deprecated000020"></a>"Use convertPointDataGridGroup() without inCoreOnly parameter instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1points.html#a882c2dd8ca431a3de3af64e73593ac6a">openvdb::v13_2::points::convertPointDataGridPosition</a>  (PositionAttribute &amp;positionAttribute, const PointDataGridT &amp;grid, const std::vector&lt; Index64 &gt; &amp;pointOffsets, const <a class="el" href="namespaceopenvdb_1_1v13__2.html#ac69cfd22ec6d99378ea1e829dc42781e">Index64</a> startOffset, const FilterT &amp;filter, const bool)</dt>
+<dd><a class="anchor" id="_deprecated000018"></a>"Use convertPointDataGridPosition() without inCoreOnly parameter instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1points.html#af7170360e5e35e58f5ddd3fcc9b6b50b">openvdb::v13_2::points::pointCount</a>  (const PointDataTreeT &amp;tree, const FilterT &amp;filter, const bool, const bool threaded)</dt>
+<dd><a class="anchor" id="_deprecated000015"></a>"Use pointCount() without inCoreOnly parameter instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1points.html#ab59b731cca21685e95ca7182c0d9ff43">openvdb::v13_2::points::pointOffsets</a>  (std::vector&lt; Index64 &gt; &amp;pointOffsets, const PointDataTreeT &amp;tree, const FilterT &amp;filter, const bool, const bool threaded)</dt>
+<dd><a class="anchor" id="_deprecated000016"></a>"Use pointOffsets() without inCoreOnly parameter instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1points.html#ae917a354bfb2ad67378c74d98f079f22">openvdb::v13_2::points::prefetch</a>  (PointDataTreeT &amp;, bool=true, bool=true)</dt>
+<dd><a class="anchor" id="_deprecated000033"></a>"This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1points.html#a0d85a4b1b93c26f69ecf71e75017275b">openvdb::v13_2::points::setStreamingMode</a>  (PointDataTreeT &amp;tree, bool on=true)</dt>
+<dd><a class="anchor" id="_deprecated000032"></a>"This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="namespaceopenvdb_1_1v13__2_1_1tools.html#a81a7af5b71d8a4c94feaaff3b70b1418">openvdb::v13_2::tools::memUsageIfLoaded</a>  (const TreeT &amp;tree, bool threaded=true)</dt>
+<dd><a class="anchor" id="_deprecated000034"></a>"Use tools::memUsage() instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1compression_1_1Page.html#a4cc1deb14b94b90ed61573f4991d3a54">Page::isOutOfCore</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000031"></a>"Always returns false. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1compression_1_1Page.html#a2a7777ae961be8f9d09835a82737406f">Page::load</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000030"></a>"Always returns false. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
 <dt>Member <a class="el" href="classhoudini__utils_1_1ParmFactory.html#a8edc118f4e21ece0925df673e358d573">ParmFactory::setChoiceList</a>  (PRM_ChoiceListType typ, const std::vector&lt; std::string &gt; &amp;items, bool paired=false)</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>Use <a class="el" href="classhoudini__utils_1_1ParmFactory.html#a40f41b6cc7a11d752ec04243b5331ec5" title="Specify a menu type and a list of token, label, token, label,... pairs for this parameter.">setChoiceListItems()</a> instead. Using unpaired items may mean less typing now, but it prevents you from reordering or deleting entries later.  </dd>
+<dd><a class="anchor" id="_deprecated000051"></a>Use <a class="el" href="classhoudini__utils_1_1ParmFactory.html#a40f41b6cc7a11d752ec04243b5331ec5" title="Specify a menu type and a list of token, label, token, label,... pairs for this parameter.">setChoiceListItems()</a> instead. Using unpaired items may mean less typing now, but it prevents you from reordering or deleting entries later.  </dd>
 <dt>Member <a class="el" href="classhoudini__utils_1_1ParmFactory.html#ae4ad6edabd7ef4c6b5401a41e2be6ee7">ParmFactory::setChoiceList</a>  (PRM_ChoiceListType typ, const char *const *items, bool paired=false)</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>Use <a class="el" href="classhoudini__utils_1_1ParmFactory.html#a40f41b6cc7a11d752ec04243b5331ec5" title="Specify a menu type and a list of token, label, token, label,... pairs for this parameter.">setChoiceListItems()</a> instead. Using unpaired items may mean less typing now, but it prevents you from reordering or deleting entries later.  </dd>
-<dt>Member <a class="el" href="structopenvdb_1_1v13__1_1_1points_1_1PcaAttributes.html#a020a5ed16757011c234ad22ec7d3e20b">PcaAttributes::rotation</a>  </dt>
-<dd><a class="anchor" id="_deprecated000002"></a>"Use PcaAttributes::xform" <br  />
+<dd><a class="anchor" id="_deprecated000052"></a>Use <a class="el" href="classhoudini__utils_1_1ParmFactory.html#a40f41b6cc7a11d752ec04243b5331ec5" title="Specify a menu type and a list of token, label, token, label,... pairs for this parameter.">setChoiceListItems()</a> instead. Using unpaired items may mean less typing now, but it prevents you from reordering or deleting entries later.  </dd>
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1points_1_1PcaAttributes.html#a020a5ed16757011c234ad22ec7d3e20b">PcaAttributes::rotation</a>  </dt>
+<dd><a class="anchor" id="_deprecated000025"></a>"Use PcaAttributes::xform" <br  />
   </dd>
-<dt>Member <a class="el" href="classopenvdb_1_1v13__1_1_1tree_1_1RootNode.html#ae7a5e4f46465ad6bdf132b2967b324f2">RootNode&lt; ChildType &gt;::nodeCount</a>  (std::vector&lt; Index32 &gt; &amp;vec) const</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>"Use input type std::vector&lt;Index64&gt; for nodeCount." <br  />
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1points_1_1PointDataLeafNode.html#aa40f3171d0fbfedba6e068303286080c">PointDataLeafNode&lt; T, Log2Dim &gt;::memUsageIfLoaded</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000035"></a>"Use memUsage() instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
   </dd>
-<dt>Member <a class="el" href="classopenvdb_1_1v13__1_1_1ax_1_1VolumeExecutable.html#a2153ec6bf69ce734f8eddcf64c1487e1">VolumeExecutable::getTreeExecutionLevel</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000024"></a>"Use getTreeExecutionLevel(Index&amp;, Index&amp;)" <br  />
+<dt>Member <a class="el" href="structopenvdb_1_1v13__2_1_1tools_1_1PointIndexLeafNode.html#aa40f3171d0fbfedba6e068303286080c">PointIndexLeafNode&lt; T, Log2Dim &gt;::memUsageIfLoaded</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000040"></a>"Use memUsage() instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1tools_1_1PolygonPool.html#a971b981830a3f0d5bea2d6281a9eb62b">PolygonPool::trimTrinagles</a>  (const size_t n, bool reallocate=false)</dt>
+<dd><a class="anchor" id="_deprecated000039"></a>"Use trimTriangles() instead." <br  />
+  </dd>
+<dt>Struct <a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html">ResourceRef&lt; R &gt;</a>  </dt>
+<dd><a class="anchor" id="_deprecated000092"></a>A referenced resource without operator== is deprecated; 14.0 requires it.  </dd>
+<dt>Member <a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html#a66fc44f2aea4e2ac64ccfdcfab5811f8">ResourceRef&lt; R &gt;::ResourceRef</a>  (R &amp;resource)</dt>
+<dd><a class="anchor" id="_deprecated000093"></a>14.0 requires operator== on every resource.  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1tree_1_1RootNode.html#ae7a5e4f46465ad6bdf132b2967b324f2">RootNode&lt; ChildType &gt;::nodeCount</a>  (std::vector&lt; Index32 &gt; &amp;vec) const</dt>
+<dd><a class="anchor" id="_deprecated000050"></a>"Use input type std::vector&lt;Index64&gt; for nodeCount." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1io_1_1Stream.html#a60e82b75b46a03d3c57c5a1ca9ba2d3a">Stream::Stream</a>  (std::istream &amp;is, bool)</dt>
+<dd><a class="anchor" id="_deprecated000008"></a>"Use Stream(std::istream&amp;) instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1tree_1_1Tree.html#aaa0416e0758e74661727eb9d3c46b528">Tree&lt; _RootNodeType &gt;::readNonresidentBuffers</a>  () const override</dt>
+<dd><a class="anchor" id="_deprecated000048"></a>"This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1tree_1_1TreeBase.html#aa3282e612fc0505e919401f5c538c89b">TreeBase::readNonresidentBuffers</a>  () const =0</dt>
+<dd><a class="anchor" id="_deprecated000047"></a>"This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1points_1_1TypedAttributeArray.html#a4abd0f34a170a83b1c506934980a697a">TypedAttributeArray&lt; ValueType_, Codec_ &gt;::isDataLoaded</a>  () const override</dt>
+<dd><a class="anchor" id="_deprecated000029"></a>"Always returns true. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1points_1_1TypedAttributeArray.html#a4cc1deb14b94b90ed61573f4991d3a54">TypedAttributeArray&lt; ValueType_, Codec_ &gt;::isOutOfCore</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000027"></a>"Always returns false. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1points_1_1TypedAttributeArray.html#a90eefb9f2836808b5cc08150fe3a633a">TypedAttributeArray&lt; ValueType_, Codec_ &gt;::loadData</a>  () const override</dt>
+<dd><a class="anchor" id="_deprecated000028"></a>"This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1points_1_1TypedAttributeArray.html#a09746c8057da1dbabfa86e39b44bc3ae">TypedAttributeArray&lt; ValueType_, Codec_ &gt;::memUsageIfLoaded</a>  () const override</dt>
+<dd><a class="anchor" id="_deprecated000026"></a>"Use memUsage() instead. This method is deprecated and will be removed. Delayed loading is no longer supported." <br  />
+  </dd>
+<dt>Member <a class="el" href="classopenvdb_1_1v13__2_1_1ax_1_1VolumeExecutable.html#a2153ec6bf69ce734f8eddcf64c1487e1">VolumeExecutable::getTreeExecutionLevel</a>  () const</dt>
+<dd><a class="anchor" id="_deprecated000081"></a>"Use getTreeExecutionLevel(Index&amp;, Index&amp;)" <br  />
  </dd>
 </dl>
 </div></div><!-- contents -->

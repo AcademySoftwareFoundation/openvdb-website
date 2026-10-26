@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -118,11 +118,12 @@ $(function(){initNavTree('structnanovdb_1_1math_1_1Tolerance.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="structnanovdb_1_1math_1_1Tolerance.html" title="Tolerance for floating-point comparison.">Tolerance</a> for floating-point comparison.  
+<p>Per-type tolerance used by approximate floating-point comparisons.  
  <a href="#details">More...</a></p>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-struct nanovdb::math::Tolerance&lt; T &gt;</div><p><a class="el" href="structnanovdb_1_1math_1_1Tolerance.html" title="Tolerance for floating-point comparison.">Tolerance</a> for floating-point comparison. </p>
+struct nanovdb::math::Tolerance&lt; T &gt;</div><p>Per-type tolerance used by approximate floating-point comparisons. </p>
+<p>Returned by <code>Tolerance&lt;T&gt;::value()</code> and consumed by <code>isApproxZero</code>. Specialized for <code>float</code>, <code>double</code>, and <code>long</code> double. Instantiating on any other <code>T</code> is an "incomplete type" compile error by design — callers must opt in by adding a specialization. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

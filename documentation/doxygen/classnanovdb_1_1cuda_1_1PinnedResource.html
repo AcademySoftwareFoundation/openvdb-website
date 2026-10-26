@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -135,6 +135,12 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a8b56b57c90e6ad4e0ce8d856525b0124" id="r_a8b56b57c90e6ad4e0ce8d856525b0124"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b56b57c90e6ad4e0ce8d856525b0124">DEFAULT_ALIGNMENT</a> = 256</td></tr>
 <tr class="memitem:a066e02d9fc3b17507aa6e3b1a374858a" id="r_a066e02d9fc3b17507aa6e3b1a374858a"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a066e02d9fc3b17507aa6e3b1a374858a">HOST_ACCESSIBLE</a> = true</td></tr>
 <tr class="memdesc:a066e02d9fc3b17507aa6e3b1a374858a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pinned allocations are mapped into the host address space, so containers over this resource remain host-readable (detected by <a class="el" href="structnanovdb_1_1cuda_1_1is__host__accessible__resource.html" title="Detection trait: is_host_accessible_resource&lt;R&gt;::value is true iff R declares static constexpr bool H...">nanovdb::cuda::is_host_accessible_resource</a>).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a6b85fca68052efd8343bb81f826f10d9" id="r_a6b85fca68052efd8343bb81f826f10d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b85fca68052efd8343bb81f826f10d9">operator==</a> (const <a class="el" href="classnanovdb_1_1cuda_1_1PinnedResource.html">PinnedResource</a> &amp;, const <a class="el" href="classnanovdb_1_1cuda_1_1PinnedResource.html">PinnedResource</a> &amp;)</td></tr>
+<tr class="memdesc:a6b85fca68052efd8343bb81f826f10d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateless: memory allocated through one instance may be deallocated through any other, so every two instances compare equal (the equality cuda::mr's resource concepts require).  <br /></td></tr>
+<tr class="memitem:a87e5e44d110210e21fe64459106e4a48" id="r_a87e5e44d110210e21fe64459106e4a48"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87e5e44d110210e21fe64459106e4a48">operator!=</a> (const <a class="el" href="classnanovdb_1_1cuda_1_1PinnedResource.html">PinnedResource</a> &amp;, const <a class="el" href="classnanovdb_1_1cuda_1_1PinnedResource.html">PinnedResource</a> &amp;)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Default host-pinned memory resource. Allocations are page-locked host memory (cudaMallocHost) that is both host-accessible and device-accessible, so it can serve as the host side of an asynchronous host&lt;-&gt;device copy. </p>
@@ -219,6 +225,67 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a87e5e44d110210e21fe64459106e4a48" name="a87e5e44d110210e21fe64459106e4a48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87e5e44d110210e21fe64459106e4a48">&#9670;&#160;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1cuda_1_1PinnedResource.html">PinnedResource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1cuda_1_1PinnedResource.html">PinnedResource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b85fca68052efd8343bb81f826f10d9" name="a6b85fca68052efd8343bb81f826f10d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b85fca68052efd8343bb81f826f10d9">&#9670;&#160;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1cuda_1_1PinnedResource.html">PinnedResource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1cuda_1_1PinnedResource.html">PinnedResource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stateless: memory allocated through one instance may be deallocated through any other, so every two instances compare equal (the equality cuda::mr's resource concepts require). </p>
 
 </div>
 </div>

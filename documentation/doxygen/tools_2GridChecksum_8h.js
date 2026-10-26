@@ -27,7 +27,7 @@ var tools_2GridChecksum_8h =
     [ "nanovdb::tools::updateChecksum", "namespacenanovdb_1_1tools.html#a0bd6be9a978b6c4550dd2ff657a32494", null ],
     [ "nanovdb::tools::updateChecksum", "namespacenanovdb_1_1tools.html#a9d6372d8796ecacae92c9d2fbc61e52b", null ],
     [ "nanovdb::tools::updateChecksum", "namespacenanovdb_1_1tools.html#ab70dc7f426ab208f1a6e5f4c54374745", null ],
-    [ "nanovdb::tools::updateGridCount", "namespacenanovdb_1_1tools.html#a1dbefbd7c5844bf16102536e513ada03", null ],
+    [ "nanovdb::tools::updateGridCount", "namespacenanovdb_1_1tools.html#a8e3c6753ab6d4a892af03a491cdc94f1", null ],
     [ "nanovdb::tools::validateChecksum", "namespacenanovdb_1_1tools.html#a19bc5f9e6021f50b528b8d75d1cc8725", null ],
     [ "nanovdb::tools::validateChecksum", "namespacenanovdb_1_1tools.html#a5984c14206887c5b603a0d843b76e2e7", null ],
     [ "nanovdb::tools::validateChecksum", "namespacenanovdb_1_1tools.html#a217417d3e151a115ba30ab1794cbf063", null ]

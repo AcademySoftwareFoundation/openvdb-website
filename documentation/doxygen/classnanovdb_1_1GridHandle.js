@@ -7,6 +7,7 @@ var classnanovdb_1_1GridHandle =
     [ "GridHandle", "classnanovdb_1_1GridHandle.html#afaae13e5113d0e32d6f758ca748652f9", null ],
     [ "GridHandle", "classnanovdb_1_1GridHandle.html#a3bc536fa3086174cdac78304c0df0130", null ],
     [ "GridHandle", "classnanovdb_1_1GridHandle.html#a838e184a2851ad71ee5b238b776016ab", null ],
+    [ "adopt", "classnanovdb_1_1GridHandle.html#a9bea8c755ec680a5c61c308323727c42", null ],
     [ "buffer", "classnanovdb_1_1GridHandle.html#a27d8a3674328a33d9e2c43b1fd3f0166", null ],
     [ "buffer", "classnanovdb_1_1GridHandle.html#a81689bd02e9e6a7e1f14d5613a3ec176", null ],
     [ "bufferSize", "classnanovdb_1_1GridHandle.html#a5d08927fb422019423a54acbf1cf24b0", null ],
@@ -40,6 +41,7 @@ var classnanovdb_1_1GridHandle =
     [ "isEmpty", "classnanovdb_1_1GridHandle.html#acf82f9b2937375c7b1cf3dccb3df3312", null ],
     [ "isFull", "classnanovdb_1_1GridHandle.html#ad753310e7ebeac80873cea6766ad1e60", null ],
     [ "isPadded", "classnanovdb_1_1GridHandle.html#a9baa231ef13afcdc1ef69c91848e6bb0", null ],
+    [ "metaData", "classnanovdb_1_1GridHandle.html#a6e5294ebc71baf50c38ff1e8f7df311d", null ],
     [ "operator bool", "classnanovdb_1_1GridHandle.html#a67b76affb3b5d35fa419ac234144038b", null ],
     [ "operator=", "classnanovdb_1_1GridHandle.html#a0fde638bdd0e584fd3491afc93bb28b4", null ],
     [ "operator=", "classnanovdb_1_1GridHandle.html#a467f69248588aaa9b3fed08129892451", null ],
@@ -56,5 +58,5 @@ var classnanovdb_1_1GridHandle =
     [ "write", "classnanovdb_1_1GridHandle.html#aec7c41fa0197653a54b4765dba7be4e1", null ],
     [ "write", "classnanovdb_1_1GridHandle.html#a352bb124b2f1609c8d6a0fa0e62d91d0", null ],
     [ "write", "classnanovdb_1_1GridHandle.html#af3a59e5a0477939c842dd312f5cb918d", null ],
-    [ "cuda::detail::HandleFactory", "classnanovdb_1_1GridHandle.html#a4bf9002380412627cbe7384efc30cecc", null ]
+    [ "detail::LayoutCopy", "classnanovdb_1_1GridHandle.html#a182ba5f543d848ba81c49766de77d73e", null ]
 ];

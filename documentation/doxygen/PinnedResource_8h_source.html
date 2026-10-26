@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -178,21 +178,29 @@ $(function(){initNavTree('PinnedResource_8h_source.html','',''); });
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_define" href="nanovdb_2nanovdb_2util_2cuda_2Util_8h.html#a93e6bf7c8996268aa9a2740d6f1de76d">cudaCheck</a>(cudaFreeHost(p));</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
 </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment"></span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">    /// @brief Stateless: memory allocated through one instance may be</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">    ///        deallocated through any other, so every two instances compare</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">    ///        equal (the equality cuda::mr&#39;s resource concepts require).</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classnanovdb_1_1cuda_1_1PinnedResource.html#a6b85fca68052efd8343bb81f826f10d9">   61</a></span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="classnanovdb_1_1cuda_1_1PinnedResource.html#a6b85fca68052efd8343bb81f826f10d9">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="classnanovdb_1_1cuda_1_1PinnedResource.html">PinnedResource</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="classnanovdb_1_1cuda_1_1PinnedResource.html">PinnedResource</a>&amp;) { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classnanovdb_1_1cuda_1_1PinnedResource.html#a87e5e44d110210e21fe64459106e4a48">   62</a></span>    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code hl_friend" href="classnanovdb_1_1cuda_1_1PinnedResource.html#a87e5e44d110210e21fe64459106e4a48">operator!=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classnanovdb_1_1cuda_1_1PinnedResource.html">PinnedResource</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="classnanovdb_1_1cuda_1_1PinnedResource.html">PinnedResource</a>&amp;) { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
 </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>} <span class="comment">// namespace nanovdb::cuda</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">// end of NANOVDB_CUDA_PINNEDRESOURCE_H_HAS_BEEN_INCLUDED</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>} <span class="comment">// namespace nanovdb::cuda</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">// end of NANOVDB_CUDA_PINNEDRESOURCE_H_HAS_BEEN_INCLUDED</span></div>
 <div class="ttc" id="aclassnanovdb_1_1cuda_1_1PinnedResource_html"><div class="ttname"><a href="classnanovdb_1_1cuda_1_1PinnedResource.html">nanovdb::cuda::PinnedResource</a></div><div class="ttdoc">Default host-pinned memory resource. Allocations are page-locked host memory (cudaMallocHost) that is...</div><div class="ttdef"><b>Definition</b> PinnedResource.h:27</div></div>
 <div class="ttc" id="aclassnanovdb_1_1cuda_1_1PinnedResource_html_a066e02d9fc3b17507aa6e3b1a374858a"><div class="ttname"><a href="classnanovdb_1_1cuda_1_1PinnedResource.html#a066e02d9fc3b17507aa6e3b1a374858a">nanovdb::cuda::PinnedResource::HOST_ACCESSIBLE</a></div><div class="ttdeci">static constexpr bool HOST_ACCESSIBLE</div><div class="ttdoc">Pinned allocations are mapped into the host address space, so containers over this resource remain ho...</div><div class="ttdef"><b>Definition</b> PinnedResource.h:36</div></div>
 <div class="ttc" id="aclassnanovdb_1_1cuda_1_1PinnedResource_html_a133327a79abbd4936d70a2a1df972588"><div class="ttname"><a href="classnanovdb_1_1cuda_1_1PinnedResource.html#a133327a79abbd4936d70a2a1df972588">nanovdb::cuda::PinnedResource::deallocate</a></div><div class="ttdeci">void deallocate(void *p, size_t bytes, size_t alignment)</div><div class="ttdoc">Synchronous deallocation.</div><div class="ttdef"><b>Definition</b> PinnedResource.h:52</div></div>
 <div class="ttc" id="aclassnanovdb_1_1cuda_1_1PinnedResource_html_a21d2e8403222bd6ba1b274926497b6d0"><div class="ttname"><a href="classnanovdb_1_1cuda_1_1PinnedResource.html#a21d2e8403222bd6ba1b274926497b6d0">nanovdb::cuda::PinnedResource::allocate</a></div><div class="ttdeci">void * allocate(size_t bytes, size_t alignment)</div><div class="ttdoc">Synchronous allocation of page-locked host memory.</div><div class="ttdef"><b>Definition</b> PinnedResource.h:41</div></div>
+<div class="ttc" id="aclassnanovdb_1_1cuda_1_1PinnedResource_html_a6b85fca68052efd8343bb81f826f10d9"><div class="ttname"><a href="classnanovdb_1_1cuda_1_1PinnedResource.html#a6b85fca68052efd8343bb81f826f10d9">nanovdb::cuda::PinnedResource::operator==</a></div><div class="ttdeci">friend bool operator==(const PinnedResource &amp;, const PinnedResource &amp;)</div><div class="ttdoc">Stateless: memory allocated through one instance may be deallocated through any other,...</div><div class="ttdef"><b>Definition</b> PinnedResource.h:61</div></div>
+<div class="ttc" id="aclassnanovdb_1_1cuda_1_1PinnedResource_html_a87e5e44d110210e21fe64459106e4a48"><div class="ttname"><a href="classnanovdb_1_1cuda_1_1PinnedResource.html#a87e5e44d110210e21fe64459106e4a48">nanovdb::cuda::PinnedResource::operator!=</a></div><div class="ttdeci">friend bool operator!=(const PinnedResource &amp;, const PinnedResource &amp;)</div><div class="ttdef"><b>Definition</b> PinnedResource.h:62</div></div>
 <div class="ttc" id="aclassnanovdb_1_1cuda_1_1PinnedResource_html_a8b56b57c90e6ad4e0ce8d856525b0124"><div class="ttname"><a href="classnanovdb_1_1cuda_1_1PinnedResource.html#a8b56b57c90e6ad4e0ce8d856525b0124">nanovdb::cuda::PinnedResource::DEFAULT_ALIGNMENT</a></div><div class="ttdeci">static constexpr size_t DEFAULT_ALIGNMENT</div><div class="ttdef"><b>Definition</b> PinnedResource.h:31</div></div>
-<div class="ttc" id="anamespacenanovdb_1_1cuda_html"><div class="ttname"><a href="namespacenanovdb_1_1cuda.html">nanovdb::cuda</a></div><div class="ttdef"><b>Definition</b> GridHandle.h:37</div></div>
-<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdoc">Defines a simple memory pool used to call cub functions that use dynamic temporary storage.</div><div class="ttdef"><b>Definition</b> GridHandle.h:31</div></div>
+<div class="ttc" id="anamespacenanovdb_1_1cuda_html"><div class="ttname"><a href="namespacenanovdb_1_1cuda.html">nanovdb::cuda</a></div><div class="ttdef"><b>Definition</b> Buffer.h:24</div></div>
+<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdoc">Defines a simple memory pool used to call cub functions that use dynamic temporary storage.</div><div class="ttdef"><b>Definition</b> GridHandle.h:32</div></div>
 <div class="ttc" id="ananovdb_2nanovdb_2util_2cuda_2Util_8h_html"><div class="ttname"><a href="nanovdb_2nanovdb_2util_2cuda_2Util_8h.html">Util.h</a></div><div class="ttdoc">Cuda specific utility functions.</div></div>
 <div class="ttc" id="ananovdb_2nanovdb_2util_2cuda_2Util_8h_html_a93e6bf7c8996268aa9a2740d6f1de76d"><div class="ttname"><a href="nanovdb_2nanovdb_2util_2cuda_2Util_8h.html#a93e6bf7c8996268aa9a2740d6f1de76d">cudaCheck</a></div><div class="ttdeci">#define cudaCheck(ans)</div><div class="ttdef"><b>Definition</b> Util.h:49</div></div>
 </div><!-- fragment --></div><!-- contents -->

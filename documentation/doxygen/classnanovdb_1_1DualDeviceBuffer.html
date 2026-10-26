@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -218,7 +218,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Simple memory buffer using un-managed pinned host memory when compiled with NVCC. Obviously this class is making explicit used of CUDA so replace it with your own memory allocator if you are not using CUDA. </p>
 <dl class="section note"><dt>Note</dt><dd>While CUDA's pinned host memory allows for asynchronous memory copy between host and device it is significantly slower then cached (un-pinned) memory on the host. </dd>
 <dd>
-This is the implementation behind the deprecated DeviceBuffer alias below, renamed so the [[deprecated]] attribute reaches only code that spells the public name: the GPU tools' signature defaults reference this implementation, so default-using callers stay warning-free until the defaults change at removal. Transitional &ndash; do not adopt this name; it is deleted together with the alias. The header keeps its long-standing name and include path for the same reason: renaming a header breaks existing includes outright, and the old path is where external code will find the alias and its migration message. </dd></dl>
+This is the implementation behind the deprecated DeviceBuffer alias below, renamed so the [[deprecated]] attribute reaches only code that spells the public name: the GPU tools' signature defaults reference this implementation, so code that only reaches the type through those defaults is warning-free, while calling the deprecated transfer members warns. Transitional &ndash; do not adopt this name; it is deleted together with the alias. The header keeps its long-standing name and include path for the same reason: renaming a header breaks existing includes outright, and the old path is where external code will find the alias and its migration message. </dd></dl>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a7800141b48daec77ad6a6619a3228f04" name="a7800141b48daec77ad6a6619a3228f04"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7800141b48daec77ad6a6619a3228f04">&#9670;&#160;</a></span>PtrT</h2>
@@ -1331,6 +1331,7 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Assumes that the specifed device buffer already exists! </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000096">Deprecated</a></b></dt><dd>Build device grids into <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte&gt;</a> and move them with <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a>. </dd></dl>
 
 </div>
 </div>
@@ -1371,6 +1372,8 @@ template&lt;typename T&gt; </div>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>If the host/CPU buffer does not exist it is first allocated </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>Assumes that the device/GPU buffer already exists </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Downloads from the current device, as reported by <a class="el" href="namespacenanovdb_1_1util_1_1cuda.html#a116584362be9ea1b189cf1f33c08b601" title="Returns the ID of the current device.">util::cuda::currentDevice</a>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000097">Deprecated</a></b></dt><dd>Build device grids into <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte&gt;</a> and move them with <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a>. </dd></dl>
 
 </div>
 </div>
@@ -1410,6 +1413,8 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Assumes that the host buffer already exists! </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Uploads to the current device, as reported by <a class="el" href="namespacenanovdb_1_1util_1_1cuda.html#a116584362be9ea1b189cf1f33c08b601" title="Returns the ID of the current device.">util::cuda::currentDevice</a>. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000095">Deprecated</a></b></dt><dd>Build device grids into <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte&gt;</a> and move them with <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a>. </dd></dl>
 
 </div>
 </div>
@@ -1489,7 +1494,7 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>Assumes that the host buffer already exists! </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>determine the current device with cudaGetDevice </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000094">Deprecated</a></b></dt><dd>Build device grids into <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte&gt;</a> and move them with <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a>. </dd></dl>
 
 </div>
 </div>

@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -142,6 +142,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a8b56b57c90e6ad4e0ce8d856525b0124" id="r_a8b56b57c90e6ad4e0ce8d856525b0124"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b56b57c90e6ad4e0ce8d856525b0124">DEFAULT_ALIGNMENT</a> = 256</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:abd20fca684e38d489005d8576dbeb572" id="r_abd20fca684e38d489005d8576dbeb572"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd20fca684e38d489005d8576dbeb572">operator==</a> (const <a class="el" href="classnanovdb_1_1cuda_1_1DeviceResource.html">DeviceResource</a> &amp;, const <a class="el" href="classnanovdb_1_1cuda_1_1DeviceResource.html">DeviceResource</a> &amp;)</td></tr>
+<tr class="memdesc:abd20fca684e38d489005d8576dbeb572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateless: memory allocated through one instance may be deallocated through any other, so every two instances compare equal (the equality cuda::mr's resource concepts require).  <br /></td></tr>
+<tr class="memitem:a0bf6f645377894bfaa321e931e70536e" id="r_a0bf6f645377894bfaa321e931e70536e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bf6f645377894bfaa321e931e70536e">operator!=</a> (const <a class="el" href="classnanovdb_1_1cuda_1_1DeviceResource.html">DeviceResource</a> &amp;, const <a class="el" href="classnanovdb_1_1cuda_1_1DeviceResource.html">DeviceResource</a> &amp;)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Default stream-ordered device memory resource. Allocations are made with cudaMallocAsync and freed with cudaFreeAsync via the <a class="el" href="namespacenanovdb_1_1util_1_1cuda.html">util::cuda</a> wrappers. </p>
@@ -391,6 +397,67 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a0bf6f645377894bfaa321e931e70536e" name="a0bf6f645377894bfaa321e931e70536e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bf6f645377894bfaa321e931e70536e">&#9670;&#160;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1cuda_1_1DeviceResource.html">DeviceResource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1cuda_1_1DeviceResource.html">DeviceResource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd20fca684e38d489005d8576dbeb572" name="abd20fca684e38d489005d8576dbeb572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd20fca684e38d489005d8576dbeb572">&#9670;&#160;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1cuda_1_1DeviceResource.html">DeviceResource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1cuda_1_1DeviceResource.html">DeviceResource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stateless: memory allocated through one instance may be deallocated through any other, so every two instances compare equal (the equality cuda::mr's resource concepts require). </p>
 
 </div>
 </div>

@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -133,8 +133,9 @@ $(function(){initNavTree('HandleStorage_8h.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:IsStreamArgument_3C_20BufferT_20_3E" id="r_IsStreamArgument_3C_20BufferT_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1IsStreamArgument.html">IsStreamArgument&lt; BufferT &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when <code>BufferT</code> is a stream rather than a buffer: cudaStream_t, or another non-buffer type that converts to it. nullptr is not a stream here.  <a href="structnanovdb_1_1cuda_1_1detail_1_1IsStreamArgument.html#details">More...</a><br /></td></tr>
 <tr class="memitem:HandleFactory" id="r_HandleFactory"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1HandleFactory.html">HandleFactory</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The one gateway for constructing a <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> from a buffer plus metadata that is already known to be valid &ndash; adopted from another handle, whose own construction from raw bytes did the validation.  <a href="structnanovdb_1_1cuda_1_1detail_1_1HandleFactory.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -142,6 +143,16 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespacenanovdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a simple memory pool used to call cub functions that use dynamic temporary storage. <br /></td></tr>
 <tr class="memitem:nanovdb_3A_3Acuda" id="r_nanovdb_3A_3Acuda"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1cuda.html">nanovdb::cuda</a></td></tr>
 <tr class="memitem:nanovdb_3A_3Acuda_3A_3Adetail" id="r_nanovdb_3A_3Acuda_3A_3Adetail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1cuda_1_1detail.html">nanovdb::cuda::detail</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a8634aee7bff203864a3273f326318dfc" id="r_a8634aee7bff203864a3273f326318dfc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8634aee7bff203864a3273f326318dfc">NANOVDB_CUDA_HANDLESTORAGE_DEFERS_GRIDHANDLE_CUH</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac572c41d73be4391238f94f3b011efcf" id="r_ac572c41d73be4391238f94f3b011efcf"><td class="memTemplParams" colspan="2">template&lt;typename BufferT, typename T&gt; </td></tr>
+<tr class="memitem:ac572c41d73be4391238f94f3b011efcf template"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1cuda_1_1detail.html#ac572c41d73be4391238f94f3b011efcf">PrototypeFormResult</a> = typename std::enable_if&lt;!<a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1IsStreamArgument.html">IsStreamArgument</a>&lt;BufferT&gt;::value, T&gt;::type</td></tr>
+<tr class="memdesc:ac572c41d73be4391238f94f3b011efcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return type of a tool's prototype-buffer form: <code>T</code>, except when <code>BufferT</code> deduced as a stream (cudaStream_t, or any other type that converts to it and is not a buffer, such as a stream wrapper), i.e. the call passed a stream where the prototype goes, which is the resource form's signature. A literal 0 or nullptr keeps the prototype form, whose static_assert asks for cudaStream_t(0). Removing the prototype form there leaves the resource form as the only candidate rather than relying on partial ordering, which compilers resolve differently for these overloads.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -167,7 +178,22 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Allocates the device-resident storage behind a GridHandle or NodeManagerHandle for any buffer family: through the static create() interface for buffers that provide it (the dual-space DeviceBuffer family), and through the buffer's memory resource for a single-space cuda::Buffer. This is the bridge that lets every tool entry point accept either buffer family. </p>
 <dl class="section note"><dt>Note</dt><dd>This header is host-includable: it calls the CUDA runtime but launches no kernels, so a plain C++ translation unit (linked against the CUDA runtime) can allocate storage and transfer grid handles with cuda::copyTo. </dd></dl>
-</div></div><!-- contents -->
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="a8634aee7bff203864a3273f326318dfc" name="a8634aee7bff203864a3273f326318dfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8634aee7bff203864a3273f326318dfc">&#9670;&#160;</a></span>NANOVDB_CUDA_HANDLESTORAGE_DEFERS_GRIDHANDLE_CUH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NANOVDB_CUDA_HANDLESTORAGE_DEFERS_GRIDHANDLE_CUH</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>

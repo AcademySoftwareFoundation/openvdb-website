@@ -1,5 +1,9 @@
 var NAVTREEINDEX5 =
 {
+"ax.html#axuserfunctions":[6,1,8,0],
+"ax.html#axvaridentifiers":[6,1,6,0],
+"ax.html#axvecmats":[6,1,4,1],
+"ax.html#axvexsupport":[6,1,9],
 "ax_2openvdb__ax_2Exceptions_8h.html":[15,0,4,6],
 "ax_2openvdb__ax_2Exceptions_8h.html#a1a6edff4bc3fdd668d8d37381e74ea3c":[15,0,4,6,6],
 "ax_2openvdb__ax_2Exceptions_8h_source.html":[15,0,4,6],
@@ -174,10 +178,9 @@ var NAVTREEINDEX5 =
 "build.html#buildZLibSupport":[2,2,3],
 "build.html#troubleshoot1":[2,6,0],
 "build.html#troubleshoot2":[2,6,1],
-"build.html#troubleshoot3":[2,6,2],
-"build.html#troubleshoot4":[2,6,3],
-"build.html#troubleshoot5":[2,6,4],
-"build.html#troubleshoot6":[2,6,5],
+"build.html#troubleshoot4":[2,6,2],
+"build.html#troubleshoot5":[2,6,3],
+"build.html#troubleshoot6":[2,6,4],
 "changes.html":[0],
 "classApplyFunc.html":[14,0,6],
 "classApplyFunc.html#a96b02b241c40c490c20d35759561b80d":[14,0,6,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX5 =
 "classhoudini__utils_1_1OpFactory.html#a6e84165d24ecfee4c04f70a87eefb485a3ba782f17d34f4ad5b8d9dddbe862be3":[14,0,1,0,1,2],
 "classhoudini__utils_1_1OpFactory.html#a6e84165d24ecfee4c04f70a87eefb485a6988b642480925a08eb33beb921098fa":[13,0,2,0,1,0],
 "classhoudini__utils_1_1OpFactory.html#a6e84165d24ecfee4c04f70a87eefb485a6988b642480925a08eb33beb921098fa":[14,0,1,0,1,0],
-"classhoudini__utils_1_1OpFactory.html#a6e84165d24ecfee4c04f70a87eefb485aa707daeced43f77dad2a9ccb8adabd53":[13,0,2,0,1,4],
-"classhoudini__utils_1_1OpFactory.html#a6e84165d24ecfee4c04f70a87eefb485aa707daeced43f77dad2a9ccb8adabd53":[14,0,1,0,1,4],
-"classhoudini__utils_1_1OpFactory.html#a825ced6f2c125ec91e2c541333bfeccc":[13,0,2,0,13],
-"classhoudini__utils_1_1OpFactory.html#a825ced6f2c125ec91e2c541333bfeccc":[14,0,1,0,13]
+"classhoudini__utils_1_1OpFactory.html#a6e84165d24ecfee4c04f70a87eefb485aa707daeced43f77dad2a9ccb8adabd53":[13,0,2,0,1,4]
 };

@@ -20,7 +20,7 @@ var PointUtils_8h =
     [ "openvdb_houdini::computeVoxelSizeFromHoudini", "namespaceopenvdb__houdini.html#a69ab3d7f4b2668e1d87d3e3b1519b0fb", null ],
     [ "openvdb_houdini::convertHoudiniToPointDataGrid", "namespaceopenvdb__houdini.html#a980f9aa6c0141e8ad70af5e9a7ed0aa8", null ],
     [ "openvdb_houdini::convertMetadataToHoudini", "namespaceopenvdb__houdini.html#ae7769ef7dde7bc5273c5cdb3f4d5e684", null ],
-    [ "openvdb_houdini::convertPointDataGridToHoudini", "namespaceopenvdb__houdini.html#a006faa3e9d5b322ef88b4012c1bf8d42", null ],
+    [ "openvdb_houdini::convertPointDataGridToHoudini", "namespaceopenvdb__houdini.html#a81704940fa96ced8800698ba8f54807b", null ],
     [ "openvdb_houdini::pointDataGridSpecificInfoText", "namespaceopenvdb__houdini.html#a913be564fb787d6708c226f713945041", null ],
     [ "openvdb_houdini::populateMetadataFromHoudini", "namespaceopenvdb__houdini.html#a791107aa339edf98f536b4cc55a9fe26", null ],
     [ "openvdb_houdini::META_GROUP_VIEWPORT", "namespaceopenvdb__houdini.html#aa55fdd67f1f63605c3d65443986e4a43", null ],

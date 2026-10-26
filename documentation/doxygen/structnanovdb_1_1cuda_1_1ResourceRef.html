@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -125,8 +125,14 @@ $(function(){initNavTree('structnanovdb_1_1cuda_1_1ResourceRef.html','','structn
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a401735d72d0780bf25efb966c5a39abb" id="r_a401735d72d0780bf25efb966c5a39abb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a401735d72d0780bf25efb966c5a39abb">ResourceRef</a> (R &amp;resource)</td></tr>
-<tr class="memdesc:a401735d72d0780bf25efb966c5a39abb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a ref borrowing <code>resource</code>.  <br /></td></tr>
+<tr class="memitem:a66fc44f2aea4e2ac64ccfdcfab5811f8" id="r_a66fc44f2aea4e2ac64ccfdcfab5811f8"><td class="memTemplParams" colspan="2">template&lt;class S = R, std::enable_if_t&lt; <a class="el" href="structnanovdb_1_1cuda_1_1is__equality__comparable__resource.html">is_equality_comparable_resource</a>&lt; S &gt;::value, int &gt; = 0&gt; </td></tr>
+<tr class="memitem:a66fc44f2aea4e2ac64ccfdcfab5811f8 template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66fc44f2aea4e2ac64ccfdcfab5811f8">ResourceRef</a> (R &amp;resource)</td></tr>
+<tr class="memdesc:a66fc44f2aea4e2ac64ccfdcfab5811f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a ref borrowing <code>resource</code>.  <br /></td></tr>
+<tr class="memitem:a9f735cb20abf58dda28c6aa85233de9f" id="r_a9f735cb20abf58dda28c6aa85233de9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f735cb20abf58dda28c6aa85233de9f">ResourceRef</a> (R &amp;resource, <a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1InternalRef.html">detail::InternalRef</a>)</td></tr>
+<tr class="memdesc:a9f735cb20abf58dda28c6aa85233de9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a ref for NanoVDB's own components; see <a class="el" href="namespacenanovdb_1_1cuda_1_1detail.html#a8f2b496bb00503ff6396004cf2c13e75" title="Returns a ResourceRef to resource for NanoVDB&#39;s own components; constructing it does not warn.">detail::borrowInternal</a>.  <br /></td></tr>
+<tr class="memitem:a66fc44f2aea4e2ac64ccfdcfab5811f8" id="r_a66fc44f2aea4e2ac64ccfdcfab5811f8"><td class="memTemplParams" colspan="2">template&lt;class S = R, std::enable_if_t&lt;!<a class="el" href="structnanovdb_1_1cuda_1_1is__equality__comparable__resource.html">is_equality_comparable_resource</a>&lt; S &gt;::value, int &gt; = 0&gt; </td></tr>
+<tr class="memitem:a66fc44f2aea4e2ac64ccfdcfab5811f8 template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66fc44f2aea4e2ac64ccfdcfab5811f8">ResourceRef</a> (R &amp;resource)</td></tr>
+<tr class="memdesc:a66fc44f2aea4e2ac64ccfdcfab5811f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a ref borrowing a resource without operator==.  <br /></td></tr>
 <tr class="memitem:a21d2e8403222bd6ba1b274926497b6d0" id="r_a21d2e8403222bd6ba1b274926497b6d0"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21d2e8403222bd6ba1b274926497b6d0">allocate</a> (size_t bytes, size_t alignment)</td></tr>
 <tr class="memdesc:a21d2e8403222bd6ba1b274926497b6d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronous pair, forwarding to the referenced resource.  <br /></td></tr>
 <tr class="memitem:a133327a79abbd4936d70a2a1df972588" id="r_a133327a79abbd4936d70a2a1df972588"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a133327a79abbd4936d70a2a1df972588">deallocate</a> (void *p, size_t bytes, size_t alignment)</td></tr>
@@ -148,7 +154,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:acfbc5101701b0164fd8aec09169a4063" id="r_acfbc5101701b0164fd8aec09169a4063"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfbc5101701b0164fd8aec09169a4063">operator==</a> (<a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html">ResourceRef</a> lhs, <a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html">ResourceRef</a> rhs)</td></tr>
-<tr class="memdesc:acfbc5101701b0164fd8aec09169a4063"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two refs compare equal iff they reference the same resource, i.e. memory allocated through one may be deallocated through the other.  <br /></td></tr>
+<tr class="memdesc:acfbc5101701b0164fd8aec09169a4063"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two refs compare equal iff memory allocated through one may be deallocated through the other: they reference the same resource, or resources that compare equal. As cuda::mr::resource_ref does, this compares the referenced resources when <code>R</code> provides operator==; otherwise only identity can establish it.  <br /></td></tr>
 <tr class="memitem:a33c9a7d84dd9f2efb7d452bc674d9524" id="r_a33c9a7d84dd9f2efb7d452bc674d9524"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33c9a7d84dd9f2efb7d452bc674d9524">operator!=</a> (<a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html">ResourceRef</a> lhs, <a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html">ResourceRef</a> rhs)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
@@ -161,14 +167,17 @@ struct nanovdb::cuda::ResourceRef&lt; R &gt;</div><p>Non-owning reference to a m
   </dd>
 </dl>
 <p>Types that hold their resource by value &ndash; <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer</a>, matching cuda::buffer &ndash; select their ownership semantics by what is placed in that slot: a concrete resource is owned as a copy, while a <a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html" title="Non-owning reference to a memory resource that is itself a resource: copying the ref shares the under...">ResourceRef</a> borrows. This is the same division cuda::mr draws between any_resource (owning) and resource_ref (borrowing), and the same shape as std::pmr::polymorphic_allocator over memory_resource*. Use it when a resource is stateful or long-lived and a container must allocate through <em>that</em> instance rather than a copy of it. </p><dl class="section warning"><dt>Warning</dt><dd>The referenced resource must outlive every use of this ref and of all copies of it, including any container holding one. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000092">Deprecated</a></b></dt><dd>A referenced resource without operator== is deprecated; 14.0 requires it. </dd></dl>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a401735d72d0780bf25efb966c5a39abb" name="a401735d72d0780bf25efb966c5a39abb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a401735d72d0780bf25efb966c5a39abb">&#9670;&#160;</a></span>ResourceRef()</h2>
+<a id="a66fc44f2aea4e2ac64ccfdcfab5811f8" name="a66fc44f2aea4e2ac64ccfdcfab5811f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66fc44f2aea4e2ac64ccfdcfab5811f8">&#9670;&#160;</a></span>ResourceRef() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class R&gt; </div>
+<div class="memtemplate">
+template&lt;class S = R, std::enable_if_t&lt; <a class="el" href="structnanovdb_1_1cuda_1_1is__equality__comparable__resource.html">is_equality_comparable_resource</a>&lt; S &gt;::value, int &gt; = 0&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -194,6 +203,71 @@ template&lt;class R&gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a9f735cb20abf58dda28c6aa85233de9f" name="a9f735cb20abf58dda28c6aa85233de9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f735cb20abf58dda28c6aa85233de9f">&#9670;&#160;</a></span>ResourceRef() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html">ResourceRef</a> </td>
+          <td>(</td>
+          <td class="paramtype">R &amp;</td>          <td class="paramname"><span class="paramname"><em>resource</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1InternalRef.html">detail::InternalRef</a></td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a ref for NanoVDB's own components; see <a class="el" href="namespacenanovdb_1_1cuda_1_1detail.html#a8f2b496bb00503ff6396004cf2c13e75" title="Returns a ResourceRef to resource for NanoVDB&#39;s own components; constructing it does not warn.">detail::borrowInternal</a>. </p>
+
+</div>
+</div>
+<a id="a66fc44f2aea4e2ac64ccfdcfab5811f8" name="a66fc44f2aea4e2ac64ccfdcfab5811f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66fc44f2aea4e2ac64ccfdcfab5811f8">&#9670;&#160;</a></span>ResourceRef() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R&gt; </div>
+<div class="memtemplate">
+template&lt;class S = R, std::enable_if_t&lt;!<a class="el" href="structnanovdb_1_1cuda_1_1is__equality__comparable__resource.html">is_equality_comparable_resource</a>&lt; S &gt;::value, int &gt; = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html">ResourceRef</a> </td>
+          <td>(</td>
+          <td class="paramtype">R &amp;</td>          <td class="paramname"><span class="paramname"><em>resource</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a ref borrowing a resource without operator==. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000093">Deprecated</a></b></dt><dd>14.0 requires operator== on every resource. </dd></dl>
 
 </div>
 </div>
@@ -413,7 +487,7 @@ template&lt;class R&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Two refs compare equal iff they reference the same resource, i.e. memory allocated through one may be deallocated through the other. </p>
+<p>Two refs compare equal iff memory allocated through one may be deallocated through the other: they reference the same resource, or resources that compare equal. As cuda::mr::resource_ref does, this compares the referenced resources when <code>R</code> provides operator==; otherwise only identity can establish it. </p>
 
 </div>
 </div>

@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -118,21 +118,22 @@ $(function(){initNavTree('structnanovdb_1_1math_1_1Maximum.html','','structnanov
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="structnanovdb_1_1math_1_1Maximum.html" title="Maximum floating-point values.">Maximum</a> floating-point values.  
+<p>Per-type largest representable value (mirrors <code>std::numeric_limits::max</code>).  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="nanovdb_2nanovdb_2math_2Math_8h_source.html">nanovdb/math/Math.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a0d4a3589a46d330e57d90da61dcf2510" id="r_a0d4a3589a46d330e57d90da61dcf2510"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d4a3589a46d330e57d90da61dcf2510">value</a> ()</td></tr>
+<tr class="memitem:af0fa227373a3c9cc380da2292eeb28bd" id="r_af0fa227373a3c9cc380da2292eeb28bd"><td class="memItemLeft" align="right" valign="top">static constexpr T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0fa227373a3c9cc380da2292eeb28bd">value</a> () noexcept</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-struct nanovdb::math::Maximum&lt; T &gt;</div><p><a class="el" href="structnanovdb_1_1math_1_1Maximum.html" title="Maximum floating-point values.">Maximum</a> floating-point values. </p>
+struct nanovdb::math::Maximum&lt; T &gt;</div><p>Per-type largest representable value (mirrors <code>std::numeric_limits::max</code>). </p>
+<p>Returned by <code><a class="el" href="#af0fa227373a3c9cc380da2292eeb28bd">Maximum&lt;T&gt;::value()</a></code>. The host fallback (<span class="tt">#else</span> branch) forwards to <code>std::numeric_limits</code> so any <code>T</code> with a specialization there works; the CUDA-device branch uses <code>::cuda::std::numeric_limits</code>; the HIP branch hard-codes a handful of common types because <code>std::numeric_limits</code> is unavailable on the device in some HIP toolchains. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a0d4a3589a46d330e57d90da61dcf2510" name="a0d4a3589a46d330e57d90da61dcf2510"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d4a3589a46d330e57d90da61dcf2510">&#9670;&#160;</a></span>value()</h2>
+<a id="af0fa227373a3c9cc380da2292eeb28bd" name="af0fa227373a3c9cc380da2292eeb28bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0fa227373a3c9cc380da2292eeb28bd">&#9670;&#160;</a></span>value()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,7 +144,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T value </td>
+          <td class="memname">constexpr T value </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -151,7 +152,7 @@ template&lt;typename T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

@@ -1,6 +1,9 @@
 var HandleStorage_8h =
 [
+    [ "IsStreamArgument< BufferT >", "structnanovdb_1_1cuda_1_1detail_1_1IsStreamArgument.html", "structnanovdb_1_1cuda_1_1detail_1_1IsStreamArgument" ],
     [ "HandleFactory", "structnanovdb_1_1cuda_1_1detail_1_1HandleFactory.html", "structnanovdb_1_1cuda_1_1detail_1_1HandleFactory" ],
+    [ "NANOVDB_CUDA_HANDLESTORAGE_DEFERS_GRIDHANDLE_CUH", "HandleStorage_8h.html#a8634aee7bff203864a3273f326318dfc", null ],
+    [ "nanovdb::cuda::detail::PrototypeFormResult", "namespacenanovdb_1_1cuda_1_1detail.html#ac572c41d73be4391238f94f3b011efcf", null ],
     [ "nanovdb::cuda::copyTo", "namespacenanovdb_1_1cuda.html#ab4b29c1e6128a5e2e1a760834d5bde2d", null ],
     [ "nanovdb::cuda::copyTo", "namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876", null ],
     [ "nanovdb::cuda::detail::createDeviceStorage", "namespacenanovdb_1_1cuda_1_1detail.html#a69e4ce3b3c28b310b77a82373c9fc47f", null ],

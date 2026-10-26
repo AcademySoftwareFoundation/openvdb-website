@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -167,7 +167,7 @@ $(function(){initNavTree('MorphologyHelpers_8h_source.html','',''); });
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">using </span><a class="code hl_enumvalue" href="namespacenanovdb_1_1tools_1_1morphology.html#a31d3cd59d1264144ae21e5250166cfc2a2cbda8f22b738858b06cb668117278ee">tools::morphology::NN_FACE_EDGE_VERTEX</a>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    uint32_t result = 0;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">auto</span> words = mask.<a class="code hl_function" href="classnanovdb_1_1Mask.html#a9cbcacb71cf8301dbc8afd0a81f8407d">words</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">auto</span> words = mask.<a class="code hl_function" href="classnanovdb_1_1Mask.html#a25ac09e356b23721a0095d8990e9b4da">words</a>();</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    uint64_t allWordsOr = 0;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++)</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        allWordsOr |= words[i];</div>
@@ -261,10 +261,10 @@ $(function(){initNavTree('MorphologyHelpers_8h_source.html','',''); });
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#endif </span><span class="comment">// NANOVDB_UTIL_MORPHOLOGYHELPERS_H_HAS_BEEN_INCLUDED</span></div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
 <div class="ttc" id="aNanoVDB_8h_html"><div class="ttname"><a href="NanoVDB_8h.html">NanoVDB.h</a></div><div class="ttdoc">Implements a light-weight self-contained VDB data-structure in a single file! In other words,...</div></div>
-<div class="ttc" id="aclassnanovdb_1_1Coord_html_af47670d20d7fb55761a70e3a9868d993"><div class="ttname"><a href="classnanovdb_1_1Coord.html#af47670d20d7fb55761a70e3a9868d993">nanovdb::Coord::ValueType</a></div><div class="ttdeci">int32_t ValueType</div><div class="ttdef"><b>Definition</b> Math.h:349</div></div>
-<div class="ttc" id="aclassnanovdb_1_1Mask_html"><div class="ttname"><a href="classnanovdb_1_1Mask.html">nanovdb::Mask</a></div><div class="ttdoc">Bit-mask to encode active states and facilitate sequential iterators and a fast codec for I/O compres...</div><div class="ttdef"><b>Definition</b> NanoVDB.h:1068</div></div>
-<div class="ttc" id="aclassnanovdb_1_1Mask_html_a9cbcacb71cf8301dbc8afd0a81f8407d"><div class="ttname"><a href="classnanovdb_1_1Mask.html#a9cbcacb71cf8301dbc8afd0a81f8407d">nanovdb::Mask::words</a></div><div class="ttdeci">uint64_t * words()</div><div class="ttdoc">Return a pointer to the list of words of the bit mask.</div><div class="ttdef"><b>Definition</b> NanoVDB.h:1188</div></div>
-<div class="ttc" id="aclassnanovdb_1_1math_1_1Coord_html"><div class="ttname"><a href="classnanovdb_1_1math_1_1Coord.html">nanovdb::math::Coord</a></div><div class="ttdoc">Signed (i, j, k) 32-bit integer coordinate class, similar to openvdb::math::Coord.</div><div class="ttdef"><b>Definition</b> Math.h:346</div></div>
+<div class="ttc" id="aclassnanovdb_1_1Coord_html_af47670d20d7fb55761a70e3a9868d993"><div class="ttname"><a href="classnanovdb_1_1Coord.html#af47670d20d7fb55761a70e3a9868d993">nanovdb::Coord::ValueType</a></div><div class="ttdeci">int32_t ValueType</div><div class="ttdef"><b>Definition</b> Math.h:428</div></div>
+<div class="ttc" id="aclassnanovdb_1_1Mask_html"><div class="ttname"><a href="classnanovdb_1_1Mask.html">nanovdb::Mask</a></div><div class="ttdoc">Bit-mask to encode active states and facilitate sequential iterators and a fast codec for I/O compres...</div><div class="ttdef"><b>Definition</b> NanoVDB.h:1065</div></div>
+<div class="ttc" id="aclassnanovdb_1_1Mask_html_a25ac09e356b23721a0095d8990e9b4da"><div class="ttname"><a href="classnanovdb_1_1Mask.html#a25ac09e356b23721a0095d8990e9b4da">nanovdb::Mask::words</a></div><div class="ttdeci">__hostdev__ uint64_t * words()</div><div class="ttdoc">Return a pointer to the list of words of the bit mask.</div><div class="ttdef"><b>Definition</b> NanoVDB.h:1185</div></div>
+<div class="ttc" id="aclassnanovdb_1_1math_1_1Coord_html"><div class="ttname"><a href="classnanovdb_1_1math_1_1Coord.html">nanovdb::math::Coord</a></div><div class="ttdoc">Signed (i, j, k) 32-bit integer coordinate class, similar to openvdb::math::Coord.</div><div class="ttdef"><b>Definition</b> Math.h:425</div></div>
 <div class="ttc" id="amath_2SampleFromVoxels_8h_html_a551e5ea2539324048f4b47c00ab67d55"><div class="ttname"><a href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a></div><div class="ttdeci">#define __hostdev__</div><div class="ttdef"><b>Definition</b> SampleFromVoxels.h:29</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1tools_1_1morphology_html"><div class="ttname"><a href="namespacenanovdb_1_1tools_1_1morphology.html">nanovdb::tools::morphology</a></div><div class="ttdef"><b>Definition</b> MorphologyHelpers.h:20</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1tools_1_1morphology_html_a31d3cd59d1264144ae21e5250166cfc2"><div class="ttname"><a href="namespacenanovdb_1_1tools_1_1morphology.html#a31d3cd59d1264144ae21e5250166cfc2">nanovdb::tools::morphology::NearestNeighbors</a></div><div class="ttdeci">NearestNeighbors</div><div class="ttdef"><b>Definition</b> MorphologyHelpers.h:22</div></div>

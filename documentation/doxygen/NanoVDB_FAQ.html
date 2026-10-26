@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -140,7 +140,7 @@ $(function(){initNavTree('NanoVDB_FAQ.html','',''); });
 <p class="startli">No, NanoVDB is by design agnostic and works with most graphics APIs, e.g. OpenGL, OpenCL, OptiX, CUDA, HLSL, GLSL, DirectX, and even the CPU! The data structure itself (defined in <a href="https://github.com/AcademySoftwareFoundation/openvdb/blob/master/nanovdb/nanovdb/NanoVDB.h">NanoVDB.h</a> and <a href="https://github.com/AcademySoftwareFoundation/openvdb/blob/master/nanovdb/nanovdb/PNanoVDB.h">PNanoVDB.h</a>) only depends on C++11 or C99. However, some of the auxiliary math classes are optionally optimized with intrinsic CUDA calls (e.g. fma in Vec3) and the <a href="https://github.com/AcademySoftwareFoundation/openvdb/blob/master/nanovdb/nanovdb/cuda/DeviceBuffer.h">DeviceBuffer</a> allocator uses CUDA for explicit memory management. It should be straightforward to replace (or remove) these CUDA dependencies if you so desire.</p>
 </li>
 <li><p class="startli"><b>How does the data structure of NanoVDB compare to that of OpenVDB?</b></p>
-<p class="startli">Conceptually they are essentially identical (NanoVDB uses the exact same tree configuration), but there are some implementation differences to minimize dependencies on external libraries in NanoVDB (e.g. no boost and std containers), and more importantly, NanoVDB has additional meta-data encoded in tree nodes specifically to accelerate ray-tracing (e.g. min/max values and AABB of active values). Also, NanoVDB is pointer-less and occupies a contiguous block of memory, i.e. de-fragmentized relative to OpenVDB. Effectively, NanoVDB is a linearized version of the well-known OpenVDB data structure with a few additional information baked into the tree nodes!</p>
+<p class="startli">Conceptually they are essentially identical (NanoVDB uses the exact same tree configuration), but there are some implementation differences to minimize dependencies on external libraries in NanoVDB (e.g. no std containers), and more importantly, NanoVDB has additional meta-data encoded in tree nodes specifically to accelerate ray-tracing (e.g. min/max values and AABB of active values). Also, NanoVDB is pointer-less and occupies a contiguous block of memory, i.e. de-fragmentized relative to OpenVDB. Effectively, NanoVDB is a linearized version of the well-known OpenVDB data structure with a few additional information baked into the tree nodes!</p>
 </li>
 <li><p class="startli"><b>Are there known issues with NanoVDB?</b></p>
 <p class="startli">While the are currently no known bugs, there are certainly lots of room for improvements and enhancements. If you have issues or ideas for new feature in NanoVDB please let us know, e.g by submitting a <a href="https://github.com/AcademySoftwareFoundation/openvdb/issues">Github issue</a>. </p>

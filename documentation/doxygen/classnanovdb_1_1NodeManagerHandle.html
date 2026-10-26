@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -483,6 +483,7 @@ template&lt;typename U = BufferT&gt; </div>
 
 <p>Download the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes.">NodeManager</a> to from the device, e.g. from GPU to CPU. </p>
 <dl class="section note"><dt>Note</dt><dd>This method is only available if the buffer supports devices </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000099">Deprecated</a></b></dt><dd>Build the node manager on the host with createNodeManager. </dd></dl>
 
 </div>
 </div>
@@ -649,6 +650,7 @@ template&lt;typename U = BufferT&gt; </div>
 
 <p>Upload the <a class="el" href="classnanovdb_1_1NodeManager.html" title="NodeManager allows for sequential access to nodes.">NodeManager</a> to the device, e.g. from CPU to GPU. </p>
 <dl class="section note"><dt>Note</dt><dd>This method is only available if the buffer supports devices </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000098">Deprecated</a></b></dt><dd>Build the node manager on the device with cuda::createNodeManager(deviceGrid, resource). </dd></dl>
 
 </div>
 </div>

@@ -10,7 +10,7 @@ var searchData=
   ['maya_7',['Maya',['../build.html#buildBuildHouMaya',1,'Building Against Houdini/Maya'],['../build.html#buildBuildMaya',1,'Building Against Maya']]],
   ['merely_20a_20generalized_20octree_20or_20n_20tree_8',['Is OpenVDB merely a generalized octree or N-tree?',['../faq.html#sGeneralizedOctree',1,'']]],
   ['mesh_20conversion_9',['Mesh conversion',['../python.html#sPyMeshConversion',1,'']]],
-  ['metadata_10',['metadata',['../codeExamples.html#sAddingMetadata',1,'Adding metadata'],['../codeExamples.html#sHandlingMetadata',1,'Handling metadata'],['../python.html#sPyHandlingMetadata',1,'Handling metadata'],['../codeExamples.html#sRemovingMetadata',1,'Removing metadata'],['../codeExamples.html#sGettingMetadata',1,'Retrieving metadata']]],
+  ['metadata_10',['metadata',['../codeExamples.html#sAddingMetadata',1,'Adding metadata'],['../python.html#sPyHandlingMetadata',1,'Handling metadata'],['../codeExamples.html#sHandlingMetadata',1,'Handling metadata'],['../codeExamples.html#sRemovingMetadata',1,'Removing metadata'],['../codeExamples.html#sGettingMetadata',1,'Retrieving metadata']]],
   ['methods_11',['Class Methods',['../codingStyle.html#sClassMethods',1,'']]],
   ['methods_12',['Calling Grid methods',['../codeExamples.html#sTypedGridMethods',1,'']]],
   ['methods_20on_20the_20grid_13',['Why are there no coordinate-based access methods on the grid?',['../faq.html#sAccessor',1,'']]],

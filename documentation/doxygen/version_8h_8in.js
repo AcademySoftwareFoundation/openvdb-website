@@ -1,6 +1,6 @@
 var version_8h_8in =
 [
-    [ "VersionId", "structopenvdb_1_1v13__1_1_1VersionId.html", "structopenvdb_1_1v13__1_1_1VersionId" ],
+    [ "VersionId", "structopenvdb_1_1v13__2_1_1VersionId.html", "structopenvdb_1_1v13__2_1_1VersionId" ],
     [ "OPENVDB_ALL_TREE_INSTANTIATE", "version_8h_8in.html#af5d84e649a9214c7e60ef2fc79e9dcd3", null ],
     [ "OPENVDB_ENABLE_ASSERTS", "version_8h_8in.html#a4c50fb88617dc453773269235d40a0f0", null ],
     [ "OPENVDB_ENABLE_VEC_RELATIONAL_OPERATIONS", "version_8h_8in.html#a771a11de8ea14c94afee7c2e75db1015", null ],
@@ -20,7 +20,6 @@ var version_8h_8in =
     [ "OPENVDB_REAL_TREE_INSTANTIATE", "version_8h_8in.html#a5ab371d0dbfa33fb93da47de4fbbb780", null ],
     [ "OPENVDB_USE_AVX", "version_8h_8in.html#aec691d014a39d1c0e5f924ecd30e3337", null ],
     [ "OPENVDB_USE_BLOSC", "version_8h_8in.html#ad9b4094c98dfe2c5e327e97640573397", null ],
-    [ "OPENVDB_USE_DELAYED_LOADING", "version_8h_8in.html#a37848ce33ebef26696a36d9975a1fe1a", null ],
     [ "OPENVDB_USE_EXPLICIT_INSTANTIATION", "version_8h_8in.html#a9ae309f5f7e4f0e48703fdf3fd0a1df1", null ],
     [ "OPENVDB_USE_IMATH_HALF", "version_8h_8in.html#afd09230e7f8a44c7b990c2d64326b6d5", null ],
     [ "OPENVDB_USE_SSE42", "version_8h_8in.html#a3e75306bf6e4011db32af418ea979718", null ],
@@ -33,15 +32,16 @@ var version_8h_8in =
     [ "OPENVDB_VERSION_NAME", "version_8h_8in.html#a00be3835cb8ad1ded8abd821fad20fc0", null ],
     [ "OPENVDB_VOLUME_TREE_INSTANTIATE", "version_8h_8in.html#a9ae6309f0451d550fc854cf97c4b4221", null ],
     [ "OPENVDB_X86_INSTRSET", "version_8h_8in.html#a82d968ba5877270a91ba090ef4bfa9ca", null ],
-    [ "openvdb::v13_1::getLibraryAbiVersionString", "namespaceopenvdb_1_1v13__1.html#acea8dfa87c727cd403d9d49279c7485c", null ],
-    [ "openvdb::v13_1::getLibraryVersionString", "namespaceopenvdb_1_1v13__1.html#ab13ba584e43622d91968ac8777fd5b67", null ],
-    [ "openvdb::v13_1::getPackageRevision", "namespaceopenvdb_1_1v13__1.html#a5ce6fbf1f3911d9d4f28d1d83ba4eb8a", null ],
-    [ "openvdb::v13_1::getPackageUrl", "namespaceopenvdb_1_1v13__1.html#a264d139b0df617d8456d1ee54846d9fe", null ],
-    [ "openvdb::v13_1::OPENVDB_ABI_VERSION", "namespaceopenvdb_1_1v13__1.html#a14a6f6aa77242844dcaf5d1fa59f47b0", null ],
-    [ "openvdb::v13_1::OPENVDB_FILE_VERSION", "namespaceopenvdb_1_1v13__1.html#a92a71ea4cce8e2e9c931d01b5b24b9d1", null ],
-    [ "openvdb::v13_1::OPENVDB_LIBRARY_MAJOR_VERSION", "namespaceopenvdb_1_1v13__1.html#a6a9f092ecf0f16defadb23a13629cd62", null ],
-    [ "openvdb::v13_1::OPENVDB_LIBRARY_MINOR_VERSION", "namespaceopenvdb_1_1v13__1.html#ad72210c9b211de996a18108009e71979", null ],
-    [ "openvdb::v13_1::OPENVDB_LIBRARY_PATCH_VERSION", "namespaceopenvdb_1_1v13__1.html#a9fca3ac01682078c4721c6a109d171d1", null ],
-    [ "openvdb::v13_1::OPENVDB_LIBRARY_VERSION", "namespaceopenvdb_1_1v13__1.html#adb9dac755c814d036506d1e7a41ebc10", null ],
-    [ "openvdb::v13_1::OPENVDB_MAGIC", "namespaceopenvdb_1_1v13__1.html#ad39fdafd7bf1a352a9459ae46fb2cf1c", null ]
+    [ "openvdb::v13_2::getLibraryAbiVersionString", "namespaceopenvdb_1_1v13__2.html#acea8dfa87c727cd403d9d49279c7485c", null ],
+    [ "openvdb::v13_2::getLibraryVersionString", "namespaceopenvdb_1_1v13__2.html#ab13ba584e43622d91968ac8777fd5b67", null ],
+    [ "openvdb::v13_2::getPackageRevision", "namespaceopenvdb_1_1v13__2.html#a5ce6fbf1f3911d9d4f28d1d83ba4eb8a", null ],
+    [ "openvdb::v13_2::getPackageUrl", "namespaceopenvdb_1_1v13__2.html#a264d139b0df617d8456d1ee54846d9fe", null ],
+    [ "openvdb::v13_2::OPENVDB_ABI_VERSION", "namespaceopenvdb_1_1v13__2.html#a14a6f6aa77242844dcaf5d1fa59f47b0", null ],
+    [ "openvdb::v13_2::OPENVDB_FILE_VERSION", "namespaceopenvdb_1_1v13__2.html#a92a71ea4cce8e2e9c931d01b5b24b9d1", null ],
+    [ "openvdb::v13_2::OPENVDB_LIBRARY_MAJOR_VERSION", "namespaceopenvdb_1_1v13__2.html#a6a9f092ecf0f16defadb23a13629cd62", null ],
+    [ "openvdb::v13_2::OPENVDB_LIBRARY_MINOR_VERSION", "namespaceopenvdb_1_1v13__2.html#ad72210c9b211de996a18108009e71979", null ],
+    [ "openvdb::v13_2::OPENVDB_LIBRARY_PATCH_VERSION", "namespaceopenvdb_1_1v13__2.html#a9fca3ac01682078c4721c6a109d171d1", null ],
+    [ "openvdb::v13_2::OPENVDB_LIBRARY_VERSION", "namespaceopenvdb_1_1v13__2.html#adb9dac755c814d036506d1e7a41ebc10", null ],
+    [ "openvdb::v13_2::OPENVDB_MAGIC", "namespaceopenvdb_1_1v13__2.html#ad39fdafd7bf1a352a9459ae46fb2cf1c", null ],
+    [ "openvdb::v13_2::OPENVDB_UNSUPPORTED_FILE_VERSION", "namespaceopenvdb_1_1v13__2.html#ac6a9110c31ab5db1399d9331aaa953f5", null ]
 ];

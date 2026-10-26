@@ -2,8 +2,10 @@ var tools_2GridStats_8h =
 [
     [ "Extrema< VecT, 1 >", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html", "classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4" ],
     [ "Extrema< VecT, 1 >::Pair", "structnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4_1_1Pair.html", "structnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4_1_1Pair" ],
+    [ "Extrema< nanovdb::Half, 0 >", "classnanovdb_1_1tools_1_1Extrema_3_01nanovdb_1_1Half_00_010_01_4.html", "classnanovdb_1_1tools_1_1Extrema_3_01nanovdb_1_1Half_00_010_01_4" ],
     [ "Stats< ValueT, 0 >", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4" ],
     [ "Stats< ValueT, 1 >", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_011_01_4.html", "classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_011_01_4" ],
+    [ "Stats< nanovdb::Half, 0 >", "classnanovdb_1_1tools_1_1Stats_3_01nanovdb_1_1Half_00_010_01_4.html", "classnanovdb_1_1tools_1_1Stats_3_01nanovdb_1_1Half_00_010_01_4" ],
     [ "NoopStats< ValueT >", "structnanovdb_1_1tools_1_1NoopStats.html", "structnanovdb_1_1tools_1_1NoopStats" ],
     [ "GridStats< GridT, StatsT >", "classnanovdb_1_1tools_1_1GridStats.html", "classnanovdb_1_1tools_1_1GridStats" ],
     [ "GridStats< GridT, StatsT >::NodeStats", "structnanovdb_1_1tools_1_1GridStats_1_1NodeStats.html", "structnanovdb_1_1tools_1_1GridStats_1_1NodeStats" ],

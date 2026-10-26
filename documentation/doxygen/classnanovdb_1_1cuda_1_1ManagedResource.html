@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -137,6 +137,12 @@ Static Public Attributes</h2></td></tr>
 <tr class="memdesc:a066e02d9fc3b17507aa6e3b1a374858a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managed allocations are mapped into the host address space (detected by <a class="el" href="structnanovdb_1_1cuda_1_1is__host__accessible__resource.html" title="Detection trait: is_host_accessible_resource&lt;R&gt;::value is true iff R declares static constexpr bool H...">nanovdb::cuda::is_host_accessible_resource</a>).  <br /></td></tr>
 <tr class="memitem:a2cd32c325c572da792df709c454ba672" id="r_a2cd32c325c572da792df709c454ba672"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cd32c325c572da792df709c454ba672">DEVICE_ACCESSIBLE</a> = true</td></tr>
 <tr class="memdesc:a2cd32c325c572da792df709c454ba672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managed allocations are also valid device addresses (detected by <a class="el" href="structnanovdb_1_1cuda_1_1is__device__accessible__resource.html" title="Companion detection: is_device_accessible_resource&lt;R&gt;::value is true iff R declares static constexpr ...">nanovdb::cuda::is_device_accessible_resource</a>), so a handle over this resource exposes the device accessors as well as the host ones.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a649c0bfd5fa262265e0d400af17b5f5a" id="r_a649c0bfd5fa262265e0d400af17b5f5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a649c0bfd5fa262265e0d400af17b5f5a">operator==</a> (const <a class="el" href="classnanovdb_1_1cuda_1_1ManagedResource.html">ManagedResource</a> &amp;, const <a class="el" href="classnanovdb_1_1cuda_1_1ManagedResource.html">ManagedResource</a> &amp;)</td></tr>
+<tr class="memdesc:a649c0bfd5fa262265e0d400af17b5f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stateless: memory allocated through one instance may be deallocated through any other, so every two instances compare equal (the equality cuda::mr's resource concepts require).  <br /></td></tr>
+<tr class="memitem:ae9b32237ffe628f630f7c74cff31551c" id="r_ae9b32237ffe628f630f7c74cff31551c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9b32237ffe628f630f7c74cff31551c">operator!=</a> (const <a class="el" href="classnanovdb_1_1cuda_1_1ManagedResource.html">ManagedResource</a> &amp;, const <a class="el" href="classnanovdb_1_1cuda_1_1ManagedResource.html">ManagedResource</a> &amp;)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Managed (unified) memory resource. Allocations (cudaMallocManaged) are accessible from both the host and the device, with the driver migrating pages on demand, so a container over this resource serves grids that are read on both sides &ndash; the replacement for the legacy UnifiedBuffer. A <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> over this resource parses (and validates) its metadata through the device like any device buffer &ndash; a host-side parse could race still-running producer kernels &ndash; while the host accessors remain available afterwards; ordering host reads after device writes is the caller's responsibility, exactly as with UnifiedBuffer. </p>
@@ -221,6 +227,67 @@ Static Public Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="ae9b32237ffe628f630f7c74cff31551c" name="ae9b32237ffe628f630f7c74cff31551c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b32237ffe628f630f7c74cff31551c">&#9670;&#160;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1cuda_1_1ManagedResource.html">ManagedResource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1cuda_1_1ManagedResource.html">ManagedResource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a649c0bfd5fa262265e0d400af17b5f5a" name="a649c0bfd5fa262265e0d400af17b5f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a649c0bfd5fa262265e0d400af17b5f5a">&#9670;&#160;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1cuda_1_1ManagedResource.html">ManagedResource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1cuda_1_1ManagedResource.html">ManagedResource</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stateless: memory allocated through one instance may be deallocated through any other, so every two instances compare equal (the equality cuda::mr's resource concepts require). </p>
 
 </div>
 </div>

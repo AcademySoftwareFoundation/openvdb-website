@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -118,9 +118,6 @@ $(function(){initNavTree('structnanovdb_1_1cuda_1_1detail_1_1HandleFactory.html'
 </div><!--header-->
 <div class="contents">
 
-<p>The one gateway for constructing a <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> from a buffer plus metadata that is already known to be valid &ndash; adopted from another handle, whose own construction from raw bytes did the validation.  
- <a href="#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="HandleStorage_8h_source.html">nanovdb/cuda/HandleStorage.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -131,7 +128,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6c2ec7140b49e60d7a3fb0b2c7c23216 template"><td class="memItemLeft" align="right" valign="top">static const std::vector&lt; <a class="el" href="structnanovdb_1_1GridHandleMetaData.html">GridHandleMetaData</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c2ec7140b49e60d7a3fb0b2c7c23216">meta</a> (const <a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a>&lt; BufferT &gt; &amp;handle)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The one gateway for constructing a <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> from a buffer plus metadata that is already known to be valid &ndash; adopted from another handle, whose own construction from raw bytes did the validation. </p>
+<div class="textblock"><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000106">Deprecated</a></b></dt><dd>Use <a class="el" href="classnanovdb_1_1GridHandle.html#a9bea8c755ec680a5c61c308323727c42" title="Constructs a handle over buffer from metadata the caller already knows to describe its contents,...">GridHandle::adopt</a> and <a class="el" href="classnanovdb_1_1GridHandle.html#a6e5294ebc71baf50c38ff1e8f7df311d" title="The layout of the grids in this handle&#39;s buffer: offset, size and grid type of each....">GridHandle::metaData</a>. </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a3bb2f35ccfef3c89bbc0f60560e0552d" name="a3bb2f35ccfef3c89bbc0f60560e0552d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3bb2f35ccfef3c89bbc0f60560e0552d">&#9670;&#160;</a></span>make()</h2>

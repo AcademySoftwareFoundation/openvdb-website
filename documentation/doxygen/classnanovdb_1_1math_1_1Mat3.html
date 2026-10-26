@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -118,43 +118,128 @@ $(function(){initNavTree('classnanovdb_1_1math_1_1Mat3.html','','classnanovdb_1_
 </div><!--header-->
 <div class="contents">
 
+<p>3x3 row-major matrix.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="nanovdb_2nanovdb_2math_2Math_8h_source.html">nanovdb/math/Math.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aecaeabaa9da616ae42bb20787878260d" id="r_aecaeabaa9da616ae42bb20787878260d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#aecaeabaa9da616ae42bb20787878260d">ValueType</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a26af65b41f1b153fdb4b1605f35ab29e" id="r_a26af65b41f1b153fdb4b1605f35ab29e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26af65b41f1b153fdb4b1605f35ab29e">Mat3</a> ()=default</td></tr>
-<tr class="memitem:ac8ec505043242692ce860b8c43af27bd" id="r_ac8ec505043242692ce860b8c43af27bd"><td class="memTemplParams" colspan="2">template&lt;typename Source&gt; </td></tr>
-<tr class="memitem:ac8ec505043242692ce860b8c43af27bd template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8ec505043242692ce860b8c43af27bd">Mat3</a> (Source a, Source b, Source c, Source d, Source e, Source f, Source g, Source h, Source i)</td></tr>
-<tr class="memdesc:ac8ec505043242692ce860b8c43af27bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor given individual array elements, the ordering is in row major form:  <br /></td></tr>
-<tr class="memitem:a77d741ebc09d4082a14c756cb375844f" id="r_a77d741ebc09d4082a14c756cb375844f"><td class="memTemplParams" colspan="2">template&lt;typename Source&gt; </td></tr>
-<tr class="memitem:a77d741ebc09d4082a14c756cb375844f template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77d741ebc09d4082a14c756cb375844f">Mat3</a> (Source *a)</td></tr>
-<tr class="memdesc:a77d741ebc09d4082a14c756cb375844f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor given array of elements, the ordering is in row major form.  <br /></td></tr>
-<tr class="memitem:a25b846221cd3dc640c5469aabf7d9d63" id="r_a25b846221cd3dc640c5469aabf7d9d63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25b846221cd3dc640c5469aabf7d9d63">operator+</a> (const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; &amp;m) const</td></tr>
-<tr class="memdesc:a25b846221cd3dc640c5469aabf7d9d63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add two matrices and return the resulting matrix.  <br /></td></tr>
-<tr class="memitem:a8ffc11383f2474e606750684379ed4ff" id="r_a8ffc11383f2474e606750684379ed4ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1Vec3.html">Vec3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ffc11383f2474e606750684379ed4ff">operator*</a> (const <a class="el" href="classnanovdb_1_1math_1_1Vec3.html">Vec3</a>&lt; T &gt; &amp;v) const</td></tr>
-<tr class="memdesc:a8ffc11383f2474e606750684379ed4ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply by <em class="arg">v</em> and return the resulting vector.  <br /></td></tr>
-<tr class="memitem:ad7e71d8afec499b321e631e50fab28e4" id="r_ad7e71d8afec499b321e631e50fab28e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7e71d8afec499b321e631e50fab28e4">operator*</a> (const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; &amp;m) const</td></tr>
-<tr class="memdesc:ad7e71d8afec499b321e631e50fab28e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply by 3x3 matrix <em class="arg">m</em> and return the resulting matrix.  <br /></td></tr>
-<tr class="memitem:a3e994c04f5c6bd53c1e013ee271d6254" id="r_a3e994c04f5c6bd53c1e013ee271d6254"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e994c04f5c6bd53c1e013ee271d6254">operator+=</a> (const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; &amp;m)</td></tr>
-<tr class="memdesc:a3e994c04f5c6bd53c1e013ee271d6254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add each element of the given matrix to the corresponding element of this matrix.  <br /></td></tr>
-<tr class="memitem:aeda33e0ba3ce6665ed95063880c05204" id="r_aeda33e0ba3ce6665ed95063880c05204"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeda33e0ba3ce6665ed95063880c05204">transpose</a> () const</td></tr>
-<tr class="memdesc:aeda33e0ba3ce6665ed95063880c05204"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns transpose of this  <br /></td></tr>
-<tr class="memitem:a1bface5ea7f7b351839d91a5c888fdcf" id="r_a1bface5ea7f7b351839d91a5c888fdcf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a1bface5ea7f7b351839d91a5c888fdcf">operator[]</a> (int row)</td></tr>
-<tr class="memitem:a21aab8888fc74a73faede34e967cf7f5" id="r_a21aab8888fc74a73faede34e967cf7f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a21aab8888fc74a73faede34e967cf7f5">operator[]</a> (int row) const</td></tr>
+<tr class="memitem:a4b7a9ca6a40532db18b91fdcc714f645" id="r_a4b7a9ca6a40532db18b91fdcc714f645"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b7a9ca6a40532db18b91fdcc714f645">Mat3</a> () noexcept=default</td></tr>
+<tr class="memdesc:a4b7a9ca6a40532db18b91fdcc714f645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default-construct (entries left uninitialized for fundamental <code>T</code>).  <br /></td></tr>
+<tr class="memitem:a34daf943328e7f8de1175ffc5286ac98" id="r_a34daf943328e7f8de1175ffc5286ac98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34daf943328e7f8de1175ffc5286ac98">Mat3</a> (T a, T b, T c, T d, T e, T f, T g, T h, T i) noexcept</td></tr>
+<tr class="memdesc:a34daf943328e7f8de1175ffc5286ac98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor given individual array elements, the ordering is in row major form:  <br /></td></tr>
+<tr class="memitem:a21776084ffdf7b71f691ab47b0ccc683" id="r_a21776084ffdf7b71f691ab47b0ccc683"><td class="memTemplParams" colspan="2">template&lt;typename Source&gt; </td></tr>
+<tr class="memitem:a21776084ffdf7b71f691ab47b0ccc683 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21776084ffdf7b71f691ab47b0ccc683">Mat3</a> (Source *a) noexcept</td></tr>
+<tr class="memdesc:a21776084ffdf7b71f691ab47b0ccc683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor given array of elements, the ordering is in row major form.  <br /></td></tr>
+<tr class="memitem:add04cffe464fa4d7a6a6a31ece255ec8" id="r_add04cffe464fa4d7a6a6a31ece255ec8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add04cffe464fa4d7a6a6a31ece255ec8">operator-</a> () const noexcept</td></tr>
+<tr class="memitem:a9cafa302fd15accd90e80616f56beb55" id="r_a9cafa302fd15accd90e80616f56beb55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cafa302fd15accd90e80616f56beb55">operator+</a> (const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp;m) const noexcept</td></tr>
+<tr class="memitem:afb9b1343b9af0d5ab042d9fd9730792e" id="r_afb9b1343b9af0d5ab042d9fd9730792e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb9b1343b9af0d5ab042d9fd9730792e">operator-</a> (const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp;m) const noexcept</td></tr>
+<tr class="memitem:a7f44fc793264f56b32061ffe2534b17e" id="r_a7f44fc793264f56b32061ffe2534b17e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f44fc793264f56b32061ffe2534b17e">operator+=</a> (const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp;m) noexcept</td></tr>
+<tr class="memitem:a41e898452133ab29d7fa1930f78ef1c5" id="r_a41e898452133ab29d7fa1930f78ef1c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41e898452133ab29d7fa1930f78ef1c5">operator-=</a> (const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp;m) noexcept</td></tr>
+<tr class="memitem:a441d0a2fd88a8942ee0e7059a5702a2e" id="r_a441d0a2fd88a8942ee0e7059a5702a2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a441d0a2fd88a8942ee0e7059a5702a2e">operator*</a> (const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp;m) const noexcept</td></tr>
+<tr class="memitem:ac0ec3f611fe3edb459754d69c2070d7d" id="r_ac0ec3f611fe3edb459754d69c2070d7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Vec3.html">Vec3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0ec3f611fe3edb459754d69c2070d7d">operator*</a> (const <a class="el" href="classnanovdb_1_1math_1_1Vec3.html">Vec3</a>&lt; T &gt; &amp;v) const noexcept</td></tr>
+<tr class="memitem:aa626c28338de428562b5309855d5fe4e" id="r_aa626c28338de428562b5309855d5fe4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa626c28338de428562b5309855d5fe4e">operator*</a> (const T &amp;s) const noexcept</td></tr>
+<tr class="memitem:ab21becec441c3759cc6d94e255a94573" id="r_ab21becec441c3759cc6d94e255a94573"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab21becec441c3759cc6d94e255a94573">operator/</a> (const T &amp;s) const noexcept</td></tr>
+<tr class="memitem:aada37c54f74693daacc67d77e5fd7102" id="r_aada37c54f74693daacc67d77e5fd7102"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aada37c54f74693daacc67d77e5fd7102">operator*=</a> (const T &amp;s) noexcept</td></tr>
+<tr class="memitem:aa742f7c67223b8177e1063a35ba2d53f" id="r_aa742f7c67223b8177e1063a35ba2d53f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa742f7c67223b8177e1063a35ba2d53f">operator/=</a> (const T &amp;s) noexcept</td></tr>
+<tr class="memitem:a8977a436a774f48919a8d9c3f9682fe9" id="r_a8977a436a774f48919a8d9c3f9682fe9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8977a436a774f48919a8d9c3f9682fe9">operator==</a> (const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp;m) const noexcept</td></tr>
+<tr class="memitem:a7706d90ef41905c4cbeeed4039e7d062" id="r_a7706d90ef41905c4cbeeed4039e7d062"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7706d90ef41905c4cbeeed4039e7d062">operator!=</a> (const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp;m) const noexcept</td></tr>
+<tr class="memitem:a179a513b3b37b9fae38601f9dafab000" id="r_a179a513b3b37b9fae38601f9dafab000"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a179a513b3b37b9fae38601f9dafab000">transpose</a> () const noexcept</td></tr>
+<tr class="memdesc:a179a513b3b37b9fae38601f9dafab000"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns transpose of this  <br /></td></tr>
+<tr class="memitem:ad8646259d8b651accdd74ae9940a6f1f" id="r_ad8646259d8b651accdd74ae9940a6f1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#ad8646259d8b651accdd74ae9940a6f1f">operator[]</a> (int row) noexcept</td></tr>
+<tr class="memdesc:ad8646259d8b651accdd74ae9940a6f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D row access. Returns a pointer to the start of <em class="arg">row</em>; the caller indexes into it with the column. Asserts <code>0</code> &lt;= <em class="arg">row</em> &lt; <code>ROWS</code> in debug builds; column index is the caller's responsibility (use <code>0</code> &lt;= col &lt; <code>COLS</code>).  <br /></td></tr>
+<tr class="memitem:ac988e93f8fb254a81a8765ee7c437189" id="r_ac988e93f8fb254a81a8765ee7c437189"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr const T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#ac988e93f8fb254a81a8765ee7c437189">operator[]</a> (int row) const noexcept</td></tr>
+<tr class="memdesc:ac988e93f8fb254a81a8765ee7c437189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const overload of <code><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#ad8646259d8b651accdd74ae9940a6f1f">operator[](int)</a></code>; see non-const variant.  <br /></td></tr>
+<tr class="memitem:a77cb6a92c720f49dec15f6f8bdb3a7aa" id="r_a77cb6a92c720f49dec15f6f8bdb3a7aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a77cb6a92c720f49dec15f6f8bdb3a7aa">data</a> () noexcept</td></tr>
+<tr class="memdesc:a77cb6a92c720f49dec15f6f8bdb3a7aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a raw pointer to the underlying 1D storage (row-major)  <br /></td></tr>
+<tr class="memitem:a2aba7099546f97fecc4813a85f010d53" id="r_a2aba7099546f97fecc4813a85f010d53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr const T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a2aba7099546f97fecc4813a85f010d53">data</a> () const noexcept</td></tr>
+<tr class="memdesc:a2aba7099546f97fecc4813a85f010d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a const raw pointer to the underlying 1D storage (row-major)  <br /></td></tr>
+<tr class="memitem:a2785ee0488f3ac55adc337053a0f77d4" id="r_a2785ee0488f3ac55adc337053a0f77d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Derived&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a2785ee0488f3ac55adc337053a0f77d4">plus</a> (const Derived &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a2785ee0488f3ac55adc337053a0f77d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">return <code>*this</code> + <em class="arg">rhs</em> as a <code>Derived</code>  <br /></td></tr>
+<tr class="memitem:a88a148bab0abd82985b0f0890b4564bb" id="r_a88a148bab0abd82985b0f0890b4564bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Derived&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a88a148bab0abd82985b0f0890b4564bb">minus</a> (const Derived &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a88a148bab0abd82985b0f0890b4564bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">return <code>*this</code> - <em class="arg">rhs</em> as a <code>Derived</code>  <br /></td></tr>
+<tr class="memitem:a1554b0ba492c47bb7bd40fae8a02bcc5" id="r_a1554b0ba492c47bb7bd40fae8a02bcc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Derived&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a1554b0ba492c47bb7bd40fae8a02bcc5">negate</a> () const noexcept</td></tr>
+<tr class="memdesc:a1554b0ba492c47bb7bd40fae8a02bcc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">return -(*this) as a <code>Derived</code>  <br /></td></tr>
+<tr class="memitem:af6a3077ff02348baf0b17054d703f62c" id="r_af6a3077ff02348baf0b17054d703f62c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Derived&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#af6a3077ff02348baf0b17054d703f62c">scale</a> (T s) const noexcept</td></tr>
+<tr class="memdesc:af6a3077ff02348baf0b17054d703f62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">return <em class="arg">s</em> * (*this) as a <code>Derived</code>  <br /></td></tr>
+<tr class="memitem:ab97625ecbd488e208d23f6d8ca9af719" id="r_ab97625ecbd488e208d23f6d8ca9af719"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#ab97625ecbd488e208d23f6d8ca9af719">addAssign</a> (const <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a> &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:ab97625ecbd488e208d23f6d8ca9af719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element-wise add <em class="arg">rhs</em> into <code>*this</code> and return <code>*this</code>.  <br /></td></tr>
+<tr class="memitem:a6a1def8049f5439b3d5c21053bdeb8a4" id="r_a6a1def8049f5439b3d5c21053bdeb8a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a6a1def8049f5439b3d5c21053bdeb8a4">subAssign</a> (const <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a> &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:a6a1def8049f5439b3d5c21053bdeb8a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element-wise subtract <em class="arg">rhs</em> from <code>*this</code> and return <code>*this</code>.  <br /></td></tr>
+<tr class="memitem:a2249bfe974ab78958a65d92b3b42b5c9" id="r_a2249bfe974ab78958a65d92b3b42b5c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a2249bfe974ab78958a65d92b3b42b5c9">scaleAssign</a> (T s) noexcept</td></tr>
+<tr class="memdesc:a2249bfe974ab78958a65d92b3b42b5c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiply every element by scalar <em class="arg">s</em> in place; return <code>*this</code>. <em class="arg">s</em> is taken by value so <code>m</code> *= m[0][0] scales every element by the original value.  <br /></td></tr>
+<tr class="memitem:a922e73b6556592e55839d5bd23754760" id="r_a922e73b6556592e55839d5bd23754760"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Derived&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a922e73b6556592e55839d5bd23754760">divideBy</a> (T s) const noexcept</td></tr>
+<tr class="memdesc:a922e73b6556592e55839d5bd23754760"><td class="mdescLeft">&#160;</td><td class="mdescRight">return (*this) / <em class="arg">s</em> element-wise as a <code>Derived</code>. Floating-point <code>T</code> multiplies by the reciprocal <code>1/s</code>; integer <code>T</code> divides each element, since <code>1/s</code> would truncate to zero.  <br /></td></tr>
+<tr class="memitem:a2461a43cc2792f0da31e497a279d8c02" id="r_a2461a43cc2792f0da31e497a279d8c02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a2461a43cc2792f0da31e497a279d8c02">divideAssignScalar</a> (T s) noexcept</td></tr>
+<tr class="memdesc:a2461a43cc2792f0da31e497a279d8c02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide every element by scalar <em class="arg">s</em> in place; return <code>*this</code>. Uses the same floating-point reciprocal / integer per-element split as <code>divideBy</code>. <em class="arg">s</em> is taken by value so <code>m</code> /= m[0][0] is safe.  <br /></td></tr>
+<tr class="memitem:a443cd09187aa4f1eb7a6f696342f1eee" id="r_a443cd09187aa4f1eb7a6f696342f1eee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a443cd09187aa4f1eb7a6f696342f1eee">equals</a> (const <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a> &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a443cd09187aa4f1eb7a6f696342f1eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> iff every element compares equal to <em class="arg">rhs</em>.  <br /></td></tr>
+<tr class="memitem:a62ea538bc9a38d82edb82f3bf152b5e3" id="r_a62ea538bc9a38d82edb82f3bf152b5e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a62ea538bc9a38d82edb82f3bf152b5e3">transposeAs</a> () const noexcept</td></tr>
+<tr class="memdesc:a62ea538bc9a38d82edb82f3bf152b5e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the transpose of <code>*this</code> as the <code>Result</code> type.  <br /></td></tr>
+<tr class="memitem:a086f74252094ff95620ce4bec925a225" id="r_a086f74252094ff95620ce4bec925a225"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a086f74252094ff95620ce4bec925a225">multiply</a> (const Rhs &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:a086f74252094ff95620ce4bec925a225"><td class="mdescLeft">&#160;</td><td class="mdescRight">return (*this) * <em class="arg">rhs</em> as the <code>Result</code> type.  <br /></td></tr>
+<tr class="memitem:ac9066f7f5bbda619562c5518b129d101" id="r_ac9066f7f5bbda619562c5518b129d101"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr VecResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#ac9066f7f5bbda619562c5518b129d101">multiplyVec</a> (const VecRhs &amp;v) const noexcept</td></tr>
+<tr class="memdesc:ac9066f7f5bbda619562c5518b129d101"><td class="mdescLeft">&#160;</td><td class="mdescRight">return (*this) * <em class="arg">v</em> as the <code>VecResult</code> type.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:abae6b80e68b7a236db033e5f54413f8b" id="r_abae6b80e68b7a236db033e5f54413f8b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#abae6b80e68b7a236db033e5f54413f8b">rows</a> () noexcept</td></tr>
+<tr class="memdesc:abae6b80e68b7a236db033e5f54413f8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile-time row count.  <br /></td></tr>
+<tr class="memitem:a51c9383c45542616c638540e24e60c2c" id="r_a51c9383c45542616c638540e24e60c2c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a51c9383c45542616c638540e24e60c2c">cols</a> () noexcept</td></tr>
+<tr class="memdesc:a51c9383c45542616c638540e24e60c2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile-time column count.  <br /></td></tr>
+<tr class="memitem:a99dc2c20772632f1da7cf6ea0c9308ab" id="r_a99dc2c20772632f1da7cf6ea0c9308ab"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a99dc2c20772632f1da7cf6ea0c9308ab">size</a> () noexcept</td></tr>
+<tr class="memdesc:a99dc2c20772632f1da7cf6ea0c9308ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile-time element count, i.e. <code>ROWS</code> * <code>COLS</code>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-static-methods" class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:a36961f23ce2653ac605ebf60f072094e" id="r_a36961f23ce2653ac605ebf60f072094e"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a36961f23ce2653ac605ebf60f072094e">rows</a> ()</td></tr>
-<tr class="memitem:a30028487a9fe10bbca1dbeb625621055" id="r_a30028487a9fe10bbca1dbeb625621055"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a30028487a9fe10bbca1dbeb625621055">cols</a> ()</td></tr>
-<tr class="memitem:aae5b348c2238a925b9485ab0709d56d5" id="r_aae5b348c2238a925b9485ab0709d56d5"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#aae5b348c2238a925b9485ab0709d56d5">size</a> ()</td></tr>
+<tr class="memitem:aeda9b1d95ed17490186ce5748a90f6d5" id="r_aeda9b1d95ed17490186ce5748a90f6d5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#aeda9b1d95ed17490186ce5748a90f6d5">generate</a> (F f, std::integer_sequence&lt; int, I... &gt;) noexcept</td></tr>
+<tr class="memdesc:aeda9b1d95ed17490186ce5748a90f6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a <code>Result</code> whose row-major element <code>idx</code> is <code>f(idx)</code>, built through its <em class="arg">Count-element</em> constructor. This is constexpr-valid in C++17 without first value-initializing a result and overwriting it.  <br /></td></tr>
+<tr class="memitem:a50715ab3976fed6f9eeee5e91a6a3b34" id="r_a50715ab3976fed6f9eeee5e91a6a3b34"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a50715ab3976fed6f9eeee5e91a6a3b34">generate</a> (F f) noexcept</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a30e3acd68df89f33f44d8cb0bb72ded4" id="r_a30e3acd68df89f33f44d8cb0bb72ded4"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#a30e3acd68df89f33f44d8cb0bb72ded4">mData</a> [ROWS *COLS]</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a5131bb5e59eef15d23ceed055db70569" id="r_a5131bb5e59eef15d23ceed055db70569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> friend constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5131bb5e59eef15d23ceed055db70569">operator*</a> (const T &amp;s, const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp;m) noexcept</td></tr>
+<tr class="memdesc:a5131bb5e59eef15d23ceed055db70569"><td class="mdescLeft">&#160;</td><td class="mdescRight">scalar * Mat (hidden friend — found only via ADL on <a class="el" href="classnanovdb_1_1math_1_1Mat3.html" title="3x3 row-major matrix.">Mat3</a>)  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+class nanovdb::math::Mat3&lt; T &gt;</div><p>3x3 row-major matrix. </p>
+<p>Intentionally NOT <code>alignas-elevated</code>: its byte size (9*sizeof(T)) is not a power-of-2 multiple of <code>alignof(T)</code>, so any <code>alignas(N &gt; alignof(T))</code> would force tail padding and break packed-array layout plus on-disk format compatibility. </p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
+<a id="aecaeabaa9da616ae42bb20787878260d" name="aecaeabaa9da616ae42bb20787878260d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecaeabaa9da616ae42bb20787878260d">&#9670;&#160;</a></span>ValueType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classnanovdb_1_1math_1_1MatBase.html#aecaeabaa9da616ae42bb20787878260d">ValueType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a26af65b41f1b153fdb4b1605f35ab29e" name="a26af65b41f1b153fdb4b1605f35ab29e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26af65b41f1b153fdb4b1605f35ab29e">&#9670;&#160;</a></span>Mat3() <span class="overload">[1/3]</span></h2>
+<a id="a4b7a9ca6a40532db18b91fdcc714f645" name="a4b7a9ca6a40532db18b91fdcc714f645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7a9ca6a40532db18b91fdcc714f645">&#9670;&#160;</a></span>Mat3() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,75 +258,75 @@ template&lt;typename T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel default">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel default">default</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Default-construct (entries left uninitialized for fundamental <code>T</code>). </p>
+
 </div>
 </div>
-<a id="ac8ec505043242692ce860b8c43af27bd" name="ac8ec505043242692ce860b8c43af27bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8ec505043242692ce860b8c43af27bd">&#9670;&#160;</a></span>Mat3() <span class="overload">[2/3]</span></h2>
+<a id="a34daf943328e7f8de1175ffc5286ac98" name="a34daf943328e7f8de1175ffc5286ac98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34daf943328e7f8de1175ffc5286ac98">&#9670;&#160;</a></span>Mat3() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T&gt; </div>
-<div class="memtemplate">
-template&lt;typename Source&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> </td>
           <td>(</td>
-          <td class="paramtype">Source</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Source</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Source</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Source</td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Source</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Source</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Source</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Source</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Source</td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>i</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -253,8 +338,8 @@ g h i
 </pre> 
 </div>
 </div>
-<a id="a77d741ebc09d4082a14c756cb375844f" name="a77d741ebc09d4082a14c756cb375844f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77d741ebc09d4082a14c756cb375844f">&#9670;&#160;</a></span>Mat3() <span class="overload">[3/3]</span></h2>
+<a id="a21776084ffdf7b71f691ab47b0ccc683" name="a21776084ffdf7b71f691ab47b0ccc683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21776084ffdf7b71f691ab47b0ccc683">&#9670;&#160;</a></span>Mat3() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -267,7 +352,7 @@ template&lt;typename Source&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> </td>
           <td>(</td>
           <td class="paramtype">Source *</td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
           <td></td>
@@ -275,7 +360,7 @@ template&lt;typename Source&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -285,8 +370,8 @@ template&lt;typename Source&gt; </div>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a30028487a9fe10bbca1dbeb625621055" name="a30028487a9fe10bbca1dbeb625621055"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30028487a9fe10bbca1dbeb625621055">&#9670;&#160;</a></span>cols()</h2>
+<a id="ab97625ecbd488e208d23f6d8ca9af719" name="ab97625ecbd488e208d23f6d8ca9af719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab97625ecbd488e208d23f6d8ca9af719">&#9670;&#160;</a></span>addAssign()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -295,7 +380,34 @@ template&lt;typename Source&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr int cols </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a> &amp; addAssign </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a>&lt; T, 3, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Element-wise add <em class="arg">rhs</em> into <code>*this</code> and return <code>*this</code>. </p>
+
+</div>
+</div>
+<a id="a51c9383c45542616c638540e24e60c2c" name="a51c9383c45542616c638540e24e60c2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c9383c45542616c638540e24e60c2c">&#9670;&#160;</a></span>cols()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr int cols </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -303,15 +415,330 @@ template&lt;typename Source&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compile-time column count. </p>
+
+</div>
+</div>
+<a id="a2aba7099546f97fecc4813a85f010d53" name="a2aba7099546f97fecc4813a85f010d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aba7099546f97fecc4813a85f010d53">&#9670;&#160;</a></span>data() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr const T * data </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return a const raw pointer to the underlying 1D storage (row-major) </p>
+
+</div>
+</div>
+<a id="a77cb6a92c720f49dec15f6f8bdb3a7aa" name="a77cb6a92c720f49dec15f6f8bdb3a7aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77cb6a92c720f49dec15f6f8bdb3a7aa">&#9670;&#160;</a></span>data() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr T * data </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return a raw pointer to the underlying 1D storage (row-major) </p>
+
+</div>
+</div>
+<a id="a2461a43cc2792f0da31e497a279d8c02" name="a2461a43cc2792f0da31e497a279d8c02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2461a43cc2792f0da31e497a279d8c02">&#9670;&#160;</a></span>divideAssignScalar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a> &amp; divideAssignScalar </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Divide every element by scalar <em class="arg">s</em> in place; return <code>*this</code>. Uses the same floating-point reciprocal / integer per-element split as <code>divideBy</code>. <em class="arg">s</em> is taken by value so <code>m</code> /= m[0][0] is safe. </p>
+
+</div>
+</div>
+<a id="a922e73b6556592e55839d5bd23754760" name="a922e73b6556592e55839d5bd23754760"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a922e73b6556592e55839d5bd23754760">&#9670;&#160;</a></span>divideBy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Derived divideBy </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return (*this) / <em class="arg">s</em> element-wise as a <code>Derived</code>. Floating-point <code>T</code> multiplies by the reciprocal <code>1/s</code>; integer <code>T</code> divides each element, since <code>1/s</code> would truncate to zero. </p>
+
+</div>
+</div>
+<a id="a443cd09187aa4f1eb7a6f696342f1eee" name="a443cd09187aa4f1eb7a6f696342f1eee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a443cd09187aa4f1eb7a6f696342f1eee">&#9670;&#160;</a></span>equals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr bool equals </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a>&lt; T, 3, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return <code>true</code> iff every element compares equal to <em class="arg">rhs</em>. </p>
+
+</div>
+</div>
+<a id="a50715ab3976fed6f9eeee5e91a6a3b34" name="a50715ab3976fed6f9eeee5e91a6a3b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50715ab3976fed6f9eeee5e91a6a3b34">&#9670;&#160;</a></span>generate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Result generate </td>
+          <td>(</td>
+          <td class="paramtype">F</td>          <td class="paramname"><span class="paramname"><em>f</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel protected">protected</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad7e71d8afec499b321e631e50fab28e4" name="ad7e71d8afec499b321e631e50fab28e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7e71d8afec499b321e631e50fab28e4">&#9670;&#160;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+<a id="aeda9b1d95ed17490186ce5748a90f6d5" name="aeda9b1d95ed17490186ce5748a90f6d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeda9b1d95ed17490186ce5748a90f6d5">&#9670;&#160;</a></span>generate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Result generate </td>
+          <td>(</td>
+          <td class="paramtype">F</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::integer_sequence&lt; int, I... &gt;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel protected">protected</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return a <code>Result</code> whose row-major element <code>idx</code> is <code>f(idx)</code>, built through its <em class="arg">Count-element</em> constructor. This is constexpr-valid in C++17 without first value-initializing a result and overwriting it. </p>
+
+</div>
+</div>
+<a id="a88a148bab0abd82985b0f0890b4564bb" name="a88a148bab0abd82985b0f0890b4564bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88a148bab0abd82985b0f0890b4564bb">&#9670;&#160;</a></span>minus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Derived minus </td>
+          <td>(</td>
+          <td class="paramtype">const Derived &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return <code>*this</code> - <em class="arg">rhs</em> as a <code>Derived</code> </p>
+
+</div>
+</div>
+<a id="a086f74252094ff95620ce4bec925a225" name="a086f74252094ff95620ce4bec925a225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a086f74252094ff95620ce4bec925a225">&#9670;&#160;</a></span>multiply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Result multiply </td>
+          <td>(</td>
+          <td class="paramtype">const Rhs &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return (*this) * <em class="arg">rhs</em> as the <code>Result</code> type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Result</td><td>a matrix type whose dimensions are (ROWS, Rhs::cols()) </td></tr>
+    <tr><td class="paramname">Rhs</td><td>a matrix type whose row count equals <code>COLS</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac9066f7f5bbda619562c5518b129d101" name="ac9066f7f5bbda619562c5518b129d101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9066f7f5bbda619562c5518b129d101">&#9670;&#160;</a></span>multiplyVec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr VecResult multiplyVec </td>
+          <td>(</td>
+          <td class="paramtype">const VecRhs &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return (*this) * <em class="arg">v</em> as the <code>VecResult</code> type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">VecResult</td><td>a vector type whose <code>SIZE</code> equals <code>ROWS</code> </td></tr>
+    <tr><td class="paramname">VecRhs</td><td>a vector type whose <code>SIZE</code> equals <code>COLS</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1554b0ba492c47bb7bd40fae8a02bcc5" name="a1554b0ba492c47bb7bd40fae8a02bcc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1554b0ba492c47bb7bd40fae8a02bcc5">&#9670;&#160;</a></span>negate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Derived negate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return -(*this) as a <code>Derived</code> </p>
+
+</div>
+</div>
+<a id="a7706d90ef41905c4cbeeed4039e7d062" name="a7706d90ef41905c4cbeeed4039e7d062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7706d90ef41905c4cbeeed4039e7d062">&#9670;&#160;</a></span>operator!=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,7 +749,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; operator* </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr bool operator!= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
           <td> const</td>
@@ -330,17 +757,15 @@ template&lt;typename T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Multiply by 3x3 matrix <em class="arg">m</em> and return the resulting matrix. </p>
-
 </div>
 </div>
-<a id="a8ffc11383f2474e606750684379ed4ff" name="a8ffc11383f2474e606750684379ed4ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ffc11383f2474e606750684379ed4ff">&#9670;&#160;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+<a id="a441d0a2fd88a8942ee0e7059a5702a2e" name="a441d0a2fd88a8942ee0e7059a5702a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a441d0a2fd88a8942ee0e7059a5702a2e">&#9670;&#160;</a></span>operator*() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,7 +776,61 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1Vec3.html">Vec3</a>&lt; T &gt; operator* </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa626c28338de428562b5309855d5fe4e" name="aa626c28338de428562b5309855d5fe4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa626c28338de428562b5309855d5fe4e">&#9670;&#160;</a></span>operator*() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0ec3f611fe3edb459754d69c2070d7d" name="ac0ec3f611fe3edb459754d69c2070d7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0ec3f611fe3edb459754d69c2070d7d">&#9670;&#160;</a></span>operator*() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Vec3.html">Vec3</a>&lt; T &gt; operator* </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1Vec3.html">Vec3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
           <td> const</td>
@@ -359,17 +838,15 @@ template&lt;typename T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Multiply by <em class="arg">v</em> and return the resulting vector. </p>
-
 </div>
 </div>
-<a id="a25b846221cd3dc640c5469aabf7d9d63" name="a25b846221cd3dc640c5469aabf7d9d63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25b846221cd3dc640c5469aabf7d9d63">&#9670;&#160;</a></span>operator+()</h2>
+<a id="aada37c54f74693daacc67d77e5fd7102" name="aada37c54f74693daacc67d77e5fd7102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada37c54f74693daacc67d77e5fd7102">&#9670;&#160;</a></span>operator*=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -380,7 +857,34 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; operator+ </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp; operator*= </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cafa302fd15accd90e80616f56beb55" name="a9cafa302fd15accd90e80616f56beb55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cafa302fd15accd90e80616f56beb55">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> operator+ </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
           <td> const</td>
@@ -388,17 +892,15 @@ template&lt;typename T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Add two matrices and return the resulting matrix. </p>
-
 </div>
 </div>
-<a id="a3e994c04f5c6bd53c1e013ee271d6254" name="a3e994c04f5c6bd53c1e013ee271d6254"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e994c04f5c6bd53c1e013ee271d6254">&#9670;&#160;</a></span>operator+=()</h2>
+<a id="a7f44fc793264f56b32061ffe2534b17e" name="a7f44fc793264f56b32061ffe2534b17e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f44fc793264f56b32061ffe2534b17e">&#9670;&#160;</a></span>operator+=()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -409,7 +911,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; &amp; operator+= </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp; operator+= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
           <td></td>
@@ -417,117 +919,15 @@ template&lt;typename T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Add each element of the given matrix to the corresponding element of this matrix. </p>
-
-</div>
-</div>
-<a id="a1bface5ea7f7b351839d91a5c888fdcf" name="a1bface5ea7f7b351839d91a5c888fdcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bface5ea7f7b351839d91a5c888fdcf">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> T * operator[] </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>row</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel inherited">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a21aab8888fc74a73faede34e967cf7f5" name="a21aab8888fc74a73faede34e967cf7f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21aab8888fc74a73faede34e967cf7f5">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const T * operator[] </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>row</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a36961f23ce2653ac605ebf60f072094e" name="a36961f23ce2653ac605ebf60f072094e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36961f23ce2653ac605ebf60f072094e">&#9670;&#160;</a></span>rows()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr int rows </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aae5b348c2238a925b9485ab0709d56d5" name="aae5b348c2238a925b9485ab0709d56d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae5b348c2238a925b9485ab0709d56d5">&#9670;&#160;</a></span>size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr int size </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel protected">protected</span><span class="mlabel inherited">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aeda33e0ba3ce6665ed95063880c05204" name="aeda33e0ba3ce6665ed95063880c05204"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeda33e0ba3ce6665ed95063880c05204">&#9670;&#160;</a></span>transpose()</h2>
+<a id="add04cffe464fa4d7a6a6a31ece255ec8" name="add04cffe464fa4d7a6a6a31ece255ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add04cffe464fa4d7a6a6a31ece255ec8">&#9670;&#160;</a></span>operator-() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -538,7 +938,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> transpose </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> operator- </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -546,12 +946,457 @@ template&lt;typename T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb9b1343b9af0d5ab042d9fd9730792e" name="afb9b1343b9af0d5ab042d9fd9730792e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb9b1343b9af0d5ab042d9fd9730792e">&#9670;&#160;</a></span>operator-() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41e898452133ab29d7fa1930f78ef1c5" name="a41e898452133ab29d7fa1930f78ef1c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41e898452133ab29d7fa1930f78ef1c5">&#9670;&#160;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp; operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab21becec441c3759cc6d94e255a94573" name="ab21becec441c3759cc6d94e255a94573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab21becec441c3759cc6d94e255a94573">&#9670;&#160;</a></span>operator/()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa742f7c67223b8177e1063a35ba2d53f" name="aa742f7c67223b8177e1063a35ba2d53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa742f7c67223b8177e1063a35ba2d53f">&#9670;&#160;</a></span>operator/=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> &amp; operator/= </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8977a436a774f48919a8d9c3f9682fe9" name="a8977a436a774f48919a8d9c3f9682fe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8977a436a774f48919a8d9c3f9682fe9">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac988e93f8fb254a81a8765ee7c437189" name="ac988e93f8fb254a81a8765ee7c437189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac988e93f8fb254a81a8765ee7c437189">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr const T * operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>row</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Const overload of <code><a class="el" href="classnanovdb_1_1math_1_1MatBase.html#ad8646259d8b651accdd74ae9940a6f1f">operator[](int)</a></code>; see non-const variant. </p>
+
+</div>
+</div>
+<a id="ad8646259d8b651accdd74ae9940a6f1f" name="ad8646259d8b651accdd74ae9940a6f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8646259d8b651accdd74ae9940a6f1f">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr T * operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>row</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>2D row access. Returns a pointer to the start of <em class="arg">row</em>; the caller indexes into it with the column. Asserts <code>0</code> &lt;= <em class="arg">row</em> &lt; <code>ROWS</code> in debug builds; column index is the caller's responsibility (use <code>0</code> &lt;= col &lt; <code>COLS</code>). </p>
+
+</div>
+</div>
+<a id="a2785ee0488f3ac55adc337053a0f77d4" name="a2785ee0488f3ac55adc337053a0f77d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2785ee0488f3ac55adc337053a0f77d4">&#9670;&#160;</a></span>plus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Derived plus </td>
+          <td>(</td>
+          <td class="paramtype">const Derived &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return <code>*this</code> + <em class="arg">rhs</em> as a <code>Derived</code> </p>
+
+</div>
+</div>
+<a id="abae6b80e68b7a236db033e5f54413f8b" name="abae6b80e68b7a236db033e5f54413f8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abae6b80e68b7a236db033e5f54413f8b">&#9670;&#160;</a></span>rows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr int rows </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compile-time row count. </p>
+
+</div>
+</div>
+<a id="af6a3077ff02348baf0b17054d703f62c" name="af6a3077ff02348baf0b17054d703f62c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6a3077ff02348baf0b17054d703f62c">&#9670;&#160;</a></span>scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Derived scale </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return <em class="arg">s</em> * (*this) as a <code>Derived</code> </p>
+
+</div>
+</div>
+<a id="a2249bfe974ab78958a65d92b3b42b5c9" name="a2249bfe974ab78958a65d92b3b42b5c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2249bfe974ab78958a65d92b3b42b5c9">&#9670;&#160;</a></span>scaleAssign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a> &amp; scaleAssign </td>
+          <td>(</td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Multiply every element by scalar <em class="arg">s</em> in place; return <code>*this</code>. <em class="arg">s</em> is taken by value so <code>m</code> *= m[0][0] scales every element by the original value. </p>
+
+</div>
+</div>
+<a id="a99dc2c20772632f1da7cf6ea0c9308ab" name="a99dc2c20772632f1da7cf6ea0c9308ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99dc2c20772632f1da7cf6ea0c9308ab">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr int size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compile-time element count, i.e. <code>ROWS</code> * <code>COLS</code>. </p>
+
+</div>
+</div>
+<a id="a6a1def8049f5439b3d5c21053bdeb8a4" name="a6a1def8049f5439b3d5c21053bdeb8a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a1def8049f5439b3d5c21053bdeb8a4">&#9670;&#160;</a></span>subAssign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a> &amp; subAssign </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1MatBase.html">MatBase</a>&lt; T, 3, 3 &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Element-wise subtract <em class="arg">rhs</em> from <code>*this</code> and return <code>*this</code>. </p>
+
+</div>
+</div>
+<a id="a179a513b3b37b9fae38601f9dafab000" name="a179a513b3b37b9fae38601f9dafab000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a179a513b3b37b9fae38601f9dafab000">&#9670;&#160;</a></span>transpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> transpose </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>returns transpose of this </p>
+
+</div>
+</div>
+<a id="a62ea538bc9a38d82edb82f3bf152b5e3" name="a62ea538bc9a38d82edb82f3bf152b5e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62ea538bc9a38d82edb82f3bf152b5e3">&#9670;&#160;</a></span>transposeAs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Result transposeAs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel nodiscard">nodiscard</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span><span class="mlabel inherited">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return the transpose of <code>*this</code> as the <code>Result</code> type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Result</td><td>a matrix type whose dimensions are (COLS, ROWS) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="a5131bb5e59eef15d23ceed055db70569" name="a5131bb5e59eef15d23ceed055db70569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5131bb5e59eef15d23ceed055db70569">&#9670;&#160;</a></span>operator*</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> friend constexpr <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnanovdb_1_1math_1_1Mat3.html">Mat3</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>m</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>scalar * Mat (hidden friend — found only via ADL on <a class="el" href="classnanovdb_1_1math_1_1Mat3.html" title="3x3 row-major matrix.">Mat3</a>) </p>
 
 </div>
 </div>

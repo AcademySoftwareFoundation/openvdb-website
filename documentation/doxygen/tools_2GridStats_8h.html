@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -121,6 +121,7 @@ $(function(){initNavTree('tools_2GridStats_8h.html','',''); });
 <p>Re-computes min/max/avg/var/bbox information for each node in a pre-existing NanoVDB grid.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="NanoVDB_8h_source.html">nanovdb/NanoVDB.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="HalfLite_8h_source.html">nanovdb/math/HalfLite.h</a>&gt;</code><br />
 <code>#include &lt;limits.h&gt;</code><br />
 <code>#include &lt;atomic&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
@@ -134,10 +135,14 @@ Classes</h2></td></tr>
 <tr class="memitem:Extrema_3C_20VecT_2C_201_20_3E" id="r_Extrema_3C_20VecT_2C_201_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html">Extrema&lt; VecT, 1 &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of <a class="el" href="classnanovdb_1_1tools_1_1Extrema.html">Extrema</a> on vector value types, i.e. rank = 1.  <a href="classnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Extrema_3C_20VecT_2C_201_20_3E_3A_3APair" id="r_Extrema_3C_20VecT_2C_201_20_3E_3A_3APair"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1tools_1_1Extrema_3_01VecT_00_011_01_4_1_1Pair.html">Extrema&lt; VecT, 1 &gt;::Pair</a></td></tr>
+<tr class="memitem:Extrema_3C_20nanovdb_3A_3AHalf_2C_200_20_3E" id="r_Extrema_3C_20nanovdb_3A_3AHalf_2C_200_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1tools_1_1Extrema_3_01nanovdb_1_1Half_00_010_01_4.html">Extrema&lt; nanovdb::Half, 0 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization of <a class="el" href="classnanovdb_1_1tools_1_1Extrema.html">Extrema</a> on scalar <a class="el" href="classnanovdb_1_1Half.html" title="Type containing raw 16 bits for half precision floating point values (IEEE 754 Half)">Half</a> precision value types, i.e. rank = 0.  <a href="classnanovdb_1_1tools_1_1Extrema_3_01nanovdb_1_1Half_00_010_01_4.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Stats_3C_20ValueT_2C_200_20_3E" id="r_Stats_3C_20ValueT_2C_200_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html">Stats&lt; ValueT, 0 &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class computes statistics (minimum value, maximum value, mean, variance and standard deviation) of a population of floating-point values.  <a href="classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_010_01_4.html#details">More...</a><br /></td></tr>
 <tr class="memitem:Stats_3C_20ValueT_2C_201_20_3E" id="r_Stats_3C_20ValueT_2C_201_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_011_01_4.html">Stats&lt; ValueT, 1 &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class computes statistics (minimum value, maximum value, mean, variance and standard deviation) of a population of floating-point values.  <a href="classnanovdb_1_1tools_1_1Stats_3_01ValueT_00_011_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Stats_3C_20nanovdb_3A_3AHalf_2C_200_20_3E" id="r_Stats_3C_20nanovdb_3A_3AHalf_2C_200_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1tools_1_1Stats_3_01nanovdb_1_1Half_00_010_01_4.html">Stats&lt; nanovdb::Half, 0 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class computes statistics (minimum value, maximum value, mean, variance and standard deviation) of a population of half precision floating-point values.  <a href="classnanovdb_1_1tools_1_1Stats_3_01nanovdb_1_1Half_00_010_01_4.html#details">More...</a><br /></td></tr>
 <tr class="memitem:NoopStats_3C_20ValueT_20_3E" id="r_NoopStats_3C_20ValueT_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1tools_1_1NoopStats.html">NoopStats&lt; ValueT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">No-op <a class="el" href="classnanovdb_1_1tools_1_1Stats.html">Stats</a> class.  <a href="structnanovdb_1_1tools_1_1NoopStats.html#details">More...</a><br /></td></tr>
 <tr class="memitem:GridStats_3C_20GridT_2C_20StatsT_20_3E" id="r_GridStats_3C_20GridT_2C_20StatsT_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1tools_1_1GridStats.html">GridStats&lt; GridT, StatsT &gt;</a></td></tr>

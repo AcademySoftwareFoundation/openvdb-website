@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -125,10 +125,10 @@ $(function(){initNavTree('structnanovdb_1_1DimAndActive.html','','structnanovdb_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5ebe75917b14332a2eb49793bfc2411b" id="r_a5ebe75917b14332a2eb49793bfc2411b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ebe75917b14332a2eb49793bfc2411b">DimAndActive</a> ()</td></tr>
-<tr class="memitem:ac64649b7441379b7c2bac617118c0a64" id="r_ac64649b7441379b7c2bac617118c0a64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac64649b7441379b7c2bac617118c0a64">DimAndActive</a> (uint32_t d, bool a)</td></tr>
-<tr class="memitem:a6c79d76b688bb71f8ee8d6e545c59b67" id="r_a6c79d76b688bb71f8ee8d6e545c59b67"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c79d76b688bb71f8ee8d6e545c59b67">dim</a> () const</td></tr>
-<tr class="memitem:ad9735e23cb0888fb98e1c5893aecff7e" id="r_ad9735e23cb0888fb98e1c5893aecff7e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9735e23cb0888fb98e1c5893aecff7e">active</a> () const</td></tr>
+<tr class="memitem:a1e040bcce4c0e08cb3b4f7d9e33274f5" id="r_a1e040bcce4c0e08cb3b4f7d9e33274f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e040bcce4c0e08cb3b4f7d9e33274f5">DimAndActive</a> ()</td></tr>
+<tr class="memitem:ad8f9090075fd4d39a12aa28b67fc9958" id="r_ad8f9090075fd4d39a12aa28b67fc9958"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8f9090075fd4d39a12aa28b67fc9958">DimAndActive</a> (uint32_t d, bool a)</td></tr>
+<tr class="memitem:a21eeff160f4bb66778040b042f3437ec" id="r_a21eeff160f4bb66778040b042f3437ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21eeff160f4bb66778040b042f3437ec">dim</a> () const</td></tr>
+<tr class="memitem:a6b7dc1de84b6160fe5cde2da76c94fbc" id="r_a6b7dc1de84b6160fe5cde2da76c94fbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b7dc1de84b6160fe5cde2da76c94fbc">active</a> () const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -136,10 +136,10 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Result of a fused ReadAccessor::getDimAndActive traversal: the getDim(ijk, ray) step size and the policy-dependent active state of <em class="arg">ijk</em>. </p>
-<p>The low 31 bits store <code>dim</code> and bit 31 stores <code>active</code>, saving one live return register versus {uint32_t, bool}. The default <a class="el" href="namespacenanovdb.html#aea5691a16e345b5c9ccfecc9bd421aa3">FloatTree</a>'s upper-node maximum is 4096. The constructor supports <span class="tt">return {dim, active}</span>; <a class="el" href="#a6c79d76b688bb71f8ee8d6e545c59b67">dim()</a> and <a class="el" href="#ad9735e23cb0888fb98e1c5893aecff7e">active()</a> decode the packed value. </p>
+<p>The low 31 bits store <code>dim</code> and bit 31 stores <code>active</code>, saving one live return register versus {uint32_t, bool}. The default <a class="el" href="namespacenanovdb.html#aea5691a16e345b5c9ccfecc9bd421aa3">FloatTree</a>'s upper-node maximum is 4096. The constructor supports <span class="tt">return {dim, active}</span>; <a class="el" href="#a21eeff160f4bb66778040b042f3437ec">dim()</a> and <a class="el" href="#a6b7dc1de84b6160fe5cde2da76c94fbc">active()</a> decode the packed value. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5ebe75917b14332a2eb49793bfc2411b" name="a5ebe75917b14332a2eb49793bfc2411b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ebe75917b14332a2eb49793bfc2411b">&#9670;&#160;</a></span>DimAndActive() <span class="overload">[1/2]</span></h2>
+<a id="a1e040bcce4c0e08cb3b4f7d9e33274f5" name="a1e040bcce4c0e08cb3b4f7d9e33274f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e040bcce4c0e08cb3b4f7d9e33274f5">&#9670;&#160;</a></span>DimAndActive() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,7 +148,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1DimAndActive.html">DimAndActive</a> </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="structnanovdb_1_1DimAndActive.html">DimAndActive</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -163,8 +163,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac64649b7441379b7c2bac617118c0a64" name="ac64649b7441379b7c2bac617118c0a64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac64649b7441379b7c2bac617118c0a64">&#9670;&#160;</a></span>DimAndActive() <span class="overload">[2/2]</span></h2>
+<a id="ad8f9090075fd4d39a12aa28b67fc9958" name="ad8f9090075fd4d39a12aa28b67fc9958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8f9090075fd4d39a12aa28b67fc9958">&#9670;&#160;</a></span>DimAndActive() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,7 +173,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1DimAndActive.html">DimAndActive</a> </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="structnanovdb_1_1DimAndActive.html">DimAndActive</a> </td>
           <td>(</td>
           <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>d</em></span>, </td>
         </tr>
@@ -193,8 +193,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ad9735e23cb0888fb98e1c5893aecff7e" name="ad9735e23cb0888fb98e1c5893aecff7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9735e23cb0888fb98e1c5893aecff7e">&#9670;&#160;</a></span>active()</h2>
+<a id="a6b7dc1de84b6160fe5cde2da76c94fbc" name="a6b7dc1de84b6160fe5cde2da76c94fbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b7dc1de84b6160fe5cde2da76c94fbc">&#9670;&#160;</a></span>active()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,7 +203,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool active </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool active </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -218,8 +218,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a6c79d76b688bb71f8ee8d6e545c59b67" name="a6c79d76b688bb71f8ee8d6e545c59b67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c79d76b688bb71f8ee8d6e545c59b67">&#9670;&#160;</a></span>dim()</h2>
+<a id="a21eeff160f4bb66778040b042f3437ec" name="a21eeff160f4bb66778040b042f3437ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21eeff160f4bb66778040b042f3437ec">&#9670;&#160;</a></span>dim()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -228,7 +228,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t dim </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t dim </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>

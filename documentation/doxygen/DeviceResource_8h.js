@@ -9,9 +9,19 @@ var DeviceResource_8h =
     [ "is_device_accessible_resource< R, typename std::enable_if< bool(R::DEVICE_ACCESSIBLE)>::type >", "structnanovdb_1_1cuda_1_1is__device__accessible__resource_3_01R_00_01typename_01std_1_1enable__i57d9f46a941268a5620dc3ba36d56084.html", null ],
     [ "is_resource< R, class >", "structnanovdb_1_1cuda_1_1is__resource.html", null ],
     [ "is_resource< R, std::void_t< decltype(std::declval< R & >().allocate(size_t{0}, size_t{0})), decltype(std::declval< R & >().deallocate(std::declval< void * >(), size_t{0}, size_t{0}))> >", "structnanovdb_1_1cuda_1_1is__resource_3_01R_00_01std_1_1void__t_3_01decltype_07std_1_1declval_3_cb974c807c269f74158ca1d2a6b5dd66.html", null ],
+    [ "is_equality_comparable_resource< R, class >", "structnanovdb_1_1cuda_1_1is__equality__comparable__resource.html", null ],
+    [ "is_equality_comparable_resource< R, std::void_t< std::enable_if_t< is_resource< R >::value||is_async_resource< R >::value >, decltype(bool(std::declval< const R & >()==std::declval< const R & >()))> >", "structnanovdb_1_1cuda_1_1is__equality__comparable__resource_3_01R_00_01std_1_1void__t_3_01std_1_3f91f36ce3d688879ae28b72f1988e63.html", null ],
+    [ "ReferencedResource< R >", "structnanovdb_1_1cuda_1_1detail_1_1ReferencedResource.html", "structnanovdb_1_1cuda_1_1detail_1_1ReferencedResource" ],
+    [ "ReferencedResource< ResourceRef< R > >", "structnanovdb_1_1cuda_1_1detail_1_1ReferencedResource_3_01ResourceRef_3_01R_01_4_01_4.html", "structnanovdb_1_1cuda_1_1detail_1_1ReferencedResource_3_01ResourceRef_3_01R_01_4_01_4" ],
+    [ "InternalRef", "structnanovdb_1_1cuda_1_1detail_1_1InternalRef.html", null ],
     [ "SyncFromAsync< Derived >", "structnanovdb_1_1cuda_1_1SyncFromAsync.html", "structnanovdb_1_1cuda_1_1SyncFromAsync" ],
     [ "MallocResource", "classnanovdb_1_1cuda_1_1MallocResource.html", "classnanovdb_1_1cuda_1_1MallocResource" ],
     [ "AsyncFromSync< R >", "structnanovdb_1_1cuda_1_1AsyncFromSync.html", "structnanovdb_1_1cuda_1_1AsyncFromSync" ],
     [ "ResourceRef< R >", "structnanovdb_1_1cuda_1_1ResourceRef.html", "structnanovdb_1_1cuda_1_1ResourceRef" ],
-    [ "nanovdb::cuda::default_resource", "namespacenanovdb_1_1cuda.html#a062616cf00032a55aaeb50050fe7f2c6", null ]
+    [ "NANOVDB_DEPRECATED_RESOURCE_WITHOUT_EQUALITY", "DeviceResource_8h.html#af15a0841716cfc6b20458f5de73e5f63", null ],
+    [ "nanovdb::cuda::detail::borrowInternal", "namespacenanovdb_1_1cuda_1_1detail.html#a8f2b496bb00503ff6396004cf2c13e75", null ],
+    [ "nanovdb::cuda::detail::checkReferencedEquality", "namespacenanovdb_1_1cuda_1_1detail.html#a38cad258f4205a0a38cce7491f3743f8", null ],
+    [ "nanovdb::cuda::detail::checkResourceEquality", "namespacenanovdb_1_1cuda_1_1detail.html#a0858370de9fcac1e350b9b1760923d1f", null ],
+    [ "nanovdb::cuda::default_resource", "namespacenanovdb_1_1cuda.html#a062616cf00032a55aaeb50050fe7f2c6", null ],
+    [ "nanovdb::cuda::detail::resourceWithoutEquality", "namespacenanovdb_1_1cuda_1_1detail.html#a102eb9feb0eba357d963d4e25875cb5b", null ]
 ];

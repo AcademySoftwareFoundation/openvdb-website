@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -125,9 +125,9 @@ $(function(){initNavTree('structnanovdb_1_1Map.html','','structnanovdb_1_1Map-me
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a49848ab3a0e1934c5615242b67af68c7" id="r_a49848ab3a0e1934c5615242b67af68c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49848ab3a0e1934c5615242b67af68c7">Map</a> ()</td></tr>
-<tr class="memdesc:a49848ab3a0e1934c5615242b67af68c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the identity map.  <br /></td></tr>
-<tr class="memitem:a6bcd871330d7bfe970ac218dd7b097d9" id="r_a6bcd871330d7bfe970ac218dd7b097d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bcd871330d7bfe970ac218dd7b097d9">Map</a> (double s, const <a class="el" href="namespacenanovdb.html#ab780f4225ac219dca066af10f728200c">Vec3d</a> &amp;t=<a class="el" href="namespacenanovdb.html#ab780f4225ac219dca066af10f728200c">Vec3d</a>(0.0, 0.0, 0.0))</td></tr>
+<tr class="memitem:a7ad833cadc5f3793842009f1aa0f5337" id="r_a7ad833cadc5f3793842009f1aa0f5337"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ad833cadc5f3793842009f1aa0f5337">Map</a> ()</td></tr>
+<tr class="memdesc:a7ad833cadc5f3793842009f1aa0f5337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the identity map.  <br /></td></tr>
+<tr class="memitem:ad67cfa8983b80181a1755d0ad73326b7" id="r_ad67cfa8983b80181a1755d0ad73326b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad67cfa8983b80181a1755d0ad73326b7">Map</a> (double s, const <a class="el" href="namespacenanovdb.html#ab780f4225ac219dca066af10f728200c">Vec3d</a> &amp;t=<a class="el" href="namespacenanovdb.html#ab780f4225ac219dca066af10f728200c">Vec3d</a>(0.0, 0.0, 0.0))</td></tr>
 <tr class="memitem:afc5580fb9c988867bb8d4a6e007de9d6" id="r_afc5580fb9c988867bb8d4a6e007de9d6"><td class="memTemplParams" colspan="2">template&lt;typename MatT, typename Vec3T&gt; </td></tr>
 <tr class="memitem:afc5580fb9c988867bb8d4a6e007de9d6 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc5580fb9c988867bb8d4a6e007de9d6">set</a> (const MatT &amp;mat, const MatT &amp;invMat, const Vec3T &amp;translate, double taper=1.0)</td></tr>
 <tr class="memdesc:afc5580fb9c988867bb8d4a6e007de9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the member data from 3x3 or 4x4 matrices.  <br /></td></tr>
@@ -136,37 +136,37 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a072009b71768dac3e0b55b38e1004ed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the member data from 4x4 matrices.  <br /></td></tr>
 <tr class="memitem:ab0f1291be4f332f89acc3fe2c9617200" id="r_ab0f1291be4f332f89acc3fe2c9617200"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
 <tr class="memitem:ab0f1291be4f332f89acc3fe2c9617200 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0f1291be4f332f89acc3fe2c9617200">set</a> (double scale, const Vec3T &amp;translation, double taper=1.0)</td></tr>
-<tr class="memitem:a73b72cfc32ad43ad6ad3c5a14b44b73c" id="r_a73b72cfc32ad43ad6ad3c5a14b44b73c"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
-<tr class="memitem:a73b72cfc32ad43ad6ad3c5a14b44b73c template"><td class="memItemLeft" align="right" valign="top">Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73b72cfc32ad43ad6ad3c5a14b44b73c">applyMap</a> (const Vec3T &amp;ijk) const</td></tr>
-<tr class="memdesc:a73b72cfc32ad43ad6ad3c5a14b44b73c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the forward affine transformation to a vector using 64bit floating point arithmetics.  <br /></td></tr>
-<tr class="memitem:ab88c72bc9205ebc1d03e06688ea9a965" id="r_ab88c72bc9205ebc1d03e06688ea9a965"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
-<tr class="memitem:ab88c72bc9205ebc1d03e06688ea9a965 template"><td class="memItemLeft" align="right" valign="top">Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab88c72bc9205ebc1d03e06688ea9a965">applyMapF</a> (const Vec3T &amp;ijk) const</td></tr>
-<tr class="memdesc:ab88c72bc9205ebc1d03e06688ea9a965"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the forward affine transformation to a vector using 32bit floating point arithmetics.  <br /></td></tr>
-<tr class="memitem:a424f968b751ee2fbe9beb453f3eda669" id="r_a424f968b751ee2fbe9beb453f3eda669"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
-<tr class="memitem:a424f968b751ee2fbe9beb453f3eda669 template"><td class="memItemLeft" align="right" valign="top">Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a424f968b751ee2fbe9beb453f3eda669">applyJacobian</a> (const Vec3T &amp;ijk) const</td></tr>
-<tr class="memdesc:a424f968b751ee2fbe9beb453f3eda669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the linear forward 3x3 transformation to an input 3d vector using 64bit floating point arithmetics, e.g. scale and rotation WITHOUT translation.  <br /></td></tr>
-<tr class="memitem:af5c3b9d15f1e1cd5d68171613edbeff7" id="r_af5c3b9d15f1e1cd5d68171613edbeff7"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
-<tr class="memitem:af5c3b9d15f1e1cd5d68171613edbeff7 template"><td class="memItemLeft" align="right" valign="top">Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5c3b9d15f1e1cd5d68171613edbeff7">applyJacobianF</a> (const Vec3T &amp;ijk) const</td></tr>
-<tr class="memdesc:af5c3b9d15f1e1cd5d68171613edbeff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the linear forward 3x3 transformation to an input 3d vector using 32bit floating point arithmetics, e.g. scale and rotation WITHOUT translation.  <br /></td></tr>
-<tr class="memitem:abd48d80cc133123ccb21685fee76bb45" id="r_abd48d80cc133123ccb21685fee76bb45"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
-<tr class="memitem:abd48d80cc133123ccb21685fee76bb45 template"><td class="memItemLeft" align="right" valign="top">Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd48d80cc133123ccb21685fee76bb45">applyInverseMap</a> (const Vec3T &amp;xyz) const</td></tr>
-<tr class="memdesc:abd48d80cc133123ccb21685fee76bb45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the inverse affine mapping to a vector using 64bit floating point arithmetics.  <br /></td></tr>
-<tr class="memitem:af226501df02e852eb70509d9e6aee3da" id="r_af226501df02e852eb70509d9e6aee3da"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
-<tr class="memitem:af226501df02e852eb70509d9e6aee3da template"><td class="memItemLeft" align="right" valign="top">Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af226501df02e852eb70509d9e6aee3da">applyInverseMapF</a> (const Vec3T &amp;xyz) const</td></tr>
-<tr class="memdesc:af226501df02e852eb70509d9e6aee3da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the inverse affine mapping to a vector using 32bit floating point arithmetics.  <br /></td></tr>
-<tr class="memitem:a7dba6a6420485eb1f7ec070aebbcf679" id="r_a7dba6a6420485eb1f7ec070aebbcf679"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
-<tr class="memitem:a7dba6a6420485eb1f7ec070aebbcf679 template"><td class="memItemLeft" align="right" valign="top">Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dba6a6420485eb1f7ec070aebbcf679">applyInverseJacobian</a> (const Vec3T &amp;xyz) const</td></tr>
-<tr class="memdesc:a7dba6a6420485eb1f7ec070aebbcf679"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the linear inverse 3x3 transformation to an input 3d vector using 64bit floating point arithmetics, e.g. inverse scale and inverse rotation WITHOUT translation.  <br /></td></tr>
-<tr class="memitem:a30ca97c15f2baf58032a549ba8bc3cf0" id="r_a30ca97c15f2baf58032a549ba8bc3cf0"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
-<tr class="memitem:a30ca97c15f2baf58032a549ba8bc3cf0 template"><td class="memItemLeft" align="right" valign="top">Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30ca97c15f2baf58032a549ba8bc3cf0">applyInverseJacobianF</a> (const Vec3T &amp;xyz) const</td></tr>
-<tr class="memdesc:a30ca97c15f2baf58032a549ba8bc3cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the linear inverse 3x3 transformation to an input 3d vector using 32bit floating point arithmetics, e.g. inverse scale and inverse rotation WITHOUT translation.  <br /></td></tr>
-<tr class="memitem:a5f2526c0d9f05285af1e208da37f1bb7" id="r_a5f2526c0d9f05285af1e208da37f1bb7"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
-<tr class="memitem:a5f2526c0d9f05285af1e208da37f1bb7 template"><td class="memItemLeft" align="right" valign="top">Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f2526c0d9f05285af1e208da37f1bb7">applyIJT</a> (const Vec3T &amp;xyz) const</td></tr>
-<tr class="memdesc:a5f2526c0d9f05285af1e208da37f1bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the transposed inverse 3x3 transformation to an input 3d vector using 64bit floating point arithmetics, e.g. inverse scale and inverse rotation WITHOUT translation.  <br /></td></tr>
-<tr class="memitem:a340f7ff2a133df815ba4402aa8cf4de0" id="r_a340f7ff2a133df815ba4402aa8cf4de0"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
-<tr class="memitem:a340f7ff2a133df815ba4402aa8cf4de0 template"><td class="memItemLeft" align="right" valign="top">Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a340f7ff2a133df815ba4402aa8cf4de0">applyIJTF</a> (const Vec3T &amp;xyz) const</td></tr>
-<tr class="memitem:a61bc6c82b395e3c75159fd199d4e910e" id="r_a61bc6c82b395e3c75159fd199d4e910e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenanovdb.html#ab780f4225ac219dca066af10f728200c">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61bc6c82b395e3c75159fd199d4e910e">getVoxelSize</a> () const</td></tr>
-<tr class="memdesc:a61bc6c82b395e3c75159fd199d4e910e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a voxels size in each coordinate direction, measured at the origin.  <br /></td></tr>
+<tr class="memitem:a87f739889444807a5e0ac053bac1ec44" id="r_a87f739889444807a5e0ac053bac1ec44"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
+<tr class="memitem:a87f739889444807a5e0ac053bac1ec44 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87f739889444807a5e0ac053bac1ec44">applyMap</a> (const Vec3T &amp;ijk) const</td></tr>
+<tr class="memdesc:a87f739889444807a5e0ac053bac1ec44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the forward affine transformation to a vector using 64bit floating point arithmetics.  <br /></td></tr>
+<tr class="memitem:a953cf77c7a6deaa8befb46804247dbf5" id="r_a953cf77c7a6deaa8befb46804247dbf5"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
+<tr class="memitem:a953cf77c7a6deaa8befb46804247dbf5 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a953cf77c7a6deaa8befb46804247dbf5">applyMapF</a> (const Vec3T &amp;ijk) const</td></tr>
+<tr class="memdesc:a953cf77c7a6deaa8befb46804247dbf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the forward affine transformation to a vector using 32bit floating point arithmetics.  <br /></td></tr>
+<tr class="memitem:af7c5cd0f87a18398c46d20c117c65437" id="r_af7c5cd0f87a18398c46d20c117c65437"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
+<tr class="memitem:af7c5cd0f87a18398c46d20c117c65437 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7c5cd0f87a18398c46d20c117c65437">applyJacobian</a> (const Vec3T &amp;ijk) const</td></tr>
+<tr class="memdesc:af7c5cd0f87a18398c46d20c117c65437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the linear forward 3x3 transformation to an input 3d vector using 64bit floating point arithmetics, e.g. scale and rotation WITHOUT translation.  <br /></td></tr>
+<tr class="memitem:a13a17cb1a32e313b61bdb8ee12706259" id="r_a13a17cb1a32e313b61bdb8ee12706259"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
+<tr class="memitem:a13a17cb1a32e313b61bdb8ee12706259 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13a17cb1a32e313b61bdb8ee12706259">applyJacobianF</a> (const Vec3T &amp;ijk) const</td></tr>
+<tr class="memdesc:a13a17cb1a32e313b61bdb8ee12706259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the linear forward 3x3 transformation to an input 3d vector using 32bit floating point arithmetics, e.g. scale and rotation WITHOUT translation.  <br /></td></tr>
+<tr class="memitem:a082574c1459b02b86233ec0a8de04cd7" id="r_a082574c1459b02b86233ec0a8de04cd7"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
+<tr class="memitem:a082574c1459b02b86233ec0a8de04cd7 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a082574c1459b02b86233ec0a8de04cd7">applyInverseMap</a> (const Vec3T &amp;xyz) const</td></tr>
+<tr class="memdesc:a082574c1459b02b86233ec0a8de04cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the inverse affine mapping to a vector using 64bit floating point arithmetics.  <br /></td></tr>
+<tr class="memitem:a3de89641bd0047c722ba1161fe6ca985" id="r_a3de89641bd0047c722ba1161fe6ca985"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
+<tr class="memitem:a3de89641bd0047c722ba1161fe6ca985 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3de89641bd0047c722ba1161fe6ca985">applyInverseMapF</a> (const Vec3T &amp;xyz) const</td></tr>
+<tr class="memdesc:a3de89641bd0047c722ba1161fe6ca985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the inverse affine mapping to a vector using 32bit floating point arithmetics.  <br /></td></tr>
+<tr class="memitem:ada55c04c2f7acbb65577541d7108c4b2" id="r_ada55c04c2f7acbb65577541d7108c4b2"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
+<tr class="memitem:ada55c04c2f7acbb65577541d7108c4b2 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada55c04c2f7acbb65577541d7108c4b2">applyInverseJacobian</a> (const Vec3T &amp;xyz) const</td></tr>
+<tr class="memdesc:ada55c04c2f7acbb65577541d7108c4b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the linear inverse 3x3 transformation to an input 3d vector using 64bit floating point arithmetics, e.g. inverse scale and inverse rotation WITHOUT translation.  <br /></td></tr>
+<tr class="memitem:a42db66cf7e35ab649f0f56847af9a77e" id="r_a42db66cf7e35ab649f0f56847af9a77e"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
+<tr class="memitem:a42db66cf7e35ab649f0f56847af9a77e template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42db66cf7e35ab649f0f56847af9a77e">applyInverseJacobianF</a> (const Vec3T &amp;xyz) const</td></tr>
+<tr class="memdesc:a42db66cf7e35ab649f0f56847af9a77e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the linear inverse 3x3 transformation to an input 3d vector using 32bit floating point arithmetics, e.g. inverse scale and inverse rotation WITHOUT translation.  <br /></td></tr>
+<tr class="memitem:a06858e5adf96ba026b06f944f457b7c6" id="r_a06858e5adf96ba026b06f944f457b7c6"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
+<tr class="memitem:a06858e5adf96ba026b06f944f457b7c6 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06858e5adf96ba026b06f944f457b7c6">applyIJT</a> (const Vec3T &amp;xyz) const</td></tr>
+<tr class="memdesc:a06858e5adf96ba026b06f944f457b7c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the transposed inverse 3x3 transformation to an input 3d vector using 64bit floating point arithmetics, e.g. inverse scale and inverse rotation WITHOUT translation.  <br /></td></tr>
+<tr class="memitem:a34fd8cdc8f1ecdb3a26c2e0828f9f7b8" id="r_a34fd8cdc8f1ecdb3a26c2e0828f9f7b8"><td class="memTemplParams" colspan="2">template&lt;typename Vec3T&gt; </td></tr>
+<tr class="memitem:a34fd8cdc8f1ecdb3a26c2e0828f9f7b8 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34fd8cdc8f1ecdb3a26c2e0828f9f7b8">applyIJTF</a> (const Vec3T &amp;xyz) const</td></tr>
+<tr class="memitem:a4370fd24e28091874a2185c82caa056c" id="r_a4370fd24e28091874a2185c82caa056c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="namespacenanovdb.html#ab780f4225ac219dca066af10f728200c">Vec3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4370fd24e28091874a2185c82caa056c">getVoxelSize</a> () const</td></tr>
+<tr class="memdesc:a4370fd24e28091874a2185c82caa056c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a voxels size in each coordinate direction, measured at the origin.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -182,8 +182,8 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines an affine transform and its inverse represented as a 3x3 matrix and a vec3 translation. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a49848ab3a0e1934c5615242b67af68c7" name="a49848ab3a0e1934c5615242b67af68c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49848ab3a0e1934c5615242b67af68c7">&#9670;&#160;</a></span>Map() <span class="overload">[1/2]</span></h2>
+<a id="a7ad833cadc5f3793842009f1aa0f5337" name="a7ad833cadc5f3793842009f1aa0f5337"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ad833cadc5f3793842009f1aa0f5337">&#9670;&#160;</a></span>Map() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,7 +192,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1Map.html">Map</a> </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="structnanovdb_1_1Map.html">Map</a> </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -200,7 +200,7 @@ Public Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -209,8 +209,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a6bcd871330d7bfe970ac218dd7b097d9" name="a6bcd871330d7bfe970ac218dd7b097d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bcd871330d7bfe970ac218dd7b097d9">&#9670;&#160;</a></span>Map() <span class="overload">[2/2]</span></h2>
+<a id="ad67cfa8983b80181a1755d0ad73326b7" name="ad67cfa8983b80181a1755d0ad73326b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad67cfa8983b80181a1755d0ad73326b7">&#9670;&#160;</a></span>Map() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,7 +219,7 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1Map.html">Map</a> </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="structnanovdb_1_1Map.html">Map</a> </td>
           <td>(</td>
           <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
         </tr>
@@ -231,7 +231,7 @@ Public Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -239,8 +239,8 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a5f2526c0d9f05285af1e208da37f1bb7" name="a5f2526c0d9f05285af1e208da37f1bb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f2526c0d9f05285af1e208da37f1bb7">&#9670;&#160;</a></span>applyIJT()</h2>
+<a id="a06858e5adf96ba026b06f944f457b7c6" name="a06858e5adf96ba026b06f944f457b7c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06858e5adf96ba026b06f944f457b7c6">&#9670;&#160;</a></span>applyIJT()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,7 +251,7 @@ template&lt;typename Vec3T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vec3T applyIJT </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T applyIJT </td>
           <td>(</td>
           <td class="paramtype">const Vec3T &amp;</td>          <td class="paramname"><span class="paramname"><em>xyz</em></span></td><td>)</td>
           <td> const</td>
@@ -259,7 +259,7 @@ template&lt;typename Vec3T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -282,8 +282,8 @@ template&lt;typename Vec3T&gt; </div>
 
 </div>
 </div>
-<a id="a340f7ff2a133df815ba4402aa8cf4de0" name="a340f7ff2a133df815ba4402aa8cf4de0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a340f7ff2a133df815ba4402aa8cf4de0">&#9670;&#160;</a></span>applyIJTF()</h2>
+<a id="a34fd8cdc8f1ecdb3a26c2e0828f9f7b8" name="a34fd8cdc8f1ecdb3a26c2e0828f9f7b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34fd8cdc8f1ecdb3a26c2e0828f9f7b8">&#9670;&#160;</a></span>applyIJTF()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -294,7 +294,7 @@ template&lt;typename Vec3T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vec3T applyIJTF </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T applyIJTF </td>
           <td>(</td>
           <td class="paramtype">const Vec3T &amp;</td>          <td class="paramname"><span class="paramname"><em>xyz</em></span></td><td>)</td>
           <td> const</td>
@@ -302,15 +302,15 @@ template&lt;typename Vec3T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a7dba6a6420485eb1f7ec070aebbcf679" name="a7dba6a6420485eb1f7ec070aebbcf679"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7dba6a6420485eb1f7ec070aebbcf679">&#9670;&#160;</a></span>applyInverseJacobian()</h2>
+<a id="ada55c04c2f7acbb65577541d7108c4b2" name="ada55c04c2f7acbb65577541d7108c4b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada55c04c2f7acbb65577541d7108c4b2">&#9670;&#160;</a></span>applyInverseJacobian()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,7 +321,7 @@ template&lt;typename Vec3T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vec3T applyInverseJacobian </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T applyInverseJacobian </td>
           <td>(</td>
           <td class="paramtype">const Vec3T &amp;</td>          <td class="paramname"><span class="paramname"><em>xyz</em></span></td><td>)</td>
           <td> const</td>
@@ -329,7 +329,7 @@ template&lt;typename Vec3T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -352,8 +352,8 @@ template&lt;typename Vec3T&gt; </div>
 
 </div>
 </div>
-<a id="a30ca97c15f2baf58032a549ba8bc3cf0" name="a30ca97c15f2baf58032a549ba8bc3cf0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30ca97c15f2baf58032a549ba8bc3cf0">&#9670;&#160;</a></span>applyInverseJacobianF()</h2>
+<a id="a42db66cf7e35ab649f0f56847af9a77e" name="a42db66cf7e35ab649f0f56847af9a77e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42db66cf7e35ab649f0f56847af9a77e">&#9670;&#160;</a></span>applyInverseJacobianF()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,7 +364,7 @@ template&lt;typename Vec3T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vec3T applyInverseJacobianF </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T applyInverseJacobianF </td>
           <td>(</td>
           <td class="paramtype">const Vec3T &amp;</td>          <td class="paramname"><span class="paramname"><em>xyz</em></span></td><td>)</td>
           <td> const</td>
@@ -372,7 +372,7 @@ template&lt;typename Vec3T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -395,8 +395,8 @@ template&lt;typename Vec3T&gt; </div>
 
 </div>
 </div>
-<a id="abd48d80cc133123ccb21685fee76bb45" name="abd48d80cc133123ccb21685fee76bb45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd48d80cc133123ccb21685fee76bb45">&#9670;&#160;</a></span>applyInverseMap()</h2>
+<a id="a082574c1459b02b86233ec0a8de04cd7" name="a082574c1459b02b86233ec0a8de04cd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a082574c1459b02b86233ec0a8de04cd7">&#9670;&#160;</a></span>applyInverseMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,7 +407,7 @@ template&lt;typename Vec3T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vec3T applyInverseMap </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T applyInverseMap </td>
           <td>(</td>
           <td class="paramtype">const Vec3T &amp;</td>          <td class="paramname"><span class="paramname"><em>xyz</em></span></td><td>)</td>
           <td> const</td>
@@ -415,7 +415,7 @@ template&lt;typename Vec3T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -438,8 +438,8 @@ template&lt;typename Vec3T&gt; </div>
 
 </div>
 </div>
-<a id="af226501df02e852eb70509d9e6aee3da" name="af226501df02e852eb70509d9e6aee3da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af226501df02e852eb70509d9e6aee3da">&#9670;&#160;</a></span>applyInverseMapF()</h2>
+<a id="a3de89641bd0047c722ba1161fe6ca985" name="a3de89641bd0047c722ba1161fe6ca985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3de89641bd0047c722ba1161fe6ca985">&#9670;&#160;</a></span>applyInverseMapF()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -450,7 +450,7 @@ template&lt;typename Vec3T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vec3T applyInverseMapF </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T applyInverseMapF </td>
           <td>(</td>
           <td class="paramtype">const Vec3T &amp;</td>          <td class="paramname"><span class="paramname"><em>xyz</em></span></td><td>)</td>
           <td> const</td>
@@ -458,7 +458,7 @@ template&lt;typename Vec3T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -481,8 +481,8 @@ template&lt;typename Vec3T&gt; </div>
 
 </div>
 </div>
-<a id="a424f968b751ee2fbe9beb453f3eda669" name="a424f968b751ee2fbe9beb453f3eda669"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a424f968b751ee2fbe9beb453f3eda669">&#9670;&#160;</a></span>applyJacobian()</h2>
+<a id="af7c5cd0f87a18398c46d20c117c65437" name="af7c5cd0f87a18398c46d20c117c65437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c5cd0f87a18398c46d20c117c65437">&#9670;&#160;</a></span>applyJacobian()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -493,7 +493,7 @@ template&lt;typename Vec3T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vec3T applyJacobian </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T applyJacobian </td>
           <td>(</td>
           <td class="paramtype">const Vec3T &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span></td><td>)</td>
           <td> const</td>
@@ -501,7 +501,7 @@ template&lt;typename Vec3T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -524,8 +524,8 @@ template&lt;typename Vec3T&gt; </div>
 
 </div>
 </div>
-<a id="af5c3b9d15f1e1cd5d68171613edbeff7" name="af5c3b9d15f1e1cd5d68171613edbeff7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5c3b9d15f1e1cd5d68171613edbeff7">&#9670;&#160;</a></span>applyJacobianF()</h2>
+<a id="a13a17cb1a32e313b61bdb8ee12706259" name="a13a17cb1a32e313b61bdb8ee12706259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13a17cb1a32e313b61bdb8ee12706259">&#9670;&#160;</a></span>applyJacobianF()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -536,7 +536,7 @@ template&lt;typename Vec3T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vec3T applyJacobianF </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T applyJacobianF </td>
           <td>(</td>
           <td class="paramtype">const Vec3T &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span></td><td>)</td>
           <td> const</td>
@@ -544,7 +544,7 @@ template&lt;typename Vec3T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -567,8 +567,8 @@ template&lt;typename Vec3T&gt; </div>
 
 </div>
 </div>
-<a id="a73b72cfc32ad43ad6ad3c5a14b44b73c" name="a73b72cfc32ad43ad6ad3c5a14b44b73c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73b72cfc32ad43ad6ad3c5a14b44b73c">&#9670;&#160;</a></span>applyMap()</h2>
+<a id="a87f739889444807a5e0ac053bac1ec44" name="a87f739889444807a5e0ac053bac1ec44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87f739889444807a5e0ac053bac1ec44">&#9670;&#160;</a></span>applyMap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -579,7 +579,7 @@ template&lt;typename Vec3T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vec3T applyMap </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T applyMap </td>
           <td>(</td>
           <td class="paramtype">const Vec3T &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span></td><td>)</td>
           <td> const</td>
@@ -587,7 +587,7 @@ template&lt;typename Vec3T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -610,8 +610,8 @@ template&lt;typename Vec3T&gt; </div>
 
 </div>
 </div>
-<a id="ab88c72bc9205ebc1d03e06688ea9a965" name="ab88c72bc9205ebc1d03e06688ea9a965"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab88c72bc9205ebc1d03e06688ea9a965">&#9670;&#160;</a></span>applyMapF()</h2>
+<a id="a953cf77c7a6deaa8befb46804247dbf5" name="a953cf77c7a6deaa8befb46804247dbf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a953cf77c7a6deaa8befb46804247dbf5">&#9670;&#160;</a></span>applyMapF()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -622,7 +622,7 @@ template&lt;typename Vec3T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vec3T applyMapF </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr Vec3T applyMapF </td>
           <td>(</td>
           <td class="paramtype">const Vec3T &amp;</td>          <td class="paramname"><span class="paramname"><em>ijk</em></span></td><td>)</td>
           <td> const</td>
@@ -630,7 +630,7 @@ template&lt;typename Vec3T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -653,8 +653,8 @@ template&lt;typename Vec3T&gt; </div>
 
 </div>
 </div>
-<a id="a61bc6c82b395e3c75159fd199d4e910e" name="a61bc6c82b395e3c75159fd199d4e910e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61bc6c82b395e3c75159fd199d4e910e">&#9670;&#160;</a></span>getVoxelSize()</h2>
+<a id="a4370fd24e28091874a2185c82caa056c" name="a4370fd24e28091874a2185c82caa056c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4370fd24e28091874a2185c82caa056c">&#9670;&#160;</a></span>getVoxelSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -663,7 +663,7 @@ template&lt;typename Vec3T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacenanovdb.html#ab780f4225ac219dca066af10f728200c">Vec3d</a> getVoxelSize </td>
+          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> constexpr <a class="el" href="namespacenanovdb.html#ab780f4225ac219dca066af10f728200c">Vec3d</a> getVoxelSize </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -671,7 +671,7 @@ template&lt;typename Vec3T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -715,7 +715,7 @@ template&lt;typename Mat4T&gt; </div>
 </div><div class="memdoc">
 
 <p>Initialize the member data from 4x4 matrices. </p>
-<dl class="section note"><dt>Note</dt><dd>The last (4th) row of invMat is actually ignored. This is not _hostdev__ since then Mat4T=<a class="el" href="namespaceopenvdb_1_1v13__1_1_1math.html#abaf7f913bf1752b9157259ffa32704ca">openvdb::Mat4d</a> will produce warnings </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The last (4th) row of invMat is actually ignored. This is not _hostdev__ since then Mat4T=<a class="el" href="namespaceopenvdb_1_1v13__2_1_1math.html#abaf7f913bf1752b9157259ffa32704ca">openvdb::Mat4d</a> will produce warnings </dd></dl>
 
 </div>
 </div>
@@ -759,7 +759,7 @@ template&lt;typename MatT, typename Vec3T&gt; </div>
 </div><div class="memdoc">
 
 <p>Initialize the member data from 3x3 or 4x4 matrices. </p>
-<dl class="section note"><dt>Note</dt><dd>This is not _hostdev__ since then MatT=<a class="el" href="namespaceopenvdb_1_1v13__1_1_1math.html#abaf7f913bf1752b9157259ffa32704ca">openvdb::Mat4d</a> will produce warnings </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This is not _hostdev__ since then MatT=<a class="el" href="namespaceopenvdb_1_1v13__2_1_1math.html#abaf7f913bf1752b9157259ffa32704ca">openvdb::Mat4d</a> will produce warnings </dd></dl>
 
 </div>
 </div>

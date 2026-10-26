@@ -68,7 +68,7 @@ var namespaceopenvdb__houdini =
     [ "convertGeometry", "namespaceopenvdb__houdini.html#acb937ece5300c73075d3735779fe2d7f", null ],
     [ "convertHoudiniToPointDataGrid", "namespaceopenvdb__houdini.html#a980f9aa6c0141e8ad70af5e9a7ed0aa8", null ],
     [ "convertMetadataToHoudini", "namespaceopenvdb__houdini.html#ae7769ef7dde7bc5273c5cdb3f4d5e684", null ],
-    [ "convertPointDataGridToHoudini", "namespaceopenvdb__houdini.html#a006faa3e9d5b322ef88b4012c1bf8d42", null ],
+    [ "convertPointDataGridToHoudini", "namespaceopenvdb__houdini.html#a81704940fa96ced8800698ba8f54807b", null ],
     [ "createAttributeCopier", "namespaceopenvdb__houdini.html#a8eb0d06764bd7c7978d867d51bae21fa", null ],
     [ "createVdbPrimitive", "namespaceopenvdb__houdini.html#ab25e7c8916416c2b44896ba90891e100", null ],
     [ "drawFrustum", "namespaceopenvdb__houdini.html#a8ef60375f1d6abbcec4a1835a5008f55", null ],

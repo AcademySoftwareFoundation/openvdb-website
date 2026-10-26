@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -119,7 +119,7 @@ $(function(){initNavTree('NanoVDB_HelloWorld.html','',''); });
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_doc_2nanovdb_2HelloWorld"></a></p>
 <p>The example snippets below are pulled directly from compiled example source files via Doxygen's <span class="tt">\snippet</span> mechanism, so the code shown here is always in sync with what is built and tested in CI. Enable <span class="tt">-DNANOVDB_BUILD_EXAMPLES=ON</span> to build them locally.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
 Convert an OpenVDB grid to NanoVDB and use accessors</h1>
 <p><a href="https://github.com/AcademySoftwareFoundation/openvdb/blob/master/nanovdb/nanovdb/examples/ex_openvdb_to_nanovdb_accessor/openvdb_to_nanovdb_accessor.cc">The first example</a> shows how to convert an OpenVDB level set sphere into a NanoVDB level set, use accessors to print out multiple values from both grids, and save the NanoVDB grid to file. Note that <b>this example depends on both OpenVDB and NanoVDB</b>.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="LevelSetSphere_8h.html">openvdb/tools/LevelSetSphere.h</a>&gt;</span> <span class="comment">// replace with your own dependencies for generating the OpenVDB grid</span></div>
@@ -133,7 +133,7 @@ Convert an OpenVDB grid to NanoVDB and use accessors</h1>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">try</span> {</div>
 <div class="line">        <span class="comment">// Create an OpenVDB grid (here a level set surface but replace this with your own code)</span></div>
-<div class="line">        <span class="keyword">auto</span> srcGrid = openvdb::tools::createLevelSetSphere&lt;openvdb::FloatGrid&gt;(100.0f, <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__1.html#a4873ae29d5d8d4f1cb7c7717af41a993">openvdb::Vec3f</a>(0.0f), 1.0f);</div>
+<div class="line">        <span class="keyword">auto</span> srcGrid = openvdb::tools::createLevelSetSphere&lt;openvdb::FloatGrid&gt;(100.0f, <a class="code hl_typedef" href="namespaceopenvdb_1_1v13__2.html#a4873ae29d5d8d4f1cb7c7717af41a993">openvdb::Vec3f</a>(0.0f), 1.0f);</div>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Convert the OpenVDB grid, srcGrid, into a NanoVDB grid handle.</span></div>
 <div class="line">        <span class="keyword">auto</span> handle = <a class="code hl_function" href="namespacenanovdb_1_1tools.html#a98b5c7c72db3741f896f3b54796670fa">nanovdb::tools::createNanoGrid</a>(*srcGrid);</div>
@@ -150,7 +150,7 @@ Convert an OpenVDB grid to NanoVDB and use accessors</h1>
 <div class="line"> </div>
 <div class="line">        <span class="comment">// Access and print out a cross-section of the narrow-band level set from the two grids</span></div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 97; i &lt; 104; ++i) {</div>
-<div class="line">            printf(<span class="stringliteral">&quot;(%3i,0,0) OpenVDB cpu: % -4.2f, NanoVDB cpu: % -4.2f\n&quot;</span>, i, srcAcc.getValue(<a class="code hl_class" href="classopenvdb_1_1v13__1_1_1math_1_1Coord.html">openvdb::Coord</a>(i, 0, 0)), dstAcc.getValue(<a class="code hl_class" href="classnanovdb_1_1math_1_1Coord.html">nanovdb::Coord</a>(i, 0, 0)));</div>
+<div class="line">            printf(<span class="stringliteral">&quot;(%3i,0,0) OpenVDB cpu: % -4.2f, NanoVDB cpu: % -4.2f\n&quot;</span>, i, srcAcc.getValue(<a class="code hl_class" href="classopenvdb_1_1v13__2_1_1math_1_1Coord.html">openvdb::Coord</a>(i, 0, 0)), dstAcc.getValue(<a class="code hl_class" href="classnanovdb_1_1math_1_1Coord.html">nanovdb::Coord</a>(i, 0, 0)));</div>
 <div class="line">        }</div>
 <div class="line"> </div>
 <div class="line">        <a class="code hl_function" href="namespacenanovdb_1_1io.html#aaba17c8bdd4c1875df28c1a808c4c531">nanovdb::io::writeGrid</a>(<span class="stringliteral">&quot;data/sphere.nvdb&quot;</span>, handle); <span class="comment">// Write the NanoVDB grid to file and throw if writing fails</span></div>
@@ -160,7 +160,7 @@ Convert an OpenVDB grid to NanoVDB and use accessors</h1>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}<span class="comment"></span></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
 Read a NanoVDB grid from a file (host only)</h1>
 <p><a href="https://github.com/AcademySoftwareFoundation/openvdb/blob/master/nanovdb/nanovdb/examples/ex_read_nanovdb_sphere_accessor/read_nanovdb_sphere_accessor.cc">The second example</a> reads a NanoVDB grid from a file (the one saved in the previous example) and prints out multiple values. Note that <b>this example does not depend on OpenVDB (nor CUDA), only NanoVDB</b>.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="io_2IO_8h.html">nanovdb/io/IO.h</a>&gt;</span> <span class="comment">// this is required to read (and write) NanoVDB files on the host</span></div>
@@ -188,7 +188,7 @@ Read a NanoVDB grid from a file (host only)</h1>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}<span class="comment"></span></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
 Read a NanoVDB grid and access it on the CPU and GPU</h1>
 <p><a href="https://github.com/AcademySoftwareFoundation/openvdb/blob/master/nanovdb/nanovdb/examples/ex_read_nanovdb_sphere_accessor_cuda/read_nanovdb_sphere_accessor_cuda.cu">The third example</a> reads a NanoVDB grid from a file (the one saved in the first example) and prints out multiple values on both the CPU and GPU. Note that <b>this example does NOT depend on OpenVDB, only NanoVDB and CUDA</b>.</p>
 <div class="fragment"><div class="line">#include &lt;nanovdb/io/IO.h&gt; // this is required to read (and write) NanoVDB files on the host</div>

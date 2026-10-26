@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -210,7 +210,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>buffer, used for instance by the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a>, to allocate unified memory that can be resized and shared between multiple devices and the host. </p>
-<dl class="section note"><dt>Note</dt><dd>This is the implementation behind the deprecated UnifiedBuffer alias below, renamed so the [[deprecated]] attribute reaches only code that spells the public name: DistributedPointsToGrid's signature defaults reference this implementation, so default-using callers stay warning-free until the defaults change at removal. The Dual prefix marks the deprecated dual-accessor buffer family (this buffer satisfies that concept from a single managed allocation). Transitional &ndash; do not adopt this name; it is deleted together with the alias. The header keeps its long-standing name and include path for the same reason: renaming a header breaks existing includes outright, and the old path is where external code will find the alias and its migration message. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This is the implementation behind the deprecated UnifiedBuffer alias below, renamed so the [[deprecated]] attribute reaches only code that spells the public name: DistributedPointsToGrid's signature defaults reference this implementation, so code that only reaches the type through those defaults is warning-free, while calling the deprecated transfer members warns. The Dual prefix marks the deprecated dual-accessor buffer family (this buffer satisfies that concept from a single managed allocation). Transitional &ndash; do not adopt this name; it is deleted together with the alias. The header keeps its long-standing name and include path for the same reason: renaming a header breaks existing includes outright, and the old path is where external code will find the alias and its migration message. </dd></dl>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
 <a id="a36edb14009de2bc2b76903258fa642b4" name="a36edb14009de2bc2b76903258fa642b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a36edb14009de2bc2b76903258fa642b4">&#9670;&#160;</a></span>PtrT</h2>
@@ -1098,6 +1098,7 @@ template&lt;typename T&gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000103">Deprecated</a></b></dt><dd>Use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>, which the host and every device read in place. </dd></dl>
 
 </div>
 </div>
@@ -1132,6 +1133,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000105">Deprecated</a></b></dt><dd>Use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>, which the host and every device read in place. </dd></dl>
 
 </div>
 </div>
@@ -1170,6 +1172,7 @@ template&lt;typename T&gt; </div>
   </table>
   </dd>
 </dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000104">Deprecated</a></b></dt><dd>Use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>, which the host and every device read in place. </dd></dl>
 
 </div>
 </div>
@@ -1204,6 +1207,7 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+<dl class="section note"><dt>Note</dt><dd>Ignores <code>sync</code> and stays asynchronous, as it always has. </dd></dl>
 
 </div>
 </div>
@@ -1249,6 +1253,7 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Legacy method included for compatibility with DeviceBuffer </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000101">Deprecated</a></b></dt><dd>Use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>, which the host and every device read in place. </dd></dl>
 
 </div>
 </div>
@@ -1288,6 +1293,7 @@ template&lt;typename T&gt; </div>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Legacy method included for compatibility with DeviceBuffer </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000102">Deprecated</a></b></dt><dd>Use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>, which the host and every device read in place. </dd></dl>
 
 </div>
 </div>

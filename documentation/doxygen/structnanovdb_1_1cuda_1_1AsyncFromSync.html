@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -143,6 +143,14 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a066e02d9fc3b17507aa6e3b1a374858a" id="r_a066e02d9fc3b17507aa6e3b1a374858a"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a066e02d9fc3b17507aa6e3b1a374858a">HOST_ACCESSIBLE</a> = <a class="el" href="structnanovdb_1_1cuda_1_1is__host__accessible__resource.html">is_host_accessible_resource</a>&lt;R&gt;::value</td></tr>
 <tr class="memdesc:a066e02d9fc3b17507aa6e3b1a374858a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The adapter is host-accessible iff the adapted resource is.  <br /></td></tr>
 <tr class="memitem:a2cd32c325c572da792df709c454ba672" id="r_a2cd32c325c572da792df709c454ba672"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cd32c325c572da792df709c454ba672">DEVICE_ACCESSIBLE</a> = <a class="el" href="structnanovdb_1_1cuda_1_1is__device__accessible__resource.html">is_device_accessible_resource</a>&lt;R&gt;::value</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ab58ee8a065983e46a0878d4c40aed48c" id="r_ab58ee8a065983e46a0878d4c40aed48c"><td class="memTemplParams" colspan="2">template&lt;class S = R, std::enable_if_t&lt; <a class="el" href="structnanovdb_1_1cuda_1_1is__equality__comparable__resource.html">is_equality_comparable_resource</a>&lt; S &gt;::value, int &gt; = 0&gt; </td></tr>
+<tr class="memitem:ab58ee8a065983e46a0878d4c40aed48c template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab58ee8a065983e46a0878d4c40aed48c">operator==</a> (const <a class="el" href="structnanovdb_1_1cuda_1_1AsyncFromSync.html">AsyncFromSync</a> &amp;lhs, const <a class="el" href="structnanovdb_1_1cuda_1_1AsyncFromSync.html">AsyncFromSync</a> &amp;rhs)</td></tr>
+<tr class="memdesc:ab58ee8a065983e46a0878d4c40aed48c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two adapters compare equal iff their wrapped resources do; present only when <code>R</code> itself is equality-comparable.  <br /></td></tr>
+<tr class="memitem:ab1008dcdaae39a6070ef7796afe31f97" id="r_ab1008dcdaae39a6070ef7796afe31f97"><td class="memTemplParams" colspan="2">template&lt;class S = R, std::enable_if_t&lt; <a class="el" href="structnanovdb_1_1cuda_1_1is__equality__comparable__resource.html">is_equality_comparable_resource</a>&lt; S &gt;::value, int &gt; = 0&gt; </td></tr>
+<tr class="memitem:ab1008dcdaae39a6070ef7796afe31f97 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1008dcdaae39a6070ef7796afe31f97">operator!=</a> (const <a class="el" href="structnanovdb_1_1cuda_1_1AsyncFromSync.html">AsyncFromSync</a> &amp;lhs, const <a class="el" href="structnanovdb_1_1cuda_1_1AsyncFromSync.html">AsyncFromSync</a> &amp;rhs)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class R&gt;<br />
@@ -302,6 +310,75 @@ template&lt;class R&gt; </div>
 </div><div class="memdoc">
 
 <p>Synchronizes <code>stream</code>, then frees through the synchronous resource &ndash; the synchronize makes the quiescence contract hold. Null is a no-op and skips the synchronize. </p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Friends And Related Symbol Documentation</h2>
+<a id="ab1008dcdaae39a6070ef7796afe31f97" name="ab1008dcdaae39a6070ef7796afe31f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1008dcdaae39a6070ef7796afe31f97">&#9670;&#160;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R&gt; </div>
+<div class="memtemplate">
+template&lt;class S = R, std::enable_if_t&lt; <a class="el" href="structnanovdb_1_1cuda_1_1is__equality__comparable__resource.html">is_equality_comparable_resource</a>&lt; S &gt;::value, int &gt; = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1cuda_1_1AsyncFromSync.html">AsyncFromSync</a>&lt; R &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1cuda_1_1AsyncFromSync.html">AsyncFromSync</a>&lt; R &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab58ee8a065983e46a0878d4c40aed48c" name="ab58ee8a065983e46a0878d4c40aed48c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab58ee8a065983e46a0878d4c40aed48c">&#9670;&#160;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class R&gt; </div>
+<div class="memtemplate">
+template&lt;class S = R, std::enable_if_t&lt; <a class="el" href="structnanovdb_1_1cuda_1_1is__equality__comparable__resource.html">is_equality_comparable_resource</a>&lt; S &gt;::value, int &gt; = 0&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1cuda_1_1AsyncFromSync.html">AsyncFromSync</a>&lt; R &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>lhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structnanovdb_1_1cuda_1_1AsyncFromSync.html">AsyncFromSync</a>&lt; R &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Two adapters compare equal iff their wrapped resources do; present only when <code>R</code> itself is equality-comparable. </p>
 
 </div>
 </div>

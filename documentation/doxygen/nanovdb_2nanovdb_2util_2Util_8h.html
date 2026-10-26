@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -190,8 +190,12 @@ Macros</h2></td></tr>
 <tr class="memitem:a803050db3c78e0db3ea59a0c35499622" id="r_a803050db3c78e0db3ea59a0c35499622"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a803050db3c78e0db3ea59a0c35499622">__host__</a></td></tr>
 <tr class="memitem:a20b30ba86aa53ca12682d9258d792bb3" id="r_a20b30ba86aa53ca12682d9258d792bb3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20b30ba86aa53ca12682d9258d792bb3">NANOVDB_RESTRICT</a>&#160;&#160;&#160;__restrict__</td></tr>
 <tr class="memitem:a2bedaa6389282b408e38375ddc049d4a" id="r_a2bedaa6389282b408e38375ddc049d4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bedaa6389282b408e38375ddc049d4a">NANOVDB_HOSTDEV_DISABLE_WARNING</a></td></tr>
+<tr class="memitem:a3a4bcd1f2c2e8538f9430804a79a31ea" id="r_a3a4bcd1f2c2e8538f9430804a79a31ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a4bcd1f2c2e8538f9430804a79a31ea">NANOVDB_SUPPRESS_DEPRECATION_NVCC_BEGIN</a></td></tr>
+<tr class="memdesc:a3a4bcd1f2c2e8538f9430804a79a31ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines macros that issues warnings for deprecated header files.  <br /></td></tr>
+<tr class="memitem:adabc6005a0c190c630803438ad756aa2" id="r_adabc6005a0c190c630803438ad756aa2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adabc6005a0c190c630803438ad756aa2">NANOVDB_SUPPRESS_DEPRECATION_NVCC_END</a></td></tr>
+<tr class="memitem:aba7e77285c2fa605572e8ae23ddf75a3" id="r_aba7e77285c2fa605572e8ae23ddf75a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba7e77285c2fa605572e8ae23ddf75a3">NANOVDB_SUPPRESS_DEPRECATION_BEGIN</a>&#160;&#160;&#160;<a class="el" href="#a3a4bcd1f2c2e8538f9430804a79a31ea">NANOVDB_SUPPRESS_DEPRECATION_NVCC_BEGIN</a></td></tr>
+<tr class="memitem:a60d91d1763fa3db1716b5a34a601950b" id="r_a60d91d1763fa3db1716b5a34a601950b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60d91d1763fa3db1716b5a34a601950b">NANOVDB_SUPPRESS_DEPRECATION_END</a>&#160;&#160;&#160;<a class="el" href="#adabc6005a0c190c630803438ad756aa2">NANOVDB_SUPPRESS_DEPRECATION_NVCC_END</a></td></tr>
 <tr class="memitem:ae38ae5d91a2537aea03144f126048b3d" id="r_ae38ae5d91a2537aea03144f126048b3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae38ae5d91a2537aea03144f126048b3d">NANOVDB_OFFSETOF</a>(CLASS,  MEMBER)</td></tr>
-<tr class="memdesc:ae38ae5d91a2537aea03144f126048b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines macros that issues warnings for deprecated header files.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -392,12 +396,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((int)(size_t)((<span class="keywordtype">char</span>*)&amp;((CLASS*)0)-&gt;MEMBER - (<span class="keywordtype">char</span>*)0))</div>
 </div><!-- fragment -->
-<p>Defines macros that issues warnings for deprecated header files. </p>
-<p>Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="nanovdb_2nanovdb_2util_2Util_8h.html">nanovdb/util/Util.h</a>&gt;</span> <span class="comment">// for NANOVDB_DEPRECATED_HEADER</span></div>
-<div class="line"><span class="preprocessor">#include &lt;nanovdb/path/Alternative.h&gt;</span></div>
-<div class="line">NANOVDB_DEPRECATED_HEADER(<span class="stringliteral">&quot;This header file is deprecated, please use &lt;nanovdb/path/Alternative.h&gt; instead&quot;</span>)</div>
-<div class="ttc" id="ananovdb_2nanovdb_2util_2Util_8h_html"><div class="ttname"><a href="nanovdb_2nanovdb_2util_2Util_8h.html">Util.h</a></div><div class="ttdoc">Utility functions.</div></div>
-</div><!-- fragment --> 
 </div>
 </div>
 <a id="a20b30ba86aa53ca12682d9258d792bb3" name="a20b30ba86aa53ca12682d9258d792bb3"></a>
@@ -408,6 +406,69 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define NANOVDB_RESTRICT&#160;&#160;&#160;__restrict__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba7e77285c2fa605572e8ae23ddf75a3" name="aba7e77285c2fa605572e8ae23ddf75a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba7e77285c2fa605572e8ae23ddf75a3">&#9670;&#160;</a></span>NANOVDB_SUPPRESS_DEPRECATION_BEGIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NANOVDB_SUPPRESS_DEPRECATION_BEGIN&#160;&#160;&#160;<a class="el" href="#a3a4bcd1f2c2e8538f9430804a79a31ea">NANOVDB_SUPPRESS_DEPRECATION_NVCC_BEGIN</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60d91d1763fa3db1716b5a34a601950b" name="a60d91d1763fa3db1716b5a34a601950b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60d91d1763fa3db1716b5a34a601950b">&#9670;&#160;</a></span>NANOVDB_SUPPRESS_DEPRECATION_END</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NANOVDB_SUPPRESS_DEPRECATION_END&#160;&#160;&#160;<a class="el" href="#adabc6005a0c190c630803438ad756aa2">NANOVDB_SUPPRESS_DEPRECATION_NVCC_END</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a4bcd1f2c2e8538f9430804a79a31ea" name="a3a4bcd1f2c2e8538f9430804a79a31ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a4bcd1f2c2e8538f9430804a79a31ea">&#9670;&#160;</a></span>NANOVDB_SUPPRESS_DEPRECATION_NVCC_BEGIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NANOVDB_SUPPRESS_DEPRECATION_NVCC_BEGIN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines macros that issues warnings for deprecated header files. </p>
+<p>Example: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="nanovdb_2nanovdb_2util_2Util_8h.html">nanovdb/util/Util.h</a>&gt;</span> <span class="comment">// for NANOVDB_DEPRECATED_HEADER</span></div>
+<div class="line"><span class="preprocessor">#include &lt;nanovdb/path/Alternative.h&gt;</span></div>
+<div class="line">NANOVDB_DEPRECATED_HEADER(<span class="stringliteral">&quot;This header file is deprecated, please use &lt;nanovdb/path/Alternative.h&gt; instead&quot;</span>)</div>
+<div class="ttc" id="ananovdb_2nanovdb_2util_2Util_8h_html"><div class="ttname"><a href="nanovdb_2nanovdb_2util_2Util_8h.html">Util.h</a></div><div class="ttdoc">Utility functions.</div></div>
+</div><!-- fragment --><p>Brackets code that calls deprecated NanoVDB API on purpose, e.g. a deprecated member that forwards to another deprecated member, so that the warning is reported only at the user's call. </p>
+
+</div>
+</div>
+<a id="adabc6005a0c190c630803438ad756aa2" name="adabc6005a0c190c630803438ad756aa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabc6005a0c190c630803438ad756aa2">&#9670;&#160;</a></span>NANOVDB_SUPPRESS_DEPRECATION_NVCC_END</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NANOVDB_SUPPRESS_DEPRECATION_NVCC_END</td>
         </tr>
       </table>
 </div><div class="memdoc">

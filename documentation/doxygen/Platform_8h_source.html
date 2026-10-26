@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -338,137 +338,145 @@ $(function(){initNavTree('Platform_8h_source.html','',''); });
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="preprocessor">#if defined __INTEL_COMPILER</span></div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="preprocessor">    #define OPENVDB_NO_TYPE_CONVERSION_WARNING_BEGIN</span></div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="preprocessor">    #define OPENVDB_NO_TYPE_CONVERSION_WARNING_END</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="preprocessor">#elif defined __GNUC__</span></div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="comment">// -Wfloat-conversion was only introduced in GCC 4.9</span></div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="preprocessor">    #define OPENVDB_NO_TYPE_CONVERSION_WARNING_BEGIN \</span></div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="preprocessor">        _Pragma(&quot;GCC diagnostic push&quot;) \</span></div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="preprocessor">        _Pragma(&quot;GCC diagnostic ignored \&quot;-Wconversion\&quot;&quot;) \</span></div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="preprocessor">        _Pragma(&quot;GCC diagnostic ignored \&quot;-Wfloat-conversion\&quot;&quot;)</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="preprocessor">#elif defined __clang__</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="preprocessor">    #define OPENVDB_NO_TYPE_CONVERSION_WARNING_BEGIN \</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="preprocessor">        _Pragma(&quot;clang diagnostic push&quot;) \</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="preprocessor">        _Pragma(&quot;clang diagnostic ignored \&quot;-Wconversion\&quot;&quot;) \</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="preprocessor">        _Pragma(&quot;clang diagnostic ignored \&quot;-Wfloat-conversion\&quot;&quot;) \</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="preprocessor">        _Pragma(&quot;clang diagnostic ignored \&quot;-Wimplicit-float-conversion\&quot;&quot;)</span></div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="preprocessor">    #define OPENVDB_NO_TYPE_CONVERSION_WARNING_END \</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">        _Pragma(&quot;GCC diagnostic pop&quot;)</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="Platform_8h.html#a4f7375e7791cade4ae486a8ebb68056f">  231</a></span><span class="preprocessor">    #define OPENVDB_NO_TYPE_CONVERSION_WARNING_BEGIN</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="Platform_8h.html#ac13c11880cf8b8dd311a72e5a05b295d">  232</a></span><span class="preprocessor">    #define OPENVDB_NO_TYPE_CONVERSION_WARNING_END</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="comment"></span> </div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="comment">/// Helper macros for defining library symbol visibility</span></div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="preprocessor">#ifdef OPENVDB_EXPORT</span></div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="preprocessor">#undef OPENVDB_EXPORT</span></div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="preprocessor">#ifdef OPENVDB_IMPORT</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="preprocessor">#undef OPENVDB_IMPORT</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">        _Pragma(&quot;clang diagnostic pop&quot;)</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="preprocessor">#elif defined __GNUC__</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="comment">// -Wfloat-conversion was only introduced in GCC 4.9</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="preprocessor">    #define OPENVDB_NO_TYPE_CONVERSION_WARNING_BEGIN \</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="preprocessor">        _Pragma(&quot;GCC diagnostic push&quot;) \</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">        _Pragma(&quot;GCC diagnostic ignored \&quot;-Wconversion\&quot;&quot;) \</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="preprocessor">        _Pragma(&quot;GCC diagnostic ignored \&quot;-Wfloat-conversion\&quot;&quot;)</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="preprocessor">    #define OPENVDB_NO_TYPE_CONVERSION_WARNING_END \</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="preprocessor">        _Pragma(&quot;GCC diagnostic pop&quot;)</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="Platform_8h.html#a4f7375e7791cade4ae486a8ebb68056f">  239</a></span><span class="preprocessor">    #define OPENVDB_NO_TYPE_CONVERSION_WARNING_BEGIN</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="Platform_8h.html#ac13c11880cf8b8dd311a72e5a05b295d">  240</a></span><span class="preprocessor">    #define OPENVDB_NO_TYPE_CONVERSION_WARNING_END</span></div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="preprocessor">    #ifdef OPENVDB_DLL</span></div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="preprocessor">        #define OPENVDB_EXPORT __declspec(dllexport)</span></div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="preprocessor">        #define OPENVDB_IMPORT __declspec(dllimport)</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="preprocessor">    #else</span></div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="preprocessor">        #define OPENVDB_EXPORT</span></div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="preprocessor">        #define OPENVDB_IMPORT</span></div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="preprocessor">    #define OPENVDB_EXPORT __attribute__((visibility(&quot;default&quot;)))</span></div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="preprocessor">    #define OPENVDB_IMPORT __attribute__((visibility(&quot;default&quot;)))</span></div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="comment"></span> </div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="comment">/// Helper macros for explicit template instantiation</span></div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="preprocessor">#if defined(_WIN32) &amp;&amp; defined(OPENVDB_DLL)</span></div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="preprocessor">    #ifdef OPENVDB_PRIVATE</span></div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="preprocessor">        #define OPENVDB_TEMPLATE_EXPORT OPENVDB_EXPORT</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="preprocessor">        #define OPENVDB_TEMPLATE_IMPORT</span></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="preprocessor">    #else</span></div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="preprocessor">        #define OPENVDB_TEMPLATE_EXPORT</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="preprocessor">        #define OPENVDB_TEMPLATE_IMPORT OPENVDB_IMPORT</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="preprocessor">    #endif</span></div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="Platform_8h.html#ae90ddc631630096e31703b376e7bc04d">  265</a></span><span class="preprocessor">    #define OPENVDB_TEMPLATE_IMPORT</span></div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno"><a class="line" href="Platform_8h.html#ac696e2eebc7f22c46fdcf87f8ecebd8c">  266</a></span><span class="preprocessor">    #define OPENVDB_TEMPLATE_EXPORT</span></div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="comment"></span> </div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="comment">/// All classes and public free standing functions must be explicitly marked</span></div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="comment">/// as &lt;lib&gt;_API to be exported. The &lt;lib&gt;_PRIVATE macros are defined when</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="comment">/// building that particular library.</span></div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">#ifdef OPENVDB_API</span></div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="preprocessor">#undef OPENVDB_API</span></div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="preprocessor">#ifdef OPENVDB_PRIVATE</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">    #define OPENVDB_API OPENVDB_EXPORT</span></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">  278</a></span><span class="preprocessor">    #define OPENVDB_API OPENVDB_IMPORT</span></div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="preprocessor">#ifdef OPENVDB_HOUDINI_API</span></div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="preprocessor">#undef OPENVDB_HOUDINI_API</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="comment"></span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="comment">/// Helper macros for defining library symbol visibility</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="preprocessor">#ifdef OPENVDB_EXPORT</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="preprocessor">#undef OPENVDB_EXPORT</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="preprocessor">#ifdef OPENVDB_IMPORT</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="preprocessor">#undef OPENVDB_IMPORT</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="preprocessor">    #ifdef OPENVDB_DLL</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="preprocessor">        #define OPENVDB_EXPORT __declspec(dllexport)</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">        #define OPENVDB_IMPORT __declspec(dllimport)</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="preprocessor">    #else</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="preprocessor">        #define OPENVDB_EXPORT</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="preprocessor">        #define OPENVDB_IMPORT</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="preprocessor">#elif defined(__GNUC__)</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="preprocessor">    #define OPENVDB_EXPORT __attribute__((visibility(&quot;default&quot;)))</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="preprocessor">    #define OPENVDB_IMPORT __attribute__((visibility(&quot;default&quot;)))</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="comment"></span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="comment">/// Helper macros for explicit template instantiation</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="preprocessor">#if defined(_WIN32) &amp;&amp; defined(OPENVDB_DLL)</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="preprocessor">    #ifdef OPENVDB_PRIVATE</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="preprocessor">        #define OPENVDB_TEMPLATE_EXPORT OPENVDB_EXPORT</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="preprocessor">        #define OPENVDB_TEMPLATE_IMPORT</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="preprocessor">    #else</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="preprocessor">        #define OPENVDB_TEMPLATE_EXPORT</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">        #define OPENVDB_TEMPLATE_IMPORT OPENVDB_IMPORT</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="Platform_8h.html#ae90ddc631630096e31703b376e7bc04d">  273</a></span><span class="preprocessor">    #define OPENVDB_TEMPLATE_IMPORT</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="Platform_8h.html#ac696e2eebc7f22c46fdcf87f8ecebd8c">  274</a></span><span class="preprocessor">    #define OPENVDB_TEMPLATE_EXPORT</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="comment"></span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="comment">/// All classes and public free standing functions must be explicitly marked</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="comment">/// as &lt;lib&gt;_API to be exported. The &lt;lib&gt;_PRIVATE macros are defined when</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="comment">/// building that particular library.</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="preprocessor">#ifdef OPENVDB_API</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="preprocessor">#undef OPENVDB_API</span></div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="preprocessor">#ifdef OPENVDB_HOUDINI_PRIVATE</span></div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="preprocessor">    #define OPENVDB_HOUDINI_API OPENVDB_EXPORT</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="preprocessor">#ifdef OPENVDB_PRIVATE</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="preprocessor">    #define OPENVDB_API OPENVDB_EXPORT</span></div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno"><a class="line" href="Platform_8h.html#a88b26daa45bbdd69d6bb12f9c7bfa3b2">  286</a></span><span class="preprocessor">    #define OPENVDB_HOUDINI_API OPENVDB_IMPORT</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno"><a class="line" href="Platform_8h.html#a78ead02913edfee18be9d5982b788611">  286</a></span><span class="preprocessor">    #define OPENVDB_API OPENVDB_IMPORT</span></div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="preprocessor">#ifdef OPENVDB_AX_DLL</span></div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="preprocessor">#ifdef OPENVDB_AX_API</span></div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="preprocessor">#undef OPENVDB_AX_API</span></div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="preprocessor">#ifdef OPENVDB_AX_PRIVATE</span></div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="preprocessor">    #define OPENVDB_AX_API OPENVDB_EXPORT</span></div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="preprocessor">    #define OPENVDB_AX_API OPENVDB_IMPORT</span></div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno"><a class="line" href="Platform_8h.html#a4054a06b412a2c4f17ad97328fccd2cd">  299</a></span><span class="preprocessor">#define OPENVDB_AX_API</span></div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="preprocessor">#endif </span><span class="comment">// OPENVDB_AX_DLL</span></div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="preprocessor">#if defined(__ICC)</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="comment">// Use these defines to bracket a region of code that has safe static accesses.</span></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="comment">// Keep the region as small as possible.</span></div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="preprocessor">#define OPENVDB_START_THREADSAFE_STATIC_REFERENCE   __pragma(warning(disable:1710))</span></div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span><span class="preprocessor">#define OPENVDB_FINISH_THREADSAFE_STATIC_REFERENCE  __pragma(warning(default:1710))</span></div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="preprocessor">#define OPENVDB_START_THREADSAFE_STATIC_WRITE       __pragma(warning(disable:1711))</span></div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="preprocessor">#define OPENVDB_FINISH_THREADSAFE_STATIC_WRITE      __pragma(warning(default:1711))</span></div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="preprocessor">#define OPENVDB_START_THREADSAFE_STATIC_ADDRESS     __pragma(warning(disable:1712))</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="preprocessor">#define OPENVDB_FINISH_THREADSAFE_STATIC_ADDRESS    __pragma(warning(default:1712))</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="comment">// Use these defines to bracket a region of code that has unsafe static accesses.</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="comment">// Keep the region as small as possible.</span></div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="preprocessor">#define OPENVDB_START_NON_THREADSAFE_STATIC_REFERENCE   __pragma(warning(disable:1710))</span></div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="preprocessor">#define OPENVDB_FINISH_NON_THREADSAFE_STATIC_REFERENCE  __pragma(warning(default:1710))</span></div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="preprocessor">#define OPENVDB_START_NON_THREADSAFE_STATIC_WRITE       __pragma(warning(disable:1711))</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="preprocessor">#define OPENVDB_FINISH_NON_THREADSAFE_STATIC_WRITE      __pragma(warning(default:1711))</span></div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="preprocessor">#define OPENVDB_START_NON_THREADSAFE_STATIC_ADDRESS     __pragma(warning(disable:1712))</span></div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="preprocessor">#define OPENVDB_FINISH_NON_THREADSAFE_STATIC_ADDRESS    __pragma(warning(default:1712))</span></div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="comment">// Simpler version for one-line cases</span></div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="preprocessor">#define OPENVDB_THREADSAFE_STATIC_REFERENCE(CODE) \</span></div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="preprocessor">    __pragma(warning(disable:1710)); CODE; __pragma(warning(default:1710))</span></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="preprocessor">#define OPENVDB_THREADSAFE_STATIC_WRITE(CODE) \</span></div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="preprocessor">    __pragma(warning(disable:1711)); CODE; __pragma(warning(default:1711))</span></div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="preprocessor">#define OPENVDB_THREADSAFE_STATIC_ADDRESS(CODE) \</span></div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="preprocessor">    __pragma(warning(disable:1712)); CODE; __pragma(warning(default:1712))</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="preprocessor">#ifdef OPENVDB_HOUDINI_API</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="preprocessor">#undef OPENVDB_HOUDINI_API</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="preprocessor">#ifdef OPENVDB_HOUDINI_PRIVATE</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="preprocessor">    #define OPENVDB_HOUDINI_API OPENVDB_EXPORT</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno"><a class="line" href="Platform_8h.html#a88b26daa45bbdd69d6bb12f9c7bfa3b2">  294</a></span><span class="preprocessor">    #define OPENVDB_HOUDINI_API OPENVDB_IMPORT</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="preprocessor">#ifdef OPENVDB_AX_DLL</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="preprocessor">#ifdef OPENVDB_AX_API</span></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="preprocessor">#undef OPENVDB_AX_API</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="preprocessor">#ifdef OPENVDB_AX_PRIVATE</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="preprocessor">    #define OPENVDB_AX_API OPENVDB_EXPORT</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="preprocessor">    #define OPENVDB_AX_API OPENVDB_IMPORT</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno"><a class="line" href="Platform_8h.html#a4054a06b412a2c4f17ad97328fccd2cd">  307</a></span><span class="preprocessor">#define OPENVDB_AX_API</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="preprocessor">#endif </span><span class="comment">// OPENVDB_AX_DLL</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="preprocessor">#if defined(__ICC)</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="comment">// Use these defines to bracket a region of code that has safe static accesses.</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="comment">// Keep the region as small as possible.</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span><span class="preprocessor">#define OPENVDB_START_THREADSAFE_STATIC_REFERENCE   __pragma(warning(disable:1710))</span></div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span><span class="preprocessor">#define OPENVDB_FINISH_THREADSAFE_STATIC_REFERENCE  __pragma(warning(default:1710))</span></div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="preprocessor">#define OPENVDB_START_THREADSAFE_STATIC_WRITE       __pragma(warning(disable:1711))</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="preprocessor">#define OPENVDB_FINISH_THREADSAFE_STATIC_WRITE      __pragma(warning(default:1711))</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="preprocessor">#define OPENVDB_START_THREADSAFE_STATIC_ADDRESS     __pragma(warning(disable:1712))</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span><span class="preprocessor">#define OPENVDB_FINISH_THREADSAFE_STATIC_ADDRESS    __pragma(warning(default:1712))</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="comment">// Use these defines to bracket a region of code that has unsafe static accesses.</span></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="comment">// Keep the region as small as possible.</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="preprocessor">#define OPENVDB_START_NON_THREADSAFE_STATIC_REFERENCE   __pragma(warning(disable:1710))</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="preprocessor">#define OPENVDB_FINISH_NON_THREADSAFE_STATIC_REFERENCE  __pragma(warning(default:1710))</span></div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="preprocessor">#define OPENVDB_START_NON_THREADSAFE_STATIC_WRITE       __pragma(warning(disable:1711))</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="preprocessor">#define OPENVDB_FINISH_NON_THREADSAFE_STATIC_WRITE      __pragma(warning(default:1711))</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="preprocessor">#define OPENVDB_START_NON_THREADSAFE_STATIC_ADDRESS     __pragma(warning(disable:1712))</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="preprocessor">#define OPENVDB_FINISH_NON_THREADSAFE_STATIC_ADDRESS    __pragma(warning(default:1712))</span></div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="preprocessor">#else </span><span class="comment">// GCC does not support these compiler warnings</span></div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno"><a class="line" href="Platform_8h.html#a116c03460d08a7c8124d77f0025aa5d6">  332</a></span><span class="preprocessor">#define OPENVDB_START_THREADSAFE_STATIC_REFERENCE</span></div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno"><a class="line" href="Platform_8h.html#ac68bc3e353838aee46b122d1035467e8">  333</a></span><span class="preprocessor">#define OPENVDB_FINISH_THREADSAFE_STATIC_REFERENCE</span></div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno"><a class="line" href="Platform_8h.html#a7b933d956cd2f602c346ec80f34d7efa">  334</a></span><span class="preprocessor">#define OPENVDB_START_THREADSAFE_STATIC_WRITE</span></div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="Platform_8h.html#ac1bb06f94f61bbd95e69522ec6d184dd">  335</a></span><span class="preprocessor">#define OPENVDB_FINISH_THREADSAFE_STATIC_WRITE</span></div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno"><a class="line" href="Platform_8h.html#aba3a523e76beaaf0d8cc51e8bbdbe8ae">  336</a></span><span class="preprocessor">#define OPENVDB_START_THREADSAFE_STATIC_ADDRESS</span></div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno"><a class="line" href="Platform_8h.html#ae8027565fe483ff8ce9956b0c04de75c">  337</a></span><span class="preprocessor">#define OPENVDB_FINISH_THREADSAFE_STATIC_ADDRESS</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="Platform_8h.html#a1de5e38ab3511d8aa63ff49be1703a3c">  339</a></span><span class="preprocessor">#define OPENVDB_START_NON_THREADSAFE_STATIC_REFERENCE</span></div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno"><a class="line" href="Platform_8h.html#a4c25fe5ebce981d186bc0d5b7094ec34">  340</a></span><span class="preprocessor">#define OPENVDB_FINISH_NON_THREADSAFE_STATIC_REFERENCE</span></div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="Platform_8h.html#ac303d44a9c746b4fc7882bb57ef4c0e2">  341</a></span><span class="preprocessor">#define OPENVDB_START_NON_THREADSAFE_STATIC_WRITE</span></div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno"><a class="line" href="Platform_8h.html#a9154d689727e60526e308351485a8187">  342</a></span><span class="preprocessor">#define OPENVDB_FINISH_NON_THREADSAFE_STATIC_WRITE</span></div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno"><a class="line" href="Platform_8h.html#a7576930a67c5438495f5b4eca806a209">  343</a></span><span class="preprocessor">#define OPENVDB_START_NON_THREADSAFE_STATIC_ADDRESS</span></div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno"><a class="line" href="Platform_8h.html#a04a587fd9ae1911115d6c9ea3d7b2ecd">  344</a></span><span class="preprocessor">#define OPENVDB_FINISH_NON_THREADSAFE_STATIC_ADDRESS</span></div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno"><a class="line" href="Platform_8h.html#af45bfee6bdac4fd25ebba777d6ae8609">  346</a></span><span class="preprocessor">#define OPENVDB_THREADSAFE_STATIC_REFERENCE(CODE) CODE</span></div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno"><a class="line" href="Platform_8h.html#a74544cfe36b32ed0637ff78e5b26e19e">  347</a></span><span class="preprocessor">#define OPENVDB_THREADSAFE_STATIC_WRITE(CODE) CODE</span></div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno"><a class="line" href="Platform_8h.html#a4221a82a55c24552c9b9812961654b94">  348</a></span><span class="preprocessor">#define OPENVDB_THREADSAFE_STATIC_ADDRESS(CODE) CODE</span></div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="preprocessor">#endif </span><span class="comment">// defined(__ICC)</span></div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="preprocessor">#endif </span><span class="comment">// OPENVDB_PLATFORM_HAS_BEEN_INCLUDED</span></div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span><span class="comment">// Simpler version for one-line cases</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="preprocessor">#define OPENVDB_THREADSAFE_STATIC_REFERENCE(CODE) \</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="preprocessor">    __pragma(warning(disable:1710)); CODE; __pragma(warning(default:1710))</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="preprocessor">#define OPENVDB_THREADSAFE_STATIC_WRITE(CODE) \</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="preprocessor">    __pragma(warning(disable:1711)); CODE; __pragma(warning(default:1711))</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="preprocessor">#define OPENVDB_THREADSAFE_STATIC_ADDRESS(CODE) \</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="preprocessor">    __pragma(warning(disable:1712)); CODE; __pragma(warning(default:1712))</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="preprocessor">#else </span><span class="comment">// GCC does not support these compiler warnings</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno"><a class="line" href="Platform_8h.html#a116c03460d08a7c8124d77f0025aa5d6">  340</a></span><span class="preprocessor">#define OPENVDB_START_THREADSAFE_STATIC_REFERENCE</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno"><a class="line" href="Platform_8h.html#ac68bc3e353838aee46b122d1035467e8">  341</a></span><span class="preprocessor">#define OPENVDB_FINISH_THREADSAFE_STATIC_REFERENCE</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno"><a class="line" href="Platform_8h.html#a7b933d956cd2f602c346ec80f34d7efa">  342</a></span><span class="preprocessor">#define OPENVDB_START_THREADSAFE_STATIC_WRITE</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno"><a class="line" href="Platform_8h.html#ac1bb06f94f61bbd95e69522ec6d184dd">  343</a></span><span class="preprocessor">#define OPENVDB_FINISH_THREADSAFE_STATIC_WRITE</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno"><a class="line" href="Platform_8h.html#aba3a523e76beaaf0d8cc51e8bbdbe8ae">  344</a></span><span class="preprocessor">#define OPENVDB_START_THREADSAFE_STATIC_ADDRESS</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno"><a class="line" href="Platform_8h.html#ae8027565fe483ff8ce9956b0c04de75c">  345</a></span><span class="preprocessor">#define OPENVDB_FINISH_THREADSAFE_STATIC_ADDRESS</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno"><a class="line" href="Platform_8h.html#a1de5e38ab3511d8aa63ff49be1703a3c">  347</a></span><span class="preprocessor">#define OPENVDB_START_NON_THREADSAFE_STATIC_REFERENCE</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno"><a class="line" href="Platform_8h.html#a4c25fe5ebce981d186bc0d5b7094ec34">  348</a></span><span class="preprocessor">#define OPENVDB_FINISH_NON_THREADSAFE_STATIC_REFERENCE</span></div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno"><a class="line" href="Platform_8h.html#ac303d44a9c746b4fc7882bb57ef4c0e2">  349</a></span><span class="preprocessor">#define OPENVDB_START_NON_THREADSAFE_STATIC_WRITE</span></div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno"><a class="line" href="Platform_8h.html#a9154d689727e60526e308351485a8187">  350</a></span><span class="preprocessor">#define OPENVDB_FINISH_NON_THREADSAFE_STATIC_WRITE</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno"><a class="line" href="Platform_8h.html#a7576930a67c5438495f5b4eca806a209">  351</a></span><span class="preprocessor">#define OPENVDB_START_NON_THREADSAFE_STATIC_ADDRESS</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno"><a class="line" href="Platform_8h.html#a04a587fd9ae1911115d6c9ea3d7b2ecd">  352</a></span><span class="preprocessor">#define OPENVDB_FINISH_NON_THREADSAFE_STATIC_ADDRESS</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno"><a class="line" href="Platform_8h.html#af45bfee6bdac4fd25ebba777d6ae8609">  354</a></span><span class="preprocessor">#define OPENVDB_THREADSAFE_STATIC_REFERENCE(CODE) CODE</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno"><a class="line" href="Platform_8h.html#a74544cfe36b32ed0637ff78e5b26e19e">  355</a></span><span class="preprocessor">#define OPENVDB_THREADSAFE_STATIC_WRITE(CODE) CODE</span></div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno"><a class="line" href="Platform_8h.html#a4221a82a55c24552c9b9812961654b94">  356</a></span><span class="preprocessor">#define OPENVDB_THREADSAFE_STATIC_ADDRESS(CODE) CODE</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="preprocessor">#endif </span><span class="comment">// defined(__ICC)</span></div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span> </div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span><span class="preprocessor">#endif </span><span class="comment">// OPENVDB_PLATFORM_HAS_BEEN_INCLUDED</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

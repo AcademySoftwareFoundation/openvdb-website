@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.1.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
    </div>
   </td>
  </tr>
@@ -122,15 +122,15 @@ $(function(){initNavTree('NanoVDB_HowToBuild.html','',''); });
 <p>Also, note that if the environment variable <span class="tt">VDB_DATA_PATH</span> is set to a directory containing the OpenVDB files from <a href="http://www.openvdb.org/download">the OpenVDB web site</a>, they will be used for the unit and the benchmark tests. Else a simple narrow-band level set sphere is used. Set the environment variable <span class="tt">VDB_SCRATCH_PATH</span> to define the path to where images generated in the benchmark tests are stored (defaults to the build directory).</p>
 <p>To explicitly remove a dependency, <span class="tt">X</span>, add the argument <span class="tt">-DNANOVDB_USE_X=OFF</span> where <span class="tt">X = {OPENVDB, TBB, BLOSC, ZLIB, CUDA}</span>. These options are set in the <a href="https://github.com/AcademySoftwareFoundation/openvdb/blob/master/nanovdb/nanovdb/CMakeLists.txt">NanoVDB root CMakeLists.txt</a>. The same file also defines options to build NanoVDB examples, benchmarks, unit-tests, and command-line tools. The default values for these options are <span class="tt">OFF</span>. A user can override each of these options by passing, for example, <span class="tt">-DNANOVDB_BUILD_UNITTESTS=ON</span> flag while running cmake from the command line.</p>
 <p>To see the compiler arguments add <span class="tt">-DCMAKE_VERBOSE_MAKEFILE=ON</span>.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
 First example: building NanoVDB and OpenVDB core</h1>
 <p>NanoVDB is now a module of the larger OpenVDB project. A user can build both libraries together. This will build the OpenVDB core library, install the NanoVDB header files, and build the NanoVDB command-line tools in the <span class="tt">build/nanovdb/cmd</span> directory. From the 'root' OpenVDB project directory (change the dependency paths to match your environment): </p><div class="fragment"><div class="line">foo@bar:~$ mkdir build</div>
 <div class="line">foo@bar:~$ cd build</div>
-<div class="line">foo@bar:~$ cmake .. -DUSE_NANOVDB=ON -DTBB_ROOT=/path/to/tbb -DBOOST_ROOT=/path/to/boost -DBLOSC_ROOT=/path/to/blosc -DCMAKE_INSTALL_PREFIX=/install/path</div>
+<div class="line">foo@bar:~$ cmake .. -DUSE_NANOVDB=ON -DTBB_ROOT=/path/to/tbb -DBLOSC_ROOT=/path/to/blosc -DCMAKE_INSTALL_PREFIX=/install/path</div>
 <div class="line">foo@bar:~$ make -j 4 &amp;&amp; make install</div>
-</div><!-- fragment --><p> Note that the default value of <span class="tt">NANOVDB_USE_OPENVDB</span> is linked to <span class="tt">OPENVDB_BUILD_CORE</span> option and can be overriden by passing on <span class="tt">-DNANOVDB_USE_OPENVDB=OFF</span>. The <span class="tt">Boost</span> library is included because it is a requirement for building OpenVDB.</p>
+</div><!-- fragment --><p> Note that the default value of <span class="tt">NANOVDB_USE_OPENVDB</span> is linked to <span class="tt">OPENVDB_BUILD_CORE</span> option and can be overriden by passing on <span class="tt">-DNANOVDB_USE_OPENVDB=OFF</span>.</p>
 <p>In general, CMake will try to find every optional dependency when a user opts to add an additional dependency. Be sure to check the CMake log to see what dependencies were <b>not</b> found.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
 Second example: NanoVDB with no dependencies</h1>
 <p>From the 'root' OpenVDB project directory: </p><div class="fragment"><div class="line">foo@bar:~$ mkdir build</div>
 <div class="line">foo@bar:~$ cd build</div>
@@ -142,11 +142,11 @@ Second example: NanoVDB with no dependencies</h1>
 <div class="line">foo@bar:~$ cmake .. -DCMAKE_INSTALL_PREFIX=/install/path</div>
 <div class="line">foo@bar:~$ make -j 4 &amp;&amp; make install</div>
 </div><!-- fragment --><p> Both options will install the NanoVDB header files to the <span class="tt">/install/path</span> as well as building <span class="tt">nanovdb_print</span> and <span class="tt">nanovdb_validate</span> executable. The path where these executables are installed will be different: in the first option they will be under <span class="tt">build/nanovdb/cmd</span> directory; whilst in the second option they will be under the <span class="tt">build/cmd/</span> directory.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
 Third example: build 'everything' in NanoVDB along with OpenVDB core</h1>
 <p>From the root OpenVDB directory: </p><div class="fragment"><div class="line">foo@bar:~$ mkdir build</div>
 <div class="line">foo@bar:~$ cd build</div>
-<div class="line">foo@bar:~$ cmake .. -DUSE_NANOVDB=ON -DNANOVDB_BUILD_UNITTESTS=ON -DNANOVDB_BUILD_EXAMPLES=ON -DNANOVDB_BUILD_BENCHMARK=ON -DNANOVDB_USE_INTRINSICS=ON -DNANOVDB_USE_CUDA=ON -DNANOVDB_CUDA_KEEP_PTX=ON -DTBB_ROOT=/path/to/tbb -DBOOST_ROOT=/path/to/boost -DBLOSC_ROOT=/path/to/blosc -DGTEST_ROOT=/path/to/gtest -DCMAKE_INSTALL_PREFIX=/install/path</div>
+<div class="line">foo@bar:~$ cmake .. -DUSE_NANOVDB=ON -DNANOVDB_BUILD_UNITTESTS=ON -DNANOVDB_BUILD_EXAMPLES=ON -DNANOVDB_BUILD_BENCHMARK=ON -DNANOVDB_USE_INTRINSICS=ON -DNANOVDB_USE_CUDA=ON -DNANOVDB_CUDA_KEEP_PTX=ON -DTBB_ROOT=/path/to/tbb -DBLOSC_ROOT=/path/to/blosc -DGTEST_ROOT=/path/to/gtest -DCMAKE_INSTALL_PREFIX=/install/path</div>
 <div class="line">foo@bar:~$ make -j 4 &amp;&amp; make install</div>
 </div><!-- fragment --><p> Note that if you already have the correct version of OpenVDB pre-installed, you can configure CMake to link against that library by passing the arguments <span class="tt">-DOPENVDB_BUILD_CORE=OFF -DOPENVDB_BUILD_BINARIES=OFF -DOPENVDB_ROOT=/path/to/openvdb</span> when invoking <span class="tt">cmake</span>. </p>
 </div></div><!-- contents -->
