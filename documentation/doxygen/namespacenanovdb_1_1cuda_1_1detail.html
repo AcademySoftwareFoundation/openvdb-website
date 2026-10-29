@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -122,14 +122,8 @@ $(function(){initNavTree('namespacenanovdb_1_1cuda_1_1detail.html','',''); });
 Classes</h2></td></tr>
 <tr class="memitem:DeviceGuard" id="r_DeviceGuard"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1cuda_1_1detail_1_1DeviceGuard.html">DeviceGuard</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII class that caches/restores the current device at construction/destruction.  <a href="classnanovdb_1_1cuda_1_1detail_1_1DeviceGuard.html#details">More...</a><br /></td></tr>
-<tr class="memitem:HandleFactory" id="r_HandleFactory"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1HandleFactory.html">HandleFactory</a></td></tr>
-<tr class="memitem:InternalRef" id="r_InternalRef"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1InternalRef.html">InternalRef</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tag for the <a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html" title="Non-owning reference to a memory resource that is itself a resource: copying the ref shares the under...">ResourceRef</a> constructor behind borrowInternal.  <a href="structnanovdb_1_1cuda_1_1detail_1_1InternalRef.html#details">More...</a><br /></td></tr>
 <tr class="memitem:IsStreamArgument" id="r_IsStreamArgument"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1IsStreamArgument.html">IsStreamArgument</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when <code>BufferT</code> is a stream rather than a buffer: cudaStream_t, or another non-buffer type that converts to it. nullptr is not a stream here.  <a href="structnanovdb_1_1cuda_1_1detail_1_1IsStreamArgument.html#details">More...</a><br /></td></tr>
-<tr class="memitem:ReferencedResource" id="r_ReferencedResource"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1ReferencedResource.html">ReferencedResource</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The resource a buffer's memory comes from: <code>R</code> itself, or the resource a <a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html" title="Non-owning reference to a memory resource that is itself a resource: copying the ref shares the under...">ResourceRef&lt;R&gt;</a> refers to.  <a href="structnanovdb_1_1cuda_1_1detail_1_1ReferencedResource.html#details">More...</a><br /></td></tr>
-<tr class="memitem:ReferencedResource_3C_20ResourceRef_3C_20R_20_3E_20_3E" id="r_ReferencedResource_3C_20ResourceRef_3C_20R_20_3E_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1ReferencedResource_3_01ResourceRef_3_01R_01_4_01_4.html">ReferencedResource&lt; ResourceRef&lt; R &gt; &gt;</a></td></tr>
 <tr class="memitem:StreamHolder" id="r_StreamHolder"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1StreamHolder.html">StreamHolder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conditional stream storage for <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">Buffer</a>. The async specialization retains the stream of the most recent allocation; the synchronous specialization is an empty base, so a <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">Buffer</a> over a synchronous resource carries no stream state and exposes no stream API.  <a href="structnanovdb_1_1cuda_1_1detail_1_1StreamHolder.html#details">More...</a><br /></td></tr>
 <tr class="memitem:StreamHolder_3C_20true_20_3E" id="r_StreamHolder_3C_20true_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1StreamHolder_3_01true_01_4.html">StreamHolder&lt; true &gt;</a></td></tr>
@@ -143,27 +137,18 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af826e424850ae612f3e52686c00142d5" id="r_af826e424850ae612f3e52686c00142d5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af826e424850ae612f3e52686c00142d5">queryAllocationGranularityEntryPoint</a> ()</td></tr>
-<tr class="memitem:a102eb9feb0eba357d963d4e25875cb5b" id="r_a102eb9feb0eba357d963d4e25875cb5b"><td class="memTemplParams" colspan="2">template&lt;class R&gt; </td></tr>
-<tr class="memitem:a102eb9feb0eba357d963d4e25875cb5b template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a102eb9feb0eba357d963d4e25875cb5b">resourceWithoutEquality</a> ()</td></tr>
-<tr class="memdesc:a102eb9feb0eba357d963d4e25875cb5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reached only through a resource without operator==, so the deprecation names the resource type at the point of use.  <br /></td></tr>
-<tr class="memitem:a38cad258f4205a0a38cce7491f3743f8" id="r_a38cad258f4205a0a38cce7491f3743f8"><td class="memTemplParams" colspan="2">template&lt;class R&gt; </td></tr>
-<tr class="memitem:a38cad258f4205a0a38cce7491f3743f8 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38cad258f4205a0a38cce7491f3743f8">checkReferencedEquality</a> ()</td></tr>
-<tr class="memdesc:a38cad258f4205a0a38cce7491f3743f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Warns, through the deprecation above, when <code>R</code> lacks the equality that 14.0 makes part of the resource concepts. Instantiated once per resource type, so a misuse warns once however often it recurs.  <br /></td></tr>
-<tr class="memitem:a0858370de9fcac1e350b9b1760923d1f" id="r_a0858370de9fcac1e350b9b1760923d1f"><td class="memTemplParams" colspan="2">template&lt;class R&gt; </td></tr>
-<tr class="memitem:a0858370de9fcac1e350b9b1760923d1f template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0858370de9fcac1e350b9b1760923d1f">checkResourceEquality</a> ()</td></tr>
-<tr class="memdesc:a0858370de9fcac1e350b9b1760923d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the resource behind <code>R</code> (see <a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1ReferencedResource.html" title="The resource a buffer&#39;s memory comes from: R itself, or the resource a ResourceRef&lt;R&gt; refers to.">ReferencedResource</a>), so a resource and a <a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html" title="Non-owning reference to a memory resource that is itself a resource: copying the ref shares the under...">ResourceRef</a> to it share one check.  <br /></td></tr>
 <tr class="memitem:a8f2b496bb00503ff6396004cf2c13e75" id="r_a8f2b496bb00503ff6396004cf2c13e75"><td class="memTemplParams" colspan="2">template&lt;class R&gt; </td></tr>
 <tr class="memitem:a8f2b496bb00503ff6396004cf2c13e75 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html">ResourceRef</a>&lt; R &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f2b496bb00503ff6396004cf2c13e75">borrowInternal</a> (R &amp;resource)</td></tr>
-<tr class="memdesc:a8f2b496bb00503ff6396004cf2c13e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html" title="Non-owning reference to a memory resource that is itself a resource: copying the ref shares the under...">ResourceRef</a> to <code>resource</code> for NanoVDB's own components; constructing it does not warn.  <br /></td></tr>
-<tr class="memitem:a69e4ce3b3c28b310b77a82373c9fc47f" id="r_a69e4ce3b3c28b310b77a82373c9fc47f"><td class="memTemplParams" colspan="2">template&lt;typename BufferT&gt; </td></tr>
-<tr class="memitem:a69e4ce3b3c28b310b77a82373c9fc47f template"><td class="memItemLeft" align="right" valign="top">BufferT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69e4ce3b3c28b310b77a82373c9fc47f">createDeviceStorage</a> (uint64_t bytes, const BufferT *proto, int device, cudaStream_t stream)</td></tr>
-<tr class="memdesc:a69e4ce3b3c28b310b77a82373c9fc47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates <code>bytes</code> of device-resident storage of buffer type <code>BufferT:</code> single-space buffers allocate through <code>pool's</code> resource &ndash; on <code>stream</code> when the resource is stream-ordered &ndash; and every other buffer type goes through its static create(bytes, pool, device, stream) interface.  <br /></td></tr>
+<tr class="memdesc:a8f2b496bb00503ff6396004cf2c13e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html" title="Non-owning reference to a memory resource that is itself a resource: copying the ref shares the under...">ResourceRef</a> to <code>resource:</code> the one spelling NanoVDB's own components use to borrow a caller's resource.  <br /></td></tr>
+<tr class="memitem:a35b81b3b3e86421b748594db690c6363" id="r_a35b81b3b3e86421b748594db690c6363"><td class="memTemplParams" colspan="2">template&lt;typename BufferT&gt; </td></tr>
+<tr class="memitem:a35b81b3b3e86421b748594db690c6363 template"><td class="memItemLeft" align="right" valign="top">BufferT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35b81b3b3e86421b748594db690c6363">createDeviceStorage</a> (uint64_t bytes, const BufferT *proto, cudaStream_t stream)</td></tr>
+<tr class="memdesc:a35b81b3b3e86421b748594db690c6363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates <code>bytes</code> of device-resident storage of the single-space buffer type <code>BufferT</code> on the current device through <code>proto's</code> resource &ndash; on <code>stream</code> when the resource is stream-ordered.  <br /></td></tr>
 <tr class="memitem:a29c016ad7a62690b2077a3bd79bf181e" id="r_a29c016ad7a62690b2077a3bd79bf181e"><td class="memTemplParams" colspan="2">template&lt;typename BufferT&gt; </td></tr>
 <tr class="memitem:a29c016ad7a62690b2077a3bd79bf181e template"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29c016ad7a62690b2077a3bd79bf181e">deviceStorageData</a> (BufferT &amp;buffer)</td></tr>
-<tr class="memdesc:a29c016ad7a62690b2077a3bd79bf181e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The device address of a storage buffer made by createDeviceStorage: data() for a single-space buffer, whose one allocation is the device allocation, and deviceData() for the dual-space family.  <br /></td></tr>
+<tr class="memdesc:a29c016ad7a62690b2077a3bd79bf181e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The device address of a storage buffer made by createDeviceStorage: its one allocation is the device allocation.  <br /></td></tr>
 <tr class="memitem:a153b000b1457a04f12e5b9293afe2a73" id="r_a153b000b1457a04f12e5b9293afe2a73"><td class="memTemplParams" colspan="2">template&lt;typename BufferT&gt; </td></tr>
 <tr class="memitem:a153b000b1457a04f12e5b9293afe2a73 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a153b000b1457a04f12e5b9293afe2a73">orderBeforeHandleConstruction</a> (cudaStream_t stream)</td></tr>
-<tr class="memdesc:a153b000b1457a04f12e5b9293afe2a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Orders the host after <code>stream</code> where a handle is about to be constructed from bytes still being written on it: a single-space buffer over a synchronous resource retains no stream, so the constructor's metadata parse (which runs on the default stream) is not otherwise ordered after the producer. A no-op for dual-space buffers (their constructor path predates this bridge) and for stream-ordered resources (the buffer retains the stream).  <br /></td></tr>
+<tr class="memdesc:a153b000b1457a04f12e5b9293afe2a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Orders the host after <code>stream</code> where a handle is about to be constructed from bytes still being written on it: a single-space buffer over a synchronous resource retains no stream, so the constructor's metadata parse (which runs on the default stream) is not otherwise ordered after the producer. A no-op for stream-ordered resources (the buffer retains the stream).  <br /></td></tr>
 <tr class="memitem:a8bd34d503bd657cac6b8a0e16f7dee27" id="r_a8bd34d503bd657cac6b8a0e16f7dee27"><td class="memTemplParams" colspan="2">template&lt;typename DstBufferT&gt; </td></tr>
 <tr class="memitem:a8bd34d503bd657cac6b8a0e16f7dee27 template"><td class="memItemLeft" align="right" valign="top">DstBufferT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bd34d503bd657cac6b8a0e16f7dee27">makeTransferStorage</a> (uint64_t bytes, cudaStream_t stream, const DstBufferT *proto)</td></tr>
 <tr class="memdesc:a8bd34d503bd657cac6b8a0e16f7dee27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates <code>bytes</code> of destination storage for a cross-space transfer: single-space buffers allocate through <code>proto's</code> resource (or a default-constructed resource without one), on <code>stream</code> when the resource is stream-ordered; buffers providing create() go through it.  <br /></td></tr>
@@ -205,70 +190,12 @@ template&lt;class R&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a <a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html" title="Non-owning reference to a memory resource that is itself a resource: copying the ref shares the under...">ResourceRef</a> to <code>resource</code> for NanoVDB's own components; constructing it does not warn. </p>
+<p>Returns a <a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html" title="Non-owning reference to a memory resource that is itself a resource: copying the ref shares the under...">ResourceRef</a> to <code>resource:</code> the one spelling NanoVDB's own components use to borrow a caller's resource. </p>
 
 </div>
 </div>
-<a id="a38cad258f4205a0a38cce7491f3743f8" name="a38cad258f4205a0a38cce7491f3743f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38cad258f4205a0a38cce7491f3743f8">&#9670;&#160;</a></span>checkReferencedEquality()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class R&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void checkReferencedEquality </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Warns, through the deprecation above, when <code>R</code> lacks the equality that 14.0 makes part of the resource concepts. Instantiated once per resource type, so a misuse warns once however often it recurs. </p>
-
-</div>
-</div>
-<a id="a0858370de9fcac1e350b9b1760923d1f" name="a0858370de9fcac1e350b9b1760923d1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0858370de9fcac1e350b9b1760923d1f">&#9670;&#160;</a></span>checkResourceEquality()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class R&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void checkResourceEquality </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Checks the resource behind <code>R</code> (see <a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1ReferencedResource.html" title="The resource a buffer&#39;s memory comes from: R itself, or the resource a ResourceRef&lt;R&gt; refers to.">ReferencedResource</a>), so a resource and a <a class="el" href="structnanovdb_1_1cuda_1_1ResourceRef.html" title="Non-owning reference to a memory resource that is itself a resource: copying the ref shares the under...">ResourceRef</a> to it share one check. </p>
-
-</div>
-</div>
-<a id="a69e4ce3b3c28b310b77a82373c9fc47f" name="a69e4ce3b3c28b310b77a82373c9fc47f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69e4ce3b3c28b310b77a82373c9fc47f">&#9670;&#160;</a></span>createDeviceStorage()</h2>
+<a id="a35b81b3b3e86421b748594db690c6363" name="a35b81b3b3e86421b748594db690c6363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35b81b3b3e86421b748594db690c6363">&#9670;&#160;</a></span>createDeviceStorage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -291,11 +218,6 @@ template&lt;typename BufferT&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>device</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">cudaStream_t</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>&#160;)</td>
         </tr>
       </table>
@@ -306,12 +228,11 @@ template&lt;typename BufferT&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Allocates <code>bytes</code> of device-resident storage of buffer type <code>BufferT:</code> single-space buffers allocate through <code>pool's</code> resource &ndash; on <code>stream</code> when the resource is stream-ordered &ndash; and every other buffer type goes through its static create(bytes, pool, device, stream) interface. </p>
+<p>Allocates <code>bytes</code> of device-resident storage of the single-space buffer type <code>BufferT</code> on the current device through <code>proto's</code> resource &ndash; on <code>stream</code> when the resource is stream-ordered. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bytes</td><td>size of the allocation </td></tr>
-    <tr><td class="paramname">proto</td><td>prototype buffer or null: passed through as the pool for create()-style buffers; the source of the resource for single-space buffers, whose resource is default-constructed when <code>proto</code> is null </td></tr>
-    <tr><td class="paramname">device</td><td>device the storage lives on; single-space buffers allocate on the current device, which every call site has already made current </td></tr>
+    <tr><td class="paramname">proto</td><td>prototype buffer or null: the source of the resource, which is default-constructed when <code>proto</code> is null </td></tr>
     <tr><td class="paramname">stream</td><td>stream the allocation is ordered on where supported </td></tr>
   </table>
   </dd>
@@ -344,7 +265,7 @@ template&lt;typename BufferT&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>The device address of a storage buffer made by createDeviceStorage: data() for a single-space buffer, whose one allocation is the device allocation, and deviceData() for the dual-space family. </p>
+<p>The device address of a storage buffer made by createDeviceStorage: its one allocation is the device allocation. </p>
 
 </div>
 </div>
@@ -411,7 +332,7 @@ template&lt;typename BufferT&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Orders the host after <code>stream</code> where a handle is about to be constructed from bytes still being written on it: a single-space buffer over a synchronous resource retains no stream, so the constructor's metadata parse (which runs on the default stream) is not otherwise ordered after the producer. A no-op for dual-space buffers (their constructor path predates this bridge) and for stream-ordered resources (the buffer retains the stream). </p>
+<p>Orders the host after <code>stream</code> where a handle is about to be constructed from bytes still being written on it: a single-space buffer over a synchronous resource retains no stream, so the constructor's metadata parse (which runs on the default stream) is not otherwise ordered after the producer. A no-op for stream-ordered resources (the buffer retains the stream). </p>
 
 </div>
 </div>
@@ -437,36 +358,6 @@ template&lt;typename BufferT&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a102eb9feb0eba357d963d4e25875cb5b" name="a102eb9feb0eba357d963d4e25875cb5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a102eb9feb0eba357d963d4e25875cb5b">&#9670;&#160;</a></span>resourceWithoutEquality()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class R&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void resourceWithoutEquality </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Reached only through a resource without operator==, so the deprecation names the resource type at the point of use. </p>
-<dl class="section note"><dt>Note</dt><dd>A warning raised here is located in this header, so a compiler that silences warnings from system headers drops it when NanoVDB is included as one; ResourceRef(R&amp;) in user code warns on the user's own line regardless. </dd></dl>
 
 </div>
 </div>

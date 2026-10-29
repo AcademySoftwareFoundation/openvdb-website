@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -120,6 +120,9 @@ $(function(){initNavTree('namespacenanovdb_1_1detail.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:BufferDeclaresDeviceDual" id="r_BufferDeclaresDeviceDual"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1detail_1_1BufferDeclaresDeviceDual.html">BufferDeclaresDeviceDual</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects a <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a> specialization that still declares the hasDeviceDual member removed in NanoVDB 14.0, so <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> can reject it instead of parsing the device-only grids as an empty host buffer.  <a href="structnanovdb_1_1detail_1_1BufferDeclaresDeviceDual.html#details">More...</a><br /></td></tr>
+<tr class="memitem:BufferDeclaresDeviceDual_3C_20BufferT_2C_20std_3A_3Avoid_5Ft_3C_20decltype_28BufferTraits_3C_20BufferT_20_3E_3A_3AhasDeviceDual_29_3E_20_3E" id="r_BufferDeclaresDeviceDual_3C_20BufferT_2C_20std_3A_3Avoid_5Ft_3C_20decltype_28BufferTraits_3C_20BufferT_20_3E_3A_3AhasDeviceDual_29_3E_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1detail_1_1BufferDeclaresDeviceDual_3_01BufferT_00_01std_1_1void__t_3_01decltype6460dfd0918a300b88cbb6bb77c9be88.html">BufferDeclaresDeviceDual&lt; BufferT, std::void_t&lt; decltype(BufferTraits&lt; BufferT &gt;::hasDeviceDual)&gt; &gt;</a></td></tr>
 <tr class="memitem:LayoutCopy" id="r_LayoutCopy"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1detail_1_1LayoutCopy.html">LayoutCopy</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps a byte-for-byte copy of a handle's buffer in a handle with that handle's layout. The layout already passed a header parse or <a class="el" href="classnanovdb_1_1GridHandle.html#a9bea8c755ec680a5c61c308323727c42" title="Constructs a handle over buffer from metadata the caller already knows to describe its contents,...">GridHandle::adopt</a> when the source was made, so it is not checked again. This also carries grids at unaligned offsets, which the constructors accept and <a class="el" href="classnanovdb_1_1GridHandle.html#a9bea8c755ec680a5c61c308323727c42" title="Constructs a handle over buffer from metadata the caller already knows to describe its contents,...">GridHandle::adopt</a> rejects. Used by <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a>.  <a href="structnanovdb_1_1detail_1_1LayoutCopy.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">

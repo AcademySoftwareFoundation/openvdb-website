@@ -1,0 +1,4 @@
+var structnanovdb_1_1math_1_1detail_1_1ScalarOf_3_01T_00_01typename_01MakeVoid_3_01typename_01T_1_1ValueType_01_4_1_1type_01_4 =
+[
+    [ "type", "structnanovdb_1_1math_1_1detail_1_1ScalarOf_3_01T_00_01typename_01MakeVoid_3_01typename_01T_1_1ValueType_01_4_1_1type_01_4.html#aecd1c4c5da1ba8a2d708b201366bf2a4", null ]
+];

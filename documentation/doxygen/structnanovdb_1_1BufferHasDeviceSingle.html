@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -130,7 +130,7 @@ Static Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename BufferT, typename = void&gt;<br />
 struct nanovdb::BufferHasDeviceSingle&lt; BufferT, typename &gt;</div><p>Detects whether <code><a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits&lt;BufferT&gt;</a></code> defines <code>hasDeviceSingle</code>, i.e. whether the buffer manages a single device-resident allocation. </p>
-<p>Defaults to false when the trait member is absent, so pre-existing <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a> specializations (in or out of tree) that only define hasDeviceDual keep compiling unchanged. </p>
+<p>Defaults to false when the trait member is absent, so <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a> specializations (in or out of tree) that do not define it keep compiling unchanged. </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a5b4ee4ae6cba6bb75200ba7af1910873" name="a5b4ee4ae6cba6bb75200ba7af1910873"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b4ee4ae6cba6bb75200ba7af1910873">&#9670;&#160;</a></span>value</h2>

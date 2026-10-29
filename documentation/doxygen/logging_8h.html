@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -118,31 +118,28 @@ $(function(){initNavTree('logging_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;openvdb/version.h&gt;</code><br />
-<code>#include &lt;log4cplus/appender.h&gt;</code><br />
-<code>#include &lt;log4cplus/configurator.h&gt;</code><br />
-<code>#include &lt;log4cplus/consoleappender.h&gt;</code><br />
-<code>#include &lt;log4cplus/layout.h&gt;</code><br />
-<code>#include &lt;log4cplus/logger.h&gt;</code><br />
-<code>#include &lt;log4cplus/spi/loggingevent.h&gt;</code><br />
-<code>#include &lt;algorithm&gt;</code><br />
-<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;<a class="el" href="Platform_8h_source.html">openvdb/Platform.h</a>&gt;</code><br />
+<code>#include &lt;atomic&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
 </div>
 <p><a href="logging_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:LevelScope" id="r_LevelScope"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v13__2_1_1logging_1_1LevelScope.html">LevelScope</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="structopenvdb_1_1v13__2_1_1logging_1_1LevelScope.html" title="A LevelScope object sets the logging level to a given level and restores it to the current level when...">LevelScope</a> object sets the logging level to a given level and restores it to the current level when the object goes out of scope.  <a href="structopenvdb_1_1v13__2_1_1logging_1_1LevelScope.html#details">More...</a><br /></td></tr>
+<tr class="memitem:Sink" id="r_Sink"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v14__0_1_1logging_1_1Sink.html">Sink</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives formatted log messages. Subclass this to route OpenVDB diagnostics into a host application.  <a href="classopenvdb_1_1v14__0_1_1logging_1_1Sink.html#details">More...</a><br /></td></tr>
+<tr class="memitem:ConsoleSink" id="r_ConsoleSink"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopenvdb_1_1v14__0_1_1logging_1_1ConsoleSink.html">ConsoleSink</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sink installed by default, writing to std::cerr.  <a href="classopenvdb_1_1v14__0_1_1logging_1_1ConsoleSink.html#details">More...</a><br /></td></tr>
+<tr class="memitem:LevelScope" id="r_LevelScope"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structopenvdb_1_1v14__0_1_1logging_1_1LevelScope.html">LevelScope</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the level on construction and restores the previous level on destruction.  <a href="structopenvdb_1_1v14__0_1_1logging_1_1LevelScope.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:openvdb" id="r_openvdb"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb.html">openvdb</a></td></tr>
-<tr class="memitem:openvdb_3A_3Av13_5F2" id="r_openvdb_3A_3Av13_5F2"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__2.html">openvdb::v13_2</a></td></tr>
-<tr class="memitem:openvdb_3A_3Av13_5F2_3A_3Alogging" id="r_openvdb_3A_3Av13_5F2_3A_3Alogging"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html">openvdb::v13_2::logging</a></td></tr>
+<tr class="memitem:openvdb_3A_3Av14_5F0" id="r_openvdb_3A_3Av14_5F0"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v14__0.html">openvdb::v14_0</a></td></tr>
+<tr class="memitem:openvdb_3A_3Av14_5F0_3A_3Alogging" id="r_openvdb_3A_3Av14_5F0_3A_3Alogging"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html">openvdb::v14_0::logging</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -162,31 +159,37 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a221b779e6bb7b8d40677d7642bfefac5" id="r_a221b779e6bb7b8d40677d7642bfefac5"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5">Level</a> { <br />
-&#160;&#160;<a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5aa603905470e2a5b8c13e96b579ef0dba">Debug</a> = log4cplus::DEBUG_LOG_LEVEL
-, <a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5a4059b0251f66a18cb56f544728796875">Info</a> = log4cplus::INFO_LOG_LEVEL
-, <a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5a56525ae64d370c0b448ac0d60710ef17">Warn</a> = log4cplus::WARN_LOG_LEVEL
-, <a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5a902b0d55fddef6f8d651fe1035b7d4bd">Error</a> = log4cplus::ERROR_LOG_LEVEL
+<tr class="memitem:a221b779e6bb7b8d40677d7642bfefac5" id="r_a221b779e6bb7b8d40677d7642bfefac5"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5">Level</a> { <br />
+&#160;&#160;<a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5aa603905470e2a5b8c13e96b579ef0dba">Debug</a> = 0
+, <a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5a4059b0251f66a18cb56f544728796875">Info</a>
+, <a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5a56525ae64d370c0b448ac0d60710ef17">Warn</a>
+, <a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5a902b0d55fddef6f8d651fe1035b7d4bd">Error</a>
 , <br />
-&#160;&#160;<a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5a882384ec38ce8d9582b57e70861730e4">Fatal</a> = log4cplus::FATAL_LOG_LEVEL
+&#160;&#160;<a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5a882384ec38ce8d9582b57e70861730e4">Fatal</a>
 <br />
  }</td></tr>
-<tr class="memdesc:a221b779e6bb7b8d40677d7642bfefac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message severity level.  <a href="namespaceopenvdb_1_1v13__2_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5">More...</a><br /></td></tr>
+<tr class="memdesc:a221b779e6bb7b8d40677d7642bfefac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message severity level, in increasing order of severity.  <a href="namespaceopenvdb_1_1v14__0_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac3ccfd677fa662c8af08cebe99eafebf" id="r_ac3ccfd677fa662c8af08cebe99eafebf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5">Level</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#ac3ccfd677fa662c8af08cebe99eafebf">getLevel</a> ()</td></tr>
-<tr class="memdesc:ac3ccfd677fa662c8af08cebe99eafebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current logging level.  <br /></td></tr>
-<tr class="memitem:af90908a5ca1892e4306fcdb01dabc0b9" id="r_af90908a5ca1892e4306fcdb01dabc0b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#af90908a5ca1892e4306fcdb01dabc0b9">setLevel</a> (<a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5">Level</a> lvl)</td></tr>
-<tr class="memdesc:af90908a5ca1892e4306fcdb01dabc0b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the logging level. (Lower-level messages will be suppressed.)  <br /></td></tr>
-<tr class="memitem:ab4a632b9aefa59a0645f8da9adc4b4bd" id="r_ab4a632b9aefa59a0645f8da9adc4b4bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#ab4a632b9aefa59a0645f8da9adc4b4bd">setLevel</a> (int &amp;argc, char *argv[])</td></tr>
+<tr class="memitem:ac3ccfd677fa662c8af08cebe99eafebf" id="r_ac3ccfd677fa662c8af08cebe99eafebf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5">Level</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#ac3ccfd677fa662c8af08cebe99eafebf">getLevel</a> ()</td></tr>
+<tr class="memdesc:ac3ccfd677fa662c8af08cebe99eafebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current severity threshold. Messages below this are dropped.  <br /></td></tr>
+<tr class="memitem:aa0783d722e08884bc1762753e07c969d" id="r_aa0783d722e08884bc1762753e07c969d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#aa0783d722e08884bc1762753e07c969d">setLevel</a> (<a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5">Level</a>)</td></tr>
+<tr class="memdesc:aa0783d722e08884bc1762753e07c969d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the severity threshold. Messages below this are dropped.  <br /></td></tr>
+<tr class="memitem:a7ddfa324bd925853ee3a32283d00cc0a" id="r_a7ddfa324bd925853ee3a32283d00cc0a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#a7ddfa324bd925853ee3a32283d00cc0a">isEnabledFor</a> (<a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#a221b779e6bb7b8d40677d7642bfefac5">Level</a>)</td></tr>
+<tr class="memdesc:a7ddfa324bd925853ee3a32283d00cc0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if a message of the given level would be logged.  <br /></td></tr>
+<tr class="memitem:ab4a632b9aefa59a0645f8da9adc4b4bd" id="r_ab4a632b9aefa59a0645f8da9adc4b4bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#ab4a632b9aefa59a0645f8da9adc4b4bd">setLevel</a> (int &amp;argc, char *argv[])</td></tr>
 <tr class="memdesc:ab4a632b9aefa59a0645f8da9adc4b4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">If "-debug", "-info", "-warn", "-error" or "-fatal" is found in the given array of command-line arguments, set the logging level appropriately and remove the relevant argument(s) from the array.  <br /></td></tr>
-<tr class="memitem:a50e6f977f2f5dda6e32ace745d59ffac" id="r_a50e6f977f2f5dda6e32ace745d59ffac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#a50e6f977f2f5dda6e32ace745d59ffac">setProgramName</a> (const std::string &amp;progName, bool useColor=true)</td></tr>
-<tr class="memdesc:a50e6f977f2f5dda6e32ace745d59ffac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify a program name to be displayed in log messages.  <br /></td></tr>
-<tr class="memitem:a5d5b2b734b8c3a4909ebb8fd531273d4" id="r_a5d5b2b734b8c3a4909ebb8fd531273d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#a5d5b2b734b8c3a4909ebb8fd531273d4">initialize</a> (bool useColor=true)</td></tr>
-<tr class="memdesc:a5d5b2b734b8c3a4909ebb8fd531273d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the logging system if it is not already initialized.  <br /></td></tr>
-<tr class="memitem:a9a075dddde11d859dc30a75cfe25b661" id="r_a9a075dddde11d859dc30a75cfe25b661"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v13__2_1_1logging.html#a9a075dddde11d859dc30a75cfe25b661">initialize</a> (int &amp;argc, char *argv[], bool useColor=true)</td></tr>
-<tr class="memdesc:a9a075dddde11d859dc30a75cfe25b661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the logging system from command-line arguments.  <br /></td></tr>
+<tr class="memitem:a8362320c3048897357c9938144995792" id="r_a8362320c3048897357c9938144995792"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#a8362320c3048897357c9938144995792">addSink</a> (const <a class="el" href="classopenvdb_1_1v14__0_1_1logging_1_1Sink.html#af3a0e23d2ca5b7f970ec8cc6e691472d">Sink::Ptr</a> &amp;)</td></tr>
+<tr class="memdesc:a8362320c3048897357c9938144995792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a sink. Replaces any existing sink with the same name.  <br /></td></tr>
+<tr class="memitem:ad0c53c5c00803b1862822ffd17ac2e41" id="r_ad0c53c5c00803b1862822ffd17ac2e41"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#ad0c53c5c00803b1862822ffd17ac2e41">removeSink</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:ad0c53c5c00803b1862822ffd17ac2e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the sink with the given name. Returns true if one was removed.  <br /></td></tr>
+<tr class="memitem:a3c135b7fca36701051df8905bb6992a7" id="r_a3c135b7fca36701051df8905bb6992a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classopenvdb_1_1v14__0_1_1logging_1_1Sink.html#af3a0e23d2ca5b7f970ec8cc6e691472d">Sink::Ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#a3c135b7fca36701051df8905bb6992a7">findSink</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a3c135b7fca36701051df8905bb6992a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the sink with the given name, or nullptr.  <br /></td></tr>
+<tr class="memitem:adafd9e858df4f9189c3a6a327345f596" id="r_adafd9e858df4f9189c3a6a327345f596"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#adafd9e858df4f9189c3a6a327345f596">initialize</a> (bool useColor=<a class="el" href="classopenvdb_1_1v14__0_1_1logging_1_1ConsoleSink.html#a1ec61ce7f09d7a75ad0629f86bb6d884">ConsoleSink::stderrIsTerminal</a>())</td></tr>
+<tr class="memdesc:adafd9e858df4f9189c3a6a327345f596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Install the default console sink if no sink has been installed yet.  <br /></td></tr>
+<tr class="memitem:a834b26067db572c4c9b1b823740ea1f1" id="r_a834b26067db572c4c9b1b823740ea1f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceopenvdb_1_1v14__0_1_1logging.html#a834b26067db572c4c9b1b823740ea1f1">initialize</a> (int &amp;argc, char *argv[], bool useColor=<a class="el" href="classopenvdb_1_1v14__0_1_1logging_1_1ConsoleSink.html#a1ec61ce7f09d7a75ad0629f86bb6d884">ConsoleSink::stderrIsTerminal</a>())</td></tr>
+<tr class="memdesc:a834b26067db572c4c9b1b823740ea1f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize and then apply any level flags found in the arguments.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="aa330e4039ae78342810adc99f391bbf2" name="aa330e4039ae78342810adc99f391bbf2"></a>
@@ -208,13 +211,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> { \</div>
-<div class="line">        <span class="keyword">auto</span> _log = openvdb::logging::internal::getLogger(); \</div>
-<div class="line">        if (_log.isEnabledFor(log4cplus::level##_LOG_LEVEL)) { \</div>
+<div class="line">        if (openvdb::logging::isEnabledFor(openvdb::logging::Level::level)) { \</div>
 <div class="line">            std::ostringstream _buf; \</div>
 <div class="line">            _buf &lt;&lt; message; \</div>
-<div class="line">            _log.forcedLog(log4cplus::level##_LOG_LEVEL, _buf.str(), __FILE__, __LINE__); \</div>
+<div class="line">            openvdb::logging::internal::dispatch( \</div>
+<div class="line">                openvdb::logging::Level::level, _buf.str(), __FILE__, __LINE__); \</div>
 <div class="line">        } \</div>
-<div class="line">    } <span class="keywordflow">while</span> (0);</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -232,7 +235,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aa330e4039ae78342810adc99f391bbf2">OPENVDB_LOG</a>(Debug, message)</div>
+<div class="ttc" id="alogging_8h_html_aa330e4039ae78342810adc99f391bbf2"><div class="ttname"><a href="#aa330e4039ae78342810adc99f391bbf2">OPENVDB_LOG</a></div><div class="ttdeci">#define OPENVDB_LOG(level, message)</div><div class="ttdef"><b>Definition</b> logging.h:150</div></div>
+</div><!-- fragment -->
 <p>In debug builds only, log a debugging message of the form '<span class="tt">someVar &lt;&lt; "text" &lt;&lt; ...</span>'. </p>
 
 </div>
@@ -251,8 +256,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aa330e4039ae78342810adc99f391bbf2">OPENVDB_LOG</a>(DEBUG, message)</div>
-<div class="ttc" id="alogging_8h_html_aa330e4039ae78342810adc99f391bbf2"><div class="ttname"><a href="#aa330e4039ae78342810adc99f391bbf2">OPENVDB_LOG</a></div><div class="ttdeci">#define OPENVDB_LOG(level, message)</div><div class="ttdef"><b>Definition</b> logging.h:243</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aa330e4039ae78342810adc99f391bbf2">OPENVDB_LOG</a>(Debug, message)</div>
 </div><!-- fragment -->
 <p>Log a debugging message in both debug and optimized builds. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Don't use this in performance-critical code. </dd></dl>
@@ -273,7 +277,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aa330e4039ae78342810adc99f391bbf2">OPENVDB_LOG</a>(ERROR, message)</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aa330e4039ae78342810adc99f391bbf2">OPENVDB_LOG</a>(Error, message)</div>
 </div><!-- fragment -->
 <p>Log an error message of the form '<span class="tt">someVar &lt;&lt; "some text" &lt;&lt; ...</span>'. </p>
 
@@ -293,7 +297,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aa330e4039ae78342810adc99f391bbf2">OPENVDB_LOG</a>(FATAL, message)</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aa330e4039ae78342810adc99f391bbf2">OPENVDB_LOG</a>(Fatal, message)</div>
 </div><!-- fragment -->
 <p>Log a fatal error message of the form '<span class="tt">someVar &lt;&lt; "some text" &lt;&lt; ...</span>'. </p>
 
@@ -313,7 +317,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aa330e4039ae78342810adc99f391bbf2">OPENVDB_LOG</a>(INFO, message)</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aa330e4039ae78342810adc99f391bbf2">OPENVDB_LOG</a>(Info, message)</div>
 </div><!-- fragment -->
 <p>Log an info message of the form '<span class="tt">someVar &lt;&lt; "some text" &lt;&lt; ...</span>'. </p>
 
@@ -333,7 +337,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aa330e4039ae78342810adc99f391bbf2">OPENVDB_LOG</a>(WARN, message)</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aa330e4039ae78342810adc99f391bbf2">OPENVDB_LOG</a>(Warn, message)</div>
 </div><!-- fragment -->
 <p>Log a warning message of the form '<span class="tt">someVar &lt;&lt; "some text" &lt;&lt; ...</span>'. </p>
 

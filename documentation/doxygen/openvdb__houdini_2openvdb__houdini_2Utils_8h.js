@@ -21,9 +21,9 @@ var openvdb__houdini_2openvdb__houdini_2Utils_8h =
     [ "openvdb_houdini::evalGridBBox", "namespaceopenvdb__houdini.html#a029e1e5dd167e73b6cdaeca65d405ebd", null ],
     [ "openvdb_houdini::GEOvdbApply", "namespaceopenvdb__houdini.html#ac596ba7a6e9e671eaf29305970482521", null ],
     [ "openvdb_houdini::GEOvdbApply", "namespaceopenvdb__houdini.html#a2bced59b9c4f3f97dc72a7584009bf2f", null ],
-    [ "openvdb_houdini::isLogForwarding", "namespaceopenvdb__houdini.html#a47dd6ad1eea8af8b05141308f535401b", null ],
+    [ "openvdb_houdini::isLogForwarding", "namespaceopenvdb__houdini.html#afe072c8e07a2e184c1debea7d8077de7", null ],
     [ "openvdb_houdini::makeCoordBBox", "namespaceopenvdb__houdini.html#ae9b66990b1e8978b5a05acac500884a1", null ],
     [ "openvdb_houdini::replaceVdbPrimitive", "namespaceopenvdb__houdini.html#ad884ef81e417130000e674180e95da2b", null ],
-    [ "openvdb_houdini::startLogForwarding", "namespaceopenvdb__houdini.html#a901cf0ee604c9e47b482504e92f2bd25", null ],
-    [ "openvdb_houdini::stopLogForwarding", "namespaceopenvdb__houdini.html#a552b8b3295165bc25f8f02e3662b1036", null ]
+    [ "openvdb_houdini::startLogForwarding", "namespaceopenvdb__houdini.html#ab2aea00688c071246dc06e2ecba82450", null ],
+    [ "openvdb_houdini::stopLogForwarding", "namespaceopenvdb__houdini.html#af68596cd6e0f6b22a5f47bae17ca9152", null ]
 ];

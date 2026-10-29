@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -123,6 +123,7 @@ $(function(){initNavTree('Reduce_8h.html','',''); });
 <div class="textblock"><code>#include &lt;<a class="el" href="Range_8h_source.html">nanovdb/util/Range.h</a>&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
 <code>#include &lt;future&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div>
 <p><a href="Reduce_8h_source.html">Go to the source code of this file.</a></p>
@@ -145,15 +146,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:a6944240b47d28520b2479e88cba70098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wrapper that works with std::containers.  <br /></td></tr>
 <tr class="memitem:a8e86a9eb8e5d6ab2dd7e9cc0133b1039" id="r_a8e86a9eb8e5d6ab2dd7e9cc0133b1039"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename... &gt; class ContainerT, typename... ArgT, typename T, typename FuncT, typename JoinT&gt; </td></tr>
 <tr class="memitem:a8e86a9eb8e5d6ab2dd7e9cc0133b1039 template"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#a8e86a9eb8e5d6ab2dd7e9cc0133b1039">reduce</a> (const ContainerT&lt; ArgT... &gt; &amp;c, size_t grainSize, const T &amp;identity, const FuncT &amp;func, const JoinT &amp;join)</td></tr>
-<tr class="memdesc:a8e86a9eb8e5d6ab2dd7e9cc0133b1039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wrapper that works with std::containers.  <br /></td></tr>
-<tr class="memitem:a9bfe6769cee6e711d758b56c953192e8" id="r_a9bfe6769cee6e711d758b56c953192e8"><td class="memTemplParams" colspan="2">template&lt;typename T, typename FuncT, typename JoinT&gt; </td></tr>
-<tr class="memitem:a9bfe6769cee6e711d758b56c953192e8 template"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a9bfe6769cee6e711d758b56c953192e8">reduce</a> (size_t begin, size_t end, size_t grainSize, const T &amp;identity, const FuncT &amp;func, const JoinT &amp;join)</td></tr>
-<tr class="memdesc:a9bfe6769cee6e711d758b56c953192e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wrapper to the function defined above.  <br /></td></tr>
-<tr class="memitem:a6944240b47d28520b2479e88cba70098" id="r_a6944240b47d28520b2479e88cba70098"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename... &gt; class ContainerT, typename... ArgT, typename T, typename FuncT, typename JoinT&gt; </td></tr>
-<tr class="memitem:a6944240b47d28520b2479e88cba70098 template"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a6944240b47d28520b2479e88cba70098">reduce</a> (const ContainerT&lt; ArgT... &gt; &amp;c, const T &amp;identity, const FuncT &amp;func, const JoinT &amp;join)</td></tr>
-<tr class="memdesc:a6944240b47d28520b2479e88cba70098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wrapper that works with std::containers.  <br /></td></tr>
-<tr class="memitem:a8e86a9eb8e5d6ab2dd7e9cc0133b1039" id="r_a8e86a9eb8e5d6ab2dd7e9cc0133b1039"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename... &gt; class ContainerT, typename... ArgT, typename T, typename FuncT, typename JoinT&gt; </td></tr>
-<tr class="memitem:a8e86a9eb8e5d6ab2dd7e9cc0133b1039 template"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a8e86a9eb8e5d6ab2dd7e9cc0133b1039">reduce</a> (const ContainerT&lt; ArgT... &gt; &amp;c, size_t grainSize, const T &amp;identity, const FuncT &amp;func, const JoinT &amp;join)</td></tr>
 <tr class="memdesc:a8e86a9eb8e5d6ab2dd7e9cc0133b1039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple wrapper that works with std::containers.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['handling_20metadata_0',['Handling metadata',['../python.html#sPyHandlingMetadata',1,'Handling metadata'],['../codeExamples.html#sHandlingMetadata',1,'Handling metadata']]],
+  ['handling_20metadata_0',['Handling metadata',['../codeExamples.html#sHandlingMetadata',1,'Handling metadata'],['../python.html#sPyHandlingMetadata',1,'Handling metadata']]],
   ['header_20files_1',['Header Files',['../codingStyle.html#sHeaderFiles',1,'']]],
   ['hello_20world_20examples_2',['NanoVDB Hello World Examples',['../NanoVDB_HelloWorld.html',1,'NanoVDB_MainPage']]],
   ['hello_20world_20rdquo_20for_20openvdb_3',['&amp;ldquo;Hello, World&amp;rdquo; for OpenVDB',['../codeExamples.html#sHelloWorld',1,'']]],

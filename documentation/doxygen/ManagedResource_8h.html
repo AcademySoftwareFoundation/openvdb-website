@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -126,7 +126,7 @@ $(function(){initNavTree('ManagedResource_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:ManagedResource" id="r_ManagedResource"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1cuda_1_1ManagedResource.html">ManagedResource</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managed (unified) memory resource. Allocations (cudaMallocManaged) are accessible from both the host and the device, with the driver migrating pages on demand, so a container over this resource serves grids that are read on both sides &ndash; the replacement for the legacy UnifiedBuffer. A <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> over this resource parses (and validates) its metadata through the device like any device buffer &ndash; a host-side parse could race still-running producer kernels &ndash; while the host accessors remain available afterwards; ordering host reads after device writes is the caller's responsibility, exactly as with UnifiedBuffer.  <a href="classnanovdb_1_1cuda_1_1ManagedResource.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Managed (unified) memory resource. Allocations (cudaMallocManaged) are accessible from both the host and the device, with the driver migrating pages on demand, so a container over this resource serves grids that are read on both sides. A <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> over this resource parses (and validates) its metadata through the device like any device buffer &ndash; a host-side parse could race still-running producer kernels &ndash; while the host accessors remain available afterwards; ordering host reads after device writes is the caller's responsibility.  <a href="classnanovdb_1_1cuda_1_1ManagedResource.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>

@@ -1,5 +1,6 @@
 var namespacenanovdb_1_1math =
 [
+    [ "detail", "namespacenanovdb_1_1math_1_1detail.html", "namespacenanovdb_1_1math_1_1detail" ],
     [ "BaseBBox", "structnanovdb_1_1math_1_1BaseBBox.html", "structnanovdb_1_1math_1_1BaseBBox" ],
     [ "BaseStencil", "classnanovdb_1_1math_1_1BaseStencil.html", "classnanovdb_1_1math_1_1BaseStencil" ],
     [ "BBox", "structnanovdb_1_1math_1_1BBox.html", null ],
@@ -134,8 +135,6 @@ var namespacenanovdb_1_1math =
     [ "Sqrt", "namespacenanovdb_1_1math.html#a1bb14bfecde696243d5b2a3e12433215", null ],
     [ "Sqrt", "namespacenanovdb_1_1math.html#a782380a105c579afa4d82e107e9abaf9", null ],
     [ "WENO5", "namespacenanovdb_1_1math.html#a6a7a0a94ab8f0e0ea473afe008c29fa1", null ],
-    [ "ZeroCrossing", "namespacenanovdb_1_1math.html#a59f1b3aeea8fab4072f510c941505548", null ],
     [ "zeroCrossing", "namespacenanovdb_1_1math.html#ae1bd21f2b316f658c923d9034afeb676", null ],
-    [ "ZeroCrossingNode", "namespacenanovdb_1_1math.html#aa3efed71fdf727208047c02c9ffed02a", null ],
     [ "zeroCrossingNode", "namespacenanovdb_1_1math.html#a7be7b7fd77fc276ef01c5c287d0f7f0d", null ]
 ];

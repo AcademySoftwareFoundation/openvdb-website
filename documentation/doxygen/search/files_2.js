@@ -18,11 +18,10 @@ var searchData=
   ['constantfolding_2eh_15',['ConstantFolding.h',['../ConstantFolding_8h.html',1,'']]],
   ['coord_2eh_16',['Coord.h',['../Coord_8h.html',1,'']]],
   ['count_2eh_17',['Count.h',['../Count_8h.html',1,'']]],
-  ['cputimer_2eh_18',['CpuTimer.h',['../nanovdb_2nanovdb_2util_2CpuTimer_8h.html',1,'(Global Namespace)'],['../openvdb_2openvdb_2util_2CpuTimer_8h.html',1,'(Global Namespace)']]],
-  ['createnanogrid_2eh_19',['CreateNanoGrid.h',['../tools_2CreateNanoGrid_8h.html',1,'(Global Namespace)'],['../util_2CreateNanoGrid_8h.html',1,'(Global Namespace)']]],
+  ['cputimer_2eh_18',['CpuTimer.h',['../CpuTimer_8h.html',1,'']]],
+  ['createnanogrid_2eh_19',['CreateNanoGrid.h',['../CreateNanoGrid_8h.html',1,'']]],
   ['createprimitives_2eh_20',['CreatePrimitives.h',['../CreatePrimitives_8h.html',1,'']]],
   ['csamplefromvoxels_2eh_21',['CSampleFromVoxels.h',['../CSampleFromVoxels_8h.html',1,'']]],
   ['cudadevicebuffer_2eh_22',['CudaDeviceBuffer.h',['../CudaDeviceBuffer_8h.html',1,'']]],
-  ['cudautils_2eh_23',['CudaUtils.h',['../CudaUtils_8h.html',1,'']]],
-  ['customdata_2eh_24',['CustomData.h',['../CustomData_8h.html',1,'']]]
+  ['customdata_2eh_23',['CustomData.h',['../CustomData_8h.html',1,'']]]
 ];

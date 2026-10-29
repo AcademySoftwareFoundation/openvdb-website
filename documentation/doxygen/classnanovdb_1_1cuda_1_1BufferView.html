@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -139,8 +139,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this view references no elements.  <br /></td></tr>
 <tr class="memitem:a3a80b6032f86a56bec74609034b3246f" id="r_a3a80b6032f86a56bec74609034b3246f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a80b6032f86a56bec74609034b3246f">destroy</a> ()</td></tr>
 <tr class="memdesc:a3a80b6032f86a56bec74609034b3246f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaches the view (nulls the pointer and zeroes the size) without touching the underlying storage &ndash; the view is non-owning, so "destroying" it releases nothing. This is the one deliberate deviation from std::span, required by the buffer static interface the handles consume through reset().  <br /></td></tr>
-<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
-<tr class="memdesc:ac8bb3912a3ce86b15842e79d0b421204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaches the view.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
@@ -228,36 +226,6 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8bb3912a3ce86b15842e79d0b421204">&#9670;&#160;</a></span>clear()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void clear </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Detaches the view. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000091">Deprecated</a></b></dt><dd>Use <a class="el" href="#a3a80b6032f86a56bec74609034b3246f" title="Detaches the view (nulls the pointer and zeroes the size) without touching the underlying storage – t...">destroy()</a>: the handles now dispatch to it directly. </dd></dl>
-
-</div>
-</div>
 <a id="a27e62faacca77c2f5b2ad304651edb2b" name="a27e62faacca77c2f5b2ad304651edb2b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a27e62faacca77c2f5b2ad304651edb2b">&#9670;&#160;</a></span>data()</h2>
 

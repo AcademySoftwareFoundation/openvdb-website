@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -202,24 +202,14 @@ $(function(){initNavTree('PrefixSum_8h_source.html','',''); });
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}<span class="comment">// namespace util</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> OpT = std::plus&lt;T&gt;&gt;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>[[deprecated(<span class="stringliteral">&quot;Use nanovdb::util::prefixSum instead&quot;</span>)]]</div>
-<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="namespacenanovdb.html#ac06981b465ecffc4663e5b905abca429">   84</a></span>T <a class="code hl_function" href="namespacenanovdb.html#ac06981b465ecffc4663e5b905abca429">prefixSum</a>(std::vector&lt;T&gt; &amp;vec, <span class="keywordtype">bool</span> threaded = <span class="keyword">true</span>, OpT op = OpT())</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenanovdb_1_1util.html#ac06981b465ecffc4663e5b905abca429">util::prefixSum&lt;T, OpT&gt;</a>(vec, threaded, op);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}<span class="comment">// prefixSum</span></div>
-</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}<span class="comment">// namespace nanovdb</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif </span><span class="comment">// NANOVDB_UTIL_PREFIX_SUM_H_HAS_BEEN_INCLUDED</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}<span class="comment">// namespace nanovdb</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif </span><span class="comment">// NANOVDB_UTIL_PREFIX_SUM_H_HAS_BEEN_INCLUDED</span></div>
 <div class="ttc" id="aRange_8h_html"><div class="ttname"><a href="Range_8h.html">Range.h</a></div><div class="ttdoc">Custom Range class that is compatible with the tbb::blocked_range classes.</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1util_html"><div class="ttname"><a href="namespacenanovdb_1_1util.html">nanovdb::util</a></div><div class="ttdef"><b>Definition</b> GridChecksum.h:86</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1util_html_ac06981b465ecffc4663e5b905abca429"><div class="ttname"><a href="namespacenanovdb_1_1util.html#ac06981b465ecffc4663e5b905abca429">nanovdb::util::prefixSum</a></div><div class="ttdeci">T prefixSum(std::vector&lt; T &gt; &amp;vec, bool threaded=true, OpT op=OpT())</div><div class="ttdoc">Computes inclusive prefix sum of a vector.</div><div class="ttdef"><b>Definition</b> PrefixSum.h:74</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1util_html_ac18f6ee0142f7ddcf2caeee8c422f97a"><div class="ttname"><a href="namespacenanovdb_1_1util.html#ac18f6ee0142f7ddcf2caeee8c422f97a">nanovdb::util::inclusiveScan</a></div><div class="ttdeci">void inclusiveScan(T *array, size_t size, const T &amp;identity, bool threaded, Op op)</div><div class="ttdoc">An inclusive scan includes in[i] when computing out[i].</div><div class="ttdef"><b>Definition</b> PrefixSum.h:47</div></div>
-<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdoc">Defines a simple memory pool used to call cub functions that use dynamic temporary storage.</div><div class="ttdef"><b>Definition</b> GridHandle.h:32</div></div>
-<div class="ttc" id="anamespacenanovdb_html_ac06981b465ecffc4663e5b905abca429"><div class="ttname"><a href="namespacenanovdb.html#ac06981b465ecffc4663e5b905abca429">nanovdb::prefixSum</a></div><div class="ttdeci">T prefixSum(std::vector&lt; T &gt; &amp;vec, bool threaded=true, OpT op=OpT())</div><div class="ttdef"><b>Definition</b> PrefixSum.h:84</div></div>
+<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdoc">Defines a simple memory pool used to call cub functions that use dynamic temporary storage.</div><div class="ttdef"><b>Definition</b> GridHandle.h:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

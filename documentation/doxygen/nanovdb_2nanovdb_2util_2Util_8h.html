@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -266,11 +266,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:aa05f485d523728abe2e6bb926b496c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically ORs <em class="arg">mask</em> into the 64-bit word at <em class="arg">target</em> (relaxed ordering). Returns the old value. Callable from both host and device code.  <br /></td></tr>
 <tr class="memitem:ac135d88a977e129e28babb21176ebb5f" id="r_ac135d88a977e129e28babb21176ebb5f"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1util.html#ac135d88a977e129e28babb21176ebb5f">atomicAnd</a> (uint64_t *target, uint64_t mask)</td></tr>
 <tr class="memdesc:ac135d88a977e129e28babb21176ebb5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomically ANDs <em class="arg">mask</em> into the 64-bit word at <em class="arg">target</em> (relaxed ordering). Returns the old value. Callable from both host and device code.  <br /></td></tr>
-<tr class="memitem:ae9b773d887ae5eb938f18c3c557c8d45" id="r_ae9b773d887ae5eb938f18c3c557c8d45"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#ae9b773d887ae5eb938f18c3c557c8d45">FindLowestOn</a> (uint32_t v)</td></tr>
-<tr class="memitem:abcb7a465c460c2eedab4a8b59af63ca7" id="r_abcb7a465c460c2eedab4a8b59af63ca7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#abcb7a465c460c2eedab4a8b59af63ca7">FindLowestOn</a> (uint64_t v)</td></tr>
-<tr class="memitem:a658495d0ebb6118f9703edf79645fe94" id="r_a658495d0ebb6118f9703edf79645fe94"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a658495d0ebb6118f9703edf79645fe94">FindHighestOn</a> (uint32_t v)</td></tr>
-<tr class="memitem:a02a61aeb177a12187d4f92b8b746ac28" id="r_a02a61aeb177a12187d4f92b8b746ac28"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a02a61aeb177a12187d4f92b8b746ac28">FindHighestOn</a> (uint64_t v)</td></tr>
-<tr class="memitem:a05d946bff32cf47312d136fff783e82a" id="r_a05d946bff32cf47312d136fff783e82a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb.html#a05d946bff32cf47312d136fff783e82a">CountOn</a> (uint64_t v)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -394,7 +389,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">((int)(size_t)((<span class="keywordtype">char</span>*)&amp;((CLASS*)0)-&gt;MEMBER - (<span class="keywordtype">char</span>*)0))</div>
+<b>Value:</b><div class="fragment"><div class="line">((int)offsetof(CLASS, MEMBER))</div>
 </div><!-- fragment -->
 </div>
 </div>

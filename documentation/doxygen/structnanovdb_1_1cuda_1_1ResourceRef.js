@@ -1,8 +1,6 @@
 var structnanovdb_1_1cuda_1_1ResourceRef =
 [
-    [ "ResourceRef", "structnanovdb_1_1cuda_1_1ResourceRef.html#a66fc44f2aea4e2ac64ccfdcfab5811f8", null ],
-    [ "ResourceRef", "structnanovdb_1_1cuda_1_1ResourceRef.html#a9f735cb20abf58dda28c6aa85233de9f", null ],
-    [ "ResourceRef", "structnanovdb_1_1cuda_1_1ResourceRef.html#a66fc44f2aea4e2ac64ccfdcfab5811f8", null ],
+    [ "ResourceRef", "structnanovdb_1_1cuda_1_1ResourceRef.html#a401735d72d0780bf25efb966c5a39abb", null ],
     [ "allocate", "structnanovdb_1_1cuda_1_1ResourceRef.html#a21d2e8403222bd6ba1b274926497b6d0", null ],
     [ "allocate_async", "structnanovdb_1_1cuda_1_1ResourceRef.html#aae686f9d2ad66565582efc0267dee7c3", null ],
     [ "deallocate", "structnanovdb_1_1cuda_1_1ResourceRef.html#a133327a79abbd4936d70a2a1df972588", null ],

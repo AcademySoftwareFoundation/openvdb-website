@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -146,7 +146,7 @@ $(function(){initNavTree('HalfLite_8h_source.html','',''); });
 </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespacenanovdb_1_1math.html#a80792353e4191064e6e1ac330a4c8027">   27</a></span><span class="keyword">inline</span> <a class="code hl_define" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <span class="keywordtype">float</span> <a class="code hl_function" href="namespacenanovdb_1_1math.html#a80792353e4191064e6e1ac330a4c8027">HalfToFloat</a>(uint16_t h_raw)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespacenanovdb_1_1math.html#a80792353e4191064e6e1ac330a4c8027">   27</a></span><span class="keyword">inline</span> <a class="code hl_define" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <span class="keywordtype">float</span> <a class="code hl_function" href="namespacenanovdb_1_1math.html#a80792353e4191064e6e1ac330a4c8027">HalfToFloat</a>(uint16_t h_raw)</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_union" href="unionnanovdb_1_1math_1_1HalfUnion.html">HalfUnion</a> v;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    uint32_t hexpmant = ((uint32_t)(h_raw) &lt;&lt; 17) &gt;&gt; 4;</div>
@@ -177,7 +177,7 @@ $(function(){initNavTree('HalfLite_8h_source.html','',''); });
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">// Round to nearest, with ties to even. Overflow produces signed infinity.</span></div>
 <div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespacenanovdb_1_1math.html#a0126dca71acf73497d05f7734873622a">   56</a></span><span class="keyword">inline</span> <a class="code hl_define" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint16_t <a class="code hl_function" href="namespacenanovdb_1_1math.html#a0126dca71acf73497d05f7734873622a">FloatToHalf</a>(<span class="keywordtype">float</span> f)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespacenanovdb_1_1math.html#a0126dca71acf73497d05f7734873622a">   56</a></span><span class="keyword">inline</span> <a class="code hl_define" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint16_t <a class="code hl_function" href="namespacenanovdb_1_1math.html#a0126dca71acf73497d05f7734873622a">FloatToHalf</a>(<span class="keywordtype">float</span> f)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_union" href="unionnanovdb_1_1math_1_1HalfUnion.html">HalfUnion</a> v;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    uint16_t h_raw;</div>
@@ -228,11 +228,11 @@ $(function(){initNavTree('HalfLite_8h_source.html','',''); });
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>} <span class="comment">// namespace nanovdb ===================================================================</span></div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#endif </span><span class="comment">// NANOVDB_MATH_HALF_LITE_HAS_BEEN_INCLUDED</span></div>
-<div class="ttc" id="amath_2SampleFromVoxels_8h_html_a551e5ea2539324048f4b47c00ab67d55"><div class="ttname"><a href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a></div><div class="ttdeci">#define __hostdev__</div><div class="ttdef"><b>Definition</b> SampleFromVoxels.h:29</div></div>
+<div class="ttc" id="aSampleFromVoxels_8h_html_a551e5ea2539324048f4b47c00ab67d55"><div class="ttname"><a href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a></div><div class="ttdeci">#define __hostdev__</div><div class="ttdef"><b>Definition</b> SampleFromVoxels.h:29</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1math_html"><div class="ttname"><a href="namespacenanovdb_1_1math.html">nanovdb::math</a></div><div class="ttdef"><b>Definition</b> DitherLUT.h:19</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1math_html_a0126dca71acf73497d05f7734873622a"><div class="ttname"><a href="namespacenanovdb_1_1math.html#a0126dca71acf73497d05f7734873622a">nanovdb::math::FloatToHalf</a></div><div class="ttdeci">__hostdev__ uint16_t FloatToHalf(float f)</div><div class="ttdef"><b>Definition</b> HalfLite.h:56</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1math_html_a80792353e4191064e6e1ac330a4c8027"><div class="ttname"><a href="namespacenanovdb_1_1math.html#a80792353e4191064e6e1ac330a4c8027">nanovdb::math::HalfToFloat</a></div><div class="ttdeci">__hostdev__ float HalfToFloat(uint16_t h_raw)</div><div class="ttdef"><b>Definition</b> HalfLite.h:27</div></div>
-<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdoc">Defines a simple memory pool used to call cub functions that use dynamic temporary storage.</div><div class="ttdef"><b>Definition</b> GridHandle.h:32</div></div>
+<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdoc">Defines a simple memory pool used to call cub functions that use dynamic temporary storage.</div><div class="ttdef"><b>Definition</b> GridHandle.h:34</div></div>
 <div class="ttc" id="ananovdb_2nanovdb_2util_2Util_8h_html"><div class="ttname"><a href="nanovdb_2nanovdb_2util_2Util_8h.html">Util.h</a></div><div class="ttdoc">Utility functions.</div></div>
 <div class="ttc" id="aunionnanovdb_1_1math_1_1HalfUnion_html"><div class="ttname"><a href="unionnanovdb_1_1math_1_1HalfUnion.html">nanovdb::math::HalfUnion</a></div><div class="ttdef"><b>Definition</b> HalfLite.h:22</div></div>
 <div class="ttc" id="aunionnanovdb_1_1math_1_1HalfUnion_html_a752abcfe7ce5874cd9e8012a0346a37b"><div class="ttname"><a href="unionnanovdb_1_1math_1_1HalfUnion.html#a752abcfe7ce5874cd9e8012a0346a37b">nanovdb::math::HalfUnion::i</a></div><div class="ttdeci">uint32_t i</div><div class="ttdef"><b>Definition</b> HalfLite.h:23</div></div>

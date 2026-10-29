@@ -1,0 +1,36 @@
+var structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase =
+[
+    [ "GeneratorArgumentsCb", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#ad02fa87041104eb2d97c66ac8441d77b", null ],
+    [ "GeneratorCb", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a7683850ca58f8a884279701b7f95b84f", null ],
+    [ "GeneratorNativeCb", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#ac60d5949e5e9feb0d8925fddff6180aa", null ],
+    [ "Ptr", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a473687eeaa8e4d36b434638831630cd1", null ],
+    [ "SignatureMatch", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#aee8c90b86fef2410c5903bcdd9df708c", [
+      [ "None", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#aee8c90b86fef2410c5903bcdd9df708cac9d3e887722f2bc482bcca9d41c512af", null ],
+      [ "Size", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#aee8c90b86fef2410c5903bcdd9df708caff9abf2b1a689f70a77a18da50c01d9f", null ],
+      [ "Implicit", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#aee8c90b86fef2410c5903bcdd9df708ca81a198911eba60d4033c233d3ec90ea1", null ],
+      [ "Ambiguous", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#aee8c90b86fef2410c5903bcdd9df708ca8b6aaae09cff57a6af002d994ec5c647", null ],
+      [ "Explicit", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#aee8c90b86fef2410c5903bcdd9df708cad2dd6ed7eca9210b09941bee2c62735f", null ]
+    ] ],
+    [ "IRFunctionBase", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#ab316ff0c73805279c740513da058d62b", null ],
+    [ "IRFunctionBase", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a038d9fad9f58666238ebaa4335281132", null ],
+    [ "IRFunctionBase", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#afba12b7bd5b96d9ee1abccf24026cab5", null ],
+    [ "~IRFunctionBase", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#afc59549f4922a4a93f563eef52ba8f71", null ],
+    [ "argName", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a0ee4ae56bf532dc17117c17206c9bbba", null ],
+    [ "call", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a0d777657b5c1605fa4792b479f49a448", null ],
+    [ "call", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a9d0b15d1776023f9c02d35458a24b334", null ],
+    [ "call", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#aae8daf0986a2751029d10dc5a318465e", null ],
+    [ "create", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a5cc224e4e9d775d247167137509856a5", null ],
+    [ "create", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a5f7069870299fb4b0dccd996457e1a1e", null ],
+    [ "dependencies", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a592052ecd54b2fed6431ca2fb31cecce", null ],
+    [ "get", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#ad7bf85f468767251d9039133646ec788", null ],
+    [ "hasEmbedIR", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a31dc765576d7dcd7776ab55da704fe1b", null ],
+    [ "match", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a00c794a174f7525be4a6cd0f2b0a1ee5", null ],
+    [ "print", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a122389addb0b884bb5f7f5b45a3b24a5", null ],
+    [ "setEmbedIR", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a362ecd72d1dfb66426eb7658c5147849", null ],
+    [ "size", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a259cb5a711406a8c3e5d937eb9350cca", null ],
+    [ "symbol", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a9f1ee89638a2fc436f51679d1a855bdf", null ],
+    [ "types", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#ab7d1b48fcb9f216f61bc40c25da156ae", null ],
+    [ "verifyResultType", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#ab8ec780861efc5bbb24ac1cd3a0309fd", null ],
+    [ "mEmbedIR", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a9f06f4cf7b3192fa886efa709090daeb", null ],
+    [ "mGen", "structopenvdb_1_1v14__0_1_1ax_1_1codegen_1_1IRFunctionBase.html#a4b6bc6c176432f9527ccb58e0e53d74a", null ]
+];

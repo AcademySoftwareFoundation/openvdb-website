@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -135,13 +135,13 @@ $(function(){initNavTree('ManagedResource_8h_source.html','',''); });
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/// @brief Managed (unified) memory resource. Allocations</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">///        (cudaMallocManaged) are accessible from both the host and the</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">///        device, with the driver migrating pages on demand, so a container</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">///        over this resource serves grids that are read on both sides --</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">///        the replacement for the legacy UnifiedBuffer. A GridHandle over</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">///        over this resource serves grids that are read on both sides. A</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">///        GridHandle over</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">///        this resource parses (and validates) its metadata through the</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">///        device like any device buffer -- a host-side parse could race</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">///        still-running producer kernels -- while the host accessors remain</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">///        available afterwards; ordering host reads after device writes is</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">///        the caller&#39;s responsibility, exactly as with UnifiedBuffer.</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">///        the caller&#39;s responsibility.</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">/// @note This resource is *synchronous*: cudaMallocManaged / cudaFree have</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">///       no stream-ordered form, so it models the synchronous Resource</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">///       concept (allocate / deallocate, no stream). The usual contract</span></div>
@@ -211,7 +211,7 @@ $(function(){initNavTree('ManagedResource_8h_source.html','',''); });
 <div class="ttc" id="aclassnanovdb_1_1cuda_1_1ManagedResource_html_a8b56b57c90e6ad4e0ce8d856525b0124"><div class="ttname"><a href="classnanovdb_1_1cuda_1_1ManagedResource.html#a8b56b57c90e6ad4e0ce8d856525b0124">nanovdb::cuda::ManagedResource::DEFAULT_ALIGNMENT</a></div><div class="ttdeci">static constexpr size_t DEFAULT_ALIGNMENT</div><div class="ttdef"><b>Definition</b> ManagedResource.h:35</div></div>
 <div class="ttc" id="aclassnanovdb_1_1cuda_1_1ManagedResource_html_ae9b32237ffe628f630f7c74cff31551c"><div class="ttname"><a href="classnanovdb_1_1cuda_1_1ManagedResource.html#ae9b32237ffe628f630f7c74cff31551c">nanovdb::cuda::ManagedResource::operator!=</a></div><div class="ttdeci">friend bool operator!=(const ManagedResource &amp;, const ManagedResource &amp;)</div><div class="ttdef"><b>Definition</b> ManagedResource.h:72</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1cuda_html"><div class="ttname"><a href="namespacenanovdb_1_1cuda.html">nanovdb::cuda</a></div><div class="ttdef"><b>Definition</b> Buffer.h:24</div></div>
-<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdoc">Defines a simple memory pool used to call cub functions that use dynamic temporary storage.</div><div class="ttdef"><b>Definition</b> GridHandle.h:32</div></div>
+<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdoc">Defines a simple memory pool used to call cub functions that use dynamic temporary storage.</div><div class="ttdef"><b>Definition</b> GridHandle.h:34</div></div>
 <div class="ttc" id="ananovdb_2nanovdb_2util_2cuda_2Util_8h_html"><div class="ttname"><a href="nanovdb_2nanovdb_2util_2cuda_2Util_8h.html">Util.h</a></div><div class="ttdoc">Cuda specific utility functions.</div></div>
 <div class="ttc" id="ananovdb_2nanovdb_2util_2cuda_2Util_8h_html_a93e6bf7c8996268aa9a2740d6f1de76d"><div class="ttname"><a href="nanovdb_2nanovdb_2util_2cuda_2Util_8h.html#a93e6bf7c8996268aa9a2740d6f1de76d">cudaCheck</a></div><div class="ttdeci">#define cudaCheck(ans)</div><div class="ttdef"><b>Definition</b> Util.h:49</div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -125,7 +125,6 @@ $(function(){initNavTree('structnanovdb_1_1BufferTraits_3_01cuda_1_1Buffer_3_01T
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:ae2c7013b5a04d0316a3517ca603f3bdd" id="r_ae2c7013b5a04d0316a3517ca603f3bdd"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2c7013b5a04d0316a3517ca603f3bdd">hasDeviceDual</a> = false</td></tr>
 <tr class="memitem:a640f3b3c209e9c1fbdac44c88cc9911a" id="r_a640f3b3c209e9c1fbdac44c88cc9911a"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a640f3b3c209e9c1fbdac44c88cc9911a">hasDeviceSingle</a></td></tr>
 <tr class="memitem:a2777f8502764592bb860a440e56f52d2" id="r_a2777f8502764592bb860a440e56f52d2"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2777f8502764592bb860a440e56f52d2">hasHostSingle</a> = <a class="el" href="structnanovdb_1_1cuda_1_1is__host__accessible__resource.html">cuda::is_host_accessible_resource</a>&lt;R&gt;::value</td></tr>
 </table>
@@ -134,30 +133,6 @@ Static Public Attributes</h2></td></tr>
 struct nanovdb::BufferTraits&lt; cuda::Buffer&lt; T, R &gt; &gt;</div><p><a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> support for the single-space <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer</a>: the buffer owns exactly one allocation, resident on the device, so the handle parses metadata through a device read and exposes only the device accessors. Requires byte-addressed storage. </p>
 <dl class="section note"><dt>Note</dt><dd>This trait doubles as the definition of the single-space device-buffer concept: a buffer whose <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a> specialization sets hasDeviceSingle guarantees ElementType and ResourceType typedefs, data(), size() and size_bytes() (byte-addressed elements, enforced by the consumer), resource(), copy(), destroy(), and stream() when the resource is stream-ordered. Any consumer of hasDeviceSingle may rely on exactly this interface and nothing more; in particular, scratch allocates through resource() as a <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer</a>, so a conforming buffer never needs to be constructible by a consumer. </dd></dl>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
-<a id="ae2c7013b5a04d0316a3517ca603f3bdd" name="ae2c7013b5a04d0316a3517ca603f3bdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2c7013b5a04d0316a3517ca603f3bdd">&#9670;&#160;</a></span>hasDeviceDual</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T, typename R&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool hasDeviceDual = false</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a640f3b3c209e9c1fbdac44c88cc9911a" name="a640f3b3c209e9c1fbdac44c88cc9911a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a640f3b3c209e9c1fbdac44c88cc9911a">&#9670;&#160;</a></span>hasDeviceSingle</h2>
 
@@ -181,8 +156,8 @@ template&lt;typename T, typename R&gt; </div>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= !<a class="code hl_struct" href="structnanovdb_1_1cuda_1_1is__host__accessible__resource.html">cuda::is_host_accessible_resource&lt;R&gt;::value</a></div>
 <div class="line">                                            || <a class="code hl_struct" href="structnanovdb_1_1cuda_1_1is__device__accessible__resource.html">cuda::is_device_accessible_resource&lt;R&gt;::value</a></div>
-<div class="ttc" id="astructnanovdb_1_1cuda_1_1is__device__accessible__resource_html"><div class="ttname"><a href="structnanovdb_1_1cuda_1_1is__device__accessible__resource.html">nanovdb::cuda::is_device_accessible_resource</a></div><div class="ttdoc">Companion detection: is_device_accessible_resource&lt;R&gt;::value is true iff R declares static constexpr ...</div><div class="ttdef"><b>Definition</b> DeviceResource.h:153</div></div>
-<div class="ttc" id="astructnanovdb_1_1cuda_1_1is__host__accessible__resource_html"><div class="ttname"><a href="structnanovdb_1_1cuda_1_1is__host__accessible__resource.html">nanovdb::cuda::is_host_accessible_resource</a></div><div class="ttdoc">Detection trait: is_host_accessible_resource&lt;R&gt;::value is true iff R declares static constexpr bool H...</div><div class="ttdef"><b>Definition</b> DeviceResource.h:141</div></div>
+<div class="ttc" id="astructnanovdb_1_1cuda_1_1is__device__accessible__resource_html"><div class="ttname"><a href="structnanovdb_1_1cuda_1_1is__device__accessible__resource.html">nanovdb::cuda::is_device_accessible_resource</a></div><div class="ttdoc">Companion detection: is_device_accessible_resource&lt;R&gt;::value is true iff R declares static constexpr ...</div><div class="ttdef"><b>Definition</b> DeviceResource.h:142</div></div>
+<div class="ttc" id="astructnanovdb_1_1cuda_1_1is__host__accessible__resource_html"><div class="ttname"><a href="structnanovdb_1_1cuda_1_1is__host__accessible__resource.html">nanovdb::cuda::is_host_accessible_resource</a></div><div class="ttdoc">Detection trait: is_host_accessible_resource&lt;R&gt;::value is true iff R declares static constexpr bool H...</div><div class="ttdef"><b>Definition</b> DeviceResource.h:130</div></div>
 </div><!-- fragment -->
 </div>
 </div>

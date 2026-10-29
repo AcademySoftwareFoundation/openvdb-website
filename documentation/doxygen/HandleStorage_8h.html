@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -118,7 +118,7 @@ $(function(){initNavTree('HandleStorage_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Allocates the device-resident storage behind a GridHandle or NodeManagerHandle for any buffer family: through the static create() interface for buffers that provide it (the dual-space DeviceBuffer family), and through the buffer's memory resource for a single-space cuda::Buffer. This is the bridge that lets every tool entry point accept either buffer family.  
+<p>Allocates the device-resident storage behind a GridHandle or NodeManagerHandle through a single-space buffer's memory resource, and transfers handles between address spaces.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="GridHandle_8h_source.html">nanovdb/GridHandle.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="HostBuffer_8h_source.html">nanovdb/HostBuffer.h</a>&gt;</code><br />
@@ -135,7 +135,6 @@ $(function(){initNavTree('HandleStorage_8h.html','',''); });
 Classes</h2></td></tr>
 <tr class="memitem:IsStreamArgument_3C_20BufferT_20_3E" id="r_IsStreamArgument_3C_20BufferT_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1IsStreamArgument.html">IsStreamArgument&lt; BufferT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when <code>BufferT</code> is a stream rather than a buffer: cudaStream_t, or another non-buffer type that converts to it. nullptr is not a stream here.  <a href="structnanovdb_1_1cuda_1_1detail_1_1IsStreamArgument.html#details">More...</a><br /></td></tr>
-<tr class="memitem:HandleFactory" id="r_HandleFactory"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1cuda_1_1detail_1_1HandleFactory.html">HandleFactory</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -156,15 +155,15 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a69e4ce3b3c28b310b77a82373c9fc47f" id="r_a69e4ce3b3c28b310b77a82373c9fc47f"><td class="memTemplParams" colspan="2">template&lt;typename BufferT&gt; </td></tr>
-<tr class="memitem:a69e4ce3b3c28b310b77a82373c9fc47f template"><td class="memItemLeft" align="right" valign="top">BufferT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1cuda_1_1detail.html#a69e4ce3b3c28b310b77a82373c9fc47f">createDeviceStorage</a> (uint64_t bytes, const BufferT *proto, int device, cudaStream_t stream)</td></tr>
-<tr class="memdesc:a69e4ce3b3c28b310b77a82373c9fc47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates <code>bytes</code> of device-resident storage of buffer type <code>BufferT:</code> single-space buffers allocate through <code>pool's</code> resource &ndash; on <code>stream</code> when the resource is stream-ordered &ndash; and every other buffer type goes through its static create(bytes, pool, device, stream) interface.  <br /></td></tr>
+<tr class="memitem:a35b81b3b3e86421b748594db690c6363" id="r_a35b81b3b3e86421b748594db690c6363"><td class="memTemplParams" colspan="2">template&lt;typename BufferT&gt; </td></tr>
+<tr class="memitem:a35b81b3b3e86421b748594db690c6363 template"><td class="memItemLeft" align="right" valign="top">BufferT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1cuda_1_1detail.html#a35b81b3b3e86421b748594db690c6363">createDeviceStorage</a> (uint64_t bytes, const BufferT *proto, cudaStream_t stream)</td></tr>
+<tr class="memdesc:a35b81b3b3e86421b748594db690c6363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates <code>bytes</code> of device-resident storage of the single-space buffer type <code>BufferT</code> on the current device through <code>proto's</code> resource &ndash; on <code>stream</code> when the resource is stream-ordered.  <br /></td></tr>
 <tr class="memitem:a29c016ad7a62690b2077a3bd79bf181e" id="r_a29c016ad7a62690b2077a3bd79bf181e"><td class="memTemplParams" colspan="2">template&lt;typename BufferT&gt; </td></tr>
 <tr class="memitem:a29c016ad7a62690b2077a3bd79bf181e template"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1cuda_1_1detail.html#a29c016ad7a62690b2077a3bd79bf181e">deviceStorageData</a> (BufferT &amp;buffer)</td></tr>
-<tr class="memdesc:a29c016ad7a62690b2077a3bd79bf181e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The device address of a storage buffer made by createDeviceStorage: data() for a single-space buffer, whose one allocation is the device allocation, and deviceData() for the dual-space family.  <br /></td></tr>
+<tr class="memdesc:a29c016ad7a62690b2077a3bd79bf181e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The device address of a storage buffer made by createDeviceStorage: its one allocation is the device allocation.  <br /></td></tr>
 <tr class="memitem:a153b000b1457a04f12e5b9293afe2a73" id="r_a153b000b1457a04f12e5b9293afe2a73"><td class="memTemplParams" colspan="2">template&lt;typename BufferT&gt; </td></tr>
 <tr class="memitem:a153b000b1457a04f12e5b9293afe2a73 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1cuda_1_1detail.html#a153b000b1457a04f12e5b9293afe2a73">orderBeforeHandleConstruction</a> (cudaStream_t stream)</td></tr>
-<tr class="memdesc:a153b000b1457a04f12e5b9293afe2a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Orders the host after <code>stream</code> where a handle is about to be constructed from bytes still being written on it: a single-space buffer over a synchronous resource retains no stream, so the constructor's metadata parse (which runs on the default stream) is not otherwise ordered after the producer. A no-op for dual-space buffers (their constructor path predates this bridge) and for stream-ordered resources (the buffer retains the stream).  <br /></td></tr>
+<tr class="memdesc:a153b000b1457a04f12e5b9293afe2a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Orders the host after <code>stream</code> where a handle is about to be constructed from bytes still being written on it: a single-space buffer over a synchronous resource retains no stream, so the constructor's metadata parse (which runs on the default stream) is not otherwise ordered after the producer. A no-op for stream-ordered resources (the buffer retains the stream).  <br /></td></tr>
 <tr class="memitem:a8bd34d503bd657cac6b8a0e16f7dee27" id="r_a8bd34d503bd657cac6b8a0e16f7dee27"><td class="memTemplParams" colspan="2">template&lt;typename DstBufferT&gt; </td></tr>
 <tr class="memitem:a8bd34d503bd657cac6b8a0e16f7dee27 template"><td class="memItemLeft" align="right" valign="top">DstBufferT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacenanovdb_1_1cuda_1_1detail.html#a8bd34d503bd657cac6b8a0e16f7dee27">makeTransferStorage</a> (uint64_t bytes, cudaStream_t stream, const DstBufferT *proto)</td></tr>
 <tr class="memdesc:a8bd34d503bd657cac6b8a0e16f7dee27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates <code>bytes</code> of destination storage for a cross-space transfer: single-space buffers allocate through <code>proto's</code> resource (or a default-constructed resource without one), on <code>stream</code> when the resource is stream-ordered; buffers providing create() go through it.  <br /></td></tr>
@@ -176,7 +175,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ab4b29c1e6128a5e2e1a760834d5bde2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload issuing the copy on the source buffer's retained stream when it has one (any single-space source over a stream-ordered resource), the default stream otherwise.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Allocates the device-resident storage behind a GridHandle or NodeManagerHandle for any buffer family: through the static create() interface for buffers that provide it (the dual-space DeviceBuffer family), and through the buffer's memory resource for a single-space cuda::Buffer. This is the bridge that lets every tool entry point accept either buffer family. </p>
+<div class="textblock"><p>Allocates the device-resident storage behind a GridHandle or NodeManagerHandle through a single-space buffer's memory resource, and transfers handles between address spaces. </p>
 <dl class="section note"><dt>Note</dt><dd>This header is host-includable: it calls the CUDA runtime but launches no kernels, so a plain C++ translation unit (linked against the CUDA runtime) can allocate storage and transfer grid handles with cuda::copyTo. </dd></dl>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a8634aee7bff203864a3273f326318dfc" name="a8634aee7bff203864a3273f326318dfc"></a>

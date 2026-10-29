@@ -8,5 +8,5 @@ var classnanovdb_1_1tools_1_1build_1_1LeafNode_3_01bool_01_4_1_1ValueIterator =
     [ "operator*", "classnanovdb_1_1tools_1_1build_1_1LeafNode_3_01bool_01_4_1_1ValueIterator.html#a2da7b94f83c3c9b4f44336242978f6e9", null ],
     [ "operator++", "classnanovdb_1_1tools_1_1build_1_1LeafNode_3_01bool_01_4_1_1ValueIterator.html#a22bb930626999416e1b516d87f61a7d9", null ],
     [ "operator++", "classnanovdb_1_1tools_1_1build_1_1LeafNode_3_01bool_01_4_1_1ValueIterator.html#a29c6b5762125ba4ed9c36568a73386a4", null ],
-    [ "operator=", "classnanovdb_1_1tools_1_1build_1_1LeafNode_3_01bool_01_4_1_1ValueIterator.html#a0e6e14c66c0bd501d6dc7b85d2bb2f74", null ]
+    [ "operator=", "classnanovdb_1_1tools_1_1build_1_1LeafNode_1_1ValueIterator.html#a0e6e14c66c0bd501d6dc7b85d2bb2f74", null ]
 ];

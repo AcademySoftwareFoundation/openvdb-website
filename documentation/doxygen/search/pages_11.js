@@ -38,7 +38,7 @@ var searchData=
   ['structure_35',['Source tree structure',['../NanoVDB_SourceTree.html',1,'NanoVDB_MainPage']]],
   ['structures_36',['How does OpenVDB compare to existing sparse data structures?',['../faq.html#sCompareVDB',1,'']]],
   ['style_37',['Coding Style',['../codingStyle.html',1,'index']]],
-  ['support_38',['Support',['../ax.html#axvexsupport',1,'AX VEX Support'],['../build.html#buildBloscSupport',1,'Blosc Support'],['../build.html#buildSimd',1,'Building With Target ISA Support'],['../build.html#buildZLibSupport',1,'ZLIB Support']]],
+  ['support_38',['Support',['../ax.html#axvexsupport',1,'AX VEX Support'],['../build.html#buildSimd',1,'Building With Target ISA Support'],['../build.html#buildZLibSupport',1,'ZLIB Support'],['../build.html#buildZstdSupport',1,'Zstd Support']]],
   ['supported_20functions_39',['AX Supported Functions',['../axfunctionlist.html',1,'openvdbax']]],
   ['syntax_40',['Syntax',['../ax.html#axsyntax',1,'']]],
   ['system_20for_20openvdb_41',['What is the version numbering system for OpenVDB?',['../faq.html#sVersionNumbering',1,'']]],

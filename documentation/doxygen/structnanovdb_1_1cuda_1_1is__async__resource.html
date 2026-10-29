@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -133,7 +133,7 @@ struct nanovdb::cuda::is_async_resource&lt; R, class &gt;</div><p>Detection trai
 <div class="line">    <span class="keywordflow">else</span></div>
 <div class="line">        <span class="keywordflow">return</span> resource.allocate(bytes, alignment);               <span class="comment">// synchronous</span></div>
 <div class="line">}</div>
-<div class="ttc" id="astructnanovdb_1_1cuda_1_1is__async__resource_html"><div class="ttname"><a href="structnanovdb_1_1cuda_1_1is__async__resource.html">nanovdb::cuda::is_async_resource</a></div><div class="ttdoc">Detection trait: is_async_resource&lt;R&gt;::value is true iff R models the stream-ordered AsyncResource co...</div><div class="ttdef"><b>Definition</b> DeviceResource.h:124</div></div>
+<div class="ttc" id="astructnanovdb_1_1cuda_1_1is__async__resource_html"><div class="ttname"><a href="structnanovdb_1_1cuda_1_1is__async__resource.html">nanovdb::cuda::is_async_resource</a></div><div class="ttdoc">Detection trait: is_async_resource&lt;R&gt;::value is true iff R models the stream-ordered AsyncResource co...</div><div class="ttdef"><b>Definition</b> DeviceResource.h:113</div></div>
 </div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>AsyncResource refines the synchronous Resource concept, matching CCCL's cuda::mr: an async resource must also provide the synchronous allocate / deallocate, so <a class="el" href="structnanovdb_1_1cuda_1_1is__async__resource.html" title="Detection trait: is_async_resource&lt;R&gt;::value is true iff R models the stream-ordered AsyncResource co...">is_async_resource&lt;R&gt;</a> implies <a class="el" href="structnanovdb_1_1cuda_1_1is__resource.html" title="Detection trait: is_resource&lt;R&gt;::value is true iff R models the synchronous Resource concept,...">is_resource&lt;R&gt;</a>. A synchronous-only resource (e.g. <a class="el" href="classnanovdb_1_1cuda_1_1PinnedResource.html" title="Default host-pinned memory resource. Allocations are page-locked host memory (cudaMallocHost) that is...">PinnedResource</a>) models just <a class="el" href="structnanovdb_1_1cuda_1_1is__resource.html" title="Detection trait: is_resource&lt;R&gt;::value is true iff R models the synchronous Resource concept,...">is_resource</a>. The synchronous methods of a stream-ordered resource are typically thin delegates (allocate_async on the null stream followed by a stream synchronize). </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

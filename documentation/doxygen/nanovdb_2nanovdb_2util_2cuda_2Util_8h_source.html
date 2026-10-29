@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -546,18 +546,7 @@ $(function(){initNavTree('nanovdb_2nanovdb_2util_2cuda_2Util_8h_source.html','',
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>}<span class="comment">// namespace nanovdb ===============================================================</span></div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span> </div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="preprocessor">#if defined(__CUDACC__)</span><span class="comment">// the following functions only run on the GPU!</span></div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Func, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>[[deprecated(<span class="stringliteral">&quot;Use nanovdb::cuda::lambdaKernel instead&quot;</span>)]]</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span><a class="code hl_define" href="nanovdb_2nanovdb_2util_2Util_8h.html#a75e2d5456e52f5c9703fc88479472e55">__global__</a> <span class="keywordtype">void</span> cudaLambdaKernel(<span class="keyword">const</span> <span class="keywordtype">size_t</span> numItems, Func func, Args... args)</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>{</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> tid = blockIdx.x * blockDim.x + threadIdx.x;</div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    <span class="keywordflow">if</span> (tid &gt;= numItems) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    func(tid, args...);</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>}</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span><span class="preprocessor">#endif</span><span class="comment">// __CUDACC__</span></div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span> </div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span><span class="preprocessor">#endif</span><span class="comment">// NANOVDB_UTIL_CUDA_UTIL_H_HAS_BEEN_INCLUDED</span></div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="preprocessor">#endif</span><span class="comment">// NANOVDB_UTIL_CUDA_UTIL_H_HAS_BEEN_INCLUDED</span></div>
 <div class="ttc" id="aclassnanovdb_1_1util_1_1cuda_1_1unique__ptr_html_a03506bd75f3b663edadc08d8c7c00f15"><div class="ttname"><a href="classnanovdb_1_1util_1_1cuda_1_1unique__ptr.html#a03506bd75f3b663edadc08d8c7c00f15">nanovdb::util::cuda::unique_ptr::unique_ptr</a></div><div class="ttdeci">unique_ptr(unique_ptr &amp;&amp;other)</div><div class="ttdef"><b>Definition</b> Util.h:224</div></div>
 <div class="ttc" id="aclassnanovdb_1_1util_1_1cuda_1_1unique__ptr_html_a3cb809b7f397129b13ca7cb485febfa6"><div class="ttname"><a href="classnanovdb_1_1util_1_1cuda_1_1unique__ptr.html#a3cb809b7f397129b13ca7cb485febfa6">nanovdb::util::cuda::unique_ptr::~unique_ptr</a></div><div class="ttdeci">~unique_ptr()</div><div class="ttdef"><b>Definition</b> Util.h:228</div></div>
 <div class="ttc" id="aclassnanovdb_1_1util_1_1cuda_1_1unique__ptr_html_a5ed6094f16b6f1caffa5d3594e0f369a"><div class="ttname"><a href="classnanovdb_1_1util_1_1cuda_1_1unique__ptr.html#a5ed6094f16b6f1caffa5d3594e0f369a">nanovdb::util::cuda::unique_ptr::operator=</a></div><div class="ttdeci">unique_ptr &amp; operator=(const unique_ptr &amp;)=delete</div></div>
@@ -576,7 +565,7 @@ $(function(){initNavTree('nanovdb_2nanovdb_2util_2cuda_2Util_8h_source.html','',
 <div class="ttc" id="anamespacenanovdb_1_1util_1_1cuda_html_ac3ce6e797386464127b4b40f8f21ca13"><div class="ttname"><a href="namespacenanovdb_1_1util_1_1cuda.html#ac3ce6e797386464127b4b40f8f21ca13">nanovdb::util::cuda::blocksPerGrid</a></div><div class="ttdeci">size_t blocksPerGrid(size_t numItems, size_t threadsPerBlock)</div><div class="ttdoc">Computes the number of blocks per grid given the problem size and number of threads per block.</div><div class="ttdef"><b>Definition</b> Util.h:255</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1util_1_1cuda_html_af3daefc356ff6abbf0aa47dc80e36337"><div class="ttname"><a href="namespacenanovdb_1_1util_1_1cuda.html#af3daefc356ff6abbf0aa47dc80e36337">nanovdb::util::cuda::memPrefetchAsync</a></div><div class="ttdeci">cudaError_t memPrefetchAsync(const void *devPtr, size_t count, int dstDevice, cudaStream_t stream)</div><div class="ttdoc">Compatbility wrapper for cudaMemPrefetchAsync/cudaMemPrefetchAsync.</div><div class="ttdef"><b>Definition</b> Util.h:271</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1util_1_1cuda_html_afc4e46d5140cc97f31f1dee1b1ca7dd5"><div class="ttname"><a href="namespacenanovdb_1_1util_1_1cuda.html#afc4e46d5140cc97f31f1dee1b1ca7dd5">nanovdb::util::cuda::memAdvise</a></div><div class="ttdeci">cudaError_t memAdvise(const void *devPtr, size_t count, cudaMemoryAdvise advice, int device)</div><div class="ttdoc">Compatbility wrapper for cudaMemAdvise/cudaMemAdvise.</div><div class="ttdef"><b>Definition</b> Util.h:266</div></div>
-<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdoc">Defines a simple memory pool used to call cub functions that use dynamic temporary storage.</div><div class="ttdef"><b>Definition</b> GridHandle.h:32</div></div>
+<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdoc">Defines a simple memory pool used to call cub functions that use dynamic temporary storage.</div><div class="ttdef"><b>Definition</b> GridHandle.h:34</div></div>
 <div class="ttc" id="ananovdb_2nanovdb_2util_2Util_8h_html"><div class="ttname"><a href="nanovdb_2nanovdb_2util_2Util_8h.html">Util.h</a></div><div class="ttdoc">Utility functions.</div></div>
 <div class="ttc" id="ananovdb_2nanovdb_2util_2Util_8h_html_a6206280c40895ecce8b389824bf05ecd"><div class="ttname"><a href="nanovdb_2nanovdb_2util_2Util_8h.html#a6206280c40895ecce8b389824bf05ecd">NANOVDB_ASSERT</a></div><div class="ttdeci">#define NANOVDB_ASSERT(x)</div><div class="ttdef"><b>Definition</b> Util.h:53</div></div>
 <div class="ttc" id="ananovdb_2nanovdb_2util_2Util_8h_html_a75e2d5456e52f5c9703fc88479472e55"><div class="ttname"><a href="nanovdb_2nanovdb_2util_2Util_8h.html#a75e2d5456e52f5c9703fc88479472e55">__global__</a></div><div class="ttdeci">#define __global__</div><div class="ttdef"><b>Definition</b> Util.h:79</div></div>

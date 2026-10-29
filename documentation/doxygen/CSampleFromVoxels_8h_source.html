@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -143,9 +143,9 @@ $(function(){initNavTree('CSampleFromVoxels_8h_source.html','',''); });
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    coord-&gt;mVec[1] = floor(xyz-&gt;mVec[1]+0.5);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    coord-&gt;mVec[2] = floor(xyz-&gt;mVec[2]+0.5);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    coord-&gt;mVec[0] = floorf(xyz-&gt;mVec[0]+0.5);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    coord-&gt;mVec[1] = floorf(xyz-&gt;mVec[1]+0.5);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    coord-&gt;mVec[2] = floorf(xyz-&gt;mVec[2]+0.5);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    coord-&gt;mVec[0] = (int32_t)floorf(xyz-&gt;mVec[0]+0.5f);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    coord-&gt;mVec[1] = (int32_t)floorf(xyz-&gt;mVec[1]+0.5f);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    coord-&gt;mVec[2] = (int32_t)floorf(xyz-&gt;mVec[2]+0.5f);</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
 </div>
@@ -166,13 +166,13 @@ $(function(){initNavTree('CSampleFromVoxels_8h_source.html','',''); });
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">float</span>               i0, i1, i2;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    i0 = floorf(xyz-&gt;mVec[0]);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    fraction-&gt;mVec[0] = xyz-&gt;mVec[0] - i0;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    coord-&gt;mVec[0] = i0;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    coord-&gt;mVec[0] = (int32_t)i0;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    i1 = floorf(xyz-&gt;mVec[1]);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    fraction-&gt;mVec[1] = xyz-&gt;mVec[1] - i1;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    coord-&gt;mVec[1] = i1;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    coord-&gt;mVec[1] = (int32_t)i1;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    i2 = floorf(xyz-&gt;mVec[2]);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    fraction-&gt;mVec[2] = xyz-&gt;mVec[2] - i2;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    coord-&gt;mVec[2] = i2;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    coord-&gt;mVec[2] = (int32_t)i2;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
 </div>
@@ -363,11 +363,11 @@ $(function(){initNavTree('CSampleFromVoxels_8h_source.html','',''); });
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    {</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keywordtype">float</span>       sp, sm;</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        qxyz.<a class="code hl_variable" href="structcnanovdb__Vec3F.html#a52d862aad3352f07b95548696d63b96f">mVec</a>[i] -= 0.5;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        qxyz.<a class="code hl_variable" href="structcnanovdb__Vec3F.html#a52d862aad3352f07b95548696d63b96f">mVec</a>[i] -= 0.5f;</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        sm = <a class="code hl_function" href="CSampleFromVoxels_8h.html#ac51e34d5342751ae0fe61b8f60d4c386">cnanovdb_sampleF_trilinear</a>(acc, &amp;qxyz);</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        qxyz.<a class="code hl_variable" href="structcnanovdb__Vec3F.html#a52d862aad3352f07b95548696d63b96f">mVec</a>[i] += 1.0;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        qxyz.<a class="code hl_variable" href="structcnanovdb__Vec3F.html#a52d862aad3352f07b95548696d63b96f">mVec</a>[i] += 1.0f;</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        sp = <a class="code hl_function" href="CSampleFromVoxels_8h.html#ac51e34d5342751ae0fe61b8f60d4c386">cnanovdb_sampleF_trilinear</a>(acc, &amp;qxyz);</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        qxyz.<a class="code hl_variable" href="structcnanovdb__Vec3F.html#a52d862aad3352f07b95548696d63b96f">mVec</a>[i] -= 0.5;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        qxyz.<a class="code hl_variable" href="structcnanovdb__Vec3F.html#a52d862aad3352f07b95548696d63b96f">mVec</a>[i] -= 0.5f;</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        ret-&gt;mVec[i] = sp - sm;</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    }</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>}</div>

@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -118,7 +118,7 @@ $(function(){initNavTree('GridHandle_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Defines GridHandle, which manages a memory buffer containing one or more NanoVDB grids: host-resident, dual host/device, or a single-space device-only buffer.  
+<p>Defines GridHandle, which manages a memory buffer containing one or more NanoVDB grids: host-resident, or a single-space buffer such as cuda::Buffer.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;fstream&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
@@ -127,16 +127,21 @@ $(function(){initNavTree('GridHandle_8h.html','',''); });
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;initializer_list&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;<a class="el" href="NanoVDB_8h_source.html">nanovdb/NanoVDB.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="HostBuffer_8h_source.html">nanovdb/HostBuffer.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="tools_2GridChecksum_8h_source.html">nanovdb/tools/GridChecksum.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="GridChecksum_8h_source.html">nanovdb/tools/GridChecksum.h</a>&gt;</code><br />
 </div>
 <p><a href="GridHandle_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:GridHandleMetaData" id="r_GridHandleMetaData"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1GridHandleMetaData.html">GridHandleMetaData</a></td></tr>
+<tr class="memitem:BufferDeclaresDeviceDual_3C_20BufferT_2C_20typename_20_3E" id="r_BufferDeclaresDeviceDual_3C_20BufferT_2C_20typename_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1detail_1_1BufferDeclaresDeviceDual.html">BufferDeclaresDeviceDual&lt; BufferT, typename &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detects a <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a> specialization that still declares the hasDeviceDual member removed in NanoVDB 14.0, so <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> can reject it instead of parsing the device-only grids as an empty host buffer.  <a href="structnanovdb_1_1detail_1_1BufferDeclaresDeviceDual.html#details">More...</a><br /></td></tr>
+<tr class="memitem:BufferDeclaresDeviceDual_3C_20BufferT_2C_20std_3A_3Avoid_5Ft_3C_20decltype_28BufferTraits_3C_20BufferT_20_3E_3A_3AhasDeviceDual_29_3E_20_3E" id="r_BufferDeclaresDeviceDual_3C_20BufferT_2C_20std_3A_3Avoid_5Ft_3C_20decltype_28BufferTraits_3C_20BufferT_20_3E_3A_3AhasDeviceDual_29_3E_20_3E"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1detail_1_1BufferDeclaresDeviceDual_3_01BufferT_00_01std_1_1void__t_3_01decltype6460dfd0918a300b88cbb6bb77c9be88.html">BufferDeclaresDeviceDual&lt; BufferT, std::void_t&lt; decltype(BufferTraits&lt; BufferT &gt;::hasDeviceDual)&gt; &gt;</a></td></tr>
 <tr class="memitem:GridHandle_3C_20BufferT_20_3E" id="r_GridHandle_3C_20BufferT_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle&lt; BufferT &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class serves to manage a buffer containing one or more NanoVDB Grids.  <a href="classnanovdb_1_1GridHandle.html#details">More...</a><br /></td></tr>
 <tr class="memitem:LayoutCopy" id="r_LayoutCopy"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnanovdb_1_1detail_1_1LayoutCopy.html">LayoutCopy</a></td></tr>
@@ -168,7 +173,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a1999ea4347f33abf15bb667141a1f2df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combines (or merges) multiple GridHandles into a single <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> containing all grids.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Defines GridHandle, which manages a memory buffer containing one or more NanoVDB grids: host-resident, dual host/device, or a single-space device-only buffer. </p>
+<div class="textblock"><p>Defines GridHandle, which manages a memory buffer containing one or more NanoVDB grids: host-resident, or a single-space buffer such as cuda::Buffer. </p>
 <dl class="section author"><dt>Author</dt><dd>Ken Museth</dd></dl>
 <dl class="section date"><dt>Date</dt><dd>January 8, 2020 </dd></dl>
 </div></div><!-- contents -->

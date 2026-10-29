@@ -1,0 +1,4 @@
+var structnanovdb_1_1detail_1_1BufferDeclaresDeviceDual_3_01BufferT_00_01std_1_1void__t_3_01decltype6460dfd0918a300b88cbb6bb77c9be88 =
+[
+    [ "value", "structnanovdb_1_1detail_1_1BufferDeclaresDeviceDual_3_01BufferT_00_01std_1_1void__t_3_01decltype6460dfd0918a300b88cbb6bb77c9be88.html#a5b4ee4ae6cba6bb75200ba7af1910873", null ]
+];

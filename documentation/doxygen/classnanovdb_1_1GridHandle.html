@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -131,15 +131,11 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e5294ebc71baf50c38ff1e8f7df311d" id="r_a6e5294ebc71baf50c38ff1e8f7df311d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structnanovdb_1_1GridHandleMetaData.html">GridHandleMetaData</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e5294ebc71baf50c38ff1e8f7df311d">metaData</a> () const</td></tr>
 <tr class="memdesc:a6e5294ebc71baf50c38ff1e8f7df311d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The layout of the grids in this handle's buffer: offset, size and grid type of each. Valid input to <a class="el" href="#a9bea8c755ec680a5c61c308323727c42" title="Constructs a handle over buffer from metadata the caller already knows to describe its contents,...">adopt()</a> over a buffer holding a byte-for-byte copy of the grids.  <br /></td></tr>
-<tr class="memitem:adc14689d7fc4a9b9432b899211a309ec" id="r_adc14689d7fc4a9b9432b899211a309ec"><td class="memTemplParams" colspan="2">template&lt;typename T = BufferT, typename <a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; T &gt;::hasDeviceDual, int &gt;::type = 0&gt; </td></tr>
-<tr class="memitem:adc14689d7fc4a9b9432b899211a309ec template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc14689d7fc4a9b9432b899211a309ec">GridHandle</a> (T &amp;&amp;<a class="el" href="#a27d8a3674328a33d9e2c43b1fd3f0166">buffer</a>)</td></tr>
-<tr class="memdesc:adc14689d7fc4a9b9432b899211a309ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor from a dual host-device buffer.  <br /></td></tr>
-<tr class="memitem:adc14689d7fc4a9b9432b899211a309ec" id="r_adc14689d7fc4a9b9432b899211a309ec"><td class="memTemplParams" colspan="2">template&lt;typename T = BufferT, typename <a class="el" href="structnanovdb_1_1util_1_1disable__if.html">util::disable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; T &gt;::hasDeviceDual||<a class="el" href="structnanovdb_1_1BufferHasDeviceSingle.html">BufferHasDeviceSingle</a>&lt; T &gt;::value, int &gt;::type = 0&gt; </td></tr>
-<tr class="memitem:adc14689d7fc4a9b9432b899211a309ec template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc14689d7fc4a9b9432b899211a309ec">GridHandle</a> (T &amp;&amp;<a class="el" href="#a27d8a3674328a33d9e2c43b1fd3f0166">buffer</a>)</td></tr>
-<tr class="memdesc:adc14689d7fc4a9b9432b899211a309ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor from a host buffer.  <br /></td></tr>
-<tr class="memitem:a898a5fd3cbfae92204b1545c8db3a34a" id="r_a898a5fd3cbfae92204b1545c8db3a34a"><td class="memTemplParams" colspan="2">template&lt;typename T = BufferT, typename <a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferHasDeviceSingle.html">BufferHasDeviceSingle</a>&lt; T &gt;::value, int &gt;::type = 0, typename = void&gt; </td></tr>
-<tr class="memitem:a898a5fd3cbfae92204b1545c8db3a34a template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a898a5fd3cbfae92204b1545c8db3a34a">GridHandle</a> (T &amp;&amp;<a class="el" href="#a27d8a3674328a33d9e2c43b1fd3f0166">buffer</a>)</td></tr>
-<tr class="memdesc:a898a5fd3cbfae92204b1545c8db3a34a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor from a single-space device buffer: the grid metadata is read through the device on the buffer's stream.  <br /></td></tr>
+<tr class="memitem:a1013b9dfd8799ddc04b0b1cb88aff894" id="r_a1013b9dfd8799ddc04b0b1cb88aff894"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1013b9dfd8799ddc04b0b1cb88aff894">GridHandle</a> (BufferT &amp;&amp;<a class="el" href="#a27d8a3674328a33d9e2c43b1fd3f0166">buffer</a>)</td></tr>
+<tr class="memdesc:a1013b9dfd8799ddc04b0b1cb88aff894"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor from a host or single-space device buffer.  <br /></td></tr>
+<tr class="memitem:a570ee1ca30ada4fb6ea943a78727f1ba" id="r_a570ee1ca30ada4fb6ea943a78727f1ba"><td class="memTemplParams" colspan="2">template&lt;typename U&gt; </td></tr>
+<tr class="memitem:a570ee1ca30ada4fb6ea943a78727f1ba template"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a570ee1ca30ada4fb6ea943a78727f1ba">GridHandle</a> (U &amp;&amp;)=delete</td></tr>
+<tr class="memdesc:a570ee1ca30ada4fb6ea943a78727f1ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reject anything other than a BufferT rvalue, e.g. a size or a different buffer type that would otherwise implicitly convert to BufferT. Never instantiated, so it emits no symbol.  <br /></td></tr>
 <tr class="memitem:afaae13e5113d0e32d6f758ca748652f9" id="r_afaae13e5113d0e32d6f758ca748652f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaae13e5113d0e32d6f758ca748652f9">GridHandle</a> ()=default</td></tr>
 <tr class="memdesc:afaae13e5113d0e32d6f758ca748652f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a>.  <br /></td></tr>
 <tr class="memitem:a3bc536fa3086174cdac78304c0df0130" id="r_a3bc536fa3086174cdac78304c0df0130"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bc536fa3086174cdac78304c0df0130">GridHandle</a> (const <a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> &amp;)=delete</td></tr>
@@ -167,22 +163,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae27da11332dcab28c185ff7865e7cc64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a pointer to the host data; not available for a single-space device buffer, which has no host-readable bytes.  <br /></td></tr>
 <tr class="memitem:a66c17fda588e2cde3c7dfd4a9f35ec68" id="r_a66c17fda588e2cde3c7dfd4a9f35ec68"><td class="memTemplParams" colspan="2">template&lt;typename U = BufferT, typename <a class="el" href="structnanovdb_1_1util_1_1disable__if.html">util::disable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferIsDeviceOnly.html">BufferIsDeviceOnly</a>&lt; U &gt;::value, int &gt;::type = 0&gt; </td></tr>
 <tr class="memitem:a66c17fda588e2cde3c7dfd4a9f35ec68 template"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66c17fda588e2cde3c7dfd4a9f35ec68">data</a> () const</td></tr>
-<tr class="memitem:a853c922c68fa1ec667d7ff1af5404138" id="r_a853c922c68fa1ec667d7ff1af5404138"><td class="memTemplParams" colspan="2">template&lt;typename U = BufferT&gt; </td></tr>
-<tr class="memitem:a853c922c68fa1ec667d7ff1af5404138 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, constvoid * &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a853c922c68fa1ec667d7ff1af5404138">deviceData</a> () const</td></tr>
-<tr class="memitem:a1901a89dc8b4b440bf47de580d428228" id="r_a1901a89dc8b4b440bf47de580d428228"><td class="memTemplParams" colspan="2">template&lt;typename U = BufferT&gt; </td></tr>
-<tr class="memitem:a1901a89dc8b4b440bf47de580d428228 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, constvoid * &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1901a89dc8b4b440bf47de580d428228">deviceData</a> (int device) const</td></tr>
-<tr class="memitem:ae18dc8faaa706f35dca39e7f601b53e7" id="r_ae18dc8faaa706f35dca39e7f601b53e7"><td class="memTemplParams" colspan="2">template&lt;typename U = BufferT&gt; </td></tr>
-<tr class="memitem:ae18dc8faaa706f35dca39e7f601b53e7 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void * &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae18dc8faaa706f35dca39e7f601b53e7">deviceData</a> ()</td></tr>
-<tr class="memitem:a8b64bc6c8fb05bd0d8ee5db740f69197" id="r_a8b64bc6c8fb05bd0d8ee5db740f69197"><td class="memTemplParams" colspan="2">template&lt;typename U = BufferT&gt; </td></tr>
-<tr class="memitem:a8b64bc6c8fb05bd0d8ee5db740f69197 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void * &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b64bc6c8fb05bd0d8ee5db740f69197">deviceData</a> (int device)</td></tr>
 <tr class="memitem:a6e562937530a814163f272426fe5b739" id="r_a6e562937530a814163f272426fe5b739"><td class="memTemplParams" colspan="2">template&lt;typename U = BufferT&gt; </td></tr>
 <tr class="memitem:a6e562937530a814163f272426fe5b739 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferHasDeviceSingle.html">BufferHasDeviceSingle</a>&lt; U &gt;::value, constvoid * &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e562937530a814163f272426fe5b739">deviceData</a> () const</td></tr>
 <tr class="memdesc:a6e562937530a814163f272426fe5b739"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a single-space buffer the device data is the buffer itself.  <br /></td></tr>
 <tr class="memitem:a662c37cd17351ae3be66e4ccdd101a5b" id="r_a662c37cd17351ae3be66e4ccdd101a5b"><td class="memTemplParams" colspan="2">template&lt;typename U = BufferT&gt; </td></tr>
 <tr class="memitem:a662c37cd17351ae3be66e4ccdd101a5b template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferHasDeviceSingle.html">BufferHasDeviceSingle</a>&lt; U &gt;::value, void * &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a662c37cd17351ae3be66e4ccdd101a5b">deviceData</a> ()</td></tr>
-<tr class="memitem:a762969d9fb827c7c4e4df778152838fe" id="r_a762969d9fb827c7c4e4df778152838fe"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a762969d9fb827c7c4e4df778152838fe">size</a> () const</td></tr>
-<tr class="memdesc:a762969d9fb827c7c4e4df778152838fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size in bytes of the raw memory buffer managed by this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a>.  <br /></td></tr>
 <tr class="memitem:a5d08927fb422019423a54acbf1cf24b0" id="r_a5d08927fb422019423a54acbf1cf24b0"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d08927fb422019423a54acbf1cf24b0">bufferSize</a> () const</td></tr>
+<tr class="memdesc:a5d08927fb422019423a54acbf1cf24b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size in bytes of the raw memory buffer managed by this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a>.  <br /></td></tr>
 <tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc" id="r_a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
 <tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if this handle is empty, i.e. has no allocated memory.  <br /></td></tr>
 <tr class="memitem:acf82f9b2937375c7b1cf3dccb3df3312" id="r_acf82f9b2937375c7b1cf3dccb3df3312"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf82f9b2937375c7b1cf3dccb3df3312">isEmpty</a> () const</td></tr>
@@ -194,28 +181,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa096b39ff91d4dd927d3b2ba97e83f20" id="r_aa096b39ff91d4dd927d3b2ba97e83f20"><td class="memTemplParams" colspan="2">template&lt;typename ValueT, typename U = BufferT, typename <a class="el" href="structnanovdb_1_1util_1_1disable__if.html">util::disable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferIsDeviceOnly.html">BufferIsDeviceOnly</a>&lt; U &gt;::value, int &gt;::type = 0&gt; </td></tr>
 <tr class="memitem:aa096b39ff91d4dd927d3b2ba97e83f20 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa096b39ff91d4dd927d3b2ba97e83f20">grid</a> (uint32_t n=0)</td></tr>
 <tr class="memdesc:aa096b39ff91d4dd927d3b2ba97e83f20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a host pointer to the <em class="arg">n'th</em> NanoVDB grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a>.  <br /></td></tr>
-<tr class="memitem:a658d5cd49f70b4b493a55830507fe2ec" id="r_a658d5cd49f70b4b493a55830507fe2ec"><td class="memTemplParams" colspan="2">template&lt;typename ValueT, typename U = BufferT&gt; </td></tr>
-<tr class="memitem:a658d5cd49f70b4b493a55830507fe2ec template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, constNanoGrid&lt; ValueT &gt; * &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a658d5cd49f70b4b493a55830507fe2ec">deviceGrid</a> (uint32_t n=0) const</td></tr>
-<tr class="memdesc:a658d5cd49f70b4b493a55830507fe2ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const pointer to the <em class="arg">n'th</em> grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> on the device, e.g. GPU.  <br /></td></tr>
-<tr class="memitem:a7aeb091775430c25ccfae8fcab10e9ee" id="r_a7aeb091775430c25ccfae8fcab10e9ee"><td class="memTemplParams" colspan="2">template&lt;typename ValueT, typename U = BufferT&gt; </td></tr>
-<tr class="memitem:a7aeb091775430c25ccfae8fcab10e9ee template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; * &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7aeb091775430c25ccfae8fcab10e9ee">deviceGrid</a> (uint32_t n=0)</td></tr>
-<tr class="memdesc:a7aeb091775430c25ccfae8fcab10e9ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const pointer to the <em class="arg">n'th</em> grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> on the device, e.g. GPU.  <br /></td></tr>
 <tr class="memitem:a0c94c48e4c92dfed9c92c40acfdab844" id="r_a0c94c48e4c92dfed9c92c40acfdab844"><td class="memTemplParams" colspan="2">template&lt;typename ValueT, typename U = BufferT&gt; </td></tr>
 <tr class="memitem:a0c94c48e4c92dfed9c92c40acfdab844 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferHasDeviceSingle.html">BufferHasDeviceSingle</a>&lt; U &gt;::value, constNanoGrid&lt; ValueT &gt; * &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c94c48e4c92dfed9c92c40acfdab844">deviceGrid</a> (uint32_t n=0) const</td></tr>
 <tr class="memdesc:a0c94c48e4c92dfed9c92c40acfdab844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the <em class="arg">n'th</em> grid of a single-space device buffer.  <br /></td></tr>
 <tr class="memitem:aab2e2d19cf2928ff5f078d01490210b7" id="r_aab2e2d19cf2928ff5f078d01490210b7"><td class="memTemplParams" colspan="2">template&lt;typename ValueT, typename U = BufferT&gt; </td></tr>
 <tr class="memitem:aab2e2d19cf2928ff5f078d01490210b7 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferHasDeviceSingle.html">BufferHasDeviceSingle</a>&lt; U &gt;::value, <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; * &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab2e2d19cf2928ff5f078d01490210b7">deviceGrid</a> (uint32_t n=0)</td></tr>
-<tr class="memitem:a1d957d3ecb8baca7710f79bf8bab08f4" id="r_a1d957d3ecb8baca7710f79bf8bab08f4"><td class="memTemplParams" colspan="2">template&lt;typename U = BufferT&gt; </td></tr>
-<tr class="memitem:a1d957d3ecb8baca7710f79bf8bab08f4 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d957d3ecb8baca7710f79bf8bab08f4">deviceUpload</a> (void *stream, bool sync=true)</td></tr>
-<tr class="memdesc:a1d957d3ecb8baca7710f79bf8bab08f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upload the grid to the device, e.g. from CPU to GPU.  <br /></td></tr>
-<tr class="memitem:ae715b77e8f4a0a5cf54a1b50fbe28940" id="r_ae715b77e8f4a0a5cf54a1b50fbe28940"><td class="memTemplParams" colspan="2">template&lt;typename U = BufferT&gt; </td></tr>
-<tr class="memitem:ae715b77e8f4a0a5cf54a1b50fbe28940 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae715b77e8f4a0a5cf54a1b50fbe28940">deviceUpload</a> (int device=0, void *stream=nullptr, bool sync=true)</td></tr>
-<tr class="memdesc:ae715b77e8f4a0a5cf54a1b50fbe28940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upload the host buffer to a specific device buffer. If the device buffer doesn't exist it's created first.  <br /></td></tr>
-<tr class="memitem:afbe7c6dac0f42f118894d79a5eceb078" id="r_afbe7c6dac0f42f118894d79a5eceb078"><td class="memTemplParams" colspan="2">template&lt;typename U = BufferT&gt; </td></tr>
-<tr class="memitem:afbe7c6dac0f42f118894d79a5eceb078 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbe7c6dac0f42f118894d79a5eceb078">deviceDownload</a> (void *stream, bool sync=true)</td></tr>
-<tr class="memdesc:afbe7c6dac0f42f118894d79a5eceb078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Download the grid to from the device, e.g. from GPU to CPU.  <br /></td></tr>
-<tr class="memitem:a17136a1e9a8f4a047dd59a84d8215eb4" id="r_a17136a1e9a8f4a047dd59a84d8215eb4"><td class="memTemplParams" colspan="2">template&lt;typename U = BufferT&gt; </td></tr>
-<tr class="memitem:a17136a1e9a8f4a047dd59a84d8215eb4 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17136a1e9a8f4a047dd59a84d8215eb4">deviceDownload</a> (int device=0, void *stream=nullptr, bool sync=true)</td></tr>
 <tr class="memitem:a9baa231ef13afcdc1ef69c91848e6bb0" id="r_a9baa231ef13afcdc1ef69c91848e6bb0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9baa231ef13afcdc1ef69c91848e6bb0">isPadded</a> () const</td></tr>
 <tr class="memdesc:a9baa231ef13afcdc1ef69c91848e6bb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the buffer is this handle has any padding, i.e. if the buffer is larger than the combined size of all its grids.  <br /></td></tr>
 <tr class="memitem:acadb14428c60ff024255246dbda917ea" id="r_acadb14428c60ff024255246dbda917ea"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acadb14428c60ff024255246dbda917ea">gridCount</a> () const</td></tr>
@@ -288,26 +258,32 @@ template&lt;typename BufferT = HostBuffer&gt; </div>
 </div>
 </div>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="adc14689d7fc4a9b9432b899211a309ec" name="adc14689d7fc4a9b9432b899211a309ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc14689d7fc4a9b9432b899211a309ec">&#9670;&#160;</a></span>GridHandle() <span class="overload">[1/6]</span></h2>
+<a id="a1013b9dfd8799ddc04b0b1cb88aff894" name="a1013b9dfd8799ddc04b0b1cb88aff894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1013b9dfd8799ddc04b0b1cb88aff894">&#9670;&#160;</a></span>GridHandle() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename BufferT&gt; </div>
-<div class="memtemplate">
-template&lt;typename T, typename <a class="el" href="structnanovdb_1_1util_1_1disable__if.html">util::disable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; T &gt;::hasDeviceDual||<a class="el" href="structnanovdb_1_1BufferHasDeviceSingle.html">BufferHasDeviceSingle</a>&lt; T &gt;::value, int &gt;::type&gt; </div>
+template&lt;typename BufferT = HostBuffer&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> </td>
           <td>(</td>
-          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span></td><td>)</td>
+          <td class="paramtype">BufferT &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Move constructor from a dual host-device buffer. </p>
+<p>Move constructor from a host or single-space device buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">buffer</td><td>buffer containing one or more NanoGrids that will be moved into this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> </td></tr>
@@ -320,83 +296,43 @@ template&lt;typename T, typename <a class="el" href="structnanovdb_1_1util_1_1di
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The implementation of this template specialization is in nanovdb/cuda/GridHandle.cuh since it requires CUDA </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The device variant is implemented in nanovdb/cuda/GridHandle.cuh since it requires CUDA. This is deliberately not a template: clang &gt;= 17 mangles the dependent type of a SFINAE template parameter while g++ does not, which breaks a clang build linked against nvcc with a g++ host compiler. </dd></dl>
 
 </div>
 </div>
-<a id="adc14689d7fc4a9b9432b899211a309ec" name="adc14689d7fc4a9b9432b899211a309ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc14689d7fc4a9b9432b899211a309ec">&#9670;&#160;</a></span>GridHandle() <span class="overload">[2/6]</span></h2>
+<a id="a570ee1ca30ada4fb6ea943a78727f1ba" name="a570ee1ca30ada4fb6ea943a78727f1ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a570ee1ca30ada4fb6ea943a78727f1ba">&#9670;&#160;</a></span>GridHandle() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename BufferT = HostBuffer&gt; </div>
 <div class="memtemplate">
-template&lt;typename T = BufferT, typename <a class="el" href="structnanovdb_1_1util_1_1disable__if.html">util::disable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; T &gt;::hasDeviceDual||<a class="el" href="structnanovdb_1_1BufferHasDeviceSingle.html">BufferHasDeviceSingle</a>&lt; T &gt;::value, int &gt;::type = 0&gt; </div>
+template&lt;typename U&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> </td>
           <td>(</td>
-          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span></td><td>)</td>
+          <td class="paramtype">U &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Move constructor from a host buffer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">buffer</td><td>buffer containing one or more NanoGrids that will be moved into this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">Will</td><td>throw and error with the buffer does not contain a valid NanoGrid! </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a898a5fd3cbfae92204b1545c8db3a34a" name="a898a5fd3cbfae92204b1545c8db3a34a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a898a5fd3cbfae92204b1545c8db3a34a">&#9670;&#160;</a></span>GridHandle() <span class="overload">[3/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BufferT = HostBuffer&gt; </div>
-<div class="memtemplate">
-template&lt;typename T = BufferT, typename <a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferHasDeviceSingle.html">BufferHasDeviceSingle</a>&lt; T &gt;::value, int &gt;::type = 0, typename = void&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classnanovdb_1_1GridHandle.html">GridHandle</a> </td>
-          <td>(</td>
-          <td class="paramtype">T &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Move constructor from a single-space device buffer: the grid metadata is read through the device on the buffer's stream. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">buffer</td><td>buffer containing one or more NanoGrids that will be moved into this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">Will</td><td>throw an error if the buffer does not contain a valid <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>The implementation of this template specialization is in nanovdb/cuda/GridHandle.cuh since it requires CUDA </dd></dl>
+<p>Reject anything other than a BufferT rvalue, e.g. a size or a different buffer type that would otherwise implicitly convert to BufferT. Never instantiated, so it emits no symbol. </p>
 
 </div>
 </div>
 <a id="afaae13e5113d0e32d6f758ca748652f9" name="afaae13e5113d0e32d6f758ca748652f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afaae13e5113d0e32d6f758ca748652f9">&#9670;&#160;</a></span>GridHandle() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afaae13e5113d0e32d6f758ca748652f9">&#9670;&#160;</a></span>GridHandle() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -425,7 +361,7 @@ template&lt;typename BufferT = HostBuffer&gt; </div>
 </div>
 </div>
 <a id="a3bc536fa3086174cdac78304c0df0130" name="a3bc536fa3086174cdac78304c0df0130"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bc536fa3086174cdac78304c0df0130">&#9670;&#160;</a></span>GridHandle() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc536fa3086174cdac78304c0df0130">&#9670;&#160;</a></span>GridHandle() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -454,7 +390,7 @@ template&lt;typename BufferT = HostBuffer&gt; </div>
 </div>
 </div>
 <a id="a838e184a2851ad71ee5b238b776016ab" name="a838e184a2851ad71ee5b238b776016ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a838e184a2851ad71ee5b238b776016ab">&#9670;&#160;</a></span>GridHandle() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a838e184a2851ad71ee5b238b776016ab">&#9670;&#160;</a></span>GridHandle() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -605,6 +541,8 @@ template&lt;typename BufferT = HostBuffer&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the size in bytes of the raw memory buffer managed by this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a>. </p>
+
 </div>
 </div>
 <a id="ac1f5957cc9d21f95114b7f7b97eec5b5" name="ac1f5957cc9d21f95114b7f7b97eec5b5"></a>
@@ -743,37 +681,8 @@ template&lt;typename U = BufferT, typename <a class="el" href="structnanovdb_1_1
 
 </div>
 </div>
-<a id="ae18dc8faaa706f35dca39e7f601b53e7" name="ae18dc8faaa706f35dca39e7f601b53e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae18dc8faaa706f35dca39e7f601b53e7">&#9670;&#160;</a></span>deviceData() <span class="overload">[1/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BufferT = HostBuffer&gt; </div>
-<div class="memtemplate">
-template&lt;typename U = BufferT&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void * &gt;::type deviceData </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a662c37cd17351ae3be66e4ccdd101a5b" name="a662c37cd17351ae3be66e4ccdd101a5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a662c37cd17351ae3be66e4ccdd101a5b">&#9670;&#160;</a></span>deviceData() <span class="overload">[2/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a662c37cd17351ae3be66e4ccdd101a5b">&#9670;&#160;</a></span>deviceData() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -801,37 +710,8 @@ template&lt;typename U = BufferT&gt; </div>
 
 </div>
 </div>
-<a id="a853c922c68fa1ec667d7ff1af5404138" name="a853c922c68fa1ec667d7ff1af5404138"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a853c922c68fa1ec667d7ff1af5404138">&#9670;&#160;</a></span>deviceData() <span class="overload">[3/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BufferT = HostBuffer&gt; </div>
-<div class="memtemplate">
-template&lt;typename U = BufferT&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, constvoid * &gt;::type deviceData </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a6e562937530a814163f272426fe5b739" name="a6e562937530a814163f272426fe5b739"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e562937530a814163f272426fe5b739">&#9670;&#160;</a></span>deviceData() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e562937530a814163f272426fe5b739">&#9670;&#160;</a></span>deviceData() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -861,188 +741,8 @@ template&lt;typename U = BufferT&gt; </div>
 
 </div>
 </div>
-<a id="a8b64bc6c8fb05bd0d8ee5db740f69197" name="a8b64bc6c8fb05bd0d8ee5db740f69197"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b64bc6c8fb05bd0d8ee5db740f69197">&#9670;&#160;</a></span>deviceData() <span class="overload">[5/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BufferT = HostBuffer&gt; </div>
-<div class="memtemplate">
-template&lt;typename U = BufferT&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void * &gt;::type deviceData </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>device</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000084">Deprecated</a></b></dt><dd>Use one single-space device handle per GPU, or a managed <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer</a>. </dd></dl>
-
-</div>
-</div>
-<a id="a1901a89dc8b4b440bf47de580d428228" name="a1901a89dc8b4b440bf47de580d428228"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1901a89dc8b4b440bf47de580d428228">&#9670;&#160;</a></span>deviceData() <span class="overload">[6/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BufferT = HostBuffer&gt; </div>
-<div class="memtemplate">
-template&lt;typename U = BufferT&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, constvoid * &gt;::type deviceData </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>device</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000083">Deprecated</a></b></dt><dd>Use one single-space device handle per GPU, or a managed <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer</a>. </dd></dl>
-
-</div>
-</div>
-<a id="a17136a1e9a8f4a047dd59a84d8215eb4" name="a17136a1e9a8f4a047dd59a84d8215eb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17136a1e9a8f4a047dd59a84d8215eb4">&#9670;&#160;</a></span>deviceDownload() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BufferT = HostBuffer&gt; </div>
-<div class="memtemplate">
-template&lt;typename U = BufferT&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type deviceDownload </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>device</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>stream</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>sync</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000088">Deprecated</a></b></dt><dd><a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a> a host handle to read the grids on the host; for a multi-GPU handle, use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>. </dd></dl>
-
-</div>
-</div>
-<a id="afbe7c6dac0f42f118894d79a5eceb078" name="afbe7c6dac0f42f118894d79a5eceb078"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbe7c6dac0f42f118894d79a5eceb078">&#9670;&#160;</a></span>deviceDownload() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BufferT = HostBuffer&gt; </div>
-<div class="memtemplate">
-template&lt;typename U = BufferT&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type deviceDownload </td>
-          <td>(</td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>sync</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Download the grid to from the device, e.g. from GPU to CPU. </p>
-<dl class="section note"><dt>Note</dt><dd>This method is only available if the buffer supports devices </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000087">Deprecated</a></b></dt><dd><a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a> a host handle to read the grids on the host; for a multi-GPU handle, use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>. </dd></dl>
-
-</div>
-</div>
-<a id="a7aeb091775430c25ccfae8fcab10e9ee" name="a7aeb091775430c25ccfae8fcab10e9ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7aeb091775430c25ccfae8fcab10e9ee">&#9670;&#160;</a></span>deviceGrid() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BufferT = HostBuffer&gt; </div>
-<div class="memtemplate">
-template&lt;typename ValueT, typename U = BufferT&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; * &gt;::type deviceGrid </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return a const pointer to the <em class="arg">n'th</em> grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> on the device, e.g. GPU. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">ValueT</td><td>Value type of the grid point to be returned </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">n</td><td>Index of the grid pointer to be returned </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> was not initialized, <em class="arg">n</em> is invalid, or if the template parameter does not match the specified grid. </dd></dl>
-
-</div>
-</div>
 <a id="aab2e2d19cf2928ff5f078d01490210b7" name="aab2e2d19cf2928ff5f078d01490210b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab2e2d19cf2928ff5f078d01490210b7">&#9670;&#160;</a></span>deviceGrid() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aab2e2d19cf2928ff5f078d01490210b7">&#9670;&#160;</a></span>deviceGrid() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1070,52 +770,8 @@ template&lt;typename ValueT, typename U = BufferT&gt; </div>
 
 </div>
 </div>
-<a id="a658d5cd49f70b4b493a55830507fe2ec" name="a658d5cd49f70b4b493a55830507fe2ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a658d5cd49f70b4b493a55830507fe2ec">&#9670;&#160;</a></span>deviceGrid() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BufferT&gt; </div>
-<div class="memtemplate">
-template&lt;typename ValueT, typename U&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, constNanoGrid&lt; ValueT &gt; * &gt;::type deviceGrid </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>n</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return a const pointer to the <em class="arg">n'th</em> grid encoded in this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> on the device, e.g. GPU. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">ValueT</td><td>Value type of the grid point to be returned </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">n</td><td>Index of the (device) grid pointer to be returned </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> has no device grid, <em class="arg">n</em> is invalid, or if the template parameter does not match the specified grid. </dd></dl>
-
-</div>
-</div>
 <a id="a0c94c48e4c92dfed9c92c40acfdab844" name="a0c94c48e4c92dfed9c92c40acfdab844"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c94c48e4c92dfed9c92c40acfdab844">&#9670;&#160;</a></span>deviceGrid() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c94c48e4c92dfed9c92c40acfdab844">&#9670;&#160;</a></span>deviceGrid() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1143,92 +799,6 @@ template&lt;typename ValueT, typename U = BufferT&gt; </div>
 
 <p>Return a pointer to the <em class="arg">n'th</em> grid of a single-space device buffer. </p>
 <dl class="section warning"><dt>Warning</dt><dd>Note that the return pointer can be NULL if the <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> is empty, <em class="arg">n</em> is invalid, or if the template parameter does not match the specified grid. </dd></dl>
-
-</div>
-</div>
-<a id="ae715b77e8f4a0a5cf54a1b50fbe28940" name="ae715b77e8f4a0a5cf54a1b50fbe28940"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae715b77e8f4a0a5cf54a1b50fbe28940">&#9670;&#160;</a></span>deviceUpload() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BufferT = HostBuffer&gt; </div>
-<div class="memtemplate">
-template&lt;typename U = BufferT&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type deviceUpload </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>device</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>stream</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>sync</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Upload the host buffer to a specific device buffer. If the device buffer doesn't exist it's created first. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">device</td><td>Device to upload host data to </td></tr>
-    <tr><td class="paramname">stream</td><td>cuda stream </td></tr>
-    <tr><td class="paramname">sync</td><td>if false the memory copy is asynchronous </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000086">Deprecated</a></b></dt><dd>Build a host handle and <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a> a device handle; for a multi-GPU handle, use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>. </dd></dl>
-
-</div>
-</div>
-<a id="a1d957d3ecb8baca7710f79bf8bab08f4" name="a1d957d3ecb8baca7710f79bf8bab08f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d957d3ecb8baca7710f79bf8bab08f4">&#9670;&#160;</a></span>deviceUpload() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BufferT = HostBuffer&gt; </div>
-<div class="memtemplate">
-template&lt;typename U = BufferT&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structnanovdb_1_1util_1_1enable__if.html">util::enable_if</a>&lt; <a class="el" href="structnanovdb_1_1BufferTraits.html">BufferTraits</a>&lt; U &gt;::hasDeviceDual, void &gt;::type deviceUpload </td>
-          <td>(</td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>stream</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>sync</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Upload the grid to the device, e.g. from CPU to GPU. </p>
-<dl class="section note"><dt>Note</dt><dd>This method is only available if the buffer supports devices </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000085">Deprecated</a></b></dt><dd>Build a host handle and <a class="el" href="namespacenanovdb_1_1cuda.html#a374a7dba719f9f73b16f83be063ed876" title="Deep-copies a grid handle into a different address space: the explicit, stream-carrying transfer betw...">cuda::copyTo</a> a device handle; for a multi-GPU handle, use <a class="el" href="classnanovdb_1_1cuda_1_1Buffer.html" title="Owning, typed container of T elements allocated from a memory resource R held by value.">cuda::Buffer&lt;std::byte, cuda::ManagedResource&gt;</a>. </dd></dl>
 
 </div>
 </div>
@@ -2055,35 +1625,6 @@ template&lt;typename BufferT = HostBuffer&gt; </div>
 </div><div class="memdoc">
 
 <p>clear this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> to an empty handle </p>
-
-</div>
-</div>
-<a id="a762969d9fb827c7c4e4df778152838fe" name="a762969d9fb827c7c4e4df778152838fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a762969d9fb827c7c4e4df778152838fe">&#9670;&#160;</a></span>size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BufferT = HostBuffer&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64_t size </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the size in bytes of the raw memory buffer managed by this <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a>. </p>
 
 </div>
 </div>

@@ -9,7 +9,7 @@ var searchData=
   ['deviceresource_2eh_6',['DeviceResource.h',['../DeviceResource_8h.html',1,'']]],
   ['devicestreammap_2eh_7',['DeviceStreamMap.h',['../DeviceStreamMap_8h.html',1,'']]],
   ['diagnostics_2eh_8',['Diagnostics.h',['../Diagnostics_8h.html',1,'']]],
-  ['ditherlut_2eh_9',['DitherLUT.h',['../math_2DitherLUT_8h.html',1,'(Global Namespace)'],['../util_2DitherLUT_8h.html',1,'(Global Namespace)']]],
+  ['ditherlut_2eh_9',['DitherLUT.h',['../DitherLUT_8h.html',1,'']]],
   ['doc_2emd_10',['doc.md',['../doc_8md.html',1,'']]],
   ['doc_2etxt_11',['doc.txt',['../ax_2doc_8txt.html',1,'(Global Namespace)'],['../doc_8txt.html',1,'(Global Namespace)']]]
 ];

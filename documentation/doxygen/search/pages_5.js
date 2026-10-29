@@ -21,6 +21,7 @@ var searchData=
   ['found_20unsuitable_20version_3a_18',['CMake Error ... Could NOT find XXX (Found unsuitable version: ... )',['../build.html#troubleshoot2',1,'']]],
   ['frequently_20asked_20questions_19',['Frequently Asked Questions',['../faq.html',1,'']]],
   ['from_20a_20file_20host_20only_20',['Read a NanoVDB grid from a file (host only)',['../NanoVDB_HelloWorld.html#autotoc_md6',1,'']]],
-  ['frustum_20transforms_21',['Frustum Transforms',['../transformsAndMaps.html#sFrustumTransforms',1,'']]],
-  ['functions_22',['Functions',['../axfunctionlist.html',1,'AX Supported Functions'],['../axfunctionlist.html#axfunccontents',1,'Functions'],['../ax.html#axfunctions',1,'Functions'],['../codingStyle.html#sGlobalFunctions',1,'Global Functions'],['../ax.html#axuserfunctions',1,'User Functions']]]
+  ['from_20cmake_21',['Using an installed NanoVDB from CMake',['../NanoVDB_HowToBuild.html#autotoc_md11',1,'']]],
+  ['frustum_20transforms_22',['Frustum Transforms',['../transformsAndMaps.html#sFrustumTransforms',1,'']]],
+  ['functions_23',['Functions',['../axfunctionlist.html',1,'AX Supported Functions'],['../axfunctionlist.html#axfunccontents',1,'Functions'],['../ax.html#axfunctions',1,'Functions'],['../codingStyle.html#sGlobalFunctions',1,'Global Functions'],['../ax.html#axuserfunctions',1,'User Functions']]]
 ];

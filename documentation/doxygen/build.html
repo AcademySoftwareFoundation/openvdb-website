@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -124,7 +124,6 @@ Contents</h1>
 <li><a class="el" href="#buildCmakeStructure">CMake Structure</a><ul>
 <li><a class="el" href="#buildDependencies">Locating Dependencies</a></li>
 <li><a class="el" href="#buildMixingDepInstalls">Mixing Dependency Installations</a></li>
-<li><a class="el" href="#buildBloscSupport">Blosc Support</a></li>
 <li><a class="el" href="#buildZLibSupport">ZLIB Support</a></li>
 <li><a class="el" href="#buildVCPKG">Building Dependencies using VCPKG</a></li>
 <li><a class="el" href="#buildSimd">Building With Target ISA Support</a></li>
@@ -151,7 +150,7 @@ Introduction</h1>
 <p>CMake also makes it easier to automatically find and handle dependencies. If you're completely new to CMake, you may find it useful to read over the brief <a href="https://cmake.org/runningcmake/">introduction to CMake</a> and the CMake structure section below. However the <a class="el" href="#buildGuide">build guide</a> runs through the build process step by step.</p>
 <h1 class="doxsection"><a class="anchor" id="buildCmakeStructure"></a>
 CMake Structure</h1>
-<p>CMake will configure a set of build files which represent the commands and dependencies for the OpenVDB components you wish to install. Finding and handling these dependencies on different platforms comprises the majority of the complexity involved in writing CMake. In general, software which uses CMake is expected to provide their own configuration files which dependent software will locate and use. Not all of OpenVDB's dependencies provide CMake support and therefore do not deploy with CMake configurations that OpenVDB can use. OpenVDB provides a set of <span class="tt">FindModules</span> in the <span class="tt">cmake</span> folder for finding these various dependencies e.g. <span class="tt">FindBlosc.cmake</span>. These are designed such that they can theoretically be used by any project that needs to locate the given library and are invoked by the <span class="tt">find_package()</span> call. For more information on FindModules and locating packages with CMake, see the following CMake documentation:</p>
+<p>CMake will configure a set of build files which represent the commands and dependencies for the OpenVDB components you wish to install. Finding and handling these dependencies on different platforms comprises the majority of the complexity involved in writing CMake. In general, software which uses CMake is expected to provide their own configuration files which dependent software will locate and use. Not all of OpenVDB's dependencies provide CMake support and therefore do not deploy with CMake configurations that OpenVDB can use. OpenVDB provides a set of <span class="tt">FindModules</span> in the <span class="tt">cmake</span> folder for finding these various dependencies. These are designed such that they can theoretically be used by any project that needs to locate the given library and are invoked by the <span class="tt">find_package()</span> call. For more information on FindModules and locating packages with CMake, see the following CMake documentation:</p>
 <ul>
 <li><a href="https://cmake.org/cmake/help/latest/manual/cmake-packages.7.html#using-packages">Using Packages with CMake</a></li>
 <li><a href="https://cmake.org/cmake/help/latest/command/find_package.html">Calling find_package()</a></li>
@@ -159,14 +158,14 @@ CMake Structure</h1>
 <p>The other type of file provided by OpenVDB are <span class="tt">OpenVDBSetupX.cmake</span> includes. These are primarily designed to configure the building of OpenVDB components against supported DCC's (Houdini/Maya) by locating their installations and setting various CMake variables for subsequent <span class="tt">find_package()</span> dependency calls. They also represent packages which already provide their own CMake modules, but additionally provide the same input variable interface as OpenVDB's other <span class="tt">Find</span> Modules.</p>
 <h2 class="doxsection"><a class="anchor" id="buildDependencies"></a>
 Locating Dependencies</h2>
-<p>Each CMake FindModule provides a description of the possible inputs which can be provided to help drive the search for OpenVDB dependencies (as well as the resulting outputs). They have been homogenized such that these variables follow a set convention, typically followed by most CMake projects. For a given FindModule e.g. <span class="tt">FindBlosc.cmake</span>:</p>
+<p>Each CMake FindModule provides a description of the possible inputs which can be provided to help drive the search for OpenVDB dependencies (as well as the resulting outputs). They have been homogenized such that these variables follow a set convention, typically followed by most CMake projects. For a given FindModule:</p>
 <ul>
 <li>FindXxx.cmake provides the module interface where Xxx becomes the library name</li>
 <li>Invoked with the called <span class="tt">find_package( Xxx )</span></li>
 </ul>
 <ul>
 <li><b>Inputs</b> - The following variables can be used to help drive the search path on first runs of CMake (i.e. these variables are not <a href="https://cmake.org/cmake/help/latest/command/set.html#set-cache-entry">cached</a>). They are listed in priority order. Note that the prefix is always capitalized.<ul>
-<li><b>Xxx_ROOT</b> - Preferred installation prefix. The given dependency is expected to follow a folder structure <span class="tt">Xxx_ROOT/include</span> and <span class="tt">Xxx_ROOT/lib</span> exist. Note that unlike the above, this is the case matching name of the find package .i.e. Blosc_ROOT, TBB_ROOT etc.</li>
+<li><b>Xxx_ROOT</b> - Preferred installation prefix. The given dependency is expected to follow a folder structure <span class="tt">Xxx_ROOT/include</span> and <span class="tt">Xxx_ROOT/lib</span> exist. Note that unlike the above, this is the case matching name of the find package .i.e. TBB_ROOT etc.</li>
 <li><b>XXX_INCLUDEDIR</b> / <b>XXX_LIBRARYDIR</b> - Preferred include and library directories</li>
 <li><b>SYSTEM_LIBRARY_PATHS</b> - A list of paths appended to all include and lib searches.</li>
 <li><b>XXX_USE_STATIC_LIBS</b> - Only search for static libraries for the given dependency. If OFF, the shared library is prioritized, falling back to the static library. This is OFF by default.</li>
@@ -192,18 +191,14 @@ Mixing Dependency Installations</h2>
 <p>There may be a situation where you use a package manager to install some dependencies, use a DCC such as Maya to provide others and manually build and install others from source. Care must be taken when providing CMake with these locations to ensure that the correct files are used. Incorrect use of the above variables can lead to difficult to diagnose build and runtime errors.</p>
 <p>As an example, let's assume we have a manual installation of TBB (either through a Maya installation or a manual installation from source) and we want to use this with other dependencies installed through a package manager such as homebrew. As homebrew copies all headers and libraries it installs to a <span class="tt">&lt;homebrew&gt;/include</span> <span class="tt">&lt;homebrew&gt;/lib</span> directory structure, it can be tempting to set <b>Xxx_ROOT</b> variables to points to the <span class="tt">&lt;homebrew&gt;</span> folder. However you may already have an existing installation of TBB through your package manager, potentially installed by as a dependency of a completely unrelated piece of software. Whilst CMake may report to you the correct include/lib path, this can end up being hidden at compile time through these types of shared installations. You should not rely on the dependency order of the CMake build system - instead, it's important that you try to use the explicit directory paths where possible. For example homebrew will install each piece of software to <span class="tt">&lt;homebrew&gt;/Cellar/&lt;dep_name&gt;/&lt;dep_version&gt;</span>, where the subsequent include and library directories can be passed to <b>XXX_INCLUDEDIR</b> and <b>XXX_LIBRARYDIR</b> respectively.</p>
 <p>In summary try to stick to a single installation workflow and, if in doubt, provide direct include/lib paths to isolated software locations.</p>
-<h2 class="doxsection"><a class="anchor" id="buildBloscSupport"></a>
-Blosc Support</h2>
-<p>Blosc is an optional dependency of all OpenVDB components. The documented build steps below treat blosc as a required dependency. There are two reasons for this:</p>
-<ul>
-<li>Blosc produces significantly smaller <span class="tt">.vdb</span> files</li>
-<li>If Blosc is disabled, you will not be able to read or use any <span class="tt">.vdb</span> files that were created using blosc compression. This includes OpenVDB files from Houdini.</li>
-</ul>
-<p>See the note in the <a class="el" href="dependencies.html#depKnownIssues">known issues list</a> regarding supported versions of blosc.</p>
 <h2 class="doxsection"><a class="anchor" id="buildZLibSupport"></a>
 ZLIB Support</h2>
 <p>ZLIB is an optional dependency of all OpenVDB components. The documented build steps below treat ZLib as a required dependency.</p>
-<p>You can disable ZLib using <span class="tt">-D USE_ZLIB=OFF</span> if Blosc is also disabled using <span class="tt">-D USE_BLOSC=OFF</span>.</p>
+<p>You can disable ZLib using <span class="tt">-D USE_ZLIB=OFF</span>.</p>
+<h2 class="doxsection"><a class="anchor" id="buildZstdSupport"></a>
+Zstd Support</h2>
+<p>Zstd is an optional dependency of the OpenVDB core library. The documented build steps below treat Zstd as a required dependency.</p>
+<p>You can disable Zstd using <span class="tt">-D USE_ZSTD=OFF</span>. The zstd CMake config files are used if found, otherwise zstd is located manually. Use <span class="tt">-D Zstd_ROOT=&lt;prefix&gt;</span> to point at a specific installation.</p>
 <h2 class="doxsection"><a class="anchor" id="buildVCPKG"></a>
 Building Dependencies using VCPKG</h2>
 <p>It is recommended to set the VCPKG_DEFAULT_TRIPLET=x64-windows environment variable to use 64-bit libraries by default as even on a 64-bit Windows OS, VCPKG builds and installs 32-bit libraries by default.</p>
@@ -312,7 +307,7 @@ Build Types</h2>
 </ul>
 <p>Each option provides various benefits. Apart from the support for either the Houdini or Maya OpenVDB plugins, the latter two options can make it easier for new users to install the range of OpenVDB dependencies without having to worry about using a package manager or manually installing for source. You'll still be able to build and use all components of OpenVDB with these methods. However depending on the DCC (Digital Content Creation) software's version, you may find that some features of the Core library are restricted to ensure compatibility. For more information of building OpenVDB against a Houdini or Maya installation, see <a class="el" href="#buildBuildHouMaya">here</a>.</p>
 <p>Developers may wish to build a standalone version of OpenVDB to take advantage of newer dependencies and newer library features. See <a class="el" href="#buildBuildStandalone">here</a> for more information.</p>
-<p><b>Note:</b> Blosc and ZLib are treated as required dependencies in these install instructions. See the <a class="el" href="#buildBloscSupport">blosc support</a> and <a class="el" href="#buildZLibSupport">zlib support</a> sections for more information.</p>
+<p><b>Note:</b> ZLib is treated as a required dependency in these install instructions. See the <a class="el" href="#buildZLibSupport">zlib support</a> sections for more information.</p>
 <h2 class="doxsection"><a class="anchor" id="buildBuildHouMaya"></a>
 Building Against Houdini/Maya</h2>
 <p>Building against a DCC reduces the list of dependencies you need to provide. You should not mix between Houdini and Maya libraries and should not attempt to build the Maya plugin using Houdini libraries and vice-versa. Additionally, it's a good idea to read the above section on <a class="el" href="#buildMixingDepInstalls">mixing dependency installations</a>.</p>
@@ -341,13 +336,11 @@ Building Against Houdini</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Doxygen  </td><td class="markdownTableBodyNone">Documentation generation from C++  </td><td class="markdownTableBodyNone">Documentation  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Log4cplus  </td><td class="markdownTableBodyNone">An optional dependency for improved OpenVDB Logging  </td><td class="markdownTableBodyNone">Optional (All)  </td></tr>
-<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">nanobind  </td><td class="markdownTableBodyNone">C++/python bindings  </td><td class="markdownTableBodyNone">Optional (Python)  </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">LLVM  </td><td class="markdownTableBodyNone">Target-independent code generation  </td><td class="markdownTableBodyNone">OpenVDB AX  </td></tr>
 </table>
-<p>At a minimum a matching C++17 compiler and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software. Note that as Blosc and ZLib are provided as part of the Houdini installation <span class="tt">USE_BLOSC</span> and <span class="tt">USE_ZLIB</span> should be left <span class="tt">ON</span>.</p>
+<p>At a minimum a matching C++17 compiler and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software. Note that as ZLib is provided as part of the Houdini installation <span class="tt">USE_ZLIB</span> should be left <span class="tt">ON</span>.</p>
 <p>With the necessary dependencies installed, create and enter a directory for cmake to write to. It's generally useful to create this in the location you've extracted the OpenVDB repository. It will house CMake's generated build files.</p>
 <div class="fragment"><div class="line">mkdir build</div>
 <div class="line">cd build</div>
@@ -390,26 +383,21 @@ Building Against Maya</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">ZLIB  </td><td class="markdownTableBodyNone">Compression library for disk serialization compression  </td><td class="markdownTableBodyNone">All  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Blosc  </td><td class="markdownTableBodyNone">Recommended dependency for improved disk compression  </td><td class="markdownTableBodyNone">All*  </td></tr>
-<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">GoogleTest  </td><td class="markdownTableBodyNone">A unit testing framework module for C++  </td><td class="markdownTableBodyNone">Unit Tests  </td></tr>
-<tr class="markdownTableRowEven">
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">GLFW  </td><td class="markdownTableBodyNone">Simple API for OpenGL development  </td><td class="markdownTableBodyNone">OpenVDB View  </td></tr>
-<tr class="markdownTableRowOdd">
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Doxygen  </td><td class="markdownTableBodyNone">Documentation generation from C++  </td><td class="markdownTableBodyNone">Documentation  </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">OpenEXR  </td><td class="markdownTableBodyNone">EXR serialization support  </td><td class="markdownTableBodyNone">OpenVDB Render  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Imath  </td><td class="markdownTableBodyNone">Used half precision floating points and EXR serialization support  </td><td class="markdownTableBodyNone">Optional (All)  </td></tr>
+<td class="markdownTableBodyNone">OpenEXR  </td><td class="markdownTableBodyNone">EXR serialization support  </td><td class="markdownTableBodyNone">OpenVDB Render  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Log4cplus  </td><td class="markdownTableBodyNone">An optional dependency for improved OpenVDB Logging  </td><td class="markdownTableBodyNone">Optional (All)  </td></tr>
+<td class="markdownTableBodyNone">Imath  </td><td class="markdownTableBodyNone">Used half precision floating points and EXR serialization support  </td><td class="markdownTableBodyNone">Optional (All)  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">nanobind  </td><td class="markdownTableBodyNone">C++/python bindings  </td><td class="markdownTableBodyNone">Optional (Python)  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">LLVM  </td><td class="markdownTableBodyNone">Target-independent code generation  </td><td class="markdownTableBodyNone">OpenVDB AX  </td></tr>
 </table>
-<p>See <a class="el" href="#buildBloscSupport">blosc support</a></p>
-<p>At a minimum, a matching C++17 compiler, ZLIB, blosc and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software.</p>
+<p>At a minimum, a matching C++17 compiler, ZLIB and CMake will be required. See the full <a class="el" href="dependencies.html">dependency list</a> for help with downloading and installing the above software.</p>
 <p>With the necessary dependencies installed, create and enter a directory for cmake to write to. It's generally useful to create this in the location you've extracted the OpenVDB repository. It will house CMake's generated build files.</p>
 <div class="fragment"><div class="line">mkdir build</div>
 <div class="line">cd build</div>
@@ -455,13 +443,23 @@ Building Standalone</h2>
 Building With OpenVDB</h1>
 <p>This section is for users wishing to use a build of OpenVDB in their own applications with CMake.</p>
 <p>The following assumes that OpenVDB was installed with <span class="tt">OPENVDB_BUILD_CORE=ON</span> and <span class="tt">OPENVDB_INSTALL_CMAKE_MODULES=ON</span>. Don't worry if you didn't specify these options directly, they both default to <span class="tt">ON</span>. This ensures that OpenVDB has installed the required CMake modules that your application will need to use.</p>
-<p><b>Note:</b> Typically, projects provide a <b>Config-file</b> rather than a <b>Find-module</b> for downstream use. OpenVDB currently provides a <b>Find-module</b>. This may change in the future. Further information <a href="https://cmake.org/cmake/help/latest/manual/cmake-packages.7.html#using-packages">here</a>.</p>
+<p>OpenVDB installs both a <b>Config-file</b> and a <b>Find-module</b>. The Config-file is preferred, as it provides the imported targets together with their include paths, definitions and dependencies. Further information <a href="https://cmake.org/cmake/help/latest/manual/cmake-packages.7.html#using-packages">here</a>.</p>
 <p>You can add the below CMake snippet to your main <span class="tt">CMakeLists.txt</span> to bring in OpenVDB as a dependency:</p>
 <div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.24)</div>
-<div class="line">list(APPEND CMAKE_MODULE_PATH &quot;/location/of/openvdb/install/lib/cmake/OpenVDB&quot;)</div>
-<div class="line">find_package(OpenVDB REQUIRED)</div>
+<div class="line">list(APPEND CMAKE_PREFIX_PATH &quot;/location/of/openvdb/install&quot;)</div>
+<div class="line">find_package(OpenVDB CONFIG REQUIRED)</div>
 <div class="line">target_link_libraries(myapp OpenVDB::openvdb)</div>
-</div><!-- fragment --><p><span class="tt">myapp</span> in the above is a CMake target, usually created with <span class="tt">add_library()</span> or <span class="tt">add_executable()</span>. You can optionally provide <span class="tt">CMAKE_MODULE_PATH</span> as a <span class="tt">-D</span> argument to the cmake command line instead of specifying it in your <span class="tt">CMakeLists.txt</span>.</p>
+</div><!-- fragment --><p><span class="tt">OpenVDB::openvdb</span> is the shared library if it was installed, otherwise the static library. <span class="tt">OpenVDB::openvdb_shared</span> and <span class="tt">OpenVDB::openvdb_static</span> select a library explicitly. When the static library is installed, the zlib and zstd libraries it was built with must also be available to your project.</p>
+<p>Without the <span class="tt">CONFIG</span> keyword, CMake uses the Find-module if the OpenVDB CMake module directory is in <span class="tt">CMAKE_MODULE_PATH</span>, and the Config-file otherwise:</p>
+<div class="fragment"><div class="line">list(APPEND CMAKE_MODULE_PATH &quot;/location/of/openvdb/install/lib/cmake/OpenVDB&quot;)</div>
+<div class="line">find_package(OpenVDB REQUIRED)</div>
+</div><!-- fragment --><p>OpenVDB AX is available through the <span class="tt">openvdb_ax</span> component, which provides <span class="tt">OpenVDB::openvdb_ax</span> and needs LLVM to be available to your project:</p>
+<div class="fragment"><div class="line">find_package(OpenVDB CONFIG REQUIRED COMPONENTS openvdb openvdb_ax)</div>
+<div class="line">target_link_libraries(myapp OpenVDB::openvdb_ax)</div>
+</div><!-- fragment --><p>NanoVDB installs its own Config-file. Use it directly, or request the <span class="tt">nanovdb</span> component of OpenVDB, which provides <span class="tt">OpenVDB::nanovdb</span>:</p>
+<div class="fragment"><div class="line">find_package(NanoVDB CONFIG REQUIRED)</div>
+<div class="line">target_link_libraries(myapp NanoVDB::nanovdb)</div>
+</div><!-- fragment --><p><span class="tt">myapp</span> in the above is a CMake target, usually created with <span class="tt">add_library()</span> or <span class="tt">add_executable()</span>. You can optionally provide <span class="tt">CMAKE_PREFIX_PATH</span> (or <span class="tt">CMAKE_MODULE_PATH</span> when using the Find-module) as a <span class="tt">-D</span> argument to the cmake command line instead of specifying it in your <span class="tt">CMakeLists.txt</span>.</p>
 <p>Note that the <span class="tt">FindOpenVDB.cmake</span> module relies on the other <span class="tt">FindModules</span> provided in the OpenVDB installation to find it's own dependencies. This may require you to provide additional dependency locations for OpenVDB's dependencies. See <a class="el" href="#buildDependencies">Locating Dependencies</a> or the below troubleshooting for more information.</p>
 <hr  />
 <h1 class="doxsection"><a class="anchor" id="buildTroubleshooting"></a>

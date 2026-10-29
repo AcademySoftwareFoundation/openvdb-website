@@ -8,8 +8,6 @@ var namespacenanovdb_1_1cuda =
     [ "DeviceNode", "structnanovdb_1_1cuda_1_1DeviceNode.html", "structnanovdb_1_1cuda_1_1DeviceNode" ],
     [ "DeviceResource", "classnanovdb_1_1cuda_1_1DeviceResource.html", "classnanovdb_1_1cuda_1_1DeviceResource" ],
     [ "DeviceStreamMap", "classnanovdb_1_1cuda_1_1DeviceStreamMap.html", "classnanovdb_1_1cuda_1_1DeviceStreamMap" ],
-    [ "DualDeviceBuffer", "classnanovdb_1_1cuda_1_1DualDeviceBuffer.html", "classnanovdb_1_1cuda_1_1DualDeviceBuffer" ],
-    [ "DualUnifiedBuffer", "classnanovdb_1_1cuda_1_1DualUnifiedBuffer.html", "classnanovdb_1_1cuda_1_1DualUnifiedBuffer" ],
     [ "is_async_resource", "structnanovdb_1_1cuda_1_1is__async__resource.html", null ],
     [ "is_async_resource< R, std::void_t< decltype(std::declval< R & >().allocate_async(size_t{0}, size_t{0}, cudaStream_t{0})), decltype(std::declval< R & >().deallocate_async(std::declval< void * >(), size_t{0}, size_t{0}, cudaStream_t{0})), decltype(std::declval< R & >().allocate(size_t{0}, size_t{0})), decltype(std::declval< R & >().deallocate(std::declval< void * >(), size_t{0}, size_t{0}))> >", "structnanovdb_1_1cuda_1_1is__async__resource_3_01R_00_01std_1_1void__t_3_01decltype_07std_1_1dec44858e5433e7353b635320a5f290debd.html", null ],
     [ "is_device_accessible_resource", "structnanovdb_1_1cuda_1_1is__device__accessible__resource.html", null ],

@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -213,47 +213,16 @@ $(function(){initNavTree('ForEach_8h_source.html','',''); });
 </div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}<span class="comment">// namespace util</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment"></span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">/// @brief Simple wrapper for the function defined above</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> FuncT&gt;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>[[deprecated(<span class="stringliteral">&quot;Use nanovdb::util::forEach instead&quot;</span>)]]</div>
-<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="namespacenanovdb.html#aa574309e3ddb090bd7973b0898dd95c0">   93</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacenanovdb.html#aa574309e3ddb090bd7973b0898dd95c0">forEach</a>(<span class="keywordtype">size_t</span> begin, <span class="keywordtype">size_t</span> end, <span class="keywordtype">size_t</span> grainSize, <span class="keyword">const</span> FuncT&amp; func)</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>{</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_function" href="namespacenanovdb_1_1util.html#aeecddc2b41154f35c7304658df4a4d85">util::forEach</a>(<a class="code hl_typedef" href="namespacenanovdb_1_1util.html#af3673a774597551e15a27cdf4ac7e71d">util::Range1D</a>(begin, end, grainSize), func);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
-</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment"></span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">/// @brief Simple wrapper for the function defined above, which works with std::containers</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">template</span> &lt;<span class="keyword">template</span>&lt;<span class="keyword">typename</span>...&gt; <span class="keyword">class </span>ContainerT, <span class="keyword">typename</span>... T, <span class="keyword">typename</span> FuncT&gt;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>[[deprecated(<span class="stringliteral">&quot;Use nanovdb::util::forEach instead&quot;</span>)]]</div>
-<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="namespacenanovdb.html#a7cd7d9ef9958d5c86962f2c129091c4a">  101</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacenanovdb.html#aa574309e3ddb090bd7973b0898dd95c0">forEach</a>(<span class="keyword">const</span> ContainerT&lt;T...&gt; &amp;c, <span class="keyword">const</span> FuncT&amp; func)</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>{</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_function" href="namespacenanovdb_1_1util.html#aeecddc2b41154f35c7304658df4a4d85">util::forEach</a>(<a class="code hl_typedef" href="namespacenanovdb_1_1util.html#af3673a774597551e15a27cdf4ac7e71d">util::Range1D</a>(0, c.size(), 1), func);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
-</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment"></span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">/// @brief Simple wrapper for the function defined above, which works with std::containers</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">template</span> &lt;<span class="keyword">template</span>&lt;<span class="keyword">typename</span>...&gt; <span class="keyword">class </span>ContainerT, <span class="keyword">typename</span>... T, <span class="keyword">typename</span> FuncT&gt;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>[[deprecated(<span class="stringliteral">&quot;Use nanovdb::util::forEach instead&quot;</span>)]]</div>
-<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="namespacenanovdb.html#ac906357e63c1a3a9cffceacbf311d022">  109</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacenanovdb.html#aa574309e3ddb090bd7973b0898dd95c0">forEach</a>(<span class="keyword">const</span> ContainerT&lt;T...&gt; &amp;c, <span class="keywordtype">size_t</span> grainSize, <span class="keyword">const</span> FuncT&amp; func)</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>{</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_function" href="namespacenanovdb_1_1util.html#aeecddc2b41154f35c7304658df4a4d85">util::forEach</a>(<a class="code hl_typedef" href="namespacenanovdb_1_1util.html#af3673a774597551e15a27cdf4ac7e71d">util::Range1D</a>(0, c.size(), grainSize), func);</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
-</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}<span class="comment">// namespace nanovdb</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#endif </span><span class="comment">// NANOVDB_UTIL_FOREACH_H_HAS_BEEN_INCLUDED</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}<span class="comment">// namespace nanovdb</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#endif </span><span class="comment">// NANOVDB_UTIL_FOREACH_H_HAS_BEEN_INCLUDED</span></div>
 <div class="ttc" id="aRange_8h_html"><div class="ttname"><a href="Range_8h.html">Range.h</a></div><div class="ttdoc">Custom Range class that is compatible with the tbb::blocked_range classes.</div></div>
 <div class="ttc" id="aclassnanovdb_1_1util_1_1Split_html"><div class="ttname"><a href="classnanovdb_1_1util_1_1Split.html">nanovdb::util::Split</a></div><div class="ttdef"><b>Definition</b> Range.h:28</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1util_html"><div class="ttname"><a href="namespacenanovdb_1_1util.html">nanovdb::util</a></div><div class="ttdef"><b>Definition</b> GridChecksum.h:86</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1util_html_aeecddc2b41154f35c7304658df4a4d85"><div class="ttname"><a href="namespacenanovdb_1_1util.html#aeecddc2b41154f35c7304658df4a4d85">nanovdb::util::forEach</a></div><div class="ttdeci">void forEach(RangeT range, const FuncT &amp;func)</div><div class="ttdoc">simple wrapper for tbb::parallel_for with a naive std fallback</div><div class="ttdef"><b>Definition</b> ForEach.h:42</div></div>
 <div class="ttc" id="anamespacenanovdb_1_1util_html_af3673a774597551e15a27cdf4ac7e71d"><div class="ttname"><a href="namespacenanovdb_1_1util.html#af3673a774597551e15a27cdf4ac7e71d">nanovdb::util::Range1D</a></div><div class="ttdeci">Range&lt; 1, size_t &gt; Range1D</div><div class="ttdef"><b>Definition</b> Range.h:33</div></div>
-<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdoc">Defines a simple memory pool used to call cub functions that use dynamic temporary storage.</div><div class="ttdef"><b>Definition</b> GridHandle.h:32</div></div>
-<div class="ttc" id="anamespacenanovdb_html_aa574309e3ddb090bd7973b0898dd95c0"><div class="ttname"><a href="namespacenanovdb.html#aa574309e3ddb090bd7973b0898dd95c0">nanovdb::forEach</a></div><div class="ttdeci">void forEach(size_t begin, size_t end, size_t grainSize, const FuncT &amp;func)</div><div class="ttdoc">Simple wrapper for the function defined above.</div><div class="ttdef"><b>Definition</b> ForEach.h:93</div></div>
+<div class="ttc" id="anamespacenanovdb_html"><div class="ttname"><a href="namespacenanovdb.html">nanovdb</a></div><div class="ttdoc">Defines a simple memory pool used to call cub functions that use dynamic temporary storage.</div><div class="ttdef"><b>Definition</b> GridHandle.h:34</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

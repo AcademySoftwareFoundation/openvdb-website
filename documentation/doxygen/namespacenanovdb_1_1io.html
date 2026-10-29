@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -147,11 +147,11 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ade28f9433227abc4a0a09345c24492b9" id="r_ade28f9433227abc4a0a09345c24492b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade28f9433227abc4a0a09345c24492b9">toStr</a> (char *dst, <a class="el" href="#ae42f8cdb9215c4db646cf1021c45648a">Codec</a> codec)</td></tr>
-<tr class="memitem:a4afb85da61fe99d19cf465508051b3cf" id="r_a4afb85da61fe99d19cf465508051b3cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae42f8cdb9215c4db646cf1021c45648a">Codec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4afb85da61fe99d19cf465508051b3cf">toCodec</a> (const char *str)</td></tr>
+<tr class="memitem:ad6b4f5cb7afce645fbbddae56734d20c" id="r_ad6b4f5cb7afce645fbbddae56734d20c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6b4f5cb7afce645fbbddae56734d20c">toStr</a> (char *dst, <a class="el" href="#ae42f8cdb9215c4db646cf1021c45648a">Codec</a> codec)</td></tr>
+<tr class="memitem:a19fedb0bec51f1007461551ecce3744c" id="r_a19fedb0bec51f1007461551ecce3744c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ae42f8cdb9215c4db646cf1021c45648a">Codec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19fedb0bec51f1007461551ecce3744c">toCodec</a> (const char *str)</td></tr>
 <tr class="memitem:a4454feedf9eb64dc06adc3d120a76e9c" id="r_a4454feedf9eb64dc06adc3d120a76e9c"><td class="memTemplParams" colspan="2">template&lt;typename StreamT&gt; </td></tr>
 <tr class="memitem:a4454feedf9eb64dc06adc3d120a76e9c template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4454feedf9eb64dc06adc3d120a76e9c">writeUncompressedGrid</a> (StreamT &amp;os, const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData, bool raw=false)</td></tr>
-<tr class="memdesc:a4454feedf9eb64dc06adc3d120a76e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a standalone alternative to io::writeGrid(...,Codec::NONE) defined in util/IO.h Unlike the latter this function has no dependencies at all, not even <a class="el" href="NanoVDB_8h.html" title="Implements a light-weight self-contained VDB data-structure in a single file! In other words,...">NanoVDB.h</a>, so it also works if client code only includes <a class="el" href="PNanoVDB_8h.html" title="This file is a portable (e.g. pointer-less) C99/GLSL/HLSL port of NanoVDB.h, which is compatible with...">PNanoVDB.h</a>!  <br /></td></tr>
+<tr class="memdesc:a4454feedf9eb64dc06adc3d120a76e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a standalone alternative to io::writeGrid(...,Codec::NONE) defined in <a class="el" href="io_2IO_8h.html" title="Implements I/O for NanoVDB grids. Features optional BLOSC and ZIP file compression,...">io/IO.h</a> Unlike the latter this function has no dependencies at all, not even <a class="el" href="NanoVDB_8h.html" title="Implements a light-weight self-contained VDB data-structure in a single file! In other words,...">NanoVDB.h</a>, so it also works if client code only includes <a class="el" href="PNanoVDB_8h.html" title="This file is a portable (e.g. pointer-less) C99/GLSL/HLSL port of NanoVDB.h, which is compatible with...">PNanoVDB.h</a>!  <br /></td></tr>
 <tr class="memitem:a6eeb3fa504055ab8c3d2154964fab0bd" id="r_a6eeb3fa504055ab8c3d2154964fab0bd"><td class="memTemplParams" colspan="2">template&lt;typename StreamT, typename ValueT&gt; </td></tr>
 <tr class="memitem:a6eeb3fa504055ab8c3d2154964fab0bd template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6eeb3fa504055ab8c3d2154964fab0bd">writeUncompressedGrid</a> (StreamT &amp;os, const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData, const ValueT *blindData, <a class="el" href="namespacenanovdb.html#ad302dde29b8cf276217e7db12f56e1ea">GridBlindDataSemantic</a> semantic=<a class="el" href="namespacenanovdb.html#ad302dde29b8cf276217e7db12f56e1eaa88183b946cc5f0e8c96b2e66e1c74a7e">GridBlindDataSemantic::Unknown</a>, bool raw=false)</td></tr>
 <tr class="memdesc:a6eeb3fa504055ab8c3d2154964fab0bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an <a class="el" href="namespacenanovdb.html#ad24384a4bda82649992fd5faf8fbbea4">IndexGrid</a> to a stream and append blind data.  <br /></td></tr>
@@ -246,7 +246,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>NONE is the default, ZIP is slow but compact and BLOSC offers a great balance.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">NanoVDB</td><td>optionally supports ZIP and BLOSC compression and will throw an exception if its support is required but missing. </td></tr>
+    <tr><td class="paramname">NanoVDB</td><td>optionally supports ZIP and will throw an exception if its support is required but missing. </td></tr>
   </table>
   </dd>
 </dl>
@@ -781,8 +781,8 @@ template&lt;typename GridHandleT, typename StreamT, template&lt; typename... &gt
 
 </div>
 </div>
-<a id="a4afb85da61fe99d19cf465508051b3cf" name="a4afb85da61fe99d19cf465508051b3cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4afb85da61fe99d19cf465508051b3cf">&#9670;&#160;</a></span>toCodec()</h2>
+<a id="a19fedb0bec51f1007461551ecce3744c" name="a19fedb0bec51f1007461551ecce3744c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19fedb0bec51f1007461551ecce3744c">&#9670;&#160;</a></span>toCodec()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -791,7 +791,7 @@ template&lt;typename GridHandleT, typename StreamT, template&lt; typename... &gt
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae42f8cdb9215c4db646cf1021c45648a">Codec</a> toCodec </td>
+          <td class="memname"><a class="el" href="#ae42f8cdb9215c4db646cf1021c45648a">Codec</a> toCodec </td>
           <td>(</td>
           <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
           <td></td>
@@ -806,8 +806,8 @@ template&lt;typename GridHandleT, typename StreamT, template&lt; typename... &gt
 
 </div>
 </div>
-<a id="ade28f9433227abc4a0a09345c24492b9" name="ade28f9433227abc4a0a09345c24492b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade28f9433227abc4a0a09345c24492b9">&#9670;&#160;</a></span>toStr()</h2>
+<a id="ad6b4f5cb7afce645fbbddae56734d20c" name="ad6b4f5cb7afce645fbbddae56734d20c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6b4f5cb7afce645fbbddae56734d20c">&#9670;&#160;</a></span>toStr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -816,7 +816,7 @@ template&lt;typename GridHandleT, typename StreamT, template&lt; typename... &gt
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const char * toStr </td>
+          <td class="memname">const char * toStr </td>
           <td>(</td>
           <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
         </tr>
@@ -989,8 +989,8 @@ template&lt;typename StreamT&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>This is a standalone alternative to io::writeGrid(...,Codec::NONE) defined in util/IO.h Unlike the latter this function has no dependencies at all, not even <a class="el" href="NanoVDB_8h.html" title="Implements a light-weight self-contained VDB data-structure in a single file! In other words,...">NanoVDB.h</a>, so it also works if client code only includes <a class="el" href="PNanoVDB_8h.html" title="This file is a portable (e.g. pointer-less) C99/GLSL/HLSL port of NanoVDB.h, which is compatible with...">PNanoVDB.h</a>! </p>
-<p>Writes a raw NanoVDB buffer, possibly with multiple grids, to a stream WITHOUT compression. It follows all the conventions in util/IO.h so the stream can be read by all existing client code of NanoVDB.</p>
+<p>This is a standalone alternative to io::writeGrid(...,Codec::NONE) defined in <a class="el" href="io_2IO_8h.html" title="Implements I/O for NanoVDB grids. Features optional BLOSC and ZIP file compression,...">io/IO.h</a> Unlike the latter this function has no dependencies at all, not even <a class="el" href="NanoVDB_8h.html" title="Implements a light-weight self-contained VDB data-structure in a single file! In other words,...">NanoVDB.h</a>, so it also works if client code only includes <a class="el" href="PNanoVDB_8h.html" title="This file is a portable (e.g. pointer-less) C99/GLSL/HLSL port of NanoVDB.h, which is compatible with...">PNanoVDB.h</a>! </p>
+<p>Writes a raw NanoVDB buffer, possibly with multiple grids, to a stream WITHOUT compression. It follows all the conventions in <a class="el" href="io_2IO_8h.html" title="Implements I/O for NanoVDB grids. Features optional BLOSC and ZIP file compression,...">io/IO.h</a> so the stream can be read by all existing client code of NanoVDB.</p>
 <dl class="section note"><dt>Note</dt><dd>This method will always write uncompressed grids to the stream, i.e. Blosc or ZIP compression is never applied! This is a fundamental limitation and feature of this standalone function.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">

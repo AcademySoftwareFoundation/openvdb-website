@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -274,9 +274,9 @@ Functions</h2></td></tr>
 <tr class="memdesc:a903bf832a73859b98e58d7310f27aa61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the checksum of a grid.  <br /></td></tr>
 <tr class="memitem:a54f25dbe419fe0642eefe742435c113a" id="r_a54f25dbe419fe0642eefe742435c113a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54f25dbe419fe0642eefe742435c113a">updateChecksum</a> (<a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData)</td></tr>
 <tr class="memdesc:a54f25dbe419fe0642eefe742435c113a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the checksum of a grid by preserving its mode.  <br /></td></tr>
-<tr class="memitem:a1a5d16ab3da99a28f9faf9b8420233c8" id="r_a1a5d16ab3da99a28f9faf9b8420233c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a5d16ab3da99a28f9faf9b8420233c8">crc32Head</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData, const uint32_t *lut)</td></tr>
+<tr class="memitem:a1a5d16ab3da99a28f9faf9b8420233c8" id="r_a1a5d16ab3da99a28f9faf9b8420233c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a5d16ab3da99a28f9faf9b8420233c8">crc32Head</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData, const uint32_t *lut)</td></tr>
 <tr class="memdesc:a1a5d16ab3da99a28f9faf9b8420233c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the crc32 checksum of a grid's head, i.e. its <a class="el" href="structnanovdb_1_1GridData.html" title="Struct with all the member data of the Grid (useful during serialization of an openvdb grid)">GridData</a> and <a class="el" href="structnanovdb_1_1TreeData.html">TreeData</a>, using a lookup table. <a class="el" href="structnanovdb_1_1GridData.html#a4d9c3cc33722f025c3a6c3929774e203">GridData::mMagic</a> and <a class="el" href="structnanovdb_1_1GridData.html#a9e5d474466cfc35f9a0808b968cdf535">GridData::mChecksum</a> are excluded.  <br /></td></tr>
-<tr class="memitem:a1a6f1023a957c02fca84e4b236ed516c" id="r_a1a6f1023a957c02fca84e4b236ed516c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a6f1023a957c02fca84e4b236ed516c">crc32Head</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData)</td></tr>
+<tr class="memitem:a1a6f1023a957c02fca84e4b236ed516c" id="r_a1a6f1023a957c02fca84e4b236ed516c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a6f1023a957c02fca84e4b236ed516c">crc32Head</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData)</td></tr>
 <tr class="memitem:aaf7e2a725b91ecdb86b6c0c85c007f61" id="r_aaf7e2a725b91ecdb86b6c0c85c007f61"><td class="memTemplParams" colspan="2">template&lt;typename ValueT&gt; </td></tr>
 <tr class="memitem:aaf7e2a725b91ecdb86b6c0c85c007f61 template"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf7e2a725b91ecdb86b6c0c85c007f61">crc32TailOld</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *grid, const uint32_t *lut)</td></tr>
 <tr class="memitem:a87559609974af66744367b06f7e1dd2d" id="r_a87559609974af66744367b06f7e1dd2d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87559609974af66744367b06f7e1dd2d">crc32Tail</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData, const uint32_t *lut)</td></tr>
@@ -284,22 +284,13 @@ Functions</h2></td></tr>
 <tr class="memitem:ac537c4f2a170a9365f30059403d60688 template"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac537c4f2a170a9365f30059403d60688">crc32Tail</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *grid, const uint32_t *lut)</td></tr>
 <tr class="memitem:ae6ead1ba421a77d902153baaf94b79e0" id="r_ae6ead1ba421a77d902153baaf94b79e0"><td class="memTemplParams" colspan="2">template&lt;typename ValueT&gt; </td></tr>
 <tr class="memitem:ae6ead1ba421a77d902153baaf94b79e0 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Checksum.html">Checksum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6ead1ba421a77d902153baaf94b79e0">evalChecksum</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *grid, <a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a> mode)</td></tr>
-<tr class="memitem:a96d15d29730eefa6092bfb466b8face0" id="r_a96d15d29730eefa6092bfb466b8face0"><td class="memTemplParams" colspan="2">template&lt;typename ValueT&gt; </td></tr>
-<tr class="memitem:a96d15d29730eefa6092bfb466b8face0 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Checksum.html">Checksum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96d15d29730eefa6092bfb466b8face0">checksum</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *grid, <a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a> mode)</td></tr>
-<tr class="memitem:a5f02e4027f32bcf34dc4fb0220a8d4ce" id="r_a5f02e4027f32bcf34dc4fb0220a8d4ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Checksum.html">Checksum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f02e4027f32bcf34dc4fb0220a8d4ce">checksum</a> (const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *gridData, <a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a> mode)</td></tr>
-<tr class="memitem:a2895262d5bbe388261b83fbca59fa2f9" id="r_a2895262d5bbe388261b83fbca59fa2f9"><td class="memTemplParams" colspan="2">template&lt;typename ValueT&gt; </td></tr>
-<tr class="memitem:a2895262d5bbe388261b83fbca59fa2f9 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1Checksum.html">Checksum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2895262d5bbe388261b83fbca59fa2f9">checksum</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; &amp;grid, <a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a> mode)</td></tr>
 <tr class="memitem:a217417d3e151a115ba30ab1794cbf063" id="r_a217417d3e151a115ba30ab1794cbf063"><td class="memTemplParams" colspan="2">template&lt;typename ValueT&gt; </td></tr>
 <tr class="memitem:a217417d3e151a115ba30ab1794cbf063 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a217417d3e151a115ba30ab1794cbf063">validateChecksum</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *grid, <a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a> mode)</td></tr>
-<tr class="memitem:a5984c14206887c5b603a0d843b76e2e7" id="r_a5984c14206887c5b603a0d843b76e2e7"><td class="memTemplParams" colspan="2">template&lt;typename ValueT&gt; </td></tr>
-<tr class="memitem:a5984c14206887c5b603a0d843b76e2e7 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5984c14206887c5b603a0d843b76e2e7">validateChecksum</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; &amp;grid, <a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a> mode)</td></tr>
 <tr class="memitem:ab70dc7f426ab208f1a6e5f4c54374745" id="r_ab70dc7f426ab208f1a6e5f4c54374745"><td class="memTemplParams" colspan="2">template&lt;typename ValueT&gt; </td></tr>
 <tr class="memitem:ab70dc7f426ab208f1a6e5f4c54374745 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab70dc7f426ab208f1a6e5f4c54374745">updateChecksum</a> (<a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *grid, <a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a> mode)</td></tr>
 <tr class="memitem:a9d6372d8796ecacae92c9d2fbc61e52b" id="r_a9d6372d8796ecacae92c9d2fbc61e52b"><td class="memTemplParams" colspan="2">template&lt;typename ValueT&gt; </td></tr>
 <tr class="memitem:a9d6372d8796ecacae92c9d2fbc61e52b template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d6372d8796ecacae92c9d2fbc61e52b">updateChecksum</a> (<a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *grid)</td></tr>
-<tr class="memitem:a0bd6be9a978b6c4550dd2ff657a32494" id="r_a0bd6be9a978b6c4550dd2ff657a32494"><td class="memTemplParams" colspan="2">template&lt;typename ValueT&gt; </td></tr>
-<tr class="memitem:a0bd6be9a978b6c4550dd2ff657a32494 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bd6be9a978b6c4550dd2ff657a32494">updateChecksum</a> (<a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; &amp;grid, <a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a> mode)</td></tr>
-<tr class="memitem:a8e3c6753ab6d4a892af03a491cdc94f1" id="r_a8e3c6753ab6d4a892af03a491cdc94f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e3c6753ab6d4a892af03a491cdc94f1">updateGridCount</a> (<a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *data, uint32_t gridIndex, uint32_t gridCount)</td></tr>
+<tr class="memitem:a8e3c6753ab6d4a892af03a491cdc94f1" id="r_a8e3c6753ab6d4a892af03a491cdc94f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e3c6753ab6d4a892af03a491cdc94f1">updateGridCount</a> (<a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *data, uint32_t gridIndex, uint32_t gridCount)</td></tr>
 <tr class="memdesc:a8e3c6753ab6d4a892af03a491cdc94f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the ground index and count, as well as the head checksum if needed.  <br /></td></tr>
 <tr class="memitem:ac2f6946bd1edd3874c619121a3293bd0" id="r_ac2f6946bd1edd3874c619121a3293bd0"><td class="memTemplParams" colspan="2">template&lt;typename BuildT&gt; </td></tr>
 <tr class="memitem:ac2f6946bd1edd3874c619121a3293bd0 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2f6946bd1edd3874c619121a3293bd0">updateGridStats</a> (<a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; BuildT &gt; *grid, <a class="el" href="#a9209f010b67392a690df6ba4845807cb">StatsMode</a> mode=<a class="el" href="#a9209f010b67392a690df6ba4845807cba7a1920d61156abc05a60135aefe8bc67">StatsMode::Default</a>)</td></tr>
@@ -307,16 +298,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a623ddc9f10d03a71b3b86f857ed36c7f" id="r_a623ddc9f10d03a71b3b86f857ed36c7f"><td class="memTemplParams" colspan="2">template&lt;typename BuildT&gt; </td></tr>
 <tr class="memitem:a623ddc9f10d03a71b3b86f857ed36c7f template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classnanovdb_1_1tools_1_1Extrema.html">Extrema</a>&lt; typename <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; BuildT &gt;::ValueType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a623ddc9f10d03a71b3b86f857ed36c7f">getExtrema</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; BuildT &gt; &amp;grid, const <a class="el" href="namespacenanovdb.html#aba8106a1b57a1702680175a5b6d6a7fa">CoordBBox</a> &amp;bbox)</td></tr>
 <tr class="memdesc:a623ddc9f10d03a71b3b86f857ed36c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine the extrema of all the values in a grid that intersects the specified bounding box.  <br /></td></tr>
-<tr class="memitem:ab19a49c8f2b6595a2d8c95d42c031d28" id="r_ab19a49c8f2b6595a2d8c95d42c031d28"><td class="memTemplParams" colspan="2">template&lt;typename BuildT&gt; </td></tr>
-<tr class="memitem:ab19a49c8f2b6595a2d8c95d42c031d28 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab19a49c8f2b6595a2d8c95d42c031d28">gridStats</a> (<a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; BuildT &gt; &amp;grid, <a class="el" href="#a9209f010b67392a690df6ba4845807cb">StatsMode</a> mode=<a class="el" href="#a9209f010b67392a690df6ba4845807cba7a1920d61156abc05a60135aefe8bc67">StatsMode::Default</a>)</td></tr>
 <tr class="memitem:adb9be59ceb59a958d8a820af078293a6" id="r_adb9be59ceb59a958d8a820af078293a6"><td class="memTemplParams" colspan="2">template&lt;typename ValueT&gt; </td></tr>
 <tr class="memitem:adb9be59ceb59a958d8a820af078293a6 template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb9be59ceb59a958d8a820af078293a6">isValid</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *grid, <a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a> mode, bool verbose=false)</td></tr>
 <tr class="memdesc:adb9be59ceb59a958d8a820af078293a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs several validation tests on a grid pointer.  <br /></td></tr>
-<tr class="memitem:a818c12d7bb82ec3b11a95e4bc929192d" id="r_a818c12d7bb82ec3b11a95e4bc929192d"><td class="memTemplParams" colspan="2">template&lt;typename ValueT&gt; </td></tr>
-<tr class="memitem:a818c12d7bb82ec3b11a95e4bc929192d template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a818c12d7bb82ec3b11a95e4bc929192d">isValid</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; &amp;grid, bool detailed=true, bool verbose=false)</td></tr>
-<tr class="memdesc:a818c12d7bb82ec3b11a95e4bc929192d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the specified grid passes several validation tests.  <br /></td></tr>
 <tr class="memitem:ab9917f3dc44a9c68dae8038f11d444da" id="r_ab9917f3dc44a9c68dae8038f11d444da"><td class="memTemplParams" colspan="2">template&lt;typename ValueT&gt; </td></tr>
-<tr class="memitem:ab9917f3dc44a9c68dae8038f11d444da template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9917f3dc44a9c68dae8038f11d444da">checkGrid</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *grid, char *error, <a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a> mode=<a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5abbd47109890259c0127154db1af26c75">CheckMode::Full</a>)</td></tr>
+<tr class="memitem:ab9917f3dc44a9c68dae8038f11d444da template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9917f3dc44a9c68dae8038f11d444da">checkGrid</a> (const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *grid, char *error, <a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a> mode=<a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5abbd47109890259c0127154db1af26c75">CheckMode::Full</a>)</td></tr>
 <tr class="memdesc:ab9917f3dc44a9c68dae8038f11d444da"><td class="mdescLeft">&#160;</td><td class="mdescRight">validate grid  <br /></td></tr>
 <tr class="memitem:a66d146dbf7ccc913e6e75cd6c257887f" id="r_a66d146dbf7ccc913e6e75cd6c257887f"><td class="memTemplParams" colspan="2">template&lt;typename GridHandleT&gt; </td></tr>
 <tr class="memitem:a66d146dbf7ccc913e6e75cd6c257887f template"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66d146dbf7ccc913e6e75cd6c257887f">validateGrid</a> (const GridHandleT &amp;handle, uint32_t gridID, <a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a> mode, bool verbose)</td></tr>
@@ -480,7 +466,7 @@ template&lt;int Log2BlockWidth, typename BufferT&gt; </div>
 template&lt;typename ValueT&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> char * checkGrid </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> char * checkGrid </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>, </td>
         </tr>
@@ -501,81 +487,6 @@ template&lt;typename ValueT&gt; </div>
 
 </div>
 </div>
-<a id="a5f02e4027f32bcf34dc4fb0220a8d4ce" name="a5f02e4027f32bcf34dc4fb0220a8d4ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f02e4027f32bcf34dc4fb0220a8d4ce">&#9670;&#160;</a></span>checksum() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classnanovdb_1_1Checksum.html">Checksum</a> checksum </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *</td>          <td class="paramname"><span class="paramname"><em>gridData</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2895262d5bbe388261b83fbca59fa2f9" name="a2895262d5bbe388261b83fbca59fa2f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2895262d5bbe388261b83fbca59fa2f9">&#9670;&#160;</a></span>checksum() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ValueT&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classnanovdb_1_1Checksum.html">Checksum</a> checksum </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a96d15d29730eefa6092bfb466b8face0" name="a96d15d29730eefa6092bfb466b8face0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96d15d29730eefa6092bfb466b8face0">&#9670;&#160;</a></span>checksum() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ValueT&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classnanovdb_1_1Checksum.html">Checksum</a> checksum </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; *</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a1a6f1023a957c02fca84e4b236ed516c" name="a1a6f1023a957c02fca84e4b236ed516c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a6f1023a957c02fca84e4b236ed516c">&#9670;&#160;</a></span>crc32Head() <span class="overload">[1/2]</span></h2>
 
@@ -586,7 +497,7 @@ template&lt;typename ValueT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t crc32Head </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t crc32Head </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *</td>          <td class="paramname"><span class="paramname"><em>gridData</em></span></td><td>)</td>
           <td></td>
@@ -618,7 +529,7 @@ template&lt;typename ValueT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t crc32Head </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> uint32_t crc32Head </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *</td>          <td class="paramname"><span class="paramname"><em>gridData</em></span>, </td>
         </tr>
@@ -2215,7 +2126,7 @@ template&lt;typename SrcGridT, typename DstBuildT = typename MapToNano&lt;typena
 <p>Freestanding function to create a <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid&lt;FpX&gt;</a> from any source grid, X=4,8,16. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">SrcGridT</td><td>Type of in input (source) grid, e.g. <a class="el" href="classopenvdb_1_1v13__2_1_1Grid.html" title="Container class that associates a tree with a transform and metadata.">openvdb::Grid</a> or <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">nanovdb::Grid</a> </td></tr>
+    <tr><td class="paramname">SrcGridT</td><td>Type of in input (source) grid, e.g. <a class="el" href="classopenvdb_1_1v14__0_1_1Grid.html" title="Container class that associates a tree with a transform and metadata.">openvdb::Grid</a> or <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">nanovdb::Grid</a> </td></tr>
     <tr><td class="paramname">DstBuildT</td><td>= <a class="el" href="classnanovdb_1_1Fp4.html" title="Dummy type for a 4bit quantization of float point values.">Fp4</a>, <a class="el" href="classnanovdb_1_1Fp8.html" title="Dummy type for a 8bit quantization of float point values.">Fp8</a> or <a class="el" href="classnanovdb_1_1Fp16.html" title="Dummy type for a 16bit quantization of float point values.">Fp16</a>, i.e. quantization bit-width of the output grid </td></tr>
     <tr><td class="paramname">BufferT</td><td>Type of the buffer used to allocate the destination grid </td></tr>
   </table>
@@ -2285,7 +2196,7 @@ template&lt;typename SrcGridT, typename DstBuildT = typename MapToNano&lt;typena
 <p>Freestanding function to create a <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid&lt;FpN&gt;</a> from any source grid. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">SrcGridT</td><td>Type of in input (source) grid, e.g. <a class="el" href="classopenvdb_1_1v13__2_1_1Grid.html" title="Container class that associates a tree with a transform and metadata.">openvdb::Grid</a> or <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">nanovdb::Grid</a> </td></tr>
+    <tr><td class="paramname">SrcGridT</td><td>Type of in input (source) grid, e.g. <a class="el" href="classopenvdb_1_1v14__0_1_1Grid.html" title="Container class that associates a tree with a transform and metadata.">openvdb::Grid</a> or <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">nanovdb::Grid</a> </td></tr>
     <tr><td class="paramname">DstBuildT</td><td>= <a class="el" href="classnanovdb_1_1FpN.html" title="Dummy type for a variable bit quantization of floating point values.">FpN</a>, i.e. variable bit-width of the output grid </td></tr>
     <tr><td class="paramname">OracleT</td><td>Type of the oracle used to determine the local bit-width, i.e. N in <a class="el" href="classnanovdb_1_1FpN.html" title="Dummy type for a variable bit quantization of floating point values.">FpN</a> </td></tr>
     <tr><td class="paramname">BufferT</td><td>Type of the buffer used to allocate the destination grid </td></tr>
@@ -2347,7 +2258,7 @@ template&lt;typename SrcGridT, typename DstBuildT = typename MapToNano&lt;typena
 <p>Freestanding function that creates a <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid&lt;T&gt;</a> from any source grid. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">SrcGridT</td><td>Type of in input (source) grid, e.g. <a class="el" href="classopenvdb_1_1v13__2_1_1Grid.html" title="Container class that associates a tree with a transform and metadata.">openvdb::Grid</a> or <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">nanovdb::Grid</a> </td></tr>
+    <tr><td class="paramname">SrcGridT</td><td>Type of in input (source) grid, e.g. <a class="el" href="classopenvdb_1_1v14__0_1_1Grid.html" title="Container class that associates a tree with a transform and metadata.">openvdb::Grid</a> or <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">nanovdb::Grid</a> </td></tr>
     <tr><td class="paramname">DstBuildT</td><td>Type of values in the output (destination) nanovdb <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">Grid</a>, e.g. float or <a class="el" href="classnanovdb_1_1Fp16.html" title="Dummy type for a 16bit quantization of float point values.">nanovdb::Fp16</a> </td></tr>
     <tr><td class="paramname">BufferT</td><td>Type of the buffer used ti allocate the destination grid </td></tr>
   </table>
@@ -2411,7 +2322,7 @@ template&lt;typename SrcGridT, typename DstBuildT = typename MapToNano&lt;typena
 <p>Freestanding function that creates a <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid&lt;ValueIndex&gt;</a> or <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid&lt;ValueOnIndex&gt;</a> from any source grid. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">SrcGridT</td><td>Type of in input (source) grid, e.g. <a class="el" href="classopenvdb_1_1v13__2_1_1Grid.html" title="Container class that associates a tree with a transform and metadata.">openvdb::Grid</a> or <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">nanovdb::Grid</a> </td></tr>
+    <tr><td class="paramname">SrcGridT</td><td>Type of in input (source) grid, e.g. <a class="el" href="classopenvdb_1_1v14__0_1_1Grid.html" title="Container class that associates a tree with a transform and metadata.">openvdb::Grid</a> or <a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">nanovdb::Grid</a> </td></tr>
     <tr><td class="paramname">DstBuildT</td><td>If <a class="el" href="classnanovdb_1_1ValueIndex.html" title="Dummy type for a voxel whose value equals an offset into an external value array.">ValueIndex</a> all (active and inactive) values are indexed and if it is <a class="el" href="classnanovdb_1_1ValueOnIndex.html" title="Dummy type for a voxel whose value equals an offset into an external value array of active values.">ValueOnIndex</a> only active values are indexed. </td></tr>
     <tr><td class="paramname">BufferT</td><td>BufferT Type of the buffer used ti allocate the destination grid </td></tr>
   </table>
@@ -2999,76 +2910,8 @@ template&lt;typename BuildT&gt; </div>
 
 </div>
 </div>
-<a id="ab19a49c8f2b6595a2d8c95d42c031d28" name="ab19a49c8f2b6595a2d8c95d42c031d28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab19a49c8f2b6595a2d8c95d42c031d28">&#9670;&#160;</a></span>gridStats()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename BuildT&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void gridStats </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; BuildT &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="#a9209f010b67392a690df6ba4845807cb">StatsMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#a9209f010b67392a690df6ba4845807cba7a1920d61156abc05a60135aefe8bc67">StatsMode::Default</a></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a818c12d7bb82ec3b11a95e4bc929192d" name="a818c12d7bb82ec3b11a95e4bc929192d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a818c12d7bb82ec3b11a95e4bc929192d">&#9670;&#160;</a></span>isValid() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ValueT&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool isValid </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>detailed</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>verbose</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Return true if the specified grid passes several validation tests. </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">ValueT</td><td>Build type of the input grid </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">grid</td><td><a class="el" href="classnanovdb_1_1Grid.html" title="Highest level of the data structure. Contains a tree and a world-&gt;index transform (that currently onl...">Grid</a> to validate </td></tr>
-    <tr><td class="paramname">detailed</td><td>If true the validation test is detailed and relatively slow. </td></tr>
-    <tr><td class="paramname">verbose</td><td>If true information about the first failed test is printed to std::cerr </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This method has been deprecated by the one defined above </dd></dl>
-
-</div>
-</div>
 <a id="adb9be59ceb59a958d8a820af078293a6" name="adb9be59ceb59a958d8a820af078293a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb9be59ceb59a958d8a820af078293a6">&#9670;&#160;</a></span>isValid() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adb9be59ceb59a958d8a820af078293a6">&#9670;&#160;</a></span>isValid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3103,7 +2946,7 @@ template&lt;typename ValueT&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">grid</td><td>const point to the grid that needs validation </td></tr>
-    <tr><td class="paramname">mode</td><td>Mode of the validation check (defined in GridChecksum.h) </td></tr>
+    <tr><td class="paramname">mode</td><td>Mode of the validation check (defined in <a class="el" href="GridChecksum_8h.html" title="Computes a pair of uint32_t checksums, of a Grid, by means of 32 bit Cyclic Redundancy Check (CRC32)">GridChecksum.h</a>) </td></tr>
     <tr><td class="paramname">verbose</td><td>If true information about the first failed test is printed to std::cerr </td></tr>
   </table>
   </dd>
@@ -3238,7 +3081,7 @@ template&lt;typename NanoBuildT, typename NanoValueT&gt; </div>
 </div>
 </div>
 <a id="a54f25dbe419fe0642eefe742435c113a" name="a54f25dbe419fe0642eefe742435c113a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54f25dbe419fe0642eefe742435c113a">&#9670;&#160;</a></span>updateChecksum() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f25dbe419fe0642eefe742435c113a">&#9670;&#160;</a></span>updateChecksum() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3271,7 +3114,7 @@ template&lt;typename NanoBuildT, typename NanoValueT&gt; </div>
 </div>
 </div>
 <a id="a903bf832a73859b98e58d7310f27aa61" name="a903bf832a73859b98e58d7310f27aa61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a903bf832a73859b98e58d7310f27aa61">&#9670;&#160;</a></span>updateChecksum() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a903bf832a73859b98e58d7310f27aa61">&#9670;&#160;</a></span>updateChecksum() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3308,31 +3151,8 @@ template&lt;typename NanoBuildT, typename NanoValueT&gt; </div>
 
 </div>
 </div>
-<a id="a0bd6be9a978b6c4550dd2ff657a32494" name="a0bd6be9a978b6c4550dd2ff657a32494"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bd6be9a978b6c4550dd2ff657a32494">&#9670;&#160;</a></span>updateChecksum() <span class="overload">[3/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ValueT&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void updateChecksum </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a9d6372d8796ecacae92c9d2fbc61e52b" name="a9d6372d8796ecacae92c9d2fbc61e52b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d6372d8796ecacae92c9d2fbc61e52b">&#9670;&#160;</a></span>updateChecksum() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d6372d8796ecacae92c9d2fbc61e52b">&#9670;&#160;</a></span>updateChecksum() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3351,7 +3171,7 @@ template&lt;typename ValueT&gt; </div>
 </div>
 </div>
 <a id="ab70dc7f426ab208f1a6e5f4c54374745" name="ab70dc7f426ab208f1a6e5f4c54374745"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab70dc7f426ab208f1a6e5f4c54374745">&#9670;&#160;</a></span>updateChecksum() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab70dc7f426ab208f1a6e5f4c54374745">&#9670;&#160;</a></span>updateChecksum() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3396,7 +3216,7 @@ template&lt;typename ValueT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void updateGridCount </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void updateGridCount </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structnanovdb_1_1GridData.html">GridData</a> *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
@@ -3463,7 +3283,7 @@ template&lt;typename BuildT&gt; </div>
 </div>
 </div>
 <a id="a19bc5f9e6021f50b528b8d75d1cc8725" name="a19bc5f9e6021f50b528b8d75d1cc8725"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19bc5f9e6021f50b528b8d75d1cc8725">&#9670;&#160;</a></span>validateChecksum() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a19bc5f9e6021f50b528b8d75d1cc8725">&#9670;&#160;</a></span>validateChecksum() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3500,31 +3320,8 @@ template&lt;typename BuildT&gt; </div>
 
 </div>
 </div>
-<a id="a5984c14206887c5b603a0d843b76e2e7" name="a5984c14206887c5b603a0d843b76e2e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5984c14206887c5b603a0d843b76e2e7">&#9670;&#160;</a></span>validateChecksum() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ValueT&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool validateChecksum </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacenanovdb.html#a1eba1ecdc176671d534794bcd6604e8a">NanoGrid</a>&lt; ValueT &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>grid</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacenanovdb.html#a4e857e4b13a164e4df80f9282a71d0b5">CheckMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a217417d3e151a115ba30ab1794cbf063" name="a217417d3e151a115ba30ab1794cbf063"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a217417d3e151a115ba30ab1794cbf063">&#9670;&#160;</a></span>validateChecksum() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a217417d3e151a115ba30ab1794cbf063">&#9670;&#160;</a></span>validateChecksum() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -118,7 +118,7 @@ $(function(){initNavTree('classnanovdb_1_1cuda_1_1ManagedResource.html','','clas
 </div><!--header-->
 <div class="contents">
 
-<p>Managed (unified) memory resource. Allocations (cudaMallocManaged) are accessible from both the host and the device, with the driver migrating pages on demand, so a container over this resource serves grids that are read on both sides &ndash; the replacement for the legacy UnifiedBuffer. A <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> over this resource parses (and validates) its metadata through the device like any device buffer &ndash; a host-side parse could race still-running producer kernels &ndash; while the host accessors remain available afterwards; ordering host reads after device writes is the caller's responsibility, exactly as with UnifiedBuffer.  
+<p>Managed (unified) memory resource. Allocations (cudaMallocManaged) are accessible from both the host and the device, with the driver migrating pages on demand, so a container over this resource serves grids that are read on both sides. A <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> over this resource parses (and validates) its metadata through the device like any device buffer &ndash; a host-side parse could race still-running producer kernels &ndash; while the host accessors remain available afterwards; ordering host reads after device writes is the caller's responsibility.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ManagedResource_8h_source.html">nanovdb/cuda/ManagedResource.h</a>&gt;</code></p>
@@ -145,7 +145,7 @@ Friends</h2></td></tr>
 <tr class="memitem:ae9b32237ffe628f630f7c74cff31551c" id="r_ae9b32237ffe628f630f7c74cff31551c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9b32237ffe628f630f7c74cff31551c">operator!=</a> (const <a class="el" href="classnanovdb_1_1cuda_1_1ManagedResource.html">ManagedResource</a> &amp;, const <a class="el" href="classnanovdb_1_1cuda_1_1ManagedResource.html">ManagedResource</a> &amp;)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Managed (unified) memory resource. Allocations (cudaMallocManaged) are accessible from both the host and the device, with the driver migrating pages on demand, so a container over this resource serves grids that are read on both sides &ndash; the replacement for the legacy UnifiedBuffer. A <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> over this resource parses (and validates) its metadata through the device like any device buffer &ndash; a host-side parse could race still-running producer kernels &ndash; while the host accessors remain available afterwards; ordering host reads after device writes is the caller's responsibility, exactly as with UnifiedBuffer. </p>
+<div class="textblock"><p>Managed (unified) memory resource. Allocations (cudaMallocManaged) are accessible from both the host and the device, with the driver migrating pages on demand, so a container over this resource serves grids that are read on both sides. A <a class="el" href="classnanovdb_1_1GridHandle.html" title="This class serves to manage a buffer containing one or more NanoVDB Grids.">GridHandle</a> over this resource parses (and validates) its metadata through the device like any device buffer &ndash; a host-side parse could race still-running producer kernels &ndash; while the host accessors remain available afterwards; ordering host reads after device writes is the caller's responsibility. </p>
 <dl class="section note"><dt>Note</dt><dd>This resource is <em>synchronous</em>: cudaMallocManaged / cudaFree have no stream-ordered form, so it models the synchronous Resource concept (allocate / deallocate, no stream). The usual contract applies: the caller ensures device work touching an allocation has completed before it is freed. </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a21d2e8403222bd6ba1b274926497b6d0" name="a21d2e8403222bd6ba1b274926497b6d0"></a>

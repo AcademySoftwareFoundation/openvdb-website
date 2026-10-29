@@ -11,10 +11,11 @@ var searchData=
   ['use_20openvdb_8',['Why should I use OpenVDB?',['../faq.html#sWhyUseVDB',1,'']]],
   ['user_20functions_9',['User Functions',['../ax.html#axuserfunctions',1,'']]],
   ['using_20a_20mismatching_20triplet_20for_20openvdb_20build_20artifacts_10',['Detected VCPKG toolchain is using a mismatching triplet for OpenVDB build artifacts',['../build.html#troubleshoot4',1,'']]],
-  ['using_20custom_20filters_11',['Point Filtering using Custom Filters',['../codeExamples.html#sPointCustomFiltering',1,'']]],
-  ['using_20groups_12',['Point Filtering using Groups',['../codeExamples.html#sPointFiltering',1,'']]],
-  ['using_20homebrew_13',['Using Homebrew',['../dependencies.html#depUsingHomebrew',1,'']]],
-  ['using_20unix_20apt_20get_14',['Using UNIX apt-get',['../dependencies.html#depUsingAptGet',1,'']]],
-  ['using_20vcpkg_15',['Building Dependencies using VCPKG',['../build.html#buildVCPKG',1,'']]],
-  ['utilities_20and_20tools_16',['Utilities and Tools',['../overview.html#secToolUtils',1,'']]]
+  ['using_20an_20installed_20nanovdb_20from_20cmake_11',['Using an installed NanoVDB from CMake',['../NanoVDB_HowToBuild.html#autotoc_md11',1,'']]],
+  ['using_20custom_20filters_12',['Point Filtering using Custom Filters',['../codeExamples.html#sPointCustomFiltering',1,'']]],
+  ['using_20groups_13',['Point Filtering using Groups',['../codeExamples.html#sPointFiltering',1,'']]],
+  ['using_20homebrew_14',['Using Homebrew',['../dependencies.html#depUsingHomebrew',1,'']]],
+  ['using_20unix_20apt_20get_15',['Using UNIX apt-get',['../dependencies.html#depUsingAptGet',1,'']]],
+  ['using_20vcpkg_16',['Building Dependencies using VCPKG',['../build.html#buildVCPKG',1,'']]],
+  ['utilities_20and_20tools_17',['Utilities and Tools',['../overview.html#secToolUtils',1,'']]]
 ];

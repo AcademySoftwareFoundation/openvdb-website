@@ -52,7 +52,7 @@ window.MathJax = {
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="openvdb_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">OpenVDB<span id="projectnumber">&#160;13.2.0</span>
+   <div id="projectname">OpenVDB<span id="projectnumber">&#160;14.0.0</span>
    </div>
   </td>
  </tr>
@@ -121,7 +121,7 @@ $(function(){initNavTree('classnanovdb_1_1math_1_1HDDA.html','','classnanovdb_1_
 <p>A Digital Differential Analyzer specialized for OpenVDB grids.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="math_2HDDA_8h_source.html">nanovdb/math/HDDA.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="HDDA_8h_source.html">nanovdb/math/HDDA.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -135,24 +135,24 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ada536285f8ae3e46802d6c5daccd6305" id="r_ada536285f8ae3e46802d6c5daccd6305"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada536285f8ae3e46802d6c5daccd6305">HDDA</a> ()=default</td></tr>
 <tr class="memdesc:ada536285f8ae3e46802d6c5daccd6305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default ctor.  <br /></td></tr>
-<tr class="memitem:a5213efdd4fd296cc5fd9af4497960d26" id="r_a5213efdd4fd296cc5fd9af4497960d26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5213efdd4fd296cc5fd9af4497960d26">HDDA</a> (const RayT &amp;ray, int <a class="el" href="#a7447e8368f9353f82a71eac1043fcaff">dim</a>)</td></tr>
+<tr class="memitem:a5213efdd4fd296cc5fd9af4497960d26" id="r_a5213efdd4fd296cc5fd9af4497960d26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5213efdd4fd296cc5fd9af4497960d26">HDDA</a> (const RayT &amp;ray, int <a class="el" href="#a7447e8368f9353f82a71eac1043fcaff">dim</a>)</td></tr>
 <tr class="memdesc:a5213efdd4fd296cc5fd9af4497960d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">ctor from ray and dimension at which the <a class="el" href="classnanovdb_1_1math_1_1DDA.html" title="A Digital Differential Analyzer. Unlike HDDA (defined above) this DDA uses a fixed step-size defined ...">DDA</a> marches  <br /></td></tr>
-<tr class="memitem:a717f015c3a9ead427d6fab13a4f59998" id="r_a717f015c3a9ead427d6fab13a4f59998"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a717f015c3a9ead427d6fab13a4f59998">init</a> (const RayT &amp;ray, <a class="el" href="#a812e092f97819c87ec7c69dcfc7c77ce">RealT</a> startTime, <a class="el" href="#a812e092f97819c87ec7c69dcfc7c77ce">RealT</a> <a class="el" href="#a3d14b605539d8d5217ade44ea2800a2d">maxTime</a>, int <a class="el" href="#a7447e8368f9353f82a71eac1043fcaff">dim</a>)</td></tr>
+<tr class="memitem:a717f015c3a9ead427d6fab13a4f59998" id="r_a717f015c3a9ead427d6fab13a4f59998"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a717f015c3a9ead427d6fab13a4f59998">init</a> (const RayT &amp;ray, <a class="el" href="#a812e092f97819c87ec7c69dcfc7c77ce">RealT</a> startTime, <a class="el" href="#a812e092f97819c87ec7c69dcfc7c77ce">RealT</a> <a class="el" href="#a3d14b605539d8d5217ade44ea2800a2d">maxTime</a>, int <a class="el" href="#a7447e8368f9353f82a71eac1043fcaff">dim</a>)</td></tr>
 <tr class="memdesc:a717f015c3a9ead427d6fab13a4f59998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Re-initializes the <a class="el" href="classnanovdb_1_1math_1_1HDDA.html" title="A Digital Differential Analyzer specialized for OpenVDB grids.">HDDA</a>.  <br /></td></tr>
-<tr class="memitem:a4633924104256e5f3cc5959017d5efc2" id="r_a4633924104256e5f3cc5959017d5efc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4633924104256e5f3cc5959017d5efc2">init</a> (const RayT &amp;ray, int <a class="el" href="#a7447e8368f9353f82a71eac1043fcaff">dim</a>)</td></tr>
+<tr class="memitem:a4633924104256e5f3cc5959017d5efc2" id="r_a4633924104256e5f3cc5959017d5efc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4633924104256e5f3cc5959017d5efc2">init</a> (const RayT &amp;ray, int <a class="el" href="#a7447e8368f9353f82a71eac1043fcaff">dim</a>)</td></tr>
 <tr class="memdesc:a4633924104256e5f3cc5959017d5efc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simular to init above except it uses the bounds of the input ray.  <br /></td></tr>
-<tr class="memitem:af75e9a8cd37ead0c72413bdb22bdab55" id="r_af75e9a8cd37ead0c72413bdb22bdab55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af75e9a8cd37ead0c72413bdb22bdab55">update</a> (const RayT &amp;ray, int <a class="el" href="#a7447e8368f9353f82a71eac1043fcaff">dim</a>)</td></tr>
+<tr class="memitem:af75e9a8cd37ead0c72413bdb22bdab55" id="r_af75e9a8cd37ead0c72413bdb22bdab55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af75e9a8cd37ead0c72413bdb22bdab55">update</a> (const RayT &amp;ray, int <a class="el" href="#a7447e8368f9353f82a71eac1043fcaff">dim</a>)</td></tr>
 <tr class="memdesc:af75e9a8cd37ead0c72413bdb22bdab55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the <a class="el" href="classnanovdb_1_1math_1_1HDDA.html" title="A Digital Differential Analyzer specialized for OpenVDB grids.">HDDA</a> to march with the specified dimension.  <br /></td></tr>
-<tr class="memitem:a7447e8368f9353f82a71eac1043fcaff" id="r_a7447e8368f9353f82a71eac1043fcaff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7447e8368f9353f82a71eac1043fcaff">dim</a> () const</td></tr>
-<tr class="memitem:a752c80da68cc07528e2faece11be1fc0" id="r_a752c80da68cc07528e2faece11be1fc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a752c80da68cc07528e2faece11be1fc0">step</a> ()</td></tr>
+<tr class="memitem:a7447e8368f9353f82a71eac1043fcaff" id="r_a7447e8368f9353f82a71eac1043fcaff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7447e8368f9353f82a71eac1043fcaff">dim</a> () const</td></tr>
+<tr class="memitem:a752c80da68cc07528e2faece11be1fc0" id="r_a752c80da68cc07528e2faece11be1fc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a752c80da68cc07528e2faece11be1fc0">step</a> ()</td></tr>
 <tr class="memdesc:a752c80da68cc07528e2faece11be1fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment the voxel index to next intersected voxel or node and returns true if the step in time does not exceed maxTime.  <br /></td></tr>
-<tr class="memitem:a3094ed919f8e8c896617fa3dafb7838a" id="r_a3094ed919f8e8c896617fa3dafb7838a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const CoordT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3094ed919f8e8c896617fa3dafb7838a">voxel</a> () const</td></tr>
+<tr class="memitem:a3094ed919f8e8c896617fa3dafb7838a" id="r_a3094ed919f8e8c896617fa3dafb7838a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const CoordT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3094ed919f8e8c896617fa3dafb7838a">voxel</a> () const</td></tr>
 <tr class="memdesc:a3094ed919f8e8c896617fa3dafb7838a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the index coordinates of the next node or voxel intersected by the ray. If Log2Dim = 0 the return value is the actual signed coordinate of the voxel, else it is the origin of the corresponding VDB tree node or tile.  <br /></td></tr>
-<tr class="memitem:a5b623dbeea3fca1686eb7bbba099bb97" id="r_a5b623dbeea3fca1686eb7bbba099bb97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae2f84fbb56b201120d57c4ad5aa1496a">RealType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b623dbeea3fca1686eb7bbba099bb97">time</a> () const</td></tr>
+<tr class="memitem:a5b623dbeea3fca1686eb7bbba099bb97" id="r_a5b623dbeea3fca1686eb7bbba099bb97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae2f84fbb56b201120d57c4ad5aa1496a">RealType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b623dbeea3fca1686eb7bbba099bb97">time</a> () const</td></tr>
 <tr class="memdesc:a5b623dbeea3fca1686eb7bbba099bb97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the time (parameterized along the <a class="el" href="classnanovdb_1_1math_1_1Ray.html">Ray</a>) of the first hit of a tree node of size 2^Log2Dim.  <br /></td></tr>
-<tr class="memitem:a3d14b605539d8d5217ade44ea2800a2d" id="r_a3d14b605539d8d5217ade44ea2800a2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae2f84fbb56b201120d57c4ad5aa1496a">RealType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d14b605539d8d5217ade44ea2800a2d">maxTime</a> () const</td></tr>
+<tr class="memitem:a3d14b605539d8d5217ade44ea2800a2d" id="r_a3d14b605539d8d5217ade44ea2800a2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae2f84fbb56b201120d57c4ad5aa1496a">RealType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d14b605539d8d5217ade44ea2800a2d">maxTime</a> () const</td></tr>
 <tr class="memdesc:a3d14b605539d8d5217ade44ea2800a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the maximum time (parameterized along the <a class="el" href="classnanovdb_1_1math_1_1Ray.html">Ray</a>).  <br /></td></tr>
-<tr class="memitem:a70a2585e26480f43b525a98666c59a93" id="r_a70a2585e26480f43b525a98666c59a93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae2f84fbb56b201120d57c4ad5aa1496a">RealType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70a2585e26480f43b525a98666c59a93">next</a> () const</td></tr>
+<tr class="memitem:a70a2585e26480f43b525a98666c59a93" id="r_a70a2585e26480f43b525a98666c59a93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae2f84fbb56b201120d57c4ad5aa1496a">RealType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70a2585e26480f43b525a98666c59a93">next</a> () const</td></tr>
 <tr class="memdesc:a70a2585e26480f43b525a98666c59a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the time (parameterized along the <a class="el" href="classnanovdb_1_1math_1_1Ray.html">Ray</a>) of the second (i.e. next) hit of a tree node of size 2^Log2Dim.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
@@ -284,7 +284,7 @@ template&lt;typename RayT, typename CoordT = Coord&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1HDDA.html">HDDA</a> </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="classnanovdb_1_1math_1_1HDDA.html">HDDA</a> </td>
           <td>(</td>
           <td class="paramtype">const RayT &amp;</td>          <td class="paramname"><span class="paramname"><em>ray</em></span>, </td>
         </tr>
@@ -318,7 +318,7 @@ template&lt;typename RayT, typename CoordT = Coord&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> int dim </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> int dim </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -345,7 +345,7 @@ template&lt;typename RayT, typename CoordT = Coord&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void init </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void init </td>
           <td>(</td>
           <td class="paramtype">const RayT &amp;</td>          <td class="paramname"><span class="paramname"><em>ray</em></span>, </td>
         </tr>
@@ -378,7 +378,7 @@ template&lt;typename RayT, typename CoordT = Coord&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void init </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> void init </td>
           <td>(</td>
           <td class="paramtype">const RayT &amp;</td>          <td class="paramname"><span class="paramname"><em>ray</em></span>, </td>
         </tr>
@@ -421,7 +421,7 @@ template&lt;typename RayT, typename CoordT = Coord&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae2f84fbb56b201120d57c4ad5aa1496a">RealType</a> maxTime </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae2f84fbb56b201120d57c4ad5aa1496a">RealType</a> maxTime </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -450,7 +450,7 @@ template&lt;typename RayT, typename CoordT = Coord&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae2f84fbb56b201120d57c4ad5aa1496a">RealType</a> next </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae2f84fbb56b201120d57c4ad5aa1496a">RealType</a> next </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -480,7 +480,7 @@ template&lt;typename RayT, typename CoordT = Coord&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool step </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool step </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -509,7 +509,7 @@ template&lt;typename RayT, typename CoordT = Coord&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae2f84fbb56b201120d57c4ad5aa1496a">RealType</a> time </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> <a class="el" href="#ae2f84fbb56b201120d57c4ad5aa1496a">RealType</a> time </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -539,7 +539,7 @@ template&lt;typename RayT, typename CoordT = Coord&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool update </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> bool update </td>
           <td>(</td>
           <td class="paramtype">const RayT &amp;</td>          <td class="paramname"><span class="paramname"><em>ray</em></span>, </td>
         </tr>
@@ -572,7 +572,7 @@ template&lt;typename RayT, typename CoordT = Coord&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="math_2SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const CoordT &amp; voxel </td>
+          <td class="memname"><a class="el" href="SampleFromVoxels_8h.html#a551e5ea2539324048f4b47c00ab67d55">__hostdev__</a> const CoordT &amp; voxel </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
